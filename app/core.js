@@ -1,2 +1,2 @@
-var app_ver="";
+var app_2ver="";
 
