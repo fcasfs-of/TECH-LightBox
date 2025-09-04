@@ -19,14 +19,14 @@ fsmodal_create_ifir=`<img src="${optiy.context}" style="user-select:none;pointer
 }
 if(optiy.type && optiy.type=="audio"){
 if(optiy.poster && optiy.poster!=""){   start_fs_postermpl=optiy.poster;  }
-var start_fs_mpl = function(){
+start_fs_mpl = function(){
 return fs_Playerjs({ OSD:false, config:{}, id:"preview_pls",  customtext:{age:""}, nocontrols:0, autoplay:0, loop:0, title:optiy.title, file:optiy.context, poster:start_fs_postermpl, player:1  });    
 }
 fsmodal_create_ifir=`<div id="preview_pls"></div>`;
 }
 if(optiy.type && optiy.type=="video"){
 if(optiy.poster && optiy.poster!=""){   start_fs_postermpl=optiy.poster;  }
-var start_fs_mpl = function(){
+start_fs_mpl = function(){
 return fs_Playerjs({ OSD:false, config:{}, id:"preview_pls",  customtext:{age:""}, nocontrols:0, autoplay:0, loop:0, title:optiy.title, file:optiy.context, poster:start_fs_postermpl, player:1  });    
 }
 fsmodal_create_ifir=`<div id="preview_pls"></div>`;
