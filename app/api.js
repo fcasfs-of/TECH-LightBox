@@ -29,7 +29,7 @@ start_fs_mpl = { OSD:true, config:{}, id:"preview_pls",  customtext:{age:""}, no
 fsmodal_create_ifir=`<div id="preview_pls" style="height:${Number(optiy.size)}px;"></div>`;
 }
 
-fsmodal_createdd=fsmodal_createdd+`  <div style="text-align:center;  color:#fff; "><br/>${fsmodal_create_ifir} ${fsmodal_create_desci}<br/><br/></div><br/><br/><br/>`;   
+fsmodal_createdd=fsmodal_createdd+`  <div style="text-align:center;  color:#fff; "><br/>${fsmodal_create_ifir} ${fsmodal_create_desci}<br/><br/><br/><br/></div><br/><br/><br/>`;   
  }   }   return fsmodal_createdd;   }
 
 var start_fs_mpl={};   var mfplayeri;
