@@ -56,7 +56,7 @@ var close_fsmofla_str='<span class="bngd">  <span style="margin-left:4px;" class
  var momocsifipsl = document.getElementById(optiy.id);   if(momocsifipsl){     momocsifipsl.innerHTML = "";     var fsmodal_open_tipf="";   if(optiy.tiptext && optiy.tiptext!=""){   fsmodal_open_tipf=' data-tooltip="'+optiy.tiptext+'" data-flow="left"';   }  if(optiy.content){       momocsifipsl.innerHTML = ' <div class="modal" style="display:block;color:#000;">  '+close_fsmofla_str+'       <div style="overflow:auto;" class="modal-content" id="fs_modal_'+optiy.id+'_content">'+fsmodal_create(optiy.content)+'</div><br/><br/></div>';    
 
 if(optincludeplayer && optincludeplayer=="yes"){
-if(typeof fs_Playerjs=="function"){   mfplayeri = fs_Playerjs(start_fs_mpl);   }
+if(typeof fs_Playerjs=="function" && start_fs_mpl){   document.onload=function(){   mfplayeri = fs_Playerjs(start_fs_mpl);  };    }
 }
  
  if(optiy.scroll_hide && optiy.scroll_hide=="yes") {  document.body.style.overflow="hidden";  }   }  }    }    }         
