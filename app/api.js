@@ -7,7 +7,9 @@ function fsmodal_close(id, hifde) {   if(id && id!=""){    var momocsifipsl = do
 
 function fsmodal_create(optiy) {   
  start_fs_mpl={};   fsmodal_createdd="";    start_fs_postermpl="";
-if(optiy){     if(optiy.title && optiy.title!=""){  fsmodal_createdd=fsmodal_createdd+`<h1 style="text-align:center;pointer-events:none;color:#fff;font-weight:bold;" class="">${optiy.title}</h1>`;    }    
+if(optiy){       var fsmodal_create_desci="";
+ if(optiy.description && optiy.description!=""){   fsmodal_create_desci="<br/><br/><span>"+optiy.description+"</span>";   }
+ if(optiy.title && optiy.title!=""){  fsmodal_createdd=fsmodal_createdd+`<h1 style="text-align:center;pointer-events:none;color:#fff;font-weight:bold;" class="">${optiy.title}</h1>`;    }    
 if(optiy.context && optiy.context!=""){   
 var fsmodal_create_ifir = optiy.context;
 if(optiy.type && optiy.type=="link"){
@@ -27,7 +29,7 @@ start_fs_mpl = { OSD:true, config:{}, id:"preview_pls",  customtext:{age:""}, no
 fsmodal_create_ifir=`<div id="preview_pls"></div>`;
 }
 
-fsmodal_createdd=fsmodal_createdd+`  <div style="text-align:center;  color:#fff; "><br/>${fsmodal_create_ifir}</div><br/><br/><br/>`;   
+fsmodal_createdd=fsmodal_createdd+`  <div style="text-align:center;  color:#fff; "><br/>${fsmodal_create_ifir} ${fsmodal_create_desci}<br/><br/></div><br/><br/><br/>`;   
  }   }   return fsmodal_createdd;   }
 
 var start_fs_mpl={};   var mfplayeri;
