@@ -5,14 +5,18 @@ document.getElementsByTagName("head")[0].appendChild(scriptfd);
 
 function fsmodal_close(id, hifde) {   if(id && id!=""){    var momocsifipsl = document.getElementById(id);   if(momocsifipsl){   momocsifipsl.innerHTML = "";      if(hifde && hifde=="yes") { document.body.style.overflow="auto";   }    }     }   }
 
-function fsmodal_create(optiy) {   
+function fsmodal_create(optiy, app) {   
  start_fs_mpl={};   fsmodal_createdd="";    start_fs_postermpl="";
 if(optiy){       var fsmodal_create_desci="";
  if(optiy.description && optiy.description!=""){   fsmodal_create_desci="<br/><br/><span>"+optiy.description+"</span>";   }
  if(optiy.title && optiy.title!=""){  fsmodal_createdd=fsmodal_createdd+`<h1 style="text-align:center;pointer-events:none;color:#fff;font-weight:bold;" class="">${optiy.title}</h1>`;    }    
 if(optiy.context && optiy.context!=""){   
 var fsmodal_create_ifir = optiy.context;
-if(optiy.type && optiy.type=="link"){
+
+if(app && app=="yes" && optiy.type && optiy.type=="id"){
+fsmodal_create_ifir=`<iframe allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation"  frameborder="0" allowfullscreen src="https://player.fcasfs-of.cloud-fs.net?fileID=${optiy.context}&fileView=true" style="width:100%; height:${Number(optiy.size)}px;"></iframe>`;
+}
+else if(optiy.type && optiy.type=="link"){
 fsmodal_create_ifir=`<iframe allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation"  frameborder="0" allowfullscreen src="${optiy.context}" style="width:100%; height:${Number(optiy.size)}px;"></iframe>`;
 }
 else if(optiy.type && optiy.type=="image"){
@@ -56,7 +60,7 @@ var fsmodal_open_closegi="";   if(optiy.scroll_hide && optiy.scroll_hide=="yes")
   var fsmodal_open_tipf="";   if(optiy.tiptext && optiy.tiptext!=""){   fsmodal_open_tipf=' data-tooltip="'+optiy.tiptext+'" data-flow="left"';   }  
 var close_fsmofla_str='<span class="bngd">  <span style="margin-left:4px;" class="ssclose" onclick="fsmodal_close(\''+optiy.id+'\''+fsmodal_open_closegi+');" '+fsmodal_open_tipf+'><span class="icon"></span></span>  </span>';
  if(optiy.noclose && optiy.noclose==true){   close_fsmofla_str="";   }
- var momocsifipsl = document.getElementById(optiy.id);   if(momocsifipsl){     momocsifipsl.innerHTML = "";    if(optiy.content){       momocsifipsl.innerHTML = ' <div class="modal" style="display:block;color:#000;">  '+close_fsmofla_str+'       <div style="overflow:auto;" class="modal-content" id="fs_modal_'+optiy.id+'_content">'+fsmodal_create(optiy.content)+'</div><br/><br/></div>';    
+ var momocsifipsl = document.getElementById(optiy.id);   if(momocsifipsl){     momocsifipsl.innerHTML = "";    if(optiy.content){       momocsifipsl.innerHTML = ' <div class="modal" style="display:block;color:#000;">  '+close_fsmofla_str+'       <div style="overflow:auto;" class="modal-content" id="fs_modal_'+optiy.id+'_content">'+fsmodal_create(optiy.content, optincludeplayer)+'</div><br/><br/></div>';    
 
 function loaded_playerinf(dstart_fs_mpl){   if(typeof fs_Playerjs=="function" && dstart_fs_mpl){   mfplayeri = fs_Playerjs(dstart_fs_mpl);   }   }
                                                                                                                                
