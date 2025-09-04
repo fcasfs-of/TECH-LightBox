@@ -21,12 +21,12 @@ fsmodal_create_ifir=`<img src="${optiy.context}" style="user-select:none;pointer
 else if(optiy.type && optiy.type=="audio"){
 if(optiy.poster && optiy.poster!=""){   start_fs_postermpl=optiy.poster;  }
 start_fs_mpl = { OSD:true, config:{}, id:"preview_pls",  customtext:{age:""}, nocontrols:0, autoplay:0, loop:0, title:optiy.title, file:optiy.context, poster:start_fs_postermpl, player:1  };   
-fsmodal_create_ifir=`<div id="preview_pls" style="height:${Number(optiy.size)}px;"></div>`;
+fsmodal_create_ifir=`<div style="width:100%; height:${Number(optiy.size)}px;"> <div id="preview_pls"></div> </div>`;
 }
 else if(optiy.type && optiy.type=="video"){
 if(optiy.poster && optiy.poster!=""){   start_fs_postermpl=optiy.poster;  }
 start_fs_mpl = { OSD:true, config:{}, id:"preview_pls",  customtext:{age:""}, nocontrols:0, autoplay:0, loop:0, title:optiy.title, file:optiy.context, poster:start_fs_postermpl, player:1  };   
-fsmodal_create_ifir=`<div id="preview_pls" style="height:${Number(optiy.size)}px;"></div>`;
+fsmodal_create_ifir=`<div style="width:100%; height:${Number(optiy.size)}px;"> <div id="preview_pls"></div> </div>`;
 }
 
 fsmodal_createdd=fsmodal_createdd+`  <div style="text-align:center;  color:#fff; "><br/>${fsmodal_create_ifir} ${fsmodal_create_desci}<br/><br/><br/><br/></div><br/><br/><br/>`;   
