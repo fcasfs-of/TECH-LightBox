@@ -37,6 +37,9 @@ var fsmodal_createdd="";   var start_fs_postermpl="";
 if(optiy.include){
 
 if(optiy.include.player && optiy.include.player=="yes"){
+var scriptwwincfd = document.createElement("script");
+scriptwwincfd.setAttribute("type", "text/javascript");   scriptwwincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/core.js");
+document.getElementsByTagName("head")[0].appendChild(scriptwwincfd);
 var scriptincfd = document.createElement("script");
 scriptincfd.setAttribute("type", "text/javascript");   scriptincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
 document.getElementsByTagName("head")[0].appendChild(scriptincfd);
