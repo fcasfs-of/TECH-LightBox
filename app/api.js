@@ -4,10 +4,12 @@ var scriptfd = document.createElement("style");
 document.getElementsByTagName("head")[0].appendChild(scriptfd);
 
 
+var start_fs_mpl={};   var mfplayeri;
+var fsmodal_createdd="";   var start_fs_postermpl="";
+
 function fsmodal_close(id, hifde) {   if(id && id!=""){    var momocsifipsl = document.getElementById(id);   if(momocsifipsl){   momocsifipsl.innerHTML = "";      if(hifde && hifde=="yes") { document.body.style.overflow="auto";   }    }     }   }
 function fsmodal_create(optiy) {   
-var start_fs_mpl={};
-var fsmodal_createdd="";   var start_fs_postermpl="";
+ start_fs_mpl={};   fsmodal_createdd="";    start_fs_postermpl="";
 if(optiy){     if(optiy.title && optiy.title!=""){  fsmodal_createdd=fsmodal_createdd+`<h1 style="text-align:center;pointer-events:none;color:#fff;font-weight:bold;" class="">${optiy.title}</h1>`;    }    
 if(optiy.context && optiy.context!=""){   
 var fsmodal_create_ifir = optiy.context;
@@ -46,7 +48,7 @@ optincludeplayer="yes";
 var fsmodal_open_closegi="";   if(optiy.scroll_hide && optiy.scroll_hide=="yes") {  fsmodal_open_closegi=', \''+optiy.scroll_hide+'\'';  }    if(optiy.id && optiy.id!=""){      var momocsifipsl = document.getElementById(optiy.id);   if(momocsifipsl){     momocsifipsl.innerHTML = "";     var fsmodal_open_tipf="";   if(optiy.tiptext && optiy.tiptext!=""){   fsmodal_open_tipf=' data-tooltip="'+optiy.tiptext+'" data-flow="left"';   }  if(optiy.content){       momocsifipsl.innerHTML = ' <div class="modal" style="display:block;color:#000;">  <span class="bngd">  <span style="margin-left:4px;" class="ssclose" onclick="fsmodal_close(\''+optiy.id+'\''+fsmodal_open_closegi+');" '+fsmodal_open_tipf+'><span class="icon"></span></span></span>       <div style="overflow:auto;" class="modal-content" id="fs_modal_'+optiy.id+'_content">'+fsmodal_create(optiy.content)+'</div><br/><br/></div>';    
 
 if(optincludeplayer && optincludeplayer=="yes"){
-if(typeof fs_Playerjs=="function"){  var fplayeri = fs_Playerjs(start_fs_mpl);   }
+if(typeof fs_Playerjs=="function"){   mfplayeri = fs_Playerjs(start_fs_mpl);   }
 }
  
  if(optiy.scroll_hide && optiy.scroll_hide=="yes") {  document.body.style.overflow="hidden";  }   }  }    }    }         
