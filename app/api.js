@@ -14,20 +14,20 @@ var fsmodal_create_ifir = optiy.context;
 if(optiy.type && optiy.type=="link"){
 fsmodal_create_ifir=`<iframe allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation"  frameborder="0" allowfullscreen src="${optiy.context}" style="width:100%; height:${Number(optiy.size)}px;"></iframe>`;
 }
-if(optiy.type && optiy.type=="image"){
+else if(optiy.type && optiy.type=="image"){
 fsmodal_create_ifir=`<img src="${optiy.context}" style="user-select:none;pointer-events:none;  width:${Number(optiy.size)}px;" />`;
 }
-if(optiy.type && optiy.type=="audio"){
+else if(optiy.type && optiy.type=="audio"){
 if(optiy.poster && optiy.poster!=""){   start_fs_postermpl=optiy.poster;  }
 start_fs_mpl = function(){
-return fs_Playerjs({ OSD:false, config:{}, id:"preview_pls",  customtext:{age:""}, nocontrols:0, autoplay:0, loop:0, title:optiy.title, file:optiy.context, poster:start_fs_postermpl, player:1  });    
+return fs_Playerjs({ OSD:true, config:{}, id:"preview_pls",  customtext:{age:""}, nocontrols:0, autoplay:0, loop:0, title:optiy.title, file:optiy.context, poster:start_fs_postermpl, player:1  });    
 }
 fsmodal_create_ifir=`<div id="preview_pls"></div>`;
 }
-if(optiy.type && optiy.type=="video"){
+else if(optiy.type && optiy.type=="video"){
 if(optiy.poster && optiy.poster!=""){   start_fs_postermpl=optiy.poster;  }
 start_fs_mpl = function(){
-return fs_Playerjs({ OSD:false, config:{}, id:"preview_pls",  customtext:{age:""}, nocontrols:0, autoplay:0, loop:0, title:optiy.title, file:optiy.context, poster:start_fs_postermpl, player:1  });    
+return fs_Playerjs({ OSD:true, config:{}, id:"preview_pls",  customtext:{age:""}, nocontrols:0, autoplay:0, loop:0, title:optiy.title, file:optiy.context, poster:start_fs_postermpl, player:1  });    
 }
 fsmodal_create_ifir=`<div id="preview_pls"></div>`;
 }
