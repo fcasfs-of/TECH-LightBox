@@ -30,8 +30,10 @@ fsmodal_create_ifir=`<div id="preview_pls"></div>`;
 fsmodal_createdd=fsmodal_createdd+`  <div style="text-align:center;  color:#fff; "><br/>${fsmodal_create_ifir}</div><br/><br/><br/>`;   
  }   }   return fsmodal_createdd;   }
 
-function fsmodal_open(optiy) {  var start_fs_mpl={};   var mfplayeri;
+var start_fs_mpl={};   var mfplayeri;
 var fsmodal_createdd="";   var start_fs_postermpl="";
+
+function fsmodal_open(optiy) {   start_fs_mpl={};    fsmodal_createdd="";    start_fs_postermpl="";
  var optincludeplayer= "";   if(optiy){   
 
 if(optiy.include){
