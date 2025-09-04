@@ -6,7 +6,7 @@ document.getElementsByTagName("head")[0].appendChild(scriptfd);
 
 function fsmodal_close(id, hifde) {   if(id && id!=""){    var momocsifipsl = document.getElementById(id);   if(momocsifipsl){   momocsifipsl.innerHTML = "";      if(hifde && hifde=="yes") { document.body.style.overflow="auto";   }    }     }   }
 function fsmodal_create(optiy) {   
-function start_fs_mpl(){    }
+var start_fs_mpl="";
 var fsmodal_createdd="";   var start_fs_postermpl="";
 if(optiy){     if(optiy.title && optiy.title!=""){  fsmodal_createdd=fsmodal_createdd+`<h1 style="text-align:center;pointer-events:none;color:#fff;font-weight:bold;" class="">${optiy.title}</h1>`;    }    
 if(optiy.context && optiy.context!=""){   
@@ -19,15 +19,15 @@ fsmodal_create_ifir=`<img src="${optiy.context}" style="user-select:none;pointer
 }
 if(optiy.type && optiy.type=="audio"){
 if(optiy.poster && optiy.poster!=""){   start_fs_postermpl=optiy.poster;  }
-function start_fs_mpl(){
-return  fs_Playerjs({ OSD:false, config:{}, id:"preview_pls",  customtext:{age:""}, nocontrols:0, autoplay:0, loop:0, title:optiy.title, file:optiy.context, poster:start_fs_postermpl, player:1  });    
+var start_fs_mpl = function(){
+return fs_Playerjs({ OSD:false, config:{}, id:"preview_pls",  customtext:{age:""}, nocontrols:0, autoplay:0, loop:0, title:optiy.title, file:optiy.context, poster:start_fs_postermpl, player:1  });    
 }
 fsmodal_create_ifir=`<div id="preview_pls"></div>`;
 }
 if(optiy.type && optiy.type=="video"){
 if(optiy.poster && optiy.poster!=""){   start_fs_postermpl=optiy.poster;  }
-function start_fs_mpl(){
-return  fs_Playerjs({ OSD:false, config:{}, id:"preview_pls",  customtext:{age:""}, nocontrols:0, autoplay:0, loop:0, title:optiy.title, file:optiy.context, poster:start_fs_postermpl, player:1  });    
+var start_fs_mpl = function(){
+return fs_Playerjs({ OSD:false, config:{}, id:"preview_pls",  customtext:{age:""}, nocontrols:0, autoplay:0, loop:0, title:optiy.title, file:optiy.context, poster:start_fs_postermpl, player:1  });    
 }
 fsmodal_create_ifir=`<div id="preview_pls"></div>`;
 }
