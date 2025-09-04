@@ -6,7 +6,7 @@ document.getElementsByTagName("head")[0].appendChild(scriptfd);
 
 function fsmodal_close(id, hifde) {   if(id && id!=""){    var momocsifipsl = document.getElementById(id);   if(momocsifipsl){   momocsifipsl.innerHTML = "";      if(hifde && hifde=="yes") { document.body.style.overflow="auto";   }    }     }   }
 function fsmodal_create(optiy) {   
-var start_fs_mpl="";
+var start_fs_mpl={};
 var fsmodal_createdd="";   var start_fs_postermpl="";
 if(optiy){     if(optiy.title && optiy.title!=""){  fsmodal_createdd=fsmodal_createdd+`<h1 style="text-align:center;pointer-events:none;color:#fff;font-weight:bold;" class="">${optiy.title}</h1>`;    }    
 if(optiy.context && optiy.context!=""){   
@@ -19,16 +19,12 @@ fsmodal_create_ifir=`<img src="${optiy.context}" style="user-select:none;pointer
 }
 else if(optiy.type && optiy.type=="audio"){
 if(optiy.poster && optiy.poster!=""){   start_fs_postermpl=optiy.poster;  }
-start_fs_mpl = function(){
-return fs_Playerjs({ OSD:true, config:{}, id:"preview_pls",  customtext:{age:""}, nocontrols:0, autoplay:0, loop:0, title:optiy.title, file:optiy.context, poster:start_fs_postermpl, player:1  });    
-}
+start_fs_mpl = { OSD:true, config:{}, id:"preview_pls",  customtext:{age:""}, nocontrols:0, autoplay:0, loop:0, title:optiy.title, file:optiy.context, poster:start_fs_postermpl, player:1  };   
 fsmodal_create_ifir=`<div id="preview_pls"></div>`;
 }
 else if(optiy.type && optiy.type=="video"){
 if(optiy.poster && optiy.poster!=""){   start_fs_postermpl=optiy.poster;  }
-start_fs_mpl = function(){
-return fs_Playerjs({ OSD:true, config:{}, id:"preview_pls",  customtext:{age:""}, nocontrols:0, autoplay:0, loop:0, title:optiy.title, file:optiy.context, poster:start_fs_postermpl, player:1  });    
-}
+start_fs_mpl = { OSD:true, config:{}, id:"preview_pls",  customtext:{age:""}, nocontrols:0, autoplay:0, loop:0, title:optiy.title, file:optiy.context, poster:start_fs_postermpl, player:1  };   
 fsmodal_create_ifir=`<div id="preview_pls"></div>`;
 }
 
@@ -50,7 +46,7 @@ optincludeplayer="yes";
 var fsmodal_open_closegi="";   if(optiy.scroll_hide && optiy.scroll_hide=="yes") {  fsmodal_open_closegi=', \''+optiy.scroll_hide+'\'';  }    if(optiy.id && optiy.id!=""){      var momocsifipsl = document.getElementById(optiy.id);   if(momocsifipsl){     momocsifipsl.innerHTML = "";     var fsmodal_open_tipf="";   if(optiy.tiptext && optiy.tiptext!=""){   fsmodal_open_tipf=' data-tooltip="'+optiy.tiptext+'" data-flow="left"';   }  if(optiy.content){       momocsifipsl.innerHTML = ' <div class="modal" style="display:block;color:#000;">  <span class="bngd">  <span style="margin-left:4px;" class="ssclose" onclick="fsmodal_close(\''+optiy.id+'\''+fsmodal_open_closegi+');" '+fsmodal_open_tipf+'><span class="icon"></span></span></span>       <div style="overflow:auto;" class="modal-content" id="fs_modal_'+optiy.id+'_content">'+fsmodal_create(optiy.content)+'</div><br/><br/></div>';    
 
 if(optincludeplayer && optincludeplayer=="yes"){
-if(typeof start_fs_mpl=="function"){  var fplayeri = start_fs_mpl();   }
+if(typeof fs_Playerjs=="function"){  var fplayeri = fs_Playerjs(start_fs_mpl);   }
 }
  
  if(optiy.scroll_hide && optiy.scroll_hide=="yes") {  document.body.style.overflow="hidden";  }   }  }    }    }         
