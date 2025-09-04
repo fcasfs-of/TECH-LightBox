@@ -56,12 +56,15 @@ var close_fsmofla_str='<span class="bngd">  <span style="margin-left:4px;" class
  if(optiy.noclose && optiy.noclose==true){   close_fsmofla_str="";   }
  var momocsifipsl = document.getElementById(optiy.id);   if(momocsifipsl){     momocsifipsl.innerHTML = "";    if(optiy.content){       momocsifipsl.innerHTML = ' <div class="modal" style="display:block;color:#000;">  '+close_fsmofla_str+'       <div style="overflow:auto;" class="modal-content" id="fs_modal_'+optiy.id+'_content">'+fsmodal_create(optiy.content)+'</div><br/><br/></div>';    
 
+function loaded_playerinf(){   if(typeof fs_Playerjs=="function" && start_fs_mpl){   mfplayeri = fs_Playerjs(start_fs_mpl);   }   }
+                                                                                                                               
 if(optincludeplayer && optincludeplayer=="yes"){
 var sccustrfiptfd = document.createElement("script");
 sccustrfiptfd.setAttribute("type", "text/javascript");
-sccustrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent(" if(typeof fs_Playerjs==\"function\" && start_fs_mpl){   mfplayeri = fs_Playerjs(start_fs_mpl);  }   "));
+sccustrfiptfd.setAttribute("onload", "loaded_playerinf();");
+sccustrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent("loaded_playerinf();"));
 document.getElementsByTagName("body")[0].appendChild(sccustrfiptfd); 
- document.getElementsByTagName("body")[0].onload=function(){   if(typeof fs_Playerjs=="function" && start_fs_mpl){   mfplayeri = fs_Playerjs(start_fs_mpl);   }   };    
+ document.getElementsByTagName("body")[0].onload=function(){  loaded_playerinf();   };    
 }
  
  if(optiy.scroll_hide && optiy.scroll_hide=="yes") {  document.body.style.overflow="hidden";  }   }  }    }    }         
