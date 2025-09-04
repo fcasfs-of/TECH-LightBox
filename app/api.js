@@ -5,7 +5,9 @@ document.getElementsByTagName("head")[0].appendChild(scriptfd);
 
 
 function fsmodal_close(id, hifde) {   if(id && id!=""){    var momocsifipsl = document.getElementById(id);   if(momocsifipsl){   momocsifipsl.innerHTML = "";      if(hifde && hifde=="yes") { document.body.style.overflow="auto";   }    }     }   }
-function fsmodal_create(optiy) {   var fsmodal_createdd="";    if(optiy){     if(optiy.title && optiy.title!=""){  fsmodal_createdd=fsmodal_createdd+`<h1 style="text-align:center;pointer-events:none;color:#fff;font-weight:bold;" class="">${optiy.title}</h1>`;    }    
+function fsmodal_create(optiy) {   
+function start_fs_mpl(){    }
+var fsmodal_createdd="";    if(optiy){     if(optiy.title && optiy.title!=""){  fsmodal_createdd=fsmodal_createdd+`<h1 style="text-align:center;pointer-events:none;color:#fff;font-weight:bold;" class="">${optiy.title}</h1>`;    }    
 if(optiy.context && optiy.context!=""){   
 var fsmodal_create_ifir = optiy.context;
 if(optiy.type && optiy.type=="link"){
@@ -14,10 +16,22 @@ fsmodal_create_ifir=`<iframe allow="accelerometer *; ambient-light-sensor *; aut
 if(optiy.type && optiy.type=="image"){
 fsmodal_create_ifir=`<img src="${optiy.context}" style="user-select:none;pointer-events:none;  width:${Number(optiy.size)}px;" />`;
 }
+if(optiy.type && optiy.type=="audio"){
+function start_fs_mpl(){
+return fplayeri = fs_Playerjs({ OSD:false, config:{}, id:"preview_pls",  customtext:{age:""}, nocontrols:0, autoplay:0, loop:0, title:optiy.title, file:optiy.context, poster:optiy.poster, player:1  });    
+}
+fsmodal_create_ifir=`<div id="preview_pls"></div>`;
+}
+if(optiy.type && optiy.type=="video"){
+function start_fs_mpl(){
+return fplayeri = fs_Playerjs({ OSD:false, config:{}, id:"preview_pls",  customtext:{age:""}, nocontrols:0, autoplay:0, loop:0, title:optiy.title, file:optiy.context, poster:optiy.poster, player:1  });    
+}
+fsmodal_create_ifir=`<div id="preview_pls"></div>`;
+}
 
 fsmodal_createdd=fsmodal_createdd+`  <div style="text-align:center;  color:#fff; "><br/>${fsmodal_create_ifir}</div><br/><br/><br/>`;   
  }   }   return fsmodal_createdd;   }
-function fsmodal_open(optiy) {   if(optiy){   
+function fsmodal_open(optiy) {   var optincludeplayer= "";   if(optiy){   
 
 if(optiy.include){
 
@@ -25,11 +39,19 @@ if(optiy.include.player && optiy.include.player=="yes"){
 var scriptincfd = document.createElement("script");
 scriptincfd.setAttribute("type", "text/javascript");   scriptincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
 document.getElementsByTagName("head")[0].appendChild(scriptincfd);
+optincludeplayer="yes";
 }
 
 }
 
-var fsmodal_open_closegi="";   if(optiy.scroll_hide && optiy.scroll_hide=="yes") {  fsmodal_open_closegi=', \''+optiy.scroll_hide+'\'';  }    if(optiy.id && optiy.id!=""){      var momocsifipsl = document.getElementById(optiy.id);   if(momocsifipsl){     momocsifipsl.innerHTML = "";     var fsmodal_open_tipf="";   if(optiy.tiptext && optiy.tiptext!=""){   fsmodal_open_tipf=' data-tooltip="'+optiy.tiptext+'" data-flow="left"';   }  if(optiy.content){       momocsifipsl.innerHTML = ' <div class="modal" style="display:block;color:#000;">  <span class="bngd">  <span style="margin-left:4px;" class="ssclose" onclick="fsmodal_close(\''+optiy.id+'\''+fsmodal_open_closegi+');" '+fsmodal_open_tipf+'><span class="icon"></span></span></span>       <div style="overflow:auto;" class="modal-content" id="fs_modal_'+optiy.id+'_content">'+fsmodal_create(optiy.content)+'</div><br/><br/></div>';     if(optiy.scroll_hide && optiy.scroll_hide=="yes") {  document.body.style.overflow="hidden";  }   }  }    }    }   }
+var fsmodal_open_closegi="";   if(optiy.scroll_hide && optiy.scroll_hide=="yes") {  fsmodal_open_closegi=', \''+optiy.scroll_hide+'\'';  }    if(optiy.id && optiy.id!=""){      var momocsifipsl = document.getElementById(optiy.id);   if(momocsifipsl){     momocsifipsl.innerHTML = "";     var fsmodal_open_tipf="";   if(optiy.tiptext && optiy.tiptext!=""){   fsmodal_open_tipf=' data-tooltip="'+optiy.tiptext+'" data-flow="left"';   }  if(optiy.content){       momocsifipsl.innerHTML = ' <div class="modal" style="display:block;color:#000;">  <span class="bngd">  <span style="margin-left:4px;" class="ssclose" onclick="fsmodal_close(\''+optiy.id+'\''+fsmodal_open_closegi+');" '+fsmodal_open_tipf+'><span class="icon"></span></span></span>       <div style="overflow:auto;" class="modal-content" id="fs_modal_'+optiy.id+'_content">'+fsmodal_create(optiy.content)+'</div><br/><br/></div>';    
+
+if(optincludeplayer && optincludeplayer=="yes"){
+if(start_fs_mpl typeof "function"){  var fplayeri = start_fs_mpl();   }
+}
+ 
+ if(optiy.scroll_hide && optiy.scroll_hide=="yes") {  document.body.style.overflow="hidden";  }   }  }    }    }         
+ }
 
 
 
