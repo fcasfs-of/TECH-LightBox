@@ -46,14 +46,14 @@ if(optiy.include){
 
 if(optiy.include.player && optiy.include.player=="yes"){
  
-if(scriptwwincfd){   document.getElementsByTagName("head")[0].removeChild(scriptwwincfd);  }
-if(scriptincfd){   document.getElementsByTagName("head")[0].removeChild(scriptincfd);   }
- 
+
 var scriptwwincfd = document.createElement("script");
 scriptwwincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/core.js");
+document.getElementsByTagName("head")[0].removeChild(scriptwwincfd); 
 document.getElementsByTagName("head")[0].appendChild(scriptwwincfd);
 var scriptincfd = document.createElement("script");
 scriptincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
+document.getElementsByTagName("head")[0].removeChild(scriptincfd); 
 document.getElementsByTagName("head")[0].appendChild(scriptincfd);
 optincludeplayer="yes";
 }
