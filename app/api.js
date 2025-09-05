@@ -3,17 +3,7 @@ scriptfd.innerHTML='.modal { user-select:none;     display: none;   position: fi
 document.getElementsByTagName("head")[0].appendChild(scriptfd);
 
 
-function fsmodal_close(id, file, jj, hifde) {   if(id && id!=""){  
-if(jj && jj=="audio" && file && file=="yes"){
-if(scriptwwincfd){   scriptwwincfd.remove();  }
-if(scriptincfd){   scriptincfd.remove();   }
- }
-else if(jj && jj=="video" && file && file=="yes"){
-if(scriptwwincfd){   document.getElementsByTagName("head")[0].removeChild(scriptwwincfd);  }
-if(scriptincfd){   document.getElementsByTagName("head")[0].removeChild(scriptincfd);   }
- }
- 
- var momocsifipsl = document.getElementById(id);   if(momocsifipsl){   momocsifipsl.innerHTML = "";      if(hifde && hifde=="yes") { document.body.style.overflow="auto";   }    }     }   }
+function fsmodal_close(id, hifde) {   if(id && id!=""){   var momocsifipsl = document.getElementById(id);   if(momocsifipsl){   momocsifipsl.innerHTML = "";      if(hifde && hifde=="yes") { document.body.style.overflow="auto";   }    }     }   }
 
 function fsmodal_create(optiy, app) {   
  start_fs_mpl={};   fsmodal_createdd="";    start_fs_postermpl="";
@@ -55,6 +45,10 @@ function fsmodal_open(optiy) {   start_fs_mpl={};    fsmodal_createdd="";    sta
 if(optiy.include){
 
 if(optiy.include.player && optiy.include.player=="yes"){
+ 
+if(scriptwwincfd){   scriptwwincfd.remove();  }
+if(scriptincfd){   scriptincfd.remove();   }
+ 
 var scriptwwincfd = document.createElement("script");
 scriptwwincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/core.js");
 document.getElementsByTagName("head")[0].appendChild(scriptwwincfd);
@@ -68,7 +62,7 @@ optincludeplayer="yes";
 
 var fsmodal_open_closegi="";   if(optiy.scroll_hide && optiy.scroll_hide=="yes") {  fsmodal_open_closegi=', \''+optiy.scroll_hide+'\'';  }    if(optiy.id && optiy.id!=""){    
   var fsmodal_open_tipf="";   if(optiy.tiptext && optiy.tiptext!=""){   fsmodal_open_tipf=' data-tooltip="'+optiy.tiptext+'" data-flow="left"';   }  
-var close_fsmofla_str='<span class="bngd">  <span style="margin-left:4px;" class="ssclose" onclick="fsmodal_close(\''+optiy.id+'\', \''+optincludeplayer+'\', \''+optiy.content.type+'\''+fsmodal_open_closegi+');" '+fsmodal_open_tipf+'><span class="icon"></span></span>  </span>';
+var close_fsmofla_str='<span class="bngd">  <span style="margin-left:4px;" class="ssclose" onclick="fsmodal_close(\''+optiy.id+'\''+fsmodal_open_closegi+');" '+fsmodal_open_tipf+'><span class="icon"></span></span>  </span>';
  if(optiy.noclose && optiy.noclose==true){   close_fsmofla_str="";   }
  var momocsifipsl = document.getElementById(optiy.id);   if(momocsifipsl){     momocsifipsl.innerHTML = "";    if(optiy.content){       momocsifipsl.innerHTML = ' <div class="modal" style="display:block;color:#000;">  '+close_fsmofla_str+'       <div style="overflow:auto;" class="modal-content" id="fs_modal_'+optiy.id+'_content">'+fsmodal_create(optiy.content, optincludeplayer)+'</div><br/><br/></div>';    
 
