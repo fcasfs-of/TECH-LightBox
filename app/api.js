@@ -5,8 +5,8 @@ document.getElementsByTagName("head")[0].appendChild(scriptfd);
 
 function fsmodal_close(id, file, jj, hifde) {   if(id && id!=""){  
 if(jj && jj=="audio" && file && file=="yes"){
-if(scriptwwincfd){   document.getElementsByTagName("head")[0].removeChild(scriptwwincfd);  }
-if(scriptincfd){   document.getElementsByTagName("head")[0].removeChild(scriptincfd);   }
+if(scriptwwincfd){   scriptwwincfd.remove();  }
+if(scriptincfd){   scriptincfd.remove();   }
  }
 else if(jj && jj=="video" && file && file=="yes"){
 if(scriptwwincfd){   document.getElementsByTagName("head")[0].removeChild(scriptwwincfd);  }
