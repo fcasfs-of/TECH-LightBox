@@ -3,7 +3,11 @@ scriptfd.innerHTML='.modal { user-select:none;     display: none;   position: fi
 document.getElementsByTagName("head")[0].appendChild(scriptfd);
 
 
-function fsmodal_close(id, hifde) {   if(id && id!=""){   var momocsifipsl = document.getElementById(id);   if(momocsifipsl){   momocsifipsl.innerHTML = "";      if(hifde && hifde=="yes") { document.body.style.overflow="auto";   }    }     }   }
+function fsmodal_close(id, hifde) {   if(id && id!=""){   
+ var mdpl1sfdf = document.getElementById("mdpl1");   if(mdpl1sfdf){    mdpl1sfdf.remove();   }  
+var mdpl2gsdf = document.getElementById("mdpl2");   if(mdpl2gsdf){    mdpl2gsdf.remove();   } 
+
+ var momocsifipsl = document.getElementById(id);   if(momocsifipsl){   momocsifipsl.innerHTML = "";      if(hifde && hifde=="yes") { document.body.style.overflow="auto";   }    }     }   }
 
 function fsmodal_create(optiy, app) {   
  start_fs_mpl={};   fsmodal_createdd="";    start_fs_postermpl="";
