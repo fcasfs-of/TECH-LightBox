@@ -46,14 +46,16 @@ if(optiy.include){
 
 if(optiy.include.player && optiy.include.player=="yes"){
  
+var mdpl1sdf = document.getElementById("mdpl1");   if(mdpl1sdf){    mdpl1sdf.remove();   }  
+var mdpl2sdf = document.getElementById("mdpl2");   if(mdpl2sdf){    mdpl2sdf.remove();   } 
 
 var scriptwwincfd = document.createElement("script");
 scriptwwincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/core.js");
-scriptwwincfd.remove(); 
+scriptwwincfd.setAttribute("id", "mdpl1");
 document.getElementsByTagName("head")[0].appendChild(scriptwwincfd);
 var scriptincfd = document.createElement("script");
 scriptincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
-scriptincfd.remove(); 
+scriptincfd.setAttribute("id", "mdpl2");
 document.getElementsByTagName("head")[0].appendChild(scriptincfd);
 optincludeplayer="yes";
 }
