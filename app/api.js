@@ -46,8 +46,8 @@ if(optiy.include){
 
 if(optiy.include.player && optiy.include.player=="yes"){
  
-if(scriptwwincfd){   scriptwwincfd.remove();  }
-if(scriptincfd){   scriptincfd.remove();   }
+if(scriptwwincfd){   document.getElementsByTagName("head")[0].removeChild(scriptwwincfd);  }
+if(scriptincfd){   document.getElementsByTagName("head")[0].removeChild(scriptincfd);   }
  
 var scriptwwincfd = document.createElement("script");
 scriptwwincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/core.js");
