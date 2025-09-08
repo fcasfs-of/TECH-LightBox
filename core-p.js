@@ -26,10 +26,10 @@ fsmodal_open({
     player:"no"
   },
   content:{
-    title:"LightBox (Texto, Link, Vídeo, Imagem e Áudio)",
+    title:"LightBox",
     type:"",
     context:"Lightbox é inovador que oferece uma experiência integrada para visualizar e interagir com textos, links, imagens, áudios e vídeos de forma intuitiva e moderna. <br/> Com uma interface limpa e responsiva, o aplicativo permite aos usuários explorar conteúdos multimídia de maneira eficiente, proporcionando uma navegação fluida e envolvente.",
-    description:""
+    description:"(Texto, Link, Vídeo, Imagem e Áudio)"
   }
 });
   });
