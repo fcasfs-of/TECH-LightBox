@@ -4,7 +4,7 @@ document.getElementsByTagName("head")[0].appendChild(scriptfd);
 
 var scriptwwincfd = document.createElement("script");
 scriptwwincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/core.js");
-//document.getElementsByTagName("head")[0].appendChild(scriptwwincfd);
+document.getElementsByTagName("head")[0].appendChild(scriptwwincfd);
 var scriptincfd = document.createElement("script");
 scriptincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
 document.getElementsByTagName("head")[0].appendChild(scriptincfd);
@@ -67,14 +67,7 @@ var close_fsmofla_str='<span class="bngd">  <span style="margin-left:4px;" class
 
 function loaded_playerinf(dstart_fs_mpl){   if(typeof fs_Playerjs=="function" && dstart_fs_mpl){   mfplayeri = fs_Playerjs(dstart_fs_mpl);   }   }
                                                                                                                                
-if(optincludeplayer && optincludeplayer=="yes"){
-var sccustrfiptfd = document.createElement("script");
-sccustrfiptfd.setAttribute("type", "text/javascript");
-sccustrfiptfd.setAttribute("onload", "loaded_playerinf(start_fs_mpl);");
-sccustrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent("loaded_playerinf(start_fs_mpl);"));
-document.getElementsByTagName("body")[0].appendChild(sccustrfiptfd); 
- document.getElementsByTagName("body")[0].onload=function(){  loaded_playerinf(start_fs_mpl);   };    
-}
+if(optincludeplayer && optincludeplayer=="yes"){   loaded_playerinf(start_fs_mpl);   }
  
  if(optiy.scroll_hide && optiy.scroll_hide=="yes") {  document.body.style.overflow="hidden";  }   }  }    }    }         
  }
