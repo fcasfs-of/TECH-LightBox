@@ -74,6 +74,8 @@ var close_fsmofla_str='<span class="bngd">  <div style="margin-left:4px;" class=
  if(optiy.noclose && optiy.noclose==true){   close_fsmofla_str="";   }
  var momocsifipsl = document.getElementById(optiy.id);   if(momocsifipsl){     momocsifipsl.innerHTML = "";    if(optiy.content){       momocsifipsl.innerHTML = ' <div class="modal" style="display:block;color:#000;">  '+close_fsmofla_str+'       <div style="overflow:auto;" class="modal-content" id="fs_modal_'+optiy.id+'_content">'+fsmodal_create(optiy.content, optincludeplayer)+'</div><br/><br/></div>';    
 
+ if(optiy.click_close && optiy.click_close==true){   momocsifipsl.onclick=function(){fsmodal_close(optiy.id, optiy.scroll_hide);};   }
+                                                                                                                                 
 function loaded_playerinf(dstart_fs_mpl){   if(typeof fs_Playerjs=="function" && dstart_fs_mpl){   mfplayeri = fs_Playerjs(dstart_fs_mpl);   }   }
                                                                                                                                
 if(optincludeplayer && optincludeplayer=="yes" && is_player0j && is_player0j=="yes"){   loaded_playerinf(start_fs_mpl);   }
