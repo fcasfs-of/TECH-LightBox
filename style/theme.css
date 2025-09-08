@@ -1,0 +1,13 @@
+  * {      box-sizing: border-box;      margin: 0;      padding: 0;    }
+    body {   user-select:none;   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;      background-color: #f4f4f4;      color: #333;    }
+
+    header.lbxx {      background-color: #222;      padding: 1rem;      text-align: center;    }    header.lbxx  h1 {      color: #fff;      margin-bottom: 1rem;      font-size: 1.8rem;    }
+    header.lbxx nav {      display: flex;      flex-wrap: wrap;      justify-content: center;      gap: 10px;    }
+    header.lbxx nav button {      padding: 0.75rem 1.5rem;      font-size: 1rem;      border: none;      border-radius: 5px;      cursor: pointer;      background-color: #007bff;      color: #fff;      transition: background-color 0.3s;    }
+    header.lbxx nav button:hover {      background-color: #0056b3;    }
+
+    @media(max-width: 600px) {
+      header.lbxx h1 {        font-size: 1.4rem;      }
+      header.lbxx nav button {        padding: 0.5rem 1rem;        font-size: 0.9rem;      }
+    }
+
