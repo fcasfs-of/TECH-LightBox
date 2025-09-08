@@ -1,7 +1,9 @@
+var text_thnv="Close";
 
   document.getElementById('btnImage').addEventListener('click', function(){
 fsmodal_open({
   id:"previ_box",
+  tiptext:text_thnv,
   scroll_hide:"yes",
   noclose:false,
   include:{
@@ -20,6 +22,7 @@ fsmodal_open({
   document.getElementById('btnText').addEventListener('click',  function(){
   fsmodal_open({
   id:"previ_box",
+  tiptext:text_thnv,
   scroll_hide:"yes",
   noclose:false,
   include:{
@@ -37,6 +40,7 @@ fsmodal_open({
   document.getElementById('btnLink').addEventListener('click',  function(){
   fsmodal_open({
   id:"previ_box",
+  tiptext:text_thnv,
   scroll_hide:"yes",
   noclose:false,
   include:{
@@ -55,6 +59,7 @@ fsmodal_open({
   document.getElementById('btnAudio').addEventListener('click',  function(){
  fsmodal_open({
   id:"previ_box",
+  tiptext:text_thnv,
   scroll_hide:"yes",
   noclose:false,
   include:{
@@ -74,6 +79,7 @@ fsmodal_open({
   document.getElementById('btnVideo').addEventListener('click',  function(){
   fsmodal_open({
   id:"previ_box",
+  tiptext:text_thnv,
   scroll_hide:"yes",
   noclose:false,
   include:{
