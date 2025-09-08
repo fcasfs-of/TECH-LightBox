@@ -15,8 +15,9 @@ function fsmodal_close(id, hifde) {   if(id && id!=""){
 var mdpl2gsdf = document.getElementById("mdpl2");   if(mdpl2gsdf){    mdpl2gsdf.remove();   } 
 
  var momocsifipsl = document.getElementById(id);   if(momocsifipsl){   momocsifipsl.innerHTML = "";      if(hifde && hifde=="yes") { document.body.style.overflow="auto";   }    }     }   }
+var is_player0j= "no";
 
-function fsmodal_create(optiy, app) {   
+function fsmodal_create(optiy, app) {     is_player0j= "no";
  start_fs_mpl={};   fsmodal_createdd="";    start_fs_postermpl="";
 if(optiy){       var fsmodal_create_desci="";
  if(optiy.description && optiy.description!=""){   fsmodal_create_desci="<br/><br/><span>"+optiy.description+"</span>";   }
@@ -24,21 +25,21 @@ if(optiy){       var fsmodal_create_desci="";
 if(optiy.context && optiy.context!=""){   
 var fsmodal_create_ifir = optiy.context;
 
-if(app && app=="yes" && optiy.type && optiy.type=="id"){
+if(app && app=="yes" && optiy.type && optiy.type=="id"){   is_player0j= "no";
 fsmodal_create_ifir=`<iframe allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation"  frameborder="0" allowfullscreen src="https://player.fcasfs-of.cloud-fs.net?fileID=${optiy.context}&fileView=true" style="width:100%; height:${Number(optiy.size)}px;"></iframe>`;
 }
-else if(optiy.type && optiy.type=="link"){
+else if(optiy.type && optiy.type=="link"){   is_player0j= "no";
 fsmodal_create_ifir=`<iframe allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation"  frameborder="0" allowfullscreen src="${optiy.context}" style="width:100%; height:${Number(optiy.size)}px;"></iframe>`;
 }
-else if(optiy.type && optiy.type=="image"){
+else if(optiy.type && optiy.type=="image"){   is_player0j= "no";
 fsmodal_create_ifir=`<img src="${optiy.context}" style="user-select:none;pointer-events:none;  width:${Number(optiy.size)}px;" />`;
 }
-else if(optiy.type && optiy.type=="audio"){
+else if(optiy.type && optiy.type=="audio"){    is_player0j= "yes";
 if(optiy.poster && optiy.poster!=""){   start_fs_postermpl=optiy.poster;  }
 start_fs_mpl = { OSD:true, config:{}, id:"preview_pls",  customtext:{age:""}, nocontrols:0, autoplay:0, loop:0, title:optiy.title, file:optiy.context, poster:start_fs_postermpl, player:1  };   
 fsmodal_create_ifir=`<div style="width:100%; height:${Number(optiy.size)}px;"> <div id="preview_pls" style="width:100%; height:${Number(optiy.size)}px;"></div> </div>`;
 }
-else if(optiy.type && optiy.type=="video"){
+else if(optiy.type && optiy.type=="video"){   is_player0j= "yes";
 if(optiy.poster && optiy.poster!=""){   start_fs_postermpl=optiy.poster;  }
 start_fs_mpl = { OSD:true, config:{}, id:"preview_pls",  customtext:{age:""}, nocontrols:0, autoplay:0, loop:0, title:optiy.title, file:optiy.context, poster:start_fs_postermpl, player:1  };   
 fsmodal_create_ifir=`<div style="width:100%; height:${Number(optiy.size)}px;"> <div id="preview_pls" style="width:100%; height:${Number(optiy.size)}px;"></div> </div>`;
@@ -47,7 +48,7 @@ fsmodal_create_ifir=`<div style="width:100%; height:${Number(optiy.size)}px;"> <
 fsmodal_createdd=fsmodal_createdd+`  <div style="text-align:center;  color:#fff; "><br/>${fsmodal_create_ifir} ${fsmodal_create_desci}<br/><br/><br/><br/></div><br/><br/><br/>`;   
  }   }   return fsmodal_createdd;   }
 
-var start_fs_mpl={};   var mfplayeri;
+var start_fs_mpl={};   var mfplayeri;   is_player0j= "no";
 var fsmodal_createdd="";   var start_fs_postermpl="";
 
 function fsmodal_open(optiy) {   start_fs_mpl={};    fsmodal_createdd="";    start_fs_postermpl="";
@@ -67,7 +68,7 @@ var close_fsmofla_str='<span class="bngd">  <span style="margin-left:4px;" class
 
 function loaded_playerinf(dstart_fs_mpl){   if(typeof fs_Playerjs=="function" && dstart_fs_mpl){   mfplayeri = fs_Playerjs(dstart_fs_mpl);   }   }
                                                                                                                                
-if(optincludeplayer && optincludeplayer=="yes"){   loaded_playerinf(start_fs_mpl);   }
+if(optincludeplayer && optincludeplayer=="yes" && is_player0j && is_player0j=="yes"){   loaded_playerinf(start_fs_mpl);   }
  
  if(optiy.scroll_hide && optiy.scroll_hide=="yes") {  document.body.style.overflow="hidden";  }   }  }    }    }         
  }
