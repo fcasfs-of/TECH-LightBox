@@ -9,22 +9,13 @@
 
 
   <title>Lightbox - Miscellaneous Content</title>
+  
+  <link media="all" rel="stylesheet" href="style/theme.css" />
+
   <style>
-    * {      box-sizing: border-box;      margin: 0;      padding: 0;    }
-    body {   user-select:none;   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;      background-color: #f4f4f4;      color: #333;    }
 
-    header.lbxx {      background-color: #222;      padding: 1rem;      text-align: center;    }    header.lbxx  h1 {      color: #fff;      margin-bottom: 1rem;      font-size: 1.8rem;    }
-    header.lbxx nav {      display: flex;      flex-wrap: wrap;      justify-content: center;      gap: 10px;    }
-    header.lbxx nav button {      padding: 0.75rem 1.5rem;      font-size: 1rem;      border: none;      border-radius: 5px;      cursor: pointer;      background-color: #007bff;      color: #fff;      transition: background-color 0.3s;    }
-    header.lbxx nav button:hover {      background-color: #0056b3;    }
-
-    @media(max-width: 600px) {
-      header.lbxx h1 {        font-size: 1.4rem;      }
-      header.lbxx nav button {        padding: 0.5rem 1rem;        font-size: 0.9rem;      }
-    }
-    
-    
   </style>
+  
 </head>
 <body>
 
@@ -42,101 +33,9 @@
 <div id="previ_box"></div>
 
 
+<script src="core-e.js"></script>
+
 <script>
-
-  document.getElementById('btnImage').addEventListener('click', function(){
-fsmodal_open({
-  id:"previ_box",
-  scroll_hide:"yes",
-  noclose:false,
-  include:{
-    player:"no"
-  },
-  content:{
-    title:"Logo 1",
-    type:"image",
-    context:"https://fcasfs-of.cloud-fs.net/info-profile/logo/cover_b.png",
-    size:"150",
-    description:""
-  }
-});
-  });
-
-  document.getElementById('btnText').addEventListener('click',  function(){
-  fsmodal_open({
-  id:"previ_box",
-  scroll_hide:"yes",
-  noclose:false,
-  include:{
-    player:"no"
-  },
-  content:{
-    title:"LightBox (Text, Link, Video, Image and Audio)",
-    type:"",
-    context:"Lightbox is an innovative app that offers an integrated experience for viewing and interacting with text, links, images, audio, and videos in an intuitive and modern way. <br/> With a clean and responsive interface, the app allows users to explore multimedia content efficiently, providing fluid and engaging navigation.",
-    description:""
-  }
-});
-  });
-
-  document.getElementById('btnLink').addEventListener('click',  function(){
-  fsmodal_open({
-  id:"previ_box",
-  scroll_hide:"yes",
-  noclose:false,
-  include:{
-    player:"no"
-  },
-  content:{
-    title:"WebSite",
-    type:"link",
-    context:"https://fcasfs-of.cloud-fs.net/",
-    size:"250",
-    description:"Oficial"
-  }
-});
-  });
-
-  document.getElementById('btnAudio').addEventListener('click',  function(){
- fsmodal_open({
-  id:"previ_box",
-  scroll_hide:"yes",
-  noclose:false,
-  include:{
-    player:"yes"
-  },
-  content:{
-    title:"Audio 1",
-    type:"audio",
-    context:"https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.mp4",
-    poster:"https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.jpg",
-    size:"250",
-    description:""
-  }
-});
-  });
-
-  document.getElementById('btnVideo').addEventListener('click',  function(){
-  fsmodal_open({
-  id:"previ_box",
-  scroll_hide:"yes",
-  noclose:false,
-  include:{
-    player:"yes"
-  },
-  content:{
-    title:"Video 1",
-    type:"video",
-    context:"https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.mp4",
-    poster:"https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.jpg",
-    size:"250",
-    description:""
-  }
-}); 
-  });
-
- 
- 
 </script>
 
 </body>
