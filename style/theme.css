@@ -2,7 +2,9 @@
     body {   user-select:none;   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;      background-color: #f4f4f4;      color: #333;    }
 
    header {     margin: 0;    position: absolute;    top: 50%;    left: 50%;    width: 80%;    -ms-transform: translate(-50%, -50%);    transform: translate(-50%, -50%);    border-radius: 20px;   }
-    header.lbxx {      background-color: #222;      padding: 1rem;      text-align: center;    }    header.lbxx  h1 {      color: #fff;      margin-bottom: 1rem;      font-size: 1.8rem;    }
+    header.lbxx {      background-color: #222;      padding: 1rem;      text-align: center;    }    
+   header.lbxx  h1 {      color: #fff;      margin-bottom: 1rem;      font-size: 1.8rem;    }
+    header.lbxx  h1:before {  display:block;  position:relative;  top:0px;    content: url("https://lightbox.fcasfs-of.cloud-fs.net/favicon.png");   }
     header.lbxx nav {      display: flex;      flex-wrap: wrap;      justify-content: center;      gap: 10px;    }
     header.lbxx nav button {      padding: 0.75rem 1.5rem;      font-size: 1rem;      border: none;      border-radius: 5px;      cursor: pointer;      background-color: #007bff;      color: #fff;      transition: background-color 0.3s;    }
     header.lbxx nav button:hover {      background-color: #0056b3;    }
