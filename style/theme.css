@@ -1,7 +1,7 @@
   * {      box-sizing: border-box;      margin: 0;      padding: 0;    }
    body {   user-select:none;   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;      background-color: #f4f4f4;      color: #333;    }
 
-   header {     margin: 60x auto;  position: absolute; width: 80%;      border-radius: 20px;   }
+   header {     margin: 6px auto;  position: absolute; width: 80%;      border-radius: 20px;   }
 
    header.lbxx {      background-color: #222;      padding: 1rem;      text-align: center;    }    
    header.lbxx  h1 {      color: #fff;      margin-bottom: 1rem;      font-size: 1.8rem;    }
