@@ -1,19 +1,123 @@
-  * {      box-sizing: border-box;      margin: 0;      padding: 0;    }
-   body {   user-select:none;   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;      background-color: #f4f4f4;      color: #333;    }
-
-   header {     margin: 6px auto;    width: 80%;      border-radius: 20px;   }
-
-   header.lbxx {      background-color: #222;      padding: 1rem;      text-align: center;    }    
-   header.lbxx  h1 {      color: #fff;      margin-bottom: 1rem;      font-size: 1.8rem;    }
-
-    header.lbxx  h1:before {      pointer-events: none;    user-select: none;    display:block;  position:relative;  top:0px;    content: url("https://lightbox.fcasfs-of.cloud-fs.net/favicon.png");   }
-    
-    header.lbxx nav {      display: flex;      flex-wrap: wrap;      justify-content: center;      gap: 10px;    }
-    header.lbxx nav button {      padding: 0.75rem 1.5rem;      font-size: 1rem;      border: none;      border-radius: 5px;      cursor: pointer;      background-color: #007bff;      color: #fff;      transition: background-color 0.3s;    }
-    header.lbxx nav button:hover {      background-color: #0056b3;    }
-
-    @media(max-width: 600px) {
-      header.lbxx h1 {        font-size: 1.4rem;      }
-      header.lbxx nav button {        padding: 0.5rem 1rem;        font-size: 0.9rem;      }
+ * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
+    body {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+      transition: background-color 0.3s, color 0.3s;
+      user-select: none;
+    }
+
+    /* Variáveis de Tema */
+    :root {
+      --bg-color: #f4f4f4;
+      --text-color: #333;
+      --primary-color: #007bff;
+      --primary-hover: #0056b3;
+      --header-bg: #222;
+      --header-text: #fff;
+    }
+
+    body.dark {
+      --bg-color: #121212;
+      --text-color: #f4f4f4;
+      --header-bg: #333;
+    }
+
+    /* Cabeçalho */
+    header {
+      margin: 6px auto;
+      width: 90%;
+      max-width: 1000px; text-align:center;
+      border-radius: 20px;
+      background-color: var(--header-bg);
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: background-color 0.3s;
+    }
+
+    header h1 {
+      color: var(--header-text);
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+    }
+
+    /* Logo ao lado do título */
+    header .icon:before {
+      pointer-events: none;
+      user-select: none;
+      display: inline-block;
+      margin-right: 0.5em;
+      height: 24px;
+      width: 24px;
+      content: url("https://lightbox.fcasfs-of.cloud-fs.net/favicon.png");
+    }
+
+ /* Navegação */
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 1em;
+}
+
+nav button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: var(--primary-color);
+  color: #fff;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+nav button:hover {
+  background-color: var(--primary-hover);
+  transform: translateY(-2px);
+}
+
+/* Responsividade */
+@media(max-width: 600px) {
+  header h1 {
+    font-size: 1.4rem;
+  }
+  nav button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Tema switch */
+#theme-toggle {
+  margin-top: 1em;
+  background: none;
+  border: 2px solid var(--header-text);
+  border-radius: 20px;
+  padding: 0.3em 1em;
+  font-size: 0.9em;
+  cursor: pointer;
+  color: var(--header-text);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+#theme-toggle:hover {
+  background-color: var(--header-text);
+  color: var(--header-bg);
+}
+
+/* Container para o conteúdo do modal */
+#previ_box {
+  margin-top: 2em;
+}
+
 
