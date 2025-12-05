@@ -3,7 +3,7 @@
   toggleThemeBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark');
     const isDark = document.body.classList.contains('dark');
-    toggleThemeBtn.textContent = isDark ? 'Modo Claro' : 'Modo Escuro';
+    toggleThemeBtn.textContent = isDark ? 'Light Mode' : 'Dark Mode';
   });
 
 
