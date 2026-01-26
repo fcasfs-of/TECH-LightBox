@@ -34,10 +34,14 @@ if(optiy.context && optiy.context!=""){
 var fsmodal_create_ifir = optiy.context;
 
 if(app && app=="yes" && optiy.type && optiy.type=="id"){   is_player0j= "no";
- var start_fs_mpl_args="";
+ var start_fs_mpl_args="";   var stdart_fs_mpl_argsd="";
  if(optiy.view && optiy.view=="info"){  start_fs_mpl_args="&info=on";  }    
  else if(optiy.view && optiy.view=="list"){   start_fs_mpl_args="&list=on";     }   
-fsmodal_create_ifir=`<iframe scrolling="no" allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation"  frameborder="0" allowfullscreen src="https://player.fcasfs-of.cloud-fs.net?fileID=${optiy.context}${start_fs_mpl_args}&fileView=true" style="overflow: hidden;   width:100%; height:${Number(optiy.size)}px;"></iframe>`;
+   if(optiy.config){
+     if(optiy.config.pos && optiy.config.pos!=""){  stdart_fs_mpl_argsd=stdart_fs_mpl_argsd+"&pos="+optiy.config.pos;  }    
+     if(optiy.config.select && optiy.config.select!=""){  stdart_fs_mpl_argsd=stdart_fs_mpl_argsd+"&fileSelect="+optiy.config.select;  }    
+   }    
+fsmodal_create_ifir=`<iframe scrolling="no" allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation"  frameborder="0" allowfullscreen src="https://player.fcasfs-of.cloud-fs.net?fileID=${optiy.context}${start_fs_mpl_args}&fileView=true${stdart_fs_mpl_argsd}" style="overflow: hidden;   width:100%; height:${Number(optiy.size)}px;"></iframe>`;
 }
 else if(optiy.type && optiy.type=="link"){   is_player0j= "no";
 fsmodal_create_ifir=`<iframe allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation"  frameborder="0" allowfullscreen src="${optiy.context}" style="width:100%; height:${Number(optiy.size)}px;"></iframe>`;
