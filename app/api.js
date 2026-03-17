@@ -116,7 +116,7 @@ if(optincludeplayer && optincludeplayer=="yes" && is_player0j && is_player0j=="y
 
 
 
-
+if(CtxMenu && MainContextMenu){  }   else  {
 const ECtxMenuNames = {
 	menu: 			"ctx-menu-wrapper",
 	item: 			"ctx-menu-item",
@@ -383,7 +383,7 @@ function CtxCloseCurrentlyOpenedMenus(){
 
 var ctxMenuManager = new CtxMenuManagerClass();
 
-
+}
 
 
 
