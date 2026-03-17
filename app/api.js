@@ -81,7 +81,7 @@ if(optiy.include.player && optiy.include.player=="yes"){    optincludeplayer="ye
 }
 
 var fsmodal_open_closegi="";   if(optiy.scroll_hide && optiy.scroll_hide=="yes") {  fsmodal_open_closegi=', \''+optiy.scroll_hide+'\'';  }    if(optiy.id && optiy.id!=""){    
-  var fsmodal_open_tipf="";   if(optiy.tiptext && optiy.tiptext!=""){   fsmodal_open_tipf=' data-tooltip="'+optiy.tiptext+'" data-flow="left"';   }  
+ var fsmodal_offpen_tipf="";      var fsmodal_open_tipf="";   if(optiy.tiptext && optiy.tiptext!=""){   fsmodal_offpen_tipf=optiy.tiptext;  fsmodal_open_tipf=' data-tooltip="'+optiy.tiptext+'" data-flow="left"';   }  
  var close_fsmofla_strdd=true;
 var close_fsmofla_str='<span class="bngd">  <div style="margin-left:4px;" class="ssclose" onclick="fsmodal_close(\''+optiy.id+'\''+fsmodal_open_closegi+');" '+fsmodal_open_tipf+'><span class="icon"></span></div>  </span>';
  if(optiy.noclose && optiy.noclose==true){   close_fsmofla_str="";  close_fsmofla_strdd=false;  }
@@ -101,7 +101,7 @@ if(optincludeplayer && optincludeplayer=="yes" && is_player0j && is_player0j=="y
  if(close_fsmofla_strdd==true){    if(CtxMenu){
   var MainContextMenu = CtxMenu(".modal");
     if(MainContextMenu){ 
-    MainContextMenu.addItem(" <div>  </div>", function(){
+    MainContextMenu.addItem(fsmodal_offpen_tipf, function(){
      fsmodal_close(optiy.id, optiy.scroll_hide);
     }, "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAA7AAAAOwBeShxvQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHASURBVFiF7ZY9SytBFIafCTezuSJ3MAtytZSk8P9oqdYmQbDRWylcf0EgxkK7LfWvXEtTJNgpKCayKCE7CYxFzGWTXeMGR/HrrZaZs+d95uMMB7711SVGB8zyssSYPWAFmLPkcwl4CLEjjo91eOJHJNSYv8CWJeOB5oFtjAH4E55IxQSvWjYPa210IA7A1rbH6XcSgDfVBwI4OjrF82oo1XwyRqkmnlfj8PCffQDH+Ukms0i12oqFUKpJtdoik1lEyin7AKXSLFrXkTLPwYFPNnsdMZcyT7d7zuamax/A910KhSxa10mnF6hU7nHdq4h5qTRNqzWbNG30JVxaMmP/UKrJ/v4tjpMjCBoA/7+LxRl8f+zqxcnJkOfkVeD7LsXiDFrXcZwcjpOj2z1nY+PXc+ZxsleGQozfOWsAgyOQMk8QNAiCBun0AuXy3dgStQIwuHDhbQ8fx2h1WAV46rbHVccEEMkBKpVrpMyjdZ31dTVUaqMQ5fKNfYBOp027XaNQyMbe9gFEp3NGr9dLmnbyd+CFevk7YFnvEuDyFf0ukgB4r2ZvTCR3tCsWYuexe12h383aUL8tT6V2LeX71ifSA3f6ubbY1IiBAAAAAElFTkSuQmCC", false, false);
     //MainContextMenu.addSeparator();
