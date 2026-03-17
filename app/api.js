@@ -22,7 +22,7 @@ function fsmodal_close(id, hifde) {   if(id && id!=""){
  var mdpl1sfdf = document.getElementById("mdpl1");   if(mdpl1sfdf){    mdpl1sfdf.remove();   }  
 var mdpl2gsdf = document.getElementById("mdpl2");   if(mdpl2gsdf){    mdpl2gsdf.remove();   } 
 
-if(document.querySelector(".ctx-menu-wrapper")){  document.querySelector(".ctx-menu-wrapper").innerHTML="";   }
+if(document.querySelector("#mendu_df")){  document.querySelector("#mendu_df").innerHTML="";   }
 	
  var momocsifipsl = document.getElementById(id);   if(momocsifipsl){   momocsifipsl.innerHTML = "";      if(hifde && hifde=="yes") { document.body.style.overflow="auto";   }    }     }   }
 var is_player0j= "no";
@@ -70,7 +70,7 @@ var fsmodal_createdd="";   var start_fs_postermpl="";
 
 function fsmodal_open(optiy) {   start_fs_mpl={};    fsmodal_createdd="";    start_fs_postermpl="";
 							  
-if(document.querySelector(".ctx-menu-wrapper")){  document.querySelector(".ctx-menu-wrapper").innerHTML="";   }
+if(document.querySelector("#mendu_df")){  document.querySelector("#mendu_df").innerHTML="";   }
 							  
  var optincludeplayer= "";   if(optiy){   
 
@@ -107,7 +107,7 @@ if(optincludeplayer && optincludeplayer=="yes" && is_player0j && is_player0j=="y
     //MainContextMenu.addSeparator();
     }
     }
- if(MainContextMenu){   MainContextMenu.dark(true);   }
+ if(MainContextMenu){   MainContextMenu.id("mendu_df");   MainContextMenu.dark(true);   }
  if(CtxMenuBlock){  CtxMenuBlock("#cf_menuu");  }
   }
                                                                                                                                  
@@ -263,6 +263,10 @@ class CtxMenuClass {
      if (che==true){   this.menuContainer.classList.add("mdark"); }
      }
 
+	id(name = "") {
+		if(name && name!=""){    this.menuContainer.setAttribute("id", name);    }
+     }
+	
 addItem(text, customFunction, icon = undefined, disable = false, hide=false, index = undefined, bInvertIconDarkMode = false) {
 		var element = document.createElement("div");
 		element.className = ECtxMenuNames.item;
