@@ -89,7 +89,7 @@ var close_fsmofla_str='<span class="bngd">  <div style="margin-left:4px;" class=
  var close_fsmofla_efestr=" eff";
   if(optiy.remove_efect && optiy.remove_efect==true){   close_fsmofla_efestr="";   }
 
- var momocsifipsl = document.getElementById(optiy.id);   if(momocsifipsl){     momocsifipsl.innerHTML = "";    if(optiy.content){       momocsifipsl.innerHTML = ' <div class="modal'+close_fsmofla_efestr+'" id="fs_modal_'+optiy.id+'" style="display:block;color:#000;">  '+close_fsmofla_str+'       <div style="overflow:auto;" class="modal-content" id="fs_modal_'+optiy.id+'_content">'+fsmodal_create(optiy.content, optincludeplayer)+'</div><br/><br/></div>  <div id="cf_menuu"></div>   ';    
+ var momocsifipsl = document.getElementById(optiy.id);   if(momocsifipsl){     momocsifipsl.innerHTML = "";    if(optiy.content){       momocsifipsl.innerHTML = ' <style> .ctx-menu-wrapper{z-index: 999999999; } </style>   <div class="modal'+close_fsmofla_efestr+'" id="fs_modal_'+optiy.id+'" style="display:block;color:#000;">  '+close_fsmofla_str+'       <div style="overflow:auto;" class="modal-content" id="fs_modal_'+optiy.id+'_content">'+fsmodal_create(optiy.content, optincludeplayer)+'</div><br/><br/></div>  <div id="cf_menuu"></div>   ';    
 
   var mffomocsifipsl = document.getElementById("fs_modal_"+optiy.id); 
  if(optiy.click_close && optiy.click_close==true){    mffomocsifipsl.onclick=function(){fsmodal_close(optiy.id, optiy.scroll_hide);};   }
