@@ -16,6 +16,7 @@
       tiptext: text_thnv,
       scroll_hide: "yes",
       noclose: false,
+      menu: true,
       include: { player: contentOptions.includePlayer },
       content: {
         title: contentOptions.title,
