@@ -9,14 +9,14 @@
 
   const text_thnv = "Fechar";
 
-  // Função para abrir modal
-  function openModal(contentOptions) {
+  function openModal(contentOptions,obj) {
     fsmodal_open({
       id: "previ_box",
       tiptext: text_thnv,
       scroll_hide: "yes",
       noclose: false,
       menu: true,
+      itens: obj,
       include: { player: contentOptions.includePlayer },
       content: {
         title: contentOptions.title,
@@ -29,7 +29,7 @@
     });
   }
 
-  document.getElementById('btnImage').addEventListener('click', () => {
+  document.getElementById('btnImage').addEventListener('click', (e) => {
     openModal({
       title: "Logo 1",
       type: "image",
@@ -37,10 +37,10 @@
       size: "150",
       includePlayer: "no",
       description: ""
-    });
+    },e);
   });
 
-  document.getElementById('btnText').addEventListener('click', () => {
+  document.getElementById('btnText').addEventListener('click', (e) => {
     openModal({
       title: "LightBox",
       type: "",
@@ -48,10 +48,10 @@
       size: "250",
       includePlayer: "no",
       description: "(Texto, Link, Vídeo, Imagem e Áudio)"
-    });
+    },e);
   });
 
-  document.getElementById('btnLink').addEventListener('click', () => {
+  document.getElementById('btnLink').addEventListener('click', (e) => {
     openModal({
       title: "Site",
       type: "link",
@@ -59,10 +59,10 @@
       size: "250",
       includePlayer: "no",
       description: "Oficial"
-    });
+    },e);
   });
 
-  document.getElementById('btnAudio').addEventListener('click', () => {
+  document.getElementById('btnAudio').addEventListener('click', (e) => {
     openModal({
       title: "Audio 1",
       type: "audio",
@@ -71,10 +71,10 @@
       size: "250",
       includePlayer: "yes",
       description: ""
-    });
+    },e);
   });
 
-  document.getElementById('btnVideo').addEventListener('click', () => {
+  document.getElementById('btnVideo').addEventListener('click', (e) => {
     openModal({
       title: "Video 1",
       type: "video",
@@ -83,5 +83,5 @@
       size: "250",
       includePlayer: "yes",
       description: ""
-    });
+    },e);
   });
