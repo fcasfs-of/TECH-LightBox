@@ -21,16 +21,16 @@ document.getElementsByTagName("head")[0].appendChild(scriptincfd);
 function fsmodal_cl_menu(id) {    if(id && id!=""){    var mdplfsmodal_cl_menu1sfdf = document.getElementById(id);   if(mdplfsmodal_cl_menu1sfdf){   mdplfsmodal_cl_menu1sfdf.click();    } }   }
 
 
-function fsmodal_clall_menu(id) {   var fsmodal_clall_menussd="";     if(id){	if(id.parentElement){       if(id.parentElement.getElementsByTagName("button").length>=0){
-	for (var isd = 0; isd < id.parentElement.getElementsByTagName("button").length; isd++){
-		 fsmodal_clall_menussd=fsmodal_clall_menussd+` <button onclick="fsmodal_cl_menu('${id.parentElement.getElementsByTagName("button")[isd].getAttribute('id')}')">${id.parentElement.getElementsByTagName("button")[isd].textContent}'</button>  `;
-	}    }    
+   function fsmodal_clall_menu(id) {  var fsmodal_clall_menussd="";     if(id.target){   if(id.target.parentNode){     if(id.target.parentNode.getElementsByTagName("button").length>=0){
+	for (var isd = 0; isd < id.target.parentNode.getElementsByTagName("button").length; isd++){
+		 fsmodal_clall_menussd=fsmodal_clall_menussd+` <button onclick="fsmodal_cl_menu('${id.target.parentNode.getElementsByTagName("button")[isd].getAttribute('id')}')">${id.target.parentNode.getElementsByTagName("button")[isd].textContent}</button>  `;
+	}     }   
 	}   }   return fsmodal_clall_menussd;   }
 
-function fsmodal_clall_menfu(id) {   var fsmodal_clall_menussd=false;     if(id){	if(id.parentElement){   
-	if(id.parentElement.getElementsByTagName("button").length>=0){  fsmodal_clall_menussd=true;   }
-	}   }   return fsmodal_clall_menussd;   }
-
+function fsmodal_clall_menfu(id) {   var fsmodal_clall_menussd=false;    if(id.target){   if(id.target.parentNode){  
+	if(id.target.parentNode.getElementsByTagName("button").length>=0){  fsmodal_clall_menussd=true;   }   }
+	}      return fsmodal_clall_menussd;   }
+    
 
 function fsmodal_close(id, hifde) {   if(id && id!=""){   
  var mdpl1sfdf = document.getElementById("mdpl1");   if(mdpl1sfdf){    mdpl1sfdf.remove();   }  
