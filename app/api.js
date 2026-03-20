@@ -22,9 +22,10 @@ function fsmodal_cl_menu(id) {    if(id && id!=""){    var mdplfsmodal_cl_menu1s
 
 
 function fsmodal_clall_menu(id) {   var fsmodal_clall_menussd="";     if(id){	if(id.parentElement){   
+	if(id.parentElement.length){    if(id.parentElement.length>=0){
 	for (var isd = 0; isd < id.parentElement.length; isd++){
-		 fsmodal_clall_menussd=fsmodal_clall_menussd+' <button onclick="fsmodal_cl_menu(\''+id.parentElement[isd].getAttribute('id')+'\')">'+id.parentElement[isd].textContent+'</button>  ';
-	}
+		 fsmodal_clall_menussd=fsmodal_clall_menussd+` <button onclick="fsmodal_cl_menu('${id.parentElement[isd].getAttribute('id')}')">${id.parentElement[isd].textContent}'</button>  `;
+	}    }    }
 	}   }   return fsmodal_clall_menussd;   }
 
 function fsmodal_clall_menfu(id) {   var fsmodal_clall_menussd=true;     if(id){	if(id.parentElement){   
