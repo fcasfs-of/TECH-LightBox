@@ -28,8 +28,8 @@ function fsmodal_clall_menu(id) {   var fsmodal_clall_menussd="";     if(id){	if
 	}    }    }
 	}   }   return fsmodal_clall_menussd;   }
 
-function fsmodal_clall_menfu(id) {   var fsmodal_clall_menussd=true;     if(id){	if(id.parentElement){   
-	if(id.parentElement.length<0){  fsmodal_clall_menussd=false;   }
+function fsmodal_clall_menfu(id) {   var fsmodal_clall_menussd=false;     if(id){	if(id.parentElement){   
+	if(id.parentElement.length>=0){  fsmodal_clall_menussd=true;   }
 	}   }   return fsmodal_clall_menussd;   }
 
 
@@ -105,7 +105,7 @@ var close_fsmofla_str='<span class="bngd">  <div style="margin-left:4px;" class=
  var close_fsmofla_efestr=" eff";
   if(optiy.remove_efect && optiy.remove_efect==true){   close_fsmofla_efestr="";   }
 
-  if(optiy.menu && optiy.menu==true){   if(fsmodal_clall_menfu(this)==true){  thumsds_efestr='  <div class="menulight_scrollmenu">  '+fsmodal_clall_menu(this)+'   </div>  ';   }   }
+  if(optiy.menu && optiy.menu==true){   if(fsmodal_clall_menfu(this)==true){    var is_menuded=fsmodal_clall_menu(this);   if(is_menuded && is_menuded!=""){   thumsds_efestr='  <div class="menulight_scrollmenu">  '+is_menuded+'   </div>  ';   }  }   }
 
  var momocsifipsl = document.getElementById(optiy.id);   if(momocsifipsl){     momocsifipsl.innerHTML = "";    if(optiy.content){       momocsifipsl.innerHTML = ' <style> .ctx-menu-wrapper{z-index: 999999999; } </style>   <div class="modal'+close_fsmofla_efestr+'" id="fs_modal_'+optiy.id+'" style="display:block;color:#000;">  '+close_fsmofla_str+'       <div style="overflow:auto;" class="modal-content" id="fs_modal_'+optiy.id+'_content">'+fsmodal_create(optiy.content, optincludeplayer)+thumsds_efestr+'</div><br/><br/></div>  <div id="cf_menuu"></div>   ';    
 
