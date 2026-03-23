@@ -22,8 +22,8 @@ function fsmodal_cl_menu(id) {    if(id && id!=""){    var mdplfsmodal_cl_menu1s
 
 
 
-   function fsmodal_clall_menu_arrays(id, dcurrent_id) {  var fsmodal_clall_menussd="";       if(dcurrent_id && id.target){   if(id.target.parentNode){     if(id.target.parentNode.getElementsByTagName("button")[dcurrent_id] && id.target.parentNode.getElementsByTagName("button").length>=0){
-	if(id.target.parentNode.getElementsByTagName("button")[dcurrent_id].getAttribute('id') && id.target.parentNode.getElementsByTagName("button")[dcurrent_id].getAttribute('id')!=""){
+   function fsmodal_clall_menu_arrays(id, dcurrent_id) {  var fsmodal_clall_menussd="";       if(dcurrent_id && id.target){   if(id.target.parentNode){     if(id.target.parentNode.getElementsByTagName("button").length>=0){
+	if(id.target.parentNode.getElementsByTagName("button")[dcurrent_id]){   if(id.target.parentNode.getElementsByTagName("button")[dcurrent_id].getAttribute('id') && id.target.parentNode.getElementsByTagName("button")[dcurrent_id].getAttribute('id')!=""){
         var btunfprecurrent_id="";
 		var btunfprnextent_id="";
 	  if(id.target.parentNode.getElementsByTagName("button")[dcurrent_id+1]){   if(id.target.parentNode.getElementsByTagName("button")[dcurrent_id+1].getAttribute('id')) && id.target.parentNode.getElementsByTagName("button")[isd+1].getAttribute('id')!=""{ 
@@ -39,7 +39,7 @@ function fsmodal_cl_menu(id) {    if(id && id!=""){    var mdplfsmodal_cl_menu1s
 	}
 	
     if (dcurrent_id>id.target.parentNode.getElementsByTagName("button").length){   fsmodal_clall_menussd="";  }
-    }     }   } 
+    }     }   }    }
 	return fsmodal_clall_menussd;  }
 
 
@@ -50,7 +50,7 @@ function fsmodal_cl_menu(id) {    if(id && id!=""){    var mdplfsmodal_cl_menu1s
 		var fsmodal_clall_menu_acuit="";
 		if(id.target.getAttribute('id') && id.target.getAttribute('id')!=""){   if(id.target.parentNode.getElementsByTagName("button")[isd].getAttribute('id')==id.target.getAttribute('id')){   dcurrent_id=isd;   fsmodal_clall_menu_acuit="class='active'";  }  }
 		 fsmodal_clall_menussd=fsmodal_clall_menussd+` <button ${fsmodal_clall_menu_acuit} onclick="fsmodal_cl_menu('${id.target.parentNode.getElementsByTagName("button")[isd].getAttribute('id')}')">${id.target.parentNode.getElementsByTagName("button")[isd].textContent}</button>  `;
-		}     }    fsmddodal_clall_menussd=fsmodal_clall_menu_arrays(id, dcurrent_id);   }
+		}     }   fsmddodal_clall_menussd="";   }   //fsmddodal_clall_menussd=fsmodal_clall_menu_arrays(id, dcurrent_id); 
 	}   }   return fsmodal_clall_menussd;   }
 
 function fsmodal_clall_menfu(id) {   var fsmodal_clall_menussd=false;    if(id.target){   if(id.target.parentNode){  
