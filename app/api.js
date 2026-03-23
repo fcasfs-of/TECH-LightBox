@@ -44,19 +44,46 @@ function fsmodal_cl_menu(id) {    if(id && id!=""){    var mdplfsmodal_cl_menu1s
 														
 var fsmddodal_clall_menussd="";     var dcurrent_id=0;
 														
-function fsmodal_clall_menu(id) {  var fsmodal_clall_menussd="";     fsmddodal_clall_menussd="";        dcurrent_id=0;
-   if(id.target){   if(id.target.parentNode){     if(id.target.parentNode.getElementsByTagName("button").length>=0){
-	for (var isd = 0; isd < id.target.parentNode.getElementsByTagName("button").length; isd++){
-		if(id.target.parentNode.getElementsByTagName("button")[isd].getAttribute('id') && id.target.parentNode.getElementsByTagName("button")[isd].getAttribute('id')!=""){
-		var fsmodal_clall_menu_acuit="";
-		if(id.target.getAttribute('id') && id.target.getAttribute('id')!=""){   if(id.target.parentNode.getElementsByTagName("button")[isd].getAttribute('id')==id.target.getAttribute('id')){   dcurrent_id=isd;   fsmodal_clall_menu_acuit="class='active'";  }  }
-		 fsmodal_clall_menussd=fsmodal_clall_menussd+` <button ${fsmodal_clall_menu_acuit} onclick="fsmodal_cl_menu('${id.target.parentNode.getElementsByTagName("button")[isd].getAttribute('id')}')">${id.target.parentNode.getElementsByTagName("button")[isd].textContent}</button>  `;
-		}     }   fsmddodal_clall_menussd="";   }    //fsmodal_clall_menu_arrays(id, dcurrent_id)
-	}   }   return fsmodal_clall_menussd;   }
+function fsmodal_clall_menu(id) {
+  var fsmodal_clall_menussd = "";
+  var fsmddodal_clall_menussd = "";
+  var dcurrent_id = 0;
+  if (id.target && id.target.parentNode) {
+    var buttons = id.target.parentNode.getElementsByTagName("button");
+    if (buttons.length >= 0) {
+      for (var isd = 0; isd < buttons.length; isd++) {
+        var button = buttons[isd];
+        var buttonId = button.getAttribute('id');
+        if (buttonId && buttonId !== "") {
+          var fsmodal_clall_menu_acuit = "";
+          if (id.target.getAttribute('id') && id.target.getAttribute('id') !== "") {
+            if (buttonId === id.target.getAttribute('id')) {
+              dcurrent_id = isd;
+              fsmodal_clall_menu_acuit = "class='active'";
+            }
+          }
+          fsmodal_clall_menussd += `<button ${fsmodal_clall_menu_acuit} onclick="fsmodal_cl_menu('${buttonId}')">${button.textContent}</button>`;
+        }
+      }
+      fsmddodal_clall_menussd = fsmodal_clall_menu_arrays(id, dcurrent_id);
+    }
+  }
+  return fsmodal_clall_menussd;
+}
 
-function fsmodal_clall_menfu(id) {   var fsmodal_clall_menussd=false;    if(id.target){   if(id.target.parentNode){  
-	if(id.target.parentNode.getElementsByTagName("button").length>=0){  fsmodal_clall_menussd=true;   }   }
-	}      return fsmodal_clall_menussd;   }
+
+
+function fsmodal_call_menu(id) {
+    var fsmodal_call_menu_sd = false;
+    if (id.target) {
+        if (id.target.parentNode) {
+            if (id.target.parentNode.getElementsByTagName("button").length > 0) {
+                fsmodal_call_menu_sd = true;
+            }
+        }
+    }
+    return fsmodal_call_menu_sd;
+}
     
 
 function fsmodal_close(id, hifde) {   if(id && id!=""){   
