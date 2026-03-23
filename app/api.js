@@ -36,8 +36,7 @@ function fsmodal_cl_menu(id) {    if(id && id!=""){    var mdplfsmodal_cl_menu1s
 	if(dcurrent_id>=id.target.parentNode.getElementsByTagName("button").length && (dcurrent_id+1)>=id.target.parentNode.getElementsByTagName("button").length){   btunfprnextent_id="";  }
 	if(id.target.getAttribute('id') && id.target.getAttribute('id')!="" && id.target.parentNode.getElementsByTagName("button")[dcurrent_id]){   if(id.target.parentNode.getElementsByTagName("button")[dcurrent_id].getAttribute('id')==id.target.getAttribute('id')){  btunfprnextent_id=""; }  }
 	 fsmodal_clall_menussd=fsmodal_clall_menussd+btunfprecurrent_id+"  "+btunfprnextent_id;
-	}
-	
+
     if (dcurrent_id>id.target.parentNode.getElementsByTagName("button").length){   fsmodal_clall_menussd="";  }
     }     }   }    }
 	return fsmodal_clall_menussd;  }
@@ -50,7 +49,7 @@ function fsmodal_cl_menu(id) {    if(id && id!=""){    var mdplfsmodal_cl_menu1s
 		var fsmodal_clall_menu_acuit="";
 		if(id.target.getAttribute('id') && id.target.getAttribute('id')!=""){   if(id.target.parentNode.getElementsByTagName("button")[isd].getAttribute('id')==id.target.getAttribute('id')){   dcurrent_id=isd;   fsmodal_clall_menu_acuit="class='active'";  }  }
 		 fsmodal_clall_menussd=fsmodal_clall_menussd+` <button ${fsmodal_clall_menu_acuit} onclick="fsmodal_cl_menu('${id.target.parentNode.getElementsByTagName("button")[isd].getAttribute('id')}')">${id.target.parentNode.getElementsByTagName("button")[isd].textContent}</button>  `;
-		}     }   fsmddodal_clall_menussd="";   }   //fsmddodal_clall_menussd=fsmodal_clall_menu_arrays(id, dcurrent_id); 
+		}     }   fsmddodal_clall_menussd=fsmodal_clall_menu_arrays(id, dcurrent_id);   }    
 	}   }   return fsmodal_clall_menussd;   }
 
 function fsmodal_clall_menfu(id) {   var fsmodal_clall_menussd=false;    if(id.target){   if(id.target.parentNode){  
@@ -130,7 +129,7 @@ var close_fsmofla_str='  <div style="margin-left:4px;" class="ssclose" onclick="
  var close_fsmofla_efestr=" eff";     var btnys_fsmofla_efestr="";
   if(optiy.remove_efect && optiy.remove_efect==true){   close_fsmofla_efestr="";   }
 
-  if(optiy.itens && optiy.menu && optiy.menu==true){   if(fsmodal_clall_menfu(optiy.itens)==true){    var is_menuded=fsmodal_clall_menu(optiy.itens);   if(is_menuded && is_menuded!=""){   if(optiy.menu_btns && optiy.menu_btns==true){   btnys_fsmofla_efestr="";  }    thumsds_efestr='  <div class="menulight_scrollmenu">  '+is_menuded+'   </div>  ';   }  }   }   //fsmddodal_clall_menussd
+  if(optiy.itens && optiy.menu && optiy.menu==true){   if(fsmodal_clall_menfu(optiy.itens)==true){    var is_menuded=fsmodal_clall_menu(optiy.itens);   if(is_menuded && is_menuded!=""){   if(optiy.menu_btns && optiy.menu_btns==true){   btnys_fsmofla_efestr=fsmddodal_clall_menussd;  }    thumsds_efestr='  <div class="menulight_scrollmenu">  '+is_menuded+'   </div>  ';   }  }   }   
 
  var momocsifipsl = document.getElementById(optiy.id);   if(momocsifipsl){     momocsifipsl.innerHTML = "";    if(optiy.content){       momocsifipsl.innerHTML = ' <style> .ctx-menu-wrapper{z-index: 999999999; } </style>   <div class="modal'+close_fsmofla_efestr+'" id="fs_modal_'+optiy.id+'" style="display:block;color:#000;">     <span class="bngl"> '+btnys_fsmofla_efestr+' </span>   <span class="bngd"> '+close_fsmofla_str+' </span>      <div style="overflow:auto;" class="modal-content" id="fs_modal_'+optiy.id+'_content">'+fsmodal_create(optiy.content, optincludeplayer)+'</div><br/><br/>'+thumsds_efestr+'<br/><br/></div>  <div id="cf_menuu"></div>   ';    
 
