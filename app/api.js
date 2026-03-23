@@ -32,13 +32,13 @@ function fsmodal_cl_menu(id) {    if(id && id!=""){    var mdplfsmodal_cl_menu1s
 	 if(id.target.parentNode.getElementsByTagName("button")[dcurrent_id-1]){   if(id.target.parentNode.getElementsByTagName("button")[dcurrent_id-1].getAttribute('id')) && id.target.parentNode.getElementsByTagName("button")[isd-1].getAttribute('id')!=""{ 
 		  btunfprnextent_id=` <div style="margin-left:4px;" class="ssprev" onclick="fsmodal_cl_menu('${id.target.parentNode.getElementsByTagName("button")[dcurrent_id-1].getAttribute('id')}')"><span class="icon"></span></div>  `;
 	  }   }
-		if(current_id<=0 && (dcurrent_id-1)<=0){   btunfprecurrent_id="";  }
-	if(current_id>=id.target.parentNode.getElementsByTagName("button").length && (dcurrent_id+1)>=id.target.parentNode.getElementsByTagName("button").length){   btunfprnextent_id="";  }
+		if(dcurrent_id<=0 && (dcurrent_id-1)<=0){   btunfprecurrent_id="";  }
+	if(dcurrent_id>=id.target.parentNode.getElementsByTagName("button").length && (dcurrent_id+1)>=id.target.parentNode.getElementsByTagName("button").length){   btunfprnextent_id="";  }
 	if(id.target.getAttribute('id') && id.target.getAttribute('id')!="" && id.target.parentNode.getElementsByTagName("button")[dcurrent_id]){   if(id.target.parentNode.getElementsByTagName("button")[dcurrent_id].getAttribute('id')==id.target.getAttribute('id')){  btunfprnextent_id=""; }  }
 	 fsmodal_clall_menussd=fsmodal_clall_menussd+btunfprecurrent_id+"  "+btunfprnextent_id;
 	}
 	
-    if (current_id>id.target.parentNode.getElementsByTagName("button").length){   fsmodal_clall_menussd="";  }
+    if (dcurrent_id>id.target.parentNode.getElementsByTagName("button").length){   fsmodal_clall_menussd="";  }
     }     }   } 
 	return fsmodal_clall_menussd;  }
 
