@@ -130,7 +130,7 @@ var close_fsmofla_str='  <div style="margin-left:4px;" class="ssclose" onclick="
  var close_fsmofla_efestr=" eff";     var btnys_fsmofla_efestr="";
   if(optiy.remove_efect && optiy.remove_efect==true){   close_fsmofla_efestr="";   }
 
-  if(optiy.itens && optiy.menu && optiy.menu==true){   if(fsmodal_clall_menfu(optiy.itens)==true){   if(optiy.menu_btns && optiy.menu_btns==true){   btnys_fsmofla_efestr=fsmodal_clall_menu_arrays(optiy.itens);  }  var is_menuded=fsmodal_clall_menu(optiy.itens);   if(is_menuded && is_menuded!=""){   thumsds_efestr='  <div class="menulight_scrollmenu">  '+is_menuded+'   </div>  ';   }  }   }
+  if(optiy.itens && optiy.menu && optiy.menu==true){   if(fsmodal_clall_menfu(optiy.itens)==true){    var is_menuded=fsmodal_clall_menu(optiy.itens);   if(is_menuded && is_menuded!=""){   if(optiy.menu_btns && optiy.menu_btns==true){   btnys_fsmofla_efestr=fsmodal_clall_menu_arrays(optiy.itens);  }   thumsds_efestr='  <div class="menulight_scrollmenu">  '+is_menuded+'   </div>  ';   }  }   }
 
  var momocsifipsl = document.getElementById(optiy.id);   if(momocsifipsl){     momocsifipsl.innerHTML = "";    if(optiy.content){       momocsifipsl.innerHTML = ' <style> .ctx-menu-wrapper{z-index: 999999999; } </style>   <div class="modal'+close_fsmofla_efestr+'" id="fs_modal_'+optiy.id+'" style="display:block;color:#000;">     <span class="bngl"> '+btnys_fsmofla_efestr+' </span>   <span class="bngd"> '+close_fsmofla_str+' </span>      <div style="overflow:auto;" class="modal-content" id="fs_modal_'+optiy.id+'_content">'+fsmodal_create(optiy.content, optincludeplayer)+'</div><br/><br/>'+thumsds_efestr+'<br/><br/></div>  <div id="cf_menuu"></div>   ';    
 
