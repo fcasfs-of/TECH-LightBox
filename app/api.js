@@ -49,7 +49,7 @@ function fsmodal_clall_menu(id) {
           fsmodal_clall_menussd += `<button ${fsmodal_clall_menu_acuit} onclick="fsmodal_cl_menu('${buttonId}')">${button.textContent}</button>`;
         }
       }
-      fsmddodal_clall_menussd = fsmodal_clall_menu_arrays(id, dcurrent_id);
+      fsmddodal_clall_menussd = "";//fsmodal_clall_menu_arrays(id, dcurrent_id);
     }
   }
   return fsmodal_clall_menussd;
