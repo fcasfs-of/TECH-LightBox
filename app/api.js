@@ -22,9 +22,53 @@ function fsmodal_cl_menu(id) {    if(id && id!=""){    var mdplfsmodal_cl_menu1s
 
 
 
-   function fsmodal_clall_menu_arrays(id, dcurrent_id) {  var fsmodal_clall_menussd="";  
-														
-	return fsmodal_clall_menussd;  }
+function fsmodal_clall_menu_arrays(id, dcurrent_id) {
+  var fsmodal_clall_menussd = "";
+  if (id && id.target && typeof dcurrent_id === 'number') {
+    var target = id.target;
+    var parentNode = target.parentNode;
+    if (parentNode) {
+      var buttons = parentNode.getElementsByTagName("button");
+       if (buttons.length > 0 && dcurrent_id >= 0 && dcurrent_id < buttons.length) {
+        var currentButton = buttons[dcurrent_id];
+        if (currentButton.getAttribute('id')) {
+          var currentId = currentButton.getAttribute('id');
+          var btunfprecurrent_id = "";
+          var btunfprnextent_id = "";
+          if (dcurrent_id + 1 < buttons.length) {
+            var nextButton = buttons[dcurrent_id + 1];
+            var nextId = nextButton.getAttribute('id');
+            if (nextId) {
+              btunfprnextent_id = `<div style="margin-left:4px;" class="ssnext" onclick="fsmodal_cl_menu('${nextId}');"><span class="icon"></span></div>`;
+            }
+          }
+          if (dcurrent_id - 1 >= 0) {
+            var prevButton = buttons[dcurrent_id - 1];
+            var prevId = prevButton.getAttribute('id');
+            if (prevId) {
+              btunfprecurrent_id = `<div style="margin-left:4px;" class="ssprev" onclick="fsmodal_cl_menu('${prevId}');"><span class="icon"></span></div>`;
+            }
+          }
+          if (dcurrent_id <= 0) {
+            btunfprecurrent_id = "";
+          }
+          if (dcurrent_id >= buttons.length - 1) {
+            btunfprnextent_id = "";
+          }
+          if (target.getAttribute('id') && target.getAttribute('id') === currentId) {
+            btunfprnextent_id = "";
+          }
+          fsmodal_clall_menussd = btunfprecurrent_id + " " + btunfprnextent_id;
+          if (dcurrent_id >= buttons.length || dcurrent_id < 0) {
+            fsmodal_clall_menussd = "";
+          }
+        }
+      }
+    }
+  }
+  return fsmodal_clall_menussd;
+}
+
 
 														
 														
@@ -227,7 +271,7 @@ function fsmodal_open(optiy) {
             close_fsmofla_efestr = "";
         }
         if (optiy.itens && optiy.menu === true) {
-            if (fsmodal_clall_menufu(optiy.itens) === true) {
+            if (fsmodal_call_menu(optiy.itens) === true) {
                 var is_menuded = fsmodal_clall_menu(optiy.itens);
                 if (is_menuded && is_menuded != "") {
                     if (optiy.menu_btns && optiy.menu_btns === true) {
