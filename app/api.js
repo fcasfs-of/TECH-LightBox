@@ -15,7 +15,7 @@ scriptwwincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/cor
 document.getElementsByTagName("head")[0].appendChild(scriptwwincfd);
 var scriptincfd = document.createElement("script");
 scriptincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
-document.getElementsByTagName("head")[0].appendChild(scriptincfd);
+document.getElementsByTagName("body")[0].appendChild(scriptincfd);
 
 
 function fsmodal_cl_menu(id) {
