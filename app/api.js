@@ -13,9 +13,14 @@ document.getElementsByTagName("head")[0].appendChild(scrcodiptwwincfd);
 var scriptwwincfd = document.createElement("script");
 scriptwwincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/core.js");
 document.getElementsByTagName("head")[0].appendChild(scriptwwincfd);
+
+function loaded_api_player(){
 var scriptincfd = document.createElement("script");
 scriptincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
-document.getElementsByTagName("body")[0].appendChild(scriptincfd);
+document.getElementsByTagName("body")[0].appendChild(scriptincfd);    }
+
+
+document.onload=function(){loaded_api_player();};
 
 
 function fsmodal_cl_menu(id) {
