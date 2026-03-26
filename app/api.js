@@ -332,7 +332,8 @@ var scriptincfd = document.createElement("script");
 scriptincfd.setAttribute("onload", "mfplayeridd();");
 scriptincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
 momocsifipsl.appendChild(scriptincfd);    
-momocsifipsl.setAttribute("onload", "mfplayeridd();");
+			
+momocsifipsl.onload=mfplayeridd;
 
 			
             if (close_fsmofla_strdd === true && typeof CtxMenu === "function") {
