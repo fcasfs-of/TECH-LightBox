@@ -245,7 +245,7 @@ function loaded_playerinf(dstart_fs_mpl) {
 
 var start_fs_mpl = {};
 var mfplayeri;
-var mfplayeridd=function(){};
+function mfplayeridd(){  }
 var is_player0j = "no";
 var fsmodal_createdd = "";
 var start_fs_postermpl = "";
@@ -254,8 +254,8 @@ function fsmodal_open(optiy) {
     start_fs_mpl = {};
     fsmodal_createdd = "";
     start_fs_postermpl = "";
-	mfplayeridd=function(){};
-
+function mfplayeridd(){  }
+	
     if (document.querySelector("#mendu_df")) {
         document.querySelector("#mendu_df").innerHTML = "";
     }
@@ -328,14 +328,14 @@ momocsifipsl.appendChild(scrcontedd);
                 };
             }
             if (optincludeplayer === "yes" && is_player0j === "yes") {
-                mfplayeridd=function(){ if (typeof loaded_playerinf === "function"){ loaded_playerinf(start_fs_mpl); }  };
+                function mfplayeridd(){  if (typeof loaded_playerinf === "function"){ loaded_playerinf(start_fs_mpl); }  }
             }
 
 			mfplayeridd();
 			
    var scrfiptfd = document.createElement("script");
     scrfiptfd.setAttribute("type", "text/javascript");
-      scrfiptfd.setAttribute("onload", '');
+      scrfiptfd.setAttribute("onload", 'mfplayeridd();');
     scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent('   if (typeof mfplayeridd === "function"){   mfplayeridd();   }   '));
 momocsifipsl.appendChild(scrfiptfd);    
 			
