@@ -294,8 +294,8 @@ function mfplayeridd(){  }
             if (fsmodal_call_menu(optiy.itens) === true) {
                 var is_menuded = fsmodal_clall_menu(optiy.itens, `fsmodal_close('${optiy.id}', '${optiy.scroll_hide}'); `);
                 if (is_menuded && is_menuded.menu && is_menuded.menu != "") {
-                    if (optiy.menu_btns && optiy.menu_btns === true && is_menuded.btns && is_menuded.btns != "") {
-                       if(fsmddodal_clall_menussd && fsmddodal_clall_menussd != ""){   btnys_fsmofla_efestr = is_menuded.btns;   }
+                    if (optiy.menu_btns && optiy.menu_btns === true) {
+                       if(is_menuded.btns && is_menuded.btns != ""){   btnys_fsmofla_efestr = is_menuded.btns;   }
                     }
                     thumsds_efestr = `<div class="menulight_scrollmenu">${is_menuded.menu}</div>`;
                 }
