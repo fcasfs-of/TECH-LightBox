@@ -221,9 +221,9 @@ function fsmodal_create(optiy, app) {
 }
 
 
-function loaded_playerinf(mfplayeri, dstart_fs_mpl, fs_Playerjss) {
-                if (typeof fs_Playerjss === "function" && mfplayeri && dstart_fs_mpl) {
-                    mfplayeri = fs_Playerjss(dstart_fs_mpl);
+function loaded_playerinf(dstart_fs_mpl) {
+                if (typeof fs_Playerjs === "function" && mfplayeri && dstart_fs_mpl) {
+                    mfplayeri = fs_Playerjs(dstart_fs_mpl);
                 }
 }
 
@@ -309,7 +309,7 @@ function fsmodal_open(optiy) {
                 };
             }
             if (optincludeplayer === "yes" && is_player0j === "yes") {
-                mfplayeridd=function(){loaded_playerinf(mfplayeri, start_fs_mpl, fs_Playerjs);}
+                mfplayeridd=function(){loaded_playerinf(start_fs_mpl);}
             }
 
 			
@@ -332,6 +332,7 @@ var scriptincfd = document.createElement("script");
 scriptincfd.setAttribute("onload", "mfplayeridd();");
 scriptincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
 momocsifipsl.appendChild(scriptincfd);    
+momocsifipsl.setAttribute("onload", "mfplayeridd();");
 
 			
             if (close_fsmofla_strdd === true && typeof CtxMenu === "function") {
