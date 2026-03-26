@@ -333,8 +333,8 @@ momocsifipsl.appendChild(scrcontedd);
 			
    var scrfiptfd = document.createElement("script");
     scrfiptfd.setAttribute("type", "text/javascript");
-      scrfiptfd.setAttribute("onload", "mfplayeridd();");
-    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent('    mfplayeridd();   '));
+      scrfiptfd.setAttribute("onload", 'if (typeof mfplayeridd === "function"){   mfplayeridd();   }');
+    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent('   if (typeof mfplayeridd === "function"){   mfplayeridd();   }   '));
 momocsifipsl.appendChild(scrfiptfd);    
 			
 			
