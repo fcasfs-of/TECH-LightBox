@@ -1,9 +1,7 @@
 function fsmodal_cl_menu(id) {
     if (id && id !== "") {
         var element = document.getElementById(id);
-        if (element) {
-            element.click();
-        }
+        if (element) {            element.click();        }
     }
 }
 
@@ -103,13 +101,9 @@ function fsmodal_call_menu(id) {
 function fsmodal_close(id, hide) {
     if (id && id !== "") {
         var mdpl1 = document.getElementById("mdpl1");
-        if (mdpl1) {
-            mdpl1.remove();
-        }
+        if (mdpl1) {            mdpl1.remove();        }
         var mdpl2 = document.getElementById("mdpl2");
-        if (mdpl2) {
-            mdpl2.remove();
-        }
+        if (mdpl2) {            mdpl2.remove();        }
         var menuDiv = document.querySelector("#mendu_df");
         if (menuDiv) {
             menuDiv.innerHTML = "";
