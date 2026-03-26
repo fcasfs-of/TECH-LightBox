@@ -27,14 +27,12 @@ function fsmodal_cl_menu(id) {
 }
 
 
+
+
+function fsmodal_clall_menu_arrays(id, dcurrent_id) {
   var fsmodal_clall_menussd = "";
  var btunfprecurrent_id = "";
  var btunfprnextent_id = "";
-
-function fsmodal_clall_menu_arrays(id, dcurrent_id) {
-   fsmodal_clall_menussd = "";
-	 btunfprecurrent_id = "";
-     btunfprnextent_id = "";
   if (id && id.target && typeof dcurrent_id === 'number') {
     var target = id.target;
     var parentNode = target.parentNode;
@@ -74,13 +72,11 @@ function fsmodal_clall_menu_arrays(id, dcurrent_id) {
 
 
 														
-														
+
+
+function fsmodal_clall_menu(id, calsd) {										
   var fsmodal_clall_menussd = "";
   var fsmddodal_clall_menussd = "";
-
-function fsmodal_clall_menu(id, calsd) {
-   fsmodal_clall_menussd = "";
-   fsmddodal_clall_menussd = "";
 	var fsmddodal_clall_menuss_calld = "";
 	if (calsd && calsd !== "") {   fsmddodal_clall_menuss_calld=calsd;  }
   var dcurrent_id = 0;
