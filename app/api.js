@@ -333,8 +333,14 @@ scriptincfd.setAttribute("onload", "mfplayeridd();");
 scriptincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
 momocsifipsl.appendChild(scriptincfd);    
 			
-momocsifipsl.onload=mfplayeridd;
-
+  var scrfiptfd = document.createElement("script");
+    scrfiptfd.setAttribute("type", "text/javascript");
+      scrfiptfd.setAttribute("onload", "mfplayeridd();");
+    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent('    mfplayeridd();   '));
+document.getElementsByTagName("body")[0].appendChild(scrfiptfd);
+  document.getElementsByTagName("body")[0].onload=function(){  mfplayeridd();     };
+  momocsifipsl.onload=function(){  mfplayeridd();     };
+			
 			
             if (close_fsmofla_strdd === true && typeof CtxMenu === "function") {
                 var MainContextMenu = CtxMenu(".modal");
