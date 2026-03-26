@@ -12,7 +12,11 @@ document.getElementsByTagName("head")[0].appendChild(scrcodiptwwincfd);
 
 var scriptwwincfd = document.createElement("script");
 scriptwwincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/core.js");
-document.getElementsByTagName("head")[0].appendChild(scriptwwincfd);
+document.getElementsByTagName("head")[0].appendChild(scriptwwincfd);	
+var scriptincfd = document.createElement("script");
+scriptincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
+document.getElementsByTagName("head")[0].appendChild(scriptincfd);    
+
 
 
 function fsmodal_cl_menu(id) {
@@ -301,11 +305,7 @@ function fsmodal_open(optiy) {
         var momocsifipsl = document.getElementById(optiy.id);
         if (momocsifipsl) {
 momocsifipsl.innerHTML='';
-			
-var scriptincfd = document.createElement("script");
-scriptincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
-momocsifipsl.appendChild(scriptincfd);    
-			
+
 var scrcontedd = document.createElement("div");
 			scrcontedd.innerHTML = `
                 <style>.ctx-menu-wrapper{z-index: 999999999;}</style>
