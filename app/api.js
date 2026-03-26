@@ -59,7 +59,7 @@ function fsmodal_clall_menu_arrays(id, dcurrent_id) {
             }
           }
           if (dcurrent_id <= 0) {            btunfprecurrent_id = "";          }
-          if (dcurrent_id >= buttons.length - 1) {            btunfprnextent_id = "";          }
+          if (dcurrent_id > buttons.length - 1) {            btunfprnextent_id = "";          }
           //if (target.getAttribute('id') && target.getAttribute('id') === currentId) {            btunfprnextent_id = "";          }
           fsmodal_clall_menussd = btunfprecurrent_id + " " + btunfprnextent_id;
           if (dcurrent_id >= buttons.length || dcurrent_id < 0) {            fsmodal_clall_menussd = "";          }
