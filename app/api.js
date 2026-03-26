@@ -44,7 +44,14 @@ function fsmodal_clall_menu_arrays(id, dcurrent_id) {
         var currentButton = buttons[dcurrent_id];
         if (currentButton.getAttribute('id')) {
           var currentId = currentButton.getAttribute('id');
-          if (currentId==0 && dcurrent_id + 1 < buttons.length) {
+		  if (currentId==0) {
+            var nextButton = buttons[dcurrent_id + 1];
+            var nextId = nextButton.getAttribute('id');
+            if (nextId) {
+              btunfprnextent_id = `<div style="margin-left:4px;" class="btngbutton ssnext" onclick="fsmodal_cl_menu('${nextId}');"><span class="icon"></span></div>`;
+            }
+          }
+		  if (dcurrent_id + 1 < buttons.length) {
             var nextButton = buttons[dcurrent_id + 1];
             var nextId = nextButton.getAttribute('id');
             if (nextId) {
