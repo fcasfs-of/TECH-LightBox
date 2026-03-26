@@ -77,9 +77,11 @@ function fsmodal_clall_menu_arrays(id, dcurrent_id) {
 
 														
 														
-function fsmodal_clall_menu(id) {
+function fsmodal_clall_menu(id, calsd) {
   var fsmodal_clall_menussd = "";
   var fsmddodal_clall_menussd = "";
+	var fsmddodal_clall_menuss_calld = "";
+	if (calsd && calsd !== "") {   fsmddodal_clall_menuss_calld=calsd;  }
   var dcurrent_id = 0;
   if (id.target && id.target.parentNode) {
     var buttons = id.target.parentNode.getElementsByTagName("button");
@@ -95,7 +97,7 @@ function fsmodal_clall_menu(id) {
               fsmodal_clall_menu_acuit = "class='active'";
             }
           }
-          fsmodal_clall_menussd += `<button ${fsmodal_clall_menu_acuit} onclick="fsmodal_cl_menu('${buttonId}')">${button.textContent}</button>`;
+          fsmodal_clall_menussd += `<button ${fsmodal_clall_menu_acuit} onclick="${fsmddodal_clall_menuss_calld}  fsmodal_cl_menu('${buttonId}')">${button.textContent}</button>`;
         }
       }
       fsmddodal_clall_menussd = "";//fsmodal_clall_menu_arrays(id, dcurrent_id);
@@ -293,7 +295,7 @@ function mfplayeridd(){  }
         }
         if (optiy.itens && optiy.menu === true) {
             if (fsmodal_call_menu(optiy.itens) === true) {
-                var is_menuded = fsmodal_clall_menu(optiy.itens);
+                var is_menuded = fsmodal_clall_menu(optiy.itens, `fsmodal_close(${optiy.id}, ${optiy.scroll_hide});`);
                 if (is_menuded && is_menuded != "") {
                     if (optiy.menu_btns && optiy.menu_btns === true) {
                        if(fsmddodal_clall_menussd && fsmddodal_clall_menussd != ""){   btnys_fsmofla_efestr = fsmddodal_clall_menussd;   }
