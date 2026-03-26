@@ -234,6 +234,14 @@ function fsmodal_create(optiy, app) {
     }
 }
 
+
+function loaded_playerinf(dstart_fs_mpl) {
+                if (typeof fs_Playerjs === "function" && dstart_fs_mpl) {
+                    mfplayeri = fs_Playerjs(dstart_fs_mpl);
+                }
+}
+
+
 var start_fs_mpl = {};
 var mfplayeri;
 var is_player0j = "no";
@@ -310,11 +318,6 @@ function fsmodal_open(optiy) {
                 mffomocsifipsl.onclick = function () {
                     fsmodal_close(optiy.id, optiy.scroll_hide);
                 };
-            }
-            function loaded_playerinf(dstart_fs_mpl) {
-                if (typeof fs_Playerjs === "function" && dstart_fs_mpl) {
-                    mfplayeri = fs_Playerjs(dstart_fs_mpl);
-                }
             }
             if (optincludeplayer === "yes" && is_player0j === "yes") {
                 loaded_playerinf(start_fs_mpl);
