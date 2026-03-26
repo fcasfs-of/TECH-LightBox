@@ -309,7 +309,7 @@ var scriptincfd = document.createElement("script");
 scriptincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
 momocsifipsl.appendChild(scriptincfd);    
 			
-var scrcontedd = document.createElement("script");
+var scrcontedd = document.createElement("div");
 			scrcontedd.innerHTML = `
                 <style>.ctx-menu-wrapper{z-index: 999999999;}</style>
                 <div class="modal${close_fsmofla_efestr}" id="fs_modal_${optiy.id}" style="display:block; color:#000;">
@@ -322,7 +322,7 @@ var scrcontedd = document.createElement("script");
                 </div>
                 <div id="cf_menuu"></div>
             `;
-			momocsifipsl.appendChild(scrcontedd);    
+momocsifipsl.appendChild(scrcontedd);    
 
             var mffomocsifipsl = document.getElementById("fs_modal_" + optiy.id);
             if (mffomocsifipsl && optiy.click_close && optiy.click_close === true) {
