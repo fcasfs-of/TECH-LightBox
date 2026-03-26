@@ -97,10 +97,10 @@ function fsmodal_clall_menu(id, calsd) {
           fsmodal_clall_menussd += `<button ${fsmodal_clall_menu_acuit} onclick="${fsmddodal_clall_menuss_calld}  fsmodal_cl_menu('${buttonId}')">${button.textContent}</button>`;
         }
       }
-      fsmddodal_clall_menussd = fsmodal_clall_menu_arrays(id, dcurrent_id);;
+      fsmddodal_clall_menussd = "";
     }
   }
-  return { menu:fsmodal_clall_menussd, btns:fsmddodal_clall_menussd };
+  return { menu:fsmodal_clall_menussd, id:dcurrent_id };
 }
 
 
@@ -295,7 +295,7 @@ function mfplayeridd(){  }
                 var is_menuded = fsmodal_clall_menu(optiy.itens, `fsmodal_close('${optiy.id}', '${optiy.scroll_hide}'); `);
                 if (is_menuded && is_menuded.menu && is_menuded.menu != "") {
                     if (optiy.menu_btns && optiy.menu_btns === true) {
-                       if(is_menuded.btns && is_menuded.btns != ""){   btnys_fsmofla_efestr = is_menuded.btns;   }
+                       if(is_menuded.id){   btnys_fsmofla_efestr = fsmodal_clall_menu_arrays(optiy.itens, is_menuded.id);   }
                     }
                     thumsds_efestr = `<div class="menulight_scrollmenu">${is_menuded.menu}</div>`;
                 }
