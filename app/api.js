@@ -77,9 +77,12 @@ function fsmodal_clall_menu_arrays(id, dcurrent_id) {
 
 														
 														
-function fsmodal_clall_menu(id, calsd) {
   var fsmodal_clall_menussd = "";
   var fsmddodal_clall_menussd = "";
+
+function fsmodal_clall_menu(id, calsd) {
+   fsmodal_clall_menussd = "";
+   fsmddodal_clall_menussd = "";
 	var fsmddodal_clall_menuss_calld = "";
 	if (calsd && calsd !== "") {   fsmddodal_clall_menuss_calld=calsd;  }
   var dcurrent_id = 0;
@@ -100,7 +103,7 @@ function fsmodal_clall_menu(id, calsd) {
           fsmodal_clall_menussd += `<button ${fsmodal_clall_menu_acuit} onclick="${fsmddodal_clall_menuss_calld}  fsmodal_cl_menu('${buttonId}')">${button.textContent}</button>`;
         }
       }
-      fsmddodal_clall_menussd = "";//fsmodal_clall_menu_arrays(id, dcurrent_id);
+      fsmddodal_clall_menussd = fsmodal_clall_menu_arrays(id, dcurrent_id);;
     }
   }
   return fsmodal_clall_menussd;
