@@ -295,7 +295,7 @@ function mfplayeridd(){  }
         }
         if (optiy.itens && optiy.menu === true) {
             if (fsmodal_call_menu(optiy.itens) === true) {
-                var is_menuded = fsmodal_clall_menu(optiy.itens, `fsmodal_close(${optiy.id}, ${optiy.scroll_hide});`);
+                var is_menuded = fsmodal_clall_menu(optiy.itens, `fsmodal_close('${optiy.id}', '${optiy.scroll_hide}'); `);
                 if (is_menuded && is_menuded != "") {
                     if (optiy.menu_btns && optiy.menu_btns === true) {
                        if(fsmddodal_clall_menussd && fsmddodal_clall_menussd != ""){   btnys_fsmofla_efestr = fsmddodal_clall_menussd;   }
