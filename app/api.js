@@ -216,9 +216,9 @@ function fsmodal_create(optiy, app) {
 
 
 function loaded_playerinf(dstart_fs_mpl) {
-                if (typeof fs_Playerjs === "function" && mfplayeri && dstart_fs_mpl) {
-                    mfplayeri = fs_Playerjs(dstart_fs_mpl);
-                }
+  if (typeof fs_Playerjs === "function" && mfplayeri && dstart_fs_mpl) {
+       mfplayeri = fs_Playerjs(dstart_fs_mpl);
+   }
 }
 
 
