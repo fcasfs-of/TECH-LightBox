@@ -146,14 +146,20 @@ function fsmodal_close(id, hide) {
 
 
 var is_player0j= "no";
-
-function fsmodal_create(optiy, app) {
     var fsmodal_clall_menussd = "";
     var dcurrent_id = 0;
     var is_player0j = "no";
     var start_fs_mpl = {};
     var fsmodal_createdd = "";
     var start_fs_postermpl = "";
+
+function fsmodal_create(optiy, app) {
+     fsmodal_clall_menussd = "";
+     dcurrent_id = 0;
+     is_player0j = "no";
+     start_fs_mpl = {};
+     fsmodal_createdd = "";
+     start_fs_postermpl = "";
 
     if (optiy) {
         var fsmodal_create_desci = "";
