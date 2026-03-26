@@ -20,7 +20,14 @@ scriptincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.j
 document.getElementsByTagName("body")[0].appendChild(scriptincfd);    }
 
 
-document.onload=function(){loaded_api_player();};
+ 
+  var scrfiptfd = document.createElement("script");
+    scrfiptfd.setAttribute("type", "text/javascript");
+      scrfiptfd.setAttribute("onload", "loaded_api_player();");
+    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent('    loaded_api_player();   '));
+document.getElementsByTagName("head")[0].appendChild(scrfiptfd);
+  document.getElementsByTagName("head")[0].onload=function(){  loaded_api_player();     };
+
 
 
 function fsmodal_cl_menu(id) {
