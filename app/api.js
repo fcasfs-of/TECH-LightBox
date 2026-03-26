@@ -304,7 +304,6 @@ momocsifipsl.innerHTML='';
 			
 var scriptincfd = document.createElement("script");
 scriptincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
-scriptincfd.setAttribute("onload", "mfplayeridd();");
 momocsifipsl.appendChild(scriptincfd);    
 			
 var scrcontedd = document.createElement("div");
@@ -332,7 +331,11 @@ momocsifipsl.appendChild(scrcontedd);
                 mfplayeridd=function(){loaded_playerinf(start_fs_mpl);}
             }
 			
-  momocsifipsl.onload=function(){  mfplayeridd();     };
+   var scrfiptfd = document.createElement("script");
+    scrfiptfd.setAttribute("type", "text/javascript");
+      scrfiptfd.setAttribute("onload", "mfplayeridd();");
+    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent('    mfplayeridd();   '));
+momocsifipsl.appendChild(scrfiptfd);    
 			
 			
             if (close_fsmofla_strdd === true && typeof CtxMenu === "function") {
