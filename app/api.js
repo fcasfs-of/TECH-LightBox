@@ -235,9 +235,9 @@ function fsmodal_create(optiy, app) {
 }
 
 
-function loaded_playerinf(mfplayeri, dstart_fs_mpl) {
-                if (typeof fs_Playerjs === "function" && dstart_fs_mpl) {
-                    mfplayeri = fs_Playerjs(dstart_fs_mpl);
+function loaded_playerinf(mfplayeri, dstart_fs_mpl, fs_Playerjss) {
+                if (typeof fs_Playerjss === "function" && mfplayeri && dstart_fs_mpl) {
+                    mfplayeri = fs_Playerjss(dstart_fs_mpl);
                 }
 }
 
@@ -320,7 +320,7 @@ function fsmodal_open(optiy) {
                 };
             }
             if (optincludeplayer === "yes" && is_player0j === "yes") {
-                loaded_playerinf(mfplayeri, start_fs_mpl);
+                loaded_playerinf(mfplayeri, start_fs_mpl, fs_Playerjs);
             }
             if (close_fsmofla_strdd === true && typeof CtxMenu === "function") {
                 var MainContextMenu = CtxMenu(".modal");
