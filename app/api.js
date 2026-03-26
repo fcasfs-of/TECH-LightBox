@@ -100,7 +100,7 @@ function fsmodal_clall_menu(id, calsd) {
       fsmddodal_clall_menussd = fsmodal_clall_menu_arrays(id, dcurrent_id);;
     }
   }
-  return fsmodal_clall_menussd;
+  return { menu:fsmodal_clall_menussd, btns:fsmddodal_clall_menussd };
 }
 
 
@@ -293,11 +293,11 @@ function mfplayeridd(){  }
         if (optiy.itens && optiy.menu === true) {
             if (fsmodal_call_menu(optiy.itens) === true) {
                 var is_menuded = fsmodal_clall_menu(optiy.itens, `fsmodal_close('${optiy.id}', '${optiy.scroll_hide}'); `);
-                if (is_menuded && is_menuded != "") {
-                    if (optiy.menu_btns && optiy.menu_btns === true) {
-                       if(fsmddodal_clall_menussd && fsmddodal_clall_menussd != ""){   btnys_fsmofla_efestr = fsmddodal_clall_menussd;   }
+                if (is_menuded && is_menuded.menu && is_menuded.menu != "") {
+                    if (optiy.menu_btns && optiy.menu_btns === true && is_menuded.btns && is_menuded.btns != "") {
+                       if(fsmddodal_clall_menussd && fsmddodal_clall_menussd != ""){   btnys_fsmofla_efestr = is_menuded.btns;   }
                     }
-                    thumsds_efestr = `<div class="menulight_scrollmenu">${is_menuded}</div>`;
+                    thumsds_efestr = `<div class="menulight_scrollmenu">${is_menuded.menu}</div>`;
                 }
             }
         }
