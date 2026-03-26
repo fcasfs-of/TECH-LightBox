@@ -27,8 +27,14 @@ function fsmodal_cl_menu(id) {
 }
 
 
-function fsmodal_clall_menu_arrays(id, dcurrent_id) {
   var fsmodal_clall_menussd = "";
+ var btunfprecurrent_id = "";
+ var btunfprnextent_id = "";
+
+function fsmodal_clall_menu_arrays(id, dcurrent_id) {
+   fsmodal_clall_menussd = "";
+	 btunfprecurrent_id = "";
+     btunfprnextent_id = "";
   if (id && id.target && typeof dcurrent_id === 'number') {
     var target = id.target;
     var parentNode = target.parentNode;
@@ -38,8 +44,8 @@ function fsmodal_clall_menu_arrays(id, dcurrent_id) {
         var currentButton = buttons[dcurrent_id];
         if (currentButton.getAttribute('id')) {
           var currentId = currentButton.getAttribute('id');
-          var btunfprecurrent_id = "";
-          var btunfprnextent_id = "";
+           btunfprecurrent_id = "";
+           btunfprnextent_id = "";
           if (dcurrent_id + 1 < buttons.length) {
             var nextButton = buttons[dcurrent_id + 1];
             var nextId = nextButton.getAttribute('id');
@@ -54,19 +60,11 @@ function fsmodal_clall_menu_arrays(id, dcurrent_id) {
               btunfprecurrent_id = `<div style="margin-left:4px;" class="ssprev" onclick="fsmodal_cl_menu('${prevId}');"><span class="icon"></span></div>`;
             }
           }
-          if (dcurrent_id <= 0) {
-            btunfprecurrent_id = "";
-          }
-          if (dcurrent_id >= buttons.length - 1) {
-            btunfprnextent_id = "";
-          }
-          if (target.getAttribute('id') && target.getAttribute('id') === currentId) {
-            btunfprnextent_id = "";
-          }
+          if (dcurrent_id <= 0) {            btunfprecurrent_id = "";          }
+          if (dcurrent_id >= buttons.length - 1) {            btunfprnextent_id = "";          }
+          if (target.getAttribute('id') && target.getAttribute('id') === currentId) {            btunfprnextent_id = "";          }
           fsmodal_clall_menussd = btunfprecurrent_id + " " + btunfprnextent_id;
-          if (dcurrent_id >= buttons.length || dcurrent_id < 0) {
-            fsmodal_clall_menussd = "";
-          }
+          if (dcurrent_id >= buttons.length || dcurrent_id < 0) {            fsmodal_clall_menussd = "";          }
         }
       }
     }
