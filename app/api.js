@@ -329,16 +329,9 @@ momocsifipsl.appendChild(scrcontedd);
             }
             if (optincludeplayer === "yes" && is_player0j === "yes") {
                 function mfplayeridd(){  if (typeof loaded_playerinf === "function"){ loaded_playerinf(start_fs_mpl); }  }
-            }
+            mfplayeridd();		}
 
-			mfplayeridd();
-			
-   var scrfiptfd = document.createElement("script");
-    scrfiptfd.setAttribute("type", "text/javascript");
-      scrfiptfd.setAttribute("onload", 'mfplayeridd();');
-    scrfiptfd.setAttribute("src", "data:text/javascript,"+encodeURIComponent('   if (typeof mfplayeridd === "function"){   mfplayeridd();   }   '));
-momocsifipsl.appendChild(scrfiptfd);    
-			
+			mfplayeridd();			
 			
             if (close_fsmofla_strdd === true && typeof CtxMenu === "function") {
                 var MainContextMenu = CtxMenu(".modal");
