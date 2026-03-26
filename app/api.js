@@ -44,7 +44,7 @@ function fsmodal_clall_menu_arrays(id, dcurrent_id) {
         var currentButton = buttons[dcurrent_id];
         if (currentButton.getAttribute('id')) {
           var currentId = currentButton.getAttribute('id');
-          if (dcurrent_id==0 && dcurrent_id + 1 < buttons.length) {
+          if (currentId==0 && dcurrent_id + 1 < buttons.length) {
             var nextButton = buttons[dcurrent_id + 1];
             var nextId = nextButton.getAttribute('id');
             if (nextId) {
