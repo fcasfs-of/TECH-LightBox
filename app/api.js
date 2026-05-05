@@ -264,11 +264,7 @@ function mfplayeridd(){  }
 	
     if (document.querySelector("#mendu_df")) {
         document.querySelector("#mendu_df").innerHTML = "";
-    }
-	 if (document.querySelector(".ctx-menu-wrapper")) {
-        document.querySelector(".ctx-menu-wrapper").innerHTML = "";
-    }
-	
+    }	
 
     var optincludeplayer = "";
     if (optiy && optiy.include && optiy.include.player == "yes") {
