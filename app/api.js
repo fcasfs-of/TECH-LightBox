@@ -340,12 +340,12 @@ momocsifipsl.appendChild(scrcontedd);
 			mfplayeridd();			
 			
             if (close_fsmofla_strdd === true && typeof CtxMenu === "function") {
-                var MainContextMenu = CtxMenu(".modal");
-                if (MainContextMenu) {
-                    MainContextMenu.addItem(fsmodal_offpen_tipf, function () {
-                        fsmodal_close(optiy.id, optiy.scroll_hide);
-                    }, "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAA7AAAAOwBeShxvQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHASURBVFiF7ZY9SytBFIafCTezuSJ3MAtytZSk8P9oqdYmQbDRWylcf0EgxkK7LfWvXEtTJNgpKCayKCE7CYxFzGWTXeMGR/HrrZaZs+d95uMMB7711SVGB8zyssSYPWAFmLPkcwl4CLEjjo91eOJHJNSYv8CWJeOB5oFtjAH4E55IxQSvWjYPa210IA7A1rbH6XcSgDfVBwI4OjrF82oo1XwyRqkmnlfj8PCffQDH+Ukms0i12oqFUKpJtdoik1lEyin7AKXSLFrXkTLPwYFPNnsdMZcyT7d7zuamax/A910KhSxa10mnF6hU7nHdq4h5qTRNqzWbNG30JVxaMmP/UKrJ/v4tjpMjCBoA/7+LxRl8f+zqxcnJkOfkVeD7LsXiDFrXcZwcjpOj2z1nY+PXc+ZxsleGQozfOWsAgyOQMk8QNAiCBun0AuXy3dgStQIwuHDhbQ8fx2h1WAV46rbHVccEEMkBKpVrpMyjdZ31dTVUaqMQ5fKNfYBOp027XaNQyMbe9gFEp3NGr9dLmnbyd+CFevk7YFnvEuDyFf0ukgB4r2ZvTCR3tCsWYuexe12h383aUL8tT6V2LeX71ifSA3f6ubbY1IiBAAAAAElFTkSuQmCC", false, false);
-                }
+               // var MainContextMenu = CtxMenu(".modal");
+               // if (MainContextMenu) {
+                    //MainContextMenu.addItem(fsmodal_offpen_tipf, function () {
+                     //   fsmodal_close(optiy.id, optiy.scroll_hide);
+                    //}, "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAA7AAAAOwBeShxvQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAHASURBVFiF7ZY9SytBFIafCTezuSJ3MAtytZSk8P9oqdYmQbDRWylcf0EgxkK7LfWvXEtTJNgpKCayKCE7CYxFzGWTXeMGR/HrrZaZs+d95uMMB7711SVGB8zyssSYPWAFmLPkcwl4CLEjjo91eOJHJNSYv8CWJeOB5oFtjAH4E55IxQSvWjYPa210IA7A1rbH6XcSgDfVBwI4OjrF82oo1XwyRqkmnlfj8PCffQDH+Ukms0i12oqFUKpJtdoik1lEyin7AKXSLFrXkTLPwYFPNnsdMZcyT7d7zuamax/A910KhSxa10mnF6hU7nHdq4h5qTRNqzWbNG30JVxaMmP/UKrJ/v4tjpMjCBoA/7+LxRl8f+zqxcnJkOfkVeD7LsXiDFrXcZwcjpOj2z1nY+PXc+ZxsleGQozfOWsAgyOQMk8QNAiCBun0AuXy3dgStQIwuHDhbQ8fx2h1WAV46rbHVccEEMkBKpVrpMyjdZ31dTVUaqMQ5fKNfYBOp027XaNQyMbe9gFEp3NGr9dLmnbyd+CFevk7YFnvEuDyFf0ukgB4r2ZvTCR3tCsWYuexe12h383aUL8tT6V2LeX71ifSA3f6ubbY1IiBAAAAAElFTkSuQmCC", false, false);
+               // }
             }
             if (optiy.scroll_hide && optiy.scroll_hide == "yes") {
                 document.body.style.overflow = "hidden";
