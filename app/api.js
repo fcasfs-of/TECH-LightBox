@@ -13,9 +13,6 @@ document.getElementsByTagName("head")[0].appendChild(scrcodiptwwincfd);
 var scriptwwincfd = document.createElement("script");
 scriptwwincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/core.js");
 document.getElementsByTagName("head")[0].appendChild(scriptwwincfd);	
-var scriptincfd = document.createElement("script");
-scriptincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
-document.getElementsByTagName("head")[0].appendChild(scriptincfd);    
 
 
 
@@ -310,7 +307,7 @@ momocsifipsl.innerHTML='';
 
 var scrcontedd = document.createElement("div");
 			scrcontedd.innerHTML = `
-                <style>.ctx-menu-wrapper{z-index: 999999999;}</style>
+                <style></style>
                 <div class="modal${close_fsmofla_efestr}" id="fs_modal_${optiy.id}" style="display:block; color:#000;">
                     <span class="bngl">${btnys_fsmofla_efestr}</span>
                     <span class="bngd" ${fsmodal_open_tipf}>${close_fsmofla_str}</span>
@@ -333,7 +330,11 @@ momocsifipsl.appendChild(scrcontedd);
                 function mfplayeridd(){  if (typeof loaded_playerinf === "function"){ loaded_playerinf(start_fs_mpl); }  }
             mfplayeridd();		}
 
-			mfplayeridd();			
+var scriptincfd = document.createElement("script");
+scriptincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
+scriptincfd.setAttribute("onload", "mfplayeridd();");
+document.getElementsByTagName("head")[0].appendChild(scriptincfd);    
+
 			
             if (close_fsmofla_strdd === true) {
                
