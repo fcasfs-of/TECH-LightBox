@@ -332,8 +332,8 @@ momocsifipsl.appendChild(scrcontedd);
 
 var scriptincfd = document.createElement("script");
 scriptincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
-scriptincfd.setAttribute("onload", "mfplayeridd();");
-document.getElementsByTagName("head")[0].appendChild(scriptincfd);    
+scriptincfd.setAttribute("onload", 'if (typeof loaded_playerinf === "function"){ loaded_playerinf(start_fs_mpl); }');
+document.getElementsByTagName("body")[0].appendChild(scriptincfd);    
 
 			
             if (close_fsmofla_strdd === true) {
