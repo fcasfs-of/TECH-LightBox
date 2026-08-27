@@ -232,7 +232,7 @@ function fsmodal_create(optiy, app) {
                 };
                 fsmodal_create_ifir = `<div id="preview_pls" style="width:100%; height:${Number(optiy.size)}px;"></div>`;
             }
-            fsmodal_createdd += `<div style="aspect-ratio: 16 / 9; height:${Number(optiy.size)}px; position: absolute; width: 100%;   padding:5px; text-align:center; color:#fff;">${fsmodal_create_ifir} ${fsmodal_create_desci}<br/><br/><br/><br/></div><br/><br/><br/>`;
+            fsmodal_createdd += `<div style="aspect-ratio: 16 / 9; height:100%; position: absolute; width: 100%;   padding:5px; text-align:center; color:#fff;">${fsmodal_create_ifir} ${fsmodal_create_desci}<br/><br/><br/><br/></div><br/><br/><br/>`;
         }
         return fsmodal_createdd;
     }
