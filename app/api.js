@@ -193,7 +193,10 @@ function fsmodal_create(optiy, app) {
             } else if (optiy.type && optiy.type == "image") {
                 is_player0j = "no";
                 fsmodal_create_ifir = `<img src="${optiy.context}" style="user-select:none;pointer-events:none; width:${Number(optiy.size)}px;" />`;
-            } else if (optiy.type && optiy.type == "audio") {
+            } else if (optiy.type && optiy.type == "svg") {
+                is_player0j = "no";
+                fsmodal_create_ifir = `<br/> ${optiy.context}    <style> .tlightboc_fcasfs svg {      width: ${Number(optiy.size)}px;    height: ${Number(optiy.size)}px;    fill: currentColor;    stroke: currentColor;  }  </style> <br/><br/>`;
+            }  else if (optiy.type && optiy.type == "audio") {
                 is_player0j = "yes";
                 if (optiy.poster && optiy.poster != "") {
                     start_fs_postermpl = optiy.poster;
@@ -232,7 +235,7 @@ function fsmodal_create(optiy, app) {
                 };
                 fsmodal_create_ifir = `<div id="preview_pls" style="width:100%; height:${Number(optiy.size)}px;"></div>`;
             }
-            fsmodal_createdd += `<div style="position: fixed;  width: 100%;  height: 100%;  padding:5px; text-align:center; color:#fff;">${fsmodal_create_ifir} ${fsmodal_create_desci}<br/><br/><br/><br/></div><br/><br/><br/>`;
+            fsmodal_createdd += `<div class="tlightboc_fcasfs" style="position: fixed;  width: 100%;  height: 100%;  padding:5px; text-align:center; color:#fff;">${fsmodal_create_ifir} ${fsmodal_create_desci}<br/><br/><br/><br/></div><br/><br/><br/>`;
         }
         return fsmodal_createdd;
     }
