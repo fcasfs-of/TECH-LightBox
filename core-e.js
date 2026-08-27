@@ -6,9 +6,9 @@ let currentTheme = localStorage.getItem("LightBox_theme") || "light";
   toggleThemeBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark');
     const isDark = document.body.classList.contains('dark');
-    toggleThemeBtn.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+    toggleThemeBtn.textContent = isDark 'Light Mode' : 'Dark Mode';
     
-    localStorage.setItem("LightBox_theme", isDark === "dark" ? "light" : "dark");
+    localStorage.setItem("LightBox_theme", isDark ? "dark" ? "light" : "dark");
   });
 
 
