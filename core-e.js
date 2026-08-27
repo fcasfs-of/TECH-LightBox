@@ -1,10 +1,24 @@
-  // Função para alternar temas
+let currentTheme = localStorage.getItem("LightBox_theme") || "light";
+
+
+// Função para alternar temas
   const toggleThemeBtn = document.getElementById('theme-toggle');
   toggleThemeBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark');
     const isDark = document.body.classList.contains('dark');
     toggleThemeBtn.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+    
+    currentTheme = isDark === "dark" ? "light" : "dark";
+    localStorage.setItem("LightBox_theme", currentTheme);
   });
+
+
+  document.body.classList.remove('dark');
+if(currentTheme=="dark"){
+    document.body.classList.add('dark');
+    const isDark = document.body.classList.contains('dark');
+    toggleThemeBtn.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+}
 
 
   const text_thnv = "Close";
