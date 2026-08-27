@@ -12,11 +12,11 @@ let currentTheme = localStorage.getItem("LightBox_theme") || "light";
 
   document.body.classList.remove('dark');
     const isDark = document.body.classList.contains('dark');
-    toggleThemeBtn.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+    toggleThemeBtn.textContent = isDark ? 'Modo Claro' : 'Modo Escuro';
 if(currentTheme=="dark"){
     document.body.classList.add('dark');
     const isDark = document.body.classList.contains('dark');
-    toggleThemeBtn.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+    toggleThemeBtn.textContent = isDark ? 'Modo Claro' : 'Modo Escuro';
 }
 
 
