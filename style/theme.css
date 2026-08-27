@@ -133,7 +133,8 @@ nav button:hover {
   gap: 15px;
   padding: 15px;
 }
-.lbxx * { transition: all 0.3s; }
+
+header .dname *, header nav, header nav *, .lbxx * { transition: all 0.1s; }
 
 .lbxx nav button {
   display: inline-flex;
