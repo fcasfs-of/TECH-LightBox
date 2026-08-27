@@ -68,10 +68,10 @@ if(currentTheme=="dark"){
     openModal({
       title: "LightBox",
       type: "",
-      context: "Lightbox é inovador que oferece uma experiência integrada para visualizar e interagir com textos, links, imagens, áudios e vídeos de forma intuitiva e moderna. <br/> Com uma interface limpa e responsiva, o aplicativo permite aos usuários explorar conteúdos multimídia de maneira eficiente, proporcionando uma navegação fluida e envolvente.",
+      context: "Lightbox é inovador que oferece uma experiência integrada para visualizar e interagir com textos, links, SVG, imagens, áudios e vídeos de forma intuitiva e moderna. <br/> Com uma interface limpa e responsiva, o aplicativo permite aos usuários explorar conteúdos multimídia de maneira eficiente, proporcionando uma navegação fluida e envolvente.",
       size: "250",
       includePlayer: "no",
-      description: "(Texto, Link, Vídeo, Imagem e Áudio)"
+      description: "(Texto, Link, SVG, Vídeo, Imagem e Áudio)"
     },e);
   });
 
