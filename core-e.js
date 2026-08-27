@@ -55,6 +55,17 @@ if(currentTheme=="dark"){
     },e);
   });
 
+  document.getElementById('btnSVG').addEventListener('click', (e) => {
+    openModal({
+      title: "SVG 1",
+      type: "svg",
+      context: '<svg fill="#000" width="800px" height="800px" viewBox="-0.5 0 24 24"><path d="m0 0h5.219v5.219h-5.219z"/><path d="m9.39 0h5.219v5.219h-5.219z"/><path d="m17.998 0h5.219v5.219h-5.219z"/><path d="m0 9.39h5.219v5.219h-5.219z"/><path d="m9.39 9.39h5.219v5.219h-5.219z"/><path d="m17.998 9.39h5.219v5.219h-5.219z"/><path d="m0 18.781h5.219v5.219h-5.219z"/><path d="m9.39 18.781h5.219v5.219h-5.219z"/><path d="m17.998 18.781h5.219v5.219h-5.219z"/></svg>',
+      size: "224",
+      includePlayer: "no",
+      description: ""
+    },e);
+  });
+
   document.getElementById('btnText').addEventListener('click', (e) => {
     openModal({
       title: "LightBox",
