@@ -8,8 +8,7 @@ let currentTheme = localStorage.getItem("LightBox_theme") || "light";
     const isDark = document.body.classList.contains('dark');
     toggleThemeBtn.textContent = isDark ? 'Light Mode' : 'Dark Mode';
     
-    currentTheme = isDark === "dark" ? "light" : "dark";
-    localStorage.setItem("LightBox_theme", currentTheme);
+    localStorage.setItem("LightBox_theme", isDark === "dark" ? "light" : "dark";);
   });
 
 
