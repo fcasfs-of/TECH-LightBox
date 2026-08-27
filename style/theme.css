@@ -52,7 +52,7 @@
 
 
 header .dname {  display: grid;
-    width: 100%;
+    width: 100%;  gap: 2px;  
     text-align: center;
     grid-auto-flow: column;
     align-content: center;
@@ -195,7 +195,7 @@ header .dname .icon {
     display: inline-block !important; 
     vertical-align: middle; 
     flex-shrink: 0;
-    margin-right: 0.5em;
+    margin-right: 0.5em;   margin-bottom:0px;
 
     width: 80px;
     height: 80px;
@@ -226,9 +226,10 @@ header .dname .icon {
   }
 
     header .dname .icon {
-        width: 40px !important;      
-        height: 40px !important;
-        margin-right: 0.3em;
+        width: 60px !important;      
+        height: 60px !important;
+        margin-right: 0px;
+      margin-bottom: 0.3em;
     }
 header .dname {
       grid-auto-flow: row;
