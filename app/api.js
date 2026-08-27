@@ -211,7 +211,7 @@ function fsmodal_create(optiy, app) {
                     poster: start_fs_postermpl,
                     player: 1
                 };
-                fsmodal_create_ifir = `<div style="width:100%; height:${Number(optiy.size)}px;"> <div id="preview_pls" style="width:100%; height:${Number(optiy.size)}px;"></div> </div>`;
+                fsmodal_create_ifir = `<span style="width:100%; height:${Number(optiy.size)}px;"> <div id="preview_pls" style="width:100%; height:${Number(optiy.size)}px;"></div> </span>`;
             } else if (optiy.type && optiy.type == "video") {
                 is_player0j = "yes";
                 if (optiy.poster && optiy.poster != "") {
@@ -230,7 +230,7 @@ function fsmodal_create(optiy, app) {
                     poster: start_fs_postermpl,
                     player: 1
                 };
-                fsmodal_create_ifir = `<div id="preview_pls" style="width:100%; height:${Number(optiy.size)}px;"></div>`;
+                fsmodal_create_ifir = `<span style="width:100%; height:${Number(optiy.size)}px;"> <div id="preview_pls" style="width:100%; height:${Number(optiy.size)}px;"></div> </span>`;
             }
             fsmodal_createdd += `<div style="aspect-ratio: 16 / 9; height:${Number(optiy.size)}px; position: absolute; width: 100%;   padding:5px; text-align:center; color:#fff;">${fsmodal_create_ifir} ${fsmodal_create_desci}<br/><br/><br/><br/></div><br/><br/><br/>`;
         }
