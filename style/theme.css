@@ -50,6 +50,18 @@
       align-items: center;
     }
 
+
+header .dname {  display: grid;
+    width: 100%;
+    text-align: center;
+    grid-auto-flow: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+
  /* Navegação */
 nav {
   display: flex;
@@ -175,7 +187,10 @@ nav button:hover {
 }
 
 
-   /* Logo ao lado do título */
+ header .dname h1 {  margin-bottom: 0px;    display: inline-block;  }
+
+
+/* Logo ao lado do título */
 header .dname .icon {
     display: inline-block !important; 
     vertical-align: middle; 
@@ -213,9 +228,12 @@ header .dname .icon {
     header .dname .icon {
         width: 40px !important;      
         height: 40px !important;
-        display: inline-block !important; 
         margin-right: 0.3em;
     }
+header .dname {
+      grid-auto-flow: row;
+}
+     header .dname h1 { margin-bottom: 1rem;   }
       
 }
 
