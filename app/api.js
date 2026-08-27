@@ -235,7 +235,7 @@ function fsmodal_create(optiy, app) {
                 };
                 fsmodal_create_ifir = `<div id="preview_pls" style="width:100%; height:${Number(optiy.size)}px;"></div>`;
             }
-            fsmodal_createdd += `<div class="tlightboc_fcasfs" style="overflow:auto;  position: fixed;  width: 100%;  height: 100%;  padding:5px; text-align:center; color:#fff;">${fsmodal_create_ifir} ${fsmodal_create_desci}<br/><br/><br/><br/></div><br/><br/><br/>`;
+            fsmodal_createdd += `<div class="tlightboc_fcasfs" style="overflow:auto;  position: absolute;  width: 100%;  height: 100%;  padding:5px; text-align:center; color:#fff;">${fsmodal_create_ifir} ${fsmodal_create_desci}<br/><br/><br/><br/></div><br/><br/><br/>`;
         }
         return fsmodal_createdd;
     }
