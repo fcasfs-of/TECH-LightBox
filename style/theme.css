@@ -30,7 +30,7 @@
     /* Cabeçalho */
     header {
       margin: 6px auto;
-      width: 85%;
+      width: 95%;
       text-align:center;
       border-radius: 20px;
       background-color: var(--header-bg);
@@ -48,17 +48,6 @@
       margin-bottom: 1rem;
       display: flex;
       align-items: center;
-    }
-
-    /* Logo ao lado do título */
-    header .icon:before {
-      pointer-events: none;
-      user-select: none;
-      display: inline-block;
-      margin-right: 0.5em;
-      height: 24px;
-      width: 24px;
-      content: url("https://lightbox.fcasfs-of.cloud-fs.net/favicon.png");
     }
 
  /* Navegação */
@@ -186,6 +175,28 @@ nav button:hover {
 }
 
 
+   /* Logo ao lado do título */
+header .dname .icon {
+    display: inline-block !important; 
+    vertical-align: middle; 
+    flex-shrink: 0;
+    margin-right: 0.5em;
+
+    width: 80px;
+    height: 80px;
+
+    background-image: url("https://lightbox.fcasfs-of.cloud-fs.net/favicon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    pointer-events: none;
+    user-select: none;
+
+    }
+
+
+
 /* Regras de Responsividade (Mobile) */
 @media (max-width: 768px) {
   .lbxx nav {
@@ -198,6 +209,14 @@ nav button:hover {
     width: 100%;
     padding: 12px;
   }
+
+    header .dname .icon {
+        width: 40px !important;      
+        height: 40px !important;
+        display: inline-block !important; 
+        margin-right: 0.3em;
+    }
+      
 }
 
 
