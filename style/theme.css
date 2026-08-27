@@ -30,8 +30,8 @@
     /* Cabeçalho */
     header {
       margin: 6px auto;
-      width: 90%;
-      max-width: 1000px; text-align:center;
+      width: 85%;
+      text-align:center;
       border-radius: 20px;
       background-color: var(--header-bg);
       padding: 1rem;
