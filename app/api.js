@@ -325,8 +325,10 @@ momocsifipsl.appendChild(scrcontedd);
 
             var mffomocsifipsl = document.getElementById("fs_modal_" + optiy.id);
             if (mffomocsifipsl && optiy.click_close && optiy.click_close === true) {
-                mffomocsifipsl.onclick = function () {
+                mffomocsifipsl.onclick = function (e) {
+        if (!e.target.closest('.menulight_scrollmenu') && !e.target.closest('.modal-content')) {
                     fsmodal_close(optiy.id, optiy.scroll_hide);
+		}
                 };
             }
             if (optincludeplayer === "yes" && is_player0j === "yes") {
