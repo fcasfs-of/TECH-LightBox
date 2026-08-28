@@ -1,6 +1,5 @@
 let currentTheme = localStorage.getItem("LightBox_theme") || "light";
 
-  // Função para alternar temas
   const toggleThemeBtn = document.getElementById('theme-toggle');
   toggleThemeBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark');
@@ -197,7 +196,7 @@ fcasfs_lightbox_config_vincular({
   comTransicao: true, 
   fechaAoClicarFora: false,
   isFixo: true, 
-  configItens: minhasOpcoes || [],
+  configItens: (typeof minhasOpcoes !== 'undefined') ? minhasOpcoes : [],
   onApiReady: function(api) {
     controleApiConfig = api;
     
