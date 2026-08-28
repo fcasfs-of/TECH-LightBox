@@ -1,7 +1,6 @@
 let currentTheme = localStorage.getItem("LightBox_theme") || "light";
 
 
-// Função para alternar temas
   const toggleThemeBtn = document.getElementById('theme-toggle');
   toggleThemeBtn.addEventListener('click', () => {
     document.body.classList.toggle('dark');
@@ -189,9 +188,25 @@ function injetarScriptHomeAA(isHead, exefl) {
 }
 
 
-injetarScriptHomeAA(false, function(){
 
-  
+function get_themeforop(){  var dget_themeforop= document.body.classList.contains('dark');  return  dget_themeforop ? "escuro" : "claro";  }
+
+injetarScriptHomeAA(false, function(){
+var controleApiConfig;
+fcasfs_lightbox_config_vincular({
+  idBotao: 'meuBotaoConfig',
+  idioma: cokk_plu_idf,
+  tema: get_themeforop(),
+  posicao: 'centro',
+  comTransicao: true, 
+  fechaAoClicarFora: false,
+  isFixo: true, 
+  configItens: (typeof minhasOpcoes !== 'undefined') ? minhasOpcoes : [],
+  onApiReady: function(api) {
+    controleApiConfig = api;
+    
+  }
+});
 });
 
 
