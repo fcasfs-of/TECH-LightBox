@@ -254,6 +254,7 @@ header .dname .icon::before {     pointer-events: none;
       flex-direction: column;
       gap: 20px;
       width: 95%;
+      max-width: 760px;
       box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
       transition: all 0.3s ease;
       overflow: hidden; 
