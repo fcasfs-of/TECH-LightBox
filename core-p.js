@@ -84,10 +84,21 @@ document.getElementById('btnText').addEventListener('click', (e) => {
     openModal({
       title: "LightBox",
       type: "",
-      context: "Lightbox é inovador que oferece uma experiência integrada para visualizar e interagir com textos, links, SVG, Tabela, imagens, áudios e vídeos de forma intuitiva e moderna. <br/> Com uma interface limpa e responsiva, o aplicativo permite aos usuários explorar conteúdos multimídia de maneira eficiente, proporcionando uma navegação fluida e envolvente.",
+      context: "Lightbox é inovador que oferece uma experiência integrada para visualizar e interagir com textos, links, SVG, Tabela, imagens, lista, áudios e vídeos de forma intuitiva e moderna. <br/> Com uma interface limpa e responsiva, o aplicativo permite aos usuários explorar conteúdos multimídia de maneira eficiente, proporcionando uma navegação fluida e envolvente.",
       size: "250",
       includePlayer: "no",
-      description: "(Texto, Link, SVG, Vídeo, Tabela, Imagem e Áudio)"
+      description: "(Texto, Link, SVG, Vídeo, Lista, Tabela, Imagem e Áudio)"
+    },e);
+  });
+
+  document.getElementById('btnList').addEventListener('click', (e) => {
+    openModal({
+      title: "Lista",
+      type: "list",
+      context:[typeof document !== "undefined" ? document.title : "", typeof app_2ver !== "undefined" ? app_2ver : "", typeof location !== "undefined" ? location.href : ""],
+      size: "250",
+      includePlayer: "no",
+      description: ""
     },e);
   });
 
