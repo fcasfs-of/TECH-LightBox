@@ -228,16 +228,16 @@ header .dname .icon::before {     pointer-events: none;
     padding: 12px;
   }
 
-    header .jdname .icon {
+    header .dname .icon {
         width: 60px !important;      
         height: 60px !important;
         margin-right: 0px;
       margin-bottom: 0.3em;
     }
-.header .dname {
+header .dname {
       grid-auto-flow: row;
 }
-     .header .dname h1 { margin-bottom: 1rem;   }
+     header .dname h1 { margin-bottom: 1rem;   }
       
 }
 
