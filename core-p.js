@@ -186,12 +186,15 @@ function injetarScriptHomeAA(isHead, exefl) {
 }
 
 
+
+function get_themeforop(){  var dget_themeforop= document.body.classList.contains('dark');  return  dget_themeforop ? "escuro" : "claro";  }
+
 injetarScriptHomeAA(false, function(){
 var controleApiConfig;
 fcasfs_lightbox_config_vincular({
   idBotao: 'meuBotaoConfig',
   idioma: cokk_plu_idf,
-  tema: document.body.classList.contains('dark') ? "escuro" : "claro",
+  tema: get_themeforop(),
   posicao: 'centro',
   comTransicao: true, 
   fechaAoClicarFora: false,
