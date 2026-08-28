@@ -33,7 +33,8 @@ function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carre
       scroll_hide: "yes",
       noclose: false,
       remove_efect: fcasfs_obter_booleano("remove_efect", false),
-      menu:  fcasfs_obter_booleano("menu", true),
+      menu: fcasfs_obter_booleano("menu", true),
+      click_close: fcasfs_obter_booleano("click_close", false),
       itens: obj,      
       include: { player: contentOptions.includePlayer },
       content: {
