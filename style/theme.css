@@ -393,7 +393,7 @@ header .dname {
     #meuBotaoConfig:hover { background-color: #475569; color: #ffffff; }
 
     .lbxx nav::-webkit-scrollbar-thumb { background: #475569; }
-    .lbxx nav buttons {  color: #fff;   }
+    .lbxx nav button {  color: #fff;   }
 
 
     @media (max-width: 680px) {
