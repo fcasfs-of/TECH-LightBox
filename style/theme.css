@@ -195,6 +195,11 @@ header .dname *, header nav, header nav *, .lbxx * { transition: all 0.1s; }
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAATUlEQVRIS2NkoDFghLNoBEYtIAiGWRD9////P9hbjIxgn8H4pAKYfjAbxgABmltAC0DfSKZ5ENHcAlqA0TjACnBmNFqAUQsIgtEgIggAodUwGWzmHBQAAAAQZGVCRzkwNUVDNTZGQkU3NzU2OTIWtPx0AAAAAElFTkSuQmCC");
 }
 
+#btnGrafic::before {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAV0lEQVRIS2NkoDFghLNoBEaYBf///68H+ZqRkbEBHgYEAElBNGoBQTB8gwifz6iSinCJg8AwtQCXl0kVBwGsQYRLA6niIDBqARgMviCiJsAaydQEQ98CAKP6gBnG+0dHAAAAEGRlQkc1NUFFNzAyNDRFQTI3REQ1dlrvnwAAAABJRU5ErkJggg==");
+}
+
+
 
 
  header .dname h1 {  margin-bottom: 0px;    display: inline-block;  }
@@ -351,6 +356,9 @@ header .dname .icon::before {     pointer-events: none;
 
     #btnTable, #btnList { background-color: #2e7d32; color: #ffffff; border-color: #1b5e20; }
     #btnTable:hover, #btnList:hover { background-color: #388e3c; }
+
+    #btnGrafic{ background-color: #3b82f6; color: #ffffff; border-color: #1d4ed8; }
+    #btnGrafic:hover { background-color: #1d4ed8;  }
 
     #btnText, #btnLink { background-color: #eff6ff; color: #2563eb; border-color: #bfdbfe; }
     #btnText:hover, #btnLink:hover { background-color: #dbeafe; }
