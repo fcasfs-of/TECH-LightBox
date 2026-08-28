@@ -201,7 +201,7 @@ fcasfs_lightbox_config_vincular({
   idBotao: 'meuBotaoConfig',
   idioma: cokk_plu_idf,
   tema: get_themeforop(),
-  posicao: 'centro',
+  cliqueNoLabel: true, posicao: 'centro',
   comTransicao: fcasfs_obter_booleano("remove_efect", false), 
   fechaAoClicarFora: false,
   isFixo: true, 
