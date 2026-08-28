@@ -188,8 +188,21 @@ function injetarScriptHomeAA(isHead, exefl) {
 
 
 injetarScriptHomeAA(false, function(){
-
-  
+var controleApiConfig;
+fcasfs_lightbox_config_vincular({
+  idBotao: 'meuBotaoConfig',
+  idioma: cokk_plu_idf,
+  tema: document.body.classList.contains('dark') ? "claro" : "escuro",
+  posicao: 'centro',
+  comTransicao: true, 
+  fechaAoClicarFora: false,
+  isFixo: true, 
+  configItens: minhasOpcoes || [],
+  onApiReady: function(api) {
+    controleApiConfig = api;
+    
+  }
+});
 });
 
 
