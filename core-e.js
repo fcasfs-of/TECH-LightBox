@@ -85,7 +85,7 @@ function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carre
     openModal({
       title: "Table",
       type: "table",
-      context: [  { App: document.title || "", Version: app_2ver || "", Link: location.href || "" }   ],
+      context:[   {     App: typeof document !== "undefined" ? document.title : "",     Version: typeof app_2ver !== "undefined" ? app_2ver : "",     Link: typeof location !== "undefined" ? location.href : ""  }],
       size: "250",
       includePlayer: "no",
       description: ""
