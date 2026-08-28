@@ -373,7 +373,7 @@ header .dname {
     .lbxx { background-color: #1e293b; border-color: #334155; }
     .dname { border-color: #334155; }
     .dname h1 { color: #f8fafc; }
-    .icon { background-color: #94a3b8; }
+    .lbxx .icon { background-color: #94a3b8; }
     .lbxx-footer-container { border-color: #334155; }
     .cat-divider { background-color: #334155; } 
 
