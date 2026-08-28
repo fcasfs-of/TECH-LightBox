@@ -99,7 +99,7 @@ nav button:hover {
 }
 
 /* Tema switch */
-#theme-toggle {
+.lbxx button, .lbxx #theme-toggle {
   margin-top: 1em;
   background: none;
   border: 2px solid var(--header-text);
@@ -111,7 +111,7 @@ nav button:hover {
   transition: background-color 0.3s, color 0.3s;
 }
 
-#theme-toggle:hover {
+.lbxx button:hover, .lbxx #theme-toggle:hover {
   background-color: var(--header-text);
   color: var(--header-bg);
 }
