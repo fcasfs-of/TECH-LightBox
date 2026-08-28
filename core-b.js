@@ -1,27 +1,9 @@
  var minhasOpcoes = [
-  {
-    isCategoria: true,
-    titulo: { pt: "Interface e Menu", en: "Interface & Menu" },
-    svg: '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.25z"/></svg>'
-  },
-  {
-      key: "menu",
-      titulo: { pt: "Menu de Navegação", en: "Navigation Menu" },
-      padrao: true,
-      svg: '<svg viewBox="0 0 1024 1024"><path d="M160 448a32 32 0 01-32-32V160.064a32 32 0 0132-32h256a32 32 0 0132 32V416a32 32 0 01-32 32H160zm448 0a32 32 0 01-32-32V160.064a32 32 0 0132-32h255.936a32 32 0 0132 32V416a32 32 0 01-32 32H608zM160 896a32 32 0 01-32-32V608a32 32 0 0132-32h256a32 32 0 0132 32v256a32 32 0 01-32 32H160zm448 0a32 32 0 01-32-32V608a32 32 0 0132-32h255.936a32 32 0 0132 32v256a32 32 0 01-32 32H608z"/></svg>',
-      callback: function(v) { }
-    },
-    {
-    isCategoria: true,
-    titulo: { pt: "Performance e Efeitos", en: "Performance & Effects" },
-    svg: '<svg viewBox="0 0 24 24"><path d="M13.5 2c-5.62 0-10.19 4.41-10.47 10h-2c-.29 0-.53.24-.53.53 0 .15.06.28.16.38l3.3 3.3c.2.2.51.2.71 0l3.3-3.3c.1-.1.16-.23.16-.38 0-.29-.24-.53-.53-.53h-2.03c.27-4.48 4-8 8.53-8 4.71 0 8.5 3.79 8.5 8.5S18.21 21 13.5 21c-2.28 0-4.37-.9-5.93-2.37-.2-.19-.52-.18-.71.02l-1.07 1.07c-.2.2-.19.52.02.71C7.88 22.26 10.53 23 13.5 23c6.08 0 11-4.92 11-11S19.58 2 13.5 2z"/></svg>'
-  },
-  {
-      key: "remove_efect",
-      titulo: { pt: "Remover Animação", en: "Remove Animation" },
-      padrao: false,
-      svg: '<svg viewBox="0 0 24 24"><path d="M22,11H12a1,1,0,0,0-1,1V22a1,1,0,0,0,1,1H22a1,1,0,0,0,1-1V12A1,1,0,0,0,22,11ZM21,21H13V13h8ZM2,13a1,1,0,0,1-1-1V2A1,1,0,0,1,2,1H12a1,1,0,0,1,0,2H3v9A1,1,0,0,1,2,13ZM17,6a1,1,0,0,1,0,2H8v9a1,1,0,0,1-2,0V7A1,1,0,0,1,7,6Z"/></svg>',
-      callback: function(v) { }
-    }
+  { isCategoria: true, titulo: { pt: "Interface e Menu", en: "Interface & Menu" }, svg: '<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.25z"/></svg>' },
+  { key: "menu", titulo: { pt: "Menu de Navegação", en: "Navigation Menu" }, padrao: true, svg: '<svg viewBox="0 0 1024 1024"><path d="M160 448a32 32 0 01-32-32V160.064a32 32 0 0132-32h256a32 32 0 0132 32V416a32 32 0 01-32 32H160zm448 0a32 32 0 01-32-32V160.064a32 32 0 0132-32h255.936a32 32 0 0132 32V416a32 32 0 01-32 32H608zM160 896a32 32 0 01-32-32V608a32 32 0 0132-32h256a32 32 0 0132 32v256a32 32 0 01-32 32H160zm448 0a32 32 0 01-32-32V608a32 32 0 0132-32h255.936a32 32 0 0132 32v256a32 32 0 01-32 32H608z"/></svg>', callback: function(v) { } },
+  { key: "click_close", titulo: { pt: "Fecha ao clicar fora", en: "Closes when clicked outside" }, padrao: false, svg: '<svg viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-2 10H7v-2h10v2z"/></svg>', callback: function(v) { } },
+  { isCategoria: true, titulo: { pt: "Performance e Efeitos", en: "Performance & Effects" }, svg: '<svg viewBox="0 0 24 24"><path d="M13.5 2c-5.62 0-10.19 4.41-10.47 10h-2c-.29 0-.53.24-.53.53 0 .15.06.28.16.38l3.3 3.3c.2.2.51.2.71 0l3.3-3.3c.1-.1.16-.23.16-.38 0-.29-.24-.53-.53-.53h-2.03c.27-4.48 4-8 8.53-8 4.71 0 8.5 3.79 8.5 8.5S18.21 21 13.5 21c-2.28 0-4.37-.9-5.93-2.37-.2-.19-.52-.18-.71.02l-1.07 1.07c-.2.2-.19.52.02.71C7.88 22.26 10.53 23 13.5 23c6.08 0 11-4.92 11-11S19.58 2 13.5 2z"/></svg>' },
+  { key: "remove_efect", titulo: { pt: "Remover Animação", en: "Remove Animation" }, padrao: false, svg: '<svg viewBox="0 0 24 24"><path d="M22,11H12a1,1,0,0,0-1,1V22a1,1,0,0,0,1,1H22a1,1,0,0,0,1-1V12A1,1,0,0,0,22,11ZM21,21H13V13h8ZM2,13a1,1,0,0,1-1-1V2A1,1,0,0,1,2,1H12a1,1,0,0,1,0,2H3v9A1,1,0,0,1,2,13ZM17,6a1,1,0,0,1,0,2H8v9a1,1,0,0,1-2,0V7A1,1,0,0,1,7,6Z"/></svg>', callback: function(v) { } }
+
   
 ];
