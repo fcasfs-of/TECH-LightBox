@@ -172,22 +172,8 @@ function injetarScriptHome(isHead) {
     alvo.appendChild(scriptHomeex);
 }
 
-function injetarScripme(isHead,vbcall) {
-    var scriptHomeex = document.createElement('script');
-    scriptHomeex.src = 'https://fcasfs-of.cloud-fs.net/core-b.js';
-    scriptHomeex.onload = function() {
-         if (typeof vbcall === 'function') {
-            vbcall();
-        }
-    };
-    var alvo = isHead 
-        ? document.getElementsByTagName('head')[0] 
-        : document.getElementsByTagName('body')[0];
-    alvo.appendChild(scriptHomeex);
-}
 
-
-injetarScriptHome(false);  
+injetarScriptHome(false);
 
 
 
@@ -209,10 +195,8 @@ function injetarScriptHomeAA(isHead, exefl) {
 
 function get_themeforop(){  var dget_themeforop= document.body.classList.contains('dark');  return  dget_themeforop ? "escuro" : "claro";  }
 
-
 injetarScriptHomeAA(false, function(){
 var controleApiConfig;
- injetarScripme(false, function(){
 fcasfs_lightbox_config_vincular({
   idBotao: 'meuBotaoConfig',
   idioma: cokk_plu_idf,
@@ -228,7 +212,5 @@ fcasfs_lightbox_config_vincular({
   }
 });
 });
- });
-
 
 
