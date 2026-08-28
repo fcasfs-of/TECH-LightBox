@@ -187,6 +187,10 @@ header .dname *, header nav, header nav *, .lbxx * { transition: all 0.1s; }
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAPCAYAAAA71pVKAAAAzklEQVR4AZyQTRbBQBCEhwW2ToSFE7mAbCzsXIVFHMgdPDbxVb90jwhvInlV0z/V1Zk308TXNM0BlnBnYMV4wMxUO1jCgoErCzZEg5tnVpUPLahZsNaom5UP5ZzBGqYxZvl0g9FmLcjmydsnReVnVE9UX+xcm4cwSPhGEzlc65i1VXTxR6y8H2YWGlyg0KtWRHsc77N873mYaRpcIF7gEZ6hQQOWtEeY+UOg1bbEG1RMIZLQM4TZqv6x7Ldyx83P3BqUPTTl5pOKP6i3SC8AAAD//4zf5M8AAAAGSURBVAMAbI1x+dw6qQkAAAAASUVORK5CYII=");
 }
 
+#btnTable::before {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAe0lEQVRIS+2V0QqAIAxFd/+sHvrrIP9sYaDENhFrIwjP0w2vHphCoGBQUxBVwMwHES3l+yUJwJrDXcAlewDgOlsJyoLFk84UKLoj8uI7wcgLsZAdNaKRzRay80OBF80RedEUjFyghexMgaI7Ii8sgecvcwew5VAFUYQLToD1shnxlsE1AAAAEGRlQkc4MTk2RkIxODkyQkJERDg1CEpLvwAAAABJRU5ErkJggg==");
+}
+
 
 
  header .dname h1 {  margin-bottom: 0px;    display: inline-block;  }
@@ -340,6 +344,9 @@ header .dname .icon::before {     pointer-events: none;
 
     #btnImage, #btnSVG { background-color: #f0fdf4; color: #16a34a; border-color: #bbf7d0; }
     #btnImage:hover, #btnSVG:hover { background-color: #dcfce7; }
+
+    #btnTable { background-color: #e3f2fd; color: #0a377e; border-color: #90caf9; }
+    #btnTable:hover { background-color: #bbdefb; }
 
     #btnText, #btnLink { background-color: #eff6ff; color: #2563eb; border-color: #bfdbfe; }
     #btnText:hover, #btnLink:hover { background-color: #dbeafe; }
