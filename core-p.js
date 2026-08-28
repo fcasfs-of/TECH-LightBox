@@ -191,7 +191,7 @@ var controleApiConfig;
 fcasfs_lightbox_config_vincular({
   idBotao: 'meuBotaoConfig',
   idioma: cokk_plu_idf,
-  tema: document.body.classList.contains('dark') ? "claro" : "escuro",
+  tema: document.body.classList.contains('dark') ? "escuro" : "claro",
   posicao: 'centro',
   comTransicao: true, 
   fechaAoClicarFora: false,
