@@ -74,14 +74,25 @@ function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carre
     openModal({
       title: "LightBox",
       type: "",
-      context: "Lightbox is an innovative app that offers an integrated experience for viewing and interacting with text, links, Table, SVG, images, audio, and videos in an intuitive and modern way. <br/> With a clean and responsive interface, the app allows users to explore multimedia content efficiently, providing fluid and engaging navigation.",
+      context: "Lightbox is an innovative app that offers an integrated experience for viewing and interacting with text, list, links, Table, SVG, images, audio, and videos in an intuitive and modern way. <br/> With a clean and responsive interface, the app allows users to explore multimedia content efficiently, providing fluid and engaging navigation.",
       size: "250",
       includePlayer: "no",
-      description: "(Text, Link, SVG, Table, Video, Image and Audio)"
+      description: "(Text, Link, SVG, Table, List, Video, Image and Audio)"
     },e);
   });
 
   document.getElementById('btnTable').addEventListener('click', (e) => {
+    openModal({
+      title: "List",
+      type: "list",
+      context:[typeof document !== "undefined" ? document.title : "", typeof app_2ver !== "undefined" ? app_2ver : "", typeof location !== "undefined" ? location.href : ""],
+      size: "250",
+      includePlayer: "no",
+      description: ""
+    },e);
+  });
+
+document.getElementById('btnTable').addEventListener('click', (e) => {
     openModal({
       title: "Table",
       type: "table",
