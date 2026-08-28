@@ -81,7 +81,18 @@ function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carre
     },e);
   });
 
-  document.getElementById('btnLink').addEventListener('click', (e) => {
+  document.getElementById('btnTable').addEventListener('click', (e) => {
+    openModal({
+      title: "Table",
+      type: "table",
+      context: [  { App: document.title || "", Version: app_2ver || "", Link: location.href || "" }   ],
+      size: "250",
+      includePlayer: "no",
+      description: ""
+    },e);
+  });
+
+document.getElementById('btnLink').addEventListener('click', (e) => {
     openModal({
       title: "WebSite",
       type: "link",
