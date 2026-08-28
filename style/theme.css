@@ -345,8 +345,8 @@ header .dname .icon::before {     pointer-events: none;
     #btnImage, #btnSVG { background-color: #f0fdf4; color: #16a34a; border-color: #bbf7d0; }
     #btnImage:hover, #btnSVG:hover { background-color: #dcfce7; }
 
-    #btnTable { background-color: #e3f2fd; color: #0a377e; border-color: #90caf9; }
-    #btnTable:hover { background-color: #bbdefb; }
+    #btnTable { background-color: #2e7d32; color: #ffffff; border-color: #1b5e20; }
+    #btnTable:hover { background-color: #388e3c; }
 
     #btnText, #btnLink { background-color: #eff6ff; color: #2563eb; border-color: #bfdbfe; }
     #btnText:hover, #btnLink:hover { background-color: #dbeafe; }
