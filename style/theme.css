@@ -217,27 +217,27 @@ header .dname .icon::before {     pointer-events: none;
 
 /* Regras de Responsividade (Mobile) */
 @media (max-width: 768px) {
-  .lbxx nav {
+  .lbxx .nav {
     flex-direction: column;
     width: 100%;
     align-items: stretch;
   }
 
-  .lbxx nav button {
+  .lbxx .nav button {
     width: 100%;
     padding: 12px;
   }
 
-    header .dname .icon {
+    header .jdname .icon {
         width: 60px !important;      
         height: 60px !important;
         margin-right: 0px;
       margin-bottom: 0.3em;
     }
-header .dname {
+.header .dname {
       grid-auto-flow: row;
 }
-     header .dname h1 { margin-bottom: 1rem;   }
+     .header .dname h1 { margin-bottom: 1rem;   }
       
 }
 
