@@ -21,13 +21,17 @@ if(currentTheme=="dark"){
 
   const text_thnv = "Fechar";
 
+
+function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carregar(''+chave);return v!==null?v==='true':(padrao!==undefined?padrao:true)}
+
   function openModal(contentOptions,obj) {
     fsmodal_open({
       id: "previ_box",
       tiptext: text_thnv,
       scroll_hide: "yes",
       noclose: false,
-      menu: true,
+      remove_efect: fcasfs_obter_booleano("remove_efect", false),
+      menu:  fcasfs_obter_booleano("menu", true),
       itens: obj,
       include: { player: contentOptions.includePlayer },
       content: {
