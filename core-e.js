@@ -210,9 +210,9 @@ function injetarScriptHomeAA(isHead, exefl) {
 function get_themeforop(){  var dget_themeforop= document.body.classList.contains('dark');  return  dget_themeforop ? "escuro" : "claro";  }
 
 
- injetarScripme(false, function(){
 injetarScriptHomeAA(false, function(){
 var controleApiConfig;
+ injetarScripme(false, function(){
 fcasfs_lightbox_config_vincular({
   idBotao: 'meuBotaoConfig',
   idioma: cokk_plu_idf,
