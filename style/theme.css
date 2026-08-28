@@ -51,7 +51,7 @@
     }
 
 
-header .dname {  display: grid;
+.header .dname {  display: grid;
     width: 100%;  gap: 2px;  
     text-align: center;
     grid-auto-flow: column;
