@@ -176,8 +176,11 @@ function fsmodal_create(optiy, app) {
         if (optiy.title && optiy.title != "") {
             fsmodal_createdd += `<h1 style="text-align:center;pointer-events:none;color:#fff;font-weight:bold;">${optiy.title}</h1>`;
         }
-        if (optiy.context && optiy.context != "") {
-            var fsmodal_create_ifir = optiy.context;
+        if (optiy.context) {
+            var fsmodal_create_ifir = "";
+			if(optiy.context!=""){  fsmodal_create_ifir = optiy.context;  }
+			    if (Array.isArray(optiy.context)) {   fsmodal_create_ifir="";  }
+			
             if (app && app == "yes" && optiy.type && optiy.type == "id") {
                 is_player0j = "no";
                 var start_fs_mpl_args = "";
