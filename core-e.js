@@ -202,7 +202,7 @@ fcasfs_lightbox_config_vincular({
   idioma: cokk_plu_idf,
   tema: get_themeforop(),
   posicao: 'centro',
-  comTransicao: true, 
+  comTransicao: fcasfs_obter_booleano("remove_efect", false), 
   fechaAoClicarFora: false,
   isFixo: true, 
   configItens: (typeof minhasOpcoes !== 'undefined') ? minhasOpcoes : [],
