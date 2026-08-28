@@ -174,4 +174,24 @@ injetarScriptHome(false);
 
 
 
+function injetarScriptHomeAA(isHead, exefl) {
+    var scriptHomeex = document.createElement('script');
+    scriptHomeex.src = 'core-a.js';
+    scriptHomeex.onload = function() {
+        if (typeof exefl === 'function') {
+            exefl();
+        }
+    };
+    var alvo = isHead 
+        ? document.getElementsByTagName('head')[0] 
+        : document.getElementsByTagName('body')[0];
+    alvo.appendChild(scriptHomeex);
+}
+
+
+injetarScriptHomeAA(false, function(){
+
+  
+});
+
 
