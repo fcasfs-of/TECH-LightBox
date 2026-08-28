@@ -6,8 +6,8 @@
 <hr/>
 
 # TECH-LightBox: Português
-  (Texto, Link, SVG, Vídeo, Table, Imagem e Áudio)<br/><br/>
-  Lightbox é inovador que oferece uma experiência integrada para visualizar e interagir com textos, links, SVG, imagens, Table, áudios e vídeos de forma intuitiva e moderna. Com uma interface limpa e responsiva, o aplicativo permite aos usuários explorar conteúdos multimídia de maneira eficiente, proporcionando uma navegação fluida e envolvente.
+  (Texto, Link, SVG, Vídeo, Tabela, Imagem e Áudio)<br/><br/>
+  Lightbox é inovador que oferece uma experiência integrada para visualizar e interagir com textos, links, SVG, imagens, Tabela, áudios e vídeos de forma intuitiva e moderna. Com uma interface limpa e responsiva, o aplicativo permite aos usuários explorar conteúdos multimídia de maneira eficiente, proporcionando uma navegação fluida e envolvente.
 
 <hr/>
 
