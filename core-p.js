@@ -84,10 +84,10 @@ document.getElementById('btnText').addEventListener('click', (e) => {
     openModal({
       title: "LightBox",
       type: "",
-      context: "Lightbox é inovador que oferece uma experiência integrada para visualizar e interagir com textos, links, SVG, Tabela, imagens, lista, áudios e vídeos de forma intuitiva e moderna. <br/> Com uma interface limpa e responsiva, o aplicativo permite aos usuários explorar conteúdos multimídia de maneira eficiente, proporcionando uma navegação fluida e envolvente.",
+      context: "Lightbox é inovador que oferece uma experiência integrada para visualizar e interagir com textos, links, SVG, gráfico, tabela, imagens, lista, áudios e vídeos de forma intuitiva e moderna. <br/> Com uma interface limpa e responsiva, o aplicativo permite aos usuários explorar conteúdos multimídia de maneira eficiente, proporcionando uma navegação fluida e envolvente.",
       size: "250",
       includePlayer: "no",
-      description: "(Texto, Link, SVG, Vídeo, Lista, Tabela, Imagem e Áudio)"
+      description: "(Texto, Link, SVG, Gráfico, Vídeo, Lista, Tabela, Imagem e Áudio)"
     },e);
   });
 
@@ -97,6 +97,25 @@ document.getElementById('btnText').addEventListener('click', (e) => {
       type: "list",
       context:[typeof document !== "undefined" ? document.title : "", typeof app_2ver !== "undefined" ? app_2ver : "", typeof location !== "undefined" ? location.href : ""],
       size: "250",
+      includePlayer: "no",
+      description: ""
+    },e);
+  });
+
+  document.getElementById('btnGrafic').addEventListener('click', (e) => {
+    openModal({
+      title: "Gráfico",
+      type: "grafico",
+      context: [
+            { label: "Dom", valor: 58 },
+            { label: "Seg", valor: 140 },
+            { label: "Ter", valor: 310 },
+            { label: "Qua", valor: 520 },
+            { label: "Qui", valor: 410 },
+            { label: "Sex", valor: 214 },
+            { label: "Sab", valor: 85 }
+        ],
+      size: "450",
       includePlayer: "no",
       description: ""
     },e);
