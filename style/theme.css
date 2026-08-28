@@ -243,17 +243,6 @@ header .dname {
 
 
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-      -webkit-tap-highlight-color: transparent;
-    }
 
   
     .lbxx {    margin: 0 auto;
@@ -292,7 +281,7 @@ header .dname {
       transition: color 0.3s ease;
     }
 
-    .icon {
+    .lbxx .icon {
       width: 10px;
       height: 10px;
       background-color: #64748b;
@@ -301,7 +290,7 @@ header .dname {
       transition: background-color 0.3s ease;
     }
 
-    nav {
+    .lbxx nav {
       display: flex;
       align-items: center;
       justify-content: center; 
@@ -311,13 +300,13 @@ header .dname {
       padding: 4px 0;
     }
 
-    nav::-webkit-scrollbar {
+    .lbxx nav::-webkit-scrollbar {
       width: 6px;
     }
-    nav::-webkit-scrollbar-track {
+    .lbxx nav::-webkit-scrollbar-track {
       background: transparent;
     }
-    nav::-webkit-scrollbar-thumb {
+    .lbxx nav::-webkit-scrollbar-thumb {
       background: #cbd5e1;
       border-radius: 10px;
     }
@@ -335,7 +324,7 @@ header .dname {
       transition: background-color 0.3s ease;
     }
 
-    button {
+    .lbxx button {
       padding: 12px 16px;
       font-size: 0.875rem;
       font-weight: 600;
@@ -346,7 +335,7 @@ header .dname {
       transition: all 0.2s ease;
     }
 
-    button:hover {
+    .lbxx button:hover {
       transform: translateY(-1px);
     }
 
@@ -403,10 +392,10 @@ header .dname {
     #meuBotaoConfig { background-color: #334155; color: #94a3b8; border-color: #475569; }
     #meuBotaoConfig:hover { background-color: #475569; color: #ffffff; }
 
-    nav::-webkit-scrollbar-thumb { background: #475569; }
+    .lbxx nav::-webkit-scrollbar-thumb { background: #475569; }
 
     @media (max-width: 680px) {
-      nav {
+      .lbxx nav {
         flex-direction: column; 
         gap: 12px;
       }
