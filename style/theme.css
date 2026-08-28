@@ -243,3 +243,207 @@ header .dname {
 
 
 
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: #f8fafc;
+      padding: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      overflow-x: hidden; 
+      overflow-y: auto;
+      transition: background-color 0.3s ease;
+    }
+
+    .lbxx {
+      background-color: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      width: 100%;
+      max-width: 750px;
+      box-shadow: 0 4px 20px rgba(15, 23, 42, 0.04);
+      transition: all 0.3s ease;
+      overflow: hidden; 
+    }
+
+    .dname {
+      display: flex;
+      align-items: center;
+      justify-content: space-between; 
+      width: 100%;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #f1f5f9;
+      gap: 12px;
+      transition: border-color 0.3s ease;
+    }
+
+    .dname h1 {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #0f172a;
+      transition: color 0.3s ease;
+    }
+
+    .icon {
+      width: 10px;
+      height: 10px;
+      background-color: #64748b;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+      gap: 16px;
+      max-height: 300px;
+      overflow-y: auto;
+      padding: 4px 0;
+    }
+
+    nav::-webkit-scrollbar {
+      width: 6px;
+    }
+    nav::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    nav::-webkit-scrollbar-thumb {
+      background: #cbd5e1;
+      border-radius: 10px;
+    }
+
+    .cat-group {
+      display: flex;
+      gap: 8px;
+    }
+
+    .cat-divider {
+      width: 1px;
+      height: 32px;
+      background-color: #e2e8f0;
+      flex-shrink: 0;
+      transition: background-color 0.3s ease;
+    }
+
+    button {
+      padding: 12px 16px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      text-align: center;
+      border-radius: 8px;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.2s ease;
+    }
+
+    button:hover {
+      transform: translateY(-1px);
+    }
+
+    #btnImage, #btnSVG { background-color: #f0fdf4; color: #16a34a; border-color: #bbf7d0; }
+    #btnImage:hover, #btnSVG:hover { background-color: #dcfce7; }
+
+    #btnText, #btnLink { background-color: #eff6ff; color: #2563eb; border-color: #bfdbfe; }
+    #btnText:hover, #btnLink:hover { background-color: #dbeafe; }
+
+    #btnAudio, #btnVideo { background-color: #f5f3ff; color: #7c3aed; border-color: #ddd6fe; }
+    #btnAudio:hover, #btnVideo:hover { background-color: #ede9fe; }
+
+    #theme-toggle { background-color: #1e293b; color: #ffffff; }
+    #theme-toggle:hover { background-color: #0f172a; }
+
+    .lbxx-footer-container {
+      width: 100%;
+      padding-top: 16px;
+      border-top: 1px solid #f1f5f9; 
+      margin-top: 4px;
+      transition: border-color 0.3s ease;
+    }
+
+    #meuBotaoConfig {
+      width: 100%; 
+      background-color: #f1f5f9;
+      color: #475569;
+      border: 1px solid #e2e8f0;
+      padding: 14px; 
+      border-radius: 10px;
+      transition: all 0.3s ease;
+    }
+    #meuBotaoConfig:hover { background-color: #e2e8f0; color: #0f172a; border-color: #cbd5e1; }
+
+    body.dark { background-color: #0f172a; }
+    body.dark .lbxx { background-color: #1e293b; border-color: #334155; }
+    body.dark .dname { border-color: #334155; }
+    body.dark .dname h1 { color: #f8fafc; }
+    body.dark .icon { background-color: #94a3b8; }
+    body.dark .lbxx-footer-container { border-color: #334155; }
+    body.dark .cat-divider { background-color: #334155; } 
+
+    body.dark #btnImage, body.dark #btnSVG { background-color: #064e3b; color: #34d399; border-color: #047857; }
+    body.dark #btnImage:hover, body.dark #btnSVG:hover { background-color: #047857; }
+
+    body.dark #btnText, body.dark #btnLink { background-color: #1e3a8a; color: #60a5fa; border-color: #1d4ed8; }
+    body.dark #btnText:hover, body.dark #btnLink:hover { background-color: #1d4ed8; }
+
+    body.dark #btnAudio, body.dark #btnVideo { background-color: #4c1d95; color: #a78bfa; border-color: #6d28d9; }
+    body.dark #btnAudio:hover, body.dark #btnVideo:hover { background-color: #6d28d9; }
+
+    body.dark #theme-toggle { background-color: #f8fafc; color: #0f172a; }
+    body.dark #theme-toggle:hover { background-color: #e2e8f0; }
+
+    body.dark #meuBotaoConfig { background-color: #334155; color: #94a3b8; border-color: #475569; }
+    body.dark #meuBotaoConfig:hover { background-color: #475569; color: #ffffff; }
+
+    body.dark nav::-webkit-scrollbar-thumb { background: #475569; }
+
+    @media (max-width: 680px) {
+      nav {
+        flex-direction: column; 
+        gap: 12px;
+      }
+      .cat-group {
+        width: 100%;
+        justify-content: center;
+      }
+      .cat-group button {
+        width: 50%; 
+      }
+      .cat-divider {
+        width: 100%;  
+        height: 1px;
+        margin: 4px 0;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .dname { flex-direction: column; align-items: stretch; text-align: center; }
+      .dname h1 { justify-content: center; }
+      .cat-group { flex-direction: column; gap: 6px; }
+      .cat-group button { width: 100%; }
+    }
+
+
+
+
+
