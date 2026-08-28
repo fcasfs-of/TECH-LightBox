@@ -70,6 +70,25 @@ function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carre
     },e);
   });
 
+  document.getElementById('btnGrafic').addEventListener('click', (e) => {
+    openModal({
+      title: "Graphic",
+      type: "grafico",
+      context: [
+            { label: "Dom", valor: 58 },
+            { label: "Seg", valor: 140 },
+            { label: "Ter", valor: 310 },
+            { label: "Qua", valor: 520 },
+            { label: "Qui", valor: 410 },
+            { label: "Sex", valor: 214 },
+            { label: "Sab", valor: 85 }
+        ],
+      size: "250",
+      includePlayer: "no",
+      description: ""
+    },e);
+  });
+
   document.getElementById('btnText').addEventListener('click', (e) => {
     openModal({
       title: "LightBox",
