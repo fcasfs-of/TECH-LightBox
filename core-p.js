@@ -203,7 +203,7 @@ fcasfs_lightbox_config_vincular({
   tema: get_themeforop(),
   cliqueNoLabel: true,  posicao: 'centro',
   comTransicao: fcasfs_obter_booleano("remove_efect", false), 
-  fechaAoClicarFora: false,
+  fechaAoClicarFora: fcasfs_obter_booleano("click_close", false),
   isFixo: true, 
   configItens: (typeof minhasOpcoes !== 'undefined') ? minhasOpcoes : [],
   onApiReady: function(api) {
