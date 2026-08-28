@@ -359,6 +359,8 @@ header .dname {
       transition: border-color 0.3s ease;
     }
 
+    .lbxx nav button {  color: #fff;   }
+
     #meuBotaoConfig {
       width: 100%; 
       background-color: #f1f5f9;
@@ -393,7 +395,6 @@ header .dname {
     #meuBotaoConfig:hover { background-color: #475569; color: #ffffff; }
 
     .lbxx nav::-webkit-scrollbar-thumb { background: #475569; }
-    .lbxx nav button {  color: #fff;   }
 
 
     @media (max-width: 680px) {
