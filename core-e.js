@@ -48,6 +48,7 @@ function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carre
     });
   }
 
+
   document.getElementById('btnImage').addEventListener('click', (e) => {
     openModal({
       title: "Logo 1",
@@ -93,19 +94,30 @@ function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carre
     openModal({
       title: "LightBox",
       type: "",
-      context: "Lightbox is an innovative app that offers an integrated experience for viewing and interacting with text, carousel, list, graphic, links, Table, SVG, images, audio, and videos in an intuitive and modern way. <br/> With a clean and responsive interface, the app allows users to explore multimedia content efficiently, providing fluid and engaging navigation.",
+      context: "Lightbox is an innovative app that offers an integrated experience for viewing and interacting with text, carousel, Playlist, list, graphic, links, Table, SVG, images, audio, and videos in an intuitive and modern way. <br/> With a clean and responsive interface, the app allows users to explore multimedia content efficiently, providing fluid and engaging navigation.",
       size: "250",
       includePlayer: "no",
-      description: "(Text, Link, SVG, Carousel, Graphic, Table, List, Video, Image and Audio)"
+      description: "(Text, Playlist, Link, SVG, Carousel, Graphic, Table, List, Video, Image and Audio)"
     },e);
   });
 
-  document.getElementById('btnCarrossel').addEventListener('click', (e) => {
+  document.getElementById('btnPlaylist').addEventListener('click', (e) => {
+    openModal({
+      title: "Playlist",
+      type: "playlist",
+      context:[ { titulo: "LightBox", subtitulo: "Português", thumbnail: "https://lightbox.fcasfs-of.cloud-fs.net/favicon.png", href: "https://lightbox.fcasfs-of.cloud-fs.net/" }, { titulo: "LightBox", subtitulo: "English", thumbnail: "https://lightbox.fcasfs-of.cloud-fs.net/favicon.png", href: "https://lightbox.fcasfs-of.cloud-fs.net/en" } ],
+      size: "420",
+      includePlayer: "no",
+      description: ""
+    },e);
+  });
+
+document.getElementById('btnCarrossel').addEventListener('click', (e) => {
     openModal({
       title: "Carousel",
       type: "carrossel",
       context:[ { url: "https://lightbox.fcasfs-of.cloud-fs.net/favicon.png", legenda: "" },  { url: "https://fcasfs-of.cloud-fs.net/info-profile/logo/cover_b.png", legenda: "" } ],
-      size: "250",
+      size: "320",
       includePlayer: "no",
       description: ""
     },e);
