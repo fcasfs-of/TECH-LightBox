@@ -100,7 +100,7 @@ function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carre
     },e);
   });
 
-  document.getElementById('btnList').addEventListener('click', (e) => {
+  document.getElementById('btnCarrossel').addEventListener('click', (e) => {
     openModal({
       title: "Carousel",
       type: "carrossel",
