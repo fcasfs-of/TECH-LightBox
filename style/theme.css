@@ -353,24 +353,6 @@ header .dname .icon::before {     pointer-events: none;
       transform: translateY(-1px);
     }
 
-    #btnImage, #btnSVG, #btnCarrossel { background-color: #f0fdf4; color: #16a34a; border-color: #bbf7d0; }
-    #btnImage:hover, #btnSVG:hover, #btnCarrossel:hover { background-color: #dcfce7; }
-
-    #btnTable, #btnList { background-color: #2e7d32; color: #ffffff; border-color: #1b5e20; }
-    #btnTable:hover, #btnList:hover { background-color: #388e3c; }
-
-    #btnGrafic{ background-color: #3b82f6; color: #ffffff; border-color: #1d4ed8; }
-    #btnGrafic:hover { background-color: #1d4ed8;  }
-
-    #btnText, #btnLink { background-color: #eff6ff; color: #2563eb; border-color: #bfdbfe; }
-    #btnText:hover, #btnLink:hover { background-color: #dbeafe; }
-
-    #btnAudio, #btnVideo { background-color: #f5f3ff; color: #7c3aed; border-color: #ddd6fe; }
-    #btnAudio:hover, #btnVideo:hover { background-color: #ede9fe; }
-
-    #theme-toggle { background-color: #1e293b; color: #ffffff; }
-    #theme-toggle:hover { background-color: #0f172a; }
-
     .lbxx-footer-container {
       width: 100%;
       padding-top: 16px;
@@ -397,8 +379,14 @@ header .dname .icon::before {     pointer-events: none;
     .lbxx-footer-container { border-color: #334155; }
     .cat-divider { background-color: #334155; } 
 
-    #btnImage, #btnSVG { background-color: #064e3b; color: #34d399; border-color: #047857; }
-    #btnImage:hover, #btnSVG:hover { background-color: #047857; }
+    #btnImage, #btnSVG, #btnCarrossel { background-color: #064e3b; color: #34d399; border-color: #047857; }
+    #btnImage:hover, #btnSVG:hover, #btnCarrossel:hover { background-color: #047857; }
+
+    #btnTable, #btnList { background-color: #2e7d32; color: #ffffff; border-color: #1b5e20; }
+    #btnTable:hover, #btnList:hover { background-color: #388e3c; }
+
+    #btnGrafic{ background-color: #3b82f6; color: #ffffff; border-color: #1d4ed8; }
+    #btnGrafic:hover { background-color: #1d4ed8;  }
 
     #btnText, #btnLink { background-color: #1e3a8a; color: #60a5fa; border-color: #1d4ed8; }
     #btnText:hover, #btnLink:hover { background-color: #1d4ed8; }
