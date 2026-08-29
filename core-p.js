@@ -47,6 +47,7 @@ function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carre
     });
   }
 
+
   document.getElementById('btnImage').addEventListener('click', (e) => {
     openModal({
       title: "Logo 1",
@@ -84,14 +85,25 @@ document.getElementById('btnText').addEventListener('click', (e) => {
     openModal({
       title: "LightBox",
       type: "",
-      context: "Lightbox é inovador que oferece uma experiência integrada para visualizar e interagir com textos, links, carrossel, SVG, gráfico, tabela, imagens, lista, áudios e vídeos de forma intuitiva e moderna. <br/> Com uma interface limpa e responsiva, o aplicativo permite aos usuários explorar conteúdos multimídia de maneira eficiente, proporcionando uma navegação fluida e envolvente.",
+      context: "Lightbox é inovador que oferece uma experiência integrada para visualizar e interagir com textos, links, carrossel, Playlist, SVG, gráfico, tabela, imagens, lista, áudios e vídeos de forma intuitiva e moderna. <br/> Com uma interface limpa e responsiva, o aplicativo permite aos usuários explorar conteúdos multimídia de maneira eficiente, proporcionando uma navegação fluida e envolvente.",
       size: "250",
       includePlayer: "no",
-      description: "(Texto, Link, SVG, Gráfico, Carrossel, Vídeo, Lista, Tabela, Imagem e Áudio)"
+      description: "(Texto, Playlist, Link, SVG, Gráfico, Carrossel, Vídeo, Lista, Tabela, Imagem e Áudio)"
     },e);
   });
 
-  document.getElementById('btnCarrossel').addEventListener('click', (e) => {
+  document.getElementById('btnPlaylist').addEventListener('click', (e) => {
+    openModal({
+      title: "Playlist",
+      type: "playlist",
+      context:[ { titulo: "LightBox", subtitulo: "Português", thumbnail: "https://lightbox.fcasfs-of.cloud-fs.net/favicon.png", href: "https://lightbox.fcasfs-of.cloud-fs.net/" }, { titulo: "LightBox", subtitulo: "English", thumbnail: "https://lightbox.fcasfs-of.cloud-fs.net/favicon.png", href: "https://lightbox.fcasfs-of.cloud-fs.net/en" } ],
+      size: "250",
+      includePlayer: "no",
+      description: ""
+    },e);
+  });
+
+document.getElementById('btnCarrossel').addEventListener('click', (e) => {
     openModal({
       title: "Carrossel",
       type: "carrossel",
