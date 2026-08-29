@@ -97,7 +97,7 @@ document.getElementById('btnText').addEventListener('click', (e) => {
       title: "Playlist",
       type: "playlist",
       context:[ { titulo: "LightBox", subtitulo: "Português", thumbnail: "https://lightbox.fcasfs-of.cloud-fs.net/favicon.png", href: "https://lightbox.fcasfs-of.cloud-fs.net/" }, { titulo: "LightBox", subtitulo: "English", thumbnail: "https://lightbox.fcasfs-of.cloud-fs.net/favicon.png", href: "https://lightbox.fcasfs-of.cloud-fs.net/en" } ],
-      size: "250",
+      size: "420",
       includePlayer: "no",
       description: ""
     },e);
@@ -108,7 +108,7 @@ document.getElementById('btnCarrossel').addEventListener('click', (e) => {
       title: "Carrossel",
       type: "carrossel",
       context:[ { url: "https://lightbox.fcasfs-of.cloud-fs.net/favicon.png", legenda: "" },  { url: "https://fcasfs-of.cloud-fs.net/info-profile/logo/cover_b.png", legenda: "" } ],
-      size: "250",
+      size: "320",
       includePlayer: "no",
       description: ""
     },e);
