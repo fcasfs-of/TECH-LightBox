@@ -249,7 +249,7 @@ function fsmodal_create(optiy, app) {
                 fsmodal_create_ifir = `<img src="${optiy.context}" style="user-select:none;pointer-events:none; width:${Number(optiy.size)}px;" />`;
             } else if (optiy.type && optiy.type == "svg") {
                 is_player0j = "no";
-                fsmodal_create_ifir = `<br/> ${optiy.context}    <style> .tlightboc_fcasfs svg {   pointer-events: none;    width: ${Number(optiy.size)}px;    height: ${Number(optiy.size)}px;    fill: currentColor;    stroke: currentColor;  }  </style> <br/><br/>`;
+                fsmodal_create_ifir = `<br/> ${optiy.context}    <style> .tlightboc_fcasfs svg {   pointer-events: none;    width: ${Number(optiy.size)}px;    height: ${Number(optiy.size)}px;    fill: ${fcas_lightbox_checkValueEX(optiy,"config","fill","currentColor")};    stroke: ${fcas_lightbox_checkValueEX(optiy,"config","stroke","currentColor")};  }  </style> <br/><br/>`;
             }  else if (optiy.type && optiy.type == "audio") {
                 is_player0j = "yes";
                 if (optiy.poster && optiy.poster != "") {
