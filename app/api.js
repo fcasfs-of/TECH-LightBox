@@ -42,7 +42,7 @@ function fcas_lightbox_checkValue(config) {
     return retornoCasoNaoExista;
 }
 
-function fcas_lightbox_checkValue(lista,name1,name2,retronon) {   return fcas_lightbox_checkValue({ lista: fcas_lightbox_checkValue({ lista: lista, nome: name1, retornoPadrao: retronon }), nome: name2, retornoPadrao: retronon });;   }
+function fcas_lightbox_checkValueEX(lista,name1,name2,retronon) {   return fcas_lightbox_checkValue({ lista: fcas_lightbox_checkValue({ lista: lista, nome: name1, retornoPadrao: retronon }), nome: name2, retornoPadrao: retronon });;   }
 
 
 
@@ -223,7 +223,7 @@ function fsmodal_create(optiy, app) {
                 fsmodal_create_ifir = `<iframe scrolling="no" allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation" frameborder="0" allowfullscreen src="https://player.fcasfs-of.cloud-fs.net?fileID=${optiy.context}${start_fs_mpl_args}&fileView=true${stdart_fs_mpl_argsd}" style="overflow: hidden; width:100%; height: ${Number(optiy.size)}px;   display: block; "></iframe>`;
             } else if (optiy.type && optiy.type == "list") {
                 is_player0j = "no";
-                fsmodal_create_ifir = `${fcas_lightbox_islisted({  lista: optiy.context, posicao: 'centro', largura: '100%', cores: { bordaEscura: '#ccc', fundo: '#ffffff', texto: '#333333' }, alinhamento: 'left', arredondado: '16px', tema: 'escuro', divisor: true,  marcador: '' })}`;
+                fsmodal_create_ifir = `${fcas_lightbox_islisted({  lista: optiy.context, posicao: 'centro', largura: '100%', cores: { bordaEscura: '#ccc', fundo: '#ffffff', texto: '#333333' }, alinhamento: fcas_lightbox_checkValueEX(optiy,"config","alinhamento","left"), arredondado: '16px', tema: fcas_lightbox_checkValueEX(optiy,"config","tema","escuro"), divisor: fcas_lightbox_checkValueEX(optiy,"config","divisor",true),  marcador: '' })}`;
             } else if (optiy.type && optiy.type == "table") {
                 is_player0j = "no";
                 fsmodal_create_ifir = `<div id="table_fcaslight" style="background: #fff;color: #000;">${fcas_lightbox_table({ containerId: "table_fcaslight", showIndex: false, list: optiy.context, perPage: 12,    page: 1, minWidth: '100%', model: 'indigo', zebra: true, align: 'left', headerAlign: 'center',    headerBold: true, borderRadius: '10px', borderWidth: '2px', borderStyle: 'ridge', borderRadius: '9px', padding: '6px 11px' })}</div>  <style> .fcas-pagination { background: #fff;padding: 6px; } </style>`;
