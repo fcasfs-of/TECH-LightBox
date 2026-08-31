@@ -36,14 +36,19 @@ function fcas_lightbox_checkValue(config) {
     if (!config) return retornoCasoNaoExista;
     const listaAlvo = Array.isArray(config.lista) ? config.lista : (config.lista?.lista || config.lista);
     const nomeDaVariavel = config.nome;
-    if (!listaAlvo || !Array.isArray(listaAlvo) || listaAlvo.length === 0) return retornoCasoNaoExista;
-    const item = listaAlvo[0];
+    if (!listaAlvo) return retornoCasoNaoExista;
+    const item = Array.isArray(listaAlvo) ? listaAlvo[0] : listaAlvo;
     if (item && item[nomeDaVariavel] !== undefined) return item[nomeDaVariavel];
     return retornoCasoNaoExista;
 }
 
-function fcas_lightbox_checkValueEX(listad,name1,name2,retronon) {   return fcas_lightbox_checkValue({ lista: fcas_lightbox_checkValue({ lista: listad, nome: name1, retornoPadrao: retronon }), nome: name2, retornoPadrao: retronon });   }
-
+function fcas_lightbox_checkValueEX(listad, name1, name2, retronon) {
+    const retornoPadrao = retronon !== undefined ? retronon : "";
+    if (!listad) return retornoPadrao;
+    const primeiroNivel = Array.isArray(listad) ? listad[0] : listad;
+    const subConteudo = primeiroNivel?.[name1];
+    return fcas_lightbox_checkValue({ lista: subConteudo, nome: name2, retornoPadrao: retornoPadrao });
+}
 
 
 
