@@ -235,7 +235,7 @@ function fsmodal_create(optiy, app) {
                 fsmodal_create_ifir = `<div style="width:100%; height:${Number(optiy.size)}px;">  ${fcas_lightbox_criarCarrossel({ titulo: "", textoOpcional: "", tema: fcas_lightbox_checkValueEX(optiy,"config","tema","dark"), transicao: fcas_lightbox_checkValueEX(optiy,"config","transicao","slide"),  posicaoDots: "center",   estiloDots: fcas_lightbox_checkValueEX(optiy,"config","estiloDots","barras"),  exibirControles: true, exibirDots: true, autoPlay: false, botoesControle: ["prev","play", "pause", "stop", "next", "dots", "fullscreen"],  intervalo: fcas_lightbox_checkValueEX(optiy,"config","intervalo",3000), imagens: optiy.context    })}  </div>`;
             } else if (optiy.type && optiy.type == "grafico") {
                 is_player0j = "no";
-                fsmodal_create_ifir = `<div style="width:100%; height:${Number(optiy.size)}px;">  ${fcas_lightbox_criarGrafico({ titulo: "", textoOpcional: "", tema: "azul", exibirValores: true, modelo: "barras", orientacao: "horizontal", exibirTooltips: true, larguraBarra: 0.50, raioCurva: 8, alturaMax: 260, dados: optiy.context })}  </div>`;
+                fsmodal_create_ifir = `<div style="width:100%; height:${Number(optiy.size)}px;">  ${fcas_lightbox_criarGrafico({ titulo: "", textoOpcional: "", tema: fcas_lightbox_checkValueEX(optiy,"config","tema","azul"), exibirValores: fcas_lightbox_checkValueEX(optiy,"config","exibirValores",true), modelo: fcas_lightbox_checkValueEX(optiy,"config","modelo","barras"), orientacao: fcas_lightbox_checkValueEX(optiy,"config","orientacao","horizontal"), exibirTooltips: fcas_lightbox_checkValueEX(optiy,"config","exibirTooltips",true), larguraBarra: 0.50, raioCurva: 8, alturaMax: 260, dados: optiy.context })}  </div>`;
             } else if (optiy.type && optiy.type == "link") {
                 is_player0j = "no";
                 fsmodal_create_ifir = `<iframe allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation" frameborder="0" allowfullscreen src="${optiy.context}" style="width:100%; height: ${Number(optiy.size)}px;  display: block; "></iframe>`;
@@ -251,7 +251,7 @@ function fsmodal_create(optiy, app) {
                     start_fs_postermpl = optiy.poster;
                 }
                 start_fs_mpl = {
-                    OSD: true,
+                    OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",true),
                     config: {},
                     id: "preview_pls",
                     customtext: { age: "" },
@@ -270,7 +270,7 @@ function fsmodal_create(optiy, app) {
                     start_fs_postermpl = optiy.poster;
                 }
                 start_fs_mpl = {
-                    OSD: true,
+                    OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",true),
                     config: {},
                     id: "preview_pls",
                     customtext: { age: "" },
