@@ -42,7 +42,7 @@ function fcas_lightbox_checkValue(config) {
     return retornoCasoNaoExista;
 }
 
-function fcas_lightbox_checkValueEX(lista,name1,name2,retronon) {   return fcas_lightbox_checkValue({ lista: fcas_lightbox_checkValue({ lista: lista, nome: name1, retornoPadrao: retronon }), nome: name2, retornoPadrao: retronon });;   }
+function fcas_lightbox_checkValueEX(listad,name1,name2,retronon) {   return fcas_lightbox_checkValue({ lista: fcas_lightbox_checkValue({ lista: listad, nome: name1, retornoPadrao: retronon }), nome: name2, retornoPadrao: retronon });;   }
 
 
 
