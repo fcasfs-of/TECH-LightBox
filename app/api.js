@@ -249,7 +249,12 @@ function fsmodal_create(optiy, app) {
                 fsmodal_create_ifir = `<img src="${optiy.context}" style="user-select:none;pointer-events:none; width:${Number(optiy.size)}px;" />`;
             } else if (optiy.type && optiy.type == "texto") {
                 is_player0j = "no";
-                fsmodal_create_ifir = `<br/> <span class="txt"> ${optiy.context} </span>  <br/>   <style> .tlightboc_fcasfs .txt {   font-size: ${fcas_lightbox_checkValueEX(optiy,"config","fontSize","14px")};    color: ${fcas_lightbox_checkValueEX(optiy,"config","color","#fff")};  }   .tlightboc_fcasfs .txt hr {   border-color: ${fcas_lightbox_checkValueEX(optiy,"config","color","#fff")}; color: ${fcas_lightbox_checkValueEX(optiy,"config","color","#fff")};  } </style> <br/><br/>`;
+
+				var fcas_lightbox_checkValueEX_it="";   var fcas_lightbox_checkValueEX_bolff="";
+				if(fcas_lightbox_checkValueEX(optiy,"config","italic",false)==true){   fcas_lightbox_checkValueEX_it=" font-style: italic;  "  }
+				if(fcas_lightbox_checkValueEX(optiy,"config","negrito",false)==true){   fcas_lightbox_checkValueEX_bolff=" font-weight: 700;  "  }
+				
+                fsmodal_create_ifir = `<br/> <div class="txt">  ${optiy.context}  </div>  <br/>   <style> .tlightboc_fcasfs .txt {   ${fcas_lightbox_checkValueEX_it}  ${fcas_lightbox_checkValueEX_bolff}   font-size: ${fcas_lightbox_checkValueEX(optiy,"config","fontSize","14px")};    text-align: ${fcas_lightbox_checkValueEX(optiy,"config","textAlign","center")};   color: ${fcas_lightbox_checkValueEX(optiy,"config","color","#fff")};  }   .tlightboc_fcasfs .txt hr {   border-color: ${fcas_lightbox_checkValueEX(optiy,"config","color","#fff")}; color: ${fcas_lightbox_checkValueEX(optiy,"config","color","#fff")};  } </style> <br/><br/>`;
             }  if (optiy.type && optiy.type == "svg") {
                 is_player0j = "no";
                 fsmodal_create_ifir = `<br/> ${optiy.context}    <style> .tlightboc_fcasfs svg {   pointer-events: none;    width: ${Number(optiy.size)}px;    height: ${Number(optiy.size)}px;    fill: ${fcas_lightbox_checkValueEX(optiy,"config","fill","currentColor")};    stroke: ${fcas_lightbox_checkValueEX(optiy,"config","stroke","currentColor")};  }  </style> <br/><br/>`;
