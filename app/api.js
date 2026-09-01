@@ -412,18 +412,17 @@ momocsifipsl.appendChild(scrcontedd);
 		}
                 };
             }
-            if (optincludeplayer === "yes" && is_player0j === "yes") {
-				
-if (!document.getElementById("fcasfs_script-api-player")) {
+
+			if (!document.getElementById("fcasfs_script-api-player") && optincludeplayer === "yes" && is_player0j === "yes") {
     var scriptincfd = document.createElement("script");
     scriptincfd.id = "fcasfs_script-api-player";
     scriptincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
-    //scriptincfd.setAttribute("onload", 'if (typeof loaded_playerinf === "function"){ loaded_playerinf(start_fs_mpl); }');
+    scriptincfd.setAttribute("onload", 'if (typeof loaded_playerinf === "function"){ loaded_playerinf(start_fs_mpl); }');
 document.getElementsByTagName("body")[0].appendChild(scriptincfd);  
 }
 
-				
-                function mfplayeridd(){  if (typeof loaded_playerinf === "function"){ loaded_playerinf(start_fs_mpl); }  }
+            if (optincludeplayer === "yes" && is_player0j === "yes") {
+				function mfplayeridd(){  if (typeof loaded_playerinf === "function"){ loaded_playerinf(start_fs_mpl); }  }
             mfplayeridd();	}
 
 
