@@ -332,7 +332,7 @@ function loaded_playerinf(dstart_fs_mpl = {}) {
 			  fplayeri.api("volume", Number(stringno_valtext(dstart_fs_mpl.config.volume,"1")));  if(stringno_valtext(dstart_fs_mpl.config.volume,"")==""){   fplayeri.api("volume", 1);    }
 		});
    }
-}
+}   }
 
 
 var start_fs_mpl = {};
