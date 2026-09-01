@@ -325,7 +325,7 @@ function fsmodal_create(optiy, app) {
 }
 
 
-function playerfs_osf_evensdef(plobf){
+function playerfs_osf_evensdef(plobf,timf){    var osdposito="top-center";    var osdpositdo="absolute";   var openf_osdcd_time=timf;
 if(plobf){
    plobf.OnEvents("start",function(){               
 fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Getting started', pos: osdposito, showAction: false,  actionText: "", width: 'auto'    });      });
@@ -363,8 +363,8 @@ function loaded_playerinf(dstart_fs_mpl = {}) {
 		  mfplayeri.OnEvents("init",function(){  
 			  mfplayeri.api('seek',Number(stringno_valtext(dstart_fs_mpl.config.pos_time,"0")));    
 			  mfplayeri.api("volume", Number(stringno_valtext(dstart_fs_mpl.config.volume,"1")));  if(stringno_valtext(dstart_fs_mpl.config.volume,"")==""){   mfplayeri.api("volume", 1);    }
-			  if(dstart_fs_mpl.OSD_DEF==true){   playerfs_osf_evensdef(mfplayeri);    }
 		});
+      if(dstart_fs_mpl.OSD_DEF===true){   playerfs_osf_evensdef(mfplayeri, 3e3);    }
    }
 }   }
 
