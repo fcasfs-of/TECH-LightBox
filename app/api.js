@@ -265,7 +265,10 @@ function fsmodal_create(optiy, app) {
                 }
                 start_fs_mpl = {
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",true),
-                    config: {},
+                    config: {
+						volume:fcas_lightbox_checkValueEX(optiy,"config","volume","1"),
+						pos_time:fcas_lightbox_checkValueEX(optiy,"config","pos_time","0")
+					},
                     id: "preview_pls",
                     customtext: { age: "" },
                     nocontrols: 0,
@@ -284,7 +287,10 @@ function fsmodal_create(optiy, app) {
                 }
                 start_fs_mpl = {
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",true),
-                    config: {},
+                    config: {
+						volume:fcas_lightbox_checkValueEX(optiy,"config","volume","1"),
+						pos_time:fcas_lightbox_checkValueEX(optiy,"config","pos_time","0")
+					},
                     id: "preview_pls",
                     customtext: { age: "" },
                     nocontrols: 0,
