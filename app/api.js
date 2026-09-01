@@ -27,14 +27,6 @@ if (!document.getElementById("fcasfs_script-player-core")) {
     document.getElementsByTagName("head")[0].appendChild(scriptwwincfd);
 }
 
-if (!document.getElementById("fcasfs_script-api-player")) {
-    var scriptincfd = document.createElement("script");
-    scriptincfd.id = "fcasfs_script-api-player";
-    scriptincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
-    //scriptincfd.setAttribute("onload", 'if (typeof loaded_playerinf === "function"){ loaded_playerinf(start_fs_mpl); }');
-document.getElementsByTagName("body")[0].appendChild(scriptincfd);  
-}
-
 
 function fcas_lightbox_islisted(config) { const { lista, cores = {}, alinhamento, marcador, tema = 'claro', largura = '400px', arredondado = '8px', bordaEstilo = '1px solid', posicao = 'centro', divisor = false } = config; const temas = { claro: { fundo: '#ffffff', texto: '#333333', borda: '#cccccc', bordaEscura: '#999999' }, escuro: { fundo: '#1e1e1e', texto: '#ffffff', borda: '#444444', bordaEscura: '#666666' }, neon: { fundo: '#0d0e15', texto: '#00ffcc', borda: '#ff007f', bordaEscura: '#cc0066' }, pastel: { fundo: '#fdf6ec', texto: '#6b5b52', borda: '#e8d8c8', bordaEscura: '#bfae9e' }, oceano: { fundo: '#0f2027', texto: '#ffffff', borda: '#2c5364', bordaEscura: '#1e3c4a' }, sepia: { fundo: '#f4ecd8', texto: '#5b4636', borda: '#d3c2a0', bordaEscura: '#a89776' } }; const t = temas[tema] || temas.claro; const fundo = cores.fundo || t.fundo; const texto = cores.texto || t.texto; const bordaTrack = cores.borda || t.borda; const bordaContainer = cores.bordaEscura || t.bordaEscura; let marginValue = '0 auto'; if (posicao === 'esquerda') marginValue = '0 auto 0 0'; if (posicao === 'direita') marginValue = '0 0 0 auto'; const styleId = `fcas-styles-${tema}`; if (!document.getElementById(styleId)) { const style = document.createElement('style'); style.id = styleId; style.textContent = `.fcas-lightbox-container { font-family: system-ui, -apple-system, sans-serif; padding: 16px; background: ${fundo}; border-radius: ${arredondado}; width: 100%; max-width: ${largura}; border: ${bordaEstilo} ${bordaContainer}; max-height: 300px; overflow-y: auto; box-sizing: border-box; box-shadow: 0 4px 12px rgba(0,0,0,0.15); user-select: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; margin: ${marginValue}; } .fcas-lightbox-container::-webkit-scrollbar { width: 8px; } .fcas-lightbox-container::-webkit-scrollbar-track { background: ${fundo}; border-radius: ${arredondado}; } .fcas-lightbox-container::-webkit-scrollbar-thumb { background: ${bordaTrack}; border-radius: ${arredondado}; } .fcas-lightbox-container::-webkit-scrollbar-thumb:hover { background: ${texto}; } .fcas-lightbox-list { padding-left: ${marcador ? '24px' : '0'}; margin: 0; color: ${texto}; list-style-type: ${marcador || 'none'}; } .fcas-lightbox-item { padding: 8px 0; text-align: ${alinhamento || 'left'}; word-break: break-word; } .fcas-lightbox-divisor { border-bottom: ${divisor ? `1px solid ${bordaTrack}` : 'none'}; } .fcas-lightbox-divisor:last-child { border-bottom: none; } .fcas-lightbox-vazia { display: flex; align-items: center; justify-content: center; padding: 20px 0; color: ${bordaTrack}; } .fcas-lightbox-vazia svg { width: 48px; height: 48px; fill: currentColor; opacity: 0.6; } @media (max-width: 480px) { .fcas-lightbox-container { padding: 12px; max-height: 250px; margin: 0 auto; } .fcas-lightbox-item { font-size: 14px; } }`; document.head.appendChild(style); } const itensValidos = lista ? lista.filter(item => item && String(item).trim() !== '') : []; if (itensValidos.length === 0) { const svgVazio = `<svg viewBox="0 0 24 24"><path d="M3 13h2v-2H3v2zm0 4h2v-2H3v2zm0-8h2V7H3v2zm4 4h14v-2H7v2zm0 4h14v-2H7v2zM7 7v2h14V7H7zm-4 6h2v-2H3v2z"/></svg>`; return `<div class="fcas-lightbox-container"><div class="fcas-lightbox-vazia">${svgVazio}</div></div>`; } let listItems = ''; itensValidos.forEach(item => { listItems += `<li class="fcas-lightbox-item fcas-lightbox-divisor">${item}</li>`; }); return `<div class="fcas-lightbox-container"><ul class="fcas-lightbox-list">${listItems}</ul></div>`; }
 
@@ -421,10 +413,19 @@ momocsifipsl.appendChild(scrcontedd);
                 };
             }
             if (optincludeplayer === "yes" && is_player0j === "yes") {
-                function mfplayeridd(){  if (typeof loaded_playerinf === "function"){ loaded_playerinf(start_fs_mpl); }  }
-            mfplayeridd();		}
+				
+if (!document.getElementById("fcasfs_script-api-player")) {
+    var scriptincfd = document.createElement("script");
+    scriptincfd.id = "fcasfs_script-api-player";
+    scriptincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
+    //scriptincfd.setAttribute("onload", 'if (typeof loaded_playerinf === "function"){ loaded_playerinf(start_fs_mpl); }');
+document.getElementsByTagName("body")[0].appendChild(scriptincfd);  
+}
 
-			if (typeof loaded_playerinf === "function"){ loaded_playerinf(start_fs_mpl); }  }
+				
+                function mfplayeridd(){  if (typeof loaded_playerinf === "function"){ loaded_playerinf(start_fs_mpl); }  }
+            mfplayeridd();	}
+
 
 			
             if (close_fsmofla_strdd === true) {
