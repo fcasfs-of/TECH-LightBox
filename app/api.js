@@ -277,7 +277,7 @@ function fsmodal_create(optiy, app) {
                     start_fs_postermpl = optiy.poster;
                 }
                 start_fs_mpl = {
-                    OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",true),
+                    OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
 						 osd:{  theme:fcas_lightbox_checkValueEX(optiy,"config","OSD_Theme","dark"), duration:3e3, width:"auto" },
 						volume:fcas_lightbox_checkValueEX(optiy,"config","volume","1"),
@@ -300,7 +300,7 @@ function fsmodal_create(optiy, app) {
                     start_fs_postermpl = optiy.poster;
                 }
                 start_fs_mpl = {
-                    OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",true),
+                    OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
 						 osd:{  theme:fcas_lightbox_checkValueEX(optiy,"config","OSD_Theme","dark"), duration:3e3, width:"auto" },
 						volume:fcas_lightbox_checkValueEX(optiy,"config","volume","1"),
