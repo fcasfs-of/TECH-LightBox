@@ -279,7 +279,6 @@ function fsmodal_create(optiy, app) {
                 start_fs_mpl = {
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",true),
                     config: {
-						OSD_DEF:fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
 						volume:fcas_lightbox_checkValueEX(optiy,"config","volume","1"),
 						pos_time:fcas_lightbox_checkValueEX(optiy,"config","pos_time","0")
 					},
@@ -302,7 +301,6 @@ function fsmodal_create(optiy, app) {
                 start_fs_mpl = {
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",true),
                     config: {
-						OSD_DEF:fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
 						volume:fcas_lightbox_checkValueEX(optiy,"config","volume","1"),
 						pos_time:fcas_lightbox_checkValueEX(optiy,"config","pos_time","0")
 					},
@@ -364,8 +362,7 @@ function loaded_playerinf(dstart_fs_mpl = {}) {
 			  mfplayeri.api('seek',Number(stringno_valtext(dstart_fs_mpl.config.pos_time,"0")));    
 			  mfplayeri.api("volume", Number(stringno_valtext(dstart_fs_mpl.config.volume,"1")));  if(stringno_valtext(dstart_fs_mpl.config.volume,"")==""){   mfplayeri.api("volume", 1);    }
 		});
-      if(dstart_fs_mpl.OSD_DEF===true){   playerfs_osf_evensdef(mfplayeri, 3e3);    }
-   }
+   }           if(dstart_fs_mpl.OSD==true){   playerfs_osf_evensdef(mfplayeri, 3e3);    }
 }   }
 
 
