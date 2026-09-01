@@ -341,12 +341,9 @@ fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: 'Getting started'
     plobf.OnEvents("userseek",function(){      fs_OSD({ duration:openf_osdcd_time, position:osdpositdo, text: ''+convertSecondsDurationto(plobf.api("time")), pos: osdposito, showAction: false,  actionText: "", width: '180px'   });      });
     plobf.OnEvents("unmute",function(){      fs_OSD({ duration:openf_osdcd_time, text: 'Active Sound', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '180px'    });      });
     plobf.OnEvents("mute",function(){     fs_OSD({ duration:openf_osdcd_time, text: 'Mute', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
-    plobf.OnEvents("pause",function(){     if(get_iofd==true){    navigator.mediaSession.playbackState = 'Paused';  }
-   fs_OSD({ duration:openf_osdcd_time, text: 'Paused', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
-    plobf.OnEvents("stop",function(){       if(get_iofd==true){    navigator.mediaSession.playbackState = 'Stopped';  }
-    fs_OSD({ duration:openf_osdcd_time, text: 'Stopped', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '120px'     });      });
-    plobf.OnEvents("play",function(){     if(get_iofd==true){    navigator.mediaSession.playbackState = 'Playing';  }
-      fs_OSD({ duration:openf_osdcd_time, text: 'Reproducing', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '150px'     });      });
+    plobf.OnEvents("pause",function(){     fs_OSD({ duration:openf_osdcd_time, text: 'Paused', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '120px'    });      });
+    plobf.OnEvents("stop",function(){          fs_OSD({ duration:openf_osdcd_time, text: 'Stopped', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '120px'     });      });
+    plobf.OnEvents("play",function(){          fs_OSD({ duration:openf_osdcd_time, text: 'Reproducing', position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: '150px'     });      });
      plobf.OnEvents("next",function(){       fs_OSD({ duration:openf_osdcd_time, text: ''+plobf.api("playlist_title"), position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: 'auto'     });      });
     plobf.OnEvents("previous",function(){       fs_OSD({ duration:openf_osdcd_time, text: ''+plobf.api("playlist_title"), position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: 'auto'     });      });
     plobf.OnEvents("speed",function(){       fs_OSD({ duration:openf_osdcd_time, text: 'Speed: '+plobf.api("speed"), position:osdpositdo, pos: osdposito, showAction: false,  actionText: "", width: 'auto'     });       });
