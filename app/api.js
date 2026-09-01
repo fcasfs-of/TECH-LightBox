@@ -424,6 +424,8 @@ momocsifipsl.appendChild(scrcontedd);
                 function mfplayeridd(){  if (typeof loaded_playerinf === "function"){ loaded_playerinf(start_fs_mpl); }  }
             mfplayeridd();		}
 
+			if (typeof loaded_playerinf === "function"){ loaded_playerinf(start_fs_mpl); }  }
+
 			
             if (close_fsmofla_strdd === true) {
                
