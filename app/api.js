@@ -327,9 +327,9 @@ function loaded_playerinf(dstart_fs_mpl = {}) {
   if (typeof fs_Playerjs === "function") {
        mfplayeri = fs_Playerjs(dstart_fs_mpl);
 	  if(mfplayeri){  
-		  playerhj.OnEvents("init",function(){  
-			  fplayeri.api('seek',Number(stringno_valtext(dstart_fs_mpl.config.pos_time,"0")));    
-			  fplayeri.api("volume", Number(stringno_valtext(dstart_fs_mpl.config.volume,"1")));  if(stringno_valtext(dstart_fs_mpl.config.volume,"")==""){   fplayeri.api("volume", 1);    }
+		  mfplayeri.OnEvents("init",function(){  
+			  mfplayeri.api('seek',Number(stringno_valtext(dstart_fs_mpl.config.pos_time,"0")));    
+			  mfplayeri.api("volume", Number(stringno_valtext(dstart_fs_mpl.config.volume,"1")));  if(stringno_valtext(dstart_fs_mpl.config.volume,"")==""){   mfplayeri.api("volume", 1);    }
 		});
    }
 }   }
