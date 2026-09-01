@@ -279,10 +279,10 @@ function fsmodal_create(optiy, app) {
                 start_fs_mpl = {
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
-						 osd:{  theme:fcas_lightbox_checkValueEX(optiy,"config","OSD_Theme","dark"), duration:3e3, width:"auto" },
-						volume:fcas_lightbox_checkValueEX(optiy,"config","volume","1"),
-						pos_time:fcas_lightbox_checkValueEX(optiy,"config","pos_time","0")
-					},
+                       osd:{  theme:fcas_lightbox_checkValueEX(optiy,"config","OSD_Theme","dark"), duration:3e3, width:"auto" },
+                       volume:fcas_lightbox_checkValueEX(optiy,"config","volume","1"),
+                       pos_time:fcas_lightbox_checkValueEX(optiy,"config","pos_time","0")
+                    },
                     id: "preview_pls",
                     customtext: { age: "" },
                     nocontrols: 0,
@@ -302,10 +302,10 @@ function fsmodal_create(optiy, app) {
                 start_fs_mpl = {
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
-						 osd:{  theme:fcas_lightbox_checkValueEX(optiy,"config","OSD_Theme","dark"), duration:3e3, width:"auto" },
-						volume:fcas_lightbox_checkValueEX(optiy,"config","volume","1"),
-						pos_time:fcas_lightbox_checkValueEX(optiy,"config","pos_time","0")
-					},
+                       osd:{  theme:fcas_lightbox_checkValueEX(optiy,"config","OSD_Theme","dark"), duration:3e3, width:"auto" },
+                       volume:fcas_lightbox_checkValueEX(optiy,"config","volume","1"),
+                       pos_time:fcas_lightbox_checkValueEX(optiy,"config","pos_time","0")
+                    },
                     id: "preview_pls",
                     customtext: { age: "" },
                     nocontrols: 0,
