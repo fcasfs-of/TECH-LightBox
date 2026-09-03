@@ -290,7 +290,7 @@ function fsmodal_create(optiy, app) {
                        pos_time:fcas_lightbox_checkValueEX(optiy,"config","pos_time","0")
                     },
                     id: "preview_pls",
-                    customtext: { age: "" },
+                    customtext: { age: fcas_lightbox_checkValueEX(optiy,"config","txt","") || "" },
                     nocontrols: fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","nocontrols",false)) || 0,
                     autoplay: 0,
                     loop: fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","loop",false)) || 0,
@@ -300,7 +300,7 @@ function fsmodal_create(optiy, app) {
                     poster: start_fs_postermpl,
                     player: 1
                 };
-                fsmodal_create_ifir = `<div id="preview_pls" style="width:100%; height:${Number(optiy.size)}px;"></div>`;
+                fsmodal_create_ifir = `<div style="width:100%; height:${Number(optiy.size)}px;">  <div id="preview_pls" style="width:100%; height:${Number(optiy.size)}px;"></div>  </div>`;
             } else if (optiy.type && optiy.type == "video") {
                 is_player0j = "yes";
                 if (optiy.poster && optiy.poster != "") {
@@ -316,7 +316,7 @@ function fsmodal_create(optiy, app) {
                        pos_time:fcas_lightbox_checkValueEX(optiy,"config","pos_time","0")
                     },
                     id: "preview_pls",
-                    customtext: { age: "" },
+                    customtext: { age: fcas_lightbox_checkValueEX(optiy,"config","txt","") || "" },
                     lang: fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
                     nocontrols: fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","nocontrols",false)) || 0,
                     autoplay: 0,
@@ -326,7 +326,7 @@ function fsmodal_create(optiy, app) {
                     poster: start_fs_postermpl,
                     player: 1
                 };
-                fsmodal_create_ifir = `<div id="preview_pls" style="width:100%; height:${Number(optiy.size)}px;"></div>`;
+                fsmodal_create_ifir = `<div style="width:100%; height:${Number(optiy.size)}px;">   <div id="preview_pls" style="width:100%; height:${Number(optiy.size)}px;"></div>  </div>`;
             }
             fsmodal_createdd += `<div class="tlightboc_fcasfs" style="overflow:auto;  position: absolute;  width: 100%;  height: 100%;  padding:5px; text-align:center; color:#fff;">${fsmodal_create_ifir} ${fsmodal_create_desci}<br/><br/><br/><br/></div><br/><br/><br/>`;
         }
