@@ -279,7 +279,7 @@ function fsmodal_create(optiy, app) {
                 start_fs_mpl = {
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
-                       OSD_Lang:fcas_lightbox_checkValueEX(optiy,"config","OSD_Lang","en") || "en",
+                       OSD_Lang:fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
                        OSD_Events:fcas_lightbox_checkValueEX(optiy,"config","OSD_Events",[]) || [],
                        osd:{  theme:fcas_lightbox_checkValueEX(optiy,"config","OSD_Theme","dark"), duration:3e3, width:"auto" },
                        volume:fcas_lightbox_checkValueEX(optiy,"config","volume","1"),
@@ -290,6 +290,7 @@ function fsmodal_create(optiy, app) {
                     nocontrols: 0,
                     autoplay: 0,
                     loop: 0,
+					lang: fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
                     title: optiy.title,
                     file: optiy.context,
                     poster: start_fs_postermpl,
@@ -304,7 +305,7 @@ function fsmodal_create(optiy, app) {
                 start_fs_mpl = {
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
-                       OSD_Lang:fcas_lightbox_checkValueEX(optiy,"config","OSD_Lang","en") || "en",
+                       OSD_Lang:fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
                        OSD_Events:fcas_lightbox_checkValueEX(optiy,"config","OSD_Events",[]) || [],
                        osd:{  theme:fcas_lightbox_checkValueEX(optiy,"config","OSD_Theme","dark"), duration:3e3, width:"auto" },
                        volume:fcas_lightbox_checkValueEX(optiy,"config","volume","1"),
@@ -312,6 +313,7 @@ function fsmodal_create(optiy, app) {
                     },
                     id: "preview_pls",
                     customtext: { age: "" },
+					lang: fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
                     nocontrols: 0,
                     autoplay: 0,
                     loop: 0,
