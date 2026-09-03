@@ -203,6 +203,13 @@ var is_player0j= "no";
 
 function fsmodal_booleanToNumber(value) { return (value === null || value === undefined) ? 0 : (value === true ? 1 : 0); }
 
+function fsmodal_listaFiles(arrayInterno){  var arrayIntfferno=[];
+if(arrayInterno){
+for(var j=0; j<arrayInterno.length; j++){
+arrayIntfferno[j]={id:"pf"+(j+1),title:arrayInterno[j].title,file:arrayInterno[j].file,poster:arrayInterno[j].poster};
+}
+}  return arrayIntfferno;  }
+
 
 function fsmodal_create(optiy, app) {
      fsmodal_clall_menussd = "";
@@ -295,7 +302,7 @@ function fsmodal_create(optiy, app) {
                     autoplay: 0,
                     loop: fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","loop",false)) || 0,
                     lang: fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
-                    plstart: fcas_lightbox_checkValueEX(optiy,"config","select",1) || 1,
+                    plstart: "pf"+ fcas_lightbox_checkValueEX(optiy,"config","select","1") || "1",
                     title: optiy.title,
                     file: optiy.context,
                     poster: start_fs_postermpl,
@@ -304,6 +311,8 @@ function fsmodal_create(optiy, app) {
                 fsmodal_create_ifir = `<div id="preview_pls" style="width:100%; height:${Number(optiy.size)}px;"></div>`;
             } else if (optiy.type && (optiy.type == "video" || optiy.type == "PList")) {
                 is_player0j = "yes";
+				var start_is_player0j=optiy.context;
+				if(optiy.type == "PList") {   start_is_player0j=fsmodal_listaFiles(optiy.context);  }
                 if (optiy.poster && optiy.poster != "") {
                     start_fs_postermpl = optiy.poster;
                 }
@@ -318,13 +327,13 @@ function fsmodal_create(optiy, app) {
                     },
                     id: "preview_pls",
                     customtext: { age: fcas_lightbox_checkValueEX(optiy,"config","txt","") || "" },
-                    plstart: fcas_lightbox_checkValueEX(optiy,"config","select",1) || 1,
+                    plstart: "pf"+ fcas_lightbox_checkValueEX(optiy,"config","select","1") || "1",
                     lang: fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
                     nocontrols: fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","nocontrols",false)) || 0,
                     autoplay: 0,
                     loop: fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","loop",false)) || 0,
                     title: optiy.title,
-                    file: optiy.context,
+                    file: start_is_player0j,
                     poster: start_fs_postermpl,
                     player: 1
                 };
