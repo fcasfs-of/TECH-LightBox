@@ -206,7 +206,7 @@ function fsmodal_booleanToNumber(value) { return (value === null || value === un
 function fsmodal_listaFiles(arrayInterno){  var arrayIntfferno=[];
 if(arrayInterno){
 for(var j=0; j<arrayInterno.length; j++){
-arrayIntfferno[j]={id:"pf"+(j+1),title:arrayInterno[j].title,file:arrayInterno[j].file,poster:arrayInterno[j].poster};
+arrayIntfferno[j]={id:"pf"+(j+1),title:arrayInterno[j].title || "",file:arrayInterno[j].file || "",poster:arrayInterno[j].poster || ""};
 }
 }  return arrayIntfferno;  }
 
