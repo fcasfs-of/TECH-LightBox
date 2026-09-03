@@ -300,8 +300,8 @@ function fsmodal_create(optiy, app) {
                     poster: start_fs_postermpl,
                     player: 1
                 };
-                fsmodal_create_ifir = `<div style="width:100%; height:${Number(optiy.size)}px;">  <div id="preview_pls" style="width:100%; height:${Number(optiy.size)}px;"></div>  </div>`;
-            } else if (optiy.type && optiy.type == "video") {
+                fsmodal_create_ifir = `<div id="preview_pls" style="width:100%; height:${Number(optiy.size)}px;"></div>`;
+            } else if (optiy.type && (optiy.type == "video" || optiy.type == "PList")) {
                 is_player0j = "yes";
                 if (optiy.poster && optiy.poster != "") {
                     start_fs_postermpl = optiy.poster;
@@ -326,7 +326,7 @@ function fsmodal_create(optiy, app) {
                     poster: start_fs_postermpl,
                     player: 1
                 };
-                fsmodal_create_ifir = `<div style="width:100%; height:${Number(optiy.size)}px;">   <div id="preview_pls" style="width:100%; height:${Number(optiy.size)}px;"></div>  </div>`;
+                fsmodal_create_ifir = `<div id="preview_pls" style="width:100%; height:${Number(optiy.size)}px;"></div>`;
             }
             fsmodal_createdd += `<div class="tlightboc_fcasfs" style="overflow:auto;  position: absolute;  width: 100%;  height: 100%;  padding:5px; text-align:center; color:#fff;">${fsmodal_create_ifir} ${fsmodal_create_desci}<br/><br/><br/><br/></div><br/><br/><br/>`;
         }
