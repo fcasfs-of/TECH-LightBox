@@ -279,6 +279,7 @@ function fsmodal_create(optiy, app) {
                 start_fs_mpl = {
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
+                       OSD_Lang:fcas_lightbox_checkValueEX(optiy,"config","OSD_Lang","en") || "en",
                        OSD_Events:fcas_lightbox_checkValueEX(optiy,"config","OSD_Events",[]) || [],
                        osd:{  theme:fcas_lightbox_checkValueEX(optiy,"config","OSD_Theme","dark"), duration:3e3, width:"auto" },
                        volume:fcas_lightbox_checkValueEX(optiy,"config","volume","1"),
@@ -303,6 +304,7 @@ function fsmodal_create(optiy, app) {
                 start_fs_mpl = {
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
+                       OSD_Lang:fcas_lightbox_checkValueEX(optiy,"config","OSD_Lang","en") || "en",
                        OSD_Events:fcas_lightbox_checkValueEX(optiy,"config","OSD_Events",[]) || [],
                        osd:{  theme:fcas_lightbox_checkValueEX(optiy,"config","OSD_Theme","dark"), duration:3e3, width:"auto" },
                        volume:fcas_lightbox_checkValueEX(optiy,"config","volume","1"),
@@ -327,28 +329,31 @@ function fsmodal_create(optiy, app) {
 }
 
 
-function registerPlayerOSDEvents(plobf, eventsList, openf_osdcd_time,osdpositdo,osdposito) {
+const osdTranslations = { "start": { pt: "Iniciando", en: "Getting started" }, "new": { pt: "Novo", en: "Getting started" }, "exitfullscreen": { pt: "Saindo da Tela Cheia", en: "Exiting FullScreen" }, "fullscreen": { pt: "Tela Cheia", en: "FullScreen" }, "end": { pt: "Finalizando", en: "Finishing" }, "finish": { pt: "Terminado", en: "Finished" }, "volume": { pt: "Volume: ", en: "Volume: " }, "unmute": { pt: "Som Ativo", en: "Active Sound" }, "mute": { pt: "Mudo", en: "Mute" }, "pause": { pt: "Pausado", en: "Paused" }, "stop": { pt: "Parado", en: "Stopped" }, "play": { pt: "Reproduzindo", en: "Reproducing" }, "speed": { pt: "Velocidade: ", en: "Speed: " } };
+
+function registerPlayerOSDEvents(plobf, eventsList, lang = "pt", openf_osdcd_time,osdpositdo,osdposito) {
     const allEvents = {
         "start": function() {
-            fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: 'Getting started', pos: osdposito, showAction: false, actionText: "", width: 'auto' });
+            fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: (osdTranslations.start[lang] || osdTranslations.start["pt"]), pos: osdposito, showAction: false, actionText: "", width: 'auto' });
         },
         "new": function() {
-            fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: 'Getting started', pos: osdposito, showAction: false, actionText: "", width: 'auto' });
+            fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: (osdTranslations.new[lang] || osdTranslations.new["pt"]), pos: osdposito, showAction: false, actionText: "", width: 'auto' });
         },
         "exitfullscreen": function() {
-            fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: 'Exiting FullScreen', pos: osdposito, showAction: false, actionText: "", width: '180px' });
+            fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: (osdTranslations.exitfullscreen[lang] || osdTranslations.exitfullscreen["pt"]), pos: osdposito, showAction: false, actionText: "", width: '180px' });
         },
         "fullscreen": function() {
-            fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: 'FullScreen', pos: osdposito, showAction: false, actionText: "", width: '180px' });
+            fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: (osdTranslations.fullscreen[lang] || osdTranslations.fullscreen["pt"]), pos: osdposito, showAction: false, actionText: "", width: '180px' });
         },
         "end": function() {
-            fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: 'Finishing', pos: osdposito, showAction: false, actionText: "", width: '180px' });
+            fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: (osdTranslations.end[lang] || osdTranslations.end["pt"]), pos: osdposito, showAction: false, actionText: "", width: '180px' });
         },
         "finish": function() {
-            fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: 'Finished', pos: osdposito, showAction: false, actionText: "", width: '180px' });
+            fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: (osdTranslations.finish[lang] || osdTranslations.finish["pt"]), pos: osdposito, showAction: false, actionText: "", width: '180px' });
         },
         "volume": function() {
-            fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: 'Volume: ' + Math.floor(plobf.api("volume") * 100) + "%", pos: osdposito, showAction: false, actionText: "", width: 'auto' });
+            let label = osdTranslations.volume[lang] || osdTranslations.volume["pt"];
+            fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: label + Math.floor(plobf.api("volume") * 100) + "%", pos: osdposito, showAction: false, actionText: "", width: 'auto' });
         },
         "seek": function() {
             fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: '' + convertSecondsDurationto(plobf.api("time")), pos: osdposito, showAction: false, actionText: "", width: '180px' });
@@ -357,19 +362,19 @@ function registerPlayerOSDEvents(plobf, eventsList, openf_osdcd_time,osdpositdo,
             fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: '' + convertSecondsDurationto(plobf.api("time")), pos: osdposito, showAction: false, actionText: "", width: '180px' });
         },
         "unmute": function() {
-            fs_OSD({ duration: openf_osdcd_time, text: 'Active Sound', position: osdpositdo, pos: osdposito, showAction: false, actionText: "", width: '180px' });
+            fs_OSD({ duration: openf_osdcd_time, text: (osdTranslations.unmute[lang] || osdTranslations.unmute["pt"]), position: osdpositdo, pos: osdposito, showAction: false, actionText: "", width: '180px' });
         },
         "mute": function() {
-            fs_OSD({ duration: openf_osdcd_time, text: 'Mute', position: osdpositdo, pos: osdposito, showAction: false, actionText: "", width: '120px' });
+            fs_OSD({ duration: openf_osdcd_time, text: (osdTranslations.mute[lang] || osdTranslations.mute["pt"]), position: osdpositdo, pos: osdposito, showAction: false, actionText: "", width: '120px' });
         },
         "pause": function() {
-            fs_OSD({ duration: openf_osdcd_time, text: 'Paused', position: osdpositdo, pos: osdposito, showAction: false, actionText: "", width: '120px' });
+            fs_OSD({ duration: openf_osdcd_time, text: (osdTranslations.pause[lang] || osdTranslations.pause["pt"]), position: osdpositdo, pos: osdposito, showAction: false, actionText: "", width: '120px' });
         },
         "stop": function() {
-            fs_OSD({ duration: openf_osdcd_time, text: 'Stopped', position: osdpositdo, pos: osdposito, showAction: false, actionText: "", width: '120px' });
+            fs_OSD({ duration: openf_osdcd_time, text: (osdTranslations.stop[lang] || osdTranslations.stop["pt"]), position: osdpositdo, pos: osdposito, showAction: false, actionText: "", width: '120px' });
         },
         "play": function() {
-            fs_OSD({ duration: openf_osdcd_time, text: 'Reproducing', position: osdpositdo, pos: osdposito, showAction: false, actionText: "", width: '150px' });
+            fs_OSD({ duration: openf_osdcd_time, text: (osdTranslations.play[lang] || osdTranslations.play["pt"]), position: osdpositdo, pos: osdposito, showAction: false, actionText: "", width: '150px' });
         },
         "next": function() {
             fs_OSD({ duration: openf_osdcd_time, text: '' + plobf.api("playlist_title"), position: osdpositdo, pos: osdposito, showAction: false, actionText: "", width: 'auto' });
@@ -378,9 +383,10 @@ function registerPlayerOSDEvents(plobf, eventsList, openf_osdcd_time,osdpositdo,
             fs_OSD({ duration: openf_osdcd_time, text: '' + plobf.api("playlist_title"), position: osdpositdo, pos: osdposito, showAction: false, actionText: "", width: 'auto' });
         },
         "speed": function() {
-            fs_OSD({ duration: openf_osdcd_time, text: 'Speed: ' + plobf.api("speed"), position: osdpositdo, pos: osdposito, showAction: false, actionText: "", width: 'auto' });
+            let label = osdTranslations.speed[lang] || osdTranslations.speed["pt"];
+            fs_OSD({ duration: openf_osdcd_time, text: label + plobf.api("speed"), position: osdpositdo, pos: osdposito, showAction: false, actionText: "", width: 'auto' });
         }
-    };
+	};
 
     if (!Array.isArray(eventsList) || eventsList.length === 0) {
         for (let eventName in allEvents) {
@@ -398,9 +404,9 @@ function registerPlayerOSDEvents(plobf, eventsList, openf_osdcd_time,osdpositdo,
 
 
 
-function playerfs_osf_evensdef(eventsList, plobf,timf){    var osdposito="top-center";    var osdpositdo="absolute";   var openf_osdcd_time=timf;
+function playerfs_osf_evensdef(eventsList, lang = "pt", plobf,timf){    var osdposito="top-center";    var osdpositdo="absolute";   var openf_osdcd_time=timf;
 if(plobf){
-registerPlayerOSDEvents(plobf, eventsList, openf_osdcd_time,osdpositdo,osdposito);
+registerPlayerOSDEvents(plobf, eventsList, lang || "pt", openf_osdcd_time,osdpositdo,osdposito);
  }    }
 
 
@@ -412,7 +418,7 @@ function loaded_playerinf(dstart_fs_mpl = {}) {
 			  mfplayeri.api('seek',Number(stringno_valtext(dstart_fs_mpl.config.pos_time,"0")));    
 			  mfplayeri.api("volume", Number(stringno_valtext(dstart_fs_mpl.config.volume,"1")));  if(stringno_valtext(dstart_fs_mpl.config.volume,"")==""){   mfplayeri.api("volume", 1);    }
 		});
-   }           if(dstart_fs_mpl.OSD==true){   playerfs_osf_evensdef(dstart_fs_mpl.config.OSD_Events || [], mfplayeri, 3e3);    }
+   }           if(dstart_fs_mpl.OSD==true){   playerfs_osf_evensdef(dstart_fs_mpl.config.OSD_Events || [], dstart_fs_mpl.config.OSD_Lang || "en", mfplayeri, 3e3);    }
 }   }
 
 
