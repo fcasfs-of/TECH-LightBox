@@ -200,6 +200,10 @@ var is_player0j= "no";
     var fsmodal_createdd = "";
     var start_fs_postermpl = "";
 
+
+function fsmodal_booleanToNumber(value) { return (value === null || value === undefined) ? 0 : (value === true ? 1 : 0); }
+
+
 function fsmodal_create(optiy, app) {
      fsmodal_clall_menussd = "";
      dcurrent_id = 0;
@@ -287,10 +291,10 @@ function fsmodal_create(optiy, app) {
                     },
                     id: "preview_pls",
                     customtext: { age: "" },
-                    nocontrols: 0,
+                    nocontrols: fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","nocontrols",false)) || 0,
                     autoplay: 0,
-                    loop: 0,
-					lang: fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
+                    loop: fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","loop",false)) || 0,
+                    lang: fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
                     title: optiy.title,
                     file: optiy.context,
                     poster: start_fs_postermpl,
@@ -313,10 +317,10 @@ function fsmodal_create(optiy, app) {
                     },
                     id: "preview_pls",
                     customtext: { age: "" },
-					lang: fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
-                    nocontrols: 0,
+                    lang: fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
+                    nocontrols: fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","nocontrols",false)) || 0,
                     autoplay: 0,
-                    loop: 0,
+                    loop: fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","loop",false)) || 0,
                     title: optiy.title,
                     file: optiy.context,
                     poster: start_fs_postermpl,
