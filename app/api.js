@@ -284,7 +284,7 @@ var is_player0jmgtrt="";
 
 if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0jmgtrt='onclick="fcas_lightbox_alternarAmpliacao(\".modal .modal-content .lightboxtimdd img\");" ';  }
 
-                fsmodal_create_ifir = `<span class="lightboxtimdd">  <img ${is_player0jmgtrt} src="${optiy.context}" style="user-select:none;pointer-events:none; width:${Number(optiy.size)}px;" />  </span>`;
+                fsmodal_create_ifir = `<span class="lightboxtimdd" ${is_player0jmgtrt}>  <img src="${optiy.context}" style="user-select:none;pointer-events:none; width:${Number(optiy.size)}px;" />  </span>`;
             } else if (optiy.type && optiy.type == "texto") {
                 is_player0j = "no";
 
