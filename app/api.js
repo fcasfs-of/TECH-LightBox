@@ -357,7 +357,7 @@ colortexts:fcas_lightbox_checkValueEX(optiy,"config","colorText","fff") || "fff"
                 };
                 fsmodal_create_ifir = `<div id="preview_pls" style="width:100%; height:${Number(optiy.size)}px;"></div>`;
             }
-            fsmodal_createdd += `<div class="tlightboc_fcasfs" style="overflow:auto;  position: absolute;  width: 100%;  height: 100%;  padding:5px; text-align:center; color:#fff; padding-bottom:9px;">${fsmodal_create_ifir} ${fsmodal_create_desci} <br/><br/><br/></div>`;
+            fsmodal_createdd += `<div class="tlightboc_fcasfs" style="overflow:auto;  position: absolute;  width: 100%;  height: 100%;  padding:5px; display:block; text-align:center; color:#fff; margin-bottom:9px;">${fsmodal_create_ifir} ${fsmodal_create_desci} <br/><br/><br/></div>`;
         }
         return fsmodal_createdd;
     }
