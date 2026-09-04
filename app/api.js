@@ -647,7 +647,8 @@ document.getElementsByTagName("body")[0].appendChild(scriptincfd);
             if (optincludeplayer === "yes" && is_player0j === "yes") {
 				function mfplayeridd(){  if (typeof loaded_playerinf === "function"){ loaded_playerinf(start_fs_mpl); }  }
             mfplayeridd();	}   
-			if(is_player0j === "pdf") {  fcas_lightboc_Pdf(fcas_lightbox_checkValueEX(optiy.content,"config","Lang","en") ||'en',optiy.content || '', fcas_lightbox_checkValueEX(optiy.content,"config","page",1) || 1, "fcas_lightboc_Pdfout");    }
+			else if(is_player0j === "pdf") {  function mfplayeridd(){   fcas_lightboc_Pdf(fcas_lightbox_checkValueEX(optiy.content,"config","Lang","en") ||'en',optiy.content || '', fcas_lightbox_checkValueEX(optiy.content,"config","page",1) || 1, "fcas_lightboc_Pdfout");    } 
+            mfplayeridd();}
 
 			
             if (close_fsmofla_strdd === true) {
