@@ -282,9 +282,9 @@ function fsmodal_create(optiy, app) {
 var is_player0jmgtrt="";
                 is_player0j = "no";
 
-if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0jmgtrt=' style="pointer-events:auto;" onclick="fcas_lightbox_alternarAmpliacao(\".lightboxtimdd img\");" ';  }
+if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0jmgtrt=' style="pointer-events:auto;" onclick="fcas_lightbox_alternarAmpliacao(this);" ';  }
 
-                fsmodal_create_ifir = `<span class="lightboxtimdd" ${is_player0jmgtrt}>  <img src="${optiy.context}" style="user-select:none;pointer-events:none; width:${Number(optiy.size)}px;" />  </span>`;
+                fsmodal_create_ifir = `<div class="lightboxtimdd" ${is_player0jmgtrt}>  <img src="${optiy.context}" style="user-select:none;pointer-events:none; width:${Number(optiy.size)}px;" />  </div>`;
             } else if (optiy.type && optiy.type == "texto") {
                 is_player0j = "no";
 
