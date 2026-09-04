@@ -282,7 +282,7 @@ function fsmodal_create(optiy, app) {
 var is_player0jmgtrt="";
                 is_player0j = "no";
 
-if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0jmgtrt='onclick="fcas_lightbox_alternarAmpliacao(\".modal .modal-content .lightboxtimdd img\");" ';  }
+if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0jmgtrt='onclick="fcas_lightbox_alternarAmpliacao(this);" ';  }
 
                 fsmodal_create_ifir = `<span class="lightboxtimdd" ${is_player0jmgtrt}>  <img src="${optiy.context}" style="user-select:none;pointer-events:none; width:${Number(optiy.size)}px;" />  </span>`;
             } else if (optiy.type && optiy.type == "texto") {
