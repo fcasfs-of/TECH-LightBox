@@ -525,8 +525,8 @@ var scrcontedd = document.createElement("div");
                     <span class="bngl">${btnys_fsmofla_efestr}</span>
                     <span class="bngd" ${fsmodal_open_tipf}>${close_fsmofla_str}</span>
                     <div style="overflow:auto;" class="modal-content" id="fs_modal_${optiy.id}_content">
-                        ${fsmodal_create(optiy.content, optiy.include ? optiy.include.player : "")}
-                    </div>
+                        ${fsmodal_create(optiy.content, optiy.include ? optiy.include.player : "")} <br/>
+                   <br/> </div>
                     ${thumsds_efestr} 
                 </div>
 <style>  #fs_modal_${optiy.id} #fs_modal_${optiy.id}_content .tlightboc_fcasfs, #fs_modal_${optiy.id} #fs_modal_${optiy.id}_content h1 {  color:#${fcas_lightbox_checkValueEX(optiy.content,"config","colorText","fff") || "fff"} !important;  }  </style>
