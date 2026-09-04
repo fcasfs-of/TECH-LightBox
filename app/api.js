@@ -63,21 +63,20 @@ function fcas_lightboc_Pdf(idioma, linkPdf, pg, idElemento) {
     const areaPdf = document.createElement('div');
     areaPdf.style.cssText = 'width:100%;min-height:400px;display:flex;justify-content:center;align-items:center;background:#fff;padding:10px;box-sizing:border-box;';
     const imgPdf = document.createElement('img');
-    imgPdf.style.cssText = 'max-width:100%;height:auto;display:block;box-shadow:0 2px 8px rgba(0,0,0,0.1);';
+    imgPdf.style.cssText = 'pointer-events:none; max-width:100%;height:auto;display:block;box-shadow:0 2px 8px rgba(0,0,0,0.1);';
     areaPdf.appendChild(imgPdf);
     container.appendChild(areaPdf);
     const controles = document.createElement('div');
     controles.style.cssText = 'display:flex;justify-content:center;align-items:center;gap:15px;padding:10px;background:#f0f0f0;border-top:1px solid #ddd;';
     const btnAnterior = document.createElement('button');
-    btnAnterior.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>';
     btnAnterior.style.cssText = 'background:none;border:none;cursor:pointer;padding:5px;color:#333;display:flex;align-items:center;';
     btnAnterior.title = lang.anterior;
     const btnProximo = document.createElement('button');
-    btnProximo.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>';
     btnProximo.style.cssText = 'background:none;border:none;cursor:pointer;padding:5px;color:#333;display:flex;align-items:center;';
     btnProximo.title = lang.proximo;
     const infoPagina = document.createElement('span');
     infoPagina.style.cssText = 'font-size:14px;color:#333;font-family:Arial,sans-serif;';
+	btnAnterior.innerHTML = '';  btnProximo.innerHTML = '';
     controles.appendChild(btnAnterior);
     controles.appendChild(infoPagina);
     controles.appendChild(btnProximo);
@@ -93,7 +92,9 @@ function fcas_lightboc_Pdf(idioma, linkPdf, pg, idElemento) {
             canvas.height = viewport.height;
             const context = canvas.getContext('2d');
             pagina.render({ canvasContext: context, viewport: viewport }).promise.then(function() {
-                imgPdf.src = canvas.toDataURL('image/jpeg', 0.9);
+     btnAnterior.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>';
+    btnProximo.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>';
+               imgPdf.src = canvas.toDataURL('image/jpeg', 0.9);
                 infoPagina.textContent = lang.pagina + ' ' + numero + ' ' + lang.de + ' ' + totalPaginas;
                 paginaAtual = numero;
                 btnAnterior.disabled = numero <= 1;
@@ -638,7 +639,7 @@ if (!document.getElementById("fcasfs_script-lightbox-pdf-core") && is_player0j =
     scrcodidptwwincfd.id = "fcasfs_script-lightbox-pdf-core";
     scrcodidptwwincfd.setAttribute("src", "https://lightbox.fcasfs-of.cloud-fs.net/app/pdf.js");
     scrcodidptwwincfd.setAttribute("onload", 'mfplayeridd();');
-    document.getElementsByTagName("body")[0].appendChild(scrcodidptwwincfd);
+    document.getElementsByTagName("head")[0].appendChild(scrcodidptwwincfd);
 }
 			
 if (!document.getElementById("fcasfs_script-api-player") && optincludeplayer === "yes" && is_player0j === "yes") {
