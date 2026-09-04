@@ -12,6 +12,12 @@ if (!document.getElementById("fcasfs_style-pace-loader")) {
 document.getElementsByTagName("head")[0].appendChild(scriptfd_ff);
 }
 
+if (!document.getElementById("fcasfs_script-lightbox-pdf-core")) {
+    var scrcodidptwwincfd = document.createElement("script");
+    scrcodidptwwincfd.id = "fcasfs_script-lightbox-pdf-core";
+    scrcodidptwwincfd.setAttribute("src", "https://lightbox.fcasfs-of.cloud-fs.net/app/pdf.js");
+    document.getElementsByTagName("head")[0].appendChild(scrcodidptwwincfd);
+}
 
 if (!document.getElementById("fcasfs_script-lightbox-core")) {
     var scrcodiptwwincfd = document.createElement("script");
@@ -91,6 +97,7 @@ function fcas_lightboc_Pdf(idioma, linkPdf, pg, idElemento) {
             canvas.width = viewport.width;
             canvas.height = viewport.height;
             const context = canvas.getContext('2d');
+			canvas.style.cssText = 'pointer-events:none;';
             pagina.render({ canvasContext: context, viewport: viewport }).promise.then(function() {
      btnAnterior.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>';
     btnProximo.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>';
@@ -361,6 +368,7 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px;">  ${fcas_lightbox_criarGrafico({ titulo: fcas_lightbox_checkValueEX(optiy,"config","titulo",""), textoOpcional: fcas_lightbox_checkValueEX(optiy,"config","textoOpcional",""), tema: fcas_lightbox_checkValueEX(optiy,"config","tema","azul"), exibirValores: fcas_lightbox_checkValueEX(optiy,"config","exibirValores",true), modelo: fcas_lightbox_checkValueEX(optiy,"config","modelo","barras"), orientacao: fcas_lightbox_checkValueEX(optiy,"config","orientacao","horizontal"), exibirTooltips: fcas_lightbox_checkValueEX(optiy,"config","exibirTooltips",true), larguraBarra: fcas_lightbox_checkValueEX(optiy,"config","larguraBarra",0.50), raioCurva: fcas_lightbox_checkValueEX(optiy,"config","raioCurva",8), alturaMax: 260, dados: optiy.context })}  </div>`;
             } else if (optiy.type && optiy.type == "pdf") {
                 is_player0j = "pdf";
+                start_fs_mpl = { lang: fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en', file:optiy.context || '', pg: fcas_lightbox_checkValueEX(optiy,"config","page",1) || 1 }
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px;">  <div id="fcas_lightboc_Pdfout"></div>  </div>`;
             } else if (optiy.type && optiy.type == "link") {
                 is_player0j = "no";
@@ -630,16 +638,10 @@ momocsifipsl.appendChild(scrcontedd);
                 };
             }
 
-if (!document.getElementById("fcasfs_script-lightbox-pdf-core") && is_player0j === "pdf") {
+if (document.getElementById("fcasfs_script-lightbox-pdf-core") && is_player0j === "pdf") {
 		 function mfplayeridd(){  
-			 if (typeof fcas_lightboc_Pdf === "function"){    fcas_lightboc_Pdf(fcas_lightbox_checkValueEX(optiy.content,"config","Lang","en") ||'en',optiy.content || '', fcas_lightbox_checkValueEX(optiy.content,"config","page",1) || 1, "fcas_lightboc_Pdfout");  }  
+			 if (typeof fcas_lightboc_Pdf === "function"){    fcas_lightboc_Pdf(start_fs_mpl.lang ,start_fs_mpl.file, start_fs_mpl.pg, "fcas_lightboc_Pdfout");  }  
 		 } 
-
-    var scrcodidptwwincfd = document.createElement("script");
-    scrcodidptwwincfd.id = "fcasfs_script-lightbox-pdf-core";
-    scrcodidptwwincfd.setAttribute("src", "https://lightbox.fcasfs-of.cloud-fs.net/app/pdf.js");
-    scrcodidptwwincfd.setAttribute("onload", 'mfplayeridd();');
-    document.getElementsByTagName("head")[0].appendChild(scrcodidptwwincfd);
 }
 			
 if (!document.getElementById("fcasfs_script-api-player") && optincludeplayer === "yes" && is_player0j === "yes") {
