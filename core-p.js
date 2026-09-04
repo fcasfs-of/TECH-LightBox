@@ -49,85 +49,124 @@ function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carre
   }
 
 
-  document.getElementById('btnImage').addEventListener('click', (e) => {
-    openModal({
-      title: "Logo 1",
-      type: "image",
-      context: "https://fcasfs-of.cloud-fs.net/info-profile/logo/cover_b.png",
-      size: "150",
-      includePlayer: "no",
-      description: ""
-    },e);
-  });
+ 
 
-  document.getElementById('btnSVG').addEventListener('click', (e) => {
-    openModal({
-      title: "SVG 1",
-      type: "svg",
-      context: '<svg fill="#000" width="800px" height="800px" viewBox="-0.5 0 24 24"><path d="m0 0h5.219v5.219h-5.219z"/><path d="m9.39 0h5.219v5.219h-5.219z"/><path d="m17.998 0h5.219v5.219h-5.219z"/><path d="m0 9.39h5.219v5.219h-5.219z"/><path d="m9.39 9.39h5.219v5.219h-5.219z"/><path d="m17.998 9.39h5.219v5.219h-5.219z"/><path d="m0 18.781h5.219v5.219h-5.219z"/><path d="m9.39 18.781h5.219v5.219h-5.219z"/><path d="m17.998 18.781h5.219v5.219h-5.219z"/></svg>',
-      size: "224",
-      includePlayer: "no",
-      description: ""
-    },e);
-  });
 
-  document.getElementById('btnTable').addEventListener('click', (e) => {
-    openModal({
-      title: "Tabela",
-      type: "table",
-      context:[   {     App: typeof document !== "undefined" ? document.title : "",     Version: typeof app_2ver !== "undefined" ? app_2ver : "",     Link: typeof location !== "undefined" ? location.href : ""  }],
-      size: "250",
-      includePlayer: "no",
-      description: ""
-    },e);
-  });
-
-document.getElementById('btnText').addEventListener('click', (e) => {
-    openModal({
-      title: "LightBox",
-      type: "",
-      context: "Lightbox é inovador que oferece uma experiência integrada para visualizar e interagir com textos, links, carrossel, Playlist, SVG, gráfico, tabela, imagens, lista, áudios e vídeos de forma intuitiva e moderna. <br/> Com uma interface limpa e responsiva, o aplicativo permite aos usuários explorar conteúdos multimídia de maneira eficiente, proporcionando uma navegação fluida e envolvente.",
-      size: "250",
-      includePlayer: "no",
-      description: "(Texto, Playlist, Link, SVG, Gráfico, Carrossel, Vídeo, Lista, Tabela, Imagem e Áudio)"
-    },e);
-  });
-
-  document.getElementById('btnPlaylist').addEventListener('click', (e) => {
-    openModal({
-      title: "Playlist",
-      type: "playlist",
-      context:[ { titulo: "LightBox", subtitulo: "Português", thumbnail: "https://lightbox.fcasfs-of.cloud-fs.net/favicon.png", href: "https://lightbox.fcasfs-of.cloud-fs.net/" }, { titulo: "LightBox", subtitulo: "English", thumbnail: "https://lightbox.fcasfs-of.cloud-fs.net/favicon.png", href: "https://lightbox.fcasfs-of.cloud-fs.net/en" } ],
-      size: "420",
-      includePlayer: "no",
-      description: ""
-    },e);
-  });
-
-document.getElementById('btnCarrossel').addEventListener('click', (e) => {
-    openModal({
+var modaisDisponiveis = {
+  'btnCarrossel': function() {
+    return {
       title: "Carrossel",
       type: "carrossel",
       context:[ { url: "https://lightbox.fcasfs-of.cloud-fs.net/favicon.png", legenda: "" },  { url: "https://fcasfs-of.cloud-fs.net/info-profile/logo/cover_b.png", legenda: "" } ],
       size: "320",
       includePlayer: "no",
       description: ""
-    },e);
-  });
-
-  document.getElementById('btnList').addEventListener('click', (e) => {
-    openModal({
+    };
+  },
+  'btnPlaylist': function() {
+    return {
+      title: "Playlist",
+      type: "playlist",
+      context:[ { titulo: "LightBox", subtitulo: "Português", thumbnail: "https://lightbox.fcasfs-of.cloud-fs.net/favicon.png", href: "https://lightbox.fcasfs-of.cloud-fs.net/" }, { titulo: "LightBox", subtitulo: "English", thumbnail: "https://lightbox.fcasfs-of.cloud-fs.net/favicon.png", href: "https://lightbox.fcasfs-of.cloud-fs.net/en" } ],
+      size: "420",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+  'btnText': function() {
+    return {
+      title: "LightBox",
+      type: "texto",
+      context: "Lightbox é inovador que oferece uma experiência integrada para visualizar e interagir com textos, links, carrossel, Playlist, SVG, gráfico, tabela, imagens, lista, áudios e vídeos de forma intuitiva e moderna. <br/> Com uma interface limpa e responsiva, o aplicativo permite aos usuários explorar conteúdos multimídia de maneira eficiente, proporcionando uma navegação fluida e envolvente.",
+      size: "250",
+      includePlayer: "no",
+      description: "(Texto, Playlist, Link, SVG, Gráfico, Carrossel, Vídeo, Lista, Tabela, Imagem e Áudio)"
+    };
+  },
+  'btnTable': function() {
+    return {
+      title: "Tabela",
+      type: "table",
+      context:[   {     App: typeof document !== "undefined" ? document.title : "",     Version: typeof app_2ver !== "undefined" ? app_2ver : "",     Link: typeof location !== "undefined" ? location.href : ""  }],
+      size: "250",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+  'btnList': function() {
+    return {
       title: "Lista",
       type: "list",
       context:[typeof document !== "undefined" ? document.title : "", typeof app_2ver !== "undefined" ? app_2ver : "", typeof location !== "undefined" ? location.href : ""],
       size: "250",
       includePlayer: "no",
       description: ""
-    },e);
-  });
-
-  document.getElementById('btnGrafic').addEventListener('click', (e) => {
-    openModal({
+    };
+  },
+  'btnAudio': function() {
+    return {
+      title: "Audio 1",
+      type: "audio",
+      context: "https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.mp4",
+      poster: "https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.jpg",
+      size: "250",
+      includePlayer: "yes",
+      description: ""
+    };
+  },
+  'btnLink': function() {
+    return {
+      title: "Site",
+      type: "link",
+      context: "https://lightbox.fcasfs-of.cloud-fs.net/",
+      size: "250",
+      includePlayer: "no",
+      description: "Oficial"
+    };
+  },  
+  'btnVideo': function() {
+    return {
+      title: "Video 1",
+      type: "video",
+      context: "https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.mp4",
+      poster: "https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.jpg",
+      size: "250",
+      includePlayer: "yes",
+      description: ""
+    };
+  },
+  'btnPDF': function() {
+    return {
+      title: "PDF",
+      type: "pdf",
+      context:"https://fcasfs-of.cloud-fs.net/docs/tech-player-br.pdf",
+      size: "450",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+  'btnImage': function() {
+    return {
+      title: "Logo 1",
+      type: "image",
+      context: "https://fcasfs-of.cloud-fs.net/info-profile/logo/cover_b.png",
+      size: "150",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+  'btnSVG': function() {
+    return {
+      title: "SVG 1",
+      type: "svg",
+      context: '<svg fill="#000" width="800px" height="800px" viewBox="-0.5 0 24 24"><path d="m0 0h5.219v5.219h-5.219z"/><path d="m9.39 0h5.219v5.219h-5.219z"/><path d="m17.998 0h5.219v5.219h-5.219z"/><path d="m0 9.39h5.219v5.219h-5.219z"/><path d="m9.39 9.39h5.219v5.219h-5.219z"/><path d="m17.998 9.39h5.219v5.219h-5.219z"/><path d="m0 18.781h5.219v5.219h-5.219z"/><path d="m9.39 18.781h5.219v5.219h-5.219z"/><path d="m17.998 18.781h5.219v5.219h-5.219z"/></svg>',
+      size: "224",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+    'btnGrafic': function() {
+    return {
       title: "Gráfico",
       type: "grafico",
       context: [
@@ -142,54 +181,23 @@ document.getElementById('btnCarrossel').addEventListener('click', (e) => {
       size: "450",
       includePlayer: "no",
       description: ""
-    },e);
-  });
+    };
+  }
+};
 
-  document.getElementById('btnLink').addEventListener('click', (e) => {
-    openModal({
-      title: "Site",
-      type: "link",
-      context: "https://lightbox.fcasfs-of.cloud-fs.net/",
-      size: "250",
-      includePlayer: "no",
-      description: "Oficial"
-    },e);
-  });
 
-  document.getElementById('btnAudio').addEventListener('click', (e) => {
-    openModal({
-      title: "Audio 1",
-      type: "audio",
-      context: "https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.mp4",
-      poster: "https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.jpg",
-      size: "250",
-      includePlayer: "yes",
-      description: ""
-    },e);
-  });
 
-  document.getElementById('btnVideo').addEventListener('click', (e) => {
-    openModal({
-      title: "Video 1",
-      type: "video",
-      context: "https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.mp4",
-      poster: "https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.jpg",
-      size: "250",
-      includePlayer: "yes",
-      description: ""
-    },e);
-  });
+Object.keys(modaisDisponiveis).forEach(function(idBotao) {
+  var elemento = document.getElementById(idBotao);
+  if (elemento) {
+    elemento.addEventListener('click', function(evento) {
+      if (typeof modaisDisponiveis[idBotao] === 'function') {
+        openModal(modaisDisponiveis[idBotao](), evento);
+      }
+    });
+  }
+});
 
- document.getElementById('btnPDF').addEventListener('click', (e) => {
-    openModal({
-      title: "PDF",
-      type: "pdf",
-      context:"https://fcasfs-of.cloud-fs.net/docs/tech-player-br.pdf",
-      size: "450",
-      includePlayer: "no",
-      description: ""
-    },e);
-  });
 
 
 
