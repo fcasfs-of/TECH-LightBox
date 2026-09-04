@@ -37,6 +37,7 @@ function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carre
       itens: obj,
       include: { player: contentOptions.includePlayer },
       content: {
+        config: {  },
         title: contentOptions.title,
         type: contentOptions.type,
         context: contentOptions.context,
@@ -175,6 +176,17 @@ document.getElementById('btnCarrossel').addEventListener('click', (e) => {
       poster: "https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.jpg",
       size: "250",
       includePlayer: "yes",
+      description: ""
+    },e);
+  });
+
+ document.getElementById('btnPDF').addEventListener('click', (e) => {
+    openModal({
+      title: "PDF",
+      type: "pdf",
+      context:"https://fcasfs-of.cloud-fs.net/docs/tech-player-en.pdf",
+      size: "450",
+      includePlayer: "no",
       description: ""
     },e);
   });
