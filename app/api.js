@@ -357,7 +357,7 @@ colortexts:fcas_lightbox_checkValueEX(optiy,"config","colorText","fff") || "fff"
                 };
                 fsmodal_create_ifir = `<div id="preview_pls" style="width:100%; height:${Number(optiy.size)}px;"></div>`;
             }
-            fsmodal_createdd += `<div class="tlightboc_fcasfs" style="overflow:auto;  position: absolute;  width: 100%;  height: 100%;  padding:5px; text-align:center; color:#fff;">${fsmodal_create_ifir} ${fsmodal_create_desci}<br/><br/><br/><br/></div><br/><br/><br/>`;
+            fsmodal_createdd += `<div class="tlightboc_fcasfs" style="overflow:auto;  position: absolute;  width: 100%;  height: 100%;  padding:5px; text-align:center; color:#fff;">${fsmodal_create_ifir} ${fsmodal_create_desci} <br/><br/><br/><br/></div><br/><br/><br/>`;
         }
         return fsmodal_createdd;
     }
@@ -527,10 +527,10 @@ var scrcontedd = document.createElement("div");
                     <div style="overflow:auto;" class="modal-content" id="fs_modal_${optiy.id}_content">
                         ${fsmodal_create(optiy.content, optiy.include ? optiy.include.player : "")}
                     </div>
-                    <br/><br/>${thumsds_efestr}<br/><br/>
-                </div>
+                    <br/><br/>${thumsds_efestr} <br/><br/>
+                </div><br/>
 <style>  #fs_modal_${optiy.id} #fs_modal_${optiy.id}_content .tlightboc_fcasfs, #fs_modal_${optiy.id} #fs_modal_${optiy.id}_content h1 {  color:#${fcas_lightbox_checkValueEX(optiy.content,"config","colorText","fff") || "fff"} !important;  }  </style>
-                <div id="cf_menuu"></div>
+              <br/><br/>  <div id="cf_menuu"></div>
             `;
 momocsifipsl.appendChild(scrcontedd);    
 
