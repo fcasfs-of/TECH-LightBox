@@ -186,13 +186,12 @@ var modaisDisponiveis = {
 
 
 
-modaisDisponiveis.forEach(function(idBotao) {
+Object.keys(modaisDisponiveis).forEach(function(idBotao) {
   var elemento = document.getElementById(idBotao);
   if (elemento) {
     elemento.addEventListener('click', function(evento) {
-      var identificador = idBotao; 
-      if (modaisDisponiveis[identificador] && typeof modaisDisponiveis[identificador] === 'function') {
-        openModal(modaisDisponiveis[identificador](), evento);
+      if (typeof modaisDisponiveis[idBotao] === 'function') {
+        openModal(modaisDisponiveis[idBotao](), evento);
       }
     });
   }
