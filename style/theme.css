@@ -387,7 +387,7 @@ header .dname .icon::before {     pointer-events: none;
     #btnGrafic:hover { background-color: #1d4ed8;  }
 
     #btnText, #btnLink, #btnPDF { background-color: #1e3a8a; color: #60a5fa; border-color: #1d4ed8; }
-    #btnText:hover, #btnLink:hover, #btnPDF:hove { background-color: #1d4ed8; }
+    #btnText:hover, #btnLink:hover, #btnPDF:hover { background-color: #1d4ed8; }
 
      #btnAudio, #btnVideo, #btnPlaylist { background-color: #4c1d95; color: #a78bfa; border-color: #6d28d9; }
      #btnAudio:hover, #btnVideo:hover, #btnPlaylist:hover { background-color: #6d28d9; }
