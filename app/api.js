@@ -13,13 +13,6 @@ document.getElementsByTagName("head")[0].appendChild(scriptfd_ff);
 }
 
 
-if (!document.getElementById("fcasfs_script-lightbox-pdf-core")) {
-    var scrcodidptwwincfd = document.createElement("script");
-    scrcodidptwwincfd.id = "fcasfs_script-lightbox-pdf-core";
-    scrcodidptwwincfd.setAttribute("src", "https://lightbox.fcasfs-of.cloud-fs.net/app/pdf.js");
-    document.getElementsByTagName("head")[0].appendChild(scrcodidptwwincfd);
-}
-
 if (!document.getElementById("fcasfs_script-lightbox-core")) {
     var scrcodiptwwincfd = document.createElement("script");
     scrcodiptwwincfd.id = "fcasfs_script-lightbox-core";
@@ -636,7 +629,18 @@ momocsifipsl.appendChild(scrcontedd);
                 };
             }
 
-			if (!document.getElementById("fcasfs_script-api-player") && optincludeplayer === "yes" && is_player0j === "yes") {
+ if(is_player0j === "pdf") {  function mfplayeridd(){   fcas_lightboc_Pdf(fcas_lightbox_checkValueEX(optiy.content,"config","Lang","en") ||'en',optiy.content || '', fcas_lightbox_checkValueEX(optiy.content,"config","page",1) || 1, "fcas_lightboc_Pdfout");    } 
+ }
+	
+if (!document.getElementById("fcasfs_script-lightbox-pdf-core") && is_player0j === "pdf") {
+    var scrcodidptwwincfd = document.createElement("script");
+    scrcodidptwwincfd.id = "fcasfs_script-lightbox-pdf-core";
+    scrcodidptwwincfd.setAttribute("src", "https://lightbox.fcasfs-of.cloud-fs.net/app/pdf.js");
+    scrcodidptwwincfd.setAttribute("onload", 'mfplayeridd();');
+    document.getElementsByTagName("body")[0].appendChild(scrcodidptwwincfd);
+}
+			
+if (!document.getElementById("fcasfs_script-api-player") && optincludeplayer === "yes" && is_player0j === "yes") {
     var scriptincfd = document.createElement("script");
     scriptincfd.id = "fcasfs_script-api-player";
     scriptincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
@@ -647,8 +651,7 @@ document.getElementsByTagName("body")[0].appendChild(scriptincfd);
             if (optincludeplayer === "yes" && is_player0j === "yes") {
 				function mfplayeridd(){  if (typeof loaded_playerinf === "function"){ loaded_playerinf(start_fs_mpl); }  }
             mfplayeridd();	}   
-			else if(is_player0j === "pdf") {  function mfplayeridd(){   fcas_lightboc_Pdf(fcas_lightbox_checkValueEX(optiy.content,"config","Lang","en") ||'en',optiy.content || '', fcas_lightbox_checkValueEX(optiy.content,"config","page",1) || 1, "fcas_lightboc_Pdfout");    } 
-            mfplayeridd();}
+			 if(is_player0j === "pdf") {    mfplayeridd();  }
 
 			
             if (close_fsmofla_strdd === true) {
