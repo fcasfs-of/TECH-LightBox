@@ -198,6 +198,10 @@ if(lightboxPLclos){  lightboxPLclos();  }
 
 
 
+function fcas_lightbox_alternarAmpliacao(el){const img=typeof el==='string'?document.querySelector(el):el;img.style.transform=img.style.transform==="scale(1.5)"?("scale(1)",img.style.zIndex="auto","scale(1)"):("scale(1.5)",img.style.zIndex="9999","scale(1.5)");}
+
+
+
 var is_player0j= "no";
     var fsmodal_clall_menussd = "";
     var dcurrent_id = 0;
