@@ -38,6 +38,7 @@ function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carre
       itens: obj,      
       include: { player: contentOptions.includePlayer },
       content: {
+        config: {  scale:true },
         title: contentOptions.title,
         type: contentOptions.type,
         context: contentOptions.context,
