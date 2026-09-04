@@ -279,12 +279,12 @@ function fsmodal_create(optiy, app) {
                 is_player0j = "no";
                 fsmodal_create_ifir = `<iframe allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation" frameborder="0" allowfullscreen src="${optiy.context}" style="width:100%; height: ${Number(optiy.size)}px;  display: block; "></iframe>`;
             } else if (optiy.type && optiy.type == "image") {
-var is_player0jmgt="none";   var is_player0jmgtrt="";
+var is_player0jmgtrt="";
                 is_player0j = "no";
 
-if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0jmgtrt='onclick="fcas_lightbox_alternarAmpliacao(this);" ';  is_player0jmgt="auto";  }
+if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0jmgtrt='onclick="fcas_lightbox_alternarAmpliacao(\".modal .modal-content .lightboxtimdd img\");" ';  }
 
-                fsmodal_create_ifir = `<img ${is_player0jmgtrt} src="${optiy.context}" style="user-select:none;pointer-events:${is_player0jmgt}; width:${Number(optiy.size)}px;" />`;
+                fsmodal_create_ifir = `<span class="lightboxtimdd">  <img ${is_player0jmgtrt} src="${optiy.context}" style="user-select:none;pointer-events:none; width:${Number(optiy.size)}px;" />  </span>`;
             } else if (optiy.type && optiy.type == "texto") {
                 is_player0j = "no";
 
