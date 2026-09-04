@@ -123,7 +123,7 @@ function fcas_lightboc_Pdf(idioma, linkPdf, pg, idElemento) {
             areaPdf.innerHTML = '<p style="color:#e74c3c;font-family:Arial;text-align:center;">'+lang.err+'</p>';
         });
     } else {
-        areaPdf.innerHTML = '<p style="color:#e74c3c;font-family:Arial;text-align:center;">'+lang.errp+'</p>';
+         btnAnterior.innerHTML = '';  btnProximo.innerHTML = '';    areaPdf.innerHTML = '<p style="color:#e74c3c;font-family:Arial;text-align:center;">'+lang.errp+'</p>';
     }
 }
 
@@ -629,7 +629,8 @@ momocsifipsl.appendChild(scrcontedd);
                 };
             }
 
- if(is_player0j === "pdf") {  function mfplayeridd(){   fcas_lightboc_Pdf(fcas_lightbox_checkValueEX(optiy.content,"config","Lang","en") ||'en',optiy.content || '', fcas_lightbox_checkValueEX(optiy.content,"config","page",1) || 1, "fcas_lightboc_Pdfout");    } 
+ if(is_player0j === "pdf") {  
+	 function mfplayeridd(){   fcas_lightboc_Pdf(fcas_lightbox_checkValueEX(optiy.content,"config","Lang","en") ||'en',optiy.content || '', fcas_lightbox_checkValueEX(optiy.content,"config","page",1) || 1, "fcas_lightboc_Pdfout");    } 
  }
 	
 if (!document.getElementById("fcasfs_script-lightbox-pdf-core") && is_player0j === "pdf") {
@@ -637,7 +638,7 @@ if (!document.getElementById("fcasfs_script-lightbox-pdf-core") && is_player0j =
     scrcodidptwwincfd.id = "fcasfs_script-lightbox-pdf-core";
     scrcodidptwwincfd.setAttribute("src", "https://lightbox.fcasfs-of.cloud-fs.net/app/pdf.js");
     scrcodidptwwincfd.setAttribute("onload", 'mfplayeridd();');
-    document.getElementsByTagName("body")[0].appendChild(scrcodidptwwincfd);
+    document.getElementsByTagName("head")[0].appendChild(scrcodidptwwincfd);
 }
 			
 if (!document.getElementById("fcasfs_script-api-player") && optincludeplayer === "yes" && is_player0j === "yes") {
