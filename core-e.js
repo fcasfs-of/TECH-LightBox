@@ -134,7 +134,8 @@ var modaisDisponiveis = {
       description: ""
     };
   },
-    'btnPDF': function() {
+  'btnPDF': function() {
+    return {
       title: "PDF",
       type: "pdf",
       context:"https://fcasfs-of.cloud-fs.net/docs/tech-player-en.pdf",
