@@ -77,10 +77,10 @@ var modaisDisponiveis = {
     return {
       title: "LightBox",
       type: "texto",
-      context: "Lightbox é inovador que oferece uma experiência integrada para visualizar e interagir com textos, links, carrossel, Playlist, SVG, gráfico, tabela, imagens, lista, áudios e vídeos de forma intuitiva e moderna. <br/> Com uma interface limpa e responsiva, o aplicativo permite aos usuários explorar conteúdos multimídia de maneira eficiente, proporcionando uma navegação fluida e envolvente.",
+      context: "Lightbox é inovador que oferece uma experiência integrada para visualizar e interagir com textos, links, carrossel, PDF, Playlist, SVG, gráfico, tabela, imagens, lista, áudios e vídeos de forma intuitiva e moderna. <br/> Com uma interface limpa e responsiva, o aplicativo permite aos usuários explorar conteúdos multimídia de maneira eficiente, proporcionando uma navegação fluida e envolvente.",
       size: "250",
       includePlayer: "no",
-      description: "(Texto, Playlist, Link, SVG, Gráfico, Carrossel, Vídeo, Lista, Tabela, Imagem e Áudio)"
+      description: "(Texto, PDF, Playlist, Link, SVG, Gráfico, Carrossel, Vídeo, Lista, Tabela, Imagem e Áudio)"
     };
   },
   'btnTable': function() {
