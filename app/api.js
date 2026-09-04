@@ -513,7 +513,7 @@ momocsifipsl.innerHTML='';
 
 var scrcontedd = document.createElement("div");
 			scrcontedd.innerHTML = `
-                <style>  #fs_modal_${optiy.id} .modal .modal-content {  color:#${fcas_lightbox_checkValueEX(optiy,"config","colorText","fff") || "fff"};  }  </style>
+                <style>  #fs_modal_${optiy.id} .modal-content {  color:#${fcas_lightbox_checkValueEX(optiy,"config","colorText","fff") || "fff"};  }  </style>
                 <div class="modal${close_fsmofla_efestr}" id="fs_modal_${optiy.id}" style="display:block; color:#000;">
                     <span class="bngl">${btnys_fsmofla_efestr}</span>
                     <span class="bngd" ${fsmodal_open_tipf}>${close_fsmofla_str}</span>
