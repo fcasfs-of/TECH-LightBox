@@ -190,8 +190,10 @@ for (var idBotao in modaisDisponiveis) {
   var elemento = document.getElementById(idBotao);
   if (elemento) {
     elemento.addEventListener('click', function(evento) {
-      var dadosModal = modaisDisponiveis[idBotao]();
-     openModal(dadosModal, evento); 
+      var identificador = idBotao; 
+      if (modaisDisponiveis[identificador] && typeof modaisDisponiveis[identificador] === 'function') {
+        openModal(modaisDisponiveis[identificador](), evento);
+      }
     });
   }
 }
