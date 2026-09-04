@@ -629,15 +629,13 @@ momocsifipsl.appendChild(scrcontedd);
                 };
             }
 
- if(is_player0j === "pdf") {  
-	 function mfplayeridd(fff){  if (typeof fff === "function"){    fff(fcas_lightbox_checkValueEX(optiy.content,"config","Lang","en") ||'en',optiy.content || '', fcas_lightbox_checkValueEX(optiy.content,"config","page",1) || 1, "fcas_lightboc_Pdfout");  }  } 
- }
-	
 if (!document.getElementById("fcasfs_script-lightbox-pdf-core") && is_player0j === "pdf") {
+		 function mfplayeridd(){  if (typeof fcas_lightboc_Pdf === "function"){    fcas_lightboc_Pdf(fcas_lightbox_checkValueEX(optiy.content,"config","Lang","en") ||'en',optiy.content || '', fcas_lightbox_checkValueEX(optiy.content,"config","page",1) || 1, "fcas_lightboc_Pdfout");  }  } 
+
     var scrcodidptwwincfd = document.createElement("script");
     scrcodidptwwincfd.id = "fcasfs_script-lightbox-pdf-core";
     scrcodidptwwincfd.setAttribute("src", "https://lightbox.fcasfs-of.cloud-fs.net/app/pdf.js");
-    scrcodidptwwincfd.setAttribute("onload", 'mfplayeridd(fcas_lightboc_Pdf);');
+    scrcodidptwwincfd.setAttribute("onload", 'mfplayeridd();');
     document.getElementsByTagName("head")[0].appendChild(scrcodidptwwincfd);
 }
 			
@@ -652,7 +650,8 @@ document.getElementsByTagName("body")[0].appendChild(scriptincfd);
             if (optincludeplayer === "yes" && is_player0j === "yes") {
 				function mfplayeridd(){  if (typeof loaded_playerinf === "function"){ loaded_playerinf(start_fs_mpl); }  }
             mfplayeridd();	}   
-			 if(is_player0j === "pdf") {    mfplayeridd();  }
+			 if(is_player0j === "pdf") {  	 function mfplayeridd(){  if (typeof fcas_lightboc_Pdf === "function"){    fcas_lightboc_Pdf(fcas_lightbox_checkValueEX(optiy.content,"config","Lang","en") ||'en',optiy.content || '', fcas_lightbox_checkValueEX(optiy.content,"config","page",1) || 1, "fcas_lightboc_Pdfout");  }  } 
+  mfplayeridd();  }
 
 			
             if (close_fsmofla_strdd === true) {
