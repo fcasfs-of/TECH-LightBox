@@ -173,6 +173,7 @@ function fsmodal_call_menu(id) {
 
 function fsmodal_close(id, hide) {
     if (id && id !== "") {
+lightboxPLclos();
         var mdpl1 = document.getElementById("mdpl1");
         if (mdpl1) {            mdpl1.remove();        }
         var mdpl2 = document.getElementById("mdpl2");
