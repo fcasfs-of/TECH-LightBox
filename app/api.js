@@ -192,6 +192,8 @@ function fsmodal_close(id, hide) {
 }
 
 
+var lightboxPLclos=funcion(){};
+
 var is_player0j= "no";
     var fsmodal_clall_menussd = "";
     var dcurrent_id = 0;
@@ -431,6 +433,8 @@ function loaded_playerinf(dstart_fs_mpl = {}) {
   if (typeof fs_Playerjs === "function") {
        mfplayeri = fs_Playerjs(dstart_fs_mpl);
 	  if(mfplayeri){  
+lightboxPLclos=funcion(){  if(mfplayeri){ mfplayeri.api('destroy'); }  };
+
 		  mfplayeri.OnEvents("init",function(){  
 			  mfplayeri.api('seek',Number(stringno_valtext(dstart_fs_mpl.config.pos_time,"0")));    
 			  mfplayeri.api("volume", Number(stringno_valtext(dstart_fs_mpl.config.volume,"1")));  if(stringno_valtext(dstart_fs_mpl.config.volume,"")==""){   mfplayeri.api("volume", 1);    }
@@ -446,7 +450,7 @@ var is_player0j = "no";
 var fsmodal_createdd = "";
 var start_fs_postermpl = "";
 
-function fsmodal_open(optiy) {
+function fsmodal_open(optiy) lightboxPLclos=funcion(){};
     start_fs_mpl = {};
     fsmodal_createdd = "";
     start_fs_postermpl = "";
