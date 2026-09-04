@@ -521,7 +521,7 @@ var scrcontedd = document.createElement("div");
                     </div>
                     <br/><br/>${thumsds_efestr}<br/><br/>
                 </div>
-<style>  #fs_modal_${optiy.id}, #${fs_modal_${optiy.id}_content}, #${fs_modal_${optiy.id}_content} *, #fs_modal_${optiy.id} * {  color:#${fcas_lightbox_checkValueEX(optiy.content,"config","colorText","fff") || "fff"};  }  </style>
+<style>  #fs_modal_${optiy.id}, #fs_modal_${optiy.id}_content {  color:#${fcas_lightbox_checkValueEX(optiy.content,"config","colorText","fff") || "fff"};  }  </style>
                 <div id="cf_menuu"></div>
             `;
 momocsifipsl.appendChild(scrcontedd);    
