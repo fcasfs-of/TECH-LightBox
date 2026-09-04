@@ -296,7 +296,9 @@ function fsmodal_create(optiy, app) {
                 start_fs_mpl = {
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
-                       OSD_Lang:fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
+coloricons:fcas_lightbox_checkValueEX(optiy,"config","colorIcon","fff") || "fff",
+colortexts:fcas_lightbox_checkValueEX(optiy,"config","colorText","fff") || "fff",
+                    OSD_Lang:fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
                        OSD_Events:fcas_lightbox_checkValueEX(optiy,"config","OSD_Events",[]) || [],
                        osd:{  theme:fcas_lightbox_checkValueEX(optiy,"config","OSD_Theme","dark"), duration:3e3, width:"auto" },
                        volume:fcas_lightbox_checkValueEX(optiy,"config","volume","1"),
@@ -325,6 +327,8 @@ function fsmodal_create(optiy, app) {
                 start_fs_mpl = {
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
+coloricons:fcas_lightbox_checkValueEX(optiy,"config","colorIcon","fff") || "fff",
+colortexts:fcas_lightbox_checkValueEX(optiy,"config","colorText","fff") || "fff",
                        OSD_Lang:fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
                        OSD_Events:fcas_lightbox_checkValueEX(optiy,"config","OSD_Events",[]) || [],
                        osd:{  theme:fcas_lightbox_checkValueEX(optiy,"config","OSD_Theme","dark"), duration:3e3, width:"auto" },
