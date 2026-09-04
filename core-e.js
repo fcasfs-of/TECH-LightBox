@@ -181,6 +181,17 @@ document.getElementById('btnLink').addEventListener('click', (e) => {
     },e);
   });
 
+ document.getElementById('btnPDF').addEventListener('click', (e) => {
+    openModal({
+      title: "PDF",
+      type: "pdf",
+      context:"https://fcasfs-of.cloud-fs.net/docs/tech-player-en.pdf",
+      size: "450",
+      includePlayer: "no",
+      description: ""
+    },e);
+  });
+
 
 
 
