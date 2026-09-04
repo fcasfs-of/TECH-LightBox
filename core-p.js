@@ -184,7 +184,7 @@ document.getElementById('btnCarrossel').addEventListener('click', (e) => {
     openModal({
       title: "PDF",
       type: "pdf",
-      context:"https://fcasfs-of.cloud-fs.net/docs/tech-player-en.pdf",
+      context:"https://fcasfs-of.cloud-fs.net/docs/tech-player-br.pdf",
       size: "450",
       includePlayer: "no",
       description: ""
