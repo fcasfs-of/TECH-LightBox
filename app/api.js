@@ -16,7 +16,6 @@ if (!document.getElementById("fcasfs_script-lightbox-pdf-core")) {
     var scrcodidptwwincfd = document.createElement("script");
     scrcodidptwwincfd.id = "fcasfs_script-lightbox-pdf-core";
     scrcodidptwwincfd.setAttribute("src", "https://lightbox.fcasfs-of.cloud-fs.net/app/pdf.js");
-    scrcodidptwwincfd.setAttribute("onload", 'mfplayeridd();');
     document.getElementsByTagName("head")[0].appendChild(scrcodidptwwincfd);
 }
 
