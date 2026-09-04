@@ -76,10 +76,10 @@ var modaisDisponiveis = {
     return {
       title: "LightBox",
       type: "texto",
-      context: "Lightbox is an innovative app that offers an integrated experience for viewing and interacting with text, carousel, Playlist, list, graphic, links, Table, SVG, images, audio, and videos in an intuitive and modern way. <br/> With a clean and responsive interface, the app allows users to explore multimedia content efficiently, providing fluid and engaging navigation.",
+      context: "Lightbox is an innovative app that offers an integrated experience for viewing and interacting with text, carousel, PDF, Playlist, list, graphic, links, Table, SVG, images, audio, and videos in an intuitive and modern way. <br/> With a clean and responsive interface, the app allows users to explore multimedia content efficiently, providing fluid and engaging navigation.",
       size: "250",
       includePlayer: "no",
-      description: "(Text, Playlist, Link, SVG, Carousel, Graphic, Table, List, Video, Image and Audio)"
+      description: "(Text, PDF, Playlist, Link, SVG, Carousel, Graphic, Table, List, Video, Image and Audio)"
     };
   },
   'btnTable': function() {
