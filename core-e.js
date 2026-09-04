@@ -50,6 +50,7 @@ function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carre
   }
 
 
+
 var modaisDisponiveis = {
   'btnCarrossel': function() {
     return {
@@ -179,8 +180,7 @@ var modaisDisponiveis = {
       includePlayer: "no",
       description: ""
     };
-  },
-  
+  }
 };
 
 
@@ -190,7 +190,7 @@ for (var idBotao in modaisDisponiveis) {
   if (elemento) {
     elemento.addEventListener('click', function(evento) {
       var dadosModal = modaisDisponiveis[idBotao]();
-      if(dadosModal){  openModal(dadosModal, evento);    }
+     openModal(dadosModal, evento); 
     });
   }
 }
