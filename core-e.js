@@ -75,7 +75,7 @@ var modaisDisponiveis = {
   'btnText': function() {
     return {
       title: "LightBox",
-      type: "",
+      type: "texto",
       context: "Lightbox is an innovative app that offers an integrated experience for viewing and interacting with text, carousel, Playlist, list, graphic, links, Table, SVG, images, audio, and videos in an intuitive and modern way. <br/> With a clean and responsive interface, the app allows users to explore multimedia content efficiently, providing fluid and engaging navigation.",
       size: "250",
       includePlayer: "no",
@@ -186,7 +186,7 @@ var modaisDisponiveis = {
 
 
 
-for (var idBotao in modaisDisponiveis) {
+modaisDisponiveis.forEach(function(idBotao) {
   var elemento = document.getElementById(idBotao);
   if (elemento) {
     elemento.addEventListener('click', function(evento) {
@@ -196,7 +196,7 @@ for (var idBotao in modaisDisponiveis) {
       }
     });
   }
-}
+});
 
 
 
