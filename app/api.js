@@ -399,11 +399,12 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                 start_fs_mpl = {
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
-coloricons:fcas_lightbox_checkValueEX(optiy,"config","colorIcon","fff") || "fff",
-colortexts:fcas_lightbox_checkValueEX(optiy,"config","colorText","fff") || "fff",
+                    coloricons:fcas_lightbox_checkValueEX(optiy,"config","colorIcon","fff") || "fff",
+                    colortexts:fcas_lightbox_checkValueEX(optiy,"config","colorText","fff") || "fff",
                     OSD_Lang:fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
+                    OSD_Pos:"top-"+fcas_lightbox_checkValueEX(optiy,"config","OSD_Pos","center") || "center",
                        OSD_Events:fcas_lightbox_checkValueEX(optiy,"config","OSD_Events",[]) || [],
-                       osd:{  theme:fcas_lightbox_checkValueEX(optiy,"config","OSD_Theme","dark"), duration:3e3, width:"auto" },
+                       osd:{  theme:fcas_lightbox_checkValueEX(optiy,"config","OSD_Theme","dark"), duration:fcas_lightbox_checkValueEX(optiy,"config","OSD_Time",3e3) || 3e3, width:"auto" },
                        volume:fcas_lightbox_checkValueEX(optiy,"config","volume","1"),
                        pos_time:fcas_lightbox_checkValueEX(optiy,"config","pos_time","0")
                     },
@@ -430,11 +431,12 @@ colortexts:fcas_lightbox_checkValueEX(optiy,"config","colorText","fff") || "fff"
                 start_fs_mpl = {
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
-coloricons:fcas_lightbox_checkValueEX(optiy,"config","colorIcon","fff") || "fff",
-colortexts:fcas_lightbox_checkValueEX(optiy,"config","colorText","fff") || "fff",
+                    coloricons:fcas_lightbox_checkValueEX(optiy,"config","colorIcon","fff") || "fff",
+                    colortexts:fcas_lightbox_checkValueEX(optiy,"config","colorText","fff") || "fff",
                        OSD_Lang:fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
+                       OSD_Pos:"top-"+fcas_lightbox_checkValueEX(optiy,"config","OSD_Pos","center") || "center",
                        OSD_Events:fcas_lightbox_checkValueEX(optiy,"config","OSD_Events",[]) || [],
-                       osd:{  theme:fcas_lightbox_checkValueEX(optiy,"config","OSD_Theme","dark"), duration:3e3, width:"auto" },
+                       osd:{  theme:fcas_lightbox_checkValueEX(optiy,"config","OSD_Theme","dark"), duration:fcas_lightbox_checkValueEX(optiy,"config","OSD_Time",3e3) || 3e3, width:"auto" },
                        volume:fcas_lightbox_checkValueEX(optiy,"config","volume","1"),
                        pos_time:fcas_lightbox_checkValueEX(optiy,"config","pos_time","0")
                     },
@@ -534,9 +536,9 @@ function registerPlayerOSDEvents(plobf, eventsList, lang = "pt", openf_osdcd_tim
 
 
 
-function playerfs_osf_evensdef(eventsList, lang = "pt", plobf,timf){    var osdposito="top-center";    var osdpositdo="absolute";   var openf_osdcd_time=timf;
+function playerfs_osf_evensdef(eventsList, lang = "pt", plobf,timf,kk){    
 if(plobf){
-registerPlayerOSDEvents(plobf, eventsList, lang || "pt", openf_osdcd_time,osdpositdo,osdposito);
+registerPlayerOSDEvents(plobf, eventsList, lang || "pt", timf,"absolute",kk || "top-center");
  }    }
 
 
@@ -550,7 +552,7 @@ lightboxPLclos=function(){  if(mfplayeri){ mfplayeri.api('destroy'); }  };
 			  mfplayeri.api('seek',Number(stringno_valtext(dstart_fs_mpl.config.pos_time,"0")));    
 			  mfplayeri.api("volume", Number(stringno_valtext(dstart_fs_mpl.config.volume,"1")));  if(stringno_valtext(dstart_fs_mpl.config.volume,"")==""){   mfplayeri.api("volume", 1);    }
 		});
-   }           if(dstart_fs_mpl.OSD==true){   playerfs_osf_evensdef(dstart_fs_mpl.config.OSD_Events || [], dstart_fs_mpl.config.OSD_Lang || "en", mfplayeri, 3e3);    }
+   }           if(dstart_fs_mpl.OSD==true){   playerfs_osf_evensdef(dstart_fs_mpl.config.OSD_Events || [], dstart_fs_mpl.config.OSD_Lang || "en", mfplayeri, dstart_fs_mpl.config.osd.duration || 3e3, dstart_fs_mpl.config.OSD_Pos || "top-center");    }
 }   }
 
 
