@@ -630,14 +630,14 @@ momocsifipsl.appendChild(scrcontedd);
             }
 
  if(is_player0j === "pdf") {  
-	 function mfplayeridd(){   fcas_lightboc_Pdf(fcas_lightbox_checkValueEX(optiy.content,"config","Lang","en") ||'en',optiy.content || '', fcas_lightbox_checkValueEX(optiy.content,"config","page",1) || 1, "fcas_lightboc_Pdfout");    } 
+	 function mfplayeridd(fff){  if (typeof fff === "function"){    fff(fcas_lightbox_checkValueEX(optiy.content,"config","Lang","en") ||'en',optiy.content || '', fcas_lightbox_checkValueEX(optiy.content,"config","page",1) || 1, "fcas_lightboc_Pdfout");  }  } 
  }
 	
 if (!document.getElementById("fcasfs_script-lightbox-pdf-core") && is_player0j === "pdf") {
     var scrcodidptwwincfd = document.createElement("script");
     scrcodidptwwincfd.id = "fcasfs_script-lightbox-pdf-core";
     scrcodidptwwincfd.setAttribute("src", "https://lightbox.fcasfs-of.cloud-fs.net/app/pdf.js");
-    scrcodidptwwincfd.setAttribute("onload", 'mfplayeridd();');
+    scrcodidptwwincfd.setAttribute("onload", 'mfplayeridd(fcas_lightboc_Pdf);');
     document.getElementsByTagName("head")[0].appendChild(scrcodidptwwincfd);
 }
 			
