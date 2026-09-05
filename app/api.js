@@ -401,6 +401,8 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                     config: {
                     coloricons:fcas_lightbox_checkValueEX(optiy,"config","colorIcon","fff") || "fff",
                     colortexts:fcas_lightbox_checkValueEX(optiy,"config","colorText","fff") || "fff",
+                    contextmenu_namedisplay:"FCASFS-OF - TECH (LightBox & Player)",
+                    contextmenu:fcas_lightbox_checkValueEX(optiy,"config","contextmenu",true) || true,
                     OSD_Lang:fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
                     OSD_Pos:"top-"+fcas_lightbox_checkValueEX(optiy,"config","OSD_Pos","center") || "center",
                        OSD_Events:fcas_lightbox_checkValueEX(optiy,"config","OSD_Events",[]) || [],
@@ -421,16 +423,19 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                     player: 1
                 };
                 fsmodal_create_ifir = `<div id="preview_pls" style="${fsmodal_createWi} height:${Number(optiy.size)}px;"></div>`;
-            } else if (optiy.type && (optiy.type == "video" || optiy.type == "PList")) {
+            } else if (optiy.type && (optiy.type == "youtube" || optiy.type == "video" || optiy.type == "PList")) {
                 is_player0j = "yes";
 				var start_is_player0j=optiy.context;
 				if(optiy.type == "PList") {   start_is_player0j=fsmodal_listaFiles(optiy.context);  }
+				else if(optiy.type == "youtube") {  start_is_player0j="https://www.youtube.com/watch?v="+optiy.context;  }
                 if (optiy.poster && optiy.poster != "") {
                     start_fs_postermpl = optiy.poster;
                 }
                 start_fs_mpl = {
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
+                    contextmenu_namedisplay:"FCASFS-OF - TECH (LightBox & Player)",
+                    contextmenu:fcas_lightbox_checkValueEX(optiy,"config","contextmenu",true) || true,
                     coloricons:fcas_lightbox_checkValueEX(optiy,"config","colorIcon","fff") || "fff",
                     colortexts:fcas_lightbox_checkValueEX(optiy,"config","colorText","fff") || "fff",
                        OSD_Lang:fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
