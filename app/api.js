@@ -401,7 +401,7 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                     config: {
                     coloricons:fcas_lightbox_checkValueEX(optiy,"config","colorIcon","fff") || "fff",
                     colortexts:fcas_lightbox_checkValueEX(optiy,"config","colorText","fff") || "fff",
-                    contextmenu_namedisplay:"FCASFS-OF - TECH (LightBox & Player)",
+                    contextmenu_namedisplay:"",
                     contextmenu:fcas_lightbox_checkValueEX(optiy,"config","contextmenu",true) || true,
                     OSD_Lang:fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
                     OSD_Pos:"top-"+fcas_lightbox_checkValueEX(optiy,"config","OSD_Pos","center") || "center",
@@ -434,7 +434,7 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                 start_fs_mpl = {
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
-                    contextmenu_namedisplay:"FCASFS-OF - TECH (LightBox & Player)",
+                    contextmenu_namedisplay:"",
                     contextmenu:fcas_lightbox_checkValueEX(optiy,"config","contextmenu",true) || true,
                     coloricons:fcas_lightbox_checkValueEX(optiy,"config","colorIcon","fff") || "fff",
                     colortexts:fcas_lightbox_checkValueEX(optiy,"config","colorText","fff") || "fff",
