@@ -51,7 +51,7 @@ function fcas_lightbox_criarPlaylist(e){if(!document.getElementById("v-playlist-
 
 
 var lightboxPLclos=function(){};
-var lightboxPLclos_mod=function(){};   var lightboxPLclop_mod=function(){};
+var lightboxPLclos_mod=function(){};   var lightboxPLclop_mod=function(){};    var lightboxPLclayer_mod=function(){};
 
 
 function fcas_lightboc_Pdf(idioma, linkPdf, pg, idElemento) {
@@ -272,6 +272,7 @@ if(lightboxPLclos_mod){  lightboxPLclos_mod();  }
         var modalElement = document.getElementById(id);
         if (modalElement) {
 			lightboxPLclop_mod=function(){  };
+			lightboxPLclayer_mod=function(){   };
 			lightboxPLclos_mod=function(){  };
             modalElement.innerHTML = "";
             if (hide && hide === "yes") {
@@ -565,6 +566,8 @@ function loaded_playerinf(dstart_fs_mpl = {}) {
 lightboxPLclos=function(){  if(dstart_fs_mpl.id && dstart_fs_mpl.id!="" && document.getElementById(dstart_fs_mpl.id)){  document.getElementById(dstart_fs_mpl.id).remove();  }  };
 
 		  mfplayeri.OnEvents("init",function(){  
+			  mfplayeri.OnEvents("start",function(){   lightboxPLclayer_mod({ title:mfplayeri.api("title") }); });
+
 			  mfplayeri.api('seek',Number(stringno_valtext(dstart_fs_mpl.config.pos_time,"0")));    
 			  mfplayeri.api("volume", Number(stringno_valtext(dstart_fs_mpl.config.volume,"1")));  if(stringno_valtext(dstart_fs_mpl.config.volume,"")==""){   mfplayeri.api("volume", 1);    }
 			  if(dstart_fs_mpl.config.mute && dstart_fs_mpl.config.mute=="1"){  mfplayeri.api('mute');      }
@@ -585,6 +588,7 @@ function fsmodal_open(optiy){
  lightboxPLclos=function(){   };
  lightboxPLclos_mod=function(){   if(optiy.onClose && typeof optiy.onClose === 'function'){   optiy.onClose({ title:""+optiy.content.title || "", tipo:""+optiy.content.type || "none" });  }  };
 lightboxPLclop_mod=function(onh){   if(onh && optiy.onOpen && typeof optiy.onOpen === 'function'){   optiy.onOpen(onh);  }  };
+lightboxPLclayer_mod=function(onh){   if(onh && optiy.onPlayer && typeof optiy.onPlayer === 'function'){   optiy.onPlayer(onh);  }  };
 	
     start_fs_mpl = {};
     fsmodal_createdd = "";
