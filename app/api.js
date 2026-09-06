@@ -564,7 +564,7 @@ registerPlayerOSDEvents(plobf, eventsList, lang || "pt", timf,"absolute",kk || "
 
 function loaded_playerinf(dstart_fs_mpl = {}) {
   if (typeof fs_Playerjs === "function") {
-       mfplayeri = fs_Playerjs(dstart_fs_mpl);
+       var mfplayeri = fs_Playerjs(dstart_fs_mpl);
 	  if(mfplayeri){  
 lightboxPLclos=function(){  if(dstart_fs_mpl.id && dstart_fs_mpl.id!="" && document.getElementById(dstart_fs_mpl.id)){  document.getElementById(dstart_fs_mpl.id).remove();  }  };
 lightboxPLcloapis=function() {    if (typeof mfplayeri !== "undefined" && mfplayeri && typeof mfplayeri.api === "function") mfplayeri.api("destroy");    }
