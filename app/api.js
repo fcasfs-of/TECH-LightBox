@@ -625,7 +625,7 @@ var scrcontedd = document.createElement("div");
 			scrcontedd.innerHTML = `
                 <div class="modal${close_fsmofla_efestr}" id="fs_modal_${optiy.id}" style="display:block; color:#000;">
                     <span class="bngl">${btnys_fsmofla_efestr}</span>
-                    <span class="bngd" ${fsmodal_open_tipf}>${close_fsmofla_str}</span>
+                    <span class="bngd">${close_fsmofla_str}</span>
                     <div style="overflow:auto;" class="modal-content" id="fs_modal_${optiy.id}_content">
                         ${fsmodal_create(optiy.content, optiy.include ? optiy.include.player : "")} <br/>
                    <br/> </div>
