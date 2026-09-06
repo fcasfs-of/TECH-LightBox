@@ -402,16 +402,17 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                 start_fs_mpl = {
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
+                    mute:""+fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","mute",true)) || 1,
                     coloricons:fcas_lightbox_checkValueEX(optiy,"config","colorIcon","fff") || "fff",
                     colortexts:fcas_lightbox_checkValueEX(optiy,"config","colorText","fff") || "fff",
                     contextmenu_namedisplay:"",
                     contextmenu:""+fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","contextmenu",true)) || 1,
                     OSD_Lang:fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
                     OSD_Pos:"top-"+fcas_lightbox_checkValueEX(optiy,"config","OSD_Pos","center") || "center",
-                       OSD_Events:fcas_lightbox_checkValueEX(optiy,"config","OSD_Events",[]) || [],
-                       osd:{  theme:fcas_lightbox_checkValueEX(optiy,"config","OSD_Theme","dark"), duration:fcas_lightbox_checkValueEX(optiy,"config","OSD_Time",3e3) || 3e3, width:"auto" },
-                       volume:fcas_lightbox_checkValueEX(optiy,"config","volume","1"),
-                       pos_time:fcas_lightbox_checkValueEX(optiy,"config","pos_time","0")
+                    OSD_Events:fcas_lightbox_checkValueEX(optiy,"config","OSD_Events",[]) || [],
+                    osd:{  theme:fcas_lightbox_checkValueEX(optiy,"config","OSD_Theme","dark"), duration:fcas_lightbox_checkValueEX(optiy,"config","OSD_Time",3e3) || 3e3, width:"auto" },
+                    volume:fcas_lightbox_checkValueEX(optiy,"config","volume","1"),
+                    pos_time:fcas_lightbox_checkValueEX(optiy,"config","pos_time","0")
                     },
                     id: "preview_pls",
                     customtext: { age: fcas_lightbox_checkValueEX(optiy,"config","txt","") || "" },
@@ -438,15 +439,16 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
                     contextmenu_namedisplay:"",
+                    mute:""+fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","mute",true)) || 1,
                     contextmenu:""+fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","contextmenu",true)) || 1,
                     coloricons:fcas_lightbox_checkValueEX(optiy,"config","colorIcon","fff") || "fff",
                     colortexts:fcas_lightbox_checkValueEX(optiy,"config","colorText","fff") || "fff",
-                       OSD_Lang:fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
-                       OSD_Pos:"top-"+fcas_lightbox_checkValueEX(optiy,"config","OSD_Pos","center") || "center",
-                       OSD_Events:fcas_lightbox_checkValueEX(optiy,"config","OSD_Events",[]) || [],
-                       osd:{  theme:fcas_lightbox_checkValueEX(optiy,"config","OSD_Theme","dark"), duration:fcas_lightbox_checkValueEX(optiy,"config","OSD_Time",3e3) || 3e3, width:"auto" },
-                       volume:fcas_lightbox_checkValueEX(optiy,"config","volume","1"),
-                       pos_time:fcas_lightbox_checkValueEX(optiy,"config","pos_time","0")
+                    OSD_Lang:fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
+                    OSD_Pos:"top-"+fcas_lightbox_checkValueEX(optiy,"config","OSD_Pos","center") || "center",
+                    OSD_Events:fcas_lightbox_checkValueEX(optiy,"config","OSD_Events",[]) || [],
+                    osd:{  theme:fcas_lightbox_checkValueEX(optiy,"config","OSD_Theme","dark"), duration:fcas_lightbox_checkValueEX(optiy,"config","OSD_Time",3e3) || 3e3, width:"auto" },
+                    volume:fcas_lightbox_checkValueEX(optiy,"config","volume","1"),
+                    pos_time:fcas_lightbox_checkValueEX(optiy,"config","pos_time","0")
                     },
                     id: "preview_pls",
                     customtext: { age: fcas_lightbox_checkValueEX(optiy,"config","txt","") || "" },
