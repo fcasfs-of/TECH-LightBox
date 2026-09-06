@@ -600,6 +600,7 @@ function mfplayeridd(){  }
     }
     if (optiy && optiy.id != "") {
 	 lightboxPLclos_mod=function(onh){   if(onh && optiy.onClose && typeof optiy.onClose === 'function'){   optiy.onClose(onh);  }  };
+	if(optiy.onOpen && optiy.onOpen === 'function'){   optiy.onOpen({ id: ""+optiy.id || "", title:""+optiy.content.title || "", tipo:""+optiy.content.type || "none" });  } 
 
         var fsmodal_offpen_tipf = "";
         var fsmodal_open_tipf = "";
@@ -647,8 +648,6 @@ var scrcontedd = document.createElement("div");
               <div id="${optiy.id}_menu"></div>
             `;
 momocsifipsl.appendChild(scrcontedd);    
-
-	if(optiy.onOpen && optiy.onOpen === 'function'){   optiy.onOpen({ id: ""+optiy.id || "", title:""+optiy.content.title || "", tipo:""+optiy.content.type || "none" });  } 
 
 	var mffomocsifipsl = document.getElementById("fs_modal_" + optiy.id);
             if (mffomocsifipsl && optiy.click_close && optiy.click_close === true) {
