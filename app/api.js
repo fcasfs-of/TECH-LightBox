@@ -681,7 +681,7 @@ document.getElementsByTagName("body")[0].appendChild(scriptincfd);
             if (close_fsmofla_strdd === true) {
                
             }
-            if(optiy.onOpen && optiy.onOpen === 'function'){   optiy.onOpen({ id: optiy.id || "", title:fcas_lightbox_checkValueEX(optiy,"content","title","") || "", type:fcas_lightbox_checkValueEX(optiy,"content","type","none") || "none" });  } 
+            if(optiy.onOpen && optiy.onOpen === 'function'){   optiy.onOpen({ id: optiy.id || "", title:optiy.content.title || "", type:optiy.content.type || "none" });  } 
 			
 			if (optiy.scroll_hide && optiy.scroll_hide == "yes") {
                 document.body.style.overflow = "hidden";
