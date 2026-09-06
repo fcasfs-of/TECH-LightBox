@@ -671,6 +671,8 @@ if (!document.getElementById("fcasfs_script-api-player") && optincludeplayer ===
 document.getElementsByTagName("body")[0].appendChild(scriptincfd);  
 }
 
+             if(optiy.onOpen && optiy.onOpen === 'function'){   optiy.onOpen({ id: optiy.id || "", title:optiy.content.title || "", type:optiy.content.type || "none" });  } 
+
             if (optincludeplayer === "yes" && is_player0j === "yes") {
 				function mfplayeridd(){  if (typeof loaded_playerinf === "function"){ loaded_playerinf(start_fs_mpl); }  }
             mfplayeridd();	}   
@@ -681,7 +683,6 @@ document.getElementsByTagName("body")[0].appendChild(scriptincfd);
             if (close_fsmofla_strdd === true) {
                
             }
-            if(optiy.onOpen && optiy.onOpen === 'function'){   optiy.onOpen({ id: optiy.id || "", title:optiy.content.title || "", type:optiy.content.type || "none" });  } 
 			
 			if (optiy.scroll_hide && optiy.scroll_hide == "yes") {
                 document.body.style.overflow = "hidden";
