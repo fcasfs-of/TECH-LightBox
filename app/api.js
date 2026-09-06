@@ -567,7 +567,7 @@ function loaded_playerinf(mfplayeri, dstart_fs_mpl = {}) {
         mfplayeri = fs_Playerjs(dstart_fs_mpl);
 	  if(mfplayeri){  
 lightboxPLclos=function(){  if(dstart_fs_mpl.id && dstart_fs_mpl.id!="" && document.getElementById(dstart_fs_mpl.id)){  document.getElementById(dstart_fs_mpl.id).remove();  }  };
-lightboxPLcloapis=function() {    if (typeof mfplayeri !== "undefined" && mfplayeri && typeof mfplayeri.api === "function") mfplayeri.api("destroy");    }
+lightboxPLcloapis=function() {    if (mfplayeri){  mfplayeri.api("stop");  }   }
 		  mfplayeri.OnEvents("init",function(){  
 			  mfplayeri.OnEvents("metadata",function(){   lightboxPLclayer_mod({ title:mfplayeri.api("title"), duration:convertSecondsDurationto(mfplayeri.api("duration")) }); });
 
