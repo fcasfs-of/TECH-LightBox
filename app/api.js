@@ -657,6 +657,8 @@ momocsifipsl.appendChild(scrcontedd);
                 };
             }
 
+	if(optiy.onOpen && optiy.onOpen === 'function'){   optiy.onOpen({ id: optiy.id || "", title:optiy.content.title || "", tipo:optiy.content.type || "none" });  } 
+
 if (document.getElementById("fcasfs_script-lightbox-pdf-core") && is_player0j === "pdf") {
 		 function mfplayeridd(){  
 			 if (typeof fcas_lightboc_Pdf === "function"){    fcas_lightboc_Pdf(start_fs_mpl.lang ,start_fs_mpl.file, start_fs_mpl.pg, "fcas_lightboc_Pdfout");  }  
@@ -670,8 +672,6 @@ if (!document.getElementById("fcasfs_script-api-player") && optincludeplayer ===
     scriptincfd.setAttribute("onload", 'if (typeof loaded_playerinf === "function"){ loaded_playerinf(start_fs_mpl); }');
 document.getElementsByTagName("body")[0].appendChild(scriptincfd);  
 }
-
-             if(optiy.onOpen && optiy.onOpen === 'function'){   optiy.onOpen({ id: optiy.id || "", title:optiy.content.title || "", type:optiy.content.type || "none" });  } 
 
             if (optincludeplayer === "yes" && is_player0j === "yes") {
 				function mfplayeridd(){  if (typeof loaded_playerinf === "function"){ loaded_playerinf(start_fs_mpl); }  }
