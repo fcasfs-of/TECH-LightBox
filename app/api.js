@@ -583,7 +583,7 @@ var start_fs_postermpl = "";
 
 function fsmodal_open(optiy){
  lightboxPLclos=function(){   };
- lightboxPLclos_mod=function(onh){   if(onh && optiy.onClose && typeof optiy.onClose === 'function'){   optiy.onClose(onh);  }  };
+ lightboxPLclos_mod=function(){   if(optiy.onClose && typeof optiy.onClose === 'function'){   optiy.onClose({ title:""+optiy.content.title || "", tipo:""+optiy.content.type || "none" });  }  };
 lightboxPLclop_mod=function(onh){   if(onh && optiy.onOpen && typeof optiy.onOpen === 'function'){   optiy.onOpen(onh);  }  };
 	
     start_fs_mpl = {};
