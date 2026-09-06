@@ -266,6 +266,8 @@ function fsmodal_call_menu(id) {
 
 function fsmodal_close(id, hide) {
     if (id && id !== "") {
+if (typeof mfplayeri !== "undefined" && mfplayeri && typeof mfplayeri.api === "function") mfplayeri.api("destroy");
+
 if(lightboxPLclos){  lightboxPLclos();  }
 if(lightboxPLclos_mod){  lightboxPLclos_mod();  }
 		
