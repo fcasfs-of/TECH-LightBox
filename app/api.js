@@ -568,7 +568,7 @@ function loaded_playerinf(dstart_fs_mpl = {}) {
 lightboxPLclos=function(){  if(dstart_fs_mpl.id && dstart_fs_mpl.id!="" && document.getElementById(dstart_fs_mpl.id)){  document.getElementById(dstart_fs_mpl.id).remove();  }  };
 
 		  mfplayeri.OnEvents("init",function(){  
-			  mfplayeri.OnEvents("metadata",function(){   lightboxPLclayer_mod({ title:mfplayeri.api("title"), volume:Math.floor(Number(stringno_valtext(dstart_fs_mpl.config.volume,"1")) * 100) + "%", time:convertSecondsDurationto(Number(stringno_valtext(dstart_fs_mpl.config.pos_time,"0"))) }); });
+			  mfplayeri.OnEvents("metadata",function(){   lightboxPLclayer_mod({ title:mfplayeri.api("title"), duration:convertSecondsDurationto(mfplayeri.api("duration")) }); });
 
 			  mfplayeri.api('seek',Number(stringno_valtext(dstart_fs_mpl.config.pos_time,"0")));    
 			  mfplayeri.api("volume", Number(stringno_valtext(dstart_fs_mpl.config.volume,"1")));  if(stringno_valtext(dstart_fs_mpl.config.volume,"")==""){   mfplayeri.api("volume", 1);    }
