@@ -358,7 +358,7 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";
                         stdart_fs_mpl_argsd += "&fileSelect=" + optiy.config.select;
                     }
                 }
-                fsmodal_create_ifir = `<iframe scrolling="no" allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation" frameborder="0" allowfullscreen src="https://player.fcasfs-of.cloud-fs.net?fileID=${optiy.context}${start_fs_mpl_args}&fileView=true${stdart_fs_mpl_argsd}" style="overflow: hidden; ${fsmodal_createWi} height: ${Number(optiy.size)}px;   display: block; "></iframe>`;
+                fsmodal_create_ifir = `<iframe scrolling="no" allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation" frameborder="0" allowfullscreen src="https://player.fcasfs-of.cloud-fs.net?fileID=${optiy.context}${start_fs_mpl_args}&fileView=true${stdart_fs_mpl_argsd}" style="overflow: hidden; ${fsmodal_createWi} height: ${Number(optiy.size)}px !important;   display: block; "></iframe>`;
             } else if (optiy.type && optiy.type == "list") {
                 is_player0j = "no";
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi}">  ${fcas_lightbox_islisted({  lista: optiy.context, posicao: fcas_lightbox_checkValueEX(optiy,"config","posicao","centro"), largura: '100%', cores: { bordaEscura: '#ccc', fundo: '#ffffff', texto: '#333333' }, alinhamento: fcas_lightbox_checkValueEX(optiy,"config","alinhamento","left"), arredondado: fcas_lightbox_checkValueEX(optiy,"config","arredondado","16px"), tema: fcas_lightbox_checkValueEX(optiy,"config","tema","escuro"), divisor: fcas_lightbox_checkValueEX(optiy,"config","divisor",true),  marcador: fcas_lightbox_checkValueEX(optiy,"config","marcador","") })}  </div>`;
@@ -380,7 +380,7 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  <div id="fcas_lightboc_Pdfout"></div>  </div>`;
             } else if (optiy.type && optiy.type == "link") {
                 is_player0j = "no";
-                fsmodal_create_ifir = `<iframe allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation" frameborder="0" allowfullscreen src="${optiy.context}" style="${fsmodal_createWi} height: ${Number(optiy.size)}px;  display: block; "></iframe>`;
+                fsmodal_create_ifir = `<iframe allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation" frameborder="0" allowfullscreen src="${optiy.context}" style="${fsmodal_createWi} height: ${Number(optiy.size)}px !important;  display: block; "></iframe>`;
             } else if (optiy.type && optiy.type == "image") {
 var is_player0jmgtrt="";
                 is_player0j = "no";
@@ -435,7 +435,7 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                     poster: start_fs_postermpl,
                     player: 1
                 };
-                fsmodal_create_ifir = `<span style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;"> <div id="preview_pls" style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;"></div>  </span>`;
+                fsmodal_create_ifir = `<div id="preview_pls" style="${fsmodal_createWi}  height:${Number(optiy.size)}px !important;"></div>`;
             } else if (optiy.type && (optiy.type == "youtube" || optiy.type == "video" || optiy.type == "PList")) {
                 is_player0j = "yes";
 				var start_is_player0j=optiy.context;
@@ -472,7 +472,7 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                     poster: start_fs_postermpl,
                     player: 1
                 };
-                fsmodal_create_ifir = `<span style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  <div id="preview_pls" style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;"></div>  </span>`;
+                fsmodal_create_ifir = `<div id="preview_pls" style="${fsmodal_createWi}  height:${Number(optiy.size)}px !important;"></div>`;
             }
             fsmodal_createdd += `<span class="tlightboc_fcasfs" style="overflow:auto; padding:6px; margin: 0 auto; width:96%; text-align:center; display:block; color:#fff;">${fsmodal_create_ifir} ${fsmodal_create_desci} <br/><br/><br/><br/></span><br/><br/>`;
         }
