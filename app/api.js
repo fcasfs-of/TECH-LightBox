@@ -402,7 +402,6 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                 start_fs_mpl = {
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
-                    mute:""+fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","mute",false)) || 0,
                     coloricons:fcas_lightbox_checkValueEX(optiy,"config","colorIcon","fff") || "fff",
                     colortexts:fcas_lightbox_checkValueEX(optiy,"config","colorText","fff") || "fff",
                     contextmenu_namedisplay:"",
@@ -424,6 +423,7 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                     title: optiy.title,
                     file: optiy.context,
                     poster: start_fs_postermpl,
+                    mute:fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","mute",false)) || 0,
                     player: 1
                 };
                 fsmodal_create_ifir = `<div id="preview_pls" style="${fsmodal_createWi} height:${Number(optiy.size)}px;"></div>`;
@@ -439,7 +439,6 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
                     contextmenu_namedisplay:"",
-                    mute:""+fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","mute",false)) || 0,
                     contextmenu:""+fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","contextmenu",true)) || 1,
                     coloricons:fcas_lightbox_checkValueEX(optiy,"config","colorIcon","fff") || "fff",
                     colortexts:fcas_lightbox_checkValueEX(optiy,"config","colorText","fff") || "fff",
@@ -460,6 +459,7 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                     title: optiy.title,
                     file: start_is_player0j,
                     poster: start_fs_postermpl,
+                    mute:fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","mute",false)) || 0,
                     player: 1
                 };
                 fsmodal_create_ifir = `<div id="preview_pls" style="${fsmodal_createWi} height:${Number(optiy.size)}px;"></div>`;
