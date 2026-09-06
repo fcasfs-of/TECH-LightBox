@@ -554,7 +554,7 @@ function loaded_playerinf(dstart_fs_mpl = {}) {
   if (typeof fs_Playerjs === "function") {
        mfplayeri = fs_Playerjs(dstart_fs_mpl);
 	  if(mfplayeri){  
-lightboxPLclos=function(){  if(mfplayeri){ mfplayeri.api('destroy'); }  };
+lightboxPLclos=function(){  if(document.getElementById("preview_pls")){  document.getElementById("preview_pls").remove();  }  };
 
 		  mfplayeri.OnEvents("init",function(){  
 			  mfplayeri.api('seek',Number(stringno_valtext(dstart_fs_mpl.config.pos_time,"0")));    
