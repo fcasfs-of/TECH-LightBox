@@ -311,6 +311,14 @@ arrayIntfferno[j]={id:"pf"+(j+1),title:arrayInterno[j].title || "",file:arrayInt
 }  return arrayIntfferno;  }
 
 
+  function convertDurationtoSecondsR(duration){
+    const timhdfff= duration.split(':') || "0";
+    if(timhdfff.length==1){      return Number(timhdfff[0]);
+    }  else if(timhdfff.length==2){
+    return Number(timhdfff[0]) * 60 + Number(timhdfff[1]);
+    }  else{      return Number(timhdfff[0]) * 60 * 60 + Number(timhdfff[1]) * 60 + Number(timhdfff[2]);   }
+}
+
 function fsmodal_create(optiy, app) {
 var fsmodal_createWi= " margin:0 auto;  width:95%; ";
      fsmodal_clall_menussd = "";
@@ -413,7 +421,7 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                     OSD_Events:fcas_lightbox_checkValueEX(optiy,"config","OSD_Events",[]) || [],
                     osd:{  theme:fcas_lightbox_checkValueEX(optiy,"config","OSD_Theme","dark"), duration:fcas_lightbox_checkValueEX(optiy,"config","OSD_Time",3e3) || 3e3, width:"auto" },
                     volume:fcas_lightbox_checkValueEX(optiy,"config","volume","1"),
-                    pos_time:""+convertDurationtoSeconds(fcas_lightbox_checkValueEX(optiy,"config","pos_time","0")) || "0"
+                    pos_time:""+convertDurationtoSecondsR(fcas_lightbox_checkValueEX(optiy,"config","pos_time","0")) || "0"
                     },
                     id: "preview_pls",
                     customtext: { age: fcas_lightbox_checkValueEX(optiy,"config","txt","") || "" },
@@ -450,7 +458,7 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                     OSD_Events:fcas_lightbox_checkValueEX(optiy,"config","OSD_Events",[]) || [],
                     osd:{  theme:fcas_lightbox_checkValueEX(optiy,"config","OSD_Theme","dark"), duration:fcas_lightbox_checkValueEX(optiy,"config","OSD_Time",3e3) || 3e3, width:"auto" },
                     volume:fcas_lightbox_checkValueEX(optiy,"config","volume","1"),
-                    pos_time:""+convertDurationtoSeconds(fcas_lightbox_checkValueEX(optiy,"config","pos_time","0")) || "0"
+                    pos_time:""+convertDurationtoSecondsR(fcas_lightbox_checkValueEX(optiy,"config","pos_time","0")) || "0"
                     },
                     id: "preview_pls",
                     customtext: { age: fcas_lightbox_checkValueEX(optiy,"config","txt","") || "" },
