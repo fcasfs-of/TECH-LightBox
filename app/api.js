@@ -276,7 +276,7 @@ if(lightboxPLclos_mod){  lightboxPLclos_mod();  }
 			lightboxPLclop_mod=function(){  };
 			lightboxPLclayer_mod=function(){   };
 			lightboxPLclos_mod=function(){  };
-			lightboxPLcloapis=function(){  };      mfplayeri = {};
+			lightboxPLcloapis=function(){  };      
             modalElement.innerHTML = "";
             if (hide && hide === "yes") {
                 document.body.style.overflow = "auto";
@@ -562,9 +562,9 @@ registerPlayerOSDEvents(plobf, eventsList, lang || "pt", timf,"absolute",kk || "
  }    }
 
 
-function loaded_playerinf(dstart_fs_mpl = {}) {
+function loaded_playerinf(mfplayeri, dstart_fs_mpl = {}) {
   if (typeof fs_Playerjs === "function") {
-       var mfplayeri = fs_Playerjs(dstart_fs_mpl);
+        mfplayeri = fs_Playerjs(dstart_fs_mpl);
 	  if(mfplayeri){  
 lightboxPLclos=function(){  if(dstart_fs_mpl.id && dstart_fs_mpl.id!="" && document.getElementById(dstart_fs_mpl.id)){  document.getElementById(dstart_fs_mpl.id).remove();  }  };
 lightboxPLcloapis=function() {    if (typeof mfplayeri !== "undefined" && mfplayeri && typeof mfplayeri.api === "function") mfplayeri.api("destroy");    }
@@ -581,13 +581,12 @@ lightboxPLcloapis=function() {    if (typeof mfplayeri !== "undefined" && mfplay
 
 
 var start_fs_mpl = {};
-var mfplayeri = {};
 function mfplayeridd(){  }
 var is_player0j = "no";
 var fsmodal_createdd = "";
 var start_fs_postermpl = "";
 
-function fsmodal_open(optiy){    mfplayeri = {};
+function fsmodal_open(optiy){    
  lightboxPLclos=function(){   };
 	lightboxPLcloapis=function(){   };
  lightboxPLclos_mod=function(){   if(optiy.onClose && typeof optiy.onClose === 'function'){   optiy.onClose({ title:""+optiy.content.title || "", tipo:""+optiy.content.type || "none" });  }  };
@@ -679,12 +678,12 @@ if (!document.getElementById("fcasfs_script-api-player") && optincludeplayer ===
     var scriptincfd = document.createElement("script");
     scriptincfd.id = "fcasfs_script-api-player";
     scriptincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
-    scriptincfd.setAttribute("onload", 'if (typeof loaded_playerinf === "function"){ loaded_playerinf(start_fs_mpl); }');
+    scriptincfd.setAttribute("onload", 'if (typeof loaded_playerinf === "function"){ loaded_playerinf({}, start_fs_mpl); }');
 document.getElementsByTagName("body")[0].appendChild(scriptincfd);  
 }
 
             if (optincludeplayer === "yes" && is_player0j === "yes") {
-				function mfplayeridd(){  if (typeof loaded_playerinf === "function"){ loaded_playerinf(start_fs_mpl); }  }
+				function mfplayeridd(){  if (typeof loaded_playerinf === "function"){ loaded_playerinf({}, start_fs_mpl); }  }
             mfplayeridd();	}   
 			 if(is_player0j === "pdf") {  
   mfplayeridd();  }
