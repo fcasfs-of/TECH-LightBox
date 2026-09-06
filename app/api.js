@@ -402,10 +402,11 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                 start_fs_mpl = {
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
+                    mute:""+fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","mute",false)) || "0",
                     coloricons:fcas_lightbox_checkValueEX(optiy,"config","colorIcon","fff") || "fff",
                     colortexts:fcas_lightbox_checkValueEX(optiy,"config","colorText","fff") || "fff",
                     contextmenu_namedisplay:"",
-                    contextmenu:""+fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","contextmenu",true)) || 1,
+                    contextmenu:""+fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","contextmenu",true)) || "1",
                     OSD_Lang:fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
                     OSD_Pos:"top-"+fcas_lightbox_checkValueEX(optiy,"config","OSD_Pos","center") || "center",
                     OSD_Events:fcas_lightbox_checkValueEX(optiy,"config","OSD_Events",[]) || [],
@@ -438,8 +439,9 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                 start_fs_mpl = {
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
+                    mute:""+fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","mute",false)) || "0",
                     contextmenu_namedisplay:"",
-                    contextmenu:""+fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","contextmenu",true)) || 1,
+                    contextmenu:""+fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","contextmenu",true)) || "1",
                     coloricons:fcas_lightbox_checkValueEX(optiy,"config","colorIcon","fff") || "fff",
                     colortexts:fcas_lightbox_checkValueEX(optiy,"config","colorText","fff") || "fff",
                     OSD_Lang:fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
