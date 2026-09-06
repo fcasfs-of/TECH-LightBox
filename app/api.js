@@ -266,15 +266,7 @@ function fsmodal_call_menu(id) {
 function fsmodal_close(id, hide) {
     if (id && id !== "") {
 if(lightboxPLclos){  lightboxPLclos();  }
-
-        var mdpl1 = document.getElementById("mdpl1");
-        if (mdpl1) {            mdpl1.remove();        }
-        var mdpl2 = document.getElementById("mdpl2");
-        if (mdpl2) {            mdpl2.remove();        }
-        var menuDiv = document.querySelector("#mendu_df");
-        if (menuDiv) {
-            menuDiv.innerHTML = "";
-        }
+		
         var modalElement = document.getElementById(id);
         if (modalElement) {
             modalElement.innerHTML = "";
@@ -591,10 +583,6 @@ function fsmodal_open(optiy){
     fsmodal_createdd = "";
     start_fs_postermpl = "";
 function mfplayeridd(){  }
-	
-    if (document.querySelector("#mendu_df")) {
-        document.querySelector("#mendu_df").innerHTML = "";
-    }	
 
     var optincludeplayer = "";
     if (optiy && optiy.include && optiy.include.player == "yes") {
