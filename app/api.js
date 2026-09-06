@@ -650,6 +650,8 @@ var scrcontedd = document.createElement("div");
             `;
 momocsifipsl.appendChild(scrcontedd);    
 
+	lightboxPLclop_mod({ id: ""+optiy.id || "", title:""+optiy.content.title || "", tipo:""+optiy.content.type || "none" }); 
+
 	var mffomocsifipsl = document.getElementById("fs_modal_" + optiy.id);
             if (mffomocsifipsl && optiy.click_close && optiy.click_close === true) {
                 mffomocsifipsl.onclick = function (e) {
@@ -679,8 +681,6 @@ document.getElementsByTagName("body")[0].appendChild(scriptincfd);
 			 if(is_player0j === "pdf") {  
   mfplayeridd();  }
 
-			
-	lightboxPLclop_mod({ id: ""+optiy.id || "", title:""+optiy.content.title || "", tipo:""+optiy.content.type || "none" }); 
 
 	if (close_fsmofla_strdd === true) {
                
