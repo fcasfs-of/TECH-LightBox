@@ -413,7 +413,7 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                     OSD_Events:fcas_lightbox_checkValueEX(optiy,"config","OSD_Events",[]) || [],
                     osd:{  theme:fcas_lightbox_checkValueEX(optiy,"config","OSD_Theme","dark"), duration:fcas_lightbox_checkValueEX(optiy,"config","OSD_Time",3e3) || 3e3, width:"auto" },
                     volume:fcas_lightbox_checkValueEX(optiy,"config","volume","1"),
-                    pos_time:fcas_lightbox_checkValueEX(optiy,"config","pos_time","0")
+                    pos_time:""+convertDurationtoSeconds(fcas_lightbox_checkValueEX(optiy,"config","pos_time","0")) || "0"
                     },
                     id: "preview_pls",
                     customtext: { age: fcas_lightbox_checkValueEX(optiy,"config","txt","") || "" },
@@ -450,7 +450,7 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                     OSD_Events:fcas_lightbox_checkValueEX(optiy,"config","OSD_Events",[]) || [],
                     osd:{  theme:fcas_lightbox_checkValueEX(optiy,"config","OSD_Theme","dark"), duration:fcas_lightbox_checkValueEX(optiy,"config","OSD_Time",3e3) || 3e3, width:"auto" },
                     volume:fcas_lightbox_checkValueEX(optiy,"config","volume","1"),
-                    pos_time:fcas_lightbox_checkValueEX(optiy,"config","pos_time","0")
+                    pos_time:""+convertDurationtoSeconds(fcas_lightbox_checkValueEX(optiy,"config","pos_time","0")) || "0"
                     },
                     id: "preview_pls",
                     customtext: { age: fcas_lightbox_checkValueEX(optiy,"config","txt","") || "" },
