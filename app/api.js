@@ -435,7 +435,7 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                     poster: start_fs_postermpl,
                     player: 1
                 };
-                fsmodal_create_ifir = `<div id="preview_pls" style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;"></div>`;
+                fsmodal_create_ifir = `<span style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;"> <div id="preview_pls" style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;"></div>  </span>`;
             } else if (optiy.type && (optiy.type == "youtube" || optiy.type == "video" || optiy.type == "PList")) {
                 is_player0j = "yes";
 				var start_is_player0j=optiy.context;
@@ -472,7 +472,7 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                     poster: start_fs_postermpl,
                     player: 1
                 };
-                fsmodal_create_ifir = `<div id="preview_pls" style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;"></div>`;
+                fsmodal_create_ifir = `<span style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  <div id="preview_pls" style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;"></div>  </span>`;
             }
             fsmodal_createdd += `<span class="tlightboc_fcasfs" style="overflow:auto; padding:6px; margin: 0 auto; width:96%; text-align:center; display:block; color:#fff;">${fsmodal_create_ifir} ${fsmodal_create_desci} <br/><br/><br/><br/></span><br/><br/>`;
         }
