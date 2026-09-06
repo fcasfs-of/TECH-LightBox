@@ -554,7 +554,7 @@ function loaded_playerinf(dstart_fs_mpl = {}) {
   if (typeof fs_Playerjs === "function") {
        mfplayeri = fs_Playerjs(dstart_fs_mpl);
 	  if(mfplayeri){  
-lightboxPLclos=function(){  if(document.getElementById("preview_pls")){  document.getElementById("preview_pls").remove();  }  };
+lightboxPLclos=function(){  if(dstart_fs_mpl.id && dstart_fs_mpl.id!="" && document.getElementById(dstart_fs_mpl.id)){  document.getElementById(dstart_fs_mpl.id).remove();  }  };
 
 		  mfplayeri.OnEvents("init",function(){  
 			  mfplayeri.api('seek',Number(stringno_valtext(dstart_fs_mpl.config.pos_time,"0")));    
