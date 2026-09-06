@@ -402,6 +402,7 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                 start_fs_mpl = {
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
+                    autoplay:""+fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","autoplay",false)) || "0",
                     mute:""+fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","mute",false)) || "0",
                     coloricons:fcas_lightbox_checkValueEX(optiy,"config","colorIcon","fff") || "fff",
                     colortexts:fcas_lightbox_checkValueEX(optiy,"config","colorText","fff") || "fff",
@@ -424,7 +425,6 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                     title: optiy.title,
                     file: optiy.context,
                     poster: start_fs_postermpl,
-                    mute:fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","mute",false)) || 0,
                     player: 1
                 };
                 fsmodal_create_ifir = `<div id="preview_pls" style="${fsmodal_createWi} height:${Number(optiy.size)}px;"></div>`;
@@ -439,6 +439,7 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                 start_fs_mpl = {
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
+                    autoplay:""+fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","autoplay",false)) || "0",
                     mute:""+fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","mute",false)) || "0",
                     contextmenu_namedisplay:"",
                     contextmenu:""+fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","contextmenu",true)) || "1",
@@ -461,7 +462,6 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                     title: optiy.title,
                     file: start_is_player0j,
                     poster: start_fs_postermpl,
-                    mute:fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","mute",false)) || 0,
                     player: 1
                 };
                 fsmodal_create_ifir = `<div id="preview_pls" style="${fsmodal_createWi} height:${Number(optiy.size)}px;"></div>`;
@@ -563,6 +563,8 @@ lightboxPLclos=function(){  if(dstart_fs_mpl.id && dstart_fs_mpl.id!="" && docum
 		  mfplayeri.OnEvents("init",function(){  
 			  mfplayeri.api('seek',Number(stringno_valtext(dstart_fs_mpl.config.pos_time,"0")));    
 			  mfplayeri.api("volume", Number(stringno_valtext(dstart_fs_mpl.config.volume,"1")));  if(stringno_valtext(dstart_fs_mpl.config.volume,"")==""){   mfplayeri.api("volume", 1);    }
+			  if(dstart_fs_mpl.config.mute && dstart_fs_mpl.config.mute=="1"){  mfplayeri.api('mute');      }
+			  if(dstart_fs_mpl.config.autoplay && dstart_fs_mpl.config.autoplay=="1"){  mfplayeri.api('play');      }
 		});
    }           if(dstart_fs_mpl.OSD==true){   playerfs_osf_evensdef(dstart_fs_mpl.config.OSD_Events || [], dstart_fs_mpl.config.OSD_Lang || "en", mfplayeri, dstart_fs_mpl.config.osd.duration || 3e3, dstart_fs_mpl.config.OSD_Pos || "top-center");    }
 }   }
