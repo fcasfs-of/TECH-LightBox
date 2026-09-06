@@ -51,7 +51,7 @@ function fcas_lightbox_criarPlaylist(e){if(!document.getElementById("v-playlist-
 
 
 var lightboxPLclos=function(){};
-var lightboxPLclos_mod=function(){};
+var lightboxPLclos_mod=function(){};   var lightboxPLclop_mod=function(){};
 
 
 function fcas_lightboc_Pdf(idioma, linkPdf, pg, idElemento) {
@@ -271,6 +271,7 @@ if(lightboxPLclos_mod){  lightboxPLclos_mod({ id:id || "" });  }
 		
         var modalElement = document.getElementById(id);
         if (modalElement) {
+			lightboxPLclop_mod=function(){  };
 			lightboxPLclos_mod=function(){  };
             modalElement.innerHTML = "";
             if (hide && hide === "yes") {
@@ -583,6 +584,7 @@ var start_fs_postermpl = "";
 function fsmodal_open(optiy){
  lightboxPLclos=function(){   };
  lightboxPLclos_mod=function(){  };
+lightboxPLclop_mod=function(onh){   if(onh && optiy.onOpen && typeof optiy.onOpen === 'function'){   optiy.onOpen(onh);  }  };
 	
     start_fs_mpl = {};
     fsmodal_createdd = "";
@@ -600,7 +602,6 @@ function mfplayeridd(){  }
     }
     if (optiy && optiy.id != "") {
 	 lightboxPLclos_mod=function(onh){   if(onh && optiy.onClose && typeof optiy.onClose === 'function'){   optiy.onClose(onh);  }  };
-	if(optiy.onOpen && optiy.onOpen === 'function'){   optiy.onOpen({ id: ""+optiy.id || "", title:""+optiy.content.title || "", tipo:""+optiy.content.type || "none" });  } 
 
         var fsmodal_offpen_tipf = "";
         var fsmodal_open_tipf = "";
@@ -679,7 +680,9 @@ document.getElementsByTagName("body")[0].appendChild(scriptincfd);
   mfplayeridd();  }
 
 			
-            if (close_fsmofla_strdd === true) {
+	lightboxPLclop_mod({ id: ""+optiy.id || "", title:""+optiy.content.title || "", tipo:""+optiy.content.type || "none" }); 
+
+	if (close_fsmofla_strdd === true) {
                
             }
 			
