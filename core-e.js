@@ -110,7 +110,7 @@ var modaisDisponiveis = {
       type: "audio",
       context: "https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.mp4",
       poster: "https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.jpg",
-      size: "250",
+      size: "320",
       includePlayer: "yes",
       description: ""
     };
@@ -131,7 +131,7 @@ var modaisDisponiveis = {
       type: "video",
       context: "https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.mp4",
       poster: "https://fcasfs-of.cloud-fs.net/info-profile/Files/intro1.jpg",
-      size: "250",
+      size: "360",
       includePlayer: "yes",
       description: ""
     };
