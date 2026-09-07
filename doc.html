@@ -14,8 +14,9 @@
 </style>
 </head>
 <body>
-
+    
     <header>
+        <img src="favicon.png" style="width:64px;"/>
         <h1 id="header-title"></h1>
         <p id="header-subtitle"></p>
         <div id="demo-link-container"></div>
@@ -23,57 +24,60 @@
             <span id="header-version"></span>
             <strong id="version-display"></strong>
         </div>
+        <div id="player-version-box" style="display: none;">
+            <span id="player-version-label"></span>
+            <strong id="player-version-display"></strong>
+        </div>
     </header>
 
     <main>
         <section id="doc-pt">
-            <h2>Documentação em Português</h2>
-            <p>Esta página descreve o funcionamento do componente Lightbox para exibição de conteúdos diversos de forma responsiva em qualquer dispositivo.</p>
-            <p>Para inicializar o componente, utilize a função global <code>fsmodal_open(config)</code> passando as opções estruturadas no formato de objeto abaixo:</p>
+            <h2 id="title-pt"></h2>
+            <p id="desc-pt"></p>
+            <p id="init-pt"></p>
             <div id="base-params-pt"></div>
             <fieldset>
-                <legend>Parâmetros Globais e Callbacks (content.config)</legend>
+                <legend id="legend-global-pt"></legend>
                 <div id="global-params-pt"></div>
             </fieldset>
             <fieldset>
-                <legend>Configurações de Tipos dentro de content.config</legend>
+                <legend id="legend-types-pt"></legend>
                 <div id="types-params-pt"></div>
             </fieldset>
             <fieldset>
-                <legend>Estruturas de Dados Aceitas em content.context</legend>
+                <legend id="legend-context-pt"></legend>
                 <div id="context-params-pt"></div>
             </fieldset>
             <fieldset>
-                <legend>content (Outros Parâmetros de Entrada)</legend>
+                <legend id="legend-other-pt"></legend>
                 <div id="other-params-pt"></div>
             </fieldset>
         </section>
 
         <section id="doc-en">
-            <h2>English Documentation</h2>
-            <p>This page describes the behavior of the Lightbox component for displaying diverse content responsively across all devices.</p>
-            <p>To initialize the component, call the global function <code>fsmodal_open(config)</code> by passing an object structured with the following configurations:</p>
+            <h2 id="title-en"></h2>
+            <p id="desc-en"></p>
+            <p id="init-en"></p>
             <div id="base-params-en"></div>
             <fieldset>
-                <legend>Global Properties and Callbacks (content.config)</legend>
+                <legend id="legend-global-en"></legend>
                 <div id="global-params-en"></div>
             </fieldset>
             <fieldset>
-                <legend>Type Configurations inside content.config</legend>
+                <legend id="legend-types-en"></legend>
                 <div id="types-params-en"></div>
             </fieldset>
             <fieldset>
-                <legend>Accepted Data Layout Structures in content.context</legend>
+                <legend id="legend-context-en"></legend>
                 <div id="context-params-en"></div>
             </fieldset>
             <fieldset>
-                <legend>content (Other Input Parameters)</legend>
+                <legend id="legend-other-en"></legend>
                 <div id="other-params-en"></div>
             </fieldset>
         </section>
     </main>
-
-
+    
     <script src="docs_data.js"></script>
 
 <script>  const userLang='pt';  </script>
