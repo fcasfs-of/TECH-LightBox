@@ -2,6 +2,19 @@ window.getDocData = function() {
     return {
         pt: {
             demoUrl: "/",
+            title: "Lightbox - Conteúdos Diversos",
+            subtitle: "Documentação Técnica",
+            versionLabel: "Versão: ",
+            playerLabel: "Player Embutido: ",
+            playerValue: "Versão Mais Recente",
+            btnText: "Ver Funcionando",
+            sectionTitle: "Documentação em Português",
+            sectionDesc: "Esta página descreve o funcionamento do componente Lightbox para exibição de conteúdos diversos de forma responsiva em qualquer dispositivo.",
+            sectionInit: "Para inicializar o componente, utilize a função global fsmodal_open(config) passando as opções estruturadas no formato de objeto abaixo:",
+            legendGlobal: "Parâmetros Globais e Callbacks (content.config)",
+            legendTypes: "Configuração de Tipos dentro de content.config",
+            legendContext: "Estruturas de Dados Aceitas em content.context",
+            legendOther: "content (Outros Parâmetros de Entrada)",
             base: [
                 ['id', 'String com o ID do elemento contêiner onde o modal será inserido.'],
                 ['scroll_hide', 'Se definido como "yes", oculta a barra de rolagem da página quando ativo.'],
@@ -58,6 +71,19 @@ window.getDocData = function() {
         },
         en: {
             demoUrl: "/en",
+            title: "Lightbox - Diverse Contents",
+            subtitle: "Technical Documentation",
+            versionLabel: "Version: ",
+            playerLabel: "Embedded Player: ",
+            playerValue: "Most Recent Version",
+            btnText: "Live Demo",
+            sectionTitle: "English Documentation",
+            sectionDesc: "This page describes the behavior of the Lightbox component for displaying diverse content responsively across all devices.",
+            sectionInit: "To initialize the component, call the global function fsmodal_open(config) by passing an object structured with the following configurations:",
+            legendGlobal: "Global Properties and Callbacks (content.config)",
+            legendTypes: "Type Configurations inside content.config",
+            legendContext: "Accepted Data Layout Structures in content.context",
+            legendOther: "content (Other Input Parameters)",
             base: [
                 ['id', 'String representing the ID of the container element where the modal attaches.'],
                 ['scroll_hide', 'If set to "yes", it hides the main page scrollbar when the modal is active.'],
@@ -114,5 +140,4 @@ window.getDocData = function() {
         }
     };
 };
-
 
