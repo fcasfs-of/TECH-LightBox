@@ -36,11 +36,11 @@ window.getDocData = function() {
             ],
             types: [
                 ['Configuração para tipo: "texto"', 'Suporta as chaves de estilização direta: italic, negrito, upper, lower (booleanos), fontSize (número), color (string), textAlign (string).'],
-                ['Configuração para tipo: "list"', 'Suporta as chaves de formatação estrutural: posicao, alinhamento, tema, marcador (strings), arredondado (número), divisor (booleano).'],
+                ['Configuração para tipo: "list"', 'Suporta as chaves de formatatação estrutural: posicao, alinhamento, tema, marcador (strings), arredondado (número), divisor (booleano).'],
                 ['Configuração para tipo: "table"', 'Suporta as chaves de layout tabular: showIndex, zebra, headerBold (booleanos), align, headerAlign (strings), model (string com chaves de colunas separadas por vírgula).'],
                 ['Configuração para tipo: "playlist"', 'Suporta as chaves de controle de faixas: tema (string), exibirIndex (booleano).'],
                 ['Configuração para tipo: "carrossel"', 'Suporta as chaves de controle do slider de mídia: tema, transicao, posicaoDots, estiloDots (strings), intervalo (número), exibirControles, exibirDots, autoPlay (booleanos).'],
-                ['Configuração para tipo: "grafico"', 'Suporta as chaves de renderização estatística: tema, orientacao, modelo (strings), exibirValores, exibirTooltips (booleanos), larguraBarra, raioCurva (números).'],
+                ['Configuração para tipo: "grafico"', 'Suporta as chaves de renderização estatística: tema, orientacao (vertical ou horizontal), modelo (linha, pizza, barras), exibirValores, exibirTooltips (booleanos), larguraBarra, raioCurva (números).'],
                 ['Configuração para tipo: "pdf"', 'Suporta o controle de foco do documento: page (número).'],
                 ['Configuração para tipo: "image"', 'Suporta o controle de ampliação visual: scale (booleano).'],
                 ['Configuração para tipo: "svg"', 'Suporta o controle de cor de vetores inline: fill, stroke (strings).'],
@@ -48,19 +48,19 @@ window.getDocData = function() {
                 ['Configuração Exclusiva para tipo: "PList"', 'Suporta adicionalmente a propriedade: select (string contendo apenas o número do item ativo da lista de reprodução).']
             ],
             context: [
-                ['Carrossel', '[ { url: "", legenda: "" } ]'],
-                ['Playlist', '[ { titulo: "", subtitulo: "", thumbnail: "", href: "" } ]'],
-                ['texto', 'string do texto normal'],
-                ['Tabela', '[] dentro um objeto com keys e valores'],
-                ['Lista', '[]'],
-                ['audio', 'link'],
-                ['link', 'url do site'],
-                ['video', 'link'],
-                ['pdf', 'url do arquivo'],
-                ['image', 'link'],
-                ['svg', 'string do svg'],
-                ['grafico', '[ { label: "", valor: (number) } ]'],
-                ['PList', '[ {"file":"","title":"","poster":""} ]']
+                ['Carrossel', 'Recebe um array de objetos contendo as chaves de caminhos e descrições: [ { url: "", legenda: "" } ]'],
+                ['Playlist', 'Recebe um array de objetos contendo as chaves de dados visuais e hiperlinks: [ { titulo: "", subtitulo: "", thumbnail: "", href: "" } ]'],
+                ['texto', 'Recebe uma string simples contendo o texto normal.'],
+                ['Tabela', 'Recebe um array contendo coleções de objetos estruturados com suas respectivas chaves e valores dinâmicos: [] dentro um objeto com keys e valores.'],
+                ['Lista', 'Recebe um array de strings tradicionais contendo os itens sequenciais: [].'],
+                ['audio', 'Recebe uma string contendo o link ou caminho URL direto do arquivo de áudio.'],
+                ['link', 'Recebe uma string contendo a url do site externo de destino.'],
+                ['video', 'Recebe uma string contendo o link ou caminho URL direto do arquivo de vídeo.'],
+                ['pdf', 'Recebe uma string contendo a url do arquivo .pdf correspondente.'],
+                ['image', 'Recebe uma string contendo o link ou caminho URL direto do arquivo de imagem.'],
+                ['svg', 'Recebe uma string contendo o código XML/texto nativo completo do elemento estrutural: string do svg.'],
+                ['grafico', 'Recebe um array contendo objetos estruturados com rótulos e seus valores numéricos reais: [ { label: "", valor: (number) } ]'],
+                ['PList', 'Recebe um array de objetos contendo o arquivo de áudio/vídeo, título e poster de capa correspondente: [ {"file":"","title":"","poster":""} ]']
             ],
             other: [
                 ['title', 'String com o título que será exibido no topo do modal.'],
@@ -109,7 +109,7 @@ window.getDocData = function() {
                 ['Configuration for type: "table"', 'Properties: showIndex, zebra, headerBold (booleans), align, headerAlign (strings), model (comma-separated column target string).'],
                 ['Configuration for type: "playlist"', 'Properties: tema (string), exibirIndex (boolean).'],
                 ['Configuration for type: "carrossel"', 'Properties: tema, transicao, posicaoDots, estiloDots (strings), intervalo (number), exibirControles, exibirDots, autoPlay (booleans).'],
-                ['Configuration for type: "grafico"', 'Properties: tema, orientacao, modelo (strings), exibirValores, exibirTooltips (boolean), larguraBarra, raioCurva (numbers).'],
+                ['Configuration for type: "grafico"', 'Properties: tema, orientacao (vertical or horizontal), modelo (linha, pizza, barras), exibirValores, exibirTooltips (boolean), larguraBarra, raioCurva (numbers).'],
                 ['Configuration for type: "pdf"', 'Properties: page (number).'],
                 ['Configuration for type: "image"', 'Properties: scale (boolean).'],
                 ['Configuration for type: "svg"', 'Properties: fill, stroke (strings).'],
@@ -117,19 +117,19 @@ window.getDocData = function() {
                 ['Exclusive Configuration for type: "PList"', 'Properties: select (string tracking sequential track execution option array index number).']
             ],
             context: [
-                ['Carousel', '[ { url: "", legenda: "" } ]'],
-                ['Playlist', '[ { titulo: "", subtitulo: "", thumbnail: "", href: "" } ]'],
-                ['text', 'normal text string'],
-                ['Table', '[] containing an object with keys and values'],
-                ['List', '[]'],
-                ['audio', 'link'],
-                ['link', 'website URL'],
-                ['video', 'link'],
-                ['pdf', 'file URL'],
-                ['image', 'link'],
-                ['svg', 'svg string'],
-                ['chart', '[ { label: "", valor: (number) } ]'],
-                ['PList', '[ {"file":"","title":"","poster":""} ]']
+                ['Carousel', 'Accepts an array of objects carrying media paths and string text captions: [ { url: "", legenda: "" } ]'],
+                ['Playlist', 'Accepts an array of objects tracking graphic data and target navigation anchors: [ { titulo: "", subtitulo: "", thumbnail: "", href: "" } ]'],
+                ['text', 'Accepts a clean and standard flat string payload: normal text string.'],
+                ['Table', 'Accepts an array structure mapping collection sets of dynamic objects: [] containing an object with keys and values.'],
+                ['List', 'Accepts a sequential collection array listing text strings: [].'],
+                ['audio', 'Accepts a destination path string referencing an audio asset source file location: link.'],
+                ['link', 'Accepts a navigation string target mapping a resource locator: website URL.'],
+                ['video', 'Accepts a destination path string referencing a video asset source file location: link.'],
+                ['pdf', 'Accepts a destination path string referencing a pdf document container: file URL.'],
+                ['image', 'Accepts a destination path string referencing an image asset file location: link.'],
+                ['svg', 'Accepts a source text string wrapping the raw inner XML vector definitions: svg string.'],
+                ['chart', 'Accepts an array payload distributing labels against bound numeric values: [ { label: "", valor: (number) } ]'],
+                ['PList', 'Accepts a tracking playlist array carrying structural media source locations, title texts, and posters: [ {"file":"","title":"","poster":""} ]']
             ],
             other: [
                 ['title', 'String value rendering the headline text at the top of the header.'],
@@ -140,4 +140,3 @@ window.getDocData = function() {
         }
     };
 };
-
