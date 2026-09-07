@@ -1,1 +1,4 @@
-window.createDL=function(arr){const dl=document.createElement('dl');arr.forEach(i=>{const dt=document.createElement('dt');dt.textContent=i[0];const dd=document.createElement('dd');dd.textContent=i[1];dl.appendChild(dt);dl.appendChild(dd);});return dl;};
+window.createDL=function(arr){const dl=document.createElement('dl');
+arr.forEach(i=>{const dt=document.createElement('dt');dt.textContent=i[0];const dd=document.createElement('dd');dd.textContent=i[1];dl.appendChild(dt);dl.appendChild(dd);});
+return dl;};
+
