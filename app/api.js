@@ -663,7 +663,7 @@ momocsifipsl.appendChild(scrcontedd);
 	lightboxPLclop_mod({ title:""+optiy.content.title || "", tipo:""+optiy.content.type || "none" }); 
 
 	var mffomocsifipsl = document.getElementById("fs_modal_" + optiy.id);
-		if (mffomocsifipsl && meuEstiloscrcontedd && meuEstiloscrcontedd!=""){    mffomocsifipsl.classList.add("customstyle_"+optiy.id);		}
+		if (mffomocsifipsl){    mffomocsifipsl.classList.add("customstyle_"+optiy.id);		}
 		
 		if (mffomocsifipsl && optiy.click_close && optiy.click_close === true) {
                 mffomocsifipsl.onclick = function (e) {
