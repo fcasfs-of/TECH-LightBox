@@ -239,8 +239,7 @@ criarMenuRetorno({
     urlPrincipal: 'https://fcasfs-of.cloud-fs.net/'+criarMenuRetorno_on,
     itens: [
       {  urlPrincipal: 'https://fcasfs-of.cloud-fs.net/'+criarMenuRetorno_on, negrito: true    },
-      { texto: 'Documentação', idioma: 'pt', urlPrincipal: '/doc'+criarMddenuRetorno_on,  novaAba: false,  iconsvg: `<svg fill="none" width="24px" height="24px" viewBox="-274.15 0 1200 1200" xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg"><path d="M30 161c-16.5 0-30 13.5-30 30v827.8c0 16.5 13.5 30 30 30h591.7c16.5 0 30-13.5 30-30V343.7L469 161H30zm389.6 60v134.8c0 19.9 16.3 36.2 36.2 36.2h135.9v596.8H60V221h359.6z"/><path d="M123.8 768.6h394.8v50H123.8zm0-124.6h394.8v50H123.8zm0-124.5h394.8v50H123.8z"/><circle cx="194" cy="382.3" r="60"/></svg>` },
-      { texto: 'Documentation', idioma: 'en', urlPrincipal: '/doc'+criarMddenuRetorno_on,  novaAba: false,  iconsvg: `<svg fill="none" width="24px" height="24px" viewBox="-274.15 0 1200 1200" xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg"><path d="M30 161c-16.5 0-30 13.5-30 30v827.8c0 16.5 13.5 30 30 30h591.7c16.5 0 30-13.5 30-30V343.7L469 161H30zm389.6 60v134.8c0 19.9 16.3 36.2 36.2 36.2h135.9v596.8H60V221h359.6z"/><path d="M123.8 768.6h394.8v50H123.8zm0-124.6h394.8v50H123.8zm0-124.5h394.8v50H123.8z"/><circle cx="194" cy="382.3" r="60"/></svg>` },
+      { texto: 'Documentação', idioma: 'pt', urlPrincipal: '/doc'+criarMddenuRetorno_on,  novaAba: false,  iconsvg: `<svg fill="currentColor" width="24px" height="24px" viewBox="-274.15 0 1200 1200" xmlns="http://www.w3.org/2000/svg" class="cf-icon-svg"><path d="M30 161c-16.5 0-30 13.5-30 30v827.8c0 16.5 13.5 30 30 30h591.7c16.5 0 30-13.5 30-30V343.7L469 161H30zm389.6 60v134.8c0 19.9 16.3 36.2 36.2 36.2h135.9v596.8H60V221h359.6z"/><path d="M123.8 768.6h394.8v50H123.8zm0-124.6h394.8v50H123.8zm0-124.5h394.8v50H123.8z"/><circle cx="194" cy="382.3" r="60"/></svg>` }
     ]
 });
 }
