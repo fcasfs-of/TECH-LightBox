@@ -645,12 +645,6 @@ function mfplayeridd(){  }
         if (momocsifipsl) {
 momocsifipsl.innerHTML='';
 			
-const meuEstiloscrcontedd = fcasfs_lightbox_gerarEstiloCor({ 
- cores: ['#000'], zremover:false, zload:false, zsave:false, zupdate:false, 
- nomeEstilo:optiy.id || "", formato: '', posicao: 'center', 
- intensidade: '100', opacidade: fcas_lightbox_checkValueEX(optiy.content,"config","BG_Opacity","0.9") || "0.9", blur: fcas_lightbox_checkValueEX(optiy.content,"config","BG_Blur","6") || "6" 
-});
-			
 var scrcontedd = document.createElement("div");
 			scrcontedd.innerHTML = `
                 <div class="modal${close_fsmofla_efestr}" id="fs_modal_${optiy.id}" style="display:block; color:#000;">
@@ -661,7 +655,7 @@ var scrcontedd = document.createElement("div");
                    <br/> </div>
                     ${thumsds_efestr} 
                 </div>
-<style>  #fs_modal_${optiy.id}.modal.l {  background-color: rgba(0,0,0,${fcas_lightbox_checkValueEX(optiy.content,"config","BG_Opacity","0.9") || "0.9"}) !important;  -webkit-backdrop-filter: blur(${fcas_lightbox_checkValueEX(optiy.content,"config","BG_Blur","6") || "6"}px) !important;   backdrop-filter: blur(${fcas_lightbox_checkValueEX(optiy.content,"config","BG_Blur","6") || "6"}px) !important;  }   #fs_modal_${optiy.id} #fs_modal_${optiy.id}_content .tlightboc_fcasfs, #fs_modal_${optiy.id} #fs_modal_${optiy.id}_content h1 {  color:#${fcas_lightbox_checkValueEX(optiy.content,"config","colorText","fff") || "fff"} !important;  }  </style>
+<style>  #fs_modal_${optiy.id}.modal.customstyle_${optiy.id} {  background-color: rgba(0,0,0,${fcas_lightbox_checkValueEX(optiy.content,"config","BG_Opacity","0.9") || "0.9"}) !important;  -webkit-backdrop-filter: blur(${fcas_lightbox_checkValueEX(optiy.content,"config","BG_Blur","6") || "6"}px) !important;   backdrop-filter: blur(${fcas_lightbox_checkValueEX(optiy.content,"config","BG_Blur","6") || "6"}px) !important;  }   #fs_modal_${optiy.id} #fs_modal_${optiy.id}_content .tlightboc_fcasfs, #fs_modal_${optiy.id} #fs_modal_${optiy.id}_content h1 {  color:#${fcas_lightbox_checkValueEX(optiy.content,"config","colorText","fff") || "fff"} !important;  }  </style>
               <div id="${optiy.id}_menu"></div>
             `;
 momocsifipsl.appendChild(scrcontedd);    
@@ -669,7 +663,7 @@ momocsifipsl.appendChild(scrcontedd);
 	lightboxPLclop_mod({ title:""+optiy.content.title || "", tipo:""+optiy.content.type || "none" }); 
 
 	var mffomocsifipsl = document.getElementById("fs_modal_" + optiy.id);
-		if (mffomocsifipsl && meuEstiloscrcontedd && meuEstiloscrcontedd!=""){    mffomocsifipsl.classList.add(meuEstiloscrcontedd);		}
+		if (mffomocsifipsl && meuEstiloscrcontedd && meuEstiloscrcontedd!=""){    mffomocsifipsl.classList.add("customstyle_"+optiy.id);		}
 		
 		if (mffomocsifipsl && optiy.click_close && optiy.click_close === true) {
                 mffomocsifipsl.onclick = function (e) {
