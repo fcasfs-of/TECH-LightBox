@@ -323,7 +323,7 @@ arrayIntfferno[j]={id:"pf"+(j+1),title:arrayInterno[j].title || "",file:arrayInt
     }  else{      return Number(timhdfff[0]) * 60 * 60 + Number(timhdfff[1]) * 60 + Number(timhdfff[2]);   }
 }
 
-function fsmodal_create(ddd, optiy, app) {      fsmodal_createdd = '<div class="loader-container">  <div class="classic-spinner"></div>   </div>';     var  fsmodafdl_createdd = "<div id="fs_lightbox_lader" class="loader-container">  <div class="classic-spinner"></div>   </div>";  
+function fsmodal_create(ddd, optiy, app) {      fsmodal_createdd = '<div class="loader-container">  <div class="classic-spinner"></div>   </div>';     var fsmodafdl_createdd = '<div id="fs_lightbox_lader" class="loader-container">  <div class="classic-spinner"></div>   </div>';  
 if(ddd && ddd===false){
 fsmodal_createdd = '';    fsmodafdl_createdd='';
 }
