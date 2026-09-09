@@ -634,7 +634,7 @@ momocsifipsl.innerHTML='';
                 <div class="modal_fs_lightbox${close_fsmofla_efestr}" id="fs_modal_${optiy.id}" style="display:block; color:#000;">
                     <span class="bngl">${btnys_fsmofla_efestr}</span>
                     <span class="bngd">${close_fsmofla_str}</span>
-                    <div style="overflow:auto;" class="modal-content" id="fs_modal_${optiy.id}_content">
+                    <div style="overflow:auto;" class="modal_fs_lightbox-content" id="fs_modal_${optiy.id}_content">
                         ${fsmodal_create(optiy.content, optiy.include ? optiy.include.player : "")} <br/>
                    <br/> </div>
                     ${thumsds_efestr} 
@@ -651,7 +651,7 @@ momocsifipsl.innerHTML='';
 		
 		if (mffomocsifipsl && optiy.click_close && optiy.click_close === true) {
                 mffomocsifipsl.onclick = function (e) {
-        if (!e.target.closest('.menulight_scrollmenu') && !e.target.closest('.modal_fs_lightbox .modal-content')) {
+        if (!e.target.closest('.menulight_scrollmenu') && !e.target.closest('.modal_fs_lightbox-content')) {
                     fsmodal_close(optiy.id, optiy.scroll_hide);
 		}
                 };
