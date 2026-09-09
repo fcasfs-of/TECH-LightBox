@@ -323,9 +323,10 @@ arrayIntfferno[j]={id:"pf"+(j+1),title:arrayInterno[j].title || "",file:arrayInt
     }  else{      return Number(timhdfff[0]) * 60 * 60 + Number(timhdfff[1]) * 60 + Number(timhdfff[2]);   }
 }
 
-function fsmodal_create(ddd,optiy, app) {      fsmodal_createdd = "";     var  fsmodafdl_createdd = "";  
+function fsmodal_create(ddd, optiy, app) {      fsmodal_createdd = "";     var  fsmodafdl_createdd = "";  
 if(ddd && ddd===true){
 fsmodal_createdd = '<div class="loader-container">  <div class="classic-spinner"></div>   </div>';    fsmodafdl_createdd='<div id="fs_lightbox_lader" class="loader-container">  <div class="classic-spinner"></div>   </div>';
+if(ddd===false){  fsmodafdl_createdd = "";  }
 }
 var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd = "";     dcurrent_id = 0;     is_player0j = "no";     start_fs_mpl = {};       start_fs_postermpl = "";
 
