@@ -635,16 +635,6 @@ var momocsifipsl = document.getElementById(optiy.id);
         if (momocsifipsl) {
 momocsifipsl.innerHTML='';
 
-if(optiy.loader && optiy.loader===true){
-if (typeof fs_lightbox_carregamentoGlobal === 'function'){ 	fs_lightbox_carregamentoGlobal(momocsifipsl, 'show', {
-    modelo: 'spinner', posicao: 'center',
-    tipo: 'classic',   // Opções: classic, ring, dash, dots, bars, pulse, custom
-    cor: '#111',  tamanho: '75px',   
-    velocidade: '0.8s', arredondamento: '20px',
-    fundoOpacity: 0.8,  autoDetect: true,  mostrarPorcentagem: false, texto: ''
-});   }
-}
-
 //var scrcontedd = document.createElement("div");
 			momocsifipsl.innerHTML = `
                 <div class="modal_fs_lightbox${close_fsmofla_efestr}" id="fs_modal_${optiy.id}" style="display:block; color:#000;">
@@ -658,9 +648,20 @@ if (typeof fs_lightbox_carregamentoGlobal === 'function'){ 	fs_lightbox_carregam
 <style>  #fs_modal_${optiy.id}.modal_fs_lightbox.customstyle_${optiy.id} .menulight_scrollmenu {       background-color: ${fcasfs_lightbox_converterHexParaRgba(fcasfs_lightbox_ajustarHex(fcas_lightbox_checkValueEX(optiy.content,"config","BG_Color","111") || "111"), "1", false)};    border: 1px solid #ccc;  }    #fs_modal_${optiy.id}.modal_fs_lightbox.customstyle_${optiy.id} {  background-color: ${fcasfs_lightbox_converterHexParaRgba(fcasfs_lightbox_ajustarHex(fcas_lightbox_checkValueEX(optiy.content,"config","BG_Color","000") || "000"), fcas_lightbox_checkValueEX(optiy.content,"config","BG_Opacity","0.9") || "0.9", true)};  -webkit-backdrop-filter: blur(${fcas_lightbox_checkValueEX(optiy.content,"config","BG_Blur","6") || "6"}px) !important;   backdrop-filter: blur(${fcas_lightbox_checkValueEX(optiy.content,"config","BG_Blur","6") || "6"}px) !important;  }   #fs_modal_${optiy.id} #fs_modal_${optiy.id}_content .tlightboc_fcasfs, #fs_modal_${optiy.id} #fs_modal_${optiy.id}_content h1 {  color:#${fcas_lightbox_checkValueEX(optiy.content,"config","colorText","fff") || "fff"} !important;  }  </style>
               <div id="${optiy.id}_menu"></div>
             `;
-//momocsifipsl.appendChild(scrcontedd);    
+//momocsifipsl.appendChild(scrcontedd);  
 
 	lightboxPLclop_mod({ title:""+optiy.content.title || "", tipo:""+optiy.content.type || "none" }); 
+
+if(optiy.loader && optiy.loader===true){
+if (typeof fs_lightbox_carregamentoGlobal === 'function'){ 	fs_lightbox_carregamentoGlobal(momocsifipsl, 'show', {
+    modelo: 'spinner', posicao: 'center',
+    tipo: 'classic',   // Opções: classic, ring, dash, dots, bars, pulse, custom
+    cor: '#111',  tamanho: '75px',   
+    velocidade: '0.8s', arredondamento: '20px',
+    fundoOpacity: 0.8,  autoDetect: true,  mostrarPorcentagem: false, texto: ''
+});   }
+}
+
 
 	var mffomocsifipsl = document.getElementById("fs_modal_" + optiy.id);
 		if (mffomocsifipsl){    mffomocsifipsl.classList.add("customstyle_"+optiy.id);		}
