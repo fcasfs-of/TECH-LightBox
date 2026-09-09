@@ -324,7 +324,7 @@ arrayIntfferno[j]={id:"pf"+(j+1),title:arrayInterno[j].title || "",file:arrayInt
 }
 
 function fsmodal_create(ddd, optiy, app) {      fsmodal_createdd = '<div class="loader-container">  <div class="classic-spinner"></div>   </div>';     var fsmodafdl_createdd = '<div id="fs_lightbox_lader" class="loader-container">  <div class="classic-spinner"></div>   </div>';  
-if(ddd && ddd==false){
+if(ddd && ddd==0){
 fsmodal_createdd = '';    fsmodafdl_createdd='';
 }
 var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd = "";     dcurrent_id = 0;     is_player0j = "no";     start_fs_mpl = {};       start_fs_postermpl = "";
@@ -644,7 +644,7 @@ momocsifipsl.innerHTML='';
                     <span class="bngl">${btnys_fsmofla_efestr}</span>
                     <span class="bngd">${close_fsmofla_str}</span>
                     <div style="overflow:auto;" class="modal_fs_lightbox-content" id="fs_modal_${optiy.id}_content">
-                        ${fsmodal_create(optiy.loader, optiy.content, optiy.include ? optiy.include.player : "")} <br/>
+                        ${fsmodal_create(fsmodal_booleanToNumber(optiy.loader) || 1, optiy.content, optiy.include ? optiy.include.player : "")} <br/>
                    <br/> </div>
                     ${thumsds_efestr} 
                 </div>
