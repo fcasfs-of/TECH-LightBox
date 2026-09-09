@@ -324,7 +324,7 @@ arrayIntfferno[j]={id:"pf"+(j+1),title:arrayInterno[j].title || "",file:arrayInt
 }
 
 function fsmodal_create(ddd, optiy, app) {      fsmodal_createdd = '';     var fsmodafdl_createdd = '';  
-if(ddd && ddd==1){
+if(ddd && ddd=="yes"){
 fsmodal_createdd = '<div class="loader-container">  <div class="classic-spinner"></div>   </div>';    fsmodafdl_createdd='<div id="fs_lightbox_lader" class="loader-container">  <div class="classic-spinner"></div>   </div>';
 }
 var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd = "";     dcurrent_id = 0;     is_player0j = "no";     start_fs_mpl = {};       start_fs_postermpl = "";
@@ -637,6 +637,7 @@ document.getElementsByTagName("body")[0].appendChild(scrcontedfddd);
 var momocsifipsl = document.getElementById(optiy.id);
         if (momocsifipsl) {
 momocsifipsl.innerHTML='';
+var momocsifipsl_chd=optiy.loader || true;
 
 //var scrcontedd = document.createElement("div");
 			momocsifipsl.innerHTML = `
@@ -644,7 +645,7 @@ momocsifipsl.innerHTML='';
                     <span class="bngl">${btnys_fsmofla_efestr}</span>
                     <span class="bngd">${close_fsmofla_str}</span>
                     <div style="overflow:auto;" class="modal_fs_lightbox-content" id="fs_modal_${optiy.id}_content">
-                        ${fsmodal_create(fsmodal_booleanToNumber(optiy.loader) || 1, optiy.content, optiy.include ? optiy.include.player : "")} <br/>
+                        ${fsmodal_create(momocsifipsl_chd ? "yes" : "no", optiy.content, optiy.include ? optiy.include.player : "")} <br/>
                    <br/> </div>
                     ${thumsds_efestr} 
                 </div>
