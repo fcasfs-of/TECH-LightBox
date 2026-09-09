@@ -636,14 +636,12 @@ var momocsifipsl = document.getElementById(optiy.id);
 momocsifipsl.innerHTML='';
 
 if(optiy.content.loader && optiy.content.loader===true){
-	if (typeof fs_lightbox_carregamentoGlobal === 'function'){ 	fs_lightbox_carregamentoGlobal('show', {
+if (typeof fs_lightbox_carregamentoGlobal === 'function'){ 	fs_lightbox_carregamentoGlobal('show', {
     modelo: 'spinner', posicao: 'center',
     tipo: 'classic',   // Opções: classic, ring, dash, dots, bars, pulse, custom
     cor: '#111',  tamanho: '75px',   
     velocidade: '0.8s', arredondamento: '20px',
-    fundoOpacity: 0.8,  
-    autoDetect: true,
-    mostrarPorcentagem: false, texto: ''
+    fundoOpacity: 0.8,  autoDetect: true,  mostrarPorcentagem: false, texto: ''
 });   }
 }
 
