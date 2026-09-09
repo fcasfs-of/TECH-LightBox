@@ -629,8 +629,8 @@ var momocsifipsl = document.getElementById(optiy.id);
         if (momocsifipsl) {
 momocsifipsl.innerHTML='';
 
-var scrcontedd = document.createElement("div");
-			scrcontedd.innerHTML = `
+//var scrcontedd = document.createElement("div");
+			momocsifipsl.innerHTML = `
                 <div class="modal${close_fsmofla_efestr}" id="fs_modal_${optiy.id}" style="display:block; color:#000;">
                     <span class="bngl">${btnys_fsmofla_efestr}</span>
                     <span class="bngd">${close_fsmofla_str}</span>
@@ -642,7 +642,7 @@ var scrcontedd = document.createElement("div");
 <style>  #fs_modal_${optiy.id}.modal.customstyle_${optiy.id} .menulight_scrollmenu {       background-color: ${fcasfs_lightbox_converterHexParaRgba(fcasfs_lightbox_ajustarHex(fcas_lightbox_checkValueEX(optiy.content,"config","BG_Color","111") || "111"), "1", false)};    border: 1px solid #ccc;  }    #fs_modal_${optiy.id}.modal.customstyle_${optiy.id} {  background-color: ${fcasfs_lightbox_converterHexParaRgba(fcasfs_lightbox_ajustarHex(fcas_lightbox_checkValueEX(optiy.content,"config","BG_Color","000") || "000"), fcas_lightbox_checkValueEX(optiy.content,"config","BG_Opacity","0.9") || "0.9", true)};  -webkit-backdrop-filter: blur(${fcas_lightbox_checkValueEX(optiy.content,"config","BG_Blur","6") || "6"}px) !important;   backdrop-filter: blur(${fcas_lightbox_checkValueEX(optiy.content,"config","BG_Blur","6") || "6"}px) !important;  }   #fs_modal_${optiy.id} #fs_modal_${optiy.id}_content .tlightboc_fcasfs, #fs_modal_${optiy.id} #fs_modal_${optiy.id}_content h1 {  color:#${fcas_lightbox_checkValueEX(optiy.content,"config","colorText","fff") || "fff"} !important;  }  </style>
               <div id="${optiy.id}_menu"></div>
             `;
-momocsifipsl.appendChild(scrcontedd);    
+//momocsifipsl.appendChild(scrcontedd);    
 
 	lightboxPLclop_mod({ title:""+optiy.content.title || "", tipo:""+optiy.content.type || "none" }); 
 
