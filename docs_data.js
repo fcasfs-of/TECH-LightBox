@@ -34,7 +34,8 @@ window.getDocData = function() {
                 ['lang', 'Define o idioma da interface interna do componente, aceitando "pt" ou "en".'],
                 ['onClose', 'Função de callback acionada no encerramento e remoção do lightbox.'],
                 ['onOpen', 'Função de callback acionada na abertura e renderização do lightbox.'],
-                ['onPlayer', 'Função de callback acionada quando o player de mídia interno realiza ações estruturais.']
+                ['onPlayer', 'Função de callback acionada quando o player de mídia interno realiza ações estruturais.'],
+                ['onPlayer_Playlist', 'Função de callback acionada quando o player de mídia interno realiza ações estruturais relacionadas à lista de reprodução.']
             ],
             types: [
                 ['Configuração para tipo: "texto"', 'Suporta as chaves de estilização direta: italic, negrito, upper, lower (booleanos), fontSize (número), color (string), textAlign (string).'],
@@ -105,7 +106,8 @@ window.getDocData = function() {
                 ['lang', 'Sets internal viewport translation dictionary mapping rules, accepting "pt" or "en".'],
                 ['onClose', 'Callback function triggered upon termination and execution removal of the lightbox layout.'],
                 ['onOpen', 'Callback function triggered upon viewport initialization and interface rendering of the lightbox layout.'],
-                ['onPlayer', 'Callback function triggered when the underlying internal media engine issues state changes or structural updates.']
+                ['onPlayer', 'Callback function triggered when the underlying internal media engine issues state changes or structural updates.'],
+                ['onPlayer_Playlist', 'Callback function triggered when the internal media player performs structural actions related to the playlist.']
             ],
             types: [
                 ['Configuration for type: "texto"', 'Properties: italic, negrito, upper, lower (booleans), fontSize (number), color (string), textAlign (string).'],
