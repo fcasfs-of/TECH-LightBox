@@ -573,9 +573,10 @@ lightboxPLcloapis=function() {    if (mfplayeri){  mfplayeri.api("stop");  }   }
 			  mfplayeri.api('seek',Number(stringno_valtext(dstart_fs_mpl.config.pos_time,"0")));    
 			  mfplayeri.api("volume", Number(stringno_valtext(dstart_fs_mpl.config.volume,"1")));  if(stringno_valtext(dstart_fs_mpl.config.volume,"")==""){   mfplayeri.api("volume", 1);    }
 			  if(dstart_fs_mpl.config.mute && dstart_fs_mpl.config.mute=="1"){  mfplayeri.api('mute');      }
-			  if(dstart_fs_mpl.config.autoplay && dstart_fs_mpl.config.autoplay=="1"){  mfplayeri.api('play');      }
+			  
 		});
    }           if(dstart_fs_mpl.OSD==true){   playerfs_osf_evensdef(dstart_fs_mpl.config.OSD_Events || [], dstart_fs_mpl.config.OSD_Lang || "en", mfplayeri, dstart_fs_mpl.config.osd.duration || 3e3, dstart_fs_mpl.config.OSD_Pos || "top-center");    }
+if(dstart_fs_mpl.config.autoplay && dstart_fs_mpl.config.autoplay=="1"){  mfplayeri.api('play');      }
 }   }
 
 
