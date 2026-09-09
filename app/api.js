@@ -622,7 +622,7 @@ function mfplayeridd(){  }
         }
 
 var scrcontedfddd = document.createElement("div");
-scrcontedfddd.innerHTML = "";   scrcontedfddd.id=optiy.id;
+scrcontedfddd.innerHTML = "";   scrcontedfddd.id=optiy.id;     scrcontedfddd.data_info=""+num_fsmodal_open+": "+optiy.content.type || "none";
 document.getElementsByTagName("body")[0].appendChild(scrcontedfddd);    
 
 var momocsifipsl = document.getElementById(optiy.id);
