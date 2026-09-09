@@ -606,9 +606,9 @@ function mfplayeridd(){  }
 	 lightboxPLclos_mod=function(){   if(optiy.onClose && typeof optiy.onClose === 'function'){   optiy.onClose({ title:""+optiy.content.title || "", tipo:""+optiy.content.type || "none" });  }  };
 
         var fsmodal_offpen_tipf = "";             var fsmodal_open_tipf = "";
-		var momocsifipsl_chd="yes";
+		var momocsifipsl_chd="no";
 		
-        if (optiy.loader && optiy.loader === false) {	momocsifipsl_chd="no";   }
+        if (optiy.loader && optiy.loader === true) {	momocsifipsl_chd="yes";   }
 
         if (optiy.tiptext && optiy.tiptext != "") {
             fsmodal_offpen_tipf = optiy.tiptext;            fsmodal_open_tipf = ' data-tooltip="' + optiy.tiptext + '" data-flow="left"';
