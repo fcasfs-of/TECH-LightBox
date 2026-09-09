@@ -635,7 +635,7 @@ var momocsifipsl = document.getElementById(optiy.id);
         if (momocsifipsl) {
 momocsifipsl.innerHTML='';
 
-if(optiy.loader && optiy.loader==true){
+if(optiy.loader && optiy.loader===true){
 if (typeof fs_lightbox_carregamentoGlobal === 'function'){ 	fs_lightbox_carregamentoGlobal(momocsifipsl, 'show', {
     modelo: 'spinner', posicao: 'center',
     tipo: 'classic',   // Opções: classic, ring, dash, dots, bars, pulse, custom
