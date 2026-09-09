@@ -273,6 +273,8 @@ function fsmodal_call_menu(id) {
 }
     
 
+function fsmodal_close_aloder() {  var modalEdlement = document.getElementById("fs_lightbox_lader");    if (modalEdlement) {  modalEdlement.remove();  }    }
+
 function fsmodal_close(id, hide) {
     if (id && id !== "") {
 if(lightboxPLcloapis){  lightboxPLcloapis();  }	
@@ -321,9 +323,9 @@ arrayIntfferno[j]={id:"pf"+(j+1),title:arrayInterno[j].title || "",file:arrayInt
     }  else{      return Number(timhdfff[0]) * 60 * 60 + Number(timhdfff[1]) * 60 + Number(timhdfff[2]);   }
 }
 
-function fsmodal_create(ddd,optiy, app) {    var  fsmodal_createdd = "";  
+function fsmodal_create(ddd,optiy, app) {      fsmodal_createdd = "";     var  fsmodafdl_createdd = "";  
 if(ddd && ddd===true){
-fsmodal_createdd = '<div id="loader" class="loader-container">  <div class="classic-spinner"></div>   </div>';
+fsmodal_createdd = '<div id="loader" class="loader-container">  <div class="classic-spinner"></div>   </div>';    fsmodafdl_createdd='<div id="fs_lightbox_lader" class="loader-container">  <div class="classic-spinner"></div>   </div>';
 }
 var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd = "";     dcurrent_id = 0;     is_player0j = "no";     start_fs_mpl = {};       start_fs_postermpl = "";
 
@@ -382,7 +384,7 @@ var is_player0jmgtrt="";
 
 if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0jmgtrt=' style="${fsmodal_createWi} pointer-events:auto;" onclick="fcas_lightbox_alternarAmpliacao(this);" ';  }
 
-                fsmodal_create_ifir = `<div class="lightboxtimdd" ${is_player0jmgtrt}>  <img class="ffimg" src="${optiy.context}" style="user-select:none;pointer-events:none; width:${Number(optiy.size)}px;" />  </div>`;
+                fsmodal_create_ifir = `<div class="lightboxtimdd" ${is_player0jmgtrt}>  ${fsmodafdl_createdd}  <img class="ffimg" onload="fsmodal_close_aloder();this.style.display:block;" src="${optiy.context}" style="display:none;user-select:none;pointer-events:none; width:${Number(optiy.size)}px;" />  </div>`;
             } else if (optiy.type && optiy.type == "texto") {
                 is_player0j = "no";
 
@@ -430,7 +432,7 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                     poster: start_fs_postermpl,
                     player: 1
                 };
-                fsmodal_create_ifir = `<div id="preview_pls" style="${fsmodal_createWi}  height:${Number(optiy.size)}px !important;"></div>`;
+                fsmodal_create_ifir = `<div id="preview_pls" style="${fsmodal_createWi}  height:${Number(optiy.size)}px !important;">${fsmodafdl_createdd}</div>`;
             } else if (optiy.type && (optiy.type == "youtube" || optiy.type == "video" || optiy.type == "PList")) {
                 is_player0j = "yes";
 				var start_is_player0j=optiy.context;
@@ -467,7 +469,7 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                     poster: start_fs_postermpl,
                     player: 1
                 };
-                fsmodal_create_ifir = `<div id="preview_pls" style="${fsmodal_createWi}  height:${Number(optiy.size)}px !important;"></div>`;
+                fsmodal_create_ifir = `<div id="preview_pls" style="${fsmodal_createWi}  height:${Number(optiy.size)}px !important;">${fsmodafdl_createdd}</div>`;
             }
             fsmodal_createdd += `<span class="tlightboc_fcasfs" style="overflow:auto; padding:6px; margin: 0 auto; width:96%; text-align:center; display:block; color:#fff;">${fsmodal_create_ifir} ${fsmodal_create_desci} <br/><br/><br/><br/></span><br/><br/>`;
         }
