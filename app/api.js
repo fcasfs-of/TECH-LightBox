@@ -566,7 +566,7 @@ function loaded_playerinf(mfplayeri, dstart_fs_mpl = {}) {
 lightboxPLclos=function(){  if(dstart_fs_mpl.id && dstart_fs_mpl.id!="" && document.getElementById(dstart_fs_mpl.id)){  document.getElementById(dstart_fs_mpl.id).remove();  }  };
 lightboxPLcloapis=function() {    if (mfplayeri){  mfplayeri.api("stop");  }   }
 		  mfplayeri.OnEvents("init",function(){  
-			  mfplayeri.OnEvents("metadata",function(){   lightboxPLclayer_mod({ title:mfplayeri.api("title"), duration:convertSecondsDurationto(mfplayeri.api("duration")) }); });
+			  mfplayeri.OnEvents("metadata",function(){   lightboxPLclayer_mod({ tp:"load", text:mfplayeri.api("title"), info:convertSecondsDurationto(mfplayeri.api("duration")) }); });
 
 			  mfplayeri.api('seek',Number(stringno_valtext(dstart_fs_mpl.config.pos_time,"0")));    
 			  mfplayeri.api("volume", Number(stringno_valtext(dstart_fs_mpl.config.volume,"1")));  if(stringno_valtext(dstart_fs_mpl.config.volume,"")==""){   mfplayeri.api("volume", 1);    }
