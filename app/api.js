@@ -566,6 +566,8 @@ function loaded_playerinf(mfplayeri, dstart_fs_mpl = {}) {
 lightboxPLclos=function(){  if(dstart_fs_mpl.id && dstart_fs_mpl.id!="" && document.getElementById(dstart_fs_mpl.id)){  document.getElementById(dstart_fs_mpl.id).remove();  }  };
 lightboxPLcloapis=function() {    if (mfplayeri){  mfplayeri.api("stop");  }   }
 		  mfplayeri.OnEvents("init",function(){  
+			  if(mfplayeri.api("playlist_length") && mfplayeri.api("playlist_length")>=2){  lightboxPLclayer_mod({ tp:"playlist", text:"length", info:mfplayeri.api("playlist_length") });    }
+			  
 			  mfplayeri.OnEvents("metadata",function(){   lightboxPLclayer_mod({ tp:"load", text:mfplayeri.api("title"), info:convertSecondsDurationto(mfplayeri.api("duration")) }); });
 
 			  mfplayeri.api('seek',Number(stringno_valtext(dstart_fs_mpl.config.pos_time,"0")));    
