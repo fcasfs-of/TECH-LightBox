@@ -667,7 +667,7 @@ if (!document.getElementById("fcasfs_script-api-player") && optincludeplayer ===
     var scriptincfd = document.createElement("script");
     scriptincfd.id = "fcasfs_script-api-player";
     scriptincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
-    scriptincfd.setAttribute("onload", 'if (typeof loaded_playerinf === "function"){ loaded_playerinf({}, start_fs_mpl); }');
+    scriptincfd.setAttribute("onload", 'if (typeof loaded_playerinf === "function"){ loaded_playerinf({}, start_fs_mpl); }   document.getElementById("fcasfs_script-api-player").remove(); ');
 document.getElementsByTagName("body")[0].appendChild(scriptincfd);  
 }
 
