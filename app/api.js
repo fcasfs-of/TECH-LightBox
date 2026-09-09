@@ -647,7 +647,7 @@ momocsifipsl.innerHTML='';
                     <span class="bngl">${btnys_fsmofla_efestr}</span>
                     <span class="bngd">${close_fsmofla_str}</span>
                     <div style="overflow:auto;" class="modal_fs_lightbox-content" id="fs_modal_${optiy.id}_content">
-                        ${fsmodal_create(momocsifipsl_chd ? "yes" : "no", optiy.content, optiy.include ? optiy.include.player : "")} <br/>
+                        ${fsmodal_create(momocsifipsl_chd, optiy.content, optiy.include ? optiy.include.player : "")} <br/>
                    <br/> </div>
                     ${thumsds_efestr} 
                 </div>
