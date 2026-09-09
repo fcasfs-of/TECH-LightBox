@@ -384,7 +384,7 @@ var is_player0jmgtrt="";
 
 if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0jmgtrt=' style="${fsmodal_createWi} pointer-events:auto;" onclick="fcas_lightbox_alternarAmpliacao(this);" ';  }
 
-                fsmodal_create_ifir = `<div class="lightboxtimdd" ${is_player0jmgtrt}>  ${fsmodafdl_createdd}  <img class="ffimg" onload="fsmodal_close_aloder();this.style.display:block;" src="${optiy.context}" style="display:none;user-select:none;pointer-events:none; width:${Number(optiy.size)}px;" />  </div>`;
+                fsmodal_create_ifir = `<div class="lightboxtimdd" ${is_player0jmgtrt}>  ${fsmodafdl_createdd}  <img class="ffimg" onload="fsmodal_close_aloder();this.style.display='block';" src="${optiy.context}" style="display:none;user-select:none;pointer-events:none; width:${Number(optiy.size)}px;" />  </div>`;
             } else if (optiy.type && optiy.type == "texto") {
                 is_player0j = "no";
 
