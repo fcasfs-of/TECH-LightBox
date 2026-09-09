@@ -622,7 +622,8 @@ function mfplayeridd(){  }
         }
 
 var scrcontedfddd = document.createElement("div");
-scrcontedfddd.innerHTML = "";   scrcontedfddd.id=optiy.id;     scrcontedfddd.data_info=""+num_fsmodal_open+": "+optiy.content.type || "none";
+scrcontedfddd.innerHTML = "";   scrcontedfddd.id=optiy.id;    
+scrcontedfddd.setAttribute("src_id", ""+num_fsmodal_open);   scrcontedfddd.setAttribute("src_type", ""+optiy.content.type || "none");
 document.getElementsByTagName("body")[0].appendChild(scrcontedfddd);    
 
 var momocsifipsl = document.getElementById(optiy.id);
