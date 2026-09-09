@@ -60,7 +60,7 @@ function fs_lightbox_carregamentoGlobal(momocsifipsl,e,t){}
 
 
 var lightboxPLclos=function(){};    var lightboxPLcloapis=function(){};
-var lightboxPLclos_mod=function(){};   var lightboxPLclop_mod=function(){};    var lightboxPLclayer_mod=function(){};
+var lightboxPLclos_mod=function(){};   var lightboxPLclop_mod=function(){};    var lightboxPLclayer_mod=function(){};     var lightboxPLclayer_modiuu=function(){};
 
 
 function fcas_lightboc_Pdf(idioma, linkPdf, pg, idElemento) {
@@ -285,7 +285,7 @@ if(lightboxPLclos_mod){  lightboxPLclos_mod();  }
         var modalElement = document.getElementById(id);
         if (modalElement) {    
 			lightboxPLclop_mod=function(){  };
-			lightboxPLclayer_mod=function(){   };
+			lightboxPLclayer_mod=function(){   };    lightboxPLclayer_modiuu=function(){};
 			lightboxPLclos_mod=function(){  };
 			lightboxPLcloapis=function(){  };      
             modalElement.innerHTML = "";
@@ -566,7 +566,7 @@ function loaded_playerinf(mfplayeri, dstart_fs_mpl = {}) {
 lightboxPLclos=function(){  if(dstart_fs_mpl.id && dstart_fs_mpl.id!="" && document.getElementById(dstart_fs_mpl.id)){  document.getElementById(dstart_fs_mpl.id).remove();  }  };
 lightboxPLcloapis=function() {    if (mfplayeri){  mfplayeri.api("stop");  }   }
 		  mfplayeri.OnEvents("init",function(){  
-			  //if(mfplayeri.api("playlist_length") && mfplayeri.api("playlist_length")>=2){  lightboxPLclayer_mod({ tp:"playlist", text:"length", info:mfplayeri.api("playlist_length") });    }
+			  if(mfplayeri.api("playlist_length") && mfplayeri.api("playlist_length")>=2){  lightboxPLclayer_modiuu({ tp:"playlist", text:"length", info:mfplayeri.api("playlist_length") });    }
 			  
 			  mfplayeri.OnEvents("metadata",function(){   lightboxPLclayer_mod({ text:mfplayeri.api("title"), info:convertSecondsDurationto(mfplayeri.api("duration")) }); });
 
@@ -591,6 +591,7 @@ function fsmodal_open(optiy){      const num_fsmodal_open=Math.floor(1000+Math.r
  lightboxPLclos_mod=function(){   if(optiy.onClose && typeof optiy.onClose === 'function'){   optiy.onClose({ title:""+optiy.content.title || "", tipo:""+optiy.content.type || "none" });  }  };
 lightboxPLclop_mod=function(onh){   if(onh && optiy.onOpen && typeof optiy.onOpen === 'function'){   optiy.onOpen(onh);  }  };
 lightboxPLclayer_mod=function(onh){   if(onh && optiy.onPlayer && typeof optiy.onPlayer === 'function'){   optiy.onPlayer(onh);  }  };
+lightboxPLclayer_modiuu=function(onh){   if(onh && optiy.onPlayer_Playlist && typeof optiy.onPlayer_Playlist === 'function'){   optiy.onPlayer_Playlist(onh);  }  };
 	
     start_fs_mpl = {};    fsmodal_createdd = "";    start_fs_postermpl = "";
 function mfplayeridd(){  }
