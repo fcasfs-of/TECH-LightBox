@@ -665,6 +665,8 @@ if (document.getElementById("fcasfs_script-lightbox-pdf-core") && is_player0j ==
 }
 			
 if (!document.getElementById("fcasfs_script-api-player") && optincludeplayer === "yes" && is_player0j === "yes") {
+if(momocsifipsl){   momocsifipsl.setAttribute("player", ""+ optincludeplayer || "none");    momocsifipsl.setAttribute("src_player", ""+ is_player0j || "none");     }
+
     var scriptincfd = document.createElement("script");
     scriptincfd.id = "fcasfs_script-api-player";
     scriptincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
