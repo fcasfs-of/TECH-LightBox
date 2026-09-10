@@ -2,7 +2,9 @@
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+    -webkit-print-color-adjust: exact !important;        print-color-adjust: exact !important;        color-adjust: exact !important;  
     }
+
     body {
       font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
       background-color: var(--bg-color);
