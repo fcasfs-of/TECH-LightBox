@@ -60,6 +60,8 @@ function fcafs_lightbox_obterCssMascara(forma, valor = '0%') { const formasValid
 
 function fs_lightbox_carregamentoGlobal(momocsifipsl,e,t){}
 
+function fcas_lightbox_gerarTexto(e){var t=e.textContent.trim();return t?URL.createObjectURL(new Blob([t],{type:"text/plain"})):""}
+
 var lightboxPLclos=function(){};    var lightboxPLcloapis=function(){};
 var lightboxPLclos_mod=function(){};   var lightboxPLclop_mod=function(){};    var lightboxPLclayer_mod=function(){};     var lightboxPLclayer_modiuu=function(){};
 
@@ -602,23 +604,26 @@ document.getElementsByTagName("body")[0].appendChild(scrcontedfddd);
 var momocsifipsl = document.getElementById(optiy.id);
 if (momocsifipsl) {
 momocsifipsl.innerHTML='';
+var fcaslightconetxndif=fsmodal_create(momocsifipsl_chd, optiy.content, optiy.include ? optiy.include.player : "");
+var fcaslightconetxndiflink=fcas_lightbox_gerarTexto(`${optiy.id} = [${fcaslightconetxndif}]`);
 
 //var scrcontedd = document.createElement("div");
-			momocsifipsl.innerHTML = `
+momocsifipsl.innerHTML = `
                 <div class="modal_fs_lightbox${close_fsmofla_efestr}" id="fs_modal_${optiy.id}" style="display:block; color:#000;">
                     <span class="bngl">${btnys_fsmofla_efestr}</span>
                     <span class="bngd">${close_fsmofla_str}</span>
                     <div style="overflow:auto;" class="modal_fs_lightbox-content" id="fs_modal_${optiy.id}_content">
-                        ${fsmodal_create(momocsifipsl_chd, optiy.content, optiy.include ? optiy.include.player : "")} <br/>
-                   <br/> </div>
+                    ${fcaslightconetxndif}  <br/>
+                    <br/> </div>
                     ${thumsds_efestr} 
                 </div>
 <style>  .modal_fs_lightbox .classic-spinner{  border-top:6px solid #${fcas_lightbox_checkValueEX(optiy.content,"config","colorIcon","fff") || "fff"} !important;  -webkit-animation:girarSpinner 0.5s linear infinite;animation:girarSpinner 0.5s linear infinite;  }    #fs_modal_${optiy.id}.modal_fs_lightbox.customstyle_${optiy.id} .menulight_scrollmenu {       background-color: ${fcasfs_lightbox_converterHexParaRgba(fcasfs_lightbox_ajustarHex(fcas_lightbox_checkValueEX(optiy.content,"config","BG_Color","111") || "111"), "1", false)};    border: 1px solid #ccc;  }    #fs_modal_${optiy.id}.modal_fs_lightbox.customstyle_${optiy.id} {  background-color: ${fcasfs_lightbox_converterHexParaRgba(fcasfs_lightbox_ajustarHex(fcas_lightbox_checkValueEX(optiy.content,"config","BG_Color","000") || "000"), fcas_lightbox_checkValueEX(optiy.content,"config","BG_Opacity","0.9") || "0.9", true)};  -webkit-backdrop-filter: blur(${fcas_lightbox_checkValueEX(optiy.content,"config","BG_Blur","6") || "6"}px) !important;   backdrop-filter: blur(${fcas_lightbox_checkValueEX(optiy.content,"config","BG_Blur","6") || "6"}px) !important;  }   #fs_modal_${optiy.id} #fs_modal_${optiy.id}_content .tlightboc_fcasfs, #fs_modal_${optiy.id} #fs_modal_${optiy.id}_content h1 {  color:#${fcas_lightbox_checkValueEX(optiy.content,"config","colorText","fff") || "fff"} !important;  }  </style>
               <div id="${optiy.id}_menu"></div>
-            `;
+`;
 //momocsifipsl.appendChild(scrcontedd);  
-
-	lightboxPLclop_mod({ title:""+optiy.content.title || "", tipo:""+optiy.content.type || "none" }); 
+scrcontedfddd.setAttribute("src_base", ""+fcaslightconetxndiflink || "");
+	
+lightboxPLclop_mod({ title:""+optiy.content.title || "", tipo:""+optiy.content.type || "none" }); 
 
 	var mffomocsifipsl = document.getElementById("fs_modal_" + optiy.id);
 		if (mffomocsifipsl){    mffomocsifipsl.classList.add("customstyle_"+optiy.id);		}
