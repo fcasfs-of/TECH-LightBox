@@ -605,7 +605,7 @@ var momocsifipsl = document.getElementById(optiy.id);
 if (momocsifipsl) {
 momocsifipsl.innerHTML='';
 var fcaslightconetxndif=fsmodal_create(momocsifipsl_chd, optiy.content, optiy.include ? optiy.include.player : "");
-var fcaslightconetxndiflink=fcas_lightbox_gerarTexto(`${optiy.id} = [${fcaslightconetxndif}]`);
+var fcaslightconetxndiflink=fcas_lightbox_gerarTexto(''+optiy.id+' = ['+fcaslightconetxndif+']');
 
 //var scrcontedd = document.createElement("div");
 momocsifipsl.innerHTML = `
