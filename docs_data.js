@@ -45,7 +45,7 @@ window.getDocData = function() {
                 ['Configuração para tipo: "carrossel"', 'Suporta as chaves de controle do slider de mídia: tema, transicao, posicaoDots, estiloDots (strings), intervalo (número), exibirControles, exibirDots, autoPlay (booleanos).'],
                 ['Configuração para tipo: "grafico"', 'Suporta as chaves de renderização estatística: tema, orientacao (vertical ou horizontal), modelo (linha, pizza, barras), exibirValores, exibirTooltips (booleanos), larguraBarra, raioCurva (números).'],
                 ['Configuração para tipo: "pdf"', 'Suporta o controle de foco do documento: page (número).'],
-                ['Configuração para tipo: "image"', 'Suporta o controle de ampliação visual: scale (booleano).'],
+                ['Configuração para tipo: "image"', 'Suporta o controle de ampliação visual: scale (booleano), fit ("fill", "contain", "cover", "none", "scale-down").'],
                 ['Configuração para tipo: "svg"', 'Suporta o controle de cor de vetores inline: fill, stroke (strings).'],
                 ['Configuração para tipos: "audio", "video" e "PList"', 'Suporta a parametrização completa de players de mídia: colorText, colorIcon, OSD_Pos, pos_time (strings), OSD_Lang ("pt"/"en"), OSD_Theme ("light"/"dark"), volume (número decimal), OSD_Time (número em ms), OSD, autoplay, mute, contextmenu, nocontrols (booleanos). Se OSD for true, suporta a propriedade OSD_Events (opcional) que aceita uma lista/array contendo eventos como: "exitfullscreen", "fullscreen", "end", "finish", "volume", "seek", "userseek", "unmute", "mute", "pause", "stop", "play", "speed", "previous", "next".'],
                 ['Configuração Exclusiva para tipo: "PList"', 'Suporta adicionalmente a propriedade: select (string contendo apenas o número do item ativo da lista de reprodução).']
@@ -117,7 +117,7 @@ window.getDocData = function() {
                 ['Configuration for type: "carrossel"', 'Properties: tema, transicao, posicaoDots, estiloDots (strings), intervalo (number), exibirControles, exibirDots, autoPlay (booleans).'],
                 ['Configuration for type: "grafico"', 'Properties: tema, orientacao (vertical or horizontal), modelo (linha, pizza, barras), exibirValores, exibirTooltips (boolean), larguraBarra, raioCurva (numbers).'],
                 ['Configuration for type: "pdf"', 'Properties: page (number).'],
-                ['Configuration for type: "image"', 'Properties: scale (boolean).'],
+                ['Configuration for type: "image"', 'Properties: scale (boolean), fit ("fill", "contain", "cover", "none", "scale-down").'],
                 ['Configuration for type: "svg"', 'Properties: fill, stroke (strings).'],
                 ['Configuration for types: "audio", "video" and "PList"', 'Properties: colorText, colorIcon, OSD_Pos, pos_time (strings), OSD_Lang ("pt"/"en"), OSD_Theme ("light"/"dark"), volume (float), OSD_Time (number in ms), OSD, autoplay, mute, contextmenu, nocontrols (booleans). If OSD is true, it supports the OSD_Events (optional) property which maps an array collection tracking media events like: "exitfullscreen", "fullscreen", "end", "finish", "volume", "seek", "userseek", "unmute", "mute", "pause", "stop", "play", "speed", "previous", "next".'],
                 ['Exclusive Configuration for type: "PList"', 'Properties: select (string tracking sequential track execution option array index number).']
