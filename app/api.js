@@ -56,7 +56,6 @@ function fcas_lightbox_criarPlaylist(e){if(!document.getElementById("v-playlist-
 
 function fcafs_lightbox_obterCssObjectFit(tipo) { const tipoFormatado = String(tipo).toLowerCase(); const tiposValidos = ['fill', 'contain', 'cover', 'none', 'scale-down']; return tiposValidos.includes(tipoFormatado) ? `object-fit: ${tipoFormatado};` : ""; }
 function fcafs_lightbox_obterCssImagemCrop(cssObjectFit, posicaoX = 'center', posicaoY = 'center') { const posValidas = ['center', 'top', 'bottom', 'left', 'right']; const posX = posValidas.includes(String(posicaoX).toLowerCase()) || String(posicaoX).includes('%') || String(posicaoX).includes('px') ? posicaoX : 'center'; const posY = posValidas.includes(String(posicaoY).toLowerCase()) || String(posicaoY).includes('%') || String(posicaoY).includes('px') ? posicaoY : 'center'; return (cssObjectFit.includes('cover') || cssObjectFit.includes('contain')) ? `${cssObjectFit} object-position: ${posX} ${posY};` : ""; }
-
 function fcafs_lightbox_obterCssMascara(forma, valor = '0%') { const formasValidas = ['inset', 'circle', 'ellipse', 'polygon', 'path', 'rect', 'xywh', 'margin-box', 'border-box', 'padding-box', 'content-box', 'stroke-box', 'view-box']; const formato = String(forma).toLowerCase(); return formasValidas.includes(formato) ? `clip-path: ${formato}(${valor});` : ''; }
 
 function fs_lightbox_carregamentoGlobal(momocsifipsl,e,t){}
@@ -276,13 +275,13 @@ if(lightboxPLclos_mod){  lightboxPLclos_mod();  }
 		
 var modalElement = document.getElementById(id);
 if (modalElement) {    
-			lightboxPLclop_mod=function(){  };
-			lightboxPLclayer_mod=function(){   };    lightboxPLclayer_modiuu=function(){};
-			lightboxPLclos_mod=function(){  };
-			lightboxPLcloapis=function(){  };      
-            modalElement.innerHTML = "";
+lightboxPLclop_mod=function(){  };
+lightboxPLclayer_mod=function(){   };    lightboxPLclayer_modiuu=function(){};
+lightboxPLclos_mod=function(){  };
+lightboxPLcloapis=function(){  };      
+modalElement.innerHTML = "";
 if (hide && hide === "yes") {   document.body.style.overflow = "auto";  }
-			modalElement.remove();
+modalElement.remove();
 }
     }
 }
@@ -360,21 +359,18 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd 
                 is_player0j = "no";
                 fsmodal_create_ifir = ` ${fsmodafdl_createdd}  <iframe onload="fsmodal_close_aloder();this.style.display='block';"  allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation" frameborder="0" allowfullscreen src="${optiy.context}" style="display:none;  ${fsmodal_createWi} height: ${Number(optiy.size)}px !important;  "></iframe>`;
             } else if (optiy.type && optiy.type == "image") {
-				var is_player0jmgtrt="";
+                var is_player0jmgtrt="";
                 is_player0j = "no";
-
-				if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0jmgtrt=' style="${fsmodal_createWi} pointer-events:auto;" onclick="fcas_lightbox_alternarAmpliacao(this);" ';  }
+                if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0jmgtrt=' style="${fsmodal_createWi} pointer-events:auto;" onclick="fcas_lightbox_alternarAmpliacao(this);" ';  }
 
                 fsmodal_create_ifir = `<div class="lightboxtimdd" ${is_player0jmgtrt}>  ${fsmodafdl_createdd}  <img class="ffimg" onload="fsmodal_close_aloder();this.style.display='inline-block';" src="${optiy.context}" style="display:none;user-select:none;pointer-events:none; width:${Number(optiy.size)}px;" />  </div>`;
             } else if (optiy.type && optiy.type == "texto") {
                 is_player0j = "no";
-
-				var fcas_lightbox_checkValueEX_it="";   var fcas_lightbox_checkValueEX_bolff="";
-				var fcas_lightbox_checkValueEX_bolsdff="";
-				if(fcas_lightbox_checkValueEX(optiy,"config","italic",false)==true){   fcas_lightbox_checkValueEX_it=" font-style: italic;  "  }
-				if(fcas_lightbox_checkValueEX(optiy,"config","negrito",false)==true){   fcas_lightbox_checkValueEX_bolff=" font-weight: 700;  "  }
-				if(fcas_lightbox_checkValueEX(optiy,"config","lower",false)==true){   fcas_lightbox_checkValueEX_bolff=" text-transform: lowercase;  "  }
-				if(fcas_lightbox_checkValueEX(optiy,"config","upper",false)==true){   fcas_lightbox_checkValueEX_bolff=" text-transform: uppercase;  "  }
+                var fcas_lightbox_checkValueEX_it="";   var fcas_lightbox_checkValueEX_bolff="";    var fcas_lightbox_checkValueEX_bolsdff="";
+                if(fcas_lightbox_checkValueEX(optiy,"config","italic",false)==true){   fcas_lightbox_checkValueEX_it=" font-style: italic;  "  }
+                if(fcas_lightbox_checkValueEX(optiy,"config","negrito",false)==true){   fcas_lightbox_checkValueEX_bolff=" font-weight: 700;  "  }
+                if(fcas_lightbox_checkValueEX(optiy,"config","lower",false)==true){   fcas_lightbox_checkValueEX_bolff=" text-transform: lowercase;  "  }
+                if(fcas_lightbox_checkValueEX(optiy,"config","upper",false)==true){   fcas_lightbox_checkValueEX_bolff=" text-transform: uppercase;  "  }
 	
                 fsmodal_create_ifir = `<br/> <div class="txt" style="${fsmodal_createWi}  height:${Number(optiy.size)}px !important;">  ${optiy.context}  </div>  <br/>   <style> .tlightboc_fcasfs .txt {   ${fcas_lightbox_checkValueEX_bolsdff}   ${fcas_lightbox_checkValueEX_it}  ${fcas_lightbox_checkValueEX_bolff}   font-size: ${fcas_lightbox_checkValueEX(optiy,"config","fontSize","14px")};    text-align: ${fcas_lightbox_checkValueEX(optiy,"config","textAlign","center")};   color: ${fcas_lightbox_checkValueEX(optiy,"config","color","#fff")};  }   .tlightboc_fcasfs .txt hr {   border-color: ${fcas_lightbox_checkValueEX(optiy,"config","color","#fff")}; color: ${fcas_lightbox_checkValueEX(optiy,"config","color","#fff")};  } </style> <br/><br/>`;
             }  if (optiy.type && optiy.type == "svg") {
