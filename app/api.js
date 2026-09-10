@@ -123,12 +123,8 @@ function fcas_lightboc_Pdf(idioma, linkPdf, pg, idElemento) {
             });
         });
     }
-    btnAnterior.addEventListener('click', function() {
-        if (paginaAtual > 1) carregarPagina(paginaAtual - 1);
-    });
-    btnProximo.addEventListener('click', function() {
-        if (paginaAtual < totalPaginas) carregarPagina(paginaAtual + 1);
-    });
+    btnAnterior.addEventListener('click', function() {        if (paginaAtual > 1) carregarPagina(paginaAtual - 1);    });
+    btnProximo.addEventListener('click', function() {        if (paginaAtual < totalPaginas) carregarPagina(paginaAtual + 1);    });
     if (typeof pdfjsLib !== 'undefined') {
         pdfjsLib.getDocument(linkPdf).promise.then(function(pdf) {
             pdfDoc = pdf;
@@ -278,16 +274,16 @@ if(lightboxPLcloapis){  lightboxPLcloapis();  }
 if(lightboxPLclos){  lightboxPLclos();  }
 if(lightboxPLclos_mod){  lightboxPLclos_mod();  }
 		
-        var modalElement = document.getElementById(id);
-        if (modalElement) {    
+var modalElement = document.getElementById(id);
+if (modalElement) {    
 			lightboxPLclop_mod=function(){  };
 			lightboxPLclayer_mod=function(){   };    lightboxPLclayer_modiuu=function(){};
 			lightboxPLclos_mod=function(){  };
 			lightboxPLcloapis=function(){  };      
             modalElement.innerHTML = "";
-            if (hide && hide === "yes") {   document.body.style.overflow = "auto";  }
+if (hide && hide === "yes") {   document.body.style.overflow = "auto";  }
 			modalElement.remove();
-        }
+}
     }
 }
 
@@ -333,18 +329,12 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd 
                 is_player0j = "no";
                 var start_fs_mpl_args = "";
                 var stdart_fs_mpl_argsd = "";
-                if (optiy.view && optiy.view == "info") {
-                    start_fs_mpl_args = "&info=on";
-                } else if (optiy.view && optiy.view == "list") {
-                    start_fs_mpl_args = "&list=on";
+                if (optiy.view && optiy.view == "info") {  start_fs_mpl_args = "&info=on";
+                } else if (optiy.view && optiy.view == "list") {   start_fs_mpl_args = "&list=on";
                 }
                 if (optiy.config) {
-                    if (optiy.config.pos && optiy.config.pos != "") {
-                        stdart_fs_mpl_argsd += "&pos=" + optiy.config.pos;
-                    }
-                    if (optiy.config.select && optiy.config.select != "") {
-                        stdart_fs_mpl_argsd += "&fileSelect=" + optiy.config.select;
-                    }
+                    if (optiy.config.pos && optiy.config.pos != "") {   stdart_fs_mpl_argsd += "&pos=" + optiy.config.pos;  }
+                    if (optiy.config.select && optiy.config.select != "") {    stdart_fs_mpl_argsd += "&fileSelect=" + optiy.config.select;  }
                 }
                 fsmodal_create_ifir = ` ${fsmodafdl_createdd}  <iframe onload="fsmodal_close_aloder();this.style.display='block';"  scrolling="no" allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation" frameborder="0" allowfullscreen src="https://player.fcasfs-of.cloud-fs.net?fileID=${optiy.context}${start_fs_mpl_args}&fileView=true${stdart_fs_mpl_argsd}" style="display:none;overflow: hidden; ${fsmodal_createWi} height: ${Number(optiy.size)}px !important;   "></iframe>`;
             } else if (optiy.type && optiy.type == "list") {
@@ -393,9 +383,7 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd 
             }  else if (optiy.type && optiy.type == "audio") {
                 is_player0j = "yes";
 				var tlafn_odslight=fcas_lightbox_checkValueEX(optiy,"config","Lang","en");    if(fcas_lightbox_checkValueEX(optiy,"config","OSD_Lang","")!=""){tlafn_odslight=fcas_lightbox_checkValueEX(optiy,"config","OSD_Lang","en");}
-                if (optiy.poster && optiy.poster != "") {
-                    start_fs_postermpl = optiy.poster;
-                }
+                if (optiy.poster && optiy.poster != "") {   start_fs_postermpl = optiy.poster;   }
                 start_fs_mpl = {
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
@@ -431,9 +419,7 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd 
 				var start_is_player0j=optiy.context;
 				if(optiy.type == "PList") {   start_is_player0j=fsmodal_listaFiles(optiy.context);  }
 				else if(optiy.type == "youtube") {  start_is_player0j="https://www.youtube.com/watch?v="+optiy.context;  }
-                if (optiy.poster && optiy.poster != "") {
-                    start_fs_postermpl = optiy.poster;
-                }
+                if (optiy.poster && optiy.poster != "") {   start_fs_postermpl = optiy.poster;   }
                 start_fs_mpl = {
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
@@ -559,7 +545,7 @@ if(dstart_fs_mpl.config.mute && dstart_fs_mpl.config.mute=="1"){  mfplayeri.api(
 
 });
 if(dstart_fs_mpl.config.autoplay && dstart_fs_mpl.config.autoplay=="1"){  mfplayeri.api('play');      }
-   }
+}
 if(dstart_fs_mpl.OSD==true){   playerfs_osf_evensdef(dstart_fs_mpl.config.OSD_Events || [], dstart_fs_mpl.config.OSD_Lang || "en", mfplayeri, dstart_fs_mpl.config.osd.duration || 3e3, dstart_fs_mpl.config.OSD_Pos || "top-center");    }
 
 }   }
@@ -570,21 +556,20 @@ function mfplayeridd(){  }
 var is_player0j = "no";   var fsmodal_createdd = "";    var start_fs_postermpl = "";
 
 function fsmodal_open(optiy){      const num_fsmodal_open=Math.floor(1000+Math.random()*90000);
- lightboxPLclos=function(){   };
-	lightboxPLcloapis=function(){   };
- lightboxPLclos_mod=function(){   if(optiy.onClose && typeof optiy.onClose === 'function'){   optiy.onClose({ title:""+optiy.content.title || "", tipo:""+optiy.content.type || "none" });  }  };
+lightboxPLclos=function(){   };
+lightboxPLcloapis=function(){   };
+lightboxPLclos_mod=function(){   if(optiy.onClose && typeof optiy.onClose === 'function'){   optiy.onClose({ title:""+optiy.content.title || "", tipo:""+optiy.content.type || "none" });  }  };
 lightboxPLclop_mod=function(onh){   if(onh && optiy.onOpen && typeof optiy.onOpen === 'function'){   optiy.onOpen(onh);  }  };
 lightboxPLclayer_mod=function(onh){   if(onh && optiy.onPlayer && typeof optiy.onPlayer === 'function'){   optiy.onPlayer(onh);  }  };
 lightboxPLclayer_modiuu=function(onh){   if(onh && optiy.onPlayer_Playlist && typeof optiy.onPlayer_Playlist === 'function'){   optiy.onPlayer_Playlist(onh);  }  };
 	
-    start_fs_mpl = {};    fsmodal_createdd = "";    start_fs_postermpl = "";
+start_fs_mpl = {};    fsmodal_createdd = "";    start_fs_postermpl = "";
 function mfplayeridd(){  }
 
-       var optincludeplayider = "fcasfs_lightbox_"+num_fsmodal_open;    var optincludeplayer = "";
+var optincludeplayider = "fcasfs_lightbox_"+num_fsmodal_open;    var optincludeplayer = "";
     if (optiy && optiy.include && optiy.include.player == "yes") {        optincludeplayer = "yes";    }
-    var thumsds_efestr = "";       var fsmodal_open_closegi = "";
+var thumsds_efestr = "";       var fsmodal_open_closegi = "";
     if (optiy && optiy.scroll_hide && optiy.scroll_hide == "yes") {        fsmodal_open_closegi = ", '" + optiy.scroll_hide + "'";    }
-	
     if (optiy && optiy.id != "") {    optincludeplayider=optincludeplayider+"_"+optiy.id; 	}
 	
 	if (optincludeplayider && optincludeplayider != "") {
@@ -620,7 +605,7 @@ scrcontedfddd.setAttribute("src_id", ""+num_fsmodal_open);   scrcontedfddd.setAt
 document.getElementsByTagName("body")[0].appendChild(scrcontedfddd);    
 
 var momocsifipsl = document.getElementById(optiy.id);
-        if (momocsifipsl) {
+if (momocsifipsl) {
 momocsifipsl.innerHTML='';
 
 //var scrcontedd = document.createElement("div");
@@ -669,11 +654,11 @@ document.getElementsByTagName("body")[0].appendChild(scriptincfd);
   if(is_player0j === "pdf") {    mfplayeridd();  }
 
 
-	if (close_fsmofla_strdd === true) {
+if (close_fsmofla_strdd === true) {
                
-	}
+}
 			
-	if (optiy.scroll_hide && optiy.scroll_hide == "yes") {                document.body.style.overflow = "hidden";            }
+if (optiy.scroll_hide && optiy.scroll_hide == "yes") {    document.body.style.overflow = "hidden";   }
         }
     }
 }
