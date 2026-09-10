@@ -401,6 +401,8 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                 fsmodal_create_ifir = `<br/> <div style="${fsmodal_createWi}"> ${optiy.context}  </div>   <style> .tlightboc_fcasfs svg {   pointer-events: none;    width: ${Number(optiy.size)}px;    height: ${Number(optiy.size)}px;    fill: ${fcas_lightbox_checkValueEX(optiy,"config","fill","currentColor")};    stroke: ${fcas_lightbox_checkValueEX(optiy,"config","stroke","currentColor")};  }  </style> <br/><br/>`;
             }  else if (optiy.type && optiy.type == "audio") {
                 is_player0j = "yes";
+var tlafn_odslight=OSD_Lang:fcas_lightbox_checkValueEX(optiy,"config","Lang","en");
+if(OSD_Lang:fcas_lightbox_checkValueEX(optiy,"config","OSD_Lang","")!=""){tlafn_odslight=fcas_lightbox_checkValueEX(optiy,"config","OSD_Lang","en");}
                 if (optiy.poster && optiy.poster != "") {
                     start_fs_postermpl = optiy.poster;
                 }
@@ -413,7 +415,7 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                     colortexts:fcas_lightbox_checkValueEX(optiy,"config","colorText","fff") || "fff",
                     contextmenu_namedisplay:"",
                     contextmenu:""+fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","contextmenu",true)) || "1",
-                    OSD_Lang:fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
+                    OSD_Lang: tlafn_odslight || "en",
                     OSD_Pos:"top-"+fcas_lightbox_checkValueEX(optiy,"config","OSD_Pos","center") || "center",
                     OSD_Events:fcas_lightbox_checkValueEX(optiy,"config","OSD_Events",[]) || [],
                     osd:{  theme:fcas_lightbox_checkValueEX(optiy,"config","OSD_Theme","dark"), duration:fcas_lightbox_checkValueEX(optiy,"config","OSD_Time",3e3) || 3e3, width:"auto" },
@@ -435,6 +437,8 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                 fsmodal_create_ifir = `<div id="preview_pls" style="${fsmodal_createWi}  height:${Number(optiy.size)}px !important;">${fsmodafdl_createdd}</div>`;
             } else if (optiy.type && (optiy.type == "youtube" || optiy.type == "video" || optiy.type == "PList")) {
                 is_player0j = "yes";
+var tlafn_odslight=OSD_Lang:fcas_lightbox_checkValueEX(optiy,"config","Lang","en");
+if(OSD_Lang:fcas_lightbox_checkValueEX(optiy,"config","OSD_Lang","")!=""){tlafn_odslight=fcas_lightbox_checkValueEX(optiy,"config","OSD_Lang","en");}
 				var start_is_player0j=optiy.context;
 				if(optiy.type == "PList") {   start_is_player0j=fsmodal_listaFiles(optiy.context);  }
 				else if(optiy.type == "youtube") {  start_is_player0j="https://www.youtube.com/watch?v="+optiy.context;  }
@@ -450,7 +454,7 @@ if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0j
                     contextmenu:""+fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","contextmenu",true)) || "1",
                     coloricons:fcas_lightbox_checkValueEX(optiy,"config","colorIcon","fff") || "fff",
                     colortexts:fcas_lightbox_checkValueEX(optiy,"config","colorText","fff") || "fff",
-                    OSD_Lang:fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
+                    OSD_Lang:tlafn_odslight || "en",
                     OSD_Pos:"top-"+fcas_lightbox_checkValueEX(optiy,"config","OSD_Pos","center") || "center",
                     OSD_Events:fcas_lightbox_checkValueEX(optiy,"config","OSD_Events",[]) || [],
                     osd:{  theme:fcas_lightbox_checkValueEX(optiy,"config","OSD_Theme","dark"), duration:fcas_lightbox_checkValueEX(optiy,"config","OSD_Time",3e3) || 3e3, width:"auto" },
