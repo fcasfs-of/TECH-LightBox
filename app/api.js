@@ -171,7 +171,10 @@ function fcas_lightbox_checkValueEX(listad, name1, name2, retronon) {
 
 function fsmodal_cl_menu(id) {
     if (id && id !== "") {
-        var element = document.getElementById(id);       if (element) {            element.click();        }
+        var element = document.getElementById(id);       if (element) {            element.click();      
+const activedElement = document.querySelector('.modal_fs_lightbox .menulight_scrollmenu button.active');
+if (activedElement) {    activedElement.scrollIntoView({    behavior: 'smooth',   block: 'nearest',  inline: 'center'  });   }
+}
     }
 }
 
