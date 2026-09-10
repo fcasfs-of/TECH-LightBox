@@ -635,6 +635,13 @@ momocsifipsl.innerHTML = `
 	
 lightboxPLclop_mod({ title:""+optiy.content.title || "", tipo:""+optiy.content.type || "none" }); 
 
+if (optiy.itens && optiy.menu === true) {
+if (fsmodal_call_menu(optiy.itens) === true) {
+const activedElement = document.querySelector('.modal_fs_lightbox .menulight_scrollmenu button.active');
+if (activedElement) {    activedElement.scrollIntoView({    behavior: 'smooth',   block: 'nearest',  inline: 'center'  });   }
+}   }
+
+
 	var mffomocsifipsl = document.getElementById("fs_modal_" + optiy.id);
 		if (mffomocsifipsl){    mffomocsifipsl.classList.add("customstyle_"+optiy.id);		}
 		
