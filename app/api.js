@@ -61,7 +61,7 @@ function fcafs_lightbox_obterCssMascara(forma, valor = '0%') { const formasValid
 function fs_lightbox_carregamentoGlobal(momocsifipsl,e,t){}
 
 function fcas_lightbox_gerarTexto(e){var t=Array.isArray(e)?e.join("\n").trim():(e?e.trim():"");return t?URL.createObjectURL(new Blob([t],{type:"text/plain"})):""}
-function fcas_lightbox_extrairTextoObjeto(e){if(!e||(typeof e==="object"&&Object.keys(e).length===0))return"";return typeof e==="object"?Object.values(e).map(fcas_extrairTextoObjeto).filter(Boolean).join("\n"):String(e).trim()}
+function fcas_lightbox_extrairTextoObjeto(e){if(!e||(typeof e==="object"&&Object.keys(e).length===0))return"";return typeof e==="object"?Object.values(e).map(fcas_lightbox_extrairTextoObjeto).filter(Boolean).join("\n"):String(e).trim()}
 
 var lightboxPLclos=function(){};    var lightboxPLcloapis=function(){};
 var lightboxPLclos_mod=function(){};   var lightboxPLclop_mod=function(){};    var lightboxPLclayer_mod=function(){};     var lightboxPLclayer_modiuu=function(){};
