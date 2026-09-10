@@ -54,6 +54,16 @@ function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carre
 
 
 var modaisDisponiveis = {
+  'btnSlideshow': function() {
+    return {
+      title: "Slideshow",
+      type: "slideshow",
+      context:[ { url: "https://lightbox.fcasfs-of.cloud-fs.net/favicon.png", caption: "" },  { url: "https://fcasfs-of.cloud-fs.net/info-profile/logo/cover_b.png", caption: "logo" } ],
+      size: "340",
+      includePlayer: "no",
+      description: ""
+    };
+  },
   'btnCarrossel': function() {
     return {
       title: "Carousel",
