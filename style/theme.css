@@ -395,6 +395,9 @@ header .dname .icon::before {     pointer-events: none;
     #btnPDF { background-color: #1e3a8a; color: #fca5a5; border-color: #b91c1c; }
     #btnPDF:hover { background-color: #b91c1c; }
 
+    #btnSlideshow { background-color: #715802; color: #fde047; border-color: #a16207; }
+    #btnSlideshow:hover { background-color: #a16207; }
+
      #btnAudio, #btnVideo, #btnPlaylist { background-color: #4c1d95; color: #a78bfa; border-color: #6d28d9; }
      #btnAudio:hover, #btnVideo:hover, #btnPlaylist:hover { background-color: #6d28d9; }
 
