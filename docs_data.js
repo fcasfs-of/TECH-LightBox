@@ -47,11 +47,13 @@ window.getDocData = function() {
                 ['Configuração para tipo: "pdf"', 'Suporta o controle de foco do documento: page (número).'],
                 ['Configuração para tipo: "image"', 'Suporta o controle de ampliação visual: scale (booleano), fit ("fill", "contain", "cover", "none", "scale-down").'],
                 ['Configuração para tipo: "svg"', 'Suporta o controle de cor de vetores inline: fill, stroke (strings).'],
+                ['Configuração para tipo: "playlist"', 'Suporta as chaves de estilização direta: effect ("slide", "fade", "zoom", "cube"), showControls (boolean), showCaptions (boolean).']
                 ['Configuração para tipos: "audio", "video" e "PList"', 'Suporta a parametrização completa de players de mídia: colorText, colorIcon, OSD_Pos, pos_time (strings), OSD_Lang ("pt"/"en"), OSD_Theme ("light"/"dark"), volume (número decimal), OSD_Time (número em ms), OSD, autoplay, mute, contextmenu, nocontrols (booleanos). Se OSD for true, suporta a propriedade OSD_Events (opcional) que aceita uma lista/array contendo eventos como: "exitfullscreen", "fullscreen", "end", "finish", "volume", "seek", "userseek", "unmute", "mute", "pause", "stop", "play", "speed", "previous", "next".'],
                 ['Configuração Exclusiva para tipo: "PList"', 'Suporta adicionalmente a propriedade: select (string contendo apenas o número do item ativo da lista de reprodução).']
             ],
             context: [
                 ['Carrossel', 'Recebe um array de objetos contendo as chaves de caminhos e descrições: [ { url: "", legenda: "" } ]'],
+                ['slideshow', 'Recebe um array de objetos contendo as chaves de caminhos e descrições: [ { url: "", caption: "" } ]'],
                 ['Playlist', 'Recebe um array de objetos contendo as chaves de dados visuais e hiperlinks: [ { titulo: "", subtitulo: "", thumbnail: "", href: "" } ]'],
                 ['texto', 'Recebe uma string simples contendo o texto normal.'],
                 ['Tabela', 'Recebe um array contendo coleções de objetos estruturados com suas respectivas chaves e valores dinâmicos: [] dentro um objeto com keys e valores.'],
@@ -67,7 +69,7 @@ window.getDocData = function() {
             ],
             other: [
                 ['title', 'String com o título que será exibido no topo do modal.'],
-                ['type', 'Tipo do formato tratado (list, table, playlist, carrossel, grafico, pdf, link, texto, image, svg, audio, video, PList).'],
+                ['type', 'Tipo do formato tratado (list, table, playlist, carrossel, slideshow, grafico, pdf, link, texto, image, svg, audio, video, PList).'],
                 ['poster', 'URL da imagem de capa utilizada caso o tipo do conteúdo seja vídeo.'],
                 ['description', 'Texto descritivo opcional posicionado junto ao bloco de conteúdo.']
             ]
@@ -119,11 +121,13 @@ window.getDocData = function() {
                 ['Configuration for type: "pdf"', 'Properties: page (number).'],
                 ['Configuration for type: "image"', 'Properties: scale (boolean), fit ("fill", "contain", "cover", "none", "scale-down").'],
                 ['Configuration for type: "svg"', 'Properties: fill, stroke (strings).'],
+                ['Configuration for type: "playlist"', 'Properties: effect ("slide", "fade", "zoom", "cube"), showControls (boolean), showCaptions (boolean).'],
                 ['Configuration for types: "audio", "video" and "PList"', 'Properties: colorText, colorIcon, OSD_Pos, pos_time (strings), OSD_Lang ("pt"/"en"), OSD_Theme ("light"/"dark"), volume (float), OSD_Time (number in ms), OSD, autoplay, mute, contextmenu, nocontrols (booleans). If OSD is true, it supports the OSD_Events (optional) property which maps an array collection tracking media events like: "exitfullscreen", "fullscreen", "end", "finish", "volume", "seek", "userseek", "unmute", "mute", "pause", "stop", "play", "speed", "previous", "next".'],
                 ['Exclusive Configuration for type: "PList"', 'Properties: select (string tracking sequential track execution option array index number).']
             ],
             context: [
                 ['Carousel', 'Accepts an array of objects carrying media paths and string text captions: [ { url: "", legenda: "" } ]'],
+                ['slideshow', 'Accepts an array of objects carrying media paths and string text captions: [ { url: "", caption: "" } ]'],
                 ['Playlist', 'Accepts an array of objects tracking graphic data and target navigation anchors: [ { titulo: "", subtitulo: "", thumbnail: "", href: "" } ]'],
                 ['text', 'Accepts a clean and standard flat string payload: normal text string.'],
                 ['Table', 'Accepts an array structure mapping collection sets of dynamic objects: [] containing an object with keys and values.'],
@@ -139,7 +143,7 @@ window.getDocData = function() {
             ],
             other: [
                 ['title', 'String value rendering the headline text at the top of the header.'],
-                ['type', 'Evaluated payload type (list, table, playlist, carrossel, grafico, pdf, link, texto, image, svg, audio, video, PList).'],
+                ['type', 'Evaluated payload type (list, table, playlist, carrossel, slideshow, grafico, pdf, link, texto, image, svg, audio, video, PList).'],
                 ['poster', 'URL string targeting thumbnail posters required when mapping videos.'],
                 ['description', 'Complementary description text aligned beneath or near the asset render block.']
             ]
