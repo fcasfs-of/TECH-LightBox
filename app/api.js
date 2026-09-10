@@ -60,7 +60,7 @@ function fcafs_lightbox_obterCssMascara(forma, valor = '0%') { const formasValid
 
 function fs_lightbox_carregamentoGlobal(momocsifipsl,e,t){}
 
-function fcas_lightbox_gerarTexto(e){var t=e.textContent.trim();return t?URL.createObjectURL(new Blob([t],{type:"text/plain"})):""}
+function fcas_lightbox_gerarTexto(e){var t=e?e.trim():"";return t?URL.createObjectURL(new Blob([t],{type:"text/plain"})):""}
 
 var lightboxPLclos=function(){};    var lightboxPLcloapis=function(){};
 var lightboxPLclos_mod=function(){};   var lightboxPLclop_mod=function(){};    var lightboxPLclayer_mod=function(){};     var lightboxPLclayer_modiuu=function(){};
