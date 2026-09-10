@@ -365,7 +365,7 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd 
                 is_player0j = "no";
                 if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  is_player0jmgtrt=' style="${fsmodal_createWi} pointer-events:auto;" onclick="fcas_lightbox_alternarAmpliacao(this);" ';  }
 
-                fsmodal_create_ifir = `<div class="lightboxtimdd" ${is_player0jmgtrt}>  ${fsmodafdl_createdd}  <img class="ffimg" onload="fsmodal_close_aloder();this.style.display='inline-block';" src="${optiy.context}" style="display:none;user-select:none;pointer-events:none; width:${Number(optiy.size)}px;" />  </div>`;
+                fsmodal_create_ifir = `<div class="lightboxtimdd" ${is_player0jmgtrt}>  ${fsmodafdl_createdd}  <img class="ffimg" onload="fsmodal_close_aloder();this.style.display='inline-block';" src="${optiy.context}" style="${fcafs_lightbox_obterCssObjectFit(fcas_lightbox_checkValueEX(optiy,"config","fit",""))}  display:none;user-select:none;pointer-events:none; width:${Number(optiy.size)}px;" />  </div>`;
             } else if (optiy.type && optiy.type == "texto") {
                 is_player0j = "no";
                 var fcas_lightbox_checkValueEX_it="";   var fcas_lightbox_checkValueEX_bolff="";    var fcas_lightbox_checkValueEX_bolsdff="";
