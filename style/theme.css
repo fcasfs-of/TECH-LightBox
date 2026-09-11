@@ -408,9 +408,8 @@ header .dname .icon::before {     pointer-events: none;
      #btnPlaylist { background-color: #4c0519; color: #ffe4e6; border-color: #881337; }
      #btnPlaylist:hover { background-color: #881337; }
 
-     #btnPlaylist {  background-color: #7c2d12;  color: #fff7ed;  border-color: #ea580c;   }
-     #btnPlaylist:hover {  background-color: #ea580c;   }
-
+     #btnForm {  background-color: #7c2d12;  color: #fff7ed;  border-color: #ea580c;   }
+     #btnForm:hover {  background-color: #ea580c;   }
 
      #theme-toggle { background-color: #f8fafc; color: #0f172a; }
      #theme-toggle:hover { background-color: #e2e8f0; }
