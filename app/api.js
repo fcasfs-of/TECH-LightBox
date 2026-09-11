@@ -65,7 +65,7 @@ function fs_lightbox_carregamentoGlobal(momocsifipsl,e,t){}
 function fcas_lightbox_gerarTexto(e){var t=Array.isArray(e)?e.join("\n").trim():(e?e.trim():"");return t?URL.createObjectURL(new Blob([t],{type:"text/plain"})):""}
 function fcas_lightbox_extrairTextoObjeto(e){if(!e||(typeof e==="object"&&Object.keys(e).length===0))return"";return typeof e==="object"?Object.values(e).map(fcas_lightbox_extrairTextoObjeto).filter(Boolean).join("\n"):String(e).trim()}
 
-function fcas_lightbox_bloquearPrint(id, b) { return (id && document.getElementById(id) && b === true) ? `@media print { #${id} { display: none !important; } }` : ""; }
+function fcas_lightbox_bloquearPrint(id, b) { return (id && id!="" && b === true) ? `@media print { #${id} { display: none !important; } }` : ""; }
 function fcas_lightbox_escutarPrint(acoes) { if (acoes && typeof acoes.quandoAparece === 'function' && typeof acoes.quandoSumiu === 'function') { var mq = window.matchMedia('print'); mq.addEventListener('change', function(e) { if (e.matches) { acoes.quandoAparece(); } else { acoes.quandoSumiu(); } }); } }
 
 var lightboxPLclos=function(){};    var lightboxPLcloapis=function(){};
