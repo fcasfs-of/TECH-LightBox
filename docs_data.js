@@ -74,7 +74,7 @@ window.getDocData = function() {
             ],
             other: [
                 ['title', 'String com o título que será exibido no topo do modal.'],
-                ['type', 'Tipo do formato tratado (list, table, playlist, carrossel, slideshow, grafico, pdf, link, texto, image, svg, audio, video, PList).'],
+                ['type', 'Tipo do formato tratado (list, table, playlist, carrossel, form, slideshow, grafico, pdf, link, texto, image, svg, audio, video, PList).'],
                 ['poster', 'URL da imagem de capa utilizada caso o tipo do conteúdo seja vídeo.'],
                 ['description', 'Texto descritivo opcional posicionado junto ao bloco de conteúdo.']
             ]
@@ -154,7 +154,7 @@ window.getDocData = function() {
             ],
             other: [
                 ['title', 'String value rendering the headline text at the top of the header.'],
-                ['type', 'Evaluated payload type (list, table, playlist, carrossel, slideshow, grafico, pdf, link, texto, image, svg, audio, video, PList).'],
+                ['type', 'Evaluated payload type (list, table, playlist, carrossel, form, slideshow, grafico, pdf, link, texto, image, svg, audio, video, PList).'],
                 ['poster', 'URL string targeting thumbnail posters required when mapping videos.'],
                 ['description', 'Complementary description text aligned beneath or near the asset render block.']
             ]
