@@ -38,11 +38,11 @@ window.getDocData = function() {
                 ['onPlayer_Playlist', 'Função de callback acionada quando o player de mídia interno realiza ações estruturais relacionadas à lista de reprodução.']
             ],
             types: [
-                ['Configuração para tipo: "texto"', 'Suporta as chaves de estilização direta: italic, negrito, upper, lower (booleanos), fontSize (número), color (string), textAlign (string).'],
-                ['Configuração para tipo: "list"', 'Suporta as chaves de formatatação estrutural: posicao, alinhamento, tema, marcador (strings), arredondado (número), divisor (booleano).'],
-                ['Configuração para tipo: "table"', 'Suporta as chaves de layout tabular: showIndex, zebra, headerBold (booleanos), align, headerAlign (strings), model (string com chaves de colunas separadas por vírgula).'],
+                ['Configuração para tipo: "texto"', 'Suporta as chaves de estilização direta: italic, negrito, upper, lower (booleanos), fontSize (número), color (string), textAlign (center,right,left,justify).'],
+                ['Configuração para tipo: "list"', 'Suporta as chaves de formatatação estrutural: posicao (direita,esquerda), alinhamento (center,right,left,justify), tema, marcador (strings), arredondado (número), divisor (booleano).'],
+                ['Configuração para tipo: "table"', 'Suporta as chaves de layout tabular: showIndex, zebra, headerBold (booleanos), align (center,right,left,justify), headerAlign (center,right,left,justify), model (string com chaves de colunas separadas por vírgula).'],
                 ['Configuração para tipo: "playlist"', 'Suporta as chaves de controle de faixas: tema (string), exibirIndex (booleano).'],
-                ['Configuração para tipo: "carrossel"', 'Suporta as chaves de controle do slider de mídia: tema, transicao, posicaoDots, estiloDots (strings), intervalo (número), exibirControles, exibirDots, autoPlay (booleanos).'],
+                ['Configuração para tipo: "carrossel"', 'Suporta as chaves de controle do slider de mídia: tema (dark,light), transicao (slide,fade), posicaoDots (bottom), estiloDots (bolas,linhas,barras), intervalo (número), exibirControles, exibirDots, autoPlay (booleanos).'],
                 ['Configuração para tipo: "grafico"', 'Suporta as chaves de renderização estatística: tema, orientacao (vertical ou horizontal), modelo (linha, pizza, barras), exibirValores, exibirTooltips (booleanos), larguraBarra, raioCurva (números).'],
                 ['Configuração para tipo: "pdf"', 'Suporta o controle de foco do documento: page (número).'],
                 ['Configuração para tipo: "image"', 'Suporta o controle de ampliação visual: scale (booleano), fit ("fill", "contain", "cover", "none", "scale-down").'],
@@ -112,11 +112,11 @@ window.getDocData = function() {
                 ['onPlayer_Playlist', 'Callback function triggered when the internal media player performs structural actions related to the playlist.']
             ],
             types: [
-                ['Configuration for type: "texto"', 'Properties: italic, negrito, upper, lower (booleans), fontSize (number), color (string), textAlign (string).'],
-                ['Configuration for type: "list"', 'Properties: posicao, alinhamento, tema, marcador (strings), arredondado (number), divisor (boolean).'],
-                ['Configuration for type: "table"', 'Properties: showIndex, zebra, headerBold (booleans), align, headerAlign (strings), model (comma-separated column target string).'],
+                ['Configuration for type: "texto"', 'Properties: italic, negrito, upper, lower (booleans), fontSize (number), color (string), textAlign (center,right,left,justify).'],
+                ['Configuration for type: "list"', 'Properties: posicao (direita,esquerda), alinhamento (center,right,left,justify), tema, marcador (strings), arredondado (number), divisor (boolean).'],
+                ['Configuration for type: "table"', 'Properties: showIndex, zebra, headerBold (booleans), align (center,right,left,justify), headerAlign (center,right,left,justify), model (comma-separated column target string).'],
                 ['Configuration for type: "playlist"', 'Properties: tema (string), exibirIndex (boolean).'],
-                ['Configuration for type: "carrossel"', 'Properties: tema, transicao, posicaoDots, estiloDots (strings), intervalo (number), exibirControles, exibirDots, autoPlay (booleans).'],
+                ['Configuration for type: "carrossel"', 'Properties: tema (dark,light), transicao (slide,fade), posicaoDots (bottom), estiloDots (bolas,linhas,barras), intervalo (number), exibirControles, exibirDots, autoPlay (booleans).'],
                 ['Configuration for type: "grafico"', 'Properties: tema, orientacao (vertical or horizontal), modelo (linha, pizza, barras), exibirValores, exibirTooltips (boolean), larguraBarra, raioCurva (numbers).'],
                 ['Configuration for type: "pdf"', 'Properties: page (number).'],
                 ['Configuration for type: "image"', 'Properties: scale (boolean), fit ("fill", "contain", "cover", "none", "scale-down").'],
