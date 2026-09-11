@@ -52,8 +52,7 @@ window.getDocData = function() {
                 ['Configuração para tipo: "slideshow"', 'Suporta as chaves de estilização direta: effect ("slide", "fade", "zoom", "cube"), showControls (boolean), showCaptions (boolean).'],
                 ['Configuração para tipos: "audio", "video" e "PList"', 'Suporta a parametrização completa de players de mídia: colorText, colorIcon, OSD_Pos, pos_time (strings), OSD_Lang ("pt"/"en"), OSD_Theme ("light"/"dark"), volume (número decimal), OSD_Time (número em ms), OSD, autoplay, mute, contextmenu, nocontrols (booleanos). Se OSD for true, suporta a propriedade OSD_Events (opcional) que aceita uma lista/array contendo eventos como: "exitfullscreen", "fullscreen", "end", "finish", "volume", "seek", "userseek", "unmute", "mute", "pause", "stop", "play", "speed", "previous", "next".'],
                 ['Configuração Exclusiva para tipo: "PList"', 'Suporta adicionalmente a propriedade: select (string contendo apenas o número do item ativo da lista de reprodução).'],
-                ['Configuração para tipo: "form"', 'Suporta o controle de validação e envio: action (string), submitText (string), onsubmit (string).'],
-                ['Configuração Exclusiva para tipo: "form"', 'Tipos de campos suportados pelo atributo "type": ["text", "email", "password", "number", "tel", "url", "date", "textarea", "select", "range", "slider"].']
+                ['Configuração para tipo: "form"', 'Suporta o controle de validação e envio: action (string), submitText (string), onsubmit (string).']
             ],
             context: [
                 ['Carrossel', 'Recebe um array de objetos contendo as chaves de caminhos e descrições: [ { url: "", legenda: "" } ]'],
@@ -69,7 +68,7 @@ window.getDocData = function() {
                 ['image', 'Recebe uma string contendo o link ou caminho URL direto do arquivo de imagem.'],
                 ['svg', 'Recebe uma string contendo o código XML/texto nativo completo do elemento estrutural: string do svg.'],
                 ['grafico', 'Recebe um array contendo objetos estruturados com rótulos e seus valores numéricos reais: [ { label: "", valor: (number) } ]'],
-                ['form', 'Configuração de campos suportando as chaves e tipos: [ {"label":"string","name":"string","required":"boolean","type":"string","placeholder":"string","min":"number","max":"number","step":"number","options":"array","rows":"number"} ]'],
+                ['form', 'Configuração de campos suportando as chaves e tipos: [ {"label":"","name":"","required":"boolean","type":["text", "email", "password", "number", "tel", "url", "date", "textarea", "select", "range", "slider"],"placeholder":"","min":"number","max":"number","step":"number","options"::[{ value:"", label:"" }],"rows":"number"} ]'],
                 ['PList', 'Recebe um array de objetos contendo o arquivo de áudio/vídeo, título e poster de capa correspondente: [ {"file":"","title":"","poster":""} ]']
             ],
             other: [
@@ -131,9 +130,7 @@ window.getDocData = function() {
                 ['Configuration for type: "slideshow"', 'Properties: effect ("slide", "fade", "zoom", "cube"), showControls (boolean), showCaptions (boolean).'],
                 ['Configuration for types: "audio", "video" and "PList"', 'Properties: colorText, colorIcon, OSD_Pos, pos_time (strings), OSD_Lang ("pt"/"en"), OSD_Theme ("light"/"dark"), volume (float), OSD_Time (number in ms), OSD, autoplay, mute, contextmenu, nocontrols (booleans). If OSD is true, it supports the OSD_Events (optional) property which maps an array collection tracking media events like: "exitfullscreen", "fullscreen", "end", "finish", "volume", "seek", "userseek", "unmute", "mute", "pause", "stop", "play", "speed", "previous", "next".'],
                 ['Exclusive Configuration for type: "PList"', 'Properties: select (string tracking sequential track execution option array index number).'],
-                ['Configuration for type: "form"', 'Supports validation and submission control: action (string), submitText (string), onsubmit (string).'],
-                ['Exclusive Configuration for type: "form"', 'Field types supported by the "type" attribute: ["text", "email", "password", "number", "tel", "url", "date", "textarea", "select", "range", "slider"].']
-
+                ['Configuration for type: "form"', 'Supports validation and submission control: action (string), submitText (string), onsubmit (string).']
             ],
             context: [
                 ['Carousel', 'Accepts an array of objects carrying media paths and string text captions: [ { url: "", legenda: "" } ]'],
@@ -149,7 +146,7 @@ window.getDocData = function() {
                 ['image', 'Accepts a destination path string referencing an image asset file location: link.'],
                 ['svg', 'Accepts a source text string wrapping the raw inner XML vector definitions: svg string.'],
                 ['chart', 'Accepts an array payload distributing labels against bound numeric values: [ { label: "", valor: (number) } ]'],
-                ['form', 'Fields configuration supporting the keys and types: [ {"label":"string","name":"string","required":"boolean","type":"string","placeholder":"string","min":"number","max":"number","step":"number","options":"array","rows":"number"} ]'],
+                ['form', 'Fields configuration supporting the keys and types: [ {"label":"","name":"","required":"boolean","type":["text", "email", "password", "number", "tel", "url", "date", "textarea", "select", "range", "slider"],"placeholder":"","min":"number","max":"number","step":"number","options":[{ value:"", label:"" }],"rows":"number"} ]'],
                 ['PList', 'Accepts a tracking playlist array carrying structural media source locations, title texts, and posters: [ {"file":"","title":"","poster":""} ]']
             ],
             other: [
