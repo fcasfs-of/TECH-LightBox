@@ -538,9 +538,8 @@ function registerPlayerOSDEvents(plobf, eventsList, lang = "pt", openf_osdcd_tim
 
 
 function playerfs_osf_evensdef(eventsList, lang = "pt", plobf,timf,kk){    if(plobf){    registerPlayerOSDEvents(plobf, eventsList, lang || "pt", timf,"absolute",kk || "top-center");    }    }
- var fcas_lightbox_escutarPrint_pod =false; 
 
-function loaded_playerinf(mfplayeri, dstart_fs_mpl = {}) {     fcas_lightbox_escutarPrint_pod =false; 
+function loaded_playerinf(mfplayeri, dstart_fs_mpl = {}) {     
 if (typeof fs_Playerjs === "function") {
 mfplayeri = fs_Playerjs(dstart_fs_mpl);
 if(mfplayeri){  
@@ -549,11 +548,9 @@ lightboxPLcloapis=function() {    if (mfplayeri){  mfplayeri.api("stop");  }   }
 mfplayeri.OnEvents("init",function(){  
 fcas_lightbox_escutarPrint({
   quandoAparece: function() { 
-if (mfplayeri){      fcas_lightbox_escutarPrint_pod = mfplayeri.api("playing");    mfplayeri.api("pause");  }  
+if (mfplayeri){     mfplayeri.api("pause");  }  
   },
-  quandoSumiu: function() {
-if (mfplayeri && fcas_lightbox_escutarPrint_pod){  if(fcas_lightbox_escutarPrint_pod===true){    mfplayeri.api("play");  }  }  
-  }
+  quandoSumiu: function() {  }
 });
 
 mfplayeri.OnEvents("metadata",function(){   lightboxPLclayer_mod({ text:mfplayeri.api("title"), info:convertSecondsDurationto(mfplayeri.api("duration")) });
