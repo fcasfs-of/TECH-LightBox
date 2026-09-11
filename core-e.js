@@ -58,7 +58,7 @@ var modaisDisponiveis = {
     return {
       title: "Form",
       type: "form",
-      context:[ { label: "Project", name: "project", type: "text", placeholder: "Project..." } ],
+      context:[ { required:true, label: "Project", name: "project", type: "text", placeholder: "Project..." } ],
       size: "340",
       includePlayer: "no",
       description: ""
