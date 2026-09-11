@@ -52,7 +52,7 @@ window.getDocData = function() {
                 ['Configuração para tipo: "slideshow"', 'Suporta as chaves de estilização direta: effect ("slide", "fade", "zoom", "cube"), showControls (boolean), showCaptions (boolean).'],
                 ['Configuração para tipos: "audio", "video" e "PList"', 'Suporta a parametrização completa de players de mídia: colorText, colorIcon, OSD_Pos, pos_time (strings), OSD_Lang ("pt"/"en"), OSD_Theme ("light"/"dark"), volume (número decimal), OSD_Time (número em ms), OSD, autoplay, mute, contextmenu, nocontrols (booleanos). Se OSD for true, suporta a propriedade OSD_Events (opcional) que aceita uma lista/array contendo eventos como: "exitfullscreen", "fullscreen", "end", "finish", "volume", "seek", "userseek", "unmute", "mute", "pause", "stop", "play", "speed", "previous", "next".'],
                 ['Configuração Exclusiva para tipo: "PList"', 'Suporta adicionalmente a propriedade: select (string contendo apenas o número do item ativo da lista de reprodução).'],
-                ['Configuração para tipo: "form"', 'Suporta o controle de validação e envio: action (string), submitText (string), onsubmit (string) e campos (array de objetos).'],
+                ['Configuração para tipo: "form"', 'Suporta o controle de validação e envio: action (string), submitText (string), onsubmit (string).'],
                 ['Configuração Exclusiva para tipo: "form"', 'Tipos de campos suportados pelo atributo "type": ["text", "email", "password", "number", "tel", "url", "date", "textarea", "select", "range", "slider"].']
             ],
             context: [
@@ -131,7 +131,7 @@ window.getDocData = function() {
                 ['Configuration for type: "slideshow"', 'Properties: effect ("slide", "fade", "zoom", "cube"), showControls (boolean), showCaptions (boolean).'],
                 ['Configuration for types: "audio", "video" and "PList"', 'Properties: colorText, colorIcon, OSD_Pos, pos_time (strings), OSD_Lang ("pt"/"en"), OSD_Theme ("light"/"dark"), volume (float), OSD_Time (number in ms), OSD, autoplay, mute, contextmenu, nocontrols (booleans). If OSD is true, it supports the OSD_Events (optional) property which maps an array collection tracking media events like: "exitfullscreen", "fullscreen", "end", "finish", "volume", "seek", "userseek", "unmute", "mute", "pause", "stop", "play", "speed", "previous", "next".'],
                 ['Exclusive Configuration for type: "PList"', 'Properties: select (string tracking sequential track execution option array index number).'],
-                ['Configuration for type: "form"', 'Supports validation and submission control: action (string), submitText (string), onsubmit (string) and campos (array of objects).'],
+                ['Configuration for type: "form"', 'Supports validation and submission control: action (string), submitText (string), onsubmit (string).'],
                 ['Exclusive Configuration for type: "form"', 'Field types supported by the "type" attribute: ["text", "email", "password", "number", "tel", "url", "date", "textarea", "select", "range", "slider"].']
 
             ],
