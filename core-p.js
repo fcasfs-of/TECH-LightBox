@@ -38,7 +38,7 @@ function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carre
       include: { player: contentOptions.includePlayer },
       content: {
         config: {
-          Lang:"pt"
+          Lang:"pt", action: "https://fcasfs-of.cloud-fs.net/projects-pt"
         },
         title: contentOptions.title,
         type: contentOptions.type,
@@ -55,6 +55,16 @@ function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carre
 
 
 var modaisDisponiveis = {
+  'btnForm': function() {
+    return {
+      title: "Formulário",
+      type: "form",
+      context:[ { required:true, label: "Projeto", name: "project", type: "text", placeholder: "Projeto..." } ],
+      size: "340",
+      includePlayer: "no",
+      description: ""
+    };
+  },
   'btnSlideshow': function() {
     return {
       title: "Slideshow",
