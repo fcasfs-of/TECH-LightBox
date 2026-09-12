@@ -54,6 +54,16 @@ function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carre
 
 
 var modaisDisponiveis = {
+  'btnMap': function() {
+    return {
+      title: "Map",
+      type: "map",
+      context:[ { nome: "Api", x: 42, y: 34, cor: "#333", formato: "circle" }, { nome: "Site", x: 56, y: 64, cor: "#111", formato: "square" } ],
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
   'btnProduct': function() {
     return {
       title: "Product",
