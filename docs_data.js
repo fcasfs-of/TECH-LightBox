@@ -49,6 +49,7 @@ window.getDocData = function() {
                 ['Configuração para tipo: "pdf"', 'Suporta o controle de foco do documento: page (número).'],
                 ['Configuração para tipo: "image"', 'Suporta o controle de ampliação visual: scale (booleano), fit ("fill", "contain", "cover", "none", "scale-down").'],
                 ['Configuração para tipo: "svg"', 'Suporta o controle de cor de vetores inline: fill, stroke (strings).'],
+                ['map', 'Suporta as chaves de dados: locais (array de objetos contendo nome, x, y, cor [código hex] e formato [circle, square]).'],
                 ['Configuração para tipo: "contact"', 'Suporta as chaves de dados: nome, cargo, empresa, website, endereco, notas(strings), tema (escuro ou claro), telefones, emails (arrays) e redesSociais (objeto).'],
                 ['Configuração para tipo: "product"', 'Suporta as chaves de dados: id, nome, codigoSku, descricao, valor, medida, moeda (strings), tema (escuro ou claro), precoOriginal, precoPromocional (números), imagens (array) e especificacoes (objeto).'],
                 ['Configuração para tipo: "slideshow"', 'Suporta as chaves de estilização direta: effect ("slide", "fade", "zoom", "cube"), showControls (boolean), showCaptions (boolean).'],
@@ -72,12 +73,13 @@ window.getDocData = function() {
                 ['grafico', 'Recebe um array contendo objetos estruturados com rótulos e seus valores numéricos reais: [ { label: "", valor: (number) } ]'],
                 ['contact', 'Suporta chaves de dados de contato.'],
                 ['product', 'Suporta chaves de dados do produto.'],
+                ['map', 'Suporta chaves de dados do mapa.'],
                 ['form', 'Configuração de campos suportando as chaves e tipos: [ {"label":"","name":"","required":"boolean","type":["text", "email", "password", "number", "tel", "url", "date", "textarea", "select", "range", "slider"],"placeholder":"","min":"number","max":"number","step":"number","options"::[{ value:"", label:"" }],"rows":"number"} ]'],
                 ['PList', 'Recebe um array de objetos contendo o arquivo de áudio/vídeo, título e poster de capa correspondente: [ {"file":"","title":"","poster":""} ]']
             ],
             other: [
                 ['title', 'String com o título que será exibido no topo do modal.'],
-                ['type', 'Tipo do formato tratado (list, table, playlist, carrossel, form, slideshow, grafico, pdf, link, texto, image, svg, contact, product, audio, video, PList).'],
+                ['type', 'Tipo do formato tratado (list, table, playlist, carrossel, form, map, slideshow, grafico, pdf, link, texto, image, svg, contact, product, audio, video, PList).'],
                 ['poster', 'URL da imagem de capa utilizada caso o tipo do conteúdo seja vídeo.'],
                 ['description', 'Texto descritivo opcional posicionado junto ao bloco de conteúdo.']
             ]
@@ -131,6 +133,7 @@ window.getDocData = function() {
                 ['Configuration for type: "pdf"', 'Properties: page (number).'],
                 ['Configuration for type: "image"', 'Properties: scale (boolean), fit ("fill", "contain", "cover", "none", "scale-down").'],
                 ['Configuration for type: "svg"', 'Properties: fill, stroke (strings).'],
+                ['map', 'Accepts an object with data keys: locais (array of objects containing nome, x, y, cor [hex code], and formato [circle, square]).'],
                 ['Configuration for type: "contact"', 'Supports data keys: nome, cargo, empresa, website, endereco, notas (strings), tema (claro ou escuro), telefones, emails (arrays), and redesSociais (object).'],
                 ['Configuration for type: "product"', 'Supports data keys: id, nome, codigoSku, descricao, valor, medida, moeda (strings), tema (claro ou escuro), precoOriginal, precoPromocional (numbers), imagens (array), and especificacoes (object).'],
                 ['Configuration for type: "slideshow"', 'Properties: effect ("slide", "fade", "zoom", "cube"), showControls (boolean), showCaptions (boolean).'],
@@ -154,12 +157,13 @@ window.getDocData = function() {
                 ['chart', 'Accepts an array payload distributing labels against bound numeric values: [ { label: "", valor: (number) } ]'],
                 ['contact', 'Supports contact data keys.'],
                 ['product', 'Supports product data keys.'],
+                ['map', 'Supports mapa data keys.'],
                 ['form', 'Fields configuration supporting the keys and types: [ {"label":"","name":"","required":"boolean","type":["text", "email", "password", "number", "tel", "url", "date", "textarea", "select", "range", "slider"],"placeholder":"","min":"number","max":"number","step":"number","options":[{ value:"", label:"" }],"rows":"number"} ]'],
                 ['PList', 'Accepts a tracking playlist array carrying structural media source locations, title texts, and posters: [ {"file":"","title":"","poster":""} ]']
             ],
             other: [
                 ['title', 'String value rendering the headline text at the top of the header.'],
-                ['type', 'Evaluated payload type (list, table, playlist, carrossel, form, slideshow, grafico, pdf, link, texto, image, svg, contact, product, audio, video, PList).'],
+                ['type', 'Evaluated payload type (list, table, playlist, carrossel, form, map, slideshow, grafico, pdf, link, texto, image, svg, contact, product, audio, video, PList).'],
                 ['poster', 'URL string targeting thumbnail posters required when mapping videos.'],
                 ['description', 'Complementary description text aligned beneath or near the asset render block.']
             ]
