@@ -1,13 +1,13 @@
 
 # TECH-LightBox: English
-  (Text, PDF, Link, SVG, Video, Playlist, Form, Table, List, slideshow, Graphic, Carousel, Contact, Product, Image and Audio)<br/><br/>
-  Lightbox is an innovative app that offers an integrated experience for viewing and interacting with PDF, Form, Playlist, Contact, Product, text, graphic, links, carousel, list, SVG, images, slideshow, Table, audio, and videos in an intuitive and modern way. With a clean and responsive interface, the app allows users to explore multimedia content efficiently, providing fluid and engaging navigation.
+  (Text, PDF, Link, SVG, Video, Playlist, Form, Table, List, slideshow, Graphic, Carousel, Contact, Product, map, Image and Audio)<br/><br/>
+  Lightbox is an innovative app that offers an integrated experience for viewing and interacting with PDF, map, Form, Playlist, Contact, Product, text, graphic, links, carousel, list, SVG, images, slideshow, Table, audio, and videos in an intuitive and modern way. With a clean and responsive interface, the app allows users to explore multimedia content efficiently, providing fluid and engaging navigation.
 
 <hr/>
 
 # TECH-LightBox: Português
-  (Texto, PDF, Playlist, Link, SVG, Vídeo, Formulário, Lista, Tabela, Carrossel, slideshow, Gráfico, Contato, Produto, Imagem e Áudio)<br/><br/>
-  Lightbox é inovador que oferece uma experiência integrada para visualizar e interagir com textos, PDF, Formulário, Contato, Produto, Playlist, gráfico, links, carrossel, lista, SVG, imagens, slideshow, Tabela, áudios e vídeos de forma intuitiva e moderna. Com uma interface limpa e responsiva, o aplicativo permite aos usuários explorar conteúdos multimídia de maneira eficiente, proporcionando uma navegação fluida e envolvente.
+  (Texto, PDF, Playlist, Link, SVG, Vídeo, Formulário, Lista, Tabela, Carrossel, slideshow, map, Gráfico, Contato, Produto, Imagem e Áudio)<br/><br/>
+  Lightbox é inovador que oferece uma experiência integrada para visualizar e interagir com textos, map, PDF, Formulário, Contato, Produto, Playlist, gráfico, links, carrossel, lista, SVG, imagens, slideshow, Tabela, áudios e vídeos de forma intuitiva e moderna. Com uma interface limpa e responsiva, o aplicativo permite aos usuários explorar conteúdos multimídia de maneira eficiente, proporcionando uma navegação fluida e envolvente.
 
 <hr/>
 
