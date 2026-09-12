@@ -54,6 +54,26 @@ function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carre
 
 
 var modaisDisponiveis = {
+  'btnProduct': function() {
+    return {
+      title: "Product",
+      type: "product",
+      context:{ id: "prod-0012",  nome: "Tech LightBox",  codigoSku: "FCAS-OF-001",    precoOriginal: 0,    precoPromocional: 0,    descricao: "",    valor: "",    medida: "",    moeda: "R$",     imagens: [],    especificacoes: {},    tema: ""  },
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+  'btnContact': function() {
+    return {
+      title: "Contact",
+      type: "contact",
+      context:{    nome: "FCAS_FS",    cargo: "OF",    empresa: "Tech - LightBox",    telefones: [],    emails: ["fcasfs.of@cloud-fs.net"],    website: "https://fcasfs-of.cloud-fs.net",    endereco: "",    notas: "",    redesSociais: {},    tema: ""  },
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
   'btnForm': function() {
     return {
       title: "Form",
