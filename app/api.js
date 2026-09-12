@@ -378,7 +378,7 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd 
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_lightbox_contato(optiy.context || {})}  </div>`;
             } else if (optiy.type && optiy.type == "map") {
                 is_player0j = "no";
-                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_lightbox_mapa({ tema: "claro", locais: optiy.context || [] })}  </div>`;
+                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_lightbox_mapa({ tema: "claro", tamanhoMapa:"70%", locais: optiy.context || [] })}  </div>`;
             } else if (optiy.type && optiy.type == "product") {
                 is_player0j = "no";
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_lightbox_produto(optiy.context || {})}  </div>`;
