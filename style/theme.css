@@ -359,13 +359,15 @@ header .dname .icon::before {     pointer-events: none;
       gap: 8px;
     }
 
-    .cat-divider {
-      width: 1px;
-      height: 32px;
-      background-color: #e2e8f0;
-      flex-shrink: 0;
-      transition: background-color 0.3s ease;
-    }
+
+.cat-divider {
+  width: 1px;
+  height: 32px;
+  background-color: var(--card-divider); 
+  flex-shrink: 0;
+  transition: background-color 0.3s ease;
+}
+
 
     .lbxx button {
       padding: 12px 16px;
@@ -401,12 +403,6 @@ header .dname .icon::before {     pointer-events: none;
     }
     #meuBotaoConfig:hover { background-color: #e2e8f0; color: #0f172a; border-color: #cbd5e1; }
 
-    .lbxx { background-color: #1e293b; border-color: #334155; }
-    .dname { border-color: #334155; }
-    .dname h1 { color: #f8fafc; }
-    .lbxx .icon { background-color: #94a3b8; }
-    .lbxx-footer-container { border-color: #334155; }
-    .cat-divider { background-color: #334155; } 
 
     #btnImage, #btnSVG { background-color: #064e3b; color: #34d399; border-color: #047857; }
     #btnImage:hover, #btnSVG:hover { background-color: #047857; }
