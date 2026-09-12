@@ -80,7 +80,6 @@ function fcas_lightbox_escutarPrint(acoes) { if (acoes && typeof acoes.quandoApa
 var lightboxPLclos=function(){};    var lightboxPLcloapis=function(){};
 var lightboxPLclos_mod=function(){};   var lightboxPLclop_mod=function(){};    var lightboxPLclayer_mod=function(){};     var lightboxPLclayer_modiuu=function(){};
 
-
 function fcas_lightboc_Pdf(idioma, linkPdf, pg, idElemento) {
     const elemento = document.getElementById(idElemento);
     if (!elemento) return;
