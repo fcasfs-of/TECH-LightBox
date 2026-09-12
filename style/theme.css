@@ -399,6 +399,12 @@ header .dname .icon::before {     pointer-events: none;
     #btnPDF { background-color: #7f1d1d; color: #fca5a5; border-color: #b91c1c; }
     #btnPDF:hover { background-color: #b91c1c; }
 
+    #btnContact { background-color: #3b0764; color: #f472b6; border-color: #701a75; }
+    #btnContact:hover { background-color: #701a75; }
+
+    #btnProduct { background-color: #0c4a6e; color: #38bdf8; border-color: #0369a1; }
+    #btnProduct:hover { background-color: #0369a1; }
+
     #btnSlideshow, #btnCarrossel { background-color: #715802; color: #fde047; border-color: #a16207; }
     #btnSlideshow:hover, #btnCarrossel:hover { background-color: #a16207; }
 
