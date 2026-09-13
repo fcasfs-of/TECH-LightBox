@@ -43,6 +43,7 @@
   --btn-cfg-bg-hover: #0369a1;  
   --btn-cfg-text-hover: #ffffff;
   --btn-cfg-border-hover: #0369a1;
+  --highlight-color: #0f172a;
 }
 
 body.dark {
@@ -68,6 +69,7 @@ body.dark {
   --btn-cfg-bg-hover: #e2e8f0;
   --btn-cfg-text-hover: #0f172a;
   --btn-cfg-border-hover: #cbd5e1;
+  --highlight-color: #ffffff;
 }
 
 
@@ -236,6 +238,19 @@ header .dname *, header nav, header nav *, .lbxx * { transition: all 0.1s; }
   color: var(--title-color);   
   white-space: nowrap;
 }
+
+
+.cat-group h3::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 4px; 
+  background-color: var(--highlight-color); 
+  border-radius: 2px; 
+  margin: 4px auto 0 auto;
+  transition: width 0.3s ease;     margin-top: 0px;   margin-bottom: 0px;
+}
+.cat-group:hover h3::after {  width: 100%;     margin-top: 6px;   margin-bottom: 4px; }
 
 
 
