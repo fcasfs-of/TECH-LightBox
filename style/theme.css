@@ -227,8 +227,8 @@ header .dname *, header nav, header nav *, .lbxx * { transition: all 0.1s; }
 
 .cat-group h3 {
   position: absolute;
-  left: 0;
-  top: 50%;           
+  top: 0;
+  left: 50%;           
   transform: translateX(-50%);   
   margin: 0;
   font-size: 0.8rem;
@@ -241,6 +241,10 @@ header .dname *, header nav, header nav *, .lbxx * { transition: all 0.1s; }
 
 .cat-group h3::after {
   content: "";
+  position: absolute;
+  left: 0;         
+  top: 50%;
+  transform: translateY(-50%); 
   display: block;
   height: 0;
   width: 5px; 
