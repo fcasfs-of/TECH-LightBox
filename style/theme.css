@@ -311,24 +311,18 @@ header .dname *, header nav, header nav *, .lbxx * { transition: all 0.1s; }
  header .dname h1 {  margin-bottom: 0px;    display: inline-block;  }
 
 
-/* Logo ao lado do título */
 header .dname .icon { 
     display: inline-block !important; 
     vertical-align: middle; 
     flex-shrink: 0;
     margin-right: 0.5em;   margin-bottom:0px;
-
     width: 80px;
     height: 80px;
-
     background-image: url("https://lightbox.fcasfs-of.cloud-fs.net/favicon.png");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
-
-    pointer-events: none;
-    user-select: none;
-
+    pointer-events: none;   user-select: none;
     }
 
 header .dname .icon::before {     pointer-events: none;   user-select: none;  }
@@ -400,10 +394,8 @@ header .dname .icon::before {     pointer-events: none;   user-select: none;  }
 .lbxx .icon {
   width: 10px;
   height: 10px;
-  background-color: var(--icon-dot-color);
   border-radius: 50%;
   display: inline-block;
-  transition: background-color 0.3s ease;
 }
 
 .lbxx .nav {
