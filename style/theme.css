@@ -37,12 +37,12 @@
   --btn-toggle-bg: #1e1e24;
   --btn-toggle-text: #f8fafc;
   --btn-toggle-bg-hover: #2d2d34;
-  --btn-cfg-bg: #334155;
-  --btn-cfg-text: #94a3b8;
-  --btn-cfg-border: #475569;
-  --btn-cfg-bg-hover: #475569;
+  --btn-cfg-bg: #0284c7;        
+  --btn-cfg-text: #ffffff;      
+  --btn-cfg-border: #0284c7;    
+  --btn-cfg-bg-hover: #0369a1;  
   --btn-cfg-text-hover: #ffffff;
-  --btn-cfg-border-hover: #475569;
+  --btn-cfg-border-hover: #0369a1;
 }
 
 body.dark {
