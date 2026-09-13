@@ -135,7 +135,7 @@ nav button:hover {
 }
 
 /* Responsividade */
-@media(max-width: 600px) {
+@media(max-width: 540px) {
   .header .h1 {
     font-size: 1.4rem;
   }
@@ -523,6 +523,11 @@ header .dname .icon::before {     pointer-events: none;   user-select: none;  }
 
 
     @media (max-width: 600px) {
+      .dname { flex-direction: column; align-items: stretch; text-align: center; }
+      .dname h1 { justify-content: center; }
+      .cat-group { flex-direction: column; gap: 6px; }
+      .cat-group button { width: 100%; }
+          
       .lbxx nav {
         flex-direction: row; 
         gap: 12px;
@@ -541,12 +546,7 @@ header .dname .icon::before {     pointer-events: none;   user-select: none;  }
       }
     }
 
-    @media (max-width: 480px) {
-      .dname { flex-direction: column; align-items: stretch; text-align: center; }
-      .dname h1 { justify-content: center; }
-      .cat-group { flex-direction: column; gap: 6px; }
-      .cat-group button { width: 100%; }
-    }
+
 
 
 
