@@ -524,7 +524,7 @@ header .dname .icon::before {     pointer-events: none;   user-select: none;  }
 
     @media (max-width: 600px) {
       .lbxx nav {
-        flex-direction: column; 
+        flex-direction: row; 
         gap: 12px;
       }
       .cat-group {
