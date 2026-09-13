@@ -205,6 +205,39 @@ header .dname *, header nav, header nav *, .lbxx * { transition: all 0.1s; }
 }
 
 
+.lbxx nav {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 16px;
+  max-height: 100%;
+  overflow-y: auto;
+  padding: 4px 0;
+  flex-wrap: wrap; 
+}
+
+.cat-group {
+  display: flex;
+  gap: 8px;          
+  position: relative; 
+  padding-top: 24px;  
+}
+
+.cat-group h3 {
+  position: absolute;
+  top: 0;
+  left: 50%;           
+  transform: translateX(-50%);   
+  margin: 0;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--title-color);   
+  white-space: nowrap;
+}
+
+
 
 #btnPlaylist::before {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAATklEQVRIS+3SMQ4AIAgDQPty9eV1spspCWGSm2AwTSoYxaCpSAdYtiKSU0sQgK35Di8kl5YgAHpjA7I6wLIV9RXZirI+COgr+uCTs8orOlDyGBndlYAqAAAAEGRlQkczNjZGMEEzRkEwMDQ2RDZFnBM7CQAAAABJRU5ErkJggg==");
@@ -361,7 +394,7 @@ header .dname .icon::before {     pointer-events: none;
   transition: background-color 0.3s ease;
 }
 
-.lbxx nav {
+.lbxx .nav {
       display: flex;
       align-items: center;
       justify-content: center; 
@@ -382,7 +415,7 @@ header .dname .icon::before {     pointer-events: none;
       border-radius: 10px;
     }
 
-    .cat-group {
+    .dcat-group {
       display: flex;
       gap: 8px;
     }
