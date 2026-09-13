@@ -24,7 +24,7 @@
   --header-text: #fff;
   --card-bg: #ffffff;
   --card-border: #e2e8f0;
-  --card-divider: #f1f5f9;
+  --card-divider: #2d2d34;
   --card-shadow: rgba(15, 23, 42, 0.04);
   --title-color: #0f172a;
   --icon-dot-color: #64748b;
@@ -52,7 +52,7 @@ body.dark {
   --header-text: #ffffff;
   --card-bg: #1e1e24;
   --card-border: #2d2d34;
-  --card-divider: #2d2d34;
+  --card-divider: #f1f5f9;
   --card-shadow: rgba(0, 0, 0, 0.4);
   --title-color: #f8fafc;
   --icon-dot-color: #94a3b8;
