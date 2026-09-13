@@ -147,18 +147,16 @@ nav button:hover {
 .lbxx #meuBotaoConfig, .lbxx #theme-toggle {
   margin-top: 1em;
   background: none;
-  border: 2px solid var(--header-text);
+  border: 2px solid;
   border-radius: 20px;
   padding: 0.3em 1em;
   font-size: 0.9em;
   cursor: pointer;
-  color: var(--header-text);
   transition: background-color 0.3s, color 0.3s;
 }
 
 .lbxx #meuBotaoConfig:hover, .lbxx #theme-toggle:hover {
-  background-color: var(--header-text);
-  color: var(--header-bg);
+
 }
 
 
