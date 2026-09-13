@@ -78,7 +78,7 @@ function fcas_lightbox_bloquearPrint(id, b) { return (id && id!="" && b === true
 function fcas_lightbox_escutarPrint(acoes) { if (acoes && typeof acoes.quandoAparece === 'function' && typeof acoes.quandoSumiu === 'function') { var mq = window.matchMedia('print'); mq.addEventListener('change', function(e) { if (e.matches) { acoes.quandoAparece(); } else { acoes.quandoSumiu(); } }); } }
 
 var lightboxPLclos=function(){};    var lightboxPLcloapis=function(){};
-var lightboxPLclos_mod=function(){};   var lightboxPLclop_mod=function(){};    var lightboxPLclayer_mod=function(){};     var lightboxPLclayer_modiuu=function(){};
+var lightboxPLclos_mod=function(){};   var lightboxPLclop_mod=function(){};    var lightboxPLclayer_mod=function(){};     var lightboxPLclayer_adfffultmodiuu=function(){};    var lightboxPLclayer_adultmodiuu=function(){};    var lightboxPLclayer_modiuu=function(){};
 
 function fcas_lightboc_Pdf(idioma, linkPdf, pg, idElemento) {
     const elemento = document.getElementById(idElemento);
@@ -288,7 +288,7 @@ function fsmodal_close_aloder() {  var modalEdlement = document.getElementById("
 var adultlightboxPLclayer_modiuu=function(){};
 
 function fsmodal_close(id, hide) {  
-    if (id && id !== "") {    adultlightboxPLclayer_modiuu=function(){};
+    if (id && id !== "") {    lightboxPLclayer_adultmodiuu=function(){};   lightboxPLclayer_adfffultmodiuu=function(){};    adultlightboxPLclayer_modiuu=function(){};
 if(lightboxPLcloapis){  lightboxPLcloapis();  }	
 
 if(lightboxPLclos){  lightboxPLclos();  }
@@ -600,6 +600,7 @@ lightboxPLcloapis=function(){   };
 lightboxPLclos_mod=function(){   if(optiy.onClose && typeof optiy.onClose === 'function'){   optiy.onClose({ title:""+optiy.content.title || "", tipo:""+optiy.content.type || "none" });  }  };
 lightboxPLclop_mod=function(onh){   if(onh && optiy.onOpen && typeof optiy.onOpen === 'function'){   optiy.onOpen(onh);  }  };
 lightboxPLclayer_mod=function(onh){   if(onh && optiy.onPlayer && typeof optiy.onPlayer === 'function'){   optiy.onPlayer(onh);  }  };
+lightboxPLclayer_adultmodiuu=function(onh){   if(onh && optiy.onAdult && typeof optiy.onAdult === 'function'){   optiy.onAdult(onh);  }  };
 lightboxPLclayer_modiuu=function(onh){   if(onh && optiy.onPlayer_Playlist && typeof optiy.onPlayer_Playlist === 'function'){   optiy.onPlayer_Playlist(onh);  }  };
 	
 start_fs_mpl = {};    fsmodal_createdd = "";    start_fs_postermpl = "";
@@ -646,13 +647,14 @@ document.getElementsByTagName("body")[0].appendChild(scrcontedfddd);
 var momocsifipsl = document.getElementById(optiy.id);
 if (momocsifipsl) {
 momocsifipsl.innerHTML='';
-adultlightboxPLclayer_modiuu=function(){   addultlightboxPLclayer_modiuu_call(fcaslightconetxndif);   adultlightboxPLclayer_modiuu_call();   };
+lightboxPLclayer_adfffultmodiuu=function(){   lightboxPLclayer_adultmodiuu("no");   };
+adultlightboxPLclayer_modiuu=function(){  lightboxPLclayer_adultmodiuu("yes");    addultlightboxPLclayer_modiuu_call(fcaslightconetxndif);   adultlightboxPLclayer_modiuu_call();   };
 
 var fcaslightconetxndif=fsmodal_create(momocsifipsl_chd, optiy.content, optiy.include ? optiy.include.player : "");
 //var fcaslightconetxndiflink=fcas_lightbox_gerarTexto([fcas_lightbox_extrairTextoObjeto(optiy)]);
 
 var fcaslightconetxndif_isnort=fcaslightconetxndif;
-if (optiy.isAdult && optiy.isAdult===true){   fcaslightconetxndif_isnort=fcafs_lightbox_gerarAvisoConteudoAdulto({age: optiy.age || 18, isAdult:optiy.isAdult, lang: fcas_lightbox_checkValueEX(optiy.content,"config","Lang","en") || "en", onNo:`fsmodal_close('${optiy.id}'${fsmodal_open_closegi});`, onYes:` adultlightboxPLclayer_modiuu(); `});   }
+if (optiy.isAdult && optiy.isAdult===true){     fcaslightconetxndif_isnort=fcafs_lightbox_gerarAvisoConteudoAdulto({age: optiy.age || 18, isAdult:optiy.isAdult, lang: fcas_lightbox_checkValueEX(optiy.content,"config","Lang","en") || "en", onNo:`lightboxPLclayer_adfffultmodiuu();  fsmodal_close('${optiy.id}'${fsmodal_open_closegi});`, onYes:` adultlightboxPLclayer_modiuu(); `});   }
 
 //var scrcontedd = document.createElement("div");
 function addultlightboxPLclayer_modiuu_call(fiod){ 
