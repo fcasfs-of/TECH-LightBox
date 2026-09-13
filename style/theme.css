@@ -242,12 +242,10 @@ header .dname *, header nav, header nav *, .lbxx * { transition: all 0.1s; }
 .cat-group h3::after {
   content: "";
   position: absolute;
-  left: 0;         
-  top: 50%;
+  left: -8px;    top: 50%;
   transform: translateY(-50%); 
   display: block;
-  height: 0;
-  width: 5px; 
+  height: 0;   width: 5px; 
   background-color: var(--highlight-color); 
   border-radius: 3px; 
   transition: height 0.3s ease;
