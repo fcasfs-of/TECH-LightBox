@@ -522,7 +522,7 @@ header .dname .icon::before {     pointer-events: none;   user-select: none;  }
     .lbxx nav button {  color: #fff !important;   }
 
 
-    @media (max-width: 680px) {
+    @media (max-width: 600px) {
       .lbxx nav {
         flex-direction: column; 
         gap: 12px;
