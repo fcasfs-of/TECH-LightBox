@@ -38,7 +38,8 @@ window.getDocData = function() {
                 ['onClose', 'Função de callback acionada no encerramento e remoção do lightbox.'],
                 ['onOpen', 'Função de callback acionada na abertura e renderização do lightbox.'],
                 ['onPlayer', 'Função de callback acionada quando o player de mídia interno realiza ações estruturais.'],
-                ['onPlayer_Playlist', 'Função de callback acionada quando o player de mídia interno realiza ações estruturais relacionadas à lista de reprodução.']
+                ['onPlayer_Playlist', 'Função de callback acionada quando o player de mídia interno realiza ações estruturais relacionadas à lista de reprodução.'],
+                ["onAdult", "Função de callback executada especificamente se isAdult for true, retornando 'yes' ou 'no'."]
             ],
             types: [
                 ['Configuração para tipo: "texto"', 'Suporta as chaves de estilização direta: italic, negrito, upper, lower (booleanos), fontSize (número), color (string), textAlign (center,right,left,justify).'],
@@ -56,7 +57,7 @@ window.getDocData = function() {
                 ['Configuração para tipo: "slideshow"', 'Suporta as chaves de estilização direta: effect ("slide", "fade", "zoom", "cube"), showControls (boolean), showCaptions (boolean).'],
                 ['Configuração para tipos: "audio", "video" e "PList"', 'Suporta a parametrização completa de players de mídia: colorText, colorIcon, OSD_Pos, pos_time (strings), OSD_Lang ("pt"/"en"), OSD_Theme ("light"/"dark"), volume (número decimal), OSD_Time (número em ms), OSD, autoplay, mute, contextmenu, nocontrols (booleanos). Se OSD for true, suporta a propriedade OSD_Events (opcional) que aceita uma lista/array contendo eventos como: "exitfullscreen", "fullscreen", "end", "finish", "volume", "seek", "userseek", "unmute", "mute", "pause", "stop", "play", "speed", "previous", "next".'],
                 ['Configuração Exclusiva para tipo: "PList"', 'Suporta adicionalmente a propriedade: select (string contendo apenas o número do item ativo da lista de reprodução).'],
-                ['Configuração para tipo: "form"', 'Suporta o controle de validação e envio: method: (GET, POST, PUT, DELETE, PATCH), action (string), submitText (string), onsubmit (string).']
+                ['Configuração para tipo: "form"', 'Suporta o controle de validação e envio: method: (GET, POST, PUT, DELETE, PATCH), action (string), submitText, resetText (string), showReset (boolean), onsubmit (string).']
             ],
             context: [
                 ['Carrossel', 'Recebe um array de objetos contendo as chaves de caminhos e descrições: [ { url: "", legenda: "" } ]'],
@@ -123,7 +124,8 @@ window.getDocData = function() {
                 ['onClose', 'Callback function triggered upon termination and execution removal of the lightbox layout.'],
                 ['onOpen', 'Callback function triggered upon viewport initialization and interface rendering of the lightbox layout.'],
                 ['onPlayer', 'Callback function triggered when the underlying internal media engine issues state changes or structural updates.'],
-                ['onPlayer_Playlist', 'Callback function triggered when the internal media player performs structural actions related to the playlist.']
+                ['onPlayer_Playlist', 'Callback function triggered when the internal media player performs structural actions related to the playlist.'],
+                ["onAdult", "Callback function executed specifically if isAdult is true, returning 'yes' or 'no'."]
             ],
             types: [
                 ['Configuration for type: "texto"', 'Properties: italic, negrito, upper, lower (booleans), fontSize (number), color (string), textAlign (center,right,left,justify).'],
@@ -141,7 +143,7 @@ window.getDocData = function() {
                 ['Configuration for type: "slideshow"', 'Properties: effect ("slide", "fade", "zoom", "cube"), showControls (boolean), showCaptions (boolean).'],
                 ['Configuration for types: "audio", "video" and "PList"', 'Properties: colorText, colorIcon, OSD_Pos, pos_time (strings), OSD_Lang ("pt"/"en"), OSD_Theme ("light"/"dark"), volume (float), OSD_Time (number in ms), OSD, autoplay, mute, contextmenu, nocontrols (booleans). If OSD is true, it supports the OSD_Events (optional) property which maps an array collection tracking media events like: "exitfullscreen", "fullscreen", "end", "finish", "volume", "seek", "userseek", "unmute", "mute", "pause", "stop", "play", "speed", "previous", "next".'],
                 ['Exclusive Configuration for type: "PList"', 'Properties: select (string tracking sequential track execution option array index number).'],
-                ['Configuration for type: "form"', 'Supports validation and submission control: method: (GET, POST, PUT, DELETE, PATCH), action (string), submitText (string), onsubmit (string).']
+                ['Configuration for type: "form"', 'Supports validation and submission control: method: (GET, POST, PUT, DELETE, PATCH), action (string), submitText, resetText (string), showReset (boolean), onsubmit (string).']
             ],
             context: [
                 ['Carousel', 'Accepts an array of objects carrying media paths and string text captions: [ { url: "", legenda: "" } ]'],
