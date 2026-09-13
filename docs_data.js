@@ -18,7 +18,7 @@ window.getDocData = function() {
             base: [
                 ['id', 'String com o ID do elemento contêiner onde o modal será inserido.'],
                 ['isAdult', 'Se for true, o acesso ao conteúdo do modal só é permitido se o usuário comprovar que é maior de idade.'],
-                ['age', 'Se isAdult for true, é obrigatório passar o age em número. O valor deve estar entre os limites de 10 e 30 anos (caso contrário, o padrão será 18 anos).'],
+                ['age', 'Se isAdult for true, é obrigatório passar o age em número. O valor deve estar entre os limites de 10 a 30 anos (caso contrário, o padrão será 18 anos).'],
                 ['scroll_hide', 'Se definido como "yes", oculta a barra de rolagem da página quando ativo.'],
                 ['noclose', 'Se for true, esconde o botão de fechar e bloqueia o encerramento do modal.'],
                 ['click_close', 'Se for true, fecha o lightbox ao clicar fora da área do conteúdo principal.'],
