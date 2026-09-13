@@ -243,13 +243,13 @@ header .dname *, header nav, header nav *, .lbxx * { transition: all 0.1s; }
 .cat-group h3::after {
   content: "";
   display: block;
-  width: 0;
-  height: 4px; 
+  height: 0;
+  width: 4px; 
   background-color: var(--highlight-color); 
-  border-radius: 2px; 
-  transition: width 0.3s ease;      margin-top: 6px;   margin-bottom: 4px; 
+  border-radius: 3px; 
+  transition: height 0.3s ease;
 }
-.cat-group:hover h3::after {  width: 100%;   }
+.cat-group:hover h3::after {  height: 100%;   }
 
 
 
