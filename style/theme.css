@@ -247,10 +247,9 @@ header .dname *, header nav, header nav *, .lbxx * { transition: all 0.1s; }
   height: 4px; 
   background-color: var(--highlight-color); 
   border-radius: 2px; 
-  margin: 4px auto 0 auto;
-  transition: width 0.3s ease;     margin-top: 0px;   margin-bottom: 0px;
+  transition: width 0.3s ease;      margin-top: 6px;   margin-bottom: 4px; 
 }
-.cat-group:hover h3::after {  width: 100%;     margin-top: 6px;   margin-bottom: 4px; }
+.cat-group:hover h3::after {  width: 100%;   }
 
 
 
