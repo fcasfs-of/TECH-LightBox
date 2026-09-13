@@ -315,8 +315,8 @@ header .dname .icon {
     user-select: none;
 
     }
-header .dname .icon::before {     pointer-events: none;
-    user-select: none;  }
+
+header .dname .icon::before {     pointer-events: none;   user-select: none;  }
 
 
 @media (max-width: 768px) {
@@ -337,9 +337,7 @@ header .dname .icon::before {     pointer-events: none;
         margin-right: 0px;
       margin-bottom: 0.3em;
     }
-.header .dname {
-      grid-auto-flow: row;
-}
+.header .dname {      grid-auto-flow: row;   }
      .header .dname h1 { margin-bottom: 1rem;   }
       
 }
@@ -357,8 +355,7 @@ header .dname .icon::before {     pointer-events: none;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 95%;
-  max-width: 760px;
+  width: 85%;
   box-shadow: 0 4px 20px var(--card-shadow);
   transition: all 0.3s ease;
   overflow: hidden; 
