@@ -476,11 +476,11 @@ header .dname .icon::before {     pointer-events: none;
      #btnForm:hover {  background-color: #ea580c;   }
 
 
-    #theme-toggle { background-color: var(--btn-toggle-bg);  color: var(--btn-toggle-text); }
-    #theme-toggle:hover { background-color: var(--btn-toggle-bg-hover);  }
+    .lbxx #theme-toggle { background-color: var(--btn-toggle-bg);  color: var(--btn-toggle-text); }
+    .lbxx #theme-toggle:hover { background-color: var(--btn-toggle-bg-hover);  }
 
-    #meuBotaoConfig { background-color: var(--btn-cfg-bg); color: var(--btn-cfg-text);  border-color: var(--btn-cfg-border); }
-    #meuBotaoConfig:hover { background-color: var(--btn-cfg-bg-hover);  color: var(--btn-cfg-text-hover); border-color: var(--btn-cfg-border-hover);  }
+    .lbxx #meuBotaoConfig { background-color: var(--btn-cfg-bg); color: var(--btn-cfg-text);  border-color: var(--btn-cfg-border); }
+    .lbxx #meuBotaoConfig:hover { background-color: var(--btn-cfg-bg-hover);  color: var(--btn-cfg-text-hover); border-color: var(--btn-cfg-border-hover);  }
 
 
     .lbxx nav::-webkit-scrollbar-thumb { background: #475569; }
