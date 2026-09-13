@@ -652,7 +652,7 @@ var fcaslightconetxndif=fsmodal_create(momocsifipsl_chd, optiy.content, optiy.in
 //var fcaslightconetxndiflink=fcas_lightbox_gerarTexto([fcas_lightbox_extrairTextoObjeto(optiy)]);
 
 var fcaslightconetxndif_isnort=fcaslightconetxndif;
-if (optiy.isAdult && optiy.isAdult===true){   fcaslightconetxndif_isnort=fcafs_lightbox_gerarAvisoConteudoAdulto({age: fcas_lightbox_checkValueEX(optiy,"content","age",18) || 18, isAdult:optiy.isAdult, lang: fcas_lightbox_checkValueEX(optiy.content,"config","Lang","en") || "en", onNo:`fsmodal_close('${optiy.id}'${fsmodal_open_closegi});`, onYes:` adultlightboxPLclayer_modiuu(); `});   }
+if (optiy.isAdult && optiy.isAdult===true){   fcaslightconetxndif_isnort=fcafs_lightbox_gerarAvisoConteudoAdulto({age: optiy.age || 18, isAdult:optiy.isAdult, lang: fcas_lightbox_checkValueEX(optiy.content,"config","Lang","en") || "en", onNo:`fsmodal_close('${optiy.id}'${fsmodal_open_closegi});`, onYes:` adultlightboxPLclayer_modiuu(); `});   }
 
 //var scrcontedd = document.createElement("div");
 function addultlightboxPLclayer_modiuu_call(fiod){ 
