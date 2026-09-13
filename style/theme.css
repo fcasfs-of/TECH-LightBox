@@ -26,23 +26,20 @@
   --card-border: #e2e8f0;
   --card-divider: #f1f5f9;
   --card-shadow: rgba(15, 23, 42, 0.04);
-  --title-color: #0f172a;   
-  --icon-dot-color: #64748b; 
+  --title-color: #0f172a;
+  --icon-dot-color: #64748b;
+  --btn-bg: #ffffff;
+  --btn-text: #1e1e24;
+  --btn-border: #ccc;
+  --btn-toggle-bg: #f8fafc;
+  --btn-toggle-text: #0f172a;
+  --btn-toggle-bg-hover: #e2e8f0;
   --btn-cfg-bg: #f1f5f9;
   --btn-cfg-text: #475569;
   --btn-cfg-border: #e2e8f0;
   --btn-cfg-bg-hover: #e2e8f0;
   --btn-cfg-text-hover: #0f172a;
   --btn-cfg-border-hover: #cbd5e1;
-  --btn-toggle-bg: #1e1e24;      
-  --btn-toggle-text: #f8fafc;   
-  --btn-toggle-bg-hover: #2d2d34;
-  --btn-cfg-bg: #334155;
-  --btn-cfg-text: #94a3b8;
-  --btn-cfg-border: #475569;
-  --btn-cfg-bg-hover: #475569;
-  --btn-cfg-text-hover: #ffffff;
-  --btn-cfg-border-hover: #475569;
 }
 
 body.dark {
@@ -54,24 +51,22 @@ body.dark {
   --card-border: #2d2d34;
   --card-divider: #2d2d34;
   --card-shadow: rgba(0, 0, 0, 0.4);
-  --title-color: #f8fafc;  
+  --title-color: #f8fafc;
   --icon-dot-color: #94a3b8;
-  --btn-cfg-bg: #27272a;      
-  --btn-cfg-text: #a1a1aa;     
-  --btn-cfg-border: #3f3f46;   
-  --btn-cfg-bg-hover: #3f3f46;  
+  --btn-bg: #1e1e24;
+  --btn-text: #ffffff;
+  --btn-border: #3f3f46;
+  --btn-toggle-bg: #1e1e24;
+  --btn-toggle-text: #f8fafc;
+  --btn-toggle-bg-hover: #2d2d34;
+  --btn-cfg-bg: #334155;
+  --btn-cfg-text: #94a3b8;
+  --btn-cfg-border: #475569;
+  --btn-cfg-bg-hover: #475569;
   --btn-cfg-text-hover: #ffffff;
-  --btn-cfg-border-hover: #52525b;
-  --btn-toggle-bg: #f8fafc;
-  --btn-toggle-text: #0f172a;
-  --btn-toggle-bg-hover: #e2e8f0;
-  --btn-cfg-bg: #f1f5f9;
-  --btn-cfg-text: #475569;
-  --btn-cfg-border: #e2e8f0;
-  --btn-cfg-bg-hover: #e2e8f0;
-  --btn-cfg-text-hover: #0f172a;
-  --btn-cfg-border-hover: #cbd5e1;
+  --btn-cfg-border-hover: #475569;
 }
+
 
 
     /* Cabeçalho */
