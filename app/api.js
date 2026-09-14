@@ -693,9 +693,9 @@ if (activedElement) {    activedElement.scrollIntoView({    behavior: 'smooth', 
 		if (mffomocsifipsl){    mffomocsifipsl.classList.add("customstyle_"+optiy.id);		}
 		
 		if (mffomocsifipsl && optiy.click_close && optiy.click_close === true) {
-                mffomocsifipsl.onclick = function (e) {
+             if (optiy.noclose && optiy.noclose === true) {  } else {     mffomocsifipsl.onclick = function (e) {
         if (!e.target.closest('.menulight_scrollmenu') && !e.target.closest('.modal_fs_lightbox-content')) {  fsmodal_close(optiy.id, optiy.scroll_hide);   }
-                };
+                };    }
             }
 
 if (document.getElementById("fcasfs_script-lightbox-pdf-core") && is_player0j === "pdf") {
