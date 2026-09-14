@@ -24,6 +24,7 @@ window.getDocData = function(fdd) {
             legendOther: "content (Outros Parâmetros de Entrada)",
             base: [
                 ['id', 'String com o ID do elemento contêiner onde o modal será inserido.'],
+                ['wait', 'Número (ex: 3000) que define o tempo de espera em milissegundos antes de abrir o LightBox.'],
                 ['isAdult', 'Se for true, o acesso ao conteúdo do modal só é permitido se o usuário comprovar que é maior de idade.'],
                 ['age', 'Se isAdult for true, é obrigatório passar o age em número. O valor deve estar entre os limites de 10 a 76 anos (caso contrário, o padrão será 18 anos).'],
                 ['scroll_hide', 'Se definido como "yes", oculta a barra de rolagem da página quando ativo.'],
@@ -42,6 +43,7 @@ window.getDocData = function(fdd) {
             ],
             global: [
                 ['lang', 'Define o idioma da interface interna do componente, aceitando "pt" ou "en".'],
+                ['onWait', 'Função de callback acionada enquanto aguarda o carregamento dos elementos ou dados do lightbox.'],
                 ['onClose', 'Função de callback acionada no encerramento e remoção do lightbox.'],
                 ['onOpen', 'Função de callback acionada na abertura e renderização do lightbox.'],
                 ['onPlayer', 'Função de callback acionada quando o player de mídia interno realiza ações estruturais.'],
@@ -111,6 +113,7 @@ window.getDocData = function(fdd) {
             legendOther: "content (Other Input Parameters)",
             base: [
                 ['id', 'String representing the ID of the container element where the modal attaches.'],
+                ['wait', 'Number (e.g., 3000) that defines the waiting time in milliseconds before opening the LightBox.'],
                 ['isAdult', 'If true, access to the modal content is only allowed if the user proves they are of legal age.'],
                 ['age', 'If isAdult is true, it is mandatory to pass the age as a number. The value must be between the limits of 10 and 76 years old (otherwise, the default will be 18).'],
                 ['scroll_hide', 'If set to "yes", it hides the main page scrollbar when the modal is active.'],
@@ -129,6 +132,7 @@ window.getDocData = function(fdd) {
             ],
             global: [
                 ['lang', 'Sets internal viewport translation dictionary mapping rules, accepting "pt" or "en".'],
+                ['onWait', 'Callback function triggered while waiting for the lightbox elements or data to load.'],
                 ['onClose', 'Callback function triggered upon termination and execution removal of the lightbox layout.'],
                 ['onOpen', 'Callback function triggered upon viewport initialization and interface rendering of the lightbox layout.'],
                 ['onPlayer', 'Callback function triggered when the underlying internal media engine issues state changes or structural updates.'],
