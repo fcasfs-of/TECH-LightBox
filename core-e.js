@@ -275,6 +275,24 @@ var modaisDisponiveis = {
 
 
 
+
+fcas_lightbox_gerarMenu({
+  categorias: [
+    { nome: "Visual Media", botoes: [{ id: "btnImage", texto: "View Image" }, { id: "btnSVG", texto: "View SVG" }] },
+    { nome: "Gallery", botoes: [{ id: "btnSlideshow", texto: "View Slideshow" }, { id: "btnCarrossel", texto: "View Carousel" }] },
+    { nome: "Text & Links", botoes: [{ id: "btnText", texto: "View Text" }, { id: "btnLink", texto: "View Link" }] },
+    { nome: "Data", botoes: [{ id: "btnTable", texto: "View Table" }, { id: "btnList", texto: "View List" }] },
+    { nome: "Multimedia", botoes: [{ id: "btnPlaylist", texto: "View Playlist" }, { id: "btnAudio", texto: "View Audio" }, { id: "btnVideo", texto: "View Video" }] },
+    { nome: "Interaction", botoes: [{ id: "btnForm", texto: "View Form" }] },
+    { nome: "Analytics", botoes: [{ id: "btnGrafic", texto: "View Chart" }, { id: "btnDashboard", texto: "View Dashboard" }] },
+    { nome: "Documents", botoes: [{ id: "btnPDF", texto: "View PDF" }] },
+    { nome: "Location", botoes: [{ id: "btnMap", texto: "View Map" }] },
+    { nome: "Business", botoes: [{ id: "btnContact", texto: "View Contact" }, { id: "btnProduct", texto: "View Product" }] }
+  ]
+});
+
+
+
 Object.keys(modaisDisponiveis).forEach(function(idBotao) {
   var elemento = document.getElementById(idBotao);
   if (elemento) {
