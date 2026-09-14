@@ -1,3 +1,23 @@
+function fcas_lightbox_gerarMenu(config) {
+  if (!config || typeof config !== 'object' || !config.categorias) return;
+  const nav = document.querySelector('.nav-menu');
+  if (!nav) return;
+  let htmlMenu = '';
+  config.categorias.forEach(function(grupo) {
+    if (grupo && typeof grupo === 'object' && typeof grupo.nome === 'string' && Array.isArray(grupo.botoes)) {
+      htmlMenu += '<div class="cat-group"><h3>' + grupo.nome + '</h3>';
+      grupo.botoes.forEach(function(b) {
+        if (b && typeof b === 'object' && typeof b.id === 'string' && typeof b.texto === 'string') {
+          htmlMenu += '<button id="' + b.id + '">' + b.texto + '</button>';
+        }
+      });
+      htmlMenu += '</div>';
+    }
+  });
+  nav.innerHTML = htmlMenu;
+}
+
+
 let currentTheme = localStorage.getItem("LightBox_theme") || "light";
 
 
