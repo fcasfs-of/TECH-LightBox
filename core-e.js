@@ -54,6 +54,23 @@ function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carre
 
 
 var modaisDisponiveis = {
+  'btnDashboard': function() {
+    return {
+      title: "Dashboard",
+      type: "dashboard",
+      context:{
+  titulo: "Control Panel",
+  tema: {},
+  blocos: [
+    { nome: "Access",  valor: "1500", indicador: "Stable server", svg: '<svg width="24" height="24" viewBox="0 0 24 24" stroke="none" fill="currentColor" stroke-width="2"><path d="M22,15H20V12a1,1,0,0,0-1-1H13V9h2a1,1,0,0,0,1-1V2a1,1,0,0,0-1-1H9A1,1,0,0,0,8,2V8A1,1,0,0,0,9,9h2v2H5a1,1,0,0,0-1,1v3H2a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1H8a1,1,0,0,0,1-1V16a1,1,0,0,0-1-1H6V13H18v2H16a1,1,0,0,0-1,1v6a1,1,0,0,0,1,1h6a1,1,0,0,0,1-1V16A1,1,0,0,0,22,15ZM7,17v4H3V17ZM10,7V3h4V7ZM21,21H17V17h4Z"/>/svg>' },
+    {   nome: "Download History",  valor: "52,91%", indicador: "Monthly goal met",  svg: '<svg width="24" height="24" viewBox="-1 -2 24 24" stroke="none" fill="currentColor" stroke-width="2"><path d="M13.106 9h3.953c.546 0 .988.448.988 1s-.442 1-.988 1h-4.941a.994.994 0 0 1-.988-1V4c0-.552.442-1 .988-1s.988.448.988 1v5zm6-6.071A10.029 10.029 0 0 1 22 10c0 5.523-4.424 10-9.882 10v-2c4.366 0 7.906-3.582 7.906-8a8.02 8.02 0 0 0-2.316-5.657A7.834 7.834 0 0 0 12.118 2C8.574 2 5.574 4.36 4.571 7.612l1.352-.923a.981.981 0 0 1 1.372.27 1.007 1.007 0 0 1-.267 1.388l-3.277 2.237a.981.981 0 0 1-1.372-.27L.17 6.998a1.007 1.007 0 0 1 .267-1.389.981.981 0 0 1 1.372.27l.839 1.259C3.863 3.01 7.643 0 12.118 0c2.729 0 5.2 1.12 6.988 2.929z"/></svg>' }
+  ]
+},
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
   'btnMap': function() {
     return {
       title: "Map",
