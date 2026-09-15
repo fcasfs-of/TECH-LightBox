@@ -465,45 +465,6 @@ header .dname .icon::before {     pointer-events: none;   user-select: none;  }
 }
 
 
-    #btnImage, #btnSVG { background-color: #064e3b; color: #34d399; border-color: #047857; }
-    #btnImage:hover, #btnSVG:hover { background-color: #047857; }
-
-    #btnTable, #btnList { background-color: #2e7d32; color: #ffffff; border-color: #1b5e20; }
-    #btnTable:hover, #btnList:hover { background-color: #388e3c; }
-
-    #btnGrafic{ background-color: #3b82f6; color: #ffffff; border-color: #1d4ed8; }
-    #btnGrafic:hover { background-color: #1d4ed8;  }
-
-    #btnText, #btnLink { background-color: #1e3a8a; color: #60a5fa; border-color: #1d4ed8; }
-    #btnText:hover, #btnLink:hover { background-color: #1d4ed8; }
-
-    #btnPDF { background-color: #7f1d1d; color: #fca5a5; border-color: #b91c1c; }
-    #btnPDF:hover { background-color: #b91c1c; }
-
-    #btnMap{background-color:#2e0854;color:#ccff00;border-color:#4a157d}
-    #btnMap:hover{background-color:#4a157d}
-
-    #btnContact { background-color: #3b0764; color: #f472b6; border-color: #701a75; }
-    #btnContact:hover { background-color: #701a75; }
-
-    #btnProduct { background-color: #0c4a6e; color: #38bdf8; border-color: #0369a1; }
-    #btnProduct:hover { background-color: #0369a1; }
-
-    #btnSlideshow, #btnCarrossel { background-color: #715802; color: #fde047; border-color: #a16207; }
-    #btnSlideshow:hover, #btnCarrossel:hover { background-color: #a16207; }
-
-     #btnAudio, #btnVideo { background-color: #4c1d95; color: #a78bfa; border-color: #6d28d9; }
-     #btnAudio:hover, #btnVideo:hover { background-color: #6d28d9; }
-
-     #btnPlaylist { background-color: #4c0519; color: #ffe4e6; border-color: #881337; }
-     #btnPlaylist:hover { background-color: #881337; }
-
-     #btnForm {  background-color: #7c2d12;  color: #fff7ed;  border-color: #ea580c;   }
-     #btnForm:hover {  background-color: #ea580c;   }
-
-     #btnDashboard { background-color: #1e1b4b; color: #e0e7ff; border-color: #4338ca; }
-     #btnDashboard:hover { background-color: #4338ca; }
-
 
     .lbxx #theme-toggle { background-color: var(--btn-toggle-bg);  color: var(--btn-toggle-text); }
     .lbxx #theme-toggle:hover { background-color: var(--btn-toggle-bg-hover);  }
@@ -512,8 +473,10 @@ header .dname .icon::before {     pointer-events: none;   user-select: none;  }
     .lbxx #meuBotaoConfig:hover { background-color: var(--btn-cfg-bg-hover);  color: var(--btn-cfg-text-hover); border-color: var(--btn-cfg-border-hover);  }
 
 
+    .lbxx nav .cat-group button {  background-color: var(--btn-cfg-bg); color: var(--btn-cfg-text) !important;  border-color: var(--btn-cfg-border);   }
+
     .lbxx nav::-webkit-scrollbar-thumb { background: #475569; }
-    .lbxx nav button {  color: #fff !important;   }
+    .lbxx nav .button {  color: #fff !important;   }
 
 
 @media (max-width: 600px) {
