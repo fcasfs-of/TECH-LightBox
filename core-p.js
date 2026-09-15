@@ -1,21 +1,4 @@
-function fcas_lightbox_gerarMenu(config) {
-  if (!config || typeof config !== 'object' || !config.categorias) return;
-  const nav = document.querySelector('.nav-menu');
-  if (!nav) return;
-  let htmlMenu = '';
-  config.categorias.forEach(function(grupo) {
-    if (grupo && typeof grupo === 'object' && typeof grupo.nome === 'string' && Array.isArray(grupo.botoes)) {
-      htmlMenu += '<div class="cat-group"><h3>' + grupo.nome + '</h3>';
-      grupo.botoes.forEach(function(b) {
-        if (b && typeof b === 'object' && typeof b.id === 'string' && typeof b.texto === 'string') {
-          htmlMenu += '<button id="' + b.id + '">' + b.texto + '</button>';
-        }
-      });
-      htmlMenu += '</div>';
-    }
-  });
-  nav.innerHTML = htmlMenu;
-}
+function fcas_lightbox_gerarMenu(config){if(!config||typeof config!=='object'||!config.categorias)return;const nav=document.querySelector('.nav-menu');if(!nav)return;let sidebar=document.querySelector('.fcas-sidebar');if(!sidebar){sidebar=document.createElement('div');sidebar.className='fcas-sidebar';nav.parentNode.insertBefore(sidebar,nav);if(!document.getElementById('fcas-menu-styles')){const style=document.createElement('style');style.id='fcas-menu-styles';style.textContent='.fcas-parent-container{width:100%}.nav-menu{display:flex;flex-direction:column;gap:15px;width:100%}.fcas-sidebar{display:flex;flex-wrap:wrap;gap:10px;width:100%}.fcas-sidebar-item{padding:8px 16px;border:1px solid #ccc;background:#fff;color:#333;cursor:pointer;border-radius:4px}.fcas-divider{width:100%;height:1px;background:#eee;margin:15px 0}.cat-group{display:none;flex-direction:column;gap:10px;width:100%}.fcas-sidebar-item.active{opacity:.5;pointer-events:none;background:#ddd;color:#000}.dark .fcas-sidebar-item{background:transparent;color:#fff;border-color:#555}.dark .fcas-sidebar-item.active{background:#fff;color:#000;opacity:.7}.dark .fcas-divider{background:#444}@media(min-width:768px){.fcas-parent-container{display:flex;align-items:stretch;max-width:100%}.nav-menu{width:75%}.fcas-sidebar{flex-direction:column;width:20%}.fcas-sidebar-item{width:100%;text-align:left}.fcas-divider{width:1px;height:auto;min-height:100%;margin:0 2%}}}';document.head.appendChild(style);const divi=document.createElement('div');divi.className='fcas-divider';const wrapper=document.createElement('div');wrapper.className='fcas-parent-container';nav.parentNode.insertBefore(wrapper,sidebar);wrapper.appendChild(sidebar);wrapper.appendChild(divi);wrapper.appendChild(nav)}}let htmlMenu='';const lang=config.lang||navigator.language;let htmlSidebar='<button class="fcas-sidebar-item active" data-target="all">'+(lang.startsWith('pt')?'Todos':'All')+'</button>';config.categorias.forEach(function(grupo,index){if(grupo&&typeof grupo==='object'&&typeof grupo.nome==='string'&&Array.isArray(grupo.botoes)){const grupoId='fcas-grupo-'+index;htmlMenu+='<div class="cat-group" id="'+grupoId+'"><h3>'+grupo.nome+'</h3>';grupo.botoes.forEach(function(b){if(b&&typeof b==='object'&&typeof b.id==='string'&&typeof b.texto==='string'){htmlMenu+='<button id="'+b.id+'">'+b.texto+'</button>'}});htmlMenu+='</div>';htmlSidebar+='<button class="fcas-sidebar-item" data-target="'+grupoId+'">'+grupo.nome+'</button>'}});nav.innerHTML=htmlMenu;sidebar.innerHTML=htmlSidebar;sidebar.addEventListener('click',function(e){const b=e.target.closest('.fcas-sidebar-item');if(!b)return;sidebar.querySelectorAll('.fcas-sidebar-item').forEach(btn=>btn.classList.remove('active'));b.classList.add('active');const t=b.getAttribute('data-target');nav.querySelectorAll('.cat-group').forEach(function(g){const h3=g.querySelector('h3');if(h3)h3.style.display=(t==='all')?'block':'none';g.style.display=(t==='all'||g.id===t)?'flex':'none'})});nav.querySelectorAll('.cat-group').forEach(g=>g.style.display='flex')}
 
 
 let currentTheme = localStorage.getItem("LightBox_theme") || "light";
@@ -330,7 +313,7 @@ var modaisDisponiveis = {
 
 
 
-fcas_lightbox_gerarMenu({
+fcas_lightbox_gerarMenu({ lang: "pt", 
   categorias: [
     { nome: "Mídia Visual", botoes: [{ id: "btnImage", texto: "Visualizar Imagem" }, { id: "btnSVG", texto: "Visualizar SVG" }] },
     {"nome": "Publicação", "botoes": [{ "id": "btnBlogPost", "texto": "Visualizar Post de Blog" }] },
