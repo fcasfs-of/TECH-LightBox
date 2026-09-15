@@ -276,6 +276,23 @@ var modaisDisponiveis = {
 
 
 
+fcas_lightbox_gerarMenu({
+  categorias: [
+    { nome: "Mídia Visual", botoes: [{ id: "btnImage", texto: "Visualizar Imagem" }, { id: "btnSVG", texto: "Visualizar SVG" }] },
+    { nome: "Galeria", botoes: [{ id: "btnSlideshow", texto: "Visualizar Slideshow" }, { id: "btnCarrossel", texto: "Visualizar Carrossel" }] },
+    { nome: "Texto & Links", botoes: [{ id: "btnText", texto: "Visualizar Texto" }, { id: "btnLink", texto: "Visualizar Link" }] },
+    { nome: "Dados", botoes: [{ id: "btnTable", texto: "Visualizar Tabela" }, { id: "btnList", texto: "Visualizar Lista" }] },
+    { nome: "Multimídia", botoes: [{ id: "btnPlaylist", texto: "Visualizar Playlist" }, { id: "btnAudio", texto: "Visualizar Áudio" }, { id: "btnVideo", texto: "Visualizar Vídeo" }] },
+    { nome: "Interação", botoes: [{ id: "btnForm", texto: "Visualizar Formulário" }] },
+    { nome: "Análise", botoes: [{ id: "btnGrafic", texto: "Visualizar Gráfico" }, { id: "btnDashboard", texto: "Visualizar Dashboard" }] },
+    { nome: "Documentos", botoes: [{ id: "btnPDF", texto: "Visualizar PDF" }] },
+    { nome: "Localização", botoes: [{ id: "btnMap", texto: "Visualizar Mapa" }] },
+    { nome: "Negócios", botoes: [{ id: "btnContact", texto: "Visualizar Contato" }, { id: "btnProduct", texto: "Visualizar Produto" }] }
+  ]
+});
+
+
+
 Object.keys(modaisDisponiveis).forEach(function(idBotao) {
   var elemento = document.getElementById(idBotao);
   if (elemento) {
