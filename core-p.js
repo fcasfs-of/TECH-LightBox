@@ -75,6 +75,60 @@ function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carre
 
 
 var modaisDisponiveis = {
+  'btnPricePlan': function() {
+    return {
+      title: "Plano",
+      type: "plans",
+      context:{
+    plans: [
+        {
+            title: 'Plano Gratuito',
+            price: 'R$ 0',
+            features: ['Acesso total'],
+            buttonText: 'Instalar',
+            link: '#'
+        }
+    ]
+},
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+  'btnTimeline': function() {
+    return {
+      title: "Linha do tempo",
+      type: "timeline",
+      context:{
+  data: [
+{ date: "2025", title: "Começar", description: "Estágio inicial" },
+{ date: "2026", title: "Atualizar", description: "Etapa de Aprimoramento" }
+],
+  options: {}
+},
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+  'btnBlogPost': function() {
+    return {
+      title: "BlogCard",
+      type: "BlogCard",
+      context:{
+    title: "Como instalar no seu site",
+    text: "Leia a documentação atentamente e siga as instruções passo a passo.",
+    image: "https://lightbox.fcasfs-of.cloud-fs.net/favicon.png",
+    link: "https://lightbox.fcasfs-of.cloud-fs.net/doc",
+    linkText: "Leia o artigo completo",
+    width: "400px",
+    accentColor: ""
+},
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
   'btnDashboard': function() {
     return {
       title: "Dashboard",
@@ -279,7 +333,8 @@ var modaisDisponiveis = {
 fcas_lightbox_gerarMenu({
   categorias: [
     { nome: "Mídia Visual", botoes: [{ id: "btnImage", texto: "Visualizar Imagem" }, { id: "btnSVG", texto: "Visualizar SVG" }] },
-    { nome: "Galeria", botoes: [{ id: "btnSlideshow", texto: "Visualizar Slideshow" }, { id: "btnCarrossel", texto: "Visualizar Carrossel" }] },
+    {"nome": "Publicação", "botoes": [{ "id": "btnBlogPost", "texto": "Visualizar Post de Blog" }] },
+    { nome: "Galeria", botoes: [{ id: "btnSlideshow", texto: "Visualizar Slideshow" }, { id: "btnCarrossel", texto: "Visualizar Carrossel" }, { "id": "btnTimeline", "texto": "Visualizar Linha do tempo" }] },
     { nome: "Texto & Links", botoes: [{ id: "btnText", texto: "Visualizar Texto" }, { id: "btnLink", texto: "Visualizar Link" }] },
     { nome: "Dados", botoes: [{ id: "btnTable", texto: "Visualizar Tabela" }, { id: "btnList", texto: "Visualizar Lista" }] },
     { nome: "Multimídia", botoes: [{ id: "btnPlaylist", texto: "Visualizar Playlist" }, { id: "btnAudio", texto: "Visualizar Áudio" }, { id: "btnVideo", texto: "Visualizar Vídeo" }] },
@@ -287,7 +342,7 @@ fcas_lightbox_gerarMenu({
     { nome: "Análise", botoes: [{ id: "btnGrafic", texto: "Visualizar Gráfico" }, { id: "btnDashboard", texto: "Visualizar Dashboard" }] },
     { nome: "Documentos", botoes: [{ id: "btnPDF", texto: "Visualizar PDF" }] },
     { nome: "Localização", botoes: [{ id: "btnMap", texto: "Visualizar Mapa" }] },
-    { nome: "Negócios", botoes: [{ id: "btnContact", texto: "Visualizar Contato" }, { id: "btnProduct", texto: "Visualizar Produto" }] }
+    { nome: "Negócios", botoes: [{ id: "btnContact", texto: "Visualizar Contato" }, { id: "btnProduct", texto: "Visualizar Produto" }, { id: "btnPricePlan", texto: "Visualizar Plano de Preços" }] }
   ]
 });
 
