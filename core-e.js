@@ -1,21 +1,4 @@
-function fcas_lightbox_gerarMenu(config) {
-  if (!config || typeof config !== 'object' || !config.categorias) return;
-  const nav = document.querySelector('.nav-menu');
-  if (!nav) return;
-  let htmlMenu = '';
-  config.categorias.forEach(function(grupo) {
-    if (grupo && typeof grupo === 'object' && typeof grupo.nome === 'string' && Array.isArray(grupo.botoes)) {
-      htmlMenu += '<div class="cat-group"><h3>' + grupo.nome + '</h3>';
-      grupo.botoes.forEach(function(b) {
-        if (b && typeof b === 'object' && typeof b.id === 'string' && typeof b.texto === 'string') {
-          htmlMenu += '<button id="' + b.id + '">' + b.texto + '</button>';
-        }
-      });
-      htmlMenu += '</div>';
-    }
-  });
-  nav.innerHTML = htmlMenu;
-}
+function fcas_lightbox_gerarMenu(config){if(!config||typeof config!=='object'||!config.categorias)return;const nav=document.querySelector('.nav-menu');if(!nav)return;let sidebar=document.querySelector('.fcas-sidebar');if(!sidebar){sidebar=document.createElement('div');sidebar.className='fcas-sidebar';nav.parentNode.insertBefore(sidebar,nav);if(!document.getElementById('fcas-menu-styles')){const style=document.createElement('style');style.id='fcas-menu-styles';style.textContent='.nav-menu{display:flex;flex-direction:column;gap:15px;width:100%}.fcas-sidebar{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:20px;width:100%}.fcas-sidebar-item{padding:8px 16px;border:1px solid #ccc;background:#fff;cursor:pointer;border-radius:4px}.cat-group{display:none;flex-direction:column;gap:10px;width:100%}.fcas-sidebar-item.active{opacity:.5;pointer-events:none;background:#ddd}@media(min-width:768px){.nav-menu{width:75%}.fcas-sidebar{flex-direction:column;width:20%;margin-bottom:0}.fcas-sidebar-item{width:100%;text-align:left}.fcas-parent-container{display:flex;gap:5%;align-items:flex-start}}';document.head.appendChild(style);const wrapper=document.createElement('div');wrapper.className='fcas-parent-container';nav.parentNode.insertBefore(wrapper,sidebar);wrapper.appendChild(sidebar);wrapper.appendChild(nav)}}let htmlMenu='';const lang=config.lang||navigator.language;let htmlSidebar='<button class="fcas-sidebar-item active" data-target="all">'+(lang.startsWith('pt')?'Todos':'All')+'</button>';config.categorias.forEach(function(grupo,index){if(grupo&&typeof grupo==='object'&&typeof grupo.nome==='string'&&Array.isArray(grupo.botoes)){const grupoId='fcas-grupo-'+index;htmlMenu+='<div class="cat-group" id="'+grupoId+'"><h3>'+grupo.nome+'</h3>';grupo.botoes.forEach(function(b){if(b&&typeof b==='object'&&typeof b.id==='string'&&typeof b.texto==='string'){htmlMenu+='<button id="'+b.id+'">'+b.texto+'</button>'}});htmlMenu+='</div>';htmlSidebar+='<button class="fcas-sidebar-item" data-target="'+grupoId+'">'+grupo.nome+'</button>'}});nav.innerHTML=htmlMenu;sidebar.innerHTML=htmlSidebar;sidebar.addEventListener('click',function(e){const b=e.target.closest('.fcas-sidebar-item');if(!b)return;sidebar.querySelectorAll('.fcas-sidebar-item').forEach(btn=>btn.classList.remove('active'));b.classList.add('active');const t=b.getAttribute('data-target');nav.querySelectorAll('.cat-group').forEach(function(g){g.style.display=(t==='all'||g.id===t)?'flex':'none'})});nav.querySelectorAll('.cat-group').forEach(g=>g.style.display='flex')}
 
 
 let currentTheme = localStorage.getItem("LightBox_theme") || "light";
@@ -330,7 +313,7 @@ var modaisDisponiveis = {
 
 
 
-fcas_lightbox_gerarMenu({
+fcas_lightbox_gerarMenu({ lang: "en", 
   categorias: [
     { nome: "Visual Media", botoes: [{ id: "btnImage", texto: "View Image" }, { id: "btnSVG", texto: "View SVG" }] },
     {"nome": "Publication", "botoes": [{ "id": "btnBlogPost", "texto": "View Blog Post" }] },
