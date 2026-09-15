@@ -473,7 +473,9 @@ header .dname .icon::before {     pointer-events: none;   user-select: none;  }
     .lbxx #meuBotaoConfig:hover { background-color: var(--btn-cfg-bg-hover);  color: var(--btn-cfg-text-hover); border-color: var(--btn-cfg-border-hover);  }
 
 
-    .lbxx nav .cat-group button {  background-color: var(--btn-cfg-bg); color: var(--btn-cfg-text) !important;  border-color: var(--btn-cfg-border);   }
+    .lbxx nav .cat-group button {  background-color: #333; color: #fff !important;  border-color: #111;   }
+    .lbxx nav .cat-group button:hover { background-color: #111;  }
+
 
     .lbxx nav::-webkit-scrollbar-thumb { background: #475569; }
     .lbxx nav .button {  color: #fff !important;   }
