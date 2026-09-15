@@ -1,4 +1,4 @@
-const listaComponentes_formsts = ["list", "table", "playlist", "carrossel", "form", "map", "slideshow", "grafico", "pdf", "link", "texto", "image", "svg", "contact", "product", "audio", "video", "PList"];
+const listaComponentes_formsts = ["list", "table", "playlist", "carrossel", "form", "map", "slideshow", "grafico", "pdf", "link", "texto", "image", "svg", "contact", "product", "dashboard", "audio", "video", "PList"];
 
 function fcas_lightbox_generarListaSuportados(opcoes) { if (!opcoes) { return ""; } var lista = opcoes.lista; var separador = opcoes.separador; var ordemAlfabetica = opcoes.ordemAlfabetica; if (!lista || !Array.isArray(lista) || lista.length === 0) { return ""; } if (separador === undefined || separador === null || separador === "") { separador = ", "; } else if (String(separador).slice(-1) !== " ") { separador = separador + " "; } var listaFinal = lista.slice(); if (ordemAlfabetica) { listaFinal.sort(function(a, b) { return String(a).localeCompare(String(b)); }); } return listaFinal.join(separador); }
 function fcas_lightbox_verificarTexto(texto) { return (texto && texto.trim() !== "") ? texto : ""; }
@@ -85,6 +85,7 @@ window.getDocData = function(fdd) {
                 ['contact', 'Suporta chaves de dados de contato.'],
                 ['product', 'Suporta chaves de dados do produto.'],
                 ['map', 'Suporta chaves de dados do mapa.'],
+                ['dashboard','Recebe um único objeto de configuração estruturado com a string titulo, o objeto tema para customização de cores (fundoContainer, textoContainer, fundoHeader, borda, fundoConteudo, fundoCard, textoCard, valorCard, iconeCard, indicadorCard) e o array de objetos blocos para renderizar os cartões (nome, valor, indicador, svg).'],
                 ['form', 'Configuração de campos suportando as chaves e tipos: [ {"label":"","name":"","required":"boolean","type":["text", "email", "password", "number", "tel", "url", "date", "textarea", "select", "range", "slider"],"placeholder":"","min":"number","max":"number","step":"number","options"::[{ value:"", label:"" }],"rows":"number"} ]'],
                 ['PList', 'Recebe um array de objetos contendo o arquivo de áudio/vídeo, título e poster de capa correspondente: [ {"file":"","title":"","poster":""} ]']
             ],
@@ -174,6 +175,7 @@ window.getDocData = function(fdd) {
                 ['contact', 'Supports contact data keys.'],
                 ['product', 'Supports product data keys.'],
                 ['map', 'Supports mapa data keys.'],
+                ['dashboard','Receives a single configuration object structured with the string titulo, the tema object for color customization (fundoContainer, textoContainer, fundoHeader, borda, fundoConteudo, fundoCard, textoCard, valorCard, iconeCard, indicadorCard), and the array of objects blocos to render the cards (nome, valor, indicador, svg).'],
                 ['form', 'Fields configuration supporting the keys and types: [ {"label":"","name":"","required":"boolean","type":["text", "email", "password", "number", "tel", "url", "date", "textarea", "select", "range", "slider"],"placeholder":"","min":"number","max":"number","step":"number","options":[{ value:"", label:"" }],"rows":"number"} ]'],
                 ['PList', 'Accepts a tracking playlist array carrying structural media source locations, title texts, and posters: [ {"file":"","title":"","poster":""} ]']
             ],
