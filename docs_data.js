@@ -3,7 +3,7 @@ const listaComponentes_formsts = ["list", "table", "playlist", "carrossel", "for
 function fcas_lightbox_generarListaSuportados(opcoes) { if (!opcoes) { return ""; } var lista = opcoes.lista; var separador = opcoes.separador; var ordemAlfabetica = opcoes.ordemAlfabetica; if (!lista || !Array.isArray(lista) || lista.length === 0) { return ""; } if (separador === undefined || separador === null || separador === "") { separador = ", "; } else if (String(separador).slice(-1) !== " ") { separador = separador + " "; } var listaFinal = lista.slice(); if (ordemAlfabetica) { listaFinal.sort(function(a, b) { return String(a).localeCompare(String(b)); }); } return listaFinal.join(separador); }
 function fcas_lightbox_verificarTexto(texto) { return (texto && texto.trim() !== "") ? texto : ""; }
 
-function fcas_lightbox_verificaranalisar(lista, idioma) { var c = 0; for (var i = 0; i < lista.length; i++) { if (lista[i] !== '' && lista[i] !== null && lista[i] !== undefined) { c++; } } if (c === 0) { return ''; } if (idioma === 'pt') { return 'Quantidade de tipos suportados: ' + c; } else { return 'Quantity of supported types: ' + c; } }
+function fcas_lightbox_verificaranalisar(lista, idioma) { var c = 0; for (var i = 0; i < lista.length; i++) { if (lista[i] !== '' && lista[i] !== null && lista[i] !== undefined) { c++; } } if (c === 0) { return ''; } if (idioma === 'pt') { return 'Quantidade de tipos suportados: ' + c + '.'; } else { return 'Quantity of supported types: ' + c + '.'; } }
 
 
 window.getDocData = function(fdd) {
