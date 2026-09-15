@@ -3,6 +3,8 @@ const listaComponentes_formsts = ["list", "table", "playlist", "carrossel", "for
 function fcas_lightbox_generarListaSuportados(opcoes) { if (!opcoes) { return ""; } var lista = opcoes.lista; var separador = opcoes.separador; var ordemAlfabetica = opcoes.ordemAlfabetica; if (!lista || !Array.isArray(lista) || lista.length === 0) { return ""; } if (separador === undefined || separador === null || separador === "") { separador = ", "; } else if (String(separador).slice(-1) !== " ") { separador = separador + " "; } var listaFinal = lista.slice(); if (ordemAlfabetica) { listaFinal.sort(function(a, b) { return String(a).localeCompare(String(b)); }); } return listaFinal.join(separador); }
 function fcas_lightbox_verificarTexto(texto) { return (texto && texto.trim() !== "") ? texto : ""; }
 
+function fcas_lightbox_verificaranalisar(lista, idioma) { var c = 0; for (var i = 0; i < lista.length; i++) { if (lista[i] !== '' && lista[i] !== null && lista[i] !== undefined) { c++; } } if (c === 0) { return ''; } if (idioma === 'pt') { return 'Quantidade de tipos suportados: ' + c; } else { return 'Quantity of supported types: ' + c; } }
+
 
 window.getDocData = function(fdd) {
     return {
@@ -94,7 +96,7 @@ window.getDocData = function(fdd) {
             ],
             other: [
                 ['title', 'String com o título que será exibido no topo do modal.'],
-                ['type', 'Tipo do formato tratado ('+fcas_lightbox_verificarTexto(fdd || '')+').'],
+                ['type', 'Tipo do formato tratado ('+fcas_lightbox_verificarTexto(fdd || '')+').  '+fcas_lightbox_verificaranalisar(listaComponentes_formsts, "pt")+''],
                 ['poster', 'URL da imagem de capa utilizada caso o tipo do conteúdo seja vídeo.'],
                 ['description', 'Texto descritivo opcional posicionado junto ao bloco de conteúdo.']
             ]
@@ -187,7 +189,7 @@ window.getDocData = function(fdd) {
             ],
             other: [
                 ['title', 'String value rendering the headline text at the top of the header.'],
-                ['type', 'Evaluated payload type ('+fcas_lightbox_verificarTexto(fdd || '')+').'],
+                ['type', 'Evaluated payload type ('+fcas_lightbox_verificarTexto(fdd || '')+').  '+fcas_lightbox_verificaranalisar(listaComponentes_formsts, "en")+''],
                 ['poster', 'URL string targeting thumbnail posters required when mapping videos.'],
                 ['description', 'Complementary description text aligned beneath or near the asset render block.']
             ]
