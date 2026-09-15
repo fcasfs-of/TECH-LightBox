@@ -84,7 +84,7 @@ var modaisDisponiveis = {
             title: 'Free Plan',
             price: 'R$ 0',
             features: ['Full access'],
-            buttonText: 'Instalar',
+            buttonText: 'Install',
             link: '#'
         }
     ]
@@ -118,7 +118,7 @@ var modaisDisponiveis = {
     title: "How to Install on Your Site",
     text: "Read the documentation carefully and follow the step-by-step instructions",
     image: "https://lightbox.fcasfs-of.cloud-fs.net/favicon.png",
-    link: "https://lightbox.fcasfs-of.cloud-fs.net/doc",
+    link: "https://lightbox.fcasfs-of.cloud-fs.net/doc-en",
     linkText: "Read the full article",
     width: "400px",
     accentColor: ""
