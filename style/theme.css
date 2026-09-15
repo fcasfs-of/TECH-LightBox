@@ -196,12 +196,16 @@ header .dname *, header nav, header nav *, .lbxx * { transition: all 0.1s; }
 
 .lbxx nav {
   display: flex;
-  align-items: center; justify-content: center; 
   gap: 18px;
   overflow-y: auto;
   padding: 4px 0;
   flex-wrap: wrap;      flex-direction: row;
 }
+
+.lbxx .lnav {
+  align-items: center; justify-content: center; 
+}
+
 
 .cat-group {
   display: flex;
