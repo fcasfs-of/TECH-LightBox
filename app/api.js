@@ -396,6 +396,27 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd 
             } else if (optiy.type && optiy.type == "BlogCard") {
                 is_player0j = "no";
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_light_renderBlogCard(optiy.context)}  </div>`;
+            } else if (optiy.type && optiy.type == "3DText") {
+                is_player0j = "no";
+                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_create3DText(optiy.context)}  </div>`;
+            } else if (optiy.type && optiy.type == "Ad") {
+                is_player0j = "no";
+                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_createAd(optiy.context)}  </div>`;
+            } else if (optiy.type && optiy.type == "VirtualCreditCard") {
+                is_player0j = "no";
+                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_createVirtualCreditCard(optiy.context)}  </div>`;
+            } else if (optiy.type && optiy.type == "Profile") {
+                is_player0j = "no";
+                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_createProfile(optiy.context)}  </div>`;
+            } else if (optiy.type && optiy.type == "Participants") {
+                is_player0j = "no";
+                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_createParticipants(optiy.context)}  </div>`;
+            } else if (optiy.type && optiy.type == "Calendar") {
+                is_player0j = "no";
+                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_createCalendar(optiy.context)}  </div>`;
+            } else if (optiy.type && optiy.type == "Sorteio") { 
+                is_player0j = "no";
+                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_createRaffle(optiy.context)}  </div>`;
             } else if (optiy.type && optiy.type == "plans") {
                 is_player0j = "no";
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasf_lightbox_price_plan(optiy.context)}  </div>`;
