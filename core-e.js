@@ -62,7 +62,7 @@ var modaisDisponiveis = {
       title: "3D Text",
       type: "3DText",
       context:{
-    text: "FCAS_FS",  textColor: "#00ff88",  rotateX: "20deg",   rotateY: "-25deg" 
+    text: "FCAS_FS",  rotateX: "20deg",   rotateY: "-25deg" 
 },
       size: "360",
       includePlayer: "no",
