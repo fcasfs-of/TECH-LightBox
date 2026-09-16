@@ -57,6 +57,135 @@ function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carre
 
 
 var modaisDisponiveis = {
+  'btn3DText': function() {
+    return {
+      title: "3D Text",
+      type: "3DText",
+      context:{
+    text: "FCAS_FS",  textColor: "#00ff88",  rotateX: "20deg",   rotateY: "-25deg" 
+},
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+  'btnAd': function() {
+    return {
+      title: "Ad",
+      type: "Ad",
+      context:{
+    title: "LightBox", badgeText:"teste",  desc: "Access everything for an unlimited time.",
+    url: "https://lightbox.fcasfs-of.cloud-fs.net/en",   btnText: "Watch the demonstration",
+    bgImage: "https://lightbox.fcasfs-of.cloud-fs.net/favicon.png",  btnBg: "#00cd6c"
+},
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },  
+  'btnVCC': function() {
+    return {
+      title: "VirtualCreditCard",
+      type: "VirtualCreditCard",
+      context:{
+    holder: "FCAS_FS", chipImg:"https://lightbox.fcasfs-of.cloud-fs.net//favicon.png",   type: "dark"
+},
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+  'btnVirtualCard': function() {
+    return {
+      title: "VirtualCard",
+      type: "VirtualCard",
+      context:{
+    name: "FCAS_FS",
+    role: "LightBox",
+    type: "dark",
+    model: "badge", 
+    items: ["Developer"]
+},
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+  'btnProfile': function() {
+    return {
+      title: "Profile",
+      type: "Profile",
+      context:{
+ name: "FCAS_FS",
+            avatar: "",
+            background: "#ffffff",
+            borderRadius: "16px",
+            textColor: "#2d3748",
+            infos: [
+                { title: "About", content: "Full-stack developer passionate about creating clean, responsive interfaces." },
+                { title: "Skills", content: "HTML5, CSS3, JavaScript." }
+            ]
+},
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },   
+  'btnRaffle': function() {
+    return {
+      title: "Sorteio",
+      type: "Sorteio",
+      context:{
+    title: "Sorteio",
+    numberMax: 500,     
+    background: "#1e1e24",
+    textColor: "#ffffff",
+    resultColor: "#00ff88",
+    iconColor: "#00ff88",
+    borderRadius: "14px",
+    boxShadow: "0 10px 25px rgba(0,0,0,0.3)",
+    fontFamily: "Segoe UI, sans-serif",
+    padding: "25px",
+    maxWidth: "350px"
+},
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },   
+  'btnParticipants': function() {
+    return {
+      title: "Participants",
+      type: "Participants",
+      context:{
+    title: "Confirmed",
+    background: "#ffffff",
+    textColor: "#2d3748",
+    iconColor: "#2ed573", 
+    pendingColor: "#ffa502", 
+    list: [
+        { name: "FCAS_FS", status: "Confirmed", type: "confirmed", avatar: "" },
+    ]
+},
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },   
+  'btnCalendar': function() {
+    return {
+      title: "Calendar",
+      type: "Calendar",
+      context:{
+    title: "Current Month",
+    mode: "month",  
+    actual: true 
+},
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  }, 
   'btnPricePlan': function() {
     return {
       title: "Plan",
@@ -325,7 +454,8 @@ fcas_lightbox_gerarMenu({ lang: "en",
     { nome: "Analytics", botoes: [{ id: "btnGrafic", texto: "View Chart" }, { id: "btnDashboard", texto: "View Dashboard" }] },
     { nome: "Documents", botoes: [{ id: "btnPDF", texto: "View PDF" }] },
     { nome: "Location", botoes: [{ id: "btnMap", texto: "View Map" }] },
-    { nome: "Business", botoes: [{ id: "btnContact", texto: "View Contact" }, { id: "btnProduct", texto: "View Product" }, { id: "btnPricePlan", texto: "View Pricing Plan" }] }
+    { "nome": "Utility-focused & Dynamic", "botoes": [{ "id": "btnProfile", "texto": "View Profile" }, { "id": "btnRaffle", "texto": "View Draw" }, { "id": "btnParticipants", "texto": "View Participants" }, { "id": "btnCalendar", "texto": "View Calendar" }, { "id": "btnAd", "texto": "View Ad" }, { "id": "btn3DText", "texto": "View 3D Text" }] },
+    { nome: "Business", botoes: [{ id: "btnContact", texto: "View Contact" }, { id: "btnProduct", texto: "View Product" }, { id: "btnPricePlan", texto: "View Pricing Plan" },  { "id": "btnVirtualCard", "texto": "View Virtual Card" }, { "id": "btnVCC", "texto": "View Credit Card" }] }
   ]
 });
 
