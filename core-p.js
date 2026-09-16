@@ -63,7 +63,7 @@ var modaisDisponiveis = {
       title: "3D Text",
       type: "3DText",
       context:{
-    text: "FCAS_FS",  textColor: "#00ff88",  rotateX: "20deg",   rotateY: "-25deg" 
+    text: "FCAS_FS",  rotateX: "20deg",   rotateY: "-25deg" 
 },
       size: "360",
       includePlayer: "no",
@@ -76,7 +76,7 @@ var modaisDisponiveis = {
       type: "Ad",
       context:{
     title: "LightBox", badgeText:"teste",  desc: "Acesse tudo por tempo ilimitado.",
-    url: "https://lightbox.fcasfs-of.cloud-fs.net/en",   btnText: "Assista à demonstração",
+    url: "https://lightbox.fcasfs-of.cloud-fs.net",   btnText: "Assista à demonstração",
     bgImage: "https://lightbox.fcasfs-of.cloud-fs.net/favicon.png",  btnBg: "#00cd6c"
 },
       size: "360",
@@ -89,7 +89,7 @@ var modaisDisponiveis = {
       title: "VirtualCreditCard",
       type: "VirtualCreditCard",
       context:{
-    holder: "FCAS_FS", chipImg:"https://lightbox.fcasfs-of.cloud-fs.net//favicon.png",   type: "dark"
+    holder: "FCAS_FS", chipImg:"https://lightbox.fcasfs-of.cloud-fs.net/favicon.png",   type: "dark"
 },
       size: "360",
       includePlayer: "no",
