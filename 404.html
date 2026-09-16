@@ -26,7 +26,19 @@
         <a href="/" class="btn">Voltar para a página inicial</a>
   <br/><br/><br/>  </div>
   <br/><br/><br/>
-    
+ 
+
+<script>
+let currentTheme = localStorage.getItem("LightBox_theme") || "light";
+
+  document.body.classList.remove('dark');
+    const isDark = document.body.classList.contains('dark');
+if(currentTheme=="dark"){
+    document.body.classList.add('dark');
+    const isDark = document.body.classList.contains('dark');
+}
+</script>   
+
   
 </body>
 </html>
