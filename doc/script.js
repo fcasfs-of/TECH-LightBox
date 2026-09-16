@@ -1,3 +1,8 @@
+(function(){const e=document.createElement("style");e.textContent=".scroll-top-btn{position:fixed;bottom:30px;right:30px;width:50px;height:50px;border-radius:12px;background-color:#1a1a1a;color:#ffffff;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(0,0,0,.2);z-index:9999;transition:all .4s cubic-bezier(.4,0,.2,1);opacity:0;visibility:hidden;transform:translateY(20px)}.scroll-top-btn:hover{background-color:#333}.scroll-top-btn.visible{opacity:1;visibility:visible;transform:translateY(0)}",document.head.appendChild(e);const t=document.createElement("button");t.classList.add("scroll-top-btn"),t.innerHTML='<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"></polyline></svg>',document.body.appendChild(t),document.addEventListener("scroll",(()=>{window.scrollY>120?t.classList.add("visible"):t.classList.remove("visible")})),t.addEventListener("click",(()=>{window.scrollTo({top:0,behavior:"smooth"})}))})();
+
+
+
+
 var fcsd_target="";    if(typeof fcas_lightbox_generarListaSuportados === 'function' && listaComponentes_formsts){  fcsd_target=fcas_lightbox_generarListaSuportados({ lista: listaComponentes_formsts, separador: ", ", ordemAlfabetica: false });  }   
 
 window.app_2ver=window.app_2ver||'';  const target=document.getElementById('version-display');if(target){target.textContent=window.app_2ver;}
