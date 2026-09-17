@@ -65,6 +65,38 @@ function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carre
 
 
 var modaisDisponiveis = {
+  'btnTree': function() {
+    return {
+      title: "treeview",
+      type: "treeview",
+      context:{  showValues: true, 
+  data: {
+    'Main Folder': {
+      'SubFolder': {
+        'Project Archive': {    'Nome': 'LightBox',   'Version': 2,   'Ativo': true,     } }
+    }
+  },
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+  'btnMindmap': function() {
+    return {
+      title: "mind map",
+      type: "mindmap",
+      context:{
+ data: [
+    'LightBox',
+    'LightBox/app',
+    'LightBox/app/api'
+  ]
+},
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
   'btn3DText': function() {
     return {
       title: "3D Text",
@@ -462,6 +494,7 @@ fcas_lightbox_gerarMenu({ lang: "en",
     { nome: "Analytics", botoes: [{ id: "btnGrafic", texto: "View Chart" }, { id: "btnDashboard", texto: "View Dashboard" }] },
     { nome: "Documents", botoes: [{ id: "btnPDF", texto: "View PDF" }] },
     { nome: "Location", botoes: [{ id: "btnMap", texto: "View Map" }] },
+    { "nome": "Navigation & Structure", "botoes": [ { "id": "btnTree", "texto": "View File Tree" }, { "id": "btnMindmap", "texto": "View Mind Map" } ] },
     { "nome": "Utility-focused & Dynamic", "botoes": [{ "id": "btnProfile", "texto": "View Profile" }, { "id": "btnRaffle", "texto": "View Draw" }, { "id": "btnParticipants", "texto": "View Participants" }, { "id": "btnCalendar", "texto": "View Calendar" }, { "id": "btnAd", "texto": "View Ad" }, { "id": "btn3DText", "texto": "View 3D Text" }] },
     { nome: "Business", botoes: [{ id: "btnContact", texto: "View Contact" }, { id: "btnProduct", texto: "View Product" }, { id: "btnPricePlan", texto: "View Pricing Plan" },  { "id": "btnVirtualCard", "texto": "View Virtual Card" }, { "id": "btnVCC", "texto": "View Credit Card" }] }
   ]
