@@ -182,7 +182,7 @@ header .dname *, header nav, header nav *, .lbxx * { transition: all 0.1s; }
   border: 1px solid #3f3f46;
 }
 
-.lbxx nav button::before {
+.lbxx nav button::before, .fcas-sidebar-item::before {
   content: "";
   display: inline-block;
   width: 18px;
@@ -338,6 +338,15 @@ header .dname *, header nav, header nav *, .lbxx * { transition: all 0.1s; }
 }
 
 
+
+
+.fcas-sidebar-item [data-target="all"]::before,.fcas-sidebar-item [data-target="todos"]::before {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAlUlEQVR4AdyS4QqAIAyEq/d/52I/PrjmwInkJEHOrcvdbV6HrLuzhJo+vgqk/xoghgVOtwbua6hhgYY1kfhpAf+YJjp0rG2RPh5URzm+ZXCtg4wi5fhZESun3gGqIkQpcyJWrHeAughRijtixXoHqsafI1eWU97eDui9x70ceHUao9T6bptYsW4Gpqi3UYorYsXPHTwAAAD//wIoRWsAAAAGSURBVAMAnMqoGd95uMUAAAAASUVORK5CYII=");
+}
+
+
+
+fcas-sidebar-item
 
  header .dname h1 {  margin-bottom: 0px;    display: inline-block;  }
 
