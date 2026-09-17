@@ -76,7 +76,7 @@ var modaisDisponiveis = {
       'Subpasta': {
         'Arquivo de Projetos': {    'Nome': 'LightBox',   'Version': 2,   'Ativo': true,     } }
     }
-  },
+  }  },
       size: "360",
       includePlayer: "no",
       description: ""
