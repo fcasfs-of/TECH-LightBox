@@ -69,7 +69,7 @@ var modaisDisponiveis = {
     return {
       title: "treeview",
       type: "treeview",
-      context:{  showValues: true, 
+      context:{   allOpen: true,  showValues: true, 
   data: {
     'Main Folder': {
       'SubFolder': {
