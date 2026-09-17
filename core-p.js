@@ -66,6 +66,38 @@ function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carre
 
 
 var modaisDisponiveis = {
+  'btnTree': function() {
+    return {
+      title: "treeview",
+      type: "treeview",
+      context:{   allOpen: true, showValues: true, 
+  data: {
+    'Pasta principal': {
+      'Subpasta': {
+        'Arquivo de Projetos': {    'Nome': 'LightBox',   'Version': 2,   'Ativo': true,     } }
+    }
+  },
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+  'btnMindmap': function() {
+    return {
+      title: "mindmap",
+      type: "mindmap",
+      context:{
+ data: [
+    'LightBox',
+    'LightBox/app',
+    'LightBox/app/api'
+  ]
+},
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
   'btn3DText': function() {
     return {
       title: "3D Text",
@@ -462,6 +494,7 @@ fcas_lightbox_gerarMenu({ lang: "pt",
     { nome: "Análise", botoes: [{ id: "btnGrafic", texto: "Visualizar Gráfico" }, { id: "btnDashboard", texto: "Visualizar Dashboard" }] },
     { nome: "Documentos", botoes: [{ id: "btnPDF", texto: "Visualizar PDF" }] },
     { nome: "Localização", botoes: [{ id: "btnMap", texto: "Visualizar Mapa" }] },
+    { "nome": "Navegação & Estrutura", "botoes": [ { "id": "btnTree", "texto": "Visualizar Árvore de Arquivos" }, { "id": "btnMindmap", "texto": "Visualizar Mapa Mental" } ] },
     { "nome": "Utilitários & Dinâmicos", "botoes": [{ "id": "btnProfile", "texto": "Visualizar Perfil" }, { "id": "btnRaffle", "texto": "Visualizar Sorteio" }, { "id": "btnParticipants", "texto": "Visualizar Participantes" }, { "id": "btnCalendar", "texto": "Visualizar Calendário" }, { "id": "btnAd", "texto": "Visualizar Anúncio" }, { "id": "btn3DText", "texto": "Visualizar Texto 3D" }] },
     { nome: "Negócios", botoes: [{ id: "btnContact", texto: "Visualizar Contato" }, { id: "btnProduct", texto: "Visualizar Produto" }, { id: "btnPricePlan", texto: "Visualizar Plano de Preços" }, { "id": "btnVirtualCard", "texto": "Visualizar Cartão Virtual" }, { "id": "btnVCC", "texto": "Visualizar Cartão de Crédito" }] }
   ]
