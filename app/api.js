@@ -631,7 +631,7 @@ function playerfs_osf_evensdef(eventsList, lang = "pt", plobf,timf,kk){    if(pl
 
 function fcasfs_gerarEstiloLightbox(optiy) {
     return `<style id="fs_modal_${optiy.id}_css_custom">
-  ${fcas_lightbox_generateResponsiveFontCSS({ id: "fs_modal_" + optiy.id + ".modal_fs_lightbox", font: optiy.font })}
+  ${fcas_lightbox_generateResponsiveFontCSS({ id: "fs_modal_" + optiy.id + ".modal_fs_lightbox", font: optiy.font || "", fontSize: optiy.fontSize || true })}
   ${fcas_lightbox_bloquearPrint("fs_modal_" + optiy.id + "", optiy.noprint || false)}
    #fs_modal_${optiy.id}.modal_fs_lightbox, #fs_modal_${optiy.id}.modal_fs_lightbox * { -webkit-print-color-adjust: exact !important;        print-color-adjust: exact !important;        color-adjust: exact !important;     }
     .modal_fs_lightbox .classic-spinner{  border-top:6px solid #${fcas_lightbox_checkValueEX(optiy.content, "config", "colorIcon", "fff") || "fff"} !important;  -webkit-animation:girarSpinner 0.5s linear infinite;animation:girarSpinner 0.5s linear infinite;  }
