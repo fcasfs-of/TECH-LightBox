@@ -556,10 +556,19 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd 
 }
 
 
-const osdTranslations = { "start": { pt: "Iniciando", en: "Getting started" }, "new": { pt: "Novo", en: "Getting started" }, "exitfullscreen": { pt: "Saindo da Tela Cheia", en: "Exiting FullScreen" }, "fullscreen": { pt: "Tela Cheia", en: "FullScreen" }, "end": { pt: "Finalizando", en: "Finishing" }, "finish": { pt: "Terminado", en: "Finished" }, "volume": { pt: "Volume: ", en: "Volume: " }, "unmute": { pt: "Som Ativo", en: "Active Sound" }, "mute": { pt: "Mudo", en: "Mute" }, "pause": { pt: "Pausado", en: "Paused" }, "stop": { pt: "Parado", en: "Stopped" }, "play": { pt: "Reproduzindo", en: "Reproducing" }, "speed": { pt: "Velocidade: ", en: "Speed: " } };
+const osdTranslations = { "start": { pt: "Iniciando", en: "Getting started" }, "new": { pt: "Novo", en: "Getting started" }, "exitfullscreen": { pt: "Saindo da Tela Cheia", en: "Exiting FullScreen" }, "fullscreen": { pt: "Tela Cheia", en: "FullScreen" }, "end": { pt: "Finalizando", en: "Finishing" }, "finish": { pt: "Terminado", en: "Finished" }, "volume": { pt: "Volume: ", en: "Volume: " }, "unmute": { pt: "Som Ativo", en: "Active Sound" }, "mute": { pt: "Mudo", en: "Mute" }, "pause": { pt: "Pausado", en: "Paused" }, "stop": { pt: "Parado", en: "Stopped" }, "play": { pt: "Reproduzindo", en: "Reproducing" }, "speed": { pt: "Velocidade: ", en: "Speed: " }, "quality": { pt: "Qualidade Alterada", en: "Changed Quality" }, "audiotrack": { pt: "Faixa de Áudio Alterada", en: "Changed Audio Track" }, "subtitle": { pt: "Legenda Alterada", en: "Changed Subtitle" } };
 
 function registerPlayerOSDEvents(plobf, eventsList, lang = "pt", openf_osdcd_time,osdpositdo,osdposito) {
     const allEvents = {
+        "quality": function() {
+            fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: (osdTranslations.quality[lang] || osdTranslations.quality["pt"]), pos: osdposito, showAction: false, actionText: "", width: 'auto' });
+        },
+        "audiotrack": function() {
+            fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: (osdTranslations.audiotrack[lang] || osdTranslations.audiotrack["pt"]), pos: osdposito, showAction: false, actionText: "", width: 'auto' });
+        },
+        "subtitle": function() {
+            fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: (osdTranslations.subtitle[lang] || osdTranslations.subtitle["pt"]), pos: osdposito, showAction: false, actionText: "", width: 'auto' });
+        },
         "start": function() {
             fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: (osdTranslations.start[lang] || osdTranslations.start["pt"]), pos: osdposito, showAction: false, actionText: "", width: 'auto' });
         },
@@ -648,6 +657,7 @@ mfplayeri = fs_Playerjs(dstart_fs_mpl);
 if(mfplayeri){  
 lightboxPLclos=function(){  if(dstart_fs_mpl.id && dstart_fs_mpl.id!="" && document.getElementById(dstart_fs_mpl.id)){  document.getElementById(dstart_fs_mpl.id).remove();  }  };
 lightboxPLcloapis=function() {    if (mfplayeri){  mfplayeri.api("stop");  }   }
+mfplayeri.OnEvents("ui",function(){  });
 mfplayeri.OnEvents("init",function(){  
 fcas_lightbox_escutarPrint({
   quandoAparece: function() { 
