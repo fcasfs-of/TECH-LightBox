@@ -700,7 +700,7 @@ lightboxPLclayer_modiuu=function(onh){   if(onh && optiy.onPlayer_Playlist && ty
 start_fs_mpl = {};    fsmodal_createdd = "";    start_fs_postermpl = "";
 function mfplayeridd(){  }
 
-var optincludeplayider = "fcasfs_lightbox_"+num_fsmodal_open;    var optincludeplayer = "";
+var optincludeplayider = "fcasfs_lightbox_"+num_fsmodal_open;    var optincludeplayer = "no";
     if (optiy && optiy.include && optiy.include.player == "yes") {        optincludeplayer = "yes";    }
 var thumsds_efestr = "";       var fsmodal_open_closegi = "";
     if (optiy && optiy.scroll_hide && optiy.scroll_hide == "yes") {        fsmodal_open_closegi = ", '" + optiy.scroll_hide + "'";    }
