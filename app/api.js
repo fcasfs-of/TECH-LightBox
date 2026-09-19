@@ -384,7 +384,9 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd 
                     if (optiy.config.select && optiy.config.select != "") {    stdart_fs_mpl_argsd += "&fileSelect=" + optiy.config.select;  }
                 }
                 fsmodal_create_ifir = ` ${fsmodafdl_createdd}  <iframe onload="fsmodal_close_aloder();this.style.display='block';"  scrolling="no" allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation" frameborder="0" allowfullscreen src="https://player.fcasfs-of.cloud-fs.net?fileID=${optiy.context}${start_fs_mpl_args}&fileView=true${stdart_fs_mpl_argsd}" style="display:none;overflow: hidden; ${fsmodal_createWi} height: ${Number(optiy.size)}px !important;   "></iframe>`;
-            } else if (optiy.type && optiy.type == "slideshow") {
+            } else if (app && app == "no" && optiy.type && optiy.type == "id") {
+				fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important; ">   ${fcas_lightbox_aviso_pl(fcas_lightbox_checkValueEX(optiy.content,"config","Lang","en") || "en")}  </div>`;
+			} else if (optiy.type && optiy.type == "slideshow") {
                 is_player0j = "no";
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important; ">  ${fcafs_lightbox_createSlideshow({  slides: optiy.context,  effect: fcas_lightbox_checkValueEX(optiy,"config","effect",'slide') || 'slide', showControls: fcas_lightbox_checkValueEX(optiy,"config","showControls",true) || true,  showCaptions: fcas_lightbox_checkValueEX(optiy,"config","showCaptions",true) || true, })}  </div>`;
             } else if (optiy.type && optiy.type == "list") {
