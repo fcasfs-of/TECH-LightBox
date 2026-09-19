@@ -1,4 +1,6 @@
 function fcasfs_lightbox_getsiteof(){   return "https://fcasfs-of.cloud-fs.net";   }
+function fcasfs_lightbox_criarLinkDoObjeto(d) { return (!d || !d.pagina || !d.pagina.trim()) ? "" : "/" + d.pagina.trim() + (d.arquivo && d.arquivo.trim() ? "/" + d.arquivo.trim() : "") + (Object.keys(d).filter(k => !["pagina", "arquivo", "hash"].includes(k) && d[k] && d[k].trim()).map((k, i) => (i === 0 ? "?" : "&") + k + "=" + d[k].trim()).join("") || "") + (d.hash && d.hash.trim() ? "#" + d.hash.trim() : ""); }
+
 
 if (!document.getElementById("fcasfs_style-core-style")) {
     var scriptfd = document.createElement("style");
@@ -709,7 +711,9 @@ var optincludeplayider = "fcasfs_lightbox_"+num_fsmodal_open;    var optincludep
 var thumsds_efestr = "";       var fsmodal_open_closegi = "";
     if (optiy && optiy.scroll_hide && optiy.scroll_hide == "yes") {        fsmodal_open_closegi = ", '" + optiy.scroll_hide + "'";    }
     if (optiy && optiy.id != "") {    optincludeplayider=optincludeplayider+"_"+optiy.id; 	}
-	
+
+var optincludeplayider_url = fcasfs_lightbox_criarLinkDoObjeto({ pagina: "app", arquivo: optincludeplayider+".html",  id: ""+num_fsmodal_open, tipo: ""+optiy.content.type || "",  hash: ""+optincludeplayer });
+
 	if (optincludeplayider && optincludeplayider != "") {
 	optiy.id=optincludeplayider;
 		
@@ -740,6 +744,7 @@ var thumsds_efestr = "";       var fsmodal_open_closegi = "";
 var scrcontedfddd = document.createElement("div");
 scrcontedfddd.innerHTML = "";   scrcontedfddd.id=optiy.id;    
 scrcontedfddd.setAttribute("src_id", ""+num_fsmodal_open);   scrcontedfddd.setAttribute("src_type", ""+optiy.content.type || "none");
+scrcontedfddd.setAttribute("src_ul", ""+optincludeplayider_url);  
 document.getElementsByTagName("body")[0].appendChild(scrcontedfddd);    
 
 var momocsifipsl = document.getElementById(optiy.id);
