@@ -380,7 +380,7 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd 
                 } else if (optiy.view && optiy.view == "list") {   start_fs_mpl_args = "&list=on";
                 }
                 if (optiy.config) {
-                    if (optiy.config.pos && optiy.config.pos != "") {   stdart_fs_mpl_argsd += "&pos=" + optiy.config.pos;  }
+                    if (optiy.config.pos && optiy.config.pos != "") {   stdart_fs_mpl_argsd += "&pos=" + convertDurationtoSecondsR(Number(optiy.config.pos))  }
                     if (optiy.config.select && optiy.config.select != "") {    stdart_fs_mpl_argsd += "&fileSelect=" + optiy.config.select;  }
                 }
                 fsmodal_create_ifir = ` ${fsmodafdl_createdd}  <iframe onload="fsmodal_close_aloder();this.style.display='block';"  scrolling="no" allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation" frameborder="0" allowfullscreen src="https://player.fcasfs-of.cloud-fs.net?fileID=${optiy.context}${start_fs_mpl_args}&fileView=true${stdart_fs_mpl_argsd}" style="display:none;overflow: hidden; ${fsmodal_createWi} height: ${Number(optiy.size)}px !important;   "></iframe>`;
