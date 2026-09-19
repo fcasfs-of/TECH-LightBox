@@ -1,3 +1,5 @@
+function fcasfs_lightbox_getsiteof(){   return "https://fcasfs-of.cloud-fs.net";   }
+
 if (!document.getElementById("fcasfs_style-core-style")) {
     var scriptfd = document.createElement("style");
     scriptfd.id = "fcasfs_style-core-style";
@@ -15,21 +17,21 @@ if (!document.getElementById("fcasfs_style-pace-loader")) {
 if (!document.getElementById("fcasfs_script-lightbox-pdf-core")) {
     var scrcodidptwwincfd = document.createElement("script");
     scrcodidptwwincfd.id = "fcasfs_script-lightbox-pdf-core";
-    scrcodidptwwincfd.setAttribute("src", "https://lightbox.fcasfs-of.cloud-fs.net/app/pdf.js");
+    scrcodidptwwincfd.setAttribute("src", fcasfs_lightbox_getsiteof()+"/TECH-LightBox/app/pdf.js");
     document.getElementsByTagName("head")[0].appendChild(scrcodidptwwincfd);
 }
 
 if (!document.getElementById("fcasfs_script-lightbox-core")) {
     var scrcodiptwwincfd = document.createElement("script");
     scrcodiptwwincfd.id = "fcasfs_script-lightbox-core";
-    scrcodiptwwincfd.setAttribute("src", "https://lightbox.fcasfs-of.cloud-fs.net/app/core.js");
+    scrcodiptwwincfd.setAttribute("src", fcasfs_lightbox_getsiteof()+"/TECH-LightBox/app/core.js");
     document.getElementsByTagName("head")[0].appendChild(scrcodiptwwincfd);
 }
 
 if (!document.getElementById("fcasfs_script-player-core")) {
     var scriptwwincfd = document.createElement("script");
     scriptwwincfd.id = "fcasfs_script-player-core";
-    scriptwwincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/core.js");
+    scriptwwincfd.setAttribute("src", fcasfs_lightbox_getsiteof()+"/TECH-Free/app/core.js");
     document.getElementsByTagName("head")[0].appendChild(scriptwwincfd);
 }
 
@@ -383,7 +385,7 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd 
                     if (optiy.config.pos && optiy.config.pos != "") {   stdart_fs_mpl_argsd += "&pos=" + convertDurationtoSecondsR(optiy.config.pos);  }
                     if (optiy.config.select && optiy.config.select != "") {    stdart_fs_mpl_argsd += "&fileSelect=" + optiy.config.select;  }
                 }
-                fsmodal_create_ifir = ` ${fsmodafdl_createdd}  <iframe onload="fsmodal_close_aloder();this.style.display='block';"  scrolling="no" allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation" frameborder="0" allowfullscreen src="https://player.fcasfs-of.cloud-fs.net?fileID=${optiy.context}${start_fs_mpl_args}&fileView=true${stdart_fs_mpl_argsd}" style="display:none;overflow: hidden; ${fsmodal_createWi} height: ${Number(optiy.size)}px !important;   "></iframe>`;
+                fsmodal_create_ifir = ` ${fsmodafdl_createdd}  <iframe onload="fsmodal_close_aloder();this.style.display='block';"  scrolling="no" allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation" frameborder="0" allowfullscreen src="${fcasfs_lightbox_getsiteof()}/TECH-Free?fileID=${optiy.context}${start_fs_mpl_args}&fileView=true${stdart_fs_mpl_argsd}" style="display:none;overflow: hidden; ${fsmodal_createWi} height: ${Number(optiy.size)}px !important;   "></iframe>`;
             } else if (app && app == "no" && optiy.type && optiy.type == "id") {
 				fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important; ">   ${fcas_lightbox_aviso_pl(fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en")}  </div>`;
 			} else if (optiy.type && optiy.type == "slideshow") {
@@ -804,7 +806,7 @@ if(momocsifipsl){   momocsifipsl.setAttribute("player", ""+ optincludeplayer || 
 
     var scriptincfd = document.createElement("script");
     scriptincfd.id = "fcasfs_script-api-player";
-    scriptincfd.setAttribute("src", "https://player.fcasfs-of.cloud-fs.net/app/api.js");
+    scriptincfd.setAttribute("src", fcasfs_lightbox_getsiteof()+"/TECH-Free/app/api.js");
     scriptincfd.setAttribute("onload", 'if (typeof loaded_playerinf === "function"){ loaded_playerinf({}, start_fs_mpl); }   document.getElementById("fcasfs_script-api-player").remove(); ');
 document.getElementsByTagName("body")[0].appendChild(scriptincfd);  
 }
