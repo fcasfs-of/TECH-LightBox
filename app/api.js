@@ -335,6 +335,8 @@ modalElement.remove();
 
 function fcas_lightbox_alternarAmpliacao(el){const img=typeof el==='string'?document.querySelector(el):el;img.style.transform=img.style.transform==="scale(1.5)"?("scale(1)",img.style.zIndex="auto","scale(1)"):("scale(1.5)",img.style.zIndex="9999","scale(1.5)");}
 
+function fcas_lightbox_aviso_pl(idioma){var texto=(idioma==="ingles"||idioma==="en")?"The selected media can only be responsive with the \"TECH Player\" and it is not possible to respond because it was not implemented in LightBox.":"A mídia selecionada só pode ser responsiva com o \"TECH Player\" e não é possível responder porque não foi implementado no LightBox.";return '<style>.fcas_lightbox_avisos{box-sizing:border-box;width:100%!important;padding:20px!important;margin:10px auto!important;background-color:#f8d7da!important;color:#721c24!important;border:1px solid #f5c6cb!important;border-radius:6px!important;font-family:system-ui,-apple-system,sans-serif!important;font-size:16px!important;line-height:1.5!important;display:flex!important;align-items:center!important;gap:15px!important}.fcas_lightbox_avisos svg{width:28px!important;height:28px!important;fill:#721c24!important;flex-shrink:0!important}.fcas_lightbox_avisos span{flex:1!important;word-break:break-word!important}@media(max-width:580px){.fcas_lightbox_avisos{flex-direction:column!important;text-align:center!important;padding:15px!important}}</style><div class="fcas_lightbox_avisos"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg><span>'+texto+'</span></div>';}
+
 var is_player0j= "no";    var fsmodal_clall_menussd = "";    var dcurrent_id = 0;    var is_player0j = "no";    var start_fs_mpl = {};    var fsmodal_createdd = "";    var start_fs_postermpl = "";
 
 function fsmodal_booleanToNumber(value) { return (value === null || value === undefined) ? 0 : (value === true ? 1 : 0); }
@@ -342,7 +344,7 @@ function fsmodal_booleanToNumber(value) { return (value === null || value === un
 function fsmodal_listaFiles(arrayInterno){  var arrayIntfferno=[];
 if(arrayInterno){
 for(var j=0; j<arrayInterno.length; j++){
-arrayIntfferno[j]={id:"pf"+(j+1),title:arrayInterno[j].title || "",file:arrayInterno[j].file || "",poster:arrayInterno[j].poster || ""};
+arrayIntfferno[j]={id:"fcas_lightbox_playerf_"+(j+1),title:arrayInterno[j].title || "",file:arrayInterno[j].file || "",poster:arrayInterno[j].poster || ""};
 }
 }  return arrayIntfferno;  }
 
@@ -505,7 +507,7 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd 
                     autoplay: 0,
                     loop: fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","loop",false)) || 0,
                     lang: fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
-                    plstart: "pf"+ fcas_lightbox_checkValueEX(optiy,"config","select","1") || "1",
+                    plstart: "fcas_lightbox_playerf_"+ fcas_lightbox_checkValueEX(optiy,"config","select","1") || "1",
                     title: optiy.title,
                     file: optiy.context,
                     poster: start_fs_postermpl,
@@ -537,7 +539,7 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd 
                     },
                     id: "preview_pls",
                     customtext: { age: fcas_lightbox_checkValueEX(optiy,"config","txt","") || "" },
-                    plstart: "pf"+ fcas_lightbox_checkValueEX(optiy,"config","select","1") || "1",
+                    plstart: "fcas_lightbox_playerf_"+ fcas_lightbox_checkValueEX(optiy,"config","select","1") || "1",
                     lang: fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
                     nocontrols: fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","nocontrols",false)) || 0,
                     autoplay: 0,
@@ -805,6 +807,7 @@ if(momocsifipsl){   momocsifipsl.setAttribute("player", ""+ optincludeplayer || 
 document.getElementsByTagName("body")[0].appendChild(scriptincfd);  
 }
 
+ if (optincludeplayer === "no" && is_player0j === "yes") {     	 var momocsifiddpsl = document.getElementById("preview_pls");  if (momocsifiddpsl) {    momocsifiddpsl.innerHTML=fcas_lightbox_aviso_pl(fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en");     }    }
  if (optincludeplayer === "yes" && is_player0j === "yes") {   function mfplayeridd(){  if (typeof loaded_playerinf === "function"){ loaded_playerinf({}, start_fs_mpl); }  }     mfplayeridd();	}   
   if(is_player0j === "pdf") {    mfplayeridd();  }
 
