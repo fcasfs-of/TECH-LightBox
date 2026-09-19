@@ -1,5 +1,5 @@
 function fcasfs_lightbox_getsiteof(){   return "https://fcasfs-of.cloud-fs.net";   }
-function fcasfs_lightbox_criarLinkDoObjeto(d) { return (!d || !d.pagina || !d.pagina.trim()) ? "" : "/" + d.pagina.trim() + (d.arquivo && d.arquivo.trim() ? "/" + d.arquivo.trim() : "") + (Object.keys(d).filter(k => !["pagina", "arquivo", "hash"].includes(k) && d[k] && d[k].trim()).map((k, i) => (i === 0 ? "?" : "&") + k + "=" + d[k].trim()).join("") || "") + (d.hash && d.hash.trim() ? "#" + d.hash.trim() : ""); }
+function fcasfs_lightbox_criarLinkDoObjeto(d) { const f = (obj, p = "") => Object.keys(obj).reduce((a, k) => { const n = p ? p + "[" + k + "]" : k; return a.concat(obj[k] && typeof obj[k] === "object" ? f(obj[k], n) : [{ k: n, v: obj[k] }]); }, []); return (!d || !d.pagina || !d.pagina.trim()) ? "" : "/" + encodeURIComponent(d.pagina.trim()) + (d.arquivo && d.arquivo.trim() ? "/" + encodeURIComponent(d.arquivo.trim()) : "") + (f(Object.keys(d).reduce((a, k) => { if (!["pagina", "arquivo", "hash"].includes(k)) a[k] = d[k]; return a; }, {})).filter(x => x.v && String(x.v).trim()).map((x, i) => (i === 0 ? "?" : "&") + encodeURIComponent(x.k) + "=" + encodeURIComponent(String(x.v).trim())).join("") || "") + (d.hash && d.hash.trim() ? "#" + encodeURIComponent(d.hash.trim()) : ""); }
 
 
 if (!document.getElementById("fcasfs_style-core-style")) {
@@ -709,7 +709,7 @@ function mfplayeridd(){  }
 var optincludeplayider = "fcasfs_lightbox_"+num_fsmodal_open;    var optincludeplayer = "no";
     if (optiy && optiy.include && optiy.include.player == "yes") {        optincludeplayer = "yes";    }
 var thumsds_efestr = "";       var fsmodal_open_closegi = "";
-var optincludeplayider_url = fcasfs_lightbox_criarLinkDoObjeto({ pagina: "app", arquivo: "fcasfs_lightbox"+".html", obj: optiy.id || "", install: location.href || "", id: ""+num_fsmodal_open, tipo: ""+optiy.content.type || "",  hash: ""+optincludeplayer });
+var optincludeplayider_url = fcasfs_lightbox_criarLinkDoObjeto({ pagina: "app", arquivo: "fcasfs_lightbox"+".html", obj: { add: optiy.id || "", id: ""+num_fsmodal_open, tipo: ""+optiy.content.type || "" }, install: location.href || "",  hash: ""+optincludeplayer });
 
 	if (optiy && optiy.scroll_hide && optiy.scroll_hide == "yes") {        fsmodal_open_closegi = ", '" + optiy.scroll_hide + "'";    }
     if (optiy && optiy.id != "") {    optincludeplayider=optincludeplayider+"_"+optiy.id; 	}
