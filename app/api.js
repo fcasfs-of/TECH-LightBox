@@ -709,10 +709,10 @@ function mfplayeridd(){  }
 var optincludeplayider = "fcasfs_lightbox_"+num_fsmodal_open;    var optincludeplayer = "no";
     if (optiy && optiy.include && optiy.include.player == "yes") {        optincludeplayer = "yes";    }
 var thumsds_efestr = "";       var fsmodal_open_closegi = "";
-    if (optiy && optiy.scroll_hide && optiy.scroll_hide == "yes") {        fsmodal_open_closegi = ", '" + optiy.scroll_hide + "'";    }
-    if (optiy && optiy.id != "") {    optincludeplayider=optincludeplayider+"_"+optiy.id; 	}
+var optincludeplayider_url = fcasfs_lightbox_criarLinkDoObjeto({ pagina: "app", arquivo: "fcasfs_lightbox"+".html", obj: optiy.id || "", install: location.href || "", id: ""+num_fsmodal_open, tipo: ""+optiy.content.type || "",  hash: ""+optincludeplayer });
 
-var optincludeplayider_url = fcasfs_lightbox_criarLinkDoObjeto({ pagina: "app", arquivo: optincludeplayider+".html",  id: ""+num_fsmodal_open, tipo: ""+optiy.content.type || "",  hash: ""+optincludeplayer });
+	if (optiy && optiy.scroll_hide && optiy.scroll_hide == "yes") {        fsmodal_open_closegi = ", '" + optiy.scroll_hide + "'";    }
+    if (optiy && optiy.id != "") {    optincludeplayider=optincludeplayider+"_"+optiy.id; 	}
 
 	if (optincludeplayider && optincludeplayider != "") {
 	optiy.id=optincludeplayider;
