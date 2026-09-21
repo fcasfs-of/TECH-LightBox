@@ -65,6 +65,16 @@ function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carre
 
 
 var modaisDisponiveis = {
+  'btnFeedback': function() {
+    return {
+      title: "feedback",
+      type: "feedback",
+      context:fucntion(){},
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
   'btnTree': function() {
     return {
       title: "treeview",
@@ -508,7 +518,7 @@ fcas_lightbox_gerarMenu({ lang: "en",
     { nome: "Text & Links", botoes: [{ id: "btnText", texto: "View Text" }, { id: "btnLink", texto: "View Link" }] },
     { nome: "Data", botoes: [{ id: "btnTable", texto: "View Table" }, { id: "btnList", texto: "View List" }] },
     { nome: "Multimedia", botoes: [{ id: "btnPlaylist", texto: "View Playlist" }, { id: "btnAudio", texto: "View Audio" }, { id: "btnVideo", texto: "View Video" }] },
-    { nome: "Interaction", botoes: [{ id: "btnForm", texto: "View Form" }] },
+    { nome: "Interaction", botoes: [{ id: "btnForm", texto: "View Form" }, { id: "btnFeedback", texto: "View Feedback" }] },
     { nome: "Analytics", botoes: [{ id: "btnGrafic", texto: "View Chart" }, { id: "btnDashboard", texto: "View Dashboard" }] },
     { nome: "Documents", botoes: [{ id: "btnPDF", texto: "View PDF" }] },
     { nome: "Location", botoes: [{ id: "btnMap", texto: "View Map" }] },
