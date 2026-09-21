@@ -69,7 +69,7 @@ var modaisDisponiveis = {
     return {
       title: "feedback",
       type: "feedback",
-      context:fucntion(){},
+      context:function(){},
       size: "360",
       includePlayer: "no",
       description: ""
