@@ -331,7 +331,7 @@ if (modalElement) {
 lightboxPLclop_mod=function(){  };
 lightboxPLclayer_mod=function(){   };    lightboxPLclayer_modiuu=function(){};
 lightboxPLclos_mod=function(){  };
-lightboxPLcloapis=function(){  };         feedsfsmodal_create= funtion(){};    
+lightboxPLcloapis=function(){  };         feedsfsmodal_create=function(){};    
 modalElement.innerHTML = "";
 if (hide && hide === "yes") {   document.body.style.overflow = "auto";  }
 modalElement.remove();
@@ -365,9 +365,9 @@ arrayIntfferno[j]={id:"fcas_lightbox_playerf_"+(j+1),title:arrayInterno[j].title
 }
 
 
-var feedsfsmodal_create= funtion(){};
+var feedsfsmodal_create=function(){};
 
-function fsmodal_create(ddd, optiy, app) {    feedsfsmodal_create= funtion(){};     fsmodal_createdd = '';     var fsmodafdl_createdd = '';  
+function fsmodal_create(ddd, optiy, app) {    feedsfsmodal_create=function(){};     fsmodal_createdd = '';     var fsmodafdl_createdd = '';  
 if(ddd && ddd=="yes"){
 fsmodal_createdd = '<div class="loader-container">  <div class="classic-spinner"></div>   </div>';    fsmodafdl_createdd='<div id="fs_lightbox_lader" class="loader-container">  <div class="classic-spinner"></div>   </div>';
 }
@@ -428,8 +428,8 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd 
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_createVirtualCreditCard(optiy.context)}  </div>`;
             } else if (optiy.type && optiy.type == "feedback") {
                 is_player0j = "no";
-				feedsfsmodal_create= funtion(dd){ if (optiy.context && typeof optiy.context === 'function') {  fsmodal_close(optiy.id, optiy.scroll_hide);   optiy.context(dd);    }     };
-                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_lightbox_feedback_niveis(fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",funtion(dd){feedsfsmodal_create(dd)})}  </div>`;
+				feedsfsmodal_create= function(dd){ if (optiy.context && typeof optiy.context === 'function') {  fsmodal_close(optiy.id, optiy.scroll_hide);   optiy.context(dd);    }     };
+                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_lightbox_feedback_niveis(fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",function(dd){feedsfsmodal_create(dd)})}  </div>`;
             } else if (optiy.type && optiy.type == "VirtualCard") {
                 is_player0j = "no";
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_createVirtualCard(optiy.context)}  </div>`;
