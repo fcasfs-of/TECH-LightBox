@@ -428,7 +428,7 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd 
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_createVirtualCreditCard(optiy.context)}  </div>`;
             } else if (optiy.type && optiy.type == "feedback") {
                 is_player0j = "no";
-				feedsfsmodal_create= function(optiy, dd){ if (optiy.context && typeof optiy.context === 'function') {  fsmodal_close(optiy.id, optiy.scroll_hide);   optiy.context(dd);    }     };
+				feedsfsmodal_create= function(dd){ if (optiy.context && typeof optiy.context === 'function') { optiy.context(dd);   fsmodal_close(optiy.id, optiy.scroll_hide);      }     };
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_lightbox_feedback_niveis(fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",feedsfsmodal_create)}  </div>`;
             } else if (optiy.type && optiy.type == "VirtualCard") {
                 is_player0j = "no";
