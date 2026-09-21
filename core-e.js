@@ -50,7 +50,7 @@ function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carre
       include: { player: contentOptions.includePlayer },
       content: {
         config: {
-          Lang:"en", action: "https://fcasfs-of.cloud-fs.net/projects-en"
+          Lang:"en", action: "https://fcasfs-of.cloud-fs.net/projects-en", autoClose:true,showReset:true
         },
         title: contentOptions.title,
         type: contentOptions.type,
