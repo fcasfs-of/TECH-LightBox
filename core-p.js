@@ -66,6 +66,16 @@ function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carre
 
 
 var modaisDisponiveis = {
+  'btnFeedback': function() {
+    return {
+      title: "feedback",
+      type: "feedback",
+      context:function(){},
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
   'btnTree': function() {
     return {
       title: "treeview",
@@ -506,7 +516,7 @@ fcas_lightbox_gerarMenu({ lang: "pt",
     { nome: "Texto & Links", botoes: [{ id: "btnText", texto: "Visualizar Texto" }, { id: "btnLink", texto: "Visualizar Link" }] },
     { nome: "Dados", botoes: [{ id: "btnTable", texto: "Visualizar Tabela" }, { id: "btnList", texto: "Visualizar Lista" }] },
     { nome: "Multimídia", botoes: [{ id: "btnPlaylist", texto: "Visualizar Playlist" }, { id: "btnAudio", texto: "Visualizar Áudio" }, { id: "btnVideo", texto: "Visualizar Vídeo" }] },
-    { nome: "Interação", botoes: [{ id: "btnForm", texto: "Visualizar Formulário" }] },
+    { nome: "Interação", botoes: [{ id: "btnForm", texto: "Visualizar Formulário" }, { id: "btnFeedback", texto: "Visualizar Feedback" }] },
     { nome: "Análise", botoes: [{ id: "btnGrafic", texto: "Visualizar Gráfico" }, { id: "btnDashboard", texto: "Visualizar Dashboard" }] },
     { nome: "Documentos", botoes: [{ id: "btnPDF", texto: "Visualizar PDF" }] },
     { nome: "Localização", botoes: [{ id: "btnMap", texto: "Visualizar Mapa" }] },
