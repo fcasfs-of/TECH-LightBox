@@ -111,6 +111,7 @@ function fcafs_lightboc_mindmap(c){const s={d:c.data||[],col:c.themeColor||'#000
 
 function fcafs_lightboc_contarSZH_HTML(idDaDiv) {    const elemento = document.getElementById(idDaDiv);    return elemento ? elemento.innerHTML.length : 0;   }
 
+
 function fcafs_lightboc_cgerenciarUrlParam(action, key, val) {
   const p = new URLSearchParams(window.location.search);
   
