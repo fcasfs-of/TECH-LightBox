@@ -9,10 +9,22 @@ function fcas_lightbox_gerarMenu(config){if(!config||typeof config!=='object'||!
 
 function dispararCliquesPelaUrl() {
     const urlParams = new URLSearchParams(window.location.search);
+    
     const act = urlParams.get('button') || '';
-    if (act !== '') {        const btn = document.querySelector(`.nav-menu .cat-group button#btn${act}`);        if (btn) btn.click();    }
-    const cat = urlParams.get('cat') || '';
-    if (cat !== '') {        const sidebarItem = document.querySelector(`.fcas-sidebar .fcas-sidebar-item[data-target="${cat}"]`);        if (sidebarItem) sidebarItem.click();    }
+    if (act !== '') {        
+        const btn = document.querySelector(`.nav-menu .cat-group button#btn${act}`);        
+        if (btn) btn.click();    
+    }
+    
+    let cat = urlParams.get('cat') || '';
+    if (cat !== '') {        
+        if (!isNaN(cat) && cat.trim() !== '') {
+            cat = `fcas-grupo-${cat}`;
+        }
+        
+        const sidebarItem = document.querySelector(`.fcas-sidebar .fcas-sidebar-item[data-target="${cat}"]`);        
+        if (sidebarItem) sidebarItem.click();    
+    }
 }
 window.addEventListener('load', dispararCliquesPelaUrl);
 
