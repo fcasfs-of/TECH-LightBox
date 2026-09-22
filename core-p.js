@@ -7,8 +7,26 @@ function fcas_executarFiltroBotoes(nav,searchWrapper,searchInput,searchClear,sea
 function fcas_configurarEventosSidebar(sidebar,searchWrapper,searchInput,searchClear,searchResults,nav){sidebar.addEventListener('click',function(e){const b=e.target.closest('.fcas-sidebar-item');if(!b)return;sidebar.querySelectorAll('.fcas-sidebar-item').forEach(btn=>btn.classList.remove('active'));b.classList.add('active');const t=b.getAttribute('data-target');if(t==='all'){searchWrapper.style.display='flex';fcas_executarFiltroBotoes(nav,searchWrapper,searchInput,searchClear,searchResults,navigator.language.startsWith('pt'),false);}else{searchWrapper.style.display='none';searchInput.value='';searchClear.style.display='none';searchResults.textContent='';searchResults.style.display='none';const oldNo=nav.querySelector('.fcas-no-results');if(oldNo)oldNo.remove();}nav.querySelectorAll('.cat-group').forEach(function(g){const h3=g.querySelector('h3');if(t==='all'){if(h3)h3.style.display='block';}else{if(h3)h3.style.display='none';const exibir=(g.id===t);g.style.display=exibir?'flex':'none';g.querySelectorAll('button').forEach(btn=>btn.style.display='');if(exibir){g.scrollIntoView({behavior:'smooth',block:'start'});}}});});}
 function fcas_lightbox_gerarMenu(config){if(!config||typeof config!=='object'||!config.categorias)return;const nav=document.querySelector('.nav-menu');if(!nav)return;const isPt=(config.lang||navigator.language).startsWith('pt');let sidebar=document.querySelector('.fcas-sidebar');let wrapper=fcas_montarEstruturaHTML(nav,sidebar);sidebar=document.querySelector('.fcas-sidebar');const sw=fcas_criarBarraBusca(wrapper,isPt);fcas_renderizarHTMLMenu(config,isPt,nav,sidebar);const si=sw.querySelector('.fcas-search-input');const sc=sw.querySelector('.fcas-search-clear');const sr=sw.querySelector('.fcas-search-results');si.addEventListener('input',function(){fcas_executarFiltroBotoes(nav,sw,si,sc,sr,isPt,true);});sc.addEventListener('click',function(){si.value='';fcas_executarFiltroBotoes(nav,sw,si,sc,sr,isPt,false);si.focus();});fcas_configurarEventosSidebar(sidebar,sw,si,sc,sr,nav);nav.querySelectorAll('.cat-group').forEach(g=>g.style.display='flex');if(si.value){si.dispatchEvent(new Event('input'));}}
 
-window.addEventListener('load',function(){const act=new URLSearchParams(window.location.search).get('button')||'';if(act!==''){const btn=document.querySelector(`.nav-menu .cat-group button#btn${act}`);if(btn){btn.click();}}});
-
+function dispararCliquesPelaUrl() {
+    const urlParams = new URLSearchParams(window.location.search);
+    
+    const act = urlParams.get('button') || '';
+    if (act !== '') {        
+        const btn = document.querySelector(`.nav-menu .cat-group button#btn${act}`);        
+        if (btn) btn.click();    
+    }
+    
+    let cat = urlParams.get('cat') || '';
+    if (cat !== '') {        
+        if (!isNaN(cat) && cat.trim() !== '') {
+            cat = `fcas-grupo-${cat}`;
+        }
+        
+        const sidebarItem = document.querySelector(`.fcas-sidebar .fcas-sidebar-item[data-target="${cat}"]`);        
+        if (sidebarItem) sidebarItem.click();    
+    }
+}
+window.addEventListener('load', dispararCliquesPelaUrl);
 
 
 let currentTheme = localStorage.getItem("LightBox_theme") || "light";
