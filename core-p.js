@@ -672,7 +672,7 @@ fcasfs_lightbox_config_vincular({
     
   }
 });
-window.addEventListener('load', function(){ dispararCliquesAutomaticos({ parametro: 'config', obterSeletor: function(valor) { if (valor && valor.trim() === 'true') { return '#meuBotaoConfig'; } return ''; } }); });
+window.addEventListener('load', function(){ dispararCliquesAutomaticos([{ parametro: 'config', obterSeletor: function(valor) { if (valor && valor.trim() === 'true') { return '.lbxx-footer-container #meuBotaoConfig'; } return ''; } }]); });
 
 });
 
