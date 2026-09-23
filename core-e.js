@@ -65,11 +65,12 @@ if(currentTheme=="dark"){
 
 
 function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carregar(''+chave);return v!==null?v==='true':(padrao!==undefined?padrao:true)}
+function fcasfs_obter_obterValorPorBooleano(valor, mapeamento) { return !mapeamento ? (valor ? "true" : "false") : (valor ? (mapeamento.seTrue !== undefined ? mapeamento.seTrue : "true") : (mapeamento.seFalse !== undefined ? mapeamento.seFalse : "false")); }
 
   function openModal(contentOptions,obj) {  
     fsmodal_open({
       id: "previ_box",
-      tiptext: text_thnv,
+      tiptext: "",
       scroll_hide: "yes",
       noclose: false,
       remove_efect: fcasfs_obter_booleano("remove_efect", false),
@@ -77,6 +78,7 @@ function fcasfs_obter_booleano(chave, padrao){var v=fcasfs_lightbox_config_carre
       loader: fcasfs_obter_booleano("loader", true),
       click_close: fcasfs_obter_booleano("click_close", false),
       itens: obj,      
+      BG_Blur:fcasfs_obter_obterValorPorBooleano(fcasfs_obter_booleano("bg_blur", true), { seTrue: "8", seFalse: "0" }),  BG_Opacity:fcasfs_obter_obterValorPorBooleano(fcasfs_obter_booleano("bg_opacity", true), { seTrue: "0.9", seFalse: "1" }),
       include: { player: contentOptions.includePlayer },
       content: {
         config: {
