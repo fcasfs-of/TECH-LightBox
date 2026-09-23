@@ -78,10 +78,10 @@ function fcasfs_obter_obterValorPorBooleano(valor, mapeamento) { return !mapeame
       loader: fcasfs_obter_booleano("loader", true),
       click_close: fcasfs_obter_booleano("click_close", false),
       itens: obj,
-      BG_Blur:fcasfs_obter_obterValorPorBooleano(fcasfs_obter_booleano("bg_blur", true), { seTrue: "8", seFalse: "0" }),  BG_Opacity:fcasfs_obter_obterValorPorBooleano(fcasfs_obter_booleano("bg_opacity", true), { seTrue: "0.9", seFalse: "1" }),
       include: { player: contentOptions.includePlayer },
       content: {
         config: {
+          BG_Blur:fcasfs_obter_obterValorPorBooleano(fcasfs_obter_booleano("bg_blur", true), { seTrue: "8", seFalse: "0" }),  BG_Opacity:fcasfs_obter_obterValorPorBooleano(fcasfs_obter_booleano("bg_opacity", true), { seTrue: "0.9", seFalse: "1" }),
           Lang:"pt", action: "https://fcasfs-of.cloud-fs.net/projects-pt", showReset:true
         },
         title: contentOptions.title,
