@@ -579,7 +579,7 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd 
                 };
                 fsmodal_create_ifir = `<div id="preview_pls" style="${fsmodal_createWi}  height:${Number(optiy.size)}px !important;">${fsmodafdl_createdd}</div>`;
             }
-            fsmodal_createdd += `<span class="tlightboc_fcasfs" style="overflow:auto; padding:6px; margin: 0 auto; width:96%; text-align:center; display:block; color:#fff;">${fsmodal_create_ifir} ${fsmodal_create_desci} <br/><br/><br/><br/></span><br/><br/>`;
+            fsmodal_createdd += `<span class="tlightboc_fcasfs" style="overflow:auto; padding:6px; margin: 0 auto;  white-space: normal;   word-break: break-word; width:96%; text-align:center; display:block; color:#fff;">${fsmodal_create_ifir} ${fsmodal_create_desci} <br/><br/><br/><br/></span><br/><br/>`;
         }
         return fsmodal_createdd;
     }
