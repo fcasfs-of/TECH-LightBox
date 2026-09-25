@@ -1,19 +1,16 @@
 
-# TECH-LightBox: English
-  (Text, PDF, Link, SVG, Video, Playlist, Form, Table, List, slideshow, Graphic, Carousel, Contact, Product, map, Image and Audio)<br/><br/>
-  Lightbox is an innovative app that offers an integrated experience for viewing and interacting with PDF, map, Form, Playlist, Contact, Product, text, graphic, links, carousel, list, SVG, images, slideshow, Table, audio, and videos in an intuitive and modern way. With a clean and responsive interface, the app allows users to explore multimedia content efficiently, providing fluid and engaging navigation.
+# ![](https://fcasfs-of.cloud-fs.net/Icon/en.png) TECH-LightBox: English
+[Home Page](https://lightbox.fcasfs-of.cloud-fs.net/en),
+[Documentation](https://lightbox.fcasfs-of.cloud-fs.net/doc-en),
+[Buy Token](https://store.fcasfs-of.cloud-fs.net/?search=lightbox:%20token&id=0001002),
 
 <hr/>
 
-# TECH-LightBox: Português
-  (Texto, PDF, Playlist, Link, SVG, Vídeo, Formulário, Lista, Tabela, Carrossel, slideshow, map, Gráfico, Contato, Produto, Imagem e Áudio)<br/><br/>
-  Lightbox é inovador que oferece uma experiência integrada para visualizar e interagir com textos, map, PDF, Formulário, Contato, Produto, Playlist, gráfico, links, carrossel, lista, SVG, imagens, slideshow, Tabela, áudios e vídeos de forma intuitiva e moderna. Com uma interface limpa e responsiva, o aplicativo permite aos usuários explorar conteúdos multimídia de maneira eficiente, proporcionando uma navegação fluida e envolvente.
+# ![](https://fcasfs-of.cloud-fs.net/Icon/br.png) TECH-LightBox: Português
+[Página Inicial](https://lightbox.fcasfs-of.cloud-fs.net),
+[Documentação](https://lightbox.fcasfs-of.cloud-fs.net/doc),
+[Comprar Token](https://store.fcasfs-of.cloud-fs.net/?search=lightbox:%20token&id=0001002),
 
 <hr/>
-
-
-# TESTE
-[![](https://fcasfs-of.cloud-fs.net/Icon/en.png) English](https://lightbox.fcasfs-of.cloud-fs.net/en) <br/>
-[![](https://fcasfs-of.cloud-fs.net/Icon/br.png) Português](https://lightbox.fcasfs-of.cloud-fs.net)
 
 <br/>
