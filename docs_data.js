@@ -27,6 +27,7 @@ window.getDocData = function(fdd) {
             base: [
                 ['id', 'String com o ID do elemento contêiner onde o modal será inserido.'],
                 ['font', 'String com o nome ou link da fonte.'],
+                ['zoom', 'Se for true, o controle de zoom será exibido no rodapé do lightbox para ampliar ou diminuir o conteúdo.'],
                 ['wait', 'Número (ex: 3000) que define o tempo de espera em milissegundos antes de abrir o LightBox.'],
                 ['isAdult', 'Se for true, o acesso ao conteúdo do modal só é permitido se o usuário comprovar que é maior de idade.'],
                 ['age', 'Se isAdult for true, é obrigatório passar o age em número. O valor deve estar entre os limites de 10 a 92 anos (caso contrário, o padrão será 18 anos).'],
@@ -135,6 +136,7 @@ window.getDocData = function(fdd) {
             base: [
                 ['id', 'String representing the ID of the container element where the modal attaches.'],
                 ['font', 'String the font name or URL.'],
+                ['zoom', 'If true, the zoom control will be displayed in the lightbox footer to zoom in or out of the content.'],
                 ['wait', 'Number (e.g., 3000) that defines the waiting time in milliseconds before opening the LightBox.'],
                 ['isAdult', 'If true, access to the modal content is only allowed if the user proves they are of legal age.'],
                 ['age', 'If isAdult is true, it is mandatory to pass the age as a number. The value must be between the limits of 10 and 92 years old (otherwise, the default will be 18).'],
