@@ -680,6 +680,7 @@ function fcasfs_gerarEstiloLightbox(optiy) {
     return `<style id="fs_modal_${optiy.id}_css_custom">
   ${fcas_lightbox_generateResponsiveFontCSS({ id: "fs_modal_" + optiy.id + ".modal_fs_lightbox", font: optiy.font || "" })}
   ${fcas_lightbox_bloquearPrint("fs_modal_" + optiy.id + "", optiy.noprint || false)}
+  #fs_modal_${optiy.id}.modal_fs_lightbox.teff, #fs_modal_${optiy.id}.modal_fs_lightbox.teff * {    transition: all ${optiy.duration_efect || "0.2"}s linear !important;   }
    #fs_modal_${optiy.id}.modal_fs_lightbox, #fs_modal_${optiy.id}.modal_fs_lightbox * { -webkit-print-color-adjust: exact !important;        print-color-adjust: exact !important;        color-adjust: exact !important;     }
     .modal_fs_lightbox .classic-spinner{  border-top:6px solid #${fcas_lightbox_checkValueEX(optiy.content, "config", "colorIcon", "fff") || "fff"} !important;  -webkit-animation:girarSpinner 0.5s linear infinite;animation:girarSpinner 0.5s linear infinite;  }
     #fs_modal_${optiy.id}.modal_fs_lightbox.customstyle_${optiy.id} .menulight_scrollmenu {       background-color: ${fcasfs_lightbox_converterHexParaRgba(fcasfs_lightbox_ajustarHex(fcas_lightbox_checkValueEX(optiy.content, "config", "BG_Color", "111") || "111"), "1", false)};    border: 1px solid #ccc;  }
@@ -757,7 +758,7 @@ var optincludeplayider_url = fcasfs_lightbox_criarLinkDoObjeto({ pagina: "app", 
         var close_fsmofla_strdd = true;
         var close_fsmofla_str = `<div style="margin-left:4px;" class="ssclose" onclick="fsmodal_close('${optiy.id}'${fsmodal_open_closegi});" ${fsmodal_open_tipf}><span class="icon"></span></div>`;
         if (optiy.noclose && optiy.noclose === true) {           close_fsmofla_str = "";            close_fsmofla_strdd = false;        }
-        var close_fsmofla_efestr = " eff";        var btnys_fsmofla_efestr = "";
+        var close_fsmofla_efestr = " eff teff";        var btnys_fsmofla_efestr = "";
         if (optiy.remove_efect && optiy.remove_efect === true) {            close_fsmofla_efestr = " reff";        }
         if (optiy.itens && optiy.menu === true) {
             if (fsmodal_call_menu(optiy.itens) === true) {
