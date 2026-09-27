@@ -680,7 +680,6 @@ function playerfs_osf_evensdef(eventsList, lang = "pt", plobf,timf,kk){    if(pl
 
 function fcasfs_gerarEstiloLightbox(optiy) {
     return `<style id="fs_modal_${optiy.id}_css_custom"> 
- ${fcas_lightboxd_pegarestylevialist(optiy.ClassNames || [], "#fs_modal_" + optiy.id + ".modal_fs_lightbox")} 
   ${fcas_lightbox_generateResponsiveFontCSS({ id: "fs_modal_" + optiy.id + ".modal_fs_lightbox", font: optiy.font || "" })} 
   ${fcas_lightbox_bloquearPrint("fs_modal_" + optiy.id + "", optiy.noprint || false)} 
   #fs_modal_${optiy.id}.modal_fs_lightbox.teff, #fs_modal_${optiy.id}.modal_fs_lightbox.teff * {    transition: all ${optiy.duration_efect || "0.2"}s linear !important;   }
