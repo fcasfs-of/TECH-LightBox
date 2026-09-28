@@ -104,7 +104,7 @@ var modaisDisponiveis = {
     return {
       title: "coupon",
       type: "coupon",
-      context:{ codigo: "PROMO15", desconto: "15% OFF", validade: "31/12/2026", link: "https://lightbox.fcasfs-of.cloud-fs.net/en" },
+      context:[{ codigo: "PROMO15", desconto: "15% OFF", validade: "31/12/2026", link: "https://lightbox.fcasfs-of.cloud-fs.net/en" }],
       size: "360",
       includePlayer: "no",
       description: ""
@@ -160,7 +160,7 @@ var modaisDisponiveis = {
       description: ""
     };
   },
-    'btnTestimonials': function() {
+    'btnLeaderboard': function() {
     return {
       title: "leaderboard",
       type: "leaderboard",
@@ -655,18 +655,18 @@ const fcasfs_ligh_cate_icons = {
 fcas_lightbox_gerarMenu({ lang: "pt", 
   categorias: [
     { nome: "Mídia Visual", botoes: [{ id: "btnImage", texto: "Visualizar Imagem" }, { id: "btnSVG", texto: "Visualizar SVG" }] },
-    {"nome": "Publicação", "botoes": [{ "id": "btnBlogPost", "texto": "Visualizar Post de Blog" }] },
-    { nome: "Galeria", botoes: [{ id: "btnSlideshow", texto: "Visualizar Slideshow" }, { id: "btnCarrossel", texto: "Visualizar Carrossel" }, { "id": "btnTimeline", "texto": "Visualizar Linha do tempo" }] },
+    {"nome": "Publicação", "botoes": [{ id: "btnFAQ", texto: "Visualizar FAQ" }, { id: "btnBanner", texto: "Visualizar Banner" }, { "id": "btnBlogPost", "texto": "Visualizar Post de Blog" }] },
+    { nome: "Galeria", botoes: [{ id: "btnGallery", texto: "Visualizar Galeria" }, { id: "btnSlideshow", texto: "Visualizar Slideshow" }, { id: "btnCarrossel", texto: "Visualizar Carrossel" }, { "id": "btnTimeline", "texto": "Visualizar Linha do tempo" }] },
     { nome: "Texto & Links", botoes: [{ id: "btnText", texto: "Visualizar Texto" }, { id: "btnLink", texto: "Visualizar Link" }] },
     { nome: "Dados", botoes: [{ id: "btnTable", texto: "Visualizar Tabela" }, { id: "btnList", texto: "Visualizar Lista" }] },
     { nome: "Multimídia", botoes: [{ id: "btnPlaylist", texto: "Visualizar Playlist" }, { id: "btnAudio", texto: "Visualizar Áudio" }, { id: "btnVideo", texto: "Visualizar Vídeo" }] },
-    { nome: "Interação", botoes: [{ id: "btnForm", texto: "Visualizar Formulário" }, { id: "btnFeedback", texto: "Visualizar Feedback" }] },
+    { nome: "Interação", botoes: [{ id: "btnTestimonials", texto: "Visualizar Depoimentos" }, { id: "btnChat", texto: "Visualizar Chat" }, { id: "btnReview", texto: "Visualizar Avaliação" }, { id: "btnForm", texto: "Visualizar Formulário" }, { id: "btnFeedback", texto: "Visualizar Feedback" }] },
     { nome: "Análise", botoes: [{ id: "btnGrafic", texto: "Visualizar Gráfico" }, { id: "btnDashboard", texto: "Visualizar Dashboard" }] },
     { nome: "Documentos", botoes: [{ id: "btnPDF", texto: "Visualizar PDF" }] },
     { nome: "Localização", botoes: [{ id: "btnMap", texto: "Visualizar Mapa" }] },
-    { "nome": "Navegação & Estrutura", "botoes": [ { "id": "btnTree", "texto": "Visualizar Árvore de Arquivos" }, { "id": "btnMindmap", "texto": "Visualizar Mapa Mental" } ] },
-    { "nome": "Utilitários & Dinâmicos", "botoes": [{ "id": "btnProfile", "texto": "Visualizar Perfil" }, { "id": "btnRaffle", "texto": "Visualizar Sorteio" }, { "id": "btnParticipants", "texto": "Visualizar Participantes" }, { "id": "btnCalendar", "texto": "Visualizar Calendário" }, { "id": "btnAd", "texto": "Visualizar Anúncio" }, { "id": "btn3DText", "texto": "Visualizar Texto 3D" }] },
-    { nome: "Negócios", botoes: [{ id: "btnContact", texto: "Visualizar Contato" }, { id: "btnProduct", texto: "Visualizar Produto" }, { id: "btnPricePlan", texto: "Visualizar Plano de Preços" }, { "id": "btnVirtualCard", "texto": "Visualizar Cartão Virtual" }, { "id": "btnVCC", "texto": "Visualizar Cartão de Crédito" }] }
+    { "nome": "Navegação & Estrutura", "botoes": [{ id: "btnSearchBar", texto: "Visualizar Barra de Pesquisa" }, { "id": "btnTree", "texto": "Visualizar Árvore de Arquivos" }, { "id": "btnMindmap", "texto": "Visualizar Mapa Mental" } ] },
+    { "nome": "Utilitários & Dinâmicos", "botoes": [{ id: "btnLeaderboard", texto: "Visualizar Classificação" }, { "id": "btnProfile", "texto": "Visualizar Perfil" }, { "id": "btnRaffle", "texto": "Visualizar Sorteio" }, { "id": "btnParticipants", "texto": "Visualizar Participantes" }, { "id": "btnCalendar", "texto": "Visualizar Calendário" }, { "id": "btnAd", "texto": "Visualizar Anúncio" }, { "id": "btn3DText", "texto": "Visualizar Texto 3D" }] },
+    { nome: "Negócios", botoes: [{ id: "btnCoupon", texto: "Visualizar Cupom" }, { id: "btnContact", texto: "Visualizar Contato" }, { id: "btnProduct", texto: "Visualizar Produto" }, { id: "btnPricePlan", texto: "Visualizar Plano de Preços" }, { "id": "btnVirtualCard", "texto": "Visualizar Cartão Virtual" }, { "id": "btnVCC", "texto": "Visualizar Cartão de Crédito" }] }
   ]
 });
 
