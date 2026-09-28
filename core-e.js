@@ -103,7 +103,7 @@ var modaisDisponiveis = {
     return {
       title: "coupon",
       type: "coupon",
-      context:{ codigo: "PROMO15", desconto: "15% OFF", validade: "31/12/2026", link: "https://lightbox.fcasfs-of.cloud-fs.net/en" },
+      context:[{ codigo: "PROMO15", desconto: "15% OFF", validade: "31/12/2026", link: "https://lightbox.fcasfs-of.cloud-fs.net/en" }],
       size: "360",
       includePlayer: "no",
       description: ""
@@ -159,7 +159,7 @@ var modaisDisponiveis = {
       description: ""
     };
   },
-    'btnTestimonials': function() {
+    'btnLeaderboard': function() {
     return {
       title: "leaderboard",
       type: "leaderboard",
