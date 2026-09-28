@@ -1,4 +1,4 @@
-const listaComponentes_formsts = ["list", "table", "playlist", "carrossel", "form", "map", "slideshow", "grafico", "pdf", "link", "texto", "image", "svg", "contact", "product", "dashboard", "audio", "video", "PList", "timeline", "BlogCard", "plans", "3DText", "Ad", "VirtualCard", "VirtualCreditCard", "Profile", "Sorteio", "Participants", "Calendar", "treeview", "mindmap", "feedback"];
+const listaComponentes_formsts = ["list", "table", "playlist", "carrossel", "form", "map", "slideshow", "grafico", "pdf", "link", "texto", "image", "svg", "contact", "product", "dashboard", "audio", "video", "PList", "timeline", "BlogCard", "plans", "3DText", "Ad", "VirtualCard", "VirtualCreditCard", "Profile", "Sorteio", "Participants", "Calendar", "treeview", "mindmap", "feedback", "searchbar", "review", "coupon", "banner", "faq", "testimonials", "gallery", "chat", "leaderboard"];
 
 function fcas_lightbox_generarListaSuportados(opcoes) { if (!opcoes) { return ""; } var lista = opcoes.lista; var separador = opcoes.separador; var ordemAlfabetica = opcoes.ordemAlfabetica; if (!lista || !Array.isArray(lista) || lista.length === 0) { return ""; } if (separador === undefined || separador === null || separador === "") { separador = ", "; } else if (String(separador).slice(-1) !== " ") { separador = separador + " "; } var listaFinal = lista.slice(); if (ordemAlfabetica) { listaFinal.sort(function(a, b) { return String(a).localeCompare(String(b)); }); } return listaFinal.join(separador); }
 function fcas_lightbox_verificarTexto(texto) { return (texto && texto.trim() !== "") ? texto : ""; }
@@ -93,6 +93,15 @@ window.getDocData = function(fdd) {
                 ['contact', 'Suporta chaves de dados de contato.'],
                 ['product', 'Suporta chaves de dados do produto.'],
                 ['map', 'Suporta chaves de dados do mapa.'],
+                ['searchbar', 'Processa uma lista contendo blocos de dados configurados com as chaves (placeholder, botao_texto e itens).'],
+                ['review', 'Processa uma lista contendo blocos de dados configurados com as chaves (autor, estrelas, comentario e data).'],
+                ['gallery', 'Processa uma lista contendo blocos de dados configurados com as chaves (url, legenda e alt).'],
+                ['coupon', 'Processa uma lista contendo blocos de dados configurados com as chaves (codigo, desconto, validade e link).'],
+                ['leaderboard', 'Processa uma lista contendo blocos de dados configurados com as chaves (posicao, nome, pontuacao e foto).'],
+                ['chat', 'Processa uma lista contendo blocos de dados configurados com as chaves (usuario, mensagem, hora e alinhar).'],
+                ['banner', 'Processa uma lista contendo blocos de dados configurados com as chaves (titulo, subtitulo, imagem e link).'],
+                ['faq', 'Processa uma lista contendo blocos de dados configurados com as chaves (pergunta e resposta).'],
+                ['testimonials', 'Processa uma lista contendo blocos de dados configurados com as chaves (nome, depoimento e foto).'],
                 ['feedback', 'Recebe uma função de callback. Esse callback informará a nota que o usuário selecionou.'],
                 ['treeview', 'Aceita um objeto de configuração com as seguintes propriedades: data (Objeto - estrutura de dados da árvore), themeColor (String - cor principal do texto e dos ícones), style (String - propriedades CSS extras para os itens), fontSize (String - tamanho da fonte do texto), marginLeft (String - recuo lateral para a hierarquia dos filhos), padding (String - espaçamento interno ao redor de cada item), iconSize (String - tamanho do ícone de seta), tgSize (String - tamanho do triângulo da seta), tgPath (String - o caminho/desenho SVG da seta), allOpen (Booleano - se for true, força toda a árvore a já iniciar aberta) e showValues (Booleano - se for true, mostra os valores finais ao lado do nome).'],
                 ['mindmap', 'Aceita um objeto de configuração com as seguintes propriedades: data (Array - lista de caminhos de texto estruturados por barras \'/\'), themeColor (String - cor principal das bordas e das linhas conectoras), style (String - regras adicionais de CSS para customizar os balões), fontSize (String - tamanho da fonte do texto), marginLeft (String - comprimento das linhas horizontais que conectam os nós) e padding (String - espaçamento interno de cada balão do mapa).'],
@@ -203,6 +212,15 @@ window.getDocData = function(fdd) {
                 ['contact', 'Supports contact data keys.'],
                 ['product', 'Supports product data keys.'],
                 ['map', 'Supports mapa data keys.'],
+                ['testimonials', 'Processes a data list containing blocks configured with the keys (nome, depoimento and foto).'],
+                ['faq', 'Processes a data list containing blocks configured with the keys (pergunta and resposta).'],
+                ['banner', 'Processes a data list containing blocks configured with the keys (titulo, subtitulo, imagem and link).'],
+                ['chat', 'Processes a data list containing blocks configured with the keys (usuario, mensagem, hora and alinhar).'],
+                ['leaderboard', 'Processes a data list containing blocks configured with the keys (posicao, nome, pontuacao and foto).'],
+                ['coupon', 'Processes a data list containing blocks configured with the keys (codigo, desconto, validade and link).'],
+                ['gallery', 'Processes a data list containing blocks configured with the keys (url, legenda and alt).'],
+                ['review', 'Processes a data list containing blocks configured with the keys (autor, estrelas, comentario and data).'],
+                ['searchbar', 'Processes a data list containing blocks configured with the keys (placeholder, botao_texto and itens).'],
                 ['feedback', 'Receives a callback function. This callback will report the rating selected by the user.'],
                 ['treeview', 'Accepts a configuration object with the following properties: data (Object - tree data structure), themeColor (String - main text and icon color), style (String - extra CSS properties for items), fontSize (String - text font size), marginLeft (String - lateral indent for children hierarchy), padding (String - inner spacing around each item), iconSize (String - size of the arrow icon), tgSize (String - size of the arrow triangle), tgPath (String - the SVG path/drawing of the arrow), allOpen (Booleano - if set to true, it forces the entire tree to start in an expanded state) and showValues (Boolean - if true, shows final values next to the name).'],
                 ['mindmap', 'Accepts a configuration object with the following properties: data (Array - list of text paths structured with forward slashes \'/\'), themeColor (String - main color for borders and connector lines), style (String - additional CSS rules to customize the nodes), fontSize (String - text font size), marginLeft (String - length of the horizontal lines connecting the nodes) and padding (String - inner spacing for each mind map balloon).'],
