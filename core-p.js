@@ -100,6 +100,116 @@ function fcasfs_obter_obterValorPorBooleano(valor, mapeamento) { return !mapeame
 
 
 var modaisDisponiveis = {
+  'btnCoupon': function() {
+    return {
+      title: "coupon",
+      type: "coupon",
+      context:{ codigo: "PROMO15", desconto: "15% OFF", validade: "31/12/2026", link: "https://lightbox.fcasfs-of.cloud-fs.net/en" },
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+  'btnTestimonials': function() {
+    return {
+      title: "testimonials",
+      type: "testimonials",
+      context:[
+    { nome: "Carlos Silva", depoimento: "A caixa de luz superou todas as expectativas, muito leve!", foto: " " },
+    { nome: "Ana Costa", depoimento: "Design responsivo impecável, tanto no PC quanto no celular.", foto: " " }
+],
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+  'btnFAQ': function() {
+    return {
+      title: "faq",
+      type: "faq",
+      context:[
+    { pergunta: "Qual LightBox é gratuito?", resposta: "SIM." },
+    { pergunta: "É possível remover a marca d'água?", resposta: "SIM." }
+],
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+ 'btnSearchBar': function() {
+    return {
+      title: "searchbar",
+      type: "searchbar",
+      context:[
+    { placeholder: "Pesquisar itens...", botao_texto: "Pesquisar", itens: ["LightBox","FCASFS-OF"] }
+],
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+    'btnReview': function() {
+    return {
+      title: "review",
+      type: "review",
+      context:[
+    { autor: "FCAS", estrelas: 4, comentario: "Excelente qualidade de código; muito rápido e direto!", data: "28/09/2026" }
+],
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+    'btnTestimonials': function() {
+    return {
+      title: "leaderboard",
+      type: "leaderboard",
+      context:[
+    { posicao: 1, nome: "FCASFS-OF", pontuacao: "500 pts", foto: "https://lightbox.fcasfs-of.cloud-fs.net/favicon.png" },
+    { posicao: 2, nome: "LightBox", pontuacao: "2.000 pts", foto: "https://lightbox.fcasfs-of.cloud-fs.net/favicon.png" },
+],
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+    'btnBanner': function() {
+    return {
+      title: "banner",
+      type: "banner",
+      context:[
+    { titulo: "Nova versão", subtitulo: "Venha experimentar.", imagem: "https://lightbox.fcasfs-of.cloud-fs.net/favicon.png", link: "https://lightbox.fcasfs-of.cloud-fs.net/" }
+],
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  }, 
+    'btnGallery': function() {
+    return {
+      title: "gallery",
+      type: "gallery",
+      context:[
+    { url: "https://lightbox.fcasfs-of.cloud-fs.net/favicon.png", legenda: "Logo", alt: "Logo" }
+],
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+    'btnChat': function() {
+    return {
+      title: "chat",
+      type: "chat",
+      context:[
+    { usuario: "Suporte", mensagem: "Olá! Como posso te ajudar hoje?", hora: "10:00", alinhar: "left" },
+    { usuario: "Você", mensagem: "Gostei do componente; ele ficou muito leve e rápido.", hora: "10:01", alinhar: "right" }
+],
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
   'btnFeedback': function() {
     return {
       title: "feedback",
