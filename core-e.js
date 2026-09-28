@@ -657,18 +657,18 @@ const fcasfs_ligh_cate_icons = {
 fcas_lightbox_gerarMenu({ lang: "en", 
   categorias: [
     { nome: "Visual Media", botoes: [{ id: "btnImage", texto: "View Image" }, { id: "btnSVG", texto: "View SVG" }] },
-    {"nome": "Publication", "botoes": [{ "id": "btnBlogPost", "texto": "View Blog Post" }] },
-    { nome: "Gallery", botoes: [{ id: "btnSlideshow", texto: "View Slideshow" }, { id: "btnCarrossel", texto: "View Carousel" }, { "id": "btnTimeline", "texto": "View Timeline" }] },
+    {"nome": "Publication", "botoes": [{ id: "btnFAQ", texto: "View FAQ" }, { id: "btnBanner", texto: "View Banner" }, { "id": "btnBlogPost", "texto": "View Blog Post" }] },
+    { nome: "Gallery", botoes: [{ id: "btnGallery", texto: "View Gallery" }, { id: "btnSlideshow", texto: "View Slideshow" }, { id: "btnCarrossel", texto: "View Carousel" }, { "id": "btnTimeline", "texto": "View Timeline" }] },
     { nome: "Text & Links", botoes: [{ id: "btnText", texto: "View Text" }, { id: "btnLink", texto: "View Link" }] },
     { nome: "Data", botoes: [{ id: "btnTable", texto: "View Table" }, { id: "btnList", texto: "View List" }] },
     { nome: "Multimedia", botoes: [{ id: "btnPlaylist", texto: "View Playlist" }, { id: "btnAudio", texto: "View Audio" }, { id: "btnVideo", texto: "View Video" }] },
-    { nome: "Interaction", botoes: [{ id: "btnForm", texto: "View Form" }, { id: "btnFeedback", texto: "View Feedback" }] },
+    { nome: "Interaction", botoes: [{ id: "btnTestimonials", texto: "View Testimonials" }, { id: "btnChat", texto: "View Chat" }, { id: "btnReview", texto: "View Reviews" }, { id: "btnForm", texto: "View Form" }, { id: "btnFeedback", texto: "View Feedback" }] },
     { nome: "Analytics", botoes: [{ id: "btnGrafic", texto: "View Chart" }, { id: "btnDashboard", texto: "View Dashboard" }] },
     { nome: "Documents", botoes: [{ id: "btnPDF", texto: "View PDF" }] },
     { nome: "Location", botoes: [{ id: "btnMap", texto: "View Map" }] },
-    { "nome": "Navigation & Structure", "botoes": [ { "id": "btnTree", "texto": "View File Tree" }, { "id": "btnMindmap", "texto": "View Mind Map" } ] },
-    { "nome": "Utility-focused & Dynamic", "botoes": [{ "id": "btnProfile", "texto": "View Profile" }, { "id": "btnRaffle", "texto": "View Draw" }, { "id": "btnParticipants", "texto": "View Participants" }, { "id": "btnCalendar", "texto": "View Calendar" }, { "id": "btnAd", "texto": "View Ad" }, { "id": "btn3DText", "texto": "View 3D Text" }] },
-    { nome: "Business", botoes: [{ id: "btnContact", texto: "View Contact" }, { id: "btnProduct", texto: "View Product" }, { id: "btnPricePlan", texto: "View Pricing Plan" },  { "id": "btnVirtualCard", "texto": "View Virtual Card" }, { "id": "btnVCC", "texto": "View Credit Card" }] }
+    { "nome": "Navigation & Structure", "botoes": [{ id: "btnSearchBar", texto: "View Search Bar" }, { "id": "btnTree", "texto": "View File Tree" }, { "id": "btnMindmap", "texto": "View Mind Map" } ] },
+    { "nome": "Utility-focused & Dynamic", "botoes": [{ id: "btnLeaderboard", texto: "View Ranking" }, { "id": "btnProfile", "texto": "View Profile" }, { "id": "btnRaffle", "texto": "View Draw" }, { "id": "btnParticipants", "texto": "View Participants" }, { "id": "btnCalendar", "texto": "View Calendar" }, { "id": "btnAd", "texto": "View Ad" }, { "id": "btn3DText", "texto": "View 3D Text" }] },
+    { nome: "Business", botoes: [{ id: "btnCoupon", texto: "View Coupon" }, { id: "btnContact", texto: "View Contact" }, { id: "btnProduct", texto: "View Product" }, { id: "btnPricePlan", texto: "View Pricing Plan" },  { "id": "btnVirtualCard", "texto": "View Virtual Card" }, { "id": "btnVCC", "texto": "View Credit Card" }] }
   ]
 });
 
