@@ -74,6 +74,7 @@ window.getDocData = function(fdd) {
                 ['Configuração para tipo: "slideshow"', 'Suporta as chaves de estilização direta: effect ("slide", "fade", "zoom", "cube"), showControls (boolean), showCaptions (boolean).'],
                 ['Configuração para tipos: "audio", "video" e "PList"', 'Suporta a parametrização completa de players de mídia: colorText, colorIcon, OSD_Pos, pos_time (strings), OSD_Lang ("pt"/"en"), OSD_Theme ("light"/"dark"), volume (número decimal), OSD_Time (número em ms), OSD, autoplay, mute, contextmenu, nocontrols (booleanos). Se OSD for true, suporta a propriedade OSD_Events (opcional) que aceita uma lista/array contendo eventos como: "subtitle", "quality", "audiotrack", "exitfullscreen", "fullscreen", "end", "finish", "volume", "seek", "userseek", "unmute", "mute", "pause", "stop", "play", "speed", "previous", "next".'],
                 ['Configuração Exclusiva para tipo: "PList"', 'Suporta adicionalmente a propriedade: select (string contendo apenas o número do item ativo da lista de reprodução).'],
+['Configuração Exclusiva para tipo: "video"', 'Suporta adicionalmente a propriedade: stretch (boolean).'],
                 ['Configuração para tipo: "form"', 'Suporta o controle de validação e envio: method: (GET, POST, PUT, DELETE, PATCH), action (string), submitText, resetText (string), showReset (boolean), onsubmit (string, Nome da função de callback).']
             ],
             context: [
@@ -193,6 +194,7 @@ window.getDocData = function(fdd) {
                 ['Configuration for type: "slideshow"', 'Properties: effect ("slide", "fade", "zoom", "cube"), showControls (boolean), showCaptions (boolean).'],
                 ['Configuration for types: "audio", "video" and "PList"', 'Properties: colorText, colorIcon, OSD_Pos, pos_time (strings), OSD_Lang ("pt"/"en"), OSD_Theme ("light"/"dark"), volume (float), OSD_Time (number in ms), OSD, autoplay, mute, contextmenu, nocontrols (booleans). If OSD is true, it supports the OSD_Events (optional) property which maps an array collection tracking media events like: "subtitle", "quality", "audiotrack", "exitfullscreen", "fullscreen", "end", "finish", "volume", "seek", "userseek", "unmute", "mute", "pause", "stop", "play", "speed", "previous", "next".'],
                 ['Exclusive Configuration for type: "PList"', 'Properties: select (string tracking sequential track execution option array index number).'],
+['Exclusive Configuration for type: "video"', 'Properties: stretch (boolean).'],
                 ['Configuration for type: "form"', 'Supports validation and submission control: method: (GET, POST, PUT, DELETE, PATCH), action (string), submitText, resetText (string), showReset (boolean), onsubmit (string, Name of the callback function).']
             ],
             context: [
