@@ -868,7 +868,7 @@ addultlightboxPLclayer_modiuu_call(fcaslightconetxndif_isnort);
 
 lightboxPLclop_mod({ title:""+optiy.content.title || "", tipo:""+optiy.content.type || "none" }); 
 
-if (optiy.btnTop && optiy.btnTop===true){      fcasfs_lightbox_scrolltop_btn({targetId: "fs_modal_"+optiy.id+"_content", scrollDistance: 250 });      }
+if (optiy.btnTop && optiy.btnTop===true){      fcasfs_lightbox_scrolltop_btn({targetId: "fs_modal_"+optiy.id+"_content", scrollDistance: 120 });      }
 	
 if (optiy.isTemporary && optiy.isTemporary===true){      
 	fcasfs_lightbox_executarTempo({ callback: function(ff){  fsmodal_close(ff.ii, ff.dd);  }, wait: convertDurationtoSecondsR(optiy.duration || "10:00")*1000 }, { ii:optiy.id, dd: optiy.scroll_hide });
