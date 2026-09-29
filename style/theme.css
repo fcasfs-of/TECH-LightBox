@@ -526,13 +526,25 @@ header .dname .icon::before {     pointer-events: none;   user-select: none;  }
   padding: 14px; 
   border-radius: 10px;
   transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
 }
-
 #meuBotaoConfig:hover { 
   background-color: var(--btn-cfg-bg-hover); 
   color: var(--btn-cfg-text-hover); 
   border-color: var(--btn-cfg-border-hover); 
 }
+#meuBotaoConfig svg {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  flex-shrink: 0;
+  transition: fill 0.3s ease;
+}
+
 
 
 
