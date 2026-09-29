@@ -584,6 +584,7 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd 
                     customtext: { age: fcas_lightbox_checkValueEX(optiy,"config","txt","") || "" },
                     nocontrols: fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","nocontrols",false)) || 0,
                     autoplay: 0,
+stretch:fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","stretch",false)) || 0,
                     loop: fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","loop",false)) || 0,
                     lang: fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
                     plstart: "fcas_lightbox_playerf_"+ fcas_lightbox_checkValueEX(optiy,"config","select","1") || "1",
@@ -622,6 +623,7 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd 
                     lang: fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
                     nocontrols: fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","nocontrols",false)) || 0,
                     autoplay: 0,
+stretch:fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","stretch",false)) || 0,
                     loop: fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","loop",false)) || 0,
                     title: optiy.title,
                     file: start_is_player0j,
@@ -741,6 +743,10 @@ lightboxPLclos=function(){  if(dstart_fs_mpl.id && dstart_fs_mpl.id!="" && docum
 lightboxPLcloapis=function() {    if (mfplayeri){  mfplayeri.api("stop");  }   }
 mfplayeri.OnEvents("ui",function(){  });
 mfplayeri.OnEvents("init",function(){  
+if(dstart_fs_mpl.config.stretch && dstart_fs_mpl.config.stretch=="1"){  mfplayeri.api('stretch',1);      }
+
+if(dstart_fs_mpl.config.autoplay && dstart_fs_mpl.config.autoplay=="1"){  mfplayeri.api('play');      }
+
 fcas_lightbox_escutarPrint({
   quandoAparece: function() { 
 if (mfplayeri){     mfplayeri.api("pause");  }  
@@ -756,7 +762,6 @@ mfplayeri.api("volume", Number(stringno_valtext(dstart_fs_mpl.config.volume,"1")
 if(dstart_fs_mpl.config.mute && dstart_fs_mpl.config.mute=="1"){  mfplayeri.api('mute');      }
 
 });
-if(dstart_fs_mpl.config.autoplay && dstart_fs_mpl.config.autoplay=="1"){  mfplayeri.api('play');      }
 }
 if(dstart_fs_mpl.OSD==true){   playerfs_osf_evensdef(dstart_fs_mpl.config.OSD_Events || [], dstart_fs_mpl.config.OSD_Lang || "en", mfplayeri, dstart_fs_mpl.config.osd.duration || 3e3, dstart_fs_mpl.config.OSD_Pos || "top-center");    }
 
