@@ -74,6 +74,7 @@ function fcasfs_obter_obterValorPorBooleano(valor, mapeamento) { return !mapeame
       scroll_hide: "yes",
       noclose: false,
       remove_efect: fcasfs_obter_booleano("remove_efect", false),
+      btnTop: fcasfs_obter_booleano("btn_top", false),
       zoom: fcasfs_obter_booleano("zoom", false),
       menu: fcasfs_obter_booleano("menu", true),
       loader: fcasfs_obter_booleano("loader", true),
