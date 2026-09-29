@@ -743,9 +743,9 @@ lightboxPLclos=function(){  if(dstart_fs_mpl.id && dstart_fs_mpl.id!="" && docum
 lightboxPLcloapis=function() {    if (mfplayeri){  mfplayeri.api("stop");  }   }
 mfplayeri.OnEvents("ui",function(){  });
 mfplayeri.OnEvents("init",function(){  
-if(dstart_fs_mpl.config.stretch && dstart_fs_mpl.config.stretch=="1"){  mfplayeri.api('stretch',1);      }
+if(dstart_fs_mpl.stretch && dstart_fs_mpl.stretch=="1"){  mfplayeri.api('stretch',1);      }
 
-if(dstart_fs_mpl.config.autoplay && dstart_fs_mpl.config.autoplay=="1"){  mfplayeri.api('play');      }
+if(dstart_fs_mpl.config.autoplay && dstart_fs_mpl.config.autoplay=="1"){     }
 
 fcas_lightbox_escutarPrint({
   quandoAparece: function() { 
