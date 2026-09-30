@@ -557,7 +557,8 @@ header .dname .icon::before {     pointer-events: none;   user-select: none;  }
 
     .lbxx nav .cat-group button {  background-color: #333; color: #fff !important;  border-color: #111;   }
     .lbxx nav .cat-group button:hover { background-color: #111;  }
-
+    .dark .lbxx nav .cat-group button {  background-color: #111; color: #fff !important;  border-color: #111;   }
+    .dark .lbxx nav .cat-group button:hover { background-color: #333;  }
 
     .lbxx nav::-webkit-scrollbar-thumb { background: #475569; }
     .lbxx nav .button {  color: #fff !important;   }
