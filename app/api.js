@@ -2,8 +2,8 @@ function fcasfs_lightbox_getsiteof(){   return "https://fcasfs-of.cloud-fs.net";
 function fcasfs_lightbox_criarLinkDoObjeto(d) { if (!d || !d.pagina || !d.pagina.trim()) return ""; var f = function(obj, p) { p = p || ""; var res = []; for (var k in obj) { if (obj.hasOwnProperty(k)) { var n = p ? p + "." + k : k; if (obj[k] && typeof obj[k] === "object") { res = res.concat(f(obj[k], n)); } else { res.push({ k: n, v: obj[k] }); } } } return res; }; var url = "/" + d.pagina.trim(); if (d.arquivo && d.arquivo.trim()) url += "/" + d.arquivo.trim(); var filtro = {}; for (var k in d) { if (["pagina", "arquivo", "hash"].indexOf(k) === -1) filtro[k] = d[k]; } var itens = f(filtro); var params = []; for (var i = 0; i < itens.length; i++) { var item = itens[i]; if (item.v && String(item.v).trim()) { var strV = String(item.v).trim(); var isLnk = strV.indexOf("http://") === 0 || strV.indexOf("https://") === 0; params.push(item.k + "=" + (isLnk ? encodeURIComponent(strV) : strV)); } } if (params.length > 0) url += "?" + params.join("&"); if (d.hash && d.hash.trim()) url += "#" + d.hash.trim(); return url; }
 
 function fcasfs_lightbox_def_injetarEstilo(config) { if (config && config.id && config.css && config.id.trim() !== "" && config.css.trim() !== "" && !document.getElementById(config.id.trim())) { var el = document.createElement("style"); el.id = config.id.trim(); el.innerHTML = config.css.trim(); (document.head || document.getElementsByTagName("head")[0] || document.documentElement).appendChild(el); } }
-function fcasfs_lightbox_def_injetarScript(config) { if (config && config.id && config.src && config.id.trim() !== "" && config.src.trim() !== "" && !document.getElementById(config.id.trim())) { var el = document.createElement("script"); el.id = config.id.trim(); el.src = config.src.trim(); if (config.onload && config.onload.trim() !== "") el.setAttribute("onload", config.onload.trim()); (document.head || document.getElementsByTagName("head") || document.documentElement).appendChild(el); } }
-function fcasfs_lightbox_def_injetarScriptBody(config) { if (config && config.id && config.src && config.id.trim() !== "" && config.src.trim() !== "" && !document.getElementById(config.id.trim())) { var el = document.createElement("script"); el.id = config.id.trim(); el.src = config.src.trim(); if (config.onload) el.setAttribute("onload", config.onload); (document.body || document.getElementsByTagName("body")[0] || document.documentElement).appendChild(el); } }
+function fcasfs_lightbox_def_injetarScript(config) { if (config && config.id && config.src && config.id.trim() !== "" && config.src.trim() !== "" && !document.getElementById(config.id.trim())) { var el = document.createElement("script"); el.id = config.id.trim(); el.src = config.src.trim(); if (config.onload && config.onload.trim() !== "") el.setAttribute("onload", config.onload.replaceAll("[id]", el.id).replaceAll("[ID]", el.id)); (document.head || document.getElementsByTagName("head") || document.documentElement).appendChild(el); } }
+function fcasfs_lightbox_def_injetarScriptBody(config) { if (config && config.id && config.src && config.id.trim() !== "" && config.src.trim() !== "" && !document.getElementById(config.id.trim())) { var el = document.createElement("script"); el.id = config.id.trim(); el.src = config.src.trim(); if (config.onload && config.onload.trim() !== "") el.setAttribute("onload", config.onload.replaceAll("[id]", el.id).replaceAll("[ID]", el.id)); (document.body || document.getElementsByTagName("body")[0] || document.documentElement).appendChild(el); } }
 
 var fcasfs_lightbox_baseUrl = fcasfs_lightbox_getsiteof();
 
@@ -18,11 +18,11 @@ fcasfs_lightbox_def_injetarEstilo({
 });
 
 
-fcasfs_lightbox_def_injetarScript({ id: "fcasfs_script-lightbox-pdf-core", src: fcasfs_lightbox_baseUrl + "/TECH-LightBox/app/pdf.js", onload: 'document.getElementById("fcasfs_script-lightbox-pdf-core").remove();' });
-fcasfs_lightbox_def_injetarScript({ id: "fcasfs_script-lightbox-core", src: fcasfs_lightbox_baseUrl + "/TECH-LightBox/app/core.js" });
-fcasfs_lightbox_def_injetarScript({ id: "fcasfs_script-player-core", src: fcasfs_lightbox_baseUrl + "/TECH-Free/app/core.js", onload: 'document.getElementById("fcasfs_script-player-core").remove();'});
-fcasfs_lightbox_def_injetarScript({ id: "fcasfs_script-lightbox-src_basic-core", src: fcasfs_lightbox_baseUrl + "/TECH-LightBox/app/src_basic.js", onload: 'document.getElementById("fcasfs_script-lightbox-src_basic-core").remove();' });
-fcasfs_lightbox_def_injetarScript({ id: "fcasfs_script-lightbox-src_plus-core", src: fcasfs_lightbox_baseUrl + "/TECH-LightBox/app/src_plus.js", onload: 'document.getElementById("fcasfs_script-lightbox-src_plus-core").remove();' });
+fcasfs_lightbox_def_injetarScript({ id: "fcasfs_script-lightbox-pdf-core", src: fcasfs_lightbox_baseUrl + "/TECH-LightBox/app/pdf.js", onload: 'document.getElementById("[ID]").remove();' });
+fcasfs_lightbox_def_injetarScript({ id: "fcasfs_script-lightbox-core", src: fcasfs_lightbox_baseUrl + "/TECH-LightBox/app/core.js", onload: 'document.getElementById("[ID]").remove();' });
+fcasfs_lightbox_def_injetarScript({ id: "fcasfs_script-player-core", src: fcasfs_lightbox_baseUrl + "/TECH-Free/app/core.js", onload: 'document.getElementById("[ID]").remove();'});
+fcasfs_lightbox_def_injetarScript({ id: "fcasfs_script-lightbox-src_basic-core", src: fcasfs_lightbox_baseUrl + "/TECH-LightBox/app/src_basic.js", onload: 'document.getElementById("[ID]").remove();' });
+fcasfs_lightbox_def_injetarScript({ id: "fcasfs_script-lightbox-src_plus-core", src: fcasfs_lightbox_baseUrl + "/TECH-LightBox/app/src_plus.js", onload: 'document.getElementById("[ID]").remove();' });
 
 
 
@@ -594,7 +594,7 @@ if(momocsifipsl){   momocsifipsl.setAttribute("player", ""+ optincludeplayer || 
 fcasfs_lightbox_def_injetarScriptBody({
     id: "fcasfs_script-api-player",
     src: fcasfs_lightbox_baseUrl + "/TECH-Free/app/api.js",
-    onload: 'if (typeof loaded_playerinf === "function"){ loaded_playerinf({}, start_fs_mpl); }   document.getElementById("fcasfs_script-api-player").remove();  '
+    onload: 'if (typeof loaded_playerinf === "function"){ loaded_playerinf({}, start_fs_mpl); }   document.getElementById("[ID]").remove();  '
 });
 
 }
