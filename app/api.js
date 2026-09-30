@@ -149,6 +149,8 @@ function fsmodal_close(id, hide) {
     if (id && id !== "") {   lightboxPLclos_mowaud=function(){};   lightboxPLclayer_zoommodiuu=function(){};    lightboxPLclayer_adultmodiuu=function(){};   lightboxPLclayer_adfffultmodiuu=function(){};    adultlightboxPLclayer_modiuu=function(){};
 if(lightboxPLcloapis){  lightboxPLcloapis();  }	
 
+var botaotopscrr = document.querySelector('.fcas_lightbox_scroll-top-btn');    if (botaotopscrr) {   botaotopscrr.remove();    }
+
 if(lightboxPLclos){  lightboxPLclos();  }
 if(lightboxPLclos_mod){  lightboxPLclos_mod();  }
 		
