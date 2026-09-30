@@ -410,7 +410,7 @@ arrayIntfferno[j]={id:"fcas_lightbox_playerf_"+(j+1),title:arrayInterno[j].title
 
 var feedsfsmodal_create=function(){};
 
-function fsmodal_create(ddd, optiy, app) {      fsmodal_createdd = '';     var fsmodafdl_createdd = '';  
+function fsmodal_create(ddd, optiy, app, klf) {      fsmodal_createdd = '';     var fsmodafdl_createdd = '';  
 if(ddd && ddd=="yes"){
 fsmodal_createdd = '<div class="loader-container">  <div class="classic-spinner"></div>   </div>';    fsmodafdl_createdd='<div id="fs_lightbox_lader" class="loader-container">  <div class="classic-spinner"></div>   </div>';
 }
@@ -501,7 +501,7 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd 
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_gallery(optiy.context, fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en")}  </div>`;
             } else if (optiy.type && optiy.type == "coupon") {
                 is_player0j = "no";
-                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_coupon(optiy.context, fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en","fs_modal_"+optiy.id+"_cxav")}  </div>`;
+                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_coupon(optiy.context, fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en","fs_modal_"+klf+"_cxav")}  </div>`;
             } else if (optiy.type && optiy.type == "review") {
                 is_player0j = "no";
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_review(optiy.context, fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en")}  </div>`;
@@ -839,7 +839,7 @@ momocsifipsl.innerHTML='';
 lightboxPLclayer_adfffultmodiuu=function(){   lightboxPLclayer_adultmodiuu("no");   };
 adultlightboxPLclayer_modiuu=function(){  lightboxPLclayer_adultmodiuu("yes");    addultlightboxPLclayer_modiuu_call(fcaslightconetxndif);   adultlightboxPLclayer_modiuu_call();   };
 
-var fcaslightconetxndif=fsmodal_create(momocsifipsl_chd, optiy.content, optiy.include ? optiy.include.player : "");
+var fcaslightconetxndif=fsmodal_create(momocsifipsl_chd, optiy.content, optiy.include ? optiy.include.player : "", optiy.id);
 //var fcaslightconetxndiflink=fcas_lightbox_gerarTexto([fcas_lightbox_extrairTextoObjeto(optiy)]);
 
 var fcaslightconetxndif_isnort=fcaslightconetxndif;   var fcaslightconetxndif_isntempfort="";
