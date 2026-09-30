@@ -616,8 +616,10 @@ if (optiy.scroll_hide && optiy.scroll_hide == "yes") {    document.body.style.ov
 }
 
 
-function fsmodal_open(optiy){  
+function fsmodal_open(optiy){  var feedsfsmodal_create_runa=function(){
 lightboxPLclos_mowaud=function(dd){   if(optiy.onWait && typeof optiy.onWait === 'function'){   optiy.onWait(dd);  }  };	
-fcasfs_lightbox_executarAposTempo({ callback: fcas_lightbox_fsmodal_open, wait: optiy.wait || "" }, optiy);   }
+fcasfs_lightbox_executarAposTempo({ callback: fcas_lightbox_fsmodal_open, wait: optiy.wait || "" }, optiy);    };  
+feedsfsmodal_create_runa();
+return { close: feedsfsmodal_create, open: feedsfsmodal_create_runa  };   }
 
 
