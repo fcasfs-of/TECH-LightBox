@@ -18,11 +18,11 @@ fcasfs_lightbox_def_injetarEstilo({
 });
 
 
-injetarScript({ id: "fcasfs_script-lightbox-pdf-core", src: fcasfs_lightbox_baseUrl + "/TECH-LightBox/app/pdf.js" });
-injetarScript({ id: "fcasfs_script-lightbox-core", src: fcasfs_lightbox_baseUrl + "/TECH-LightBox/app/core.js" });
-injetarScript({ id: "fcasfs_script-player-core", src: fcasfs_lightbox_baseUrl + "/TECH-Free/app/core.js" });
-injetarScript({ id: "fcasfs_script-lightbox-src_basic-core", src: fcasfs_lightbox_baseUrl + "/TECH-LightBox/app/src_basic.js" });
-injetarScript({ id: "fcasfs_script-lightbox-src_plus-core", src: fcasfs_lightbox_baseUrl + "/TECH-LightBox/app/src_plus.js" });
+fcasfs_lightbox_def_injetarScript({ id: "fcasfs_script-lightbox-pdf-core", src: fcasfs_lightbox_baseUrl + "/TECH-LightBox/app/pdf.js" });
+fcasfs_lightbox_def_injetarScript({ id: "fcasfs_script-lightbox-core", src: fcasfs_lightbox_baseUrl + "/TECH-LightBox/app/core.js" });
+fcasfs_lightbox_def_injetarScript({ id: "fcasfs_script-player-core", src: fcasfs_lightbox_baseUrl + "/TECH-Free/app/core.js" });
+fcasfs_lightbox_def_injetarScript({ id: "fcasfs_script-lightbox-src_basic-core", src: fcasfs_lightbox_baseUrl + "/TECH-LightBox/app/src_basic.js" });
+fcasfs_lightbox_def_injetarScript({ id: "fcasfs_script-lightbox-src_plus-core", src: fcasfs_lightbox_baseUrl + "/TECH-LightBox/app/src_plus.js" });
 
 
 
