@@ -1,4 +1,4 @@
-const listaComponentes_formsts = ["list", "table", "playlist", "carrossel", "form", "map", "slideshow", "grafico", "pdf", "link", "texto", "image", "svg", "contact", "product", "dashboard", "audio", "video", "PList", "timeline", "BlogCard", "plans", "3DText", "Ad", "VirtualCard", "VirtualCreditCard", "Profile", "Sorteio", "Participants", "Calendar", "treeview", "mindmap", "feedback", "searchbar", "review", "coupon", "banner", "faq", "testimonials", "gallery", "chat", "leaderboard"];
+const listaComponentes_formsts = ["list", "table", "playlist", "carrossel", "form", "map", "slideshow", "grafico", "pdf", "link", "texto", "image", "svg", "contact", "product", "dashboard", "audio", "video", "PList", "timeline", "BlogCard", "plans", "3DText", "Ad", "VirtualCard", "VirtualCreditCard", "Profile", "Sorteio", "Participants", "Calendar", "treeview", "mindmap", "feedback", "searchbar", "review", "coupon", "banner", "faq", "testimonials", "gallery", "chat", "leaderboard", "agenda"];
 
 function fcas_lightbox_generarListaSuportados(opcoes) { if (!opcoes) { return ""; } var lista = opcoes.lista; var separador = opcoes.separador; var ordemAlfabetica = opcoes.ordemAlfabetica; if (!lista || !Array.isArray(lista) || lista.length === 0) { return ""; } if (separador === undefined || separador === null || separador === "") { separador = ", "; } else if (String(separador).slice(-1) !== " ") { separador = separador + " "; } var listaFinal = lista.slice(); if (ordemAlfabetica) { listaFinal.sort(function(a, b) { return String(a).localeCompare(String(b)); }); } return listaFinal.join(separador); }
 function fcas_lightbox_verificarTexto(texto) { return (texto && texto.trim() !== "") ? texto : ""; }
@@ -75,7 +75,7 @@ window.getDocData = function(fdd) {
                 ['Configuração para tipo: "slideshow"', 'Suporta as chaves de estilização direta: effect ("slide", "fade", "zoom", "cube"), showControls (boolean), showCaptions (boolean).'],
                 ['Configuração para tipos: "audio", "video" e "PList"', 'Suporta a parametrização completa de players de mídia: colorText, colorIcon, OSD_Pos, pos_time (strings), OSD_Lang ("pt"/"en"), OSD_Theme ("light"/"dark"), volume (número decimal), OSD_Time (número em ms), OSD, autoplay, mute, contextmenu, nocontrols (booleanos). Se OSD for true, suporta a propriedade OSD_Events (opcional) que aceita uma lista/array contendo eventos como: "subtitle", "quality", "audiotrack", "exitfullscreen", "fullscreen", "end", "finish", "volume", "seek", "userseek", "unmute", "mute", "pause", "stop", "play", "speed", "previous", "next".'],
                 ['Configuração Exclusiva para tipo: "PList"', 'Suporta adicionalmente a propriedade: select (string contendo apenas o número do item ativo da lista de reprodução).'],
-['Configuração Exclusiva para tipo: "video"', 'Suporta adicionalmente a propriedade: stretch (boolean).'],
+                ['Configuração Exclusiva para tipo: "video"', 'Suporta adicionalmente a propriedade: stretch (boolean).'],
                 ['Configuração para tipo: "form"', 'Suporta o controle de validação e envio: method: (GET, POST, PUT, DELETE, PATCH), action (string), submitText, resetText (string), showReset (boolean), onsubmit (string, Nome da função de callback).']
             ],
             context: [
@@ -95,6 +95,7 @@ window.getDocData = function(fdd) {
                 ['contact', 'Suporta chaves de dados de contato.'],
                 ['product', 'Suporta chaves de dados do produto.'],
                 ['map', 'Suporta chaves de dados do mapa.'],
+                ['agenda', 'Suporta chaves corPrimaria (String, ex: "#4f46e5"), corSecundaria (String, ex: "#10b981"), ano (Number/String, ex: 2026), mes (Number/String, ex: 10), data (String YYYY-MM-DD, ex: "2026-10-01"), actual (Boolean, ex: true), eventos (Object, ex: {"2026-10-01":["Reunião"]}).'],
                 ['searchbar', 'Processa uma lista contendo blocos de dados configurados com as chaves (placeholder, botao_texto e itens).'],
                 ['review', 'Processa uma lista contendo blocos de dados configurados com as chaves (autor, estrelas, comentario e data).'],
                 ['gallery', 'Processa uma lista contendo blocos de dados configurados com as chaves (url, legenda e alt).'],
@@ -196,7 +197,7 @@ window.getDocData = function(fdd) {
                 ['Configuration for type: "slideshow"', 'Properties: effect ("slide", "fade", "zoom", "cube"), showControls (boolean), showCaptions (boolean).'],
                 ['Configuration for types: "audio", "video" and "PList"', 'Properties: colorText, colorIcon, OSD_Pos, pos_time (strings), OSD_Lang ("pt"/"en"), OSD_Theme ("light"/"dark"), volume (float), OSD_Time (number in ms), OSD, autoplay, mute, contextmenu, nocontrols (booleans). If OSD is true, it supports the OSD_Events (optional) property which maps an array collection tracking media events like: "subtitle", "quality", "audiotrack", "exitfullscreen", "fullscreen", "end", "finish", "volume", "seek", "userseek", "unmute", "mute", "pause", "stop", "play", "speed", "previous", "next".'],
                 ['Exclusive Configuration for type: "PList"', 'Properties: select (string tracking sequential track execution option array index number).'],
-['Exclusive Configuration for type: "video"', 'Properties: stretch (boolean).'],
+                ['Exclusive Configuration for type: "video"', 'Properties: stretch (boolean).'],
                 ['Configuration for type: "form"', 'Supports validation and submission control: method: (GET, POST, PUT, DELETE, PATCH), action (string), submitText, resetText (string), showReset (boolean), onsubmit (string, Name of the callback function).']
             ],
             context: [
@@ -216,6 +217,7 @@ window.getDocData = function(fdd) {
                 ['contact', 'Supports contact data keys.'],
                 ['product', 'Supports product data keys.'],
                 ['map', 'Supports mapa data keys.'],
+                ['agenda', 'Supports keys corPrimaria (String, e.g., "#4f46e5"), corSecundaria (String, e.g., "#10b981"), ano (Number/String, e.g., 2026), mes (Number/String, e.g., 10), data (String YYYY-MM-DD, e.g., "2026-10-01"), actual (Boolean, e.g., true), eventos (Object, e.g., {"2026-10-01":["Meeting"]}).'],
                 ['testimonials', 'Processes a data list containing blocks configured with the keys (nome, depoimento and foto).'],
                 ['faq', 'Processes a data list containing blocks configured with the keys (pergunta and resposta).'],
                 ['banner', 'Processes a data list containing blocks configured with the keys (titulo, subtitulo, imagem and link).'],
