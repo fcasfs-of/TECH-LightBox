@@ -40,9 +40,9 @@ function fcas_lightboc_Pdf(idioma, linkPdf, pg, idElemento) {
     let paginaAtual = 1;
     let totalPaginas = 0;
     const container = document.createElement('div');
-    container.style.cssText = 'position:relative;width:100%;max-width:900px;margin:0 auto;background:#f5f5f5;border-radius:8px;overflow:hidden;box-shadow:0 44px 12px rgba(0,0,0,0.15);';
+    container.style.cssText = 'position:relative;width:100%;margin:0 auto;background:#f5f5f5;border-radius:8px;overflow:hidden;box-shadow:0 44px 12px rgba(0,0,0,0.15);';
     const areaPdf = document.createElement('div');
-    areaPdf.style.cssText = 'width:100%;min-height:400px;display:flex;justify-content:center;align-items:center;background:#fff;padding:10px;box-sizing:border-box;';
+    areaPdf.style.cssText = 'width:100%;display:flex;justify-content:center;align-items:center;background:#fff;padding:10px;box-sizing:border-box;';
     const imgPdf = document.createElement('img');
     imgPdf.style.cssText = 'pointer-events:none; max-width:100%;height:auto;display:block;box-shadow:0 2px 8px rgba(0,0,0,0.1);';
     areaPdf.appendChild(imgPdf);
