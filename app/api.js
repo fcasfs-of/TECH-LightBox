@@ -236,6 +236,9 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd 
             } else if (optiy.type && optiy.type == "agenda") {
                 is_player0j = "no";
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_lightbox_criarAgenda(optiy.context, fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en")}  </div>`;
+            } else if (optiy.type && optiy.type == "fichas") {
+                is_player0j = "no";
+                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_lightbox_criarFichas(optiy.context, fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en")}  </div>`;
             } else if (optiy.type && optiy.type == "VirtualCard") {
                 is_player0j = "no";
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_createVirtualCard(optiy.context)}  </div>`;
