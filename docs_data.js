@@ -61,7 +61,7 @@ window.getDocData = function(fdd) {
             ],
             types: [
                 ['Configuração para tipo: "texto"', 'Suporta as chaves de estilização direta: italic, negrito, upper, lower (booleanos), fontSize (número), color (string), textAlign (center,right,left,justify).'],
-                ['Configuração para tipo: "list"', 'Suporta as chaves de formatatação estrutural: posicao (direita,esquerda), alinhamento (center,right,left,justify), tema, marcador (strings), arredondado (número), divisor (booleano).'],
+                ['Configuração para tipo: "list"', 'Suporta as chaves de formatatação estrutural: posicao (direita,esquerda), alinhamento (center,right,left,justify), tema, marcador (strings), arredondado (número), divisor (booleano), a_z (Parâmetro do tipo Boolean que ativa a organização da lista em ordem alfabética de A a Z).'],
                 ['Configuração para tipo: "table"', 'Suporta as chaves de layout tabular: showIndex, zebra, headerBold (booleanos), align (center,right,left,justify), headerAlign (center,right,left,justify), model (string com chaves de colunas separadas por vírgula).'],
                 ['Configuração para tipo: "playlist"', 'Suporta as chaves de controle de faixas: tema (string), exibirIndex (booleano).'],
                 ['Configuração para tipo: "carrossel"', 'Suporta as chaves de controle do slider de mídia: tema (dark,light), transicao (slide,fade), posicaoDots (bottom), estiloDots (bolas,linhas,barras), intervalo (número), exibirControles, exibirDots, autoPlay (booleanos).'],
@@ -182,7 +182,7 @@ window.getDocData = function(fdd) {
             ],
             types: [
                 ['Configuration for type: "texto"', 'Properties: italic, negrito, upper, lower (booleans), fontSize (number), color (string), textAlign (center,right,left,justify).'],
-                ['Configuration for type: "list"', 'Properties: posicao (direita,esquerda), alinhamento (center,right,left,justify), tema, marcador (strings), arredondado (number), divisor (boolean).'],
+                ['Configuration for type: "list"', 'Properties: posicao (direita,esquerda), alinhamento (center,right,left,justify), tema, marcador (strings), arredondado (number), divisor (boolean), a_z (Parameter of type Boolean that enables list organization in alphabetical order from A to Z).'],
                 ['Configuration for type: "table"', 'Properties: showIndex, zebra, headerBold (booleans), align (center,right,left,justify), headerAlign (center,right,left,justify), model (comma-separated column target string).'],
                 ['Configuration for type: "playlist"', 'Properties: tema (string), exibirIndex (boolean).'],
                 ['Configuration for type: "carrossel"', 'Properties: tema (dark,light), transicao (slide,fade), posicaoDots (bottom), estiloDots (bolas,linhas,barras), intervalo (number), exibirControles, exibirDots, autoPlay (booleans).'],
