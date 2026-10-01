@@ -101,7 +101,17 @@ function fcasfs_obter_obterValorPorBooleano(valor, mapeamento) { return !mapeame
 
 
 var modaisDisponiveis = {
-  'btnFichas': function() {
+  'btnTasks': function() {
+    return {
+      title: "tarefas",
+      type: "tarefas",
+      context:{ tituloComponente: "", corPrimaria: "#111", corSecundaria: "#333", tarefas: [ { texto: "LightBox: Atualização", concluido: false } ] },
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+   'btnFichas': function() {
     return {
       title: "fichas",
       type: "fichas",
@@ -679,7 +689,7 @@ fcas_lightbox_gerarMenu({ lang: "pt",
     {"nome": "Publicação", "botoes": [{ id: "btnFAQ", texto: "Visualizar FAQ" }, { id: "btnBanner", texto: "Visualizar Banner" }, { "id": "btnBlogPost", "texto": "Visualizar Post de Blog" }] },
     { nome: "Galeria", botoes: [{ id: "btnGallery", texto: "Visualizar Galeria" }, { id: "btnSlideshow", texto: "Visualizar Slideshow" }, { id: "btnCarrossel", texto: "Visualizar Carrossel" }, { "id": "btnTimeline", "texto": "Visualizar Linha do tempo" }] },
     { nome: "Texto & Links", botoes: [{ id: "btnText", texto: "Visualizar Texto" }, { id: "btnLink", texto: "Visualizar Link" }] },
-    { nome: "Dados", botoes: [{ id: "btnTable", texto: "Visualizar Tabela" }, { id: "btnList", texto: "Visualizar Lista" }, { id: "btnFichas", texto: "Visualizar Fichas" }] },
+    { nome: "Dados", botoes: [{ id: "btnTable", texto: "Visualizar Tabela" }, { id: "btnList", texto: "Visualizar Lista" }, { id: "btnFichas", texto: "Visualizar Fichas" }, { id: "btnTasks", texto: "Visualizar Tarefas" }] },
     { nome: "Multimídia", botoes: [{ id: "btnPlaylist", texto: "Visualizar Playlist" }, { id: "btnAudio", texto: "Visualizar Áudio" }, { id: "btnVideo", texto: "Visualizar Vídeo" }] },
     { nome: "Interação", botoes: [{ id: "btnTestimonials", texto: "Visualizar Depoimentos" }, { id: "btnChat", texto: "Visualizar Chat" }, { id: "btnReview", texto: "Visualizar Avaliação" }, { id: "btnForm", texto: "Visualizar Formulário" }, { id: "btnFeedback", texto: "Visualizar Feedback" }] },
     { nome: "Análise", botoes: [{ id: "btnGrafic", texto: "Visualizar Gráfico" }, { id: "btnDashboard", texto: "Visualizar Dashboard" }] },
