@@ -101,6 +101,16 @@ function fcasfs_obter_obterValorPorBooleano(valor, mapeamento) { return !mapeame
 
 
 var modaisDisponiveis = {
+  'btnChangelog': function() {
+    return {
+      title: "changelog",
+      type: "changelog",
+      context:{ tituloComponente: "", corPrimaria: "#0f172a", divisor: true, versoes: { "2.0.1.4": { data: "01/10/2026", logs: [ { tipo: "melhoria", texto: "Melhorias de Desempenho e Otimização." } ] }  } },
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
   'btnHistory': function() {
     return {
       title: "historico",
@@ -696,7 +706,7 @@ const fcasfs_ligh_cate_icons = {
 fcas_lightbox_gerarMenu({ lang: "pt", 
   categorias: [
     { nome: "Mídia Visual", botoes: [{ id: "btnImage", texto: "Visualizar Imagem" }, { id: "btnSVG", texto: "Visualizar SVG" }] },
-    {"nome": "Publicação", "botoes": [{ id: "btnFAQ", texto: "Visualizar FAQ" }, { id: "btnBanner", texto: "Visualizar Banner" }, { "id": "btnBlogPost", "texto": "Visualizar Post de Blog" }] },
+    {"nome": "Publicação", "botoes": [{ id: "btnFAQ", texto: "Visualizar FAQ" }, { id: "btnBanner", texto: "Visualizar Banner" }, { "id": "btnBlogPost", "texto": "Visualizar Post de Blog" }, { id: "btnChangelog", texto: "Visualizar Notas de Atualização" }] },
     { nome: "Galeria", botoes: [{ id: "btnGallery", texto: "Visualizar Galeria" }, { id: "btnSlideshow", texto: "Visualizar Slideshow" }, { id: "btnCarrossel", texto: "Visualizar Carrossel" }, { "id": "btnTimeline", "texto": "Visualizar Linha do tempo" }] },
     { nome: "Texto & Links", botoes: [{ id: "btnText", texto: "Visualizar Texto" }, { id: "btnLink", texto: "Visualizar Link" }] },
     { nome: "Dados", botoes: [{ id: "btnTable", texto: "Visualizar Tabela" }, { id: "btnList", texto: "Visualizar Lista" }, { id: "btnFichas", texto: "Visualizar Fichas" }, { id: "btnTasks", texto: "Visualizar Tarefas" }, { id: "btnHistory", texto: "Visualizar Histórico" }] },
