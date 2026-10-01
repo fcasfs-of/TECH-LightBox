@@ -104,7 +104,7 @@ var modaisDisponiveis = {
     return {
       title: "fichas",
       type: "fichas",
-      context:{ tituloComponente: "Instruções Técnicas", corPrimaria: "#0284c7",corSecundaria: "#ef4444",actual: true, selecionadaInicial: "FCASFS-OF", marcadores: [], fichas: { "FCASFS-OF": ["LightBox"] }  },
+      context:{ tituloComponente: "Technical Instructions", corPrimaria: "#0284c7",corSecundaria: "#ef4444",actual: true, selecionadaInicial: "FCASFS-OF", marcadores: [], fichas: { "FCASFS-OF": ["LightBox"] }  },
       size: "360",
       includePlayer: "no",
       description: ""
