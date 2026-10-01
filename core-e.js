@@ -100,6 +100,16 @@ function fcasfs_obter_obterValorPorBooleano(valor, mapeamento) { return !mapeame
 
 
 var modaisDisponiveis = {
+  'btnAgenda': function() {
+    return {
+      title: "agenda",
+      type: "agenda",
+      context:{  corPrimaria: '#0284c7', actual:true, ano:2026, mes:11, eventos: { '2026-11-01': ['Update'] }  },
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
   'btnCoupon': function() {
     return {
       title: "coupon",
@@ -668,7 +678,7 @@ fcas_lightbox_gerarMenu({ lang: "en",
     { nome: "Documents", botoes: [{ id: "btnPDF", texto: "View PDF" }] },
     { nome: "Location", botoes: [{ id: "btnMap", texto: "View Map" }] },
     { "nome": "Navigation & Structure", "botoes": [{ id: "btnSearchBar", texto: "View Search Bar" }, { "id": "btnTree", "texto": "View File Tree" }, { "id": "btnMindmap", "texto": "View Mind Map" } ] },
-    { "nome": "Utility-focused & Dynamic", "botoes": [{ id: "btnLeaderboard", texto: "View Ranking" }, { "id": "btnProfile", "texto": "View Profile" }, { "id": "btnRaffle", "texto": "View Draw" }, { "id": "btnParticipants", "texto": "View Participants" }, { "id": "btnCalendar", "texto": "View Calendar" }, { "id": "btnAd", "texto": "View Ad" }, { "id": "btn3DText", "texto": "View 3D Text" }] },
+    { "nome": "Utility-focused & Dynamic", "botoes": [{ id: "btnAgenda", texto: "View Agenda" }, { id: "btnLeaderboard", texto: "View Ranking" }, { "id": "btnProfile", "texto": "View Profile" }, { "id": "btnRaffle", "texto": "View Draw" }, { "id": "btnParticipants", "texto": "View Participants" }, { "id": "btnCalendar", "texto": "View Calendar" }, { "id": "btnAd", "texto": "View Ad" }, { "id": "btn3DText", "texto": "View 3D Text" }] },
     { nome: "Business", botoes: [{ id: "btnCoupon", texto: "View Coupon" }, { id: "btnContact", texto: "View Contact" }, { id: "btnProduct", texto: "View Product" }, { id: "btnPricePlan", texto: "View Pricing Plan" },  { "id": "btnVirtualCard", "texto": "View Virtual Card" }, { "id": "btnVCC", "texto": "View Credit Card" }] }
   ]
 });
