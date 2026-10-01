@@ -325,8 +325,9 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd 
 	
                 fsmodal_create_ifir = `<br/> <div class="txt" style="${fsmodal_createWi}  height:${Number(optiy.size)}px !important;">  ${optiy.context}  </div>  <br/>   <style> .tlightboc_fcasfs .txt {   ${fcas_lightbox_checkValueEX_bolsdff}   ${fcas_lightbox_checkValueEX_it}  ${fcas_lightbox_checkValueEX_bolff}   font-size: ${fcas_lightbox_checkValueEX(optiy,"config","fontSize","14px")};    text-align: ${fcas_lightbox_checkValueEX(optiy,"config","textAlign","center")};   color: ${fcas_lightbox_checkValueEX(optiy,"config","color","#fff")};  }   .tlightboc_fcasfs .txt hr {   border-color: ${fcas_lightbox_checkValueEX(optiy,"config","color","#fff")}; color: ${fcas_lightbox_checkValueEX(optiy,"config","color","#fff")};  } </style> <br/><br/>`;
             }  if (optiy.type && optiy.type == "svg") {
-                is_player0j = "no";
-                fsmodal_create_ifir = `<br/> <div style="${fsmodal_createWi}"> ${optiy.context}  </div>   <style> .tlightboc_fcasfs svg {   pointer-events: none;    width: ${Number(optiy.size)}px;    height: ${Number(optiy.size)}px;    fill: ${fcas_lightbox_checkValueEX(optiy,"config","fill","currentColor")};    stroke: ${fcas_lightbox_checkValueEX(optiy,"config","stroke","currentColor")};  }  </style> <br/><br/>`;
+                is_player0j = "no";    var fis_playerf0jmgtrt="";
+                if(fcas_lightbox_checkValueEX(optiy,"config","scale",false)==true){  fis_playerf0jmgtrt=' onclick="fcas_lightbox_alternarAmpliacao(this);" ';  }
+                fsmodal_create_ifir = `<br/> <div ${fis_playerf0jmgtrt} style="${fsmodal_createWi}"> ${optiy.context}  </div>   <style> .tlightboc_fcasfs svg {   pointer-events: none;    width: ${Number(optiy.size)}px;    height: ${Number(optiy.size)}px;    fill: ${fcas_lightbox_checkValueEX(optiy,"config","fill","currentColor")};    stroke: ${fcas_lightbox_checkValueEX(optiy,"config","stroke","currentColor")};  }  </style> <br/><br/>`;
             }  else if (optiy.type && optiy.type == "audio") {
                 is_player0j = "yes";
                 var tlafn_odslight=fcas_lightbox_checkValueEX(optiy,"config","Lang","en");    if(fcas_lightbox_checkValueEX(optiy,"config","OSD_Lang","")!=""){tlafn_odslight=fcas_lightbox_checkValueEX(optiy,"config","OSD_Lang","en");}
