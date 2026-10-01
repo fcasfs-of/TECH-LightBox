@@ -369,6 +369,9 @@ header .dname *, header nav, header nav *, .lbxx * { transition: all 0.1s; }
 #btnAgenda::before {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAA/0lEQVR4AbxS7Q2CMBAFV0Adwin8o3swhXEDnYJBNHEMd/BrBXyvuSO0JKUlB+QeR9v37tH2VsXMz7IGbdvWwAuYEtTV4YGEO7iCsAGmBHXUe9rQgKSilEeZMizDsc4zy5rTy7dLoYGbtHyZG8jlPfQnkwwg+hAqSsh75SQZgFwJkPJizOCJcl/gLPgh34Cx6DhRA3THDlgDF0GFfIxVxzqj40QNYoVS18wN0AyMvC5K/dseL7uLetq8T/MjEvu75MLcgC0EHGYz0MKazXeghTUvbvCmMxs5F9QBTo/cRbiDE1YGJMylBHXUe1zPALffAFtgSlDXeNUx8AwwNo8/AAAA//8GLI5UAAAABklEQVQDAI/jnjEW4ARUAAAAAElFTkSuQmCC");
 }
+#btnFichas::before {
+  background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAABGElEQVR4AcySzQ3CMAyFgR1gAySmQHBgEKbgyJkpukBHQEJdAgmJCWAFRPmcNhVNU2qj8lO9V8eO7ec0HQ0+/HxfIM/zNbxAK6RmHX6Q2Al2JI2hFVIjtbW6mIAkDobl47NLtzJhvPRdbbl2JibgNvp6aQSOIhZeiMSg28O2QiOwpfoMQ5wIyB6mHZ0CfPQUTmGIGYG0vXWx0ylQpL3//i8BLjqDB8t5rCeY03wB1VAJMLVMnvuu+ALVSVQCNL7DELcwEPNVAvyOSzj0DWQNV95/ZVUCTw0y1nuohkmAqRdQNbmfwCTgiyz2JwJXmVD+QwulBrpabIXYCTbsNhKJdUFqpLaW1xDgEhM4gVZITVLrjtMQINYrHgAAAP//1qME0gAAAAZJREFUAwCVSagxdLf6bAAAAABJRU5ErkJggg==");
+}
 
 
  header .dname h1 {  margin-bottom: 0px;    display: inline-block;  }
