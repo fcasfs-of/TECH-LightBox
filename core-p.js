@@ -101,7 +101,7 @@ function fcasfs_obter_obterValorPorBooleano(valor, mapeamento) { return !mapeame
 
 
 var modaisDisponiveis = {
-  'btnTasks': function() {
+  'btnHistory': function() {
     return {
       title: "historico",
       type: "historico",
