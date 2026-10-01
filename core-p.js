@@ -101,6 +101,16 @@ function fcasfs_obter_obterValorPorBooleano(valor, mapeamento) { return !mapeame
 
 
 var modaisDisponiveis = {
+  'btnAgenda': function() {
+    return {
+      title: "agenda",
+      type: "agenda",
+      context:{  corPrimaria: '#0284c7', actual:true, ano:2026, mes:11, eventos: { '2026-11-01': ['Atualizar'] }  },
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
   'btnCoupon': function() {
     return {
       title: "coupon",
@@ -666,7 +676,7 @@ fcas_lightbox_gerarMenu({ lang: "pt",
     { nome: "Documentos", botoes: [{ id: "btnPDF", texto: "Visualizar PDF" }] },
     { nome: "Localização", botoes: [{ id: "btnMap", texto: "Visualizar Mapa" }] },
     { "nome": "Navegação & Estrutura", "botoes": [{ id: "btnSearchBar", texto: "Visualizar Barra de Pesquisa" }, { "id": "btnTree", "texto": "Visualizar Árvore de Arquivos" }, { "id": "btnMindmap", "texto": "Visualizar Mapa Mental" } ] },
-    { "nome": "Utilitários & Dinâmicos", "botoes": [{ id: "btnLeaderboard", texto: "Visualizar Classificação" }, { "id": "btnProfile", "texto": "Visualizar Perfil" }, { "id": "btnRaffle", "texto": "Visualizar Sorteio" }, { "id": "btnParticipants", "texto": "Visualizar Participantes" }, { "id": "btnCalendar", "texto": "Visualizar Calendário" }, { "id": "btnAd", "texto": "Visualizar Anúncio" }, { "id": "btn3DText", "texto": "Visualizar Texto 3D" }] },
+    { "nome": "Utilitários & Dinâmicos", "botoes": [{ id: "btnAgenda", texto: "Visualizar Agenda" }, { id: "btnLeaderboard", texto: "Visualizar Classificação" }, { "id": "btnProfile", "texto": "Visualizar Perfil" }, { "id": "btnRaffle", "texto": "Visualizar Sorteio" }, { "id": "btnParticipants", "texto": "Visualizar Participantes" }, { "id": "btnCalendar", "texto": "Visualizar Calendário" }, { "id": "btnAd", "texto": "Visualizar Anúncio" }, { "id": "btn3DText", "texto": "Visualizar Texto 3D" }] },
     { nome: "Negócios", botoes: [{ id: "btnCoupon", texto: "Visualizar Cupom" }, { id: "btnContact", texto: "Visualizar Contato" }, { id: "btnProduct", texto: "Visualizar Produto" }, { id: "btnPricePlan", texto: "Visualizar Plano de Preços" }, { "id": "btnVirtualCard", "texto": "Visualizar Cartão Virtual" }, { "id": "btnVCC", "texto": "Visualizar Cartão de Crédito" }] }
   ]
 });
