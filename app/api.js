@@ -320,7 +320,7 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd 
             } else if (optiy.type && optiy.type == "pdf") {
                 is_player0j = "pdf";
                 start_fs_mpl = { lang: fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en', file:optiy.context || '', pg: fcas_lightbox_checkValueEX(optiy,"config","page",1) || 1 }
-                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  <div id="fcas_lightboc_Pdfout"></div>  </div>`;
+                fsmodal_create_ifir = `<div id="fcas_lightboc_Pdfout" style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;"></div>`;
             } else if (optiy.type && optiy.type == "link") {
                 is_player0j = "no";
                 fsmodal_create_ifir = ` ${fsmodafdl_createdd}  <iframe onload="fsmodal_close_aloder();this.style.display='block';"  allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation" frameborder="0" allowfullscreen src="${optiy.context}" style="display:none;  ${fsmodal_createWi} height: ${Number(optiy.size)}px !important;  "></iframe>`;
