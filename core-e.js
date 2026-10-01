@@ -100,6 +100,16 @@ function fcasfs_obter_obterValorPorBooleano(valor, mapeamento) { return !mapeame
 
 
 var modaisDisponiveis = {
+  'btnTasks': function() {
+    return {
+      title: "tasks",
+      type: "tarefas",
+      context:{ tituloComponente: "", corPrimaria: "#111", corSecundaria: "#333", tarefas: [ { texto: "LightBox: Update", concluido: false } ] },
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
   'btnFichas': function() {
     return {
       title: "fichas",
@@ -681,7 +691,7 @@ fcas_lightbox_gerarMenu({ lang: "en",
     {"nome": "Publication", "botoes": [{ id: "btnFAQ", texto: "View FAQ" }, { id: "btnBanner", texto: "View Banner" }, { "id": "btnBlogPost", "texto": "View Blog Post" }] },
     { nome: "Gallery", botoes: [{ id: "btnGallery", texto: "View Gallery" }, { id: "btnSlideshow", texto: "View Slideshow" }, { id: "btnCarrossel", texto: "View Carousel" }, { "id": "btnTimeline", "texto": "View Timeline" }] },
     { nome: "Text & Links", botoes: [{ id: "btnText", texto: "View Text" }, { id: "btnLink", texto: "View Link" }] },
-    { nome: "Data", botoes: [{ id: "btnTable", texto: "View Table" }, { id: "btnList", texto: "View List" }, { id: "btnFichas", texto: "View Records" }] },
+    { nome: "Data", botoes: [{ id: "btnTable", texto: "View Table" }, { id: "btnList", texto: "View List" }, { id: "btnFichas", texto: "View Records" }, { id: "btnTasks", texto: "View Tasks" }] },
     { nome: "Multimedia", botoes: [{ id: "btnPlaylist", texto: "View Playlist" }, { id: "btnAudio", texto: "View Audio" }, { id: "btnVideo", texto: "View Video" }] },
     { nome: "Interaction", botoes: [{ id: "btnTestimonials", texto: "View Testimonials" }, { id: "btnChat", texto: "View Chat" }, { id: "btnReview", texto: "View Reviews" }, { id: "btnForm", texto: "View Form" }, { id: "btnFeedback", texto: "View Feedback" }] },
     { nome: "Analytics", botoes: [{ id: "btnGrafic", texto: "View Chart" }, { id: "btnDashboard", texto: "View Dashboard" }] },
