@@ -100,6 +100,16 @@ function fcasfs_obter_obterValorPorBooleano(valor, mapeamento) { return !mapeame
 
 
 var modaisDisponiveis = {
+  'btnChangelog': function() {
+    return {
+      title: "changelog",
+      type: "changelog",
+      context:{ tituloComponente: "", corPrimaria: "#0f172a", divisor: true, versoes: { "2.0.1.4": { data: "01/10/2026", logs: [ { tipo: "improvement", texto: "Performance Improvements and Optimization." } ] }  } },
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
   'btnHistory': function() {
     return {
       title: "historic",
@@ -698,7 +708,7 @@ const fcasfs_ligh_cate_icons = {
 fcas_lightbox_gerarMenu({ lang: "en", 
   categorias: [
     { nome: "Visual Media", botoes: [{ id: "btnImage", texto: "View Image" }, { id: "btnSVG", texto: "View SVG" }] },
-    {"nome": "Publication", "botoes": [{ id: "btnFAQ", texto: "View FAQ" }, { id: "btnBanner", texto: "View Banner" }, { "id": "btnBlogPost", "texto": "View Blog Post" }] },
+    {"nome": "Publication", "botoes": [{ id: "btnFAQ", texto: "View FAQ" }, { id: "btnBanner", texto: "View Banner" }, { "id": "btnBlogPost", "texto": "View Blog Post" }, { id: "btnChangelog", texto: "View Changelog" }] },
     { nome: "Gallery", botoes: [{ id: "btnGallery", texto: "View Gallery" }, { id: "btnSlideshow", texto: "View Slideshow" }, { id: "btnCarrossel", texto: "View Carousel" }, { "id": "btnTimeline", "texto": "View Timeline" }] },
     { nome: "Text & Links", botoes: [{ id: "btnText", texto: "View Text" }, { id: "btnLink", texto: "View Link" }] },
     { nome: "Data", botoes: [{ id: "btnTable", texto: "View Table" }, { id: "btnList", texto: "View List" }, { id: "btnFichas", texto: "View Records" }, { id: "btnTasks", texto: "View Tasks" }, { id: "btnHistory", texto: "View History" }] },
