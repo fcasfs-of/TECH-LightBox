@@ -19,7 +19,7 @@ fcasfs_lightbox_def_injetarEstilo({
 });
 
 
-fcasfs_lightbox_def_injetarScript({ app: "TECH-LightBox", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-lightbox-pdf-core", src: "[URL]/[APP]/[FOLDER]pdf.js" });
+fcasfs_lightbox_def_injetarScript({ app: "TECH-LightBox", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-lightbox-pdf-core", src: "[URL]/[APP]/[FOLDER]pdf.js", onload: 'document.getElementById("[ID]").remove();'  });
 fcasfs_lightbox_def_injetarScript({ app: "TECH-LightBox", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-lightbox-core", src: "[URL]/[APP]/[FOLDER]core.js", onload: 'document.getElementById("[ID]").remove();' });
 fcasfs_lightbox_def_injetarScript({ app: "TECH-Free", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-player-core", src: "[URL]/[APP]/[FOLDER]core.js", onload: 'document.getElementById("[ID]").remove();'});
 fcasfs_lightbox_def_injetarScript({ app: "TECH-LightBox", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-lightbox-src_basic-core", src: "[URL]/[APP]/[FOLDER]src_basic.js", onload: 'document.getElementById("[ID]").remove();' });
@@ -319,8 +319,8 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd 
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_lightbox_criarGrafico({ titulo: fcas_lightbox_checkValueEX(optiy,"config","titulo",""), textoOpcional: fcas_lightbox_checkValueEX(optiy,"config","textoOpcional",""), tema: fcas_lightbox_checkValueEX(optiy,"config","tema","azul"), exibirValores: fcas_lightbox_checkValueEX(optiy,"config","exibirValores",true), modelo: fcas_lightbox_checkValueEX(optiy,"config","modelo","barras"), orientacao: fcas_lightbox_checkValueEX(optiy,"config","orientacao","horizontal"), exibirTooltips: fcas_lightbox_checkValueEX(optiy,"config","exibirTooltips",true), larguraBarra: fcas_lightbox_checkValueEX(optiy,"config","larguraBarra",0.50), raioCurva: fcas_lightbox_checkValueEX(optiy,"config","raioCurva",8), alturaMax: 260, dados: optiy.context })}  </div>`;
             } else if (optiy.type && optiy.type == "pdf") {
                 is_player0j = "pdf";
-                start_fs_mpl = { lang: fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en', file:optiy.context || '', pg: fcas_lightbox_checkValueEX(optiy,"config","page",1) || 1 }
-                fsmodal_create_ifir = `<div id="fcas_lightboc_Pdfout" style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;"></div>`;
+                start_fs_mpl = { id: "fs_modal_"+klf+"_mpdf", lang: fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en', file:optiy.context || '', pg: fcas_lightbox_checkValueEX(optiy,"config","page",1) || 1 }
+                fsmodal_create_ifir = `<div id="fs_modal_${klf}_mpdf" style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;"></div>`;
             } else if (optiy.type && optiy.type == "link") {
                 is_player0j = "no";
                 fsmodal_create_ifir = ` ${fsmodafdl_createdd}  <iframe onload="fsmodal_close_aloder();this.style.display='block';"  allow="accelerometer *; ambient-light-sensor *; autoplay *; camera *; clipboard-read *; clipboard-write *; encrypted-media *; fullscreen *; geolocation *; gyroscope *; magnetometer *; microphone *; midi *; payment *; picture-in-picture *; screen-wake-lock *; speaker *; sync-xhr *; usb *; web-share *; vibrate *; vr *" sandbox="allow-downloads allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts allow-top-navigation-by-user-activation allow-storage-access-by-user-activation" frameborder="0" allowfullscreen src="${optiy.context}" style="display:none;  ${fsmodal_createWi} height: ${Number(optiy.size)}px !important;  "></iframe>`;
@@ -363,7 +363,7 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd 
                     volume:fcas_lightbox_checkValueEX(optiy,"config","volume","1"),
                     pos_time:""+convertDurationtoSecondsR(fcas_lightbox_checkValueEX(optiy,"config","pos_time","0")) || "0"
                     },
-                    id: "preview_pls",
+                    id: "fs_modal_"+klf+"_mplayer",
                     customtext: { age: fcas_lightbox_checkValueEX(optiy,"config","txt","") || "" },
                     nocontrols: fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","nocontrols",false)) || 0,
                     autoplay: 0,
@@ -376,7 +376,7 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd 
                     poster: start_fs_postermpl,
                     player: 1
                 };
-                fsmodal_create_ifir = `<div id="preview_pls" style="${fsmodal_createWi}  height:${Number(optiy.size)}px !important;">${fsmodafdl_createdd}</div>`;
+                fsmodal_create_ifir = `<div id="fs_modal_${klf}_mplayer" style="${fsmodal_createWi}  height:${Number(optiy.size)}px !important;">${fsmodafdl_createdd}</div>`;
             } else if (optiy.type && (optiy.type == "youtube" || optiy.type == "video" || optiy.type == "PList")) {
                 is_player0j = "yes";
                 var tlafn_odslight=fcas_lightbox_checkValueEX(optiy,"config","Lang","en");    if(fcas_lightbox_checkValueEX(optiy,"config","OSD_Lang","")!=""){tlafn_odslight=fcas_lightbox_checkValueEX(optiy,"config","OSD_Lang","en");}
@@ -400,7 +400,7 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd 
                     volume:fcas_lightbox_checkValueEX(optiy,"config","volume","1"),
                     pos_time:""+convertDurationtoSecondsR(fcas_lightbox_checkValueEX(optiy,"config","pos_time","0")) || "0"
                     },
-                    id: "preview_pls",
+                    id: "fs_modal_"+klf+"_mplayer",
                     customtext: { age: fcas_lightbox_checkValueEX(optiy,"config","txt","") || "" },
                     plstart: "fcas_lightbox_playerf_"+ fcas_lightbox_checkValueEX(optiy,"config","select","1") || "1",
                     lang: fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en",
@@ -413,7 +413,7 @@ var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd 
                     poster: start_fs_postermpl,
                     player: 1
                 };
-                fsmodal_create_ifir = `<div id="preview_pls" style="${fsmodal_createWi}  height:${Number(optiy.size)}px !important;">${fsmodafdl_createdd}</div>`;
+                fsmodal_create_ifir = `<div id="fs_modal_${klf}_mplayer" style="${fsmodal_createWi}  height:${Number(optiy.size)}px !important;">${fsmodafdl_createdd}</div>`;
             }
             fsmodal_createdd += `<span class="tlightboc_fcasfs" style="overflow:auto; padding:6px; margin: 0 auto; width:96%; text-align:center; display:block; color:#fff;">${fsmodal_create_ifir} ${fsmodal_create_desci} <br/><br/><br/><br/></span><br/><br/>`;
         }
@@ -598,9 +598,9 @@ scrcontedfddd.setAttribute("src_sz", ""+fcafs_lightboc_contarSZH_HTML("fs_modal_
                 };    }
             }
 
-if (document.getElementById("fcasfs_script-lightbox-pdf-core") && is_player0j === "pdf") {
+if (is_player0j === "pdf") {
 		 function mfplayeridd(){  
-			 if (typeof fcas_lightboc_Pdf === "function"){    fcas_lightboc_Pdf(start_fs_mpl.lang ,start_fs_mpl.file, start_fs_mpl.pg, "fcas_lightboc_Pdfout");  }  
+			 if (typeof fcas_lightboc_Pdf === "function"){    fcas_lightboc_Pdf(start_fs_mpl.lang ,start_fs_mpl.file, start_fs_mpl.pg, start_fs_mpl.id);  }  
 		 } 
 }
 			
