@@ -50,10 +50,10 @@ function fcas_lightboc_Pdf(idioma, linkPdf, pg, idElemento) {
     const controles = document.createElement('div');
     controles.style.cssText = 'display:flex;justify-content:center;align-items:center;gap:15px;padding:10px;background:#f0f0f0;border-top:1px solid #ddd;';
     const btnAnterior = document.createElement('button');
-    btnAnterior.style.cssText = 'background:none;border:none;cursor:pointer;padding:5px;color:#333;display:flex;align-items:center;';
+    btnAnterior.style.cssText = 'display:none;background:none;border:none;cursor:pointer;padding:5px;color:#333;display:flex;align-items:center;';
     btnAnterior.title = lang.anterior;
     const btnProximo = document.createElement('button');
-    btnProximo.style.cssText = 'background:none;border:none;cursor:pointer;padding:5px;color:#333;display:flex;align-items:center;';
+    btnProximo.style.cssText = 'display:none;background:none;border:none;cursor:pointer;padding:5px;color:#333;display:flex;align-items:center;';
     btnProximo.title = lang.proximo;
     const infoPagina = document.createElement('span');
     infoPagina.style.cssText = 'font-size:14px;color:#333;font-family:Arial,sans-serif;';
@@ -74,18 +74,20 @@ function fcas_lightboc_Pdf(idioma, linkPdf, pg, idElemento) {
             const context = canvas.getContext('2d');
 			canvas.style.cssText = 'pointer-events:none;';
 			btnAnterior.style.poinerEvents="none";   btnProximo.style.poinerEvents="none"; 
+			btnAnterior.style.display="none";   btnProximo.style.display="none"; 
             pagina.render({ canvasContext: context, viewport: viewport }).promise.then(function() {
      btnAnterior.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>';
     btnProximo.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>';
                imgPdf.src = canvas.toDataURL('image/jpeg', 0.9);
 				btnAnterior.style.poinerEvents="auto";   btnProximo.style.poinerEvents="auto"; 
+				btnAnterior.style.display="block";   btnProximo.style.display="block"; 
                 infoPagina.textContent = lang.pagina + ' ' + numero + ' ' + lang.de + ' ' + totalPaginas;
                 paginaAtual = numero;
                 btnAnterior.disabled = numero <= 1;
                 btnProximo.disabled = numero >= totalPaginas;
                 btnAnterior.style.opacity = btnAnterior.disabled ? '0.4' : '1';
                 btnProximo.style.opacity = btnProximo.disabled ? '0.4' : '1';
-				if(btnAnterior.disabled===true){  btnAnterior.style.poinerEvents="none";   btnAnterior.innerHTML="";   }   if(btnProximo.disabled===true){  btnProximo.innerHTML="";  btnProximo.style.poinerEvents="none";  }
+				if(btnAnterior.disabled===true){  btnAnterior.style.poinerEvents="none";   btnAnterior.style.poinerEvents="none";   btnAnterior.innerHTML="";   }   if(btnProximo.disabled===true){  btnProximo.style.poinerEvents="none";   btnProximo.innerHTML="";  btnProximo.style.poinerEvents="none";  }
             });
         });
     }
