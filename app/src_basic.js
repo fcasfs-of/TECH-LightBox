@@ -73,16 +73,19 @@ function fcas_lightboc_Pdf(idioma, linkPdf, pg, idElemento) {
             canvas.height = viewport.height;
             const context = canvas.getContext('2d');
 			canvas.style.cssText = 'pointer-events:none;';
+			btnAnterior.style.poinerEvents="none";   btnProximo.style.poinerEvents="none"; 
             pagina.render({ canvasContext: context, viewport: viewport }).promise.then(function() {
      btnAnterior.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>';
     btnProximo.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>';
                imgPdf.src = canvas.toDataURL('image/jpeg', 0.9);
+				btnAnterior.style.poinerEvents="auto";   btnProximo.style.poinerEvents="auto"; 
                 infoPagina.textContent = lang.pagina + ' ' + numero + ' ' + lang.de + ' ' + totalPaginas;
                 paginaAtual = numero;
                 btnAnterior.disabled = numero <= 1;
                 btnProximo.disabled = numero >= totalPaginas;
                 btnAnterior.style.opacity = btnAnterior.disabled ? '0.4' : '1';
                 btnProximo.style.opacity = btnProximo.disabled ? '0.4' : '1';
+				if(btnAnterior.disabled===true){  btnAnterior.style.poinerEvents="none";   btnAnterior.innerHTML="";   }   if(btnProximo.disabled===true){  btnProximo.innerHTML="";  btnProximo.style.poinerEvents="none";  }
             });
         });
     }
@@ -92,9 +95,7 @@ function fcas_lightboc_Pdf(idioma, linkPdf, pg, idElemento) {
         pdfjsLib.getDocument(linkPdf).promise.then(function(pdf) {
             pdfDoc = pdf;
             totalPaginas = pdf.numPages;
-            if (totalPaginas <= 1) {
-                controles.style.display = 'none';
-            }
+            if (totalPaginas <= 1) {  controles.style.display = 'none';  }
             carregarPagina(pg || 1);
         }).catch(function() {
             imgPdf.alt = '';
