@@ -172,7 +172,7 @@ function convertDurationtoSecondsR(duration){
 
 var feedsfsmodal_create=function(){};
 
-function fsmodal_create(ddd, optiy, app, klf, opdd) {      fsmodal_createdd = '';     var fsmodafdl_createdd = '';  
+function fsmodal_create(ddd, optiy, app, klf, opdd,fcasfs_lightbox_baseTk) {      fsmodal_createdd = '';     var fsmodafdl_createdd = '';  
 if(ddd && ddd=="yes"){
 fsmodal_createdd = '<div class="loader-container">  <div class="classic-spinner"></div>   </div>';    fsmodafdl_createdd='<div id="fs_lightbox_lader" class="loader-container">  <div class="classic-spinner"></div>   </div>';
 }
@@ -542,7 +542,7 @@ momocsifipsl.innerHTML='';
 lightboxPLclayer_adfffultmodiuu=function(){   lightboxPLclayer_adultmodiuu("no");   };
 adultlightboxPLclayer_modiuu=function(){  lightboxPLclayer_adultmodiuu("yes");    addultlightboxPLclayer_modiuu_call(fcaslightconetxndif);   adultlightboxPLclayer_modiuu_call();   };
 
-var fcaslightconetxndif=fsmodal_create(momocsifipsl_chd, optiy.content, optiy.include ? optiy.include.player : "", optiy.id, `TECH LightBox${typeof fcas_lightbox_version_ac === 'function' ? `: ${fcas_lightbox_version_ac()}` : ''}`);
+var fcaslightconetxndif=fsmodal_create(momocsifipsl_chd, optiy.content, optiy.include ? optiy.include.player : "", optiy.id, `TECH LightBox${typeof fcas_lightbox_version_ac === 'function' ? `: ${fcas_lightbox_version_ac()}` : ''}`, fcasfs_lightbox_baseTk);
 //var fcaslightconetxndiflink=fcas_lightbox_gerarTexto([fcas_lightbox_extrairTextoObjeto(optiy)]);
 
 var fcaslightconetxndif_isnort=fcaslightconetxndif;   var fcaslightconetxndif_isntempfort="";
