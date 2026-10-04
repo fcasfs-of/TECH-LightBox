@@ -176,7 +176,7 @@ function fsmodal_create(ddd, optiy, app, klf, opdd,fcasfs_lightbox_baseTk) {    
 if(ddd && ddd=="yes"){
 fsmodal_createdd = '<div class="loader-container">  <div class="classic-spinner"></div>   </div>';    fsmodafdl_createdd='<div id="fs_lightbox_lader" class="loader-container">  <div class="classic-spinner"></div>   </div>';
 }
-var fsmodal_createWi_infiio = "";   var fsmodal_creddateWi_infiio = "no";
+var fsmodal_createWi_infiio = "";   var fsmodal_creddateWi_infiio = "";
 var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd = "";     dcurrent_id = 0;     is_player0j = "no";     start_fs_mpl = {};       start_fs_postermpl = "";
 if(opdd && opdd!=""){   fsmodal_createWi_infiio = opdd;      }
 if (fcasfs_lightbox_baseTk===true){   fsmodal_createWi_infiio = "";    fsmodal_creddateWi_infiio = "yes";    }
