@@ -6,11 +6,9 @@ document.head.appendChild(estiloResponsivo);
 function gerarHtmlTecnologias(tecnologias) { var htmlAcumulado = ""; for (var i = 0; i < tecnologias.length; i++) { htmlAcumulado += '<svg viewBox="0 0 24 24" aria-label="' + tecnologias[i].nome + '">' + tecnologias[i].icone + '</svg>'; } return htmlAcumulado; }
 
 function abrirJanelaModal(idDoProjeto) { var m = document.getElementById('modal-' + idDoProjeto); if (m) { m.style.display = 'flex'; } }
-
 function fecharJanelaModal(idDoProjeto) { var m = document.getElementById('modal-' + idDoProjeto); if (m) { m.style.display = 'none'; } }
 
 function abrirModalTech(idDoProjeto) { var m = document.getElementById('modaltech-' + idDoProjeto); if (m) { m.style.display = 'flex'; } }
-
 function fecharModalTech(idDoProjeto) { var m = document.getElementById('modaltech-' + idDoProjeto); if (m) { m.style.display = 'none'; } }
 
 function obterUrlCompra(tipo, textoMsg, assunto, titulo) { if (tipo === "whatsapp") { return 'https://wa.me/' + configGlobal.whatsapp + '?text=' + encodeURIComponent(textoMsg); } if (tipo === "email") { return 'mailto:' + configGlobal.email + '?subject=' + encodeURIComponent(assunto + ' - ' + titulo) + '&body=' + encodeURIComponent(textoMsg); } return '#'; }
