@@ -9,7 +9,7 @@ function fcas_lightbox_gerarMenu(config){if(!config||typeof config!=='object'||!
 
 
 function dispararCliquesAutomaticos(regras) {
-    if (!regras || regras.length === 0) {        return;     }
+    if (!regras || regras.length === 0) {        return;     }   
 
     var urlParams = new URLSearchParams(window.location.search);
     for (var i = 0; i < regras.length; i++) {
