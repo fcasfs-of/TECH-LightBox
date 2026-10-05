@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+ <link href='favicon.png' rel='icon' type='image/png'/>
+
+<script src="store/list.js"></script>
+<script src="store/render.js"></script>
+<script src="store/core_run.js"></script>
+
+  <title>Lightbox - Conteúdos Diversos - Store</title>
+  
+  <link media="all" rel="stylesheet" href="style/theme.css" />
+
+  <style>
+    :root{--primary-color:#0066cc;--primary-hover:#0052a3;--text-color:#1d1d1f;--bg-color:#f5f5f7}
+    .lbxx-footer-container .btn{display:inline-block;background-color:var(--primary-color);color:#ffffff;text-decoration:none;padding:14px 28px;border-radius:8px;font-weight:500;font-size:1rem;transition:background-color .2s ease,transform .1s ease;width:auto}@media(max-width:480px){.lbxx-footer-container .btn{width:100%;padding:16px}}
+  </style>
+  
+</head>
+<body>
+<br/><br/>
+  
+<header class="lbxx">
+  <div class="dname">
+    <h1><span class="icon"></span>Lightbox - Conteúdos Diversos</h1>
+  </div>
+  
+<div id="container-projetos" class="nav-menu"></div>
+
+  <div class="lbxx-footer-container">
+   <a href="/" class="btn">Voltar para a Página Inicial</a>
+  </div>
+</header>
+<br/><br/>
+
+<script>
+  if(configGlobal){   configGlobal.idiomaManual = "pt";   }
+renderizarVitrineProjetos("container-projetos");
+</script>
+
+</body>
+</html>
