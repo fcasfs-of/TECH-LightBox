@@ -17,4 +17,3 @@ function criarCardProjeto(projeto, lang, texto) { var card = document.createElem
 
 function renderizarVitrineProjetos(id) { var lang = configGlobal.idiomaManual; var texto = lang === "en" ? traducoesEn : traducoesPt; var renderizarVitrineProjetos_chec = false; var objet_idVitrineProjetos_chec = null; if (id && id !== "") { objet_idVitrineProjetos_chec = document.getElementById(id); if (objet_idVitrineProjetos_chec) { renderizarVitrineProjetos_chec = true; } } var container = document.querySelector('.container-projetos'); if (!container) { container = document.createElement('div'); container.className = 'container-projetos'; if (renderizarVitrineProjetos_chec) { objet_idVitrineProjetos_chec.appendChild(container); } else { document.body.appendChild(container); } } for (var i = 0; i < listaProjetosBrutos.length; i++) { var novoCard = criarCardProjeto(listaProjetosBrutos[i], lang, texto); container.appendChild(novoCard); } }
 
-
