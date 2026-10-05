@@ -15,26 +15,26 @@
   <link media="all" rel="stylesheet" href="style/theme.css" />
 
   <style>
-    
+    :root{--primary-color:#0066cc;--primary-hover:#0052a3;--text-color:#1d1d1f;--bg-color:#f5f5f7}
+    .lbxx-footer-container .btn{display:inline-block;background-color:var(--primary-color);color:#ffffff;text-decoration:none;padding:14px 28px;border-radius:8px;font-weight:500;font-size:1rem;transition:background-color .2s ease,transform .1s ease;width:auto}@media(max-width:480px){.lbxx-footer-container .btn{width:100%;padding:16px}}
   </style>
   
 </head>
 <body>
-
+<br/><br/>
+  
 <header class="lbxx">
   <div class="dname">
     <h1><span class="icon"></span>Lightbox - Conteúdos Diversos</h1>
   </div>
   
-
 <div id="container-projetos" class="nav-menu"></div>
 
-
-  <div class="lbxx-footer-container" style="display:none;">
+  <div class="lbxx-footer-container">
+   <a href="/en" class="btn">Return to the Home Page</a>
   </div>
 </header>
 
-  
 <script>
   if(configGlobal){   configGlobal.idiomaManual = "en";   }
 renderizarVitrineProjetos("container-projetos");
