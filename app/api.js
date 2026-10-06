@@ -327,6 +327,12 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
             } else if (optiy.type && optiy.type == "grafico") {
                 is_player0j = "no";
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_lightbox_criarGrafico({ titulo: fcas_lightbox_checkValueEX(optiy,"config","titulo",""), textoOpcional: fcas_lightbox_checkValueEX(optiy,"config","textoOpcional",""), tema: fcas_lightbox_checkValueEX(optiy,"config","tema","azul"), exibirValores: fcas_lightbox_checkValueEX(optiy,"config","exibirValores",true), modelo: fcas_lightbox_checkValueEX(optiy,"config","modelo","barras"), orientacao: fcas_lightbox_checkValueEX(optiy,"config","orientacao","horizontal"), exibirTooltips: fcas_lightbox_checkValueEX(optiy,"config","exibirTooltips",true), larguraBarra: fcas_lightbox_checkValueEX(optiy,"config","larguraBarra",0.50), raioCurva: fcas_lightbox_checkValueEX(optiy,"config","raioCurva",8), alturaMax: 260, dados: optiy.context })}  </div>`;
+            } else if (optiy.type && optiy.type == "notepad") {
+                is_player0j = "no";
+                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_lightbox_notepad(optiy.context || "", { textAlign: fcas_lightbox_checkValueEX(optiy,"config","textAlign","center") || "center", fontSize: fcas_lightbox_checkValueEX(optiy,"config","fontSize",16) || 16, lowercase: fcas_lightbox_checkValueEX(optiy,"config","lower",false) || false, italic: fcas_lightbox_checkValueEX(optiy,"config","italic",false) || false, uppercase: fcas_lightbox_checkValueEX(optiy,"config","upper",false) || false, bold: fcas_lightbox_checkValueEX(optiy,"config","negrito",false) || false })}  </div>`;
+            } else if (optiy.type && optiy.type == "journal") {
+                is_player0j = "no";
+                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_lightbox_journal(optiy.context || [], fcas_lightbox_checkValueEX(optiy,"config","page",1) || 1)}  </div>`;
             } else if (optiy.type && optiy.type == "pdf") {
                 is_player0j = "pdf";
                 start_fs_mpl = { id: "fs_modal_"+klf+"_mpdf", lang: fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en', file:optiy.context || '', pg: fcas_lightbox_checkValueEX(optiy,"config","page",1) || 1 }
