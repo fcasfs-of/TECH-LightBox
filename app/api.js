@@ -179,7 +179,7 @@ function convertDurationtoSecondsR(duration){
 
 var feedsfsmodal_create=function(){};
 
-function fsmodal_create(ddd, optiy, app, klf, opdd,basedTk) {      fsmodal_createdd = '';     var fsmodafdl_createdd = '';  
+function fsmodal_lightboxcreate(ddd, optiy, app, klf, opdd,basedTk, visualaudd) {      fsmodal_createdd = '';     var fsmodafdl_createdd = '';  
 if(ddd && ddd=="yes"){
 fsmodal_createdd = '<div class="loader-container">  <div class="classic-spinner"></div>   </div>';    fsmodafdl_createdd='<div id="fs_lightbox_lader" class="loader-container">  <div class="classic-spinner"></div>   </div>';
 }
@@ -366,12 +366,16 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
 				}
             }  else if (optiy.type && optiy.type == "audio") {
                 is_player0j = "yes";
+				var fcas_lightbox_bindVisualizerToAuds=function(){};
+				if (visualaudd && visualaudd===true){
+					fcas_lightbox_bindVisualizerToAuds=function(meuPlayerCustomizado, id){
+                       fcas_lightbox_bindVisualizerToAudio(meuPlayerCustomizado, fcas_lightbox_audioVisualizer("oframe"+id, { color: 'linear-gradient(to top, #fff, #ccc)', barCount: 36, speed: 98 }));
+					};
+				}
                 var tlafn_odslight=fcas_lightbox_checkValueEX(optiy,"config","Lang","en");    if(fcas_lightbox_checkValueEX(optiy,"config","OSD_Lang","")!=""){tlafn_odslight=fcas_lightbox_checkValueEX(optiy,"config","OSD_Lang","en");}
                 if (optiy.poster && optiy.poster != "") {   start_fs_postermpl = optiy.poster;   }
                 start_fs_mpl = {
-                    iscll:function(meuPlayerCustomizado, id){
-                       fcas_lightbox_bindVisualizerToAudio(meuPlayerCustomizado, fcas_lightbox_audioVisualizer("oframe"+id, { color: 'linear-gradient(to top, #fff, #ccc)', barCount: 36, speed: 98 }));
-					},
+                    iscll:fcas_lightbox_bindVisualizerToAuds,
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
                     autoplay:""+fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","autoplay",false)) || "0",
@@ -445,7 +449,9 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
         return fsmodal_createdd;
     }
 }
-
+function fsmodal_lightbox_create(dofd) {   if(dofd){
+fsmodal_lightboxcreate(dofd.value, dofd.obj, dofd.player, dofd.id, dofd.app, dofd.check, dofd.barsAudio);
+}     }
 
 
 function playerfs_osf_evensdef(eventsList, lang = "pt", plobf,timf,kk){    if(plobf){    registerPlayerOSDEvents(plobf, eventsList, lang || "pt", timf,"absolute",kk || "top-center");    }    }
@@ -569,7 +575,7 @@ momocsifipsl.innerHTML='';
 lightboxPLclayer_adfffultmodiuu=function(){   lightboxPLclayer_adultmodiuu("no");   };
 adultlightboxPLclayer_modiuu=function(){  lightboxPLclayer_adultmodiuu("yes");    addultlightboxPLclayer_modiuu_call(fcaslightconetxndif);   adultlightboxPLclayer_modiuu_call();   };
 
-var fcaslightconetxndif=fsmodal_create(momocsifipsl_chd, optiy.content, optiy.include ? optiy.include.player : "", optiy.id, `TECH LightBox${typeof fcas_lightbox_version_ac === 'function' ? `: ${fcas_lightbox_version_ac()}` : ''}`, fcasfs_lightbox_baseTk_ch);
+var fcaslightconetxndif=fsmodal_lightbox_create({ value: momocsifipsl_chd, obj: optiy.content, player: optiy.include ? optiy.include.player : "", id: optiy.id, app: `TECH LightBox${typeof fcas_lightbox_version_ac === 'function' ? `: ${fcas_lightbox_version_ac()}` : ''}`, check: fcasfs_lightbox_baseTk_ch, barsAudio: (optiy && optiy.include && optiy.include.player === "yes" && optiy.include.plugin && optiy.include.plugin.AudioVisualizer === true) ? true : false });
 //var fcaslightconetxndiflink=fcas_lightbox_gerarTexto([fcas_lightbox_extrairTextoObjeto(optiy)]);
 
 var fcaslightconetxndif_isnort=fcaslightconetxndif;   var fcaslightconetxndif_isntempfort="";
