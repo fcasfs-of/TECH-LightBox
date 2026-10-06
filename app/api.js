@@ -450,7 +450,7 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
     }
 }
 function fsmodal_lightbox_create(dofd) {   if(dofd){
-fsmodal_lightboxcreate(dofd.value, dofd.obj, dofd.player, dofd.id, dofd.app, dofd.check, dofd.barsAudio);
+return fsmodal_lightboxcreate(dofd.value, dofd.obj, dofd.player, dofd.id, dofd.app, dofd.check, dofd.barsAudio);
 }     }
 
 
