@@ -208,7 +208,7 @@ window.getDocData = function(fdd) {
                 ['Carousel', 'Accepts an array of objects carrying media paths and string text captions: [ { url: "", legenda: "" } ]'],
                 ['slideshow', 'Accepts an array of objects carrying media paths and string text captions: [ { url: "", caption: "" } ]'],
                 ['Playlist', 'Accepts an array of objects tracking graphic data and target navigation anchors: [ { titulo: "", subtitulo: "", thumbnail: "", href: "" } ]'],
-                ['text', 'Accepts a clean and standard flat string payload: normal text string.'],
+                ['texto', 'Accepts a clean and standard flat string payload: normal text string.'],
                 ['Table', 'Accepts an array structure mapping collection sets of dynamic objects: [] containing an object with keys and values.'],
                 ['List', 'Accepts a sequential collection array listing text strings: [].'],
                 ['audio', 'Accepts a destination path string referencing an audio asset source file location: link.'],
