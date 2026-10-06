@@ -575,7 +575,7 @@ momocsifipsl.innerHTML='';
 lightboxPLclayer_adfffultmodiuu=function(){   lightboxPLclayer_adultmodiuu("no");   };
 adultlightboxPLclayer_modiuu=function(){  lightboxPLclayer_adultmodiuu("yes");    addultlightboxPLclayer_modiuu_call(fcaslightconetxndif);   adultlightboxPLclayer_modiuu_call();   };
 
-var fcaslightconetxndif=fsmodal_lightbox_create({ value: momocsifipsl_chd, obj: optiy.content, player: optiy.include ? optiy.include.player : "", id: optiy.id, app: `TECH LightBox${typeof fcas_lightbox_version_ac === 'function' ? `: ${fcas_lightbox_version_ac()}` : ''}`, check: fcasfs_lightbox_baseTk_ch, barsAudio: (optiy && optiy.include && optiy.include.player === "yes" && optiy.include.plugin && optiy.include.plugin.AudioVisualizer === true) ? true : false });
+var fcaslightconetxndif=fsmodal_lightbox_create({ value: momocsifipsl_chd, obj: optiy.content, player: `${optiy.include ? optiy.include.player : ""}`, id: optiy.id, app: `TECH LightBox${typeof fcas_lightbox_version_ac === 'function' ? `: ${fcas_lightbox_version_ac()}` : ''}`, check: fcasfs_lightbox_baseTk_ch, barsAudio: (optiy && optiy.include && optiy.include.player === "yes" && optiy.include.plugin && optiy.include.plugin.AudioVisualizer === true) ? true : false });
 //var fcaslightconetxndiflink=fcas_lightbox_gerarTexto([fcas_lightbox_extrairTextoObjeto(optiy)]);
 
 var fcaslightconetxndif_isnort=fcaslightconetxndif;   var fcaslightconetxndif_isntempfort="";
