@@ -100,6 +100,26 @@ function fcasfs_obter_obterValorPorBooleano(valor, mapeamento) { return !mapeame
 
 
 var modaisDisponiveis = {
+  'btnJournal': function() {
+    return {
+      title: "journal",
+      type: "journal",
+      context:[`${typeof document !== "undefined" ? document.title : ""} <br/> ${typeof app_2ver !== "undefined" ? app_2ver : ""}`, typeof location !== "undefined" ? location.href : ""],
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+  'btnNotepad': function() {
+    return {
+      title: "notepad",
+      type: "notepad",
+      context:`${typeof document !== "undefined" ? document.title : ""} <br/> ${typeof app_2ver !== "undefined" ? app_2ver : ""} <br/> ${typeof location !== "undefined" ? location.href : ""}`,
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
   'btnChangelog': function() {
     return {
       title: "changelog",
@@ -708,9 +728,9 @@ const fcasfs_ligh_cate_icons = {
 fcas_lightbox_gerarMenu({ lang: "en", 
   categorias: [
     { nome: "Visual Media", botoes: [{ id: "btnImage", texto: "View Image" }, { id: "btnSVG", texto: "View SVG" }] },
-    {"nome": "Publication", "botoes": [{ id: "btnFAQ", texto: "View FAQ" }, { id: "btnBanner", texto: "View Banner" }, { "id": "btnBlogPost", "texto": "View Blog Post" }, { id: "btnChangelog", texto: "View Changelog" }] },
+    {"nome": "Publication", "botoes": [{ id: "btnJournal", texto: "View Journal" }, { id: "btnFAQ", texto: "View FAQ" }, { id: "btnBanner", texto: "View Banner" }, { "id": "btnBlogPost", "texto": "View Blog Post" }, { id: "btnChangelog", texto: "View Changelog" }] },
     { nome: "Gallery", botoes: [{ id: "btnGallery", texto: "View Gallery" }, { id: "btnSlideshow", texto: "View Slideshow" }, { id: "btnCarrossel", texto: "View Carousel" }, { "id": "btnTimeline", "texto": "View Timeline" }] },
-    { nome: "Text & Links", botoes: [{ id: "btnText", texto: "View Text" }, { id: "btnLink", texto: "View Link" }] },
+    { nome: "Text & Links", botoes: [{ id: "btnNotepad", texto: "View Notepad" }, { id: "btnText", texto: "View Text" }, { id: "btnLink", texto: "View Link" }] },
     { nome: "Data", botoes: [{ id: "btnTable", texto: "View Table" }, { id: "btnList", texto: "View List" }, { id: "btnFichas", texto: "View Records" }, { id: "btnTasks", texto: "View Tasks" }, { id: "btnHistory", texto: "View History" }] },
     { nome: "Multimedia", botoes: [{ id: "btnPlaylist", texto: "View Playlist" }, { id: "btnAudio", texto: "View Audio" }, { id: "btnVideo", texto: "View Video" }] },
     { nome: "Interaction", botoes: [{ id: "btnTestimonials", texto: "View Testimonials" }, { id: "btnChat", texto: "View Chat" }, { id: "btnReview", texto: "View Reviews" }, { id: "btnForm", texto: "View Form" }, { id: "btnFeedback", texto: "View Feedback" }] },
