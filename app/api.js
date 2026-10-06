@@ -471,12 +471,11 @@ mfplayeri = fs_Playerjs(dstart_fs_mpl);
 if(mfplayeri){  
 lightboxPLclos=function(){  if(dstart_fs_mpl.id && dstart_fs_mpl.id!="" && document.getElementById(dstart_fs_mpl.id)){  document.getElementById(dstart_fs_mpl.id).remove();  }  };
 lightboxPLcloapis=function() {    if (mfplayeri){  mfplayeri.api("stop");  }   }
-mfplayeri.OnEvents("ui",function(){  });
-mfplayeri.OnEvents("init",function(){  
 if (typeof dstart_fs_mpl.iscll === 'function') {
 	dstart_fs_mpl.iscll(mfplayeri, dstart_fs_mpl.id);
 }
-
+mfplayeri.OnEvents("ui",function(){  });
+mfplayeri.OnEvents("init",function(){  
 if(dstart_fs_mpl.stretch && dstart_fs_mpl.stretch=="1"){  mfplayeri.api('stretch',1);      }
 
 if(dstart_fs_mpl.config.autoplay && dstart_fs_mpl.config.autoplay=="1"){     }
