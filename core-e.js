@@ -839,6 +839,8 @@ function injetarScriptHomeAA(isHead, exefl) {
 }
 
 
+const target_verappsdd=document.getElementById('app_versiondisplay');if(target_verappsdd){target_verappsdd.textContent=`${typeof fcas_lightbox_version_ac === 'function' ? fcas_lightbox_version_ac() : ''}`;}
+
 
 function get_themeforop(){  var dget_themeforop= document.body.classList.contains('dark');  return  dget_themeforop ? "escuro" : "claro";  }
 
