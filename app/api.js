@@ -370,8 +370,7 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
                 if (optiy.poster && optiy.poster != "") {   start_fs_postermpl = optiy.poster;   }
                 start_fs_mpl = {
                     iscll:function(meuPlayerCustomizado, id){
-                       var fcas_lightbox_audio_plvisualizer = fcas_lightbox_audioVisualizer("oframe"+id, { color: 'linear-gradient(to top, #fff, #ccc)', barCount: 30, speed: 90 });
-                       fcas_bindVisualizerToAudio(meuPlayerCustomizado, fcas_lightbox_audio_plvisualizer);
+                       fcas_lightbox_bindVisualizerToAudio(meuPlayerCustomizado, fcas_lightbox_audioVisualizer("oframe"+id, { color: 'linear-gradient(to top, #fff, #ccc)', barCount: 30, speed: 90 }));
 					},
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
