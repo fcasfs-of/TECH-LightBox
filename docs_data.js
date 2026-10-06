@@ -43,7 +43,7 @@ window.getDocData = function(fdd) {
                 ['loader', 'Se for true, mostra um spinner de carregamento enquanto o conteúdo é inserido.'],
                 ['noprint', 'Se for true, ativa a proteção que esconde o conteúdo do modal ao tentar imprimir ou salvar a página.'],
                 ['tiptext', 'Opcional. String contendo um texto explicativo ou dica rápida associada à chamada do componente.'],
-                ['include', 'Objeto contendo configurações adicionais, como { player: "yes" } para embutir o reprodutor de mídia.'],
+                ['include', 'Objeto contendo configurações adicionais, como { player: "yes" } para embutir o reprodutor de mídia. Se a configuração "plugin: { AudioVisualizer: true }" for informada junto com player "yes" para um arquivo de áudio, o reprodutor exibirá barras de visualização de áudio (Audio Visualizer bars).'],
                 ['content', 'Objeto principal contendo as propriedades tratadas pela biblioteca.']
             ],
             global: [
@@ -173,7 +173,7 @@ window.getDocData = function(fdd) {
                 ['loader', 'If true, displays a loading spinner while the content is being loaded.'],
                 ['noprint', 'If true, activates the protection that hides the modal content when attempting to print or save the page.'],
                 ['tiptext', 'Optional. String containing a tooltip phrase or helpful contextual instructions bound to the layout trigger.'],
-                ['include', 'Object holding setup flags, like { player: "yes" } to append media rendering properties.'],
+                ['include', 'Object containing additional configurations, such as { player: "yes" } to embed the media player. If the setting "plugin: { AudioVisualizer: true }" is provided along with player "yes" for an audio file, the player will display audio visualizer bars.'],
                 ['content', 'Standard metadata wrapper object targeting libraries rendering pipeline.']
             ],
             global: [
