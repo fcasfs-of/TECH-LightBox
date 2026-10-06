@@ -841,6 +841,8 @@ function injetarScriptHomeAA(isHead, exefl) {
 
 function get_themeforop(){  var dget_themeforop= document.body.classList.contains('dark');  return  dget_themeforop ? "escuro" : "claro";  }
 
+const target_verappsdd=document.getElementById('app_versiondisplay');if(target_verappsdd){target_verappsdd.textContent=`${typeof fcas_lightbox_version_ac === 'function' ? fcas_lightbox_version_ac() : ''}`;}
+
 injetarScriptHomeAA(false, function(){
 var controleApiConfig;
 fcasfs_lightbox_config_vincular({
