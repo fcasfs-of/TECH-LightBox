@@ -1,4 +1,4 @@
-const listaComponentes_formsts = ["list", "table", "playlist", "carrossel", "form", "map", "slideshow", "grafico", "pdf", "link", "texto", "image", "svg", "contact", "product", "dashboard", "audio", "video", "PList", "timeline", "BlogCard", "plans", "3DText", "Ad", "VirtualCard", "VirtualCreditCard", "Profile", "Sorteio", "Participants", "Calendar", "treeview", "mindmap", "feedback", "searchbar", "review", "coupon", "banner", "faq", "testimonials", "gallery", "chat", "leaderboard", "agenda", "fichas", "tarefas", "historico", "changelog"];
+const listaComponentes_formsts = ["list", "table", "playlist", "carrossel", "form", "map", "slideshow", "grafico", "pdf", "link", "texto", "image", "svg", "contact", "product", "dashboard", "audio", "video", "PList", "timeline", "BlogCard", "plans", "3DText", "Ad", "VirtualCard", "VirtualCreditCard", "Profile", "Sorteio", "Participants", "Calendar", "treeview", "mindmap", "feedback", "searchbar", "review", "coupon", "banner", "faq", "testimonials", "gallery", "chat", "leaderboard", "agenda", "fichas", "tarefas", "historico", "changelog", "notepad", "journal"];
 
 function fcas_lightbox_generarListaSuportados(opcoes) { if (!opcoes) { return ""; } var lista = opcoes.lista; var separador = opcoes.separador; var ordemAlfabetica = opcoes.ordemAlfabetica; if (!lista || !Array.isArray(lista) || lista.length === 0) { return ""; } if (separador === undefined || separador === null || separador === "") { separador = ", "; } else if (String(separador).slice(-1) !== " ") { separador = separador + " "; } var listaFinal = lista.slice(); if (ordemAlfabetica) { listaFinal.sort(function(a, b) { return String(a).localeCompare(String(b)); }); } return listaFinal.join(separador); }
 function fcas_lightbox_verificarTexto(texto) { return (texto && texto.trim() !== "") ? texto : ""; }
@@ -67,6 +67,8 @@ window.getDocData = function(fdd) {
                 ['Configuração para tipo: "carrossel"', 'Suporta as chaves de controle do slider de mídia: tema (dark,light), transicao (slide,fade), posicaoDots (bottom), estiloDots (bolas,linhas,barras), intervalo (número), exibirControles, exibirDots, autoPlay (booleanos).'],
                 ['Configuração para tipo: "grafico"', 'Suporta as chaves de renderização estatística: tema, orientacao (vertical ou horizontal), modelo (linha, pizza, barras), exibirValores, exibirTooltips (booleanos), larguraBarra, raioCurva (números).'],
                 ['Configuração para tipo: "pdf"', 'Suporta o controle de foco do documento: page (número).'],
+                ['Configuração para tipo: "notepad"', 'Suporta as chaves de estilização direta: italic, negrito, upper, lower (booleanos), fontSize (número), textAlign (center,right,left,justify).'],
+                ['Configuração para tipo: "journal"', 'Suporta o controle de foco do documento: page (número).'],
                 ['Configuração para tipo: "image"', 'Suporta o controle de ampliação visual: scale (booleano), fit ("fill", "contain", "cover", "none", "scale-down").'],
                 ['Configuração para tipo: "svg"', 'Suporta o controle de cor de vetores inline: fill, stroke (strings - não funcionam se o SVG for carregado via link externo/URL), scale (booleano).'],
                 ['Configuração para tipo: "map"', 'Suporta as chaves de dados: modelo [Aceita as opções: (padrao, brasil, portugal, mundo, argentina, eua, angola, italia, espanha, franca, mexico, japao, chile, australia, canada, china, alemanha, india, uruguai, russia, reino_unido, africa_do_sul, colombia, peru, venezuela, mocambique, egito, marrocos, nigeria, quenia, turquia, saudi_arabia, indonesia, coreia_do_sul, nova_zelandia, grecia, holanda, suiça, suecia, noruega, finlandia, ucrania) ou um caminho SVG customizado (\'M...\').], locais (array de objetos contendo nome, x, y, cor [código hex] e formato [circle, square]).'],
@@ -83,6 +85,8 @@ window.getDocData = function(fdd) {
                 ['slideshow', 'Recebe um array de objetos contendo as chaves de caminhos e descrições: [ { url: "", caption: "" } ]'],
                 ['Playlist', 'Recebe um array de objetos contendo as chaves de dados visuais e hiperlinks: [ { titulo: "", subtitulo: "", thumbnail: "", href: "" } ]'],
                 ['texto', 'Recebe uma string simples contendo o texto normal.'],
+                ["notepad", "Recebe uma string simples contendo o texto normal."],
+                ["journal", "Recebe um array de textos (cada item vira uma página)."],
                 ['Tabela', 'Recebe um array contendo coleções de objetos estruturados com suas respectivas chaves e valores dinâmicos: [] dentro um objeto com keys e valores.'],
                 ['Lista', 'Recebe um array de strings tradicionais contendo os itens sequenciais: [].'],
                 ['audio', 'Recebe uma string contendo o link ou caminho URL direto do arquivo de áudio.'],
@@ -193,6 +197,8 @@ window.getDocData = function(fdd) {
                 ['Configuration for type: "carrossel"', 'Properties: tema (dark,light), transicao (slide,fade), posicaoDots (bottom), estiloDots (bolas,linhas,barras), intervalo (number), exibirControles, exibirDots, autoPlay (booleans).'],
                 ['Configuration for type: "grafico"', 'Properties: tema, orientacao (vertical or horizontal), modelo (linha, pizza, barras), exibirValores, exibirTooltips (boolean), larguraBarra, raioCurva (numbers).'],
                 ['Configuration for type: "pdf"', 'Properties: page (number).'],
+                ['Configuration for type: "notepad"', 'Properties: italic, negrito, upper, lower (booleans), fontSize (number), textAlign (center,right,left,justify).''],
+                ['Configuration for type: "journal"', 'Properties: page (number).'],
                 ['Configuration for type: "image"', 'Properties: scale (boolean), fit ("fill", "contain", "cover", "none", "scale-down").'],
                 ['Configuration for type: "svg"', 'Supports color control for inline vectors: fill, stroke (strings - do not work if the SVG is loaded via external link/URL), scale (boolean).'],
                 ['Configuration for type: "map"', 'Accepts an object with data keys: modelo [Accepts options: (padrao, brasil, portugal, mundo, argentina, eua, angola, italia, espanha, franca, mexico, japao, chile, australia, canada, china, alemanha, india, uruguai, russia, reino_unido, africa_do_sul, colombia, peru, venezuela, mocambique, egito, marrocos, nigeria, quenia, turquia, saudi_arabia, indonesia, coreia_do_sul, nova_zelandia, grecia, holanda, suiça, suecia, noruega, finlandia, ucrania) or a custom SVG path (\'M...\').], locais (array of objects containing nome, x, y, cor [hex code], and formato [circle, square]).'],
@@ -209,6 +215,8 @@ window.getDocData = function(fdd) {
                 ['slideshow', 'Accepts an array of objects carrying media paths and string text captions: [ { url: "", caption: "" } ]'],
                 ['Playlist', 'Accepts an array of objects tracking graphic data and target navigation anchors: [ { titulo: "", subtitulo: "", thumbnail: "", href: "" } ]'],
                 ['texto', 'Accepts a clean and standard flat string payload: normal text string.'],
+                ["notepad", "Accepts a clean and standard flat string payload: normal text string."],
+                ["journal", "Receives an array of texts (each item becomes a page)."],
                 ['Table', 'Accepts an array structure mapping collection sets of dynamic objects: [] containing an object with keys and values.'],
                 ['List', 'Accepts a sequential collection array listing text strings: [].'],
                 ['audio', 'Accepts a destination path string referencing an audio asset source file location: link.'],
