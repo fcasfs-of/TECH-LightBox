@@ -197,7 +197,7 @@ window.getDocData = function(fdd) {
                 ['Configuration for type: "carrossel"', 'Properties: tema (dark,light), transicao (slide,fade), posicaoDots (bottom), estiloDots (bolas,linhas,barras), intervalo (number), exibirControles, exibirDots, autoPlay (booleans).'],
                 ['Configuration for type: "grafico"', 'Properties: tema, orientacao (vertical or horizontal), modelo (linha, pizza, barras), exibirValores, exibirTooltips (boolean), larguraBarra, raioCurva (numbers).'],
                 ['Configuration for type: "pdf"', 'Properties: page (number).'],
-                ['Configuration for type: "notepad"', 'Properties: italic, negrito, upper, lower (booleans), fontSize (number), textAlign (center,right,left,justify).''],
+                ['Configuration for type: "notepad"', 'Properties: italic, negrito, upper, lower (booleans), fontSize (number), textAlign (center,right,left,justify).'],
                 ['Configuration for type: "journal"', 'Properties: page (number).'],
                 ['Configuration for type: "image"', 'Properties: scale (boolean), fit ("fill", "contain", "cover", "none", "scale-down").'],
                 ['Configuration for type: "svg"', 'Supports color control for inline vectors: fill, stroke (strings - do not work if the SVG is loaded via external link/URL), scale (boolean).'],
