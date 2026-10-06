@@ -370,7 +370,7 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
                 if (optiy.poster && optiy.poster != "") {   start_fs_postermpl = optiy.poster;   }
                 start_fs_mpl = {
                     iscll:function(meuPlayerCustomizado, id){
-                       fcas_lightbox_bindVisualizerToAudio(meuPlayerCustomizado, fcas_lightbox_audioVisualizer("oframe"+id, { color: 'linear-gradient(to top, #fff, #ccc)', barCount: 40, speed: 80 }));
+                       fcas_lightbox_bindVisualizerToAudio(meuPlayerCustomizado, fcas_lightbox_audioVisualizer("oframe"+id, { color: 'linear-gradient(to top, #fff, #ccc)', barCount: 36, speed: 98 }));
 					},
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
