@@ -369,6 +369,10 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
                 var tlafn_odslight=fcas_lightbox_checkValueEX(optiy,"config","Lang","en");    if(fcas_lightbox_checkValueEX(optiy,"config","OSD_Lang","")!=""){tlafn_odslight=fcas_lightbox_checkValueEX(optiy,"config","OSD_Lang","en");}
                 if (optiy.poster && optiy.poster != "") {   start_fs_postermpl = optiy.poster;   }
                 start_fs_mpl = {
+                    iscll:function(meuPlayerCustomizado, id){
+                       var fcas_lightbox_audio_plvisualizer = fcas_lightbox_audioVisualizer("oframe"+id, { color: 'linear-gradient(to top, #fff, #ccc)', barCount: 30, speed: 90 });
+                       fcas_bindVisualizerToAudio(meuPlayerCustomizado, fcas_lightbox_audio_plvisualizer);
+					},
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
                     autoplay:""+fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","autoplay",false)) || "0",
@@ -406,6 +410,7 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
                 else if(optiy.type == "youtube") {  start_is_player0j="https://www.youtube.com/watch?v="+optiy.context;  }
                 if (optiy.poster && optiy.poster != "") {   start_fs_postermpl = optiy.poster;   }
                 start_fs_mpl = {
+                    iscll:function(){},
                     OSD: fcas_lightbox_checkValueEX(optiy,"config","OSD",false),
                     config: {
                     autoplay:""+fsmodal_booleanToNumber(fcas_lightbox_checkValueEX(optiy,"config","autoplay",false)) || "0",
@@ -469,6 +474,10 @@ lightboxPLclos=function(){  if(dstart_fs_mpl.id && dstart_fs_mpl.id!="" && docum
 lightboxPLcloapis=function() {    if (mfplayeri){  mfplayeri.api("stop");  }   }
 mfplayeri.OnEvents("ui",function(){  });
 mfplayeri.OnEvents("init",function(){  
+if (typeof dstart_fs_mpl.iscll === 'function') {
+	dstart_fs_mpl.iscll(mfplayeri, dstart_fs_mpl.id);
+}
+
 if(dstart_fs_mpl.stretch && dstart_fs_mpl.stretch=="1"){  mfplayeri.api('stretch',1);      }
 
 if(dstart_fs_mpl.config.autoplay && dstart_fs_mpl.config.autoplay=="1"){     }
