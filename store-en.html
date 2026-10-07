@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   
+<script src="https://lightbox.fcasfs-of.cloud-fs.net/app/core.js"></script>
  <link href='favicon.png' rel='icon' type='image/png'/>
 
 <script src="store/list.js"></script>
@@ -28,7 +29,7 @@
   
 <header class="lbxx">
   <div class="dname">
-    <h1><span class="icon"></span>Lightbox - Miscellaneous Content</h1>
+    <h1><span class="icon"></span>Lightbox - Miscellaneous Content <br/> <div id="app_versiondisplay" style="text-align: left;margin-left: 3px;margin-right: 4px;  font-size: clamp(0.85rem,1.8vw,0.95rem);  color: #0254a3; font-weight: 600;"></div></h1>
   </div>
   
 <div id="container-projetos" class="nav-menu"></div>
@@ -43,6 +44,9 @@
 <script>
   if(configGlobal){   configGlobal.idiomaManual = "en";   }
 renderizarVitrineProjetos("container-projetos");
+
+window.addEventListener('load', function(){   const target_verappsdd=document.getElementById('app_versiondisplay');if(target_verappsdd){target_verappsdd.innerHTML=`${typeof fcas_lightbox_version_ac === 'function' ? `<br/> ${fcas_lightbox_version_ac()}` : ''}`;}  });
+
 </script>
 
 </body>
