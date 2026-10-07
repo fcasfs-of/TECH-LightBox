@@ -664,7 +664,7 @@ else if (optincludeplayer === "yes" && is_player0j === "yes") {   function mfpla
 adultlightboxPLclayer_modiuu_call();
 
 
-if (close_fsmofla_strdd === true) {          }
+if (close_fsmofla_strdd === true) {          }  
 			
 if (optiy.scroll_hide && optiy.scroll_hide == "yes") {    fcasfs_lightbox_alternarScrollBody(true);    }
         }
