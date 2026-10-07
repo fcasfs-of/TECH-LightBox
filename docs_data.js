@@ -9,6 +9,7 @@ function fcas_lightbox_verificaranalisar(lista, idioma) { var c = 0; for (var i 
 window.getDocData = function(fdd) {
     return {
         pt: {
+            versoes: { "2.0.1.6": { data: "", logs: [ { tipo: "melhoria", texto: "Melhorias de Desempenho e Otimização." } ] }  },
             demoUrl: "/",
             title: "Lightbox - Conteúdos Diversos",
             subtitle: "Documentação Técnica",
@@ -139,6 +140,7 @@ window.getDocData = function(fdd) {
             ]
         },
         en: {
+            versoes: { "2.0.1.6": { data: "", logs: [ { tipo: "improvement", texto: "Performance Improvements and Optimization." } ] }  },
             demoUrl: "/en",
             title: "Lightbox - Diverse Contents",
             subtitle: "Technical Documentation",
