@@ -655,7 +655,7 @@ fcasfs_lightbox_def_injetarScriptBody({
 
 }
 
- if (optincludeplayer != "yes" && is_player0j === "yes") {     	 var momocsifiddpsl = document.getElementById("preview_pls");  if (momocsifiddpsl) {    momocsifiddpsl.innerHTML=fcas_lightbox_aviso_pl(fcas_lightbox_checkValueEX(optiy.content,"config","Lang","en") || "en");     }    }
+ if (optincludeplayer === "no" && is_player0j === "yes") {     	 var momocsifiddpsl = document.getElementById("preview_pls");  if (momocsifiddpsl) {    momocsifiddpsl.innerHTML=fcas_lightbox_aviso_pl(fcas_lightbox_checkValueEX(optiy.content,"config","Lang","en") || "en");     }    }
  if (optincludeplayer === "yes" && is_player0j === "yes") {   function mfplayeridd(){  if (typeof loaded_playerinf === "function"){ loaded_playerinf({}, start_fs_mpl); }  }     mfplayeridd();	}   
   if(is_player0j === "pdf") {    mfplayeridd();  }
 
