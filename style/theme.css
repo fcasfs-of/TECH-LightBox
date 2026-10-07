@@ -393,7 +393,7 @@ header .dname *, header nav, header nav *, .lbxx * { transition: all 0.1s; }
  header .dname h1 {  margin-bottom: 0px;    display: inline-block;  }
 
 
-header .dname .icon { 
+header .dname .icon, .iconapps { 
     display: inline-block !important; 
     vertical-align: middle; 
     flex-shrink: 0;
