@@ -407,7 +407,7 @@ header .dname .icon, .iconapps {
     pointer-events: none;   user-select: none;
     }
 
-header .dname .icon::before {     pointer-events: none;   user-select: none;  }
+header n::before {     pointer-events: none;   user-select: none;  }
 
 
 @media (max-width: 768px) {
@@ -422,7 +422,7 @@ header .dname .icon::before {     pointer-events: none;   user-select: none;  }
     padding: 12px;
   }
 
-    .header .dname .icon {
+    .header .dname .icon, .iconapps {
         width: 60px !important;      
         height: 60px !important;
         margin-right: 0px;
