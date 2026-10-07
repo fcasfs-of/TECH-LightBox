@@ -15,8 +15,10 @@
   <link media="all" rel="stylesheet" href="style/theme.css" />
 
   <style>
-    :root{--primary-color:#0066cc;--primary-hover:#0052a3;--text-color:#1d1d1f;--bg-color:#f5f5f7}
-    .lbxx-footer-container .btn{display:inline-block;background-color:var(--primary-color);color:#ffffff;text-decoration:none;padding:14px 28px;border-radius:8px;font-weight:500;font-size:1rem;transition:background-color .2s ease,transform .1s ease;width:auto}@media(max-width:480px){.lbxx-footer-container .btn{width:100%;padding:16px}}
+.lbxx-footer-container .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background-color:#1e3a8a;color:#ffffff;text-decoration:none;padding:12px 24px;border-radius:8px;font-weight:500;font-size:1rem;transition:background-color .1s linear,transform .1s linear;text-align:center;box-sizing:border-box;margin:8px}
+.lbxx-footer-container .btn:hover{background-color:#1d4ed8}
+.lbxx-footer-container .btn svg{width:1.25rem;height:1.25rem;stroke:currentColor;fill:currentColor;flex-shrink:0}
+@media(max-width:480px){.lbxx-footer-container .btn{display:flex;width:calc(100% - 16px);padding:14px;margin:8px auto}}
  .nav-menu, .nav-menu *, #modaltech-1002, #modal-1002, #modaltech-1002 *, #modal-1002 * {   transition: all 0.1s linear !important;     }
   </style>
   
@@ -32,7 +34,8 @@
 <div id="container-projetos" class="nav-menu"></div>
 
   <div class="lbxx-footer-container">
-   <a href="/en" class="btn">Return to the Home Page</a>
+   <a href="/en" class="btn"><svg width="32px" height="32px" viewBox="0 0 32 32">  <rect id="Rectangle_56" data-name="Rectangle 56" width="4" height="8" transform="translate(8 4)"/>  <rect id="Rectangle_57" data-name="Rectangle 57" width="24" height="4" transform="translate(4 8)"/>  <path id="Path_112" data-name="Path 112" d="M30,0H2A2,2,0,0,0,0,2V30a2,2,0,0,0,2,2H30a2,2,0,0,0,2-2V2A2,2,0,0,0,30,0ZM28,27a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V5A1,1,0,0,1,5,4H28V27Z"/></svg>  Go to the home page</a>
+   <a href="/doc-en" class="btn"><svg viewBox="0 0 32 32" enable-background="new 0 0 32 32" xml:space="preserve"><polygon fill="none" stroke-width="2" stroke-miterlimit="10" points="25,28 7,28 7,4 19,4 25,10 "/><polyline fill="none" stroke-width="2" stroke-miterlimit="10" points="19,4 19,10 25,10 "/><rect x="11" y="21" width="10" height="2"/><rect x="11" y="17" width="10" height="2"/><rect x="11" y="13" width="10" height="2"/></svg>  Go to the documentation page</a>
   </div>
 </header>
 <br/><br/>
