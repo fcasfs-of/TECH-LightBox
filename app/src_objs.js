@@ -4,7 +4,7 @@ function fcas_lightbox_objs_creates(fcasfs_lightbox_baseUrl, ddd, optiy, app, kl
 if(ddd && ddd=="yes"){
 fsmodal_createdd = '<div class="loader-container">  <div class="classic-spinner"></div>   </div>';    fsmodafdl_createdd='<div id="fs_lightbox_lader" class="loader-container">  <div class="classic-spinner"></div>   </div>';
 }
-var fsmodal_createWi_infiio = "";   var fsmodal_creddateWi_infiio = "";
+var fsmodal_createWi_infiio = "";   var fsmodal_creddateWi_infiio = "";   var fsmodal_create_desci = ""; 
 var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd = "";     dcurrent_id = 0;    is_player0j = "no";     start_fs_mpl = {};       start_fs_postermpl = "";
 if(opdd && opdd!=""){   fsmodal_createWi_infiio = opdd;      }
 if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_creddateWi_infiio = "yes";    }
