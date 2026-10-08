@@ -3,7 +3,7 @@ if(ddd && ddd=="yes"){
 fsmodal_createdd = '<div class="loader-container">  <div class="classic-spinner"></div>   </div>';    fsmodafdl_createdd='<div id="fs_lightbox_lader" class="loader-container">  <div class="classic-spinner"></div>   </div>';
 }
 var fsmodal_createWi_infiio = "";   var fsmodal_creddateWi_infiio = "";
-var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd = "";     dcurrent_id = 0;     is_player0j = "no";     start_fs_mpl = {};       start_fs_postermpl = "";
+var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd = "";     dcurrent_id = 0;    var is_player0j = "no";     var start_fs_mpl = {};       var start_fs_postermpl = "";
 if(opdd && opdd!=""){   fsmodal_createWi_infiio = opdd;      }
 if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_creddateWi_infiio = "yes";    }
 
@@ -17,7 +17,7 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
             if(optiy.context!=""){  fsmodal_create_ifir = optiy.context;  }
             if (Array.isArray(optiy.context)) {   fsmodal_create_ifir="";  }
 			
-            if (app && app == "yes" && optiy.type && optiy.type == "id") {
+            if (app && app == "yes" && optiy.type && optiy.type == "id"  && typeof fcasfs_lightbox_def_icriarLink === "function") {
                 is_player0j = "no";
                 var start_fs_mpl_affrgs = "";   var start_fs_mplddd_argsdfd = "true";     var start_fs_mpl_argsdfd = "";        var stdart_fs_mpl_argsfdff = "";  var stdart_fs_mpl_argsfd = "";
                 if (optiy.view && optiy.view == "info") {  start_fs_mplddd_argsdfd="false";   start_fs_mpl_affrgs = "on";
