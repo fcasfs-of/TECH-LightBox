@@ -293,8 +293,8 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
         fsmodadfdl_createdd = fsmodal_createdd;    return fsmodadfdl_createdd;   }
 return fsmodadfdl_createdd;    },
 
-ht: function (dofd, fcasfs_lightbox_baseUrl) {   var dffcas_lightbox_objs_htmm="";   if(dofd){  
-dffcas_lightbox_objs_htmm = fcas_lightbox_objs_creates(fcasfs_lightbox_baseUrl, dofd.value, dofd.obj, dofd.player, dofd.id, dofd.app, dofd.check, dofd.barsAudio);    
+htm: function (fdf, dofd, fcasfs_lightbox_baseUrl) {   var dffcas_lightbox_objs_htmm="";   if(dofd && typeof fdf === "function"){  
+dffcas_lightbox_objs_htmm = fdf(fcasfs_lightbox_baseUrl, dofd.value, dofd.obj, dofd.player, dofd.id, dofd.app, dofd.check, dofd.barsAudio);    
 return dffcas_lightbox_objs_htmm;     }    return dffcas_lightbox_objs_htmm;     }
 
 };
