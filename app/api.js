@@ -295,14 +295,15 @@ scrcontedfddd.innerHTML = "";   scrcontedfddd.id=optiy.id;
 scrcontedfddd.setAttribute("src_id", ""+num_fsmodal_open);   scrcontedfddd.setAttribute("src_type", ""+optiy.content.type || "none");
 scrcontedfddd.setAttribute("src_ul", ""+optincludeplayider_url);  
 document.getElementsByTagName("body")[0].appendChild(scrcontedfddd);    
-
+var fcaslightconetxndif="";
+		
 var momocsifipsl = document.getElementById(optiy.id);
 if (momocsifipsl) {
 momocsifipsl.innerHTML='';
 lightboxPLclayer_adfffultmodiuu=function(){   lightboxPLclayer_adultmodiuu("no");   };
 adultlightboxPLclayer_modiuu=function(){  lightboxPLclayer_adultmodiuu("yes");    addultlightboxPLclayer_modiuu_call(fcaslightconetxndif);   adultlightboxPLclayer_modiuu_call();   };
 
-var fcaslightconetxndif="";
+fcaslightconetxndif="";
 if(typeof fcas_lightbox_objs_htmm === "function") {   
 fcaslightconetxndif=fcas_lightbox_objs_htmm({ value: momocsifipsl_chd, obj: optiy.content, player: `${optiy.include ? optiy.include.player : ""}`, id: optiy.id, app: `TECH LightBox${typeof fcas_lightbox_version_ac === 'function' ? `: ${fcas_lightbox_version_ac()}` : ''}`, check: fcasfs_lightbox_baseTk_ch, barsAudio: (optiy && optiy.include && optiy.include.player === "yes" && optiy.include.plugin && optiy.include.plugin.AudioVisualizer === true) ? true : false }, fcasfs_lightbox_baseUrl);
 }
