@@ -239,7 +239,7 @@ var is_player0j = "no";   var fsmodal_createdd = "";    var start_fs_postermpl =
 
 var fcasfs_lightbox_baseTk = "";       var fcasfs_lightbox_baseTk_ch = false;
 fcasfs_lightbox_def_injetarScript({ app: "TECH-LightBox", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-lightbox-def_cr", src: "[URL]/[APP]/[FOLDER]src_def.js", onload: '  fcasfs_lightbox_baseTk = fcas_lightbox_obterToken();    fcasfs_lightbox_baseTk_ch = fcas_lightbox_processarLd();  document.getElementById("[ID]").remove();'  });
-fcasfs_lightbox_def_injetarScript({ app: "TECH-LightBox", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-lightbox-src_objs-api", src: "[URL]/[APP]/[FOLDER]src_objs.js", onload: 'var fsmodal_open=fcafs_lightbox_gerarEvenGLO;  document.getElementById("[ID]").remove();' });
+fcasfs_lightbox_def_injetarScript({ app: "TECH-LightBox", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-lightbox-src_objs-api", src: "[URL]/[APP]/[FOLDER]src_objs.js", onload: 'document.getElementById("[ID]").remove();' });
 
 
 function fcas_lightbox_fsmodal_open(optiy){      const num_fsmodal_open=Math.floor(1000+Math.random()*90000);
@@ -419,5 +419,5 @@ feedsfsmodal_create_runa();
 if(feedsfsmodal_create_runasfd===true){  return { close: feedsfsmodal_create, open: feedsfsmodal_create_runa  };  }
 }
 
-//var fsmodal_open=fcafs_lightbox_gerarEvenGLO;
+var fsmodal_open=fcafs_lightbox_gerarEvenGLO;
 
