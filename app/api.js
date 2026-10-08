@@ -686,5 +686,5 @@ feedsfsmodal_create_runa();
 if(feedsfsmodal_create_runasfd===true){  return { close: feedsfsmodal_create, open: feedsfsmodal_create_runa  };  }
 }
 
-var fsmodal_open=fcafs_lightbox_gerarEvenGLO;
+const fsmodal_open=function(optiy){  fcafs_lightbox_gerarEvenGLO(optiy);  };
 
