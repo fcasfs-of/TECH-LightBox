@@ -25,6 +25,7 @@ fcasfs_lightbox_def_injetarEstilo({
 });
 
 
+fcasfs_lightbox_def_injetarScript({ app: "TECH-LightBox", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-lightbox-src_objs-api", src: "[URL]/[APP]/[FOLDER]src_objs.js", onload: ' fcasfs_lightbox_def_icriarLONBD();   document.getElementById("[ID]").remove();' });
 fcasfs_lightbox_def_injetarScript({ app: "TECH-LightBox", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-lightbox-pdf-core", src: "[URL]/[APP]/[FOLDER]pdf.js", onload: 'document.getElementById("[ID]").remove();'  });
 fcasfs_lightbox_def_injetarScript({ app: "TECH-LightBox", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-lightbox-core", src: "[URL]/[APP]/[FOLDER]core.js", onload: 'document.getElementById("[ID]").remove();' });
 fcasfs_lightbox_def_injetarScript({ app: "TECH-Free", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-player-core", src: "[URL]/[APP]/[FOLDER]core.js", onload: 'document.getElementById("[ID]").remove();'});
@@ -178,9 +179,6 @@ function convertDurationtoSecondsR(duration){
 
 
 var feedsfsmodal_create=function(){};
-
-fcasfs_lightbox_def_injetarScript({ app: "TECH-LightBox", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-lightbox-src_objs-api", src: "[URL]/[APP]/[FOLDER]src_objs.js", onload: 'fcasfs_lightbox_def_icriarLONBD();   document.getElementById("[ID]").remove();' });
-
 
 function playerfs_osf_evensdef(eventsList, lang = "pt", plobf,timf,kk){    if(plobf){    registerPlayerOSDEvents(plobf, eventsList, lang || "pt", timf,"absolute",kk || "top-center");    }    }
 
