@@ -560,7 +560,7 @@ var momocsifipsl = document.getElementById(optiy.id);
 if (momocsifipsl) {
 momocsifipsl.innerHTML='';
 lightboxPLclayer_adfffultmodiuu=function(){   lightboxPLclayer_adultmodiuu("no");   };
-adultlightboxPLclayer_modiuu=function(){  lightboxPLclayer_adultmodiuu("yes");   var teipacuttempelementocurr="";  const teipacuttempelemento = document.getElementById(fcaslightconetxndif_isntempid_tempodsrt); if (fcaslightconetxndif_isntempid_tempodsrt!="" && teipacuttempelemento) { teipacuttempelementocurr=convertDurationtoSecondsR(teipacuttempelemento.innerHTML)*1000; }   addultlightboxPLclayer_modiuu_call(fcaslightconetxndif,teipacuttempelementocurr);   adultlightboxPLclayer_modiuu_call();   };
+adultlightboxPLclayer_modiuu=function(dddd){  lightboxPLclayer_adultmodiuu("yes");   var teipacuttempelementocurr=""; if (dddd!="" && document.getElementById(dddd)) {  var teipacuttempelemento = document.getElementById(dddd);  teipacuttempelementocurr=convertDurationtoSecondsR(teipacuttempelemento.innerHTML)*1000; }   addultlightboxPLclayer_modiuu_call(fcaslightconetxndif,teipacuttempelementocurr);   adultlightboxPLclayer_modiuu_call();   };
 
 fcaslightconetxndif="";
 if(typeof fcas_lightbox_objs_htmm === "function") {   
@@ -571,7 +571,7 @@ fcaslightconetxndif=fcas_lightbox_objs_htmm({ value: momocsifipsl_chd, obj: opti
 
 var fcaslighdddtconetxndif_isnort= convertDurationtoSecondsR(optiy.duration || "10:00")*1000;
 var fcaslightconetxndif_isnort=fcaslightconetxndif;   var fcaslightconetxndif_isntempfort="";     var fcaslightconetxndif_isntempid_tempodsrt="";
-if (optiy.isAdult && optiy.isAdult===true){     fcaslightconetxndif_isnort=fcafs_lightbox_gerarAvisoConteudoAdulto({age: optiy.age || 18, isAdult:optiy.isAdult, lang: fcas_lightbox_checkValueEX(optiy.content,"config","Lang","en") || "en", onNo:`lightboxPLclayer_adfffultmodiuu();  fsmodal_close('${optiy.id}'${fsmodal_open_closegi});`, onYes:` adultlightboxPLclayer_modiuu(); `});   }
+if (optiy.isAdult && optiy.isAdult===true){     fcaslightconetxndif_isnort=fcafs_lightbox_gerarAvisoConteudoAdulto({age: optiy.age || 18, isAdult:optiy.isAdult, lang: fcas_lightbox_checkValueEX(optiy.content,"config","Lang","en") || "en", onNo:`lightboxPLclayer_adfffultmodiuu();  fsmodal_close('${optiy.id}'${fsmodal_open_closegi});`, onYes:` adultlightboxPLclayer_modiuu("${fcaslightconetxndif_isntempid_tempodsrt}"); `});   }
 
 if (optiy.zoom && optiy.zoom===true){    fsmodal_offpen_tipf_zoomm = fcasfs_lightbox_criarControleZoom('fs_modal_'+optiy.id+'_content', 1, 0.2, 0.5, 2.5);    }
 
