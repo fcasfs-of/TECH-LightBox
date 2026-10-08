@@ -82,18 +82,8 @@ function fcasfs_lightbox_injetarEstiloZoom() { if (!document.getElementById('zoo
 function fcasfs_lightbox_aplicarZoom(id, acao, step, min, max) { const el = document.getElementById(id); if (el) { window.atualZoom = window.atualZoom || 1; if (acao === '+') { window.atualZoom = Math.min(max, window.atualZoom + step); } else if (acao === '-') { window.atualZoom = Math.max(min, window.atualZoom - step); } else if (acao === 'r') { window.atualZoom = 1; } el.style.transform = `scale(${window.atualZoom})`; el.style.transformOrigin = 'top left'; const zoomTexto = Math.round(window.atualZoom * 100) + "%"; lightboxPLclayer_zoommodiuu(zoomTexto); const bTxt = document.getElementById('zoomctrl-info-text'); if (bTxt) bTxt.textContent = zoomTexto; const bP = document.getElementById('zoomctrl-btn-plus'), bM = document.getElementById('zoomctrl-btn-minus'), bR = document.getElementById('zoomctrl-btn-reset'); if (bP) bP.classList.toggle('disabled', window.atualZoom >= max); if (bM) bM.classList.toggle('disabled', window.atualZoom <= min); if (bR) bR.classList.toggle('disabled', window.atualZoom === 1); } }
 function fcasfs_lightbox_criarControleZoom(id, atualZoom, step, min, max) { window.atualZoom = atualZoom || 1; fcasfs_lightbox_injetarEstiloZoom(); const zoomInicial = Math.round(window.atualZoom * 100) + "%"; return `<div class="zoomctrl-box"><button id="zoomctrl-btn-plus" class="zoomctrl-btn${window.atualZoom >= max ? ' disabled' : ''}" onclick="fcasfs_lightbox_aplicarZoom('${id}','+',${step},${min},${max})"><svg class="zoomctrl-ico" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg></button><button id="zoomctrl-btn-minus" class="zoomctrl-btn${window.atualZoom <= min ? ' disabled' : ''}" onclick="fcasfs_lightbox_aplicarZoom('${id}','-',${step},${min},${max})"><svg class="zoomctrl-ico" viewBox="0 0 24 24"><path d="M19 13H5v-2h14v2z"/></svg></button><button id="zoomctrl-btn-reset" class="zoomctrl-btn zoomctrl-btn-reset${window.atualZoom === 1 ? ' disabled' : ''}" onclick="fcasfs_lightbox_aplicarZoom('${id}','r',${step},${min},${max})"><svg class="zoomctrl-ico" viewBox="0 0 24 24"><path d="M12 6v3l4-4-4-4v3c-4.42 0-8 3.58-8 8 0 1.57.46 3.03 1.24 4.26L6.7 14.8c-.45-.83-.7-1.79-.7-2.8 0-3.31 2.69-6 6-6zm6.76 1.74L17.3 9.2c.44.84.7 1.79.7 2.8 0 3.31-2.69 6-6 6v-3l-4 4 4 4v-3c4.42 0 8-3.58 8-8 0-1.57-.46-3.03-1.24-4.26z"/></svg></button><div id="zoomctrl-info-text" class="zoomctrl-info">${zoomInicial}</div></div>`; }
 
-function fcafs_lightboc_cgerenciarUrlParam(action, key, val) {
-  const p = new URLSearchParams(window.location.search);
-  
-  if (action === 'get' || action === 'pegar') return Array.isArray(key) ? key.map(k => (p.get(k) || '').includes('http') ? decodeURIComponent(p.get(k)) : p.get(k) || '') : (p.get(key) || '').includes('http') ? decodeURIComponent(p.get(key)) : p.get(key) || '';
-  if (action === 'getAll' || action === 'pegarTudo') return p.toString();
-  if (action === 'has' || action === 'tem') return p.has(key);
-  if (action === 'set' || action === 'definir') return Array.isArray(key) && Array.isArray(val) ? key.forEach((k, i) => val[i] !== undefined && val[i] !== null && val[i] !== '' ? p.set(k, val[i]) : p.delete(k)) : (val !== undefined && val !== null && val !== '' ? p.set(key, val) : p.delete(key));
-  if (action === 'del' || action === 'deletar') return Array.isArray(key) ? key.forEach(k => p.delete(k)) : p.delete(key);
-  if (action === 'toggle' || action === 'alternar') return p.set(key, p.get(key) === 'true' ? 'false' : 'true');
-  if (action === 'increment' || action === 'incrementar') return p.set(key, (parseInt(p.get(key), 10) || 0) + 1);
-  if (action === 'append' || action === 'adicionar') return Array.isArray(val) ? val.forEach(v => v !== undefined && v !== null && v !== '' && p.append(key, v)) : (val !== undefined && val !== null && val !== '' && p.append(key, val));
-}
+
+if (typeof fcasfs_lightbox_def_icriarLONBD === "function"){   fcasfs_lightbox_def_icriarLONBD();   }
 
 
 function fcas_lightbox_checkValue(config) {
@@ -235,8 +225,6 @@ if(dstart_fs_mpl.OSD==true){   playerfs_osf_evensdef(dstart_fs_mpl.config.OSD_Ev
 var start_fs_mpl = {};     
 function mfplayeridd(){  }     
 var is_player0j = "no";   var fsmodal_createdd = "";    var start_fs_postermpl = "";
-
-if (typeof fcasfs_lightbox_def_icriarLONBD === "function"){   fcasfs_lightbox_def_icriarLONBD();   }
 
 var fcasfs_lightbox_baseTk = "";       var fcasfs_lightbox_baseTk_ch = false;
 fcasfs_lightbox_def_injetarScript({ app: "TECH-LightBox", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-lightbox-def_cr", src: "[URL]/[APP]/[FOLDER]src_def.js", onload: '  fcasfs_lightbox_baseTk = fcas_lightbox_obterToken();    fcasfs_lightbox_baseTk_ch = fcas_lightbox_processarLd();  document.getElementById("[ID]").remove();'  });
