@@ -410,6 +410,14 @@ header .dname .icon, .iconapps {
 header n::before {     pointer-events: none;   user-select: none;  }
 
 
+.nav-menu .cat-group {  overflow: auto;   flex-direction: row; gap: 7px;   justify-content: center;  }
+
+@media(min-width:768px){
+      .nav-menu .cat-group { flex-direction: column; gap: 7px;      width: 100%;        }
+      .nav-menu .cat-group button {  width: 100%;  }
+}
+
+
 @media (max-width: 768px) {
   .lbxx .nav {
     flex-direction: column;
@@ -446,7 +454,7 @@ header n::before {     pointer-events: none;   user-select: none;  }
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 85%;
+  width: 95%;
   box-shadow: 0 4px 20px var(--card-shadow);
   transition: all 0.3s ease;
   overflow: hidden; 
@@ -591,8 +599,6 @@ header n::before {     pointer-events: none;   user-select: none;  }
 
       .dname { flex-direction: column; align-items: stretch; text-align: center; }
       .dname h1 { justify-content: center; }
-      .nav-menu .cat-group { flex-direction: column; gap: 7px;      width: 100%;        justify-content: center; }
-      .nav-menu .cat-group button {  width: 100%;  }
           
       .lbxx nav {     width:100%;    flex-direction: row;         gap: 15px;      }
 
