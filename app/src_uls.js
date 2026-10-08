@@ -1,5 +1,6 @@
 function fcasfs_lightbox_def_icriarLinkr(c) { if (!c || !c.base || !c.app) return ""; let url = c.base + "/" + c.app + (c.folder ? "/" + c.folder : "") + (c.file ? "/" + c.file : ""); if (c.args && typeof c.args === "object") { let p = []; for (let k in c.args) { if (k && c.args[k] !== undefined && c.args[k] !== null && c.args[k] !== "") p.push(k + "=" + c.args[k]); } if (p.length > 0) url += "?" + p.join("&"); } return url; }
 
+
 function fcafs_lightboc_cgerenciarUrlParam(action, key, val) {
   const p = new URLSearchParams(window.location.search);
   
