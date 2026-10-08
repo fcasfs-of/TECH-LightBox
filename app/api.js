@@ -179,7 +179,7 @@ function convertDurationtoSecondsR(duration){
 
 var feedsfsmodal_create=function(){};
 
-fcasfs_lightbox_def_injetarScriptBody({ app: "TECH-LightBox", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-lightbox-src_objs-api", src: "[URL]/[APP]/[FOLDER]src_objs.js", onload: 'document.getElementById("[ID]").remove();' });
+fcasfs_lightbox_def_injetarScript({ app: "TECH-LightBox", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-lightbox-src_objs-api", src: "[URL]/[APP]/[FOLDER]src_objs.js", onload: 'fcasfs_lightbox_def_icriarLONBD();   document.getElementById("[ID]").remove();' });
 
 
 function playerfs_osf_evensdef(eventsList, lang = "pt", plobf,timf,kk){    if(plobf){    registerPlayerOSDEvents(plobf, eventsList, lang || "pt", timf,"absolute",kk || "top-center");    }    }
