@@ -290,11 +290,7 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
             fsmodal_createdd += `<span id="${klf}_boxx" class="tlightboc_fcasfs" style="overflow:auto; padding:6px; margin: 0 auto; width:96%; text-align:center; display:block; color:#fff;">${fsmodal_create_ifir} ${fsmodal_create_desci} <br/><br/><br/><br/></span><br/><br/>`;
         }
         fsmodadfdl_createdd = fsmodal_createdd;    return fsmodadfdl_createdd;   }
-return fsmodadfdl_createdd;    },
-
-htm: function (fdf, dofd, fcasfs_lightbox_baseUrl) {   var dffcas_lightbox_objs_htmm="";   if(dofd && typeof fdf === "function"){  
-dffcas_lightbox_objs_htmm = fdf(fcasfs_lightbox_baseUrl, dofd.value, dofd.obj, dofd.player, dofd.id, dofd.app, dofd.check, dofd.barsAudio);    
-return dffcas_lightbox_objs_htmm;     }    return dffcas_lightbox_objs_htmm;     }
+return fsmodadfdl_createdd;    }
 
 };
 }
