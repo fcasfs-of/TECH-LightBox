@@ -411,12 +411,13 @@ header n::before {     pointer-events: none;   user-select: none;  }
 
 
 
-.nav-menu .cat-group {  overflow: auto;   flex-direction: column; gap: 7px;      width: 100%;        }
-.nav-menu .cat-group button {  width: 100%;  }
+.nav-menu .cat-group {overflow: auto;   flex-direction: row; gap: 7px;   justify-content: center;     width: 100%;        }
+.nav-menu .cat-group button {      flex-shrink: 0;    white-space: nowrap;     }
 
 
 @media (max-width: 768px) {
-.nav-menu .cat-group {   flex-direction: row;   gap: 7px;   justify-content: center;  }
+.nav-menu .cat-group {    flex-direction: column;   gap: 7px;    }
+.nav-menu .cat-group button {       width: 100%;  }
 
 .lbxx .nav {
     flex-direction: column;
