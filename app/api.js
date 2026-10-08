@@ -25,7 +25,6 @@ fcasfs_lightbox_def_injetarEstilo({
 });
 
 
-fcasfs_lightbox_def_injetarScript({ app: "TECH-LightBox", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-lightbox-src_objs-api", src: "[URL]/[APP]/[FOLDER]src_objs.js", onload: 'document.getElementById("[ID]").remove();' });
 fcasfs_lightbox_def_injetarScript({ app: "TECH-LightBox", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-lightbox-pdf-core", src: "[URL]/[APP]/[FOLDER]pdf.js", onload: 'document.getElementById("[ID]").remove();'  });
 fcasfs_lightbox_def_injetarScript({ app: "TECH-LightBox", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-lightbox-core", src: "[URL]/[APP]/[FOLDER]core.js", onload: 'document.getElementById("[ID]").remove();' });
 fcasfs_lightbox_def_injetarScript({ app: "TECH-Free", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-player-core", src: "[URL]/[APP]/[FOLDER]core.js", onload: 'document.getElementById("[ID]").remove();'});
@@ -421,7 +420,5 @@ if(feedsfsmodal_create_runasfd===true){  return { close: feedsfsmodal_create, op
 
 var fsmodal_open=fcafs_lightbox_gerarEvenGLO;
 
-
-document.addEventListener("DOMContentLoaded", function(){ fsmodal_open=fcafs_lightbox_gerarEvenGLO; });
-window.addEventListener('load', function(){ fsmodal_open=fcafs_lightbox_gerarEvenGLO; });
+fcasfs_lightbox_def_injetarScript({ app: "TECH-LightBox", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-lightbox-src_objs-api", src: "[URL]/[APP]/[FOLDER]src_objs.js", onload: 'fsmodal_open=fcafs_lightbox_gerarEvenGLO;  document.getElementById("[ID]").remove();' });
 
