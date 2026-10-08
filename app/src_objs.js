@@ -188,7 +188,7 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
 				var fcas_lightbox_bindVisualizerToAuds=function(){};
 				if (visualaudd && visualaudd===true){
 					fcas_lightbox_bindVisualizerToAuds=function(meuPlayerCustomizado, id){
-                       if(typeof fcas_lightbox_audioVisualizer === "function"{  fcas_lightbox_bindVisualizerToAudio(meuPlayerCustomizado, fcas_lightbox_audioVisualizer("oframe"+id, { color: 'linear-gradient(to top, #fff, #ccc)', barCount: 36, speed: 98 }));    }
+                       if(typeof fcas_lightbox_audioVisualizer === "function"){  fcas_lightbox_bindVisualizerToAudio(meuPlayerCustomizado, fcas_lightbox_audioVisualizer("oframe"+id, { color: 'linear-gradient(to top, #fff, #ccc)', barCount: 36, speed: 98 }));    }
 					};
 				}
                 var tlafn_odslight=fcas_lightbox_checkValueEX(optiy,"config","Lang","en");    if(fcas_lightbox_checkValueEX(optiy,"config","OSD_Lang","")!=""){tlafn_odslight=fcas_lightbox_checkValueEX(optiy,"config","OSD_Lang","en");}
