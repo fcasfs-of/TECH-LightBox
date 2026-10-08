@@ -64,11 +64,13 @@ function fcas_lightboxd_pegarestylevialist(lista, textoAntes) {  if (!lista || !
 
 function fs_lightbox_carregamentoGlobal(momocsifipsl,e,t){}
 
-function fcas_lightbox_objs_htmm (fdf, dofd, fcasfs_lightbox_baseUrl) {   var dffcas_lightbox_objs_htmm="";   if(dofd && typeof fdf === "function"){  
-dffcas_lightbox_objs_htmm = fdf(fcasfs_lightbox_baseUrl, dofd.value, dofd.obj, dofd.player, dofd.id, dofd.app, dofd.check, dofd.barsAudio);    
-return dffcas_lightbox_objs_htmm;     }    return dffcas_lightbox_objs_htmm;     }
+function fcas_lightbox_objs_htmm (dofd, fcasfs_lightbox_baseUrl) {   var dffcas_lightbox_objs_htmm="";  
+if(fcasfs_lightbox_def_iciarLONBD){  if(fcasfs_lightbox_def_iciarLONBD.crea){ 
+ if(dofd && typeof fcasfs_lightbox_def_iciarLONBD.crea === "function"){  
+dffcas_lightbox_objs_htmm = fcasfs_lightbox_def_iciarLONBD.crea(fcasfs_lightbox_baseUrl, dofd.value, dofd.obj, dofd.player, dofd.id, dofd.app, dofd.check, dofd.barsAudio);    
+return dffcas_lightbox_objs_htmm;     }    }  }    return dffcas_lightbox_objs_htmm;     }
 
-if (!fcasfs_lightbox_def_iciarLONBD){   if (typeof fcasfs_lightbox_def_icriarLONBD === "function"){   var fcasfs_lightbox_def_iciarLONBD=fcasfs_lightbox_def_icriarLONBD();   	} }   
+ if (typeof fcasfs_lightbox_def_icriarLONBD === "function"){   var fcasfs_lightbox_def_iciarLONBD=fcasfs_lightbox_def_icriarLONBD();   	}  
 
 function fcas_lightbox_gerarTexto(e){var t=Array.isArray(e)?e.join("\n").trim():(e?e.trim():"");return t?URL.createObjectURL(new Blob([t],{type:"text/plain"})):""}
 function fcas_lightbox_extrairTextoObjeto(e){if(!e||(typeof e==="object"&&Object.keys(e).length===0))return"";return typeof e==="object"?Object.values(e).map(fcas_lightbox_extrairTextoObjeto).filter(Boolean).join("\n"):String(e).trim()}
@@ -295,11 +297,9 @@ lightboxPLclayer_adfffultmodiuu=function(){   lightboxPLclayer_adultmodiuu("no")
 adultlightboxPLclayer_modiuu=function(){  lightboxPLclayer_adultmodiuu("yes");    addultlightboxPLclayer_modiuu_call(fcaslightconetxndif);   adultlightboxPLclayer_modiuu_call();   };
 
 fcaslightconetxndif="";
-if(typeof fcas_lightbox_objs_htmm === "function") {  
-if(fcasfs_lightbox_def_iciarLONBD){  if(fcasfs_lightbox_def_iciarLONBD.crea){  
-fcaslightconetxndif=fcas_lightbox_objs_htmm(fcasfs_lightbox_def_iciarLONBD.crea, { value: momocsifipsl_chd, obj: optiy.content, player: `${optiy.include ? optiy.include.player : ""}`, id: optiy.id, app: `TECH LightBox${typeof fcas_lightbox_version_ac === 'function' ? `: ${fcas_lightbox_version_ac()}` : ''}`, check: fcasfs_lightbox_baseTk_ch, barsAudio: (optiy && optiy.include && optiy.include.player === "yes" && optiy.include.plugin && optiy.include.plugin.AudioVisualizer === true) ? true : false }, fcasfs_lightbox_baseUrl);
-}     }
-}
+if(typeof fcas_lightbox_objs_htmm === "function") {   
+fcaslightconetxndif=fcas_lightbox_objs_htmm({ value: momocsifipsl_chd, obj: optiy.content, player: `${optiy.include ? optiy.include.player : ""}`, id: optiy.id, app: `TECH LightBox${typeof fcas_lightbox_version_ac === 'function' ? `: ${fcas_lightbox_version_ac()}` : ''}`, check: fcasfs_lightbox_baseTk_ch, barsAudio: (optiy && optiy.include && optiy.include.player === "yes" && optiy.include.plugin && optiy.include.plugin.AudioVisualizer === true) ? true : false }, fcasfs_lightbox_baseUrl);
+} 
 
 //var fcaslightconetxndiflink=fcas_lightbox_gerarTexto([fcas_lightbox_extrairTextoObjeto(optiy)]);
 
