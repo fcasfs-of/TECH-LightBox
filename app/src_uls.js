@@ -16,12 +16,12 @@ function fcafs_lightboc_cgerenciarUrlParam(action, key, val) {
 
 
 
-const fcasfs_lightbox_def_icriarLONBD = function() {  return {
-crea: function(fcasfs_lightbox_baseUrl, ddd, optiy, app, klf, opdd,basedTk, visualaudd){    var fsmodadfdl_createdd = '';       fsmodal_createdd = '';     var fsmodafdl_createdd = '';  
+function fcasfs_lightbox_def_icriarLONBD(talkd) {   if(typeof talkd === "function"){
+talkd(function(fcasfs_lightbox_baseUrl, ddd, optiy, app, klf, opdd,basedTk, visualaudd){    var fsmodadfdl_createdd = '';        fsmodal_createdd = '';     var fsmodafdl_createdd = '';  
 if(ddd && ddd=="yes"){
 fsmodal_createdd = '<div class="loader-container">  <div class="classic-spinner"></div>   </div>';    fsmodafdl_createdd='<div id="fs_lightbox_lader" class="loader-container">  <div class="classic-spinner"></div>   </div>';
 }
-var fsmodal_createWi_infiio = "";   var fsmodal_creddateWi_infiio = "";   var fsmodal_create_desci = ""; 
+var fsmodal_createWi_infiio = "";   var fsmodal_creddateWi_infiio = "";    fsmodal_create_desci = ""; 
 var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd = "";     dcurrent_id = 0;    is_player0j = "no";     start_fs_mpl = {};       start_fs_postermpl = "";
 if(opdd && opdd!=""){   fsmodal_createWi_infiio = opdd;      }
 if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_creddateWi_infiio = "yes";    }
@@ -292,8 +292,7 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
             fsmodal_createdd += `<span id="${klf}_boxx" class="tlightboc_fcasfs" style="overflow:auto; padding:6px; margin: 0 auto; width:96%; text-align:center; display:block; color:#fff;">${fsmodal_create_ifir} ${fsmodal_create_desci} <br/><br/><br/><br/></span><br/><br/>`;
         }
         fsmodadfdl_createdd = fsmodal_createdd;    return fsmodadfdl_createdd;   }
-return fsmodadfdl_createdd;    }
-
-};
-}
+return fsmodadfdl_createdd;    });
+	
+}     }
 
