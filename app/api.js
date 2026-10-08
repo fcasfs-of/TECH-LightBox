@@ -304,7 +304,7 @@ adultlightboxPLclayer_modiuu=function(){  lightboxPLclayer_adultmodiuu("yes");  
 
 var fcaslightconetxndif="";
 if(typeof fcas_lightbox_objs_htmm === "function") {   
-fcaslightconetxndif=fcas_lightbox_objs_htmm({ value: momocsifipsl_chd, obj: optiy.content, player: `${optiy.include ? optiy.include.player : ""}`, id: optiy.id, app: `TECH LightBox${typeof fcas_lightbox_version_ac === 'function' ? `: ${fcas_lightbox_version_ac()}` : ''}`, check: fcasfs_lightbox_baseTk_ch, barsAudio: (optiy && optiy.include && optiy.include.player === "yes" && optiy.include.plugin && optiy.include.plugin.AudioVisualizer === true) ? true : false });
+fcaslightconetxndif=fcas_lightbox_objs_htmm({ value: momocsifipsl_chd, obj: optiy.content, player: `${optiy.include ? optiy.include.player : ""}`, id: optiy.id, app: `TECH LightBox${typeof fcas_lightbox_version_ac === 'function' ? `: ${fcas_lightbox_version_ac()}` : ''}`, check: fcasfs_lightbox_baseTk_ch, barsAudio: (optiy && optiy.include && optiy.include.player === "yes" && optiy.include.plugin && optiy.include.plugin.AudioVisualizer === true) ? true : false }, fcasfs_lightbox_baseUrl);
 }
 
 //var fcaslightconetxndiflink=fcas_lightbox_gerarTexto([fcas_lightbox_extrairTextoObjeto(optiy)]);
