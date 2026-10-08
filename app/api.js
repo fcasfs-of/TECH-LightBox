@@ -410,8 +410,7 @@ if (optiy.scroll_hide && optiy.scroll_hide == "yes") {    fcasfs_lightbox_altern
 
 
 
-function fcafs_lightbox_gerarEvenGLO(){
-function fsmodal_open(optiy){  var feedsfsmodal_create_runasfd=true;
+function fcafs_lightbox_gerarEvenGLO(optiy){  var feedsfsmodal_create_runasfd=true;
 if (optiy.isTemporary && optiy.isTemporary===true){   feedsfsmodal_create_runasfd=false;  }
  var feedsfsmodal_create_runa=function(){
 lightboxPLclos_mowaud=function(dd){   if(optiy.onWait && typeof optiy.onWait === 'function'){   optiy.onWait(dd);  }  };	
@@ -419,11 +418,10 @@ fcasfs_lightbox_executarAposTempo({ callback: fcas_lightbox_fsmodal_open, wait: 
 feedsfsmodal_create_runa();
 if(feedsfsmodal_create_runasfd===true){  return { close: feedsfsmodal_create, open: feedsfsmodal_create_runa  };  }
 }
-	
-}
-fcafs_lightbox_gerarEvenGLO();
+
+var fsmodal_open=fcafs_lightbox_gerarEvenGLO;
 
 
-document.addEventListener("DOMContentLoaded", function(){ fcafs_lightbox_gerarEvenGLO(); });
-window.addEventListener('load', function(){ fcafs_lightbox_gerarEvenGLO(); });
+document.addEventListener("DOMContentLoaded", function(){ fsmodal_open=fcafs_lightbox_gerarEvenGLO; });
+window.addEventListener('load', function(){ fsmodal_open=fcafs_lightbox_gerarEvenGLO; });
 
