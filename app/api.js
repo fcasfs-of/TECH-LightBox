@@ -560,7 +560,7 @@ var momocsifipsl = document.getElementById(optiy.id);
 if (momocsifipsl) {
 momocsifipsl.innerHTML='';
 lightboxPLclayer_adfffultmodiuu=function(){   lightboxPLclayer_adultmodiuu("no");   };
-adultlightboxPLclayer_modiuu=function(){  lightboxPLclayer_adultmodiuu("yes");    addultlightboxPLclayer_modiuu_call(fcaslightconetxndif,tempoRestante);   adultlightboxPLclayer_modiuu_call();   };
+adultlightboxPLclayer_modiuu=function(){  lightboxPLclayer_adultmodiuu("yes");   var teipacuttempelementocurr="";  const teipacuttempelemento = document.getElementById("fs_modal_"+optiy.id+"_content_cronometro"); if (teipacuttempelemento) { teipacuttempelementocurr=teipacuttempelemento.innerHTML; }   addultlightboxPLclayer_modiuu_call(fcaslightconetxndif,teipacuttempelementocurr);   adultlightboxPLclayer_modiuu_call();   };
 
 fcaslightconetxndif="";
 if(typeof fcas_lightbox_objs_htmm === "function") {   
