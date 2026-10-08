@@ -64,11 +64,6 @@ function fcas_lightboxd_pegarestylevialist(lista, textoAntes) {  if (!lista || !
 
 function fs_lightbox_carregamentoGlobal(momocsifipsl,e,t){}
 
-function fcas_lightbox_objs_htmm(dofd, fcasfs_lightbox_baseUrl) {   var dffcas_lightbox_objs_htmm="";  
- if(dofd && typeof fcasfs_lightbox_def_icriarLONBD === "function"){  
-dffcas_lightbox_objs_htmm = fcasfs_lightbox_def_icriarLONBD().crea(fcasfs_lightbox_baseUrl, dofd.value, dofd.obj, dofd.player, dofd.id, dofd.app, dofd.check, dofd.barsAudio);    
-return dffcas_lightbox_objs_htmm;     }      return dffcas_lightbox_objs_htmm;     }
-
 function fcas_lightbox_gerarTexto(e){var t=Array.isArray(e)?e.join("\n").trim():(e?e.trim():"");return t?URL.createObjectURL(new Blob([t],{type:"text/plain"})):""}
 function fcas_lightbox_extrairTextoObjeto(e){if(!e||(typeof e==="object"&&Object.keys(e).length===0))return"";return typeof e==="object"?Object.values(e).map(fcas_lightbox_extrairTextoObjeto).filter(Boolean).join("\n"):String(e).trim()}
 
@@ -161,16 +156,16 @@ arrayIntfferno[j]={id:"fcas_lightbox_playerf_"+(j+1),title:arrayInterno[j].title
 }  return arrayIntfferno;  }
 
 
-function convertDurationtoSecondsR(duration){
-    const timhdfff= duration.split(':') || "0";
-    if(timhdfff.length==1){      return Number(timhdfff[0]);
-    }  else if(timhdfff.length==2){
-    return Number(timhdfff[0]) * 60 + Number(timhdfff[1]);
-    }  else{      return Number(timhdfff[0]) * 60 * 60 + Number(timhdfff[1]) * 60 + Number(timhdfff[2]);   }
-}
-
+function convertDurationtoSecondsR(duration){    const timhdfff= duration.split(':') || "0";    if(timhdfff.length==1){      return Number(timhdfff[0]);    }  else if(timhdfff.length==2){    return Number(timhdfff[0]) * 60 + Number(timhdfff[1]);    }  else{      return Number(timhdfff[0]) * 60 * 60 + Number(timhdfff[1]) * 60 + Number(timhdfff[2]);   }   }
 
 var feedsfsmodal_create=function(){};
+
+
+function fcas_lightbox_objs_htmm(dofd, fcasfs_lightbox_baseUrl) {   var dffcas_lightbox_objs_htmm="";  
+ if(dofd && typeof fcasfs_lightbox_def_icriarLONBD === "function"){  
+dffcas_lightbox_objs_htmm = fcasfs_lightbox_def_icriarLONBD().crea(fcasfs_lightbox_baseUrl, dofd.value, dofd.obj, dofd.player, dofd.id, dofd.app, dofd.check, dofd.barsAudio);    
+return dffcas_lightbox_objs_htmm;     }      return dffcas_lightbox_objs_htmm;     }
+
 
 function playerfs_osf_evensdef(eventsList, lang = "pt", plobf,timf,kk){    if(plobf){    registerPlayerOSDEvents(plobf, eventsList, lang || "pt", timf,"absolute",kk || "top-center");    }    }
 
