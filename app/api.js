@@ -407,7 +407,7 @@ if (optiy.scroll_hide && optiy.scroll_hide == "yes") {    fcasfs_lightbox_altern
 }
 
 
-document.addEventListener("DOMContentLoaded", function(){ 
+function fcafs_lightbox_gerarEvenGLO(){
 function fsmodal_open(optiy){  var feedsfsmodal_create_runasfd=true;
 if (optiy.isTemporary && optiy.isTemporary===true){   feedsfsmodal_create_runasfd=false;  }
  var feedsfsmodal_create_runa=function(){
@@ -417,6 +417,10 @@ feedsfsmodal_create_runa();
 if(feedsfsmodal_create_runasfd===true){  return { close: feedsfsmodal_create, open: feedsfsmodal_create_runa  };  }
 }
 	
-});
+}
+fcafs_lightbox_gerarEvenGLO();
 
+
+document.addEventListener("DOMContentLoaded", function(){ fcafs_lightbox_gerarEvenGLO(); });
+window.addEventListener('load', function(){ fcafs_lightbox_gerarEvenGLO(); });
 
