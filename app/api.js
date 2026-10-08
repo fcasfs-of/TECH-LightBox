@@ -25,7 +25,6 @@ fcasfs_lightbox_def_injetarEstilo({
 });
 
 
-fcasfs_lightbox_def_injetarScriptBody({ app: "TECH-LightBox", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-lightbox-src_objs-api", src: "[URL]/[APP]/[FOLDER]src_objs.js", onload: 'document.getElementById("[ID]").remove();' });
 fcasfs_lightbox_def_injetarScript({ app: "TECH-LightBox", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-lightbox-pdf-core", src: "[URL]/[APP]/[FOLDER]pdf.js", onload: 'document.getElementById("[ID]").remove();'  });
 fcasfs_lightbox_def_injetarScript({ app: "TECH-LightBox", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-lightbox-core", src: "[URL]/[APP]/[FOLDER]core.js", onload: 'document.getElementById("[ID]").remove();' });
 fcasfs_lightbox_def_injetarScript({ app: "TECH-Free", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-player-core", src: "[URL]/[APP]/[FOLDER]core.js", onload: 'document.getElementById("[ID]").remove();'});
@@ -129,10 +128,6 @@ if (activedElement) {    activedElement.scrollIntoView({    behavior: 'smooth', 
 function fsmodal_close_aloder() {  var modalEdlement = document.getElementById("fs_lightbox_lader");    if (modalEdlement) {  modalEdlement.remove();  }    }
 
 var adultlightboxPLclayer_modiuu=function(){};
-
-function fcas_lightbox_objs_htmm(dofd, fcasfs_lightbox_baseUrl) {   var dffcas_lightbox_objs_htmm="";   if(dofd){  
-dffcas_lightbox_objs_htmm = fcas_lightbox_objs_creates(fcasfs_lightbox_baseUrl, dofd.value, dofd.obj, dofd.player, dofd.id, dofd.app, dofd.check, dofd.barsAudio);    
-return dffcas_lightbox_objs_htmm;     }    return dffcas_lightbox_objs_htmm;     }
 
 
 function fsmodal_close(id, hide) {  
@@ -413,6 +408,7 @@ if (optiy.scroll_hide && optiy.scroll_hide == "yes") {    fcasfs_lightbox_altern
 }
 
 
+function fcasfs_gerarEFSLightbox() {
 function fsmodal_open(optiy){  var feedsfsmodal_create_runasfd=true;
 if (optiy.isTemporary && optiy.isTemporary===true){   feedsfsmodal_create_runasfd=false;  }
  var feedsfsmodal_create_runa=function(){
@@ -421,5 +417,9 @@ fcasfs_lightbox_executarAposTempo({ callback: fcas_lightbox_fsmodal_open, wait: 
 feedsfsmodal_create_runa();
 if(feedsfsmodal_create_runasfd===true){  return { close: feedsfsmodal_create, open: feedsfsmodal_create_runa  };  }
 }
+}
+
+
+fcasfs_lightbox_def_injetarScriptBody({ app: "TECH-LightBox", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-lightbox-src_objs-api", src: "[URL]/[APP]/[FOLDER]src_objs.js", onload: 'fcasfs_gerarEFSLightbox();  document.getElementById("[ID]").remove();' });
 
 
