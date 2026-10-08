@@ -15,8 +15,8 @@ function fcafs_lightboc_cgerenciarUrlParam(action, key, val) {
 
 
 function fcasfs_lightbox_def_icriarLONBD() { 
-
-function fcas_lightbox_objs_creates(fcasfs_lightbox_baseUrl, ddd, optiy, app, klf, opdd,basedTk, visualaudd){    var fsmodadfdl_createdd = '';      var fsmodal_createdd = '';     var fsmodafdl_createdd = '';  
+return {
+crea :function(fcasfs_lightbox_baseUrl, ddd, optiy, app, klf, opdd,basedTk, visualaudd){    var fsmodadfdl_createdd = '';      var fsmodal_createdd = '';     var fsmodafdl_createdd = '';  
 if(ddd && ddd=="yes"){
 fsmodal_createdd = '<div class="loader-container">  <div class="classic-spinner"></div>   </div>';    fsmodafdl_createdd='<div id="fs_lightbox_lader" class="loader-container">  <div class="classic-spinner"></div>   </div>';
 }
@@ -291,15 +291,11 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
             fsmodal_createdd += `<span id="${klf}_boxx" class="tlightboc_fcasfs" style="overflow:auto; padding:6px; margin: 0 auto; width:96%; text-align:center; display:block; color:#fff;">${fsmodal_create_ifir} ${fsmodal_create_desci} <br/><br/><br/><br/></span><br/><br/>`;
         }
         fsmodadfdl_createdd = fsmodal_createdd;    return fsmodadfdl_createdd;   }
-return fsmodadfdl_createdd;    }
+return fsmodadfdl_createdd;    },
 
-
-function fcas_lightbox_objs_htmm(dofd, fcasfs_lightbox_baseUrl) {   var dffcas_lightbox_objs_htmm="";   if(dofd){  
+ht: function (dofd, fcasfs_lightbox_baseUrl) {   var dffcas_lightbox_objs_htmm="";   if(dofd){  
 dffcas_lightbox_objs_htmm = fcas_lightbox_objs_creates(fcasfs_lightbox_baseUrl, dofd.value, dofd.obj, dofd.player, dofd.id, dofd.app, dofd.check, dofd.barsAudio);    
 return dffcas_lightbox_objs_htmm;     }    return dffcas_lightbox_objs_htmm;     }
 
-
+};
 }
-
-fcasfs_lightbox_def_icriarLONBD();
-
