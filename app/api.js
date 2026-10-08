@@ -130,6 +130,11 @@ function fsmodal_close_aloder() {  var modalEdlement = document.getElementById("
 
 var adultlightboxPLclayer_modiuu=function(){};
 
+function fcas_lightbox_objs_htmm(dofd, fcasfs_lightbox_baseUrl) {   var dffcas_lightbox_objs_htmm="";   if(dofd){  
+dffcas_lightbox_objs_htmm = fcas_lightbox_objs_creates(fcasfs_lightbox_baseUrl, dofd.value, dofd.obj, dofd.player, dofd.id, dofd.app, dofd.check, dofd.barsAudio);    
+return dffcas_lightbox_objs_htmm;     }    return dffcas_lightbox_objs_htmm;     }
+
+
 function fsmodal_close(id, hide) {  
     if (id && id !== "") {   lightboxPLclos_mowaud=function(){};   lightboxPLclayer_zoommodiuu=function(){};    lightboxPLclayer_adultmodiuu=function(){};   lightboxPLclayer_adfffultmodiuu=function(){};    adultlightboxPLclayer_modiuu=function(){};
 if(lightboxPLcloapis){  lightboxPLcloapis();  }	
