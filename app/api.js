@@ -159,14 +159,15 @@ arrayIntfferno[j]={id:"fcas_lightbox_playerf_"+(j+1),title:arrayInterno[j].title
 function convertDurationtoSecondsR(duration){    const timhdfff= duration.split(':') || "0";    if(timhdfff.length==1){      return Number(timhdfff[0]);    }  else if(timhdfff.length==2){    return Number(timhdfff[0]) * 60 + Number(timhdfff[1]);    }  else{      return Number(timhdfff[0]) * 60 * 60 + Number(timhdfff[1]) * 60 + Number(timhdfff[2]);   }   }
 
 var feedsfsmodal_create=function(){};
+var fcas_lightbox_objs_htmm=function(){};
 
 
 if(typeof fcasfs_lightbox_def_icriarLONBD === "function"){
 fcasfs_lightbox_def_icriarLONBD(function(apd){
-function fcas_lightbox_objs_htmm(dofd, fcasfs_lightbox_baseUrl) {   var dffcas_lightbox_objs_htmm="";  
+fcas_lightbox_objs_htmm=function(dofd, fcasfs_lightbox_baseUrl) {   var dffcas_lightbox_objs_htmm="";  
  if(dofd){  
 dffcas_lightbox_objs_htmm = apd(fcasfs_lightbox_baseUrl, dofd.value, dofd.obj, dofd.player, dofd.id, dofd.app, dofd.check, dofd.barsAudio);    
-return dffcas_lightbox_objs_htmm;     }      return dffcas_lightbox_objs_htmm;     }  });
+return dffcas_lightbox_objs_htmm;     }      return dffcas_lightbox_objs_htmm;     };  });
 }
 
 
