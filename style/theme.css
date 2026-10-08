@@ -210,7 +210,7 @@ header .dname *, header nav, header nav *, .lbxx * { transition: all 0.1s; }
 .cat-group {
   display: flex;
   gap: 9px;    flex-wrap: wrap;
-  position: relative; 
+  position: relative;   flex-direction: column; 
   padding-top: 24px;  
 }
 
