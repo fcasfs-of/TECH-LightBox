@@ -1,3 +1,4 @@
+(function(){
 function fcasfs_lightbox_getsiteof(obj){  const h = obj && obj.host && obj.host.trim() ? obj.host.trim() : "", p = obj && obj.protocolo && obj.protocolo.trim() ? obj.protocolo.trim() : "", s = h ? h.split(".")[0].trim() : "", hc = h && h.split(".").length > 1 ? h.split(".").slice(1).join(".").trim() : ""; return { protocolo: p, subdominio: s, hostCompleto: hc, urlCompleta: p && h ? p + h : "" };    }
 function fcasfs_lightbox_criarLinkDoObjeto(d) { if (!d || !d.pagina || !d.pagina.trim()) return ""; var f = function(obj, p) { p = p || ""; var res = []; for (var k in obj) { if (obj.hasOwnProperty(k)) { var n = p ? p + "." + k : k; if (obj[k] && typeof obj[k] === "object") { res = res.concat(f(obj[k], n)); } else { res.push({ k: n, v: obj[k] }); } } } return res; }; var url = "/" + d.pagina.trim(); if (d.arquivo && d.arquivo.trim()) url += "/" + d.arquivo.trim(); var filtro = {}; for (var k in d) { if (["pagina", "arquivo", "hash"].indexOf(k) === -1) filtro[k] = d[k]; } var itens = f(filtro); var params = []; for (var i = 0; i < itens.length; i++) { var item = itens[i]; if (item.v && String(item.v).trim()) { var strV = String(item.v).trim(); var isLnk = strV.indexOf("http://") === 0 || strV.indexOf("https://") === 0; params.push(item.k + "=" + (isLnk ? encodeURIComponent(strV) : strV)); } } if (params.length > 0) url += "?" + params.join("&"); if (d.hash && d.hash.trim()) url += "#" + d.hash.trim(); return url; }
 
@@ -409,7 +410,7 @@ if (optiy.scroll_hide && optiy.scroll_hide == "yes") {    fcasfs_lightbox_altern
 }
 
 
-(function(){
+
 function fsmodal_open(optiy){  var feedsfsmodal_create_runasfd=true;
 if (optiy.isTemporary && optiy.isTemporary===true){   feedsfsmodal_create_runasfd=false;  }
  var feedsfsmodal_create_runa=function(){
@@ -420,5 +421,3 @@ if(feedsfsmodal_create_runasfd===true){  return { close: feedsfsmodal_create, op
 }
 
 })();
-
-
