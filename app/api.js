@@ -419,7 +419,9 @@ if(feedsfsmodal_create_runasfd===true){  return { close: feedsfsmodal_create, op
 }
 }
 
+fcasfs_gerarEFSLightbox();
 
-fcasfs_lightbox_def_injetarScriptBody({ app: "TECH-LightBox", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-lightbox-src_objs-api", src: "[URL]/[APP]/[FOLDER]src_objs.js", onload: 'fcasfs_gerarEFSLightbox();  document.getElementById("[ID]").remove();' });
+
+fcasfs_lightbox_def_injetarScript({ app: "TECH-LightBox", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-lightbox-src_objs-api", src: "[URL]/[APP]/[FOLDER]src_objs.js", onload: 'fcasfs_gerarEFSLightbox();  document.getElementById("[ID]").remove();' });
 
 
