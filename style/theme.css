@@ -209,7 +209,7 @@ header .dname *, header nav, header nav *, .lbxx * { transition: all 0.1s; }
 
 .cat-group {
   display: flex;
-  gap: 9px;          
+  gap: 9px;         justify-content: center;      
   position: relative; 
   padding-top: 24px;  
 }
