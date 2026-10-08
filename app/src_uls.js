@@ -16,7 +16,7 @@ function fcafs_lightboc_cgerenciarUrlParam(action, key, val) {
 
 
 
-function fcasfs_lightbox_def_icriarLONBD() {  return {
+const fcasfs_lightbox_def_icriarLONBD = function() {  return {
 crea: function(fcasfs_lightbox_baseUrl, ddd, optiy, app, klf, opdd,basedTk, visualaudd){    var fsmodadfdl_createdd = '';       fsmodal_createdd = '';     var fsmodafdl_createdd = '';  
 if(ddd && ddd=="yes"){
 fsmodal_createdd = '<div class="loader-container">  <div class="classic-spinner"></div>   </div>';    fsmodafdl_createdd='<div id="fs_lightbox_lader" class="loader-container">  <div class="classic-spinner"></div>   </div>';
