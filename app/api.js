@@ -603,6 +603,10 @@ if (optiy.btnTop && optiy.btnTop===true){   fcasfs_inicializarLightboxScroll({ i
   //fcas_lightbox_create_scroll({ vertical: true, horizontal: true, id: ""+optiy.id+"_boxx", btnRight: "", btnLeft: "", btnUp: "", btnDown: "",  width: 12  });
   //fcas_lightbox_create_scroll({ vertical: true, horizontal: true, id: "fs_modal_"+optiy.id+"", btnRight: fcasfs_lightbox_basescicsn["scroll4"] || "", btnLeft: fcasfs_lightbox_basescicsn["scroll3"] || "", btnUp: fcasfs_lightbox_basescicsn["scroll1"] || "", btnDown: fcasfs_lightbox_basescicsn["scroll2"] || "",  width: 14  });
 
+if (optiy.isTemporary && optiy.isTemporary===true){      
+if(tempoRestante && tempoRestante > 0){ fcasfs_lightbox_iniciarContagemRegressiva("fs_modal_"+optiy.id+"_content_cronometro", tempoRestante);  }
+}
+	
 }
 addultlightboxPLclayer_modiuu_call(fcaslightconetxndif_isnort);
 //momocsifipsl.appendChild(scrcontedd);  
