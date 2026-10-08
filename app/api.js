@@ -161,10 +161,13 @@ function convertDurationtoSecondsR(duration){    const timhdfff= duration.split(
 var feedsfsmodal_create=function(){};
 
 
+if(typeof fcasfs_lightbox_def_icriarLONBD === "function"){
+fcasfs_lightbox_def_icriarLONBD(function(apd){
 function fcas_lightbox_objs_htmm(dofd, fcasfs_lightbox_baseUrl) {   var dffcas_lightbox_objs_htmm="";  
- if(dofd && typeof fcasfs_lightbox_def_icriarLONBD === "function"){  
-dffcas_lightbox_objs_htmm = fcasfs_lightbox_def_icriarLONBD().crea(fcasfs_lightbox_baseUrl, dofd.value, dofd.obj, dofd.player, dofd.id, dofd.app, dofd.check, dofd.barsAudio);    
-return dffcas_lightbox_objs_htmm;     }      return dffcas_lightbox_objs_htmm;     }
+ if(dofd){  
+dffcas_lightbox_objs_htmm = apd(fcasfs_lightbox_baseUrl, dofd.value, dofd.obj, dofd.player, dofd.id, dofd.app, dofd.check, dofd.barsAudio);    
+return dffcas_lightbox_objs_htmm;     }      return dffcas_lightbox_objs_htmm;     }  });
+}
 
 
 function playerfs_osf_evensdef(eventsList, lang = "pt", plobf,timf,kk){    if(plobf){    registerPlayerOSDEvents(plobf, eventsList, lang || "pt", timf,"absolute",kk || "top-center");    }    }
