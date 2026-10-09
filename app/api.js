@@ -7,6 +7,8 @@ function fcasfs_lightbox_def_injetarScript(config) { if (!config || !config.id |
 function fcasfs_lightbox_def_injetarScriptBody(config) { if (!config || !config.id || !config.src || !config.app || config.id.trim() === "" || config.src.trim() === "" || config.app.trim() === "") return; var idTrimmed = config.id.trim(); if (document.getElementById(idTrimmed)) return; var baseUrl = (config.base && config.base.trim() !== "") ? config.base.trim() : ""; var appUrl = config.app.trim(); var folderUrl = (config.folder && config.folder.trim() !== "") ? config.folder.trim() + "/" : ""; var el = document.createElement("script"); el.id = idTrimmed; el.src = config.src.trim().replaceAll("[URL]", baseUrl).replaceAll("[url]", baseUrl).replaceAll("[APP]", appUrl).replaceAll("[app]", appUrl).replaceAll("[FOLDER]", folderUrl).replaceAll("[folder]", folderUrl); if (config.onload && config.onload.trim() !== "") el.setAttribute("onload", config.onload.replaceAll("[id]", el.id).replaceAll("[ID]", el.id)); (document.body || document.getElementsByTagName("body")[0] || document.documentElement).appendChild(el); }
 function fcasfs_lightbox_def_icriarLink(c) { if (!c || !c.base || !c.app) return ""; let url = c.base + "/" + c.app + (c.folder ? "/" + c.folder : "") + (c.file ? "/" + c.file : ""); if (c.args && typeof c.args === "object") { let p = []; for (let k in c.args) { if (k && c.args[k] !== undefined && c.args[k] !== null && c.args[k] !== "") p.push(k + "=" + c.args[k]); } if (p.length > 0) url += "?" + p.join("&"); } return url; }
 
+function fcasfs_lightbox_def_injetarSlinkd(config) { return (!config || !config.src || !config.src.trim()) ? "" : config.src.trim().replaceAll("[URL]", (config.base || "").trim()).replaceAll("[url]", (config.base || "").trim()).replaceAll("[APP]", (config.app || "").trim()).replaceAll("[app]", (config.app || "").trim()).replaceAll("[FOLDER]", config.folder ? config.folder.trim() + "/" : "").replaceAll("[folder]", config.folder ? config.folder.trim() + "/" : ""); }
+
 var fcasfs_lightbox_baseUrl = fcasfs_lightbox_getsiteof({ host: "fcasfs-of.cloud-fs.net", protocolo: "https://" }).urlCompleta;
 
 var fcasfs_lightbox_basescicsn={
@@ -615,7 +617,7 @@ addultlightboxPLclayer_modiuu_call(fcaslightconetxndif_isnort,fcaslighdddtconetx
 //momocsifipsl.appendChild(scrcontedd);  
 //scrcontedfddd.setAttribute("src_base", ""+fcaslightconetxndiflink || "");
 
-lightboxPLclayerff_zoffmodiuu({ size: (optiy && optiy.content && optiy.content.size) ? optiy.content.size : "", link: (optincludeplayider_url) ? optincludeplayider_url : "", id: (num_fsmodal_open) ? num_fsmodal_open : "", tipo: (optiy && optiy.content && optiy.content.type) ? optiy.content.type : "", title: (optiy && optiy.content && optiy.content.title) ? optiy.content.title : "", desc: (optiy && optiy.content && optiy.content.description) ? optiy.content.description : "" });
+lightboxPLclayerff_zoffmodiuu({ size: (optiy && optiy.content && optiy.content.size) ? optiy.content.size : "", link: (optincludeplayider_url) ? fcasfs_lightbox_def_injetarSlinkd({ app: "TECH-LightBox", folder: "", base: fcasfs_lightbox_baseUrl }) + optincludeplayider_url : "", id: (num_fsmodal_open) ? num_fsmodal_open : "", tipo: (optiy && optiy.content && optiy.content.type) ? optiy.content.type : "", title: (optiy && optiy.content && optiy.content.title) ? optiy.content.title : "", desc: (optiy && optiy.content && optiy.content.description) ? optiy.content.description : "" });
 
 lightboxPLclop_mod({ title:""+optiy.content.title || "", tipo:""+optiy.content.type || "none" }); 
 
