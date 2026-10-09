@@ -615,7 +615,7 @@ addultlightboxPLclayer_modiuu_call(fcaslightconetxndif_isnort,fcaslighdddtconetx
 //momocsifipsl.appendChild(scrcontedd);  
 //scrcontedfddd.setAttribute("src_base", ""+fcaslightconetxndiflink || "");
 
-lightboxPLclayerff_zoffmodiuu({ id: (fcas_lightbox_fsmoddcrue) ? fcas_lightbox_fsmoddcrue : "", tipo: (optiy && optiy.content && optiy.content.type) ? optiy.content.type : "", title: (optiy && optiy.content && optiy.content.title) ? optiy.content.title : "", desc: (optiy && optiy.content && optiy.content.description) ? optiy.content.description : "" });
+lightboxPLclayerff_zoffmodiuu({ size: ""+fcafs_lightboc_contarSZH_HTML("fs_modal_" + optiy.id), link: (optincludeplayider_url) ? optincludeplayider_url : "", id: (fcas_lightbox_fsmoddcrue) ? fcas_lightbox_fsmoddcrue : "", tipo: (optiy && optiy.content && optiy.content.type) ? optiy.content.type : "", title: (optiy && optiy.content && optiy.content.title) ? optiy.content.title : "", desc: (optiy && optiy.content && optiy.content.description) ? optiy.content.description : "" });
 
 lightboxPLclop_mod({ title:""+optiy.content.title || "", tipo:""+optiy.content.type || "none" }); 
 
