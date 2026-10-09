@@ -70,7 +70,7 @@ function fcas_lightbox_extrairTextoObjeto(e){if(!e||(typeof e==="object"&&Object
 function fcas_lightbox_bloquearPrint(id, b) { return (id && id!="" && b === true) ? `@media print { #${id} { display: none !important; } }` : ""; }
 function fcas_lightbox_escutarPrint(acoes) { if (acoes && typeof acoes.quandoAparece === 'function' && typeof acoes.quandoSumiu === 'function') { var mq = window.matchMedia('print'); mq.addEventListener('change', function(e) { if (e.matches) { acoes.quandoAparece(); } else { acoes.quandoSumiu(); } }); } }
 
-var lightboxPLclos=function(){};    var lightboxPLcloapis=function(){};   var lightboxPLclos_mowaud=function(){};   var lightboxPLclos_mod=function(){};   var lightboxPLclop_mod=function(){};    var lightboxPLclayer_mod=function(){};     var lightboxPLclayer_adfffultmodiuu=function(){};    var lightboxPLclayer_zoommodiuu=function(){};     var lightboxPLclayer_adultmodiuu=function(){};    var lightboxPLclayer_modiuu=function(){};
+var lightboxPLclos=function(){};    var lightboxPLcloapis=function(){};   var lightboxPLclos_mowaud=function(){};   var lightboxPLclos_mod=function(){};   var lightboxPLclop_mod=function(){};    var lightboxPLclayer_mod=function(){};     var lightboxPLclayer_adfffultmodiuu=function(){};    var lightboxPLclayerff_zoffmodiuu=function(){};   var lightboxPLclayer_zoommodiuu=function(){};     var lightboxPLclayer_adultmodiuu=function(){};    var lightboxPLclayer_modiuu=function(){};
 
 function fcas_lightbox_generateResponsiveFontCSS(config) {  if (!config || !config.font) return ""; const isUrl = config.font.startsWith('http') || config.font.startsWith('//'); const match = isUrl ? config.font.match(/family=([^&:]+)/) : null; const name = match ? decodeURIComponent(match[1]).replace(/\+/g, ' ') : config.font; let cssd = "";  let css = ""; if (isUrl) { cssd += `@import url('${config.font}'); `; } css += ` ${cssd}   #${config.id}, #${config.id} * {  font-family: '${name}', sans-serif !important; `; if (config.weight) { css += `font-weight: ${config.weight} !important; `; } if (config.lineGap) { css += `line-height: ${config.lineGap} !important; `; } if (config.fontSize) { css += `font-size: clamp(14px, 14px + (24 - 14) * ((100vw - 320px) / (1200 - 320)), 24px) !important;`; } css += `} `; return css; }
 
@@ -394,7 +394,7 @@ return fsmodadfdl_createdd;   }
 var adultlightboxPLclayer_modiuu=function(){};
 
 function fsmodal_close(id, hide) {  
-    if (id && id !== "") {   lightboxPLclos_mowaud=function(){};   lightboxPLclayer_zoommodiuu=function(){};    lightboxPLclayer_adultmodiuu=function(){};   lightboxPLclayer_adfffultmodiuu=function(){};    adultlightboxPLclayer_modiuu=function(){};
+    if (id && id !== "") {  lightboxPLclayerff_zoffmodiuu=function(){};    lightboxPLclos_mowaud=function(){};   lightboxPLclayer_zoommodiuu=function(){};    lightboxPLclayer_adultmodiuu=function(){};   lightboxPLclayer_adfffultmodiuu=function(){};    adultlightboxPLclayer_modiuu=function(){};
 if(lightboxPLcloapis){  lightboxPLcloapis();  }	
 
 var botaotopscrr = document.querySelector('.fcas_lightbox_scroll-top-btn');    if (botaotopscrr) {   botaotopscrr.remove();    }
@@ -501,7 +501,7 @@ var fcasfs_lightbox_baseTk = "";       var fcasfs_lightbox_baseTk_ch = false;
 fcasfs_lightbox_def_injetarScript({ app: "TECH-LightBox", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-lightbox-def_cr", src: "[URL]/[APP]/[FOLDER]src_def.js", onload: '  fcasfs_lightbox_baseTk = fcas_lightbox_obterToken();    fcasfs_lightbox_baseTk_ch = fcas_lightbox_processarLd();  document.getElementById("[ID]").remove();'  });
 
 
-function fcas_lightbox_fsmodal_open(optiy){      const num_fsmodal_open=Math.floor(1000+Math.random()*90000);
+function fcas_lightbox_fsmodal_open(optiy){     var fcas_lightbox_fsmoddcrue=optiy.id;   const num_fsmodal_open=Math.floor(1000+Math.random()*90000);
 lightboxPLclos=function(){   };     feedsfsmodal_create=function(){   fsmodal_close(optiy.id, optiy.scroll_hide);    };  
 lightboxPLcloapis=function(){   };
 lightboxPLclos_mod=function(){   if(optiy.onClose && typeof optiy.onClose === 'function'){   optiy.onClose({ title:""+optiy.content.title || "", tipo:""+optiy.content.type || "none" });  }  };
@@ -510,6 +510,7 @@ lightboxPLclayer_mod=function(onh){   if(onh && optiy.onPlayer && typeof optiy.o
 lightboxPLclayer_adultmodiuu=function(onh){   if(onh && optiy.onAdult && typeof optiy.onAdult === 'function'){   optiy.onAdult(onh);  }  };
 lightboxPLclayer_modiuu=function(onh){   if(onh && optiy.onPlayer_Playlist && typeof optiy.onPlayer_Playlist === 'function'){   optiy.onPlayer_Playlist(onh);  }  };
 lightboxPLclayer_zoommodiuu=function(onh){   if(onh && optiy.onZoom && typeof optiy.onZoom === 'function'){   optiy.onZoom(onh);  }  };
+lightboxPLclayerff_zoffmodiuu=function(onh){   if(onh && optiy.onLoad && typeof optiy.onLoad === 'function'){   optiy.onLoad(onh);  }   };
 										   
 start_fs_mpl = {};    fsmodal_createdd = "";    start_fs_postermpl = "";     
 function mfplayeridd(){  }    
@@ -613,6 +614,8 @@ fcasfs_lightbox_iniciarContagemRegressiva("fs_modal_"+optiy.id+"_content_cronome
 addultlightboxPLclayer_modiuu_call(fcaslightconetxndif_isnort,fcaslighdddtconetxndif_isnort);
 //momocsifipsl.appendChild(scrcontedd);  
 //scrcontedfddd.setAttribute("src_base", ""+fcaslightconetxndiflink || "");
+
+lightboxPLclayerff_zoffmodiuu({ id: (fcas_lightbox_fsmoddcrue) ? fcas_lightbox_fsmoddcrue : "", tipo: (optiy && optiy.type) ? optiy.type : "", title: (optiy && optiy.title) ? optiy.title : "", desc: (optiy && optiy.description) ? optiy.description : "" });
 
 lightboxPLclop_mod({ title:""+optiy.content.title || "", tipo:""+optiy.content.type || "none" }); 
 
