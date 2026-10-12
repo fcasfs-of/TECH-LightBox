@@ -498,8 +498,8 @@ function mfplayeridd(){  }
 var is_player0j = "no";   var fsmodal_createdd = "";    var start_fs_postermpl = "";
 
 var fcasfs_lightbox_baseTk = "";       var fcasfs_lightbox_baseTk_ch = false;
-function fcasfs_lightbox_baseTk_intg(){    window.fcasfs_lightbox_baseTk = fcas_lightbox_obterToken();    window.fcasfs_lightbox_baseTk_ch = fcas_lightbox_processarLd(fcasfs_lightbox_baseTk);    }
-fcasfs_lightbox_def_injetarScript({ app: "TECH-LightBox", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-lightbox-def_cr", src: "[URL]/[APP]/[FOLDER]src_def.js", onload: 'fcasfs_lightbox_baseTk_intg();  document.getElementById("[ID]").remove();'  });
+function fcasfs_lightbox_baseTk_intg(){    }
+fcasfs_lightbox_def_injetarScript({ app: "TECH-LightBox", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-lightbox-def_cr", src: "[URL]/[APP]/[FOLDER]src_def.js", onload: 'fcasfs_lightbox_baseTk_intg();    window.fcasfs_lightbox_baseTk = fcas_lightbox_obterToken();    window.fcasfs_lightbox_baseTk_ch = fcas_lightbox_processarLd(fcasfs_lightbox_baseTk);     document.getElementById("[ID]").remove();'  });
 
 
 function fcas_lightbox_fsmodal_open(optiy){     var fcas_lightbox_fsmoddcrue=optiy.id;   const num_fsmodal_open=Math.floor(1000+Math.random()*90000);
