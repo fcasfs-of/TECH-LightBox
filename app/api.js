@@ -472,9 +472,7 @@ if(dstart_fs_mpl.stretch && dstart_fs_mpl.stretch=="1"){  mfplayeri.api('stretch
 
 if(dstart_fs_mpl.config.autoplay && dstart_fs_mpl.config.autoplay=="1"){     }
 
-if (typeof dstart_fs_mpl.iscll === 'function') {
-	dstart_fs_mpl.iscll(mfplayeri, dstart_fs_mpl.id);
-}
+mfplayeri.OnEvents("metadata",function(){   if (typeof dstart_fs_mpl.iscll === 'function') {	if(mfplayeri.api("duration")>=1) {  dstart_fs_mpl.iscll(mfplayeri, dstart_fs_mpl.id);    }   }     });
 
 fcas_lightbox_escutarPrint({
   quandoAparece: function() { if (mfplayeri){     mfplayeri.api("pause");  }    },
