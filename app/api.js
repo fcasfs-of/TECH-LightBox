@@ -498,7 +498,7 @@ function mfplayeridd(){  }
 var is_player0j = "no";   var fsmodal_createdd = "";    var start_fs_postermpl = "";
 
 var fcasfs_lightbox_baseTk = "";       var fcasfs_lightbox_baseTk_ch = false;
-function fcas_lightbox_setAcesso(valoe, valor) { fcasfs_lightbox_baseTk=valoe, fcasfs_lightbox_baseTk_ch = valor; }
+function fcas_lightbox_setAcesso(valoe, valor) { fcasfs_lightbox_baseTk=valoe;  fcasfs_lightbox_baseTk_ch = valor; }
 fcasfs_lightbox_def_injetarScript({ app: "TECH-LightBox", folder: "app", base: fcasfs_lightbox_baseUrl, id: "fcasfs_script-lightbox-def_cr", src: "[URL]/[APP]/[FOLDER]src_def.js", onload: 'fcas_lightbox_setAcesso(fcas_lightbox_obterToken(), fcas_lightbox_processarLd(fcas_lightbox_obterToken()));     document.getElementById("[ID]").remove();'  });
 
 
