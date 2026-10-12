@@ -16,6 +16,6 @@ fcas_lightbox_carregarERemoverScript("https://fcasfs-of.github.io/TECH-LightBox/
 function fcas_lightbox_processarLdu() { return fcasfs_lightbox_baseTk && fcas_lightbox_checkHash(Number(fcasfs_lightbox_baseTk)) ? true : false; }
 
 function fcas_lightbox_pvalidarAcessoCompleto() { if (!(fcas_lightbox_CaalUsre && fcasfs_lightbox_baseTk && fcas_lightbox_checkHash(Number(fcasfs_lightbox_baseTk)))) return false; return fcas_lightbox_ddescriptografarEVerificar(fcas_lightbox_CaalUsre[fcasfs_lightbox_baseTk]) !== '' ? true : false; }
-function fcas_lightbox_processarLd() { return fcas_lightbox_pvalidarAcessoCompleto();   }
+function fcas_lightbox_processarLd() {  if(document.getElementById("fcasfs_script-lightbox-def_cr")){   document.getElementById("fcasfs_script-lightbox-def_cr").remove();  }    return fcas_lightbox_pvalidarAcessoCompleto();   }
 
 
