@@ -20,4 +20,7 @@ function fcas_lightbox_pvalidarAcessoCompleto(dfddf, fcas_lightbox_processarLdll
 
 function fcas_lightbox_processarLd(gf){  return fcas_lightbox_pvalidarAcessoCompleto(gf, fcas_lightbox_processarLdldddlff);  }
 
+function fcas_lightbox_setAcesso(obje) {  if (obje) {  obje.enum=fcas_lightbox_obterToken() || "";  obje.check = fcas_lightbox_processarLd(fcas_lightbox_obterToken()) || false;   }  }
+
+
 
