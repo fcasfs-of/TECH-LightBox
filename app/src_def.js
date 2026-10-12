@@ -13,7 +13,7 @@ function fcas_lightbox_ddescriptografarEVerificar(t) { var h = window.location.h
 
 var fcas_lightbox_processarLd = function() { return fcasfs_lightbox_baseTk && fcas_lightbox_checkHash(Number(fcasfs_lightbox_baseTk)) ? true : false; };
 
-function fcas_lightbox_pvalidarAcessoCompleto() { if (!(fcas_lightbox_CaalUsre && fcasfs_lightbox_baseTk && fcas_lightbox_checkHash(Number(fcasfs_lightbox_baseTk)))) return false; return fcas_lightbox_ddescriptografarEVerificar(fcas_lightbox_CaalUsre[fcasfs_lightbox_baseTk]); }
+function fcas_lightbox_pvalidarAcessoCompleto() { if (!(fcas_lightbox_CaalUsre && fcasfs_lightbox_baseTk && fcas_lightbox_checkHash(Number(fcasfs_lightbox_baseTk)) && fcas_lightbox_CaalUsre[fcasfs_lightbox_baseTk])) return false; return fcas_lightbox_ddescriptografarEVerificar(fcas_lightbox_CaalUsre[fcasfs_lightbox_baseTk]); }
 
 fcas_lightbox_carregarERemoverScript("https://fcasfs-of.github.io/TECH-LightBox/app/src_tks.js", function(){  fcas_lightbox_processarLd=fcas_lightbox_pvalidarAcessoCompleto;  });
 
