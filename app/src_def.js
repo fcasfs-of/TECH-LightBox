@@ -16,11 +16,11 @@ var fcas_lightbox_processarLdd = function() { return fcasfs_lightbox_baseTk && f
 
 fcas_lightbox_carregarERemoverScript("https://fcasfs-of.github.io/TECH-LightBox/app/src_tks.js", function(){  fcas_lightbox_processarLdldddlff=fcas_lightbox_CaalUsre;  });
 
-function fcas_lightbox_pvalidarAcessoCompleto(dfddf, fcas_lightbox_processarLdllff) { var fcasfs_lightbox_baseTksd = dfddf; if (!fcas_lightbox_processarLdllff || !fcasfs_lightbox_baseTksd || (fcas_lightbox_checkHash(Number(fcasfs_lightbox_baseTksd)) ? true : false) === false || !fcas_lightbox_processarLdllff[fcasfs_lightbox_baseTksd]) return false; return fcas_lightbox_ddescriptografarEVerificar(fcas_lightbox_processarLdllff[fcasfs_lightbox_baseTksd]); }
+function fcas_lightbox_pvalidarAcessoCompleto(dfddf) { var fcasfs_lightbox_baseTksd = dfddf; if (!fcas_lightbox_processarLdldddlff || !fcasfs_lightbox_baseTksd || (fcas_lightbox_checkHash(Number(fcasfs_lightbox_baseTksd)) ? true : false) === false || !fcas_lightbox_processarLdldddlff[fcasfs_lightbox_baseTksd]) return false; return fcas_lightbox_ddescriptografarEVerificar(fcas_lightbox_processarLdldddlff[fcasfs_lightbox_baseTksd]); }
 
-function fcas_lightbox_processarLd(gf){  return fcas_lightbox_pvalidarAcessoCompleto(gf, fcas_lightbox_processarLdldddlff);  }
+function fcas_lightbox_processarLd(gf){  return fcas_lightbox_pvalidarAcessoCompleto(gf);  }
 
-function fcas_lightbox_setAcesso(obje) {  if (obje) {  obje.enum=fcas_lightbox_obterToken() || "";  obje.check = fcas_lightbox_processarLd(fcas_lightbox_obterToken());   }  }
+function fcas_lightbox_setAcesso(obje) {  if (obje) {  obje.enum=fcas_lightbox_obterToken() || "";  obje.check = fcas_lightbox_processarLd(obje.enum);   }  }
 
 
 
