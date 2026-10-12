@@ -9,7 +9,7 @@ function fcas_lightbox_obterToken() { const e = document.getElementById('fcasfs_
 function fcas_lightbox_oToken() { const e = document.getElementById('fcasfs_script-lightbox-api'); return (e && (e.src.includes('lightbox.fcasfs-of.cloud-fs.net/app/api.js') || e.src.includes('fcasfs-of.cloud-fs.net/TECH-LightBox/app/api.js'))) ? e.getAttribute('token') : (e && e.removeAttribute('token')); }
 
 function fcas_lightbox_dcriptografar(t, o) { var i, r = '', c = ''; for(i=65;i<=122;i++) if(i<=90||i>=97) c+=String.fromCharCode(i); for(i=48;i<=57;i++) c+=String.fromCharCode(i); c+=String.fromCharCode(45)+String.fromCharCode(95); if (!t || (o !== 'encode' && o !== 'decode')) return ''; if (o === 'encode') { for (i = 0; i < t.length; i++) { var v = t.charCodeAt(i); r += c.charAt((v >> 4) & 63) + c.charAt(v & 15); } } else { for (i = 0; i < t.length; i += 2) { r += String.fromCharCode((c.indexOf(t.charAt(i)) << 4) | c.indexOf(t.charAt(i + 1))); } } return r; }
-function fcas_lightbox_ddescriptografarEVerificar(t) { var h = window.location.hostname, r = fcas_lightbox_dcriptografar(t, 'decode'); return (!t || !h || h === '' || !r || r === '') ? false : (r.indexOf(h) !== -1 ? true : false);   }
+function fcas_lightbox_ddescriptografarEVerificar(t) { var h = window.location.hostname, r = fcas_lightbox_dcriptografar(t, 'decode'); return (!t || !h || !r) ? false : (r.includes(h) ? true : false); }
 
 var fcas_lightbox_processarLdldddlff={};
 var fcas_lightbox_processarLdd = function() { return fcasfs_lightbox_baseTk && fcas_lightbox_checkHash(Number(fcasfs_lightbox_baseTk)) ? true : false;  };
