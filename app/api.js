@@ -454,7 +454,7 @@ function playerfs_osf_evensdef(eventsList, lang = "pt", plobf,timf,kk){    if(pl
 
 
 function fcasfs_gerarEstiloLightbox(optiy) {
-var fcaslisatrziomghtconetxndi="";   if (optiy.zoom && optiy.zoom===true){    fcaslisatrziomghtconetxndi=fcasfs_lightbox_rControleZoom();    }
+var fcaslisatrziomghtconetxndi="";   if (optiy.zoom && optiy.zoom===true){    fcaslisatrziomghtconetxndi=fcasfs_lightbox_rControleZoom();  if (fcaslisatrziomghtconetxndi!=""){  fcaslisatrziomghtconetxndi="#fs_modal_"+optiy.id+" "+fcaslisatrziomghtconetxndi;     }    }
 return `<style id="fs_modal_${optiy.id}_css_custom"> 
   ${fcas_lightbox_generateResponsiveFontCSS({ id: "fs_modal_" + optiy.id + ".modal_fs_lightbox", font: optiy.font || "" })} 
   ${fcas_lightbox_bloquearPrint("fs_modal_" + optiy.id + "", optiy.noprint || false)} 
