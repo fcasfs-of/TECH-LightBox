@@ -226,6 +226,8 @@ header .dname *, header nav, header nav *, .lbxx * { transition: all 0.1s; }
   letter-spacing: 0.5px;
   color: var(--title-color);   
   white-space: nowrap;
+  align-items: center;    
+  gap: 8px;   
 }
 
 .cat-group h3::after {
@@ -240,6 +242,13 @@ header .dname *, header nav, header nav *, .lbxx * { transition: all 0.1s; }
   transition: height 0.3s ease;
 }
 .cat-group:hover h3::after {  height: 100%;   }
+
+.cat-group h3 svg {
+  width: 24px;            
+  height: 24px;
+  display: block;         
+  fill: currentColor;   stroke: currentColor;
+}
 
 
 
