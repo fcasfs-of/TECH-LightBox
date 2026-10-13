@@ -596,6 +596,7 @@ if(optincludeplayer === "yes"){
 //var scrcontedd = document.createElement("div");
 function addultlightboxPLclayer_modiuu_call(fiod, fddd){ 
 momocsifipsl.innerHTML = `
+                ${fcasfs_gerarEstiloLightbox(optiy)}
                 <div class="modal_fs_lightbox${close_fsmofla_efestr}" id="fs_modal_${optiy.id}" style="display:block; color:#000;">
                     <span class="bngl">${btnys_fsmofla_efestr}</span>
                     <span class="bngd">${close_fsmofla_str}</span>
@@ -605,7 +606,6 @@ momocsifipsl.innerHTML = `
                     <br/> </div>
                    ${thumsds_efestr} 
                 </div>
-                ${fcasfs_gerarEstiloLightbox(optiy)}
                 ${fsmodal_offpen_tipf_zoomm}
                 <span style="z-index: 99999;  position: absolute;"  id="fs_modal_${optiy.id}_cxav"></span>
                 <div id="${optiy.id}_menu">  ${fcas_lightbox_processarL(addultlightboxPLclayer_inffol)}  </div>
