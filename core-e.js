@@ -1,6 +1,6 @@
 function fcas_rcriarPaginacao(config) {
 var gNav = document.querySelectorAll('.pag-nav-custom'); for (var a = 0; a < gNav.length; a++) { gNav[a].parentNode.removeChild(gNav[a]); } var gDiv = document.querySelectorAll('.pagnv-divisora'); for (var b = 0; b < gDiv.length; b++) { gDiv[b].parentNode.removeChild(gDiv[b]); }
-    if (!config || typeof config !== 'object') { var styledNav = document.getElementById('css-pagnv-unique'); if (styledNav) styledNav.parentNode.removeChild(styledNav); return; }
+    if (!config || typeof config !== 'object') { var styledNav = document.getElementById('css-pagnv-unique'); if (styledNav) styledNav.parentNode.removeChild(styledNav); return; } config.currentPage = 1;
   var elementcatallo = document.querySelector('.fcas-sidebar .fcas-sidebar-item[data-target="all"]'); if (elementcatallo) { elementcatallo.click(); }
     var container = document.querySelector('.' + config.containerClass); if (!container) return;
     var iChildren = container.children; var listaItens = []; for (var k = 0; k < iChildren.length; k++) { if (iChildren[k].tagName !== 'H2' && iChildren[k].className !== 'pag-nav-custom') { listaItens.push(iChildren[k]); } }
