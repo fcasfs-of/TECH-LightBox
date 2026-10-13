@@ -1,4 +1,5 @@
-function fcas_rcriarPaginacao(config) {
+function fcas_rcriarPaginacao(config) {}
+function fdcas_rcriarPaginacao(config) {
 var oldNav = document.querySelectorAll('.pag-nav-custom'), oldDiv = document.querySelectorAll('.pagnv-divisora'); for (var a = 0; a < oldNav.length; a++) oldNav[a].parentNode.removeChild(oldNav[a]); for (var b = 0; b < oldDiv.length; b++) oldDiv[b].parentNode.removeChild(oldDiv[b]);
 if (!config || typeof config !== 'object') { var stNav = document.getElementById('css-pagnv-unique'); if (stNav) stNav.parentNode.removeChild(stNav); return; }
 var sidebarAll = document.querySelector('.fcas-sidebar .fcas-sidebar-item[data-target="all"]'); if (sidebarAll) sidebarAll.click();
