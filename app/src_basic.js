@@ -200,7 +200,7 @@ function fsmodal_cl_menu(id, cuur) {
         var element = document.getElementById(id);       if (element) {            element.click();      
 const activedElement = document.querySelector('.modal_fs_lightbox .menulight_scrollmenu button.active');
 if (activedElement) {    activedElement.scrollIntoView({    behavior: 'smooth',   block: 'nearest',  inline: 'center'  });   }
-if(cuur && cuur!=""){   if (document.getElementById(""+cuur)){  document.getElementById(""+cuur).scrollIntoView({    behavior: 'smooth',   block: 'nearest',  inline: 'center'  });   }     }
+if(cuur && cuur!=""){   if (document.querySelector("#"+cuur)){  document.querySelector("#"+cuur).scrollIntoView({    behavior: 'smooth',   block: 'nearest',  inline: 'center'  });   }     }
 }
     }
 }
