@@ -241,6 +241,16 @@ function fsmodal_clall_menu_arrays(id, dcurrent_id, cutt) {
 return fsmodal_clall_menussd;  }
 
 
+function fsmodal_cl_menu(id, cuur) {
+    if (id && id !== "") {
+        var element = document.getElementById(id);       if (element) {            element.click();      
+const activedElement = document.querySelector('.modal_fs_lightbox .menulight_scrollmenu button.active');
+if (activedElement) {    activedElement.scrollIntoView({    behavior: 'smooth',   block: 'nearest',  inline: 'center'  });   }
+if(cuur && cuur!=""){   if (document.querySelector("#"+cuur)){  document.querySelector("#"+cuur).scrollIntoView({    behavior: 'smooth',   block: 'nearest',  inline: 'center'  });    }    }     }
+}
+    }
+}
+
 
 function fsmodal_clall_menu(id, calsd, cutt) {										
   var fsmodal_clall_menussd = "";
