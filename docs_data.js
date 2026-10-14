@@ -9,7 +9,7 @@ function fcas_lightbox_verificaranalisar(lista, idioma) { var c = 0; for (var i 
 window.getDocData = function(fdd) {
     return {
         pt: {
-            versoes: { "2.0.1.6": { data: "", logs: [ { tipo: "melhoria", texto: "Melhorias de Desempenho e Otimização." } ] }  },
+            versoes: { "2.0.2.0": { data: "", logs: [ { tipo: "melhoria", texto: "Toda a nossa estrutura foi aprimorada com melhorias de desempenho, otimização, design e modelos refinados." } ] }  },
             demoUrl: "/",
             title: "Lightbox - Conteúdos Diversos",
             subtitle: "Documentação Técnica",
@@ -142,7 +142,7 @@ window.getDocData = function(fdd) {
             ]
         },
         en: {
-            versoes: { "2.0.1.6": { data: "", logs: [ { tipo: "improvement", texto: "Performance Improvements and Optimization." } ] }  },
+            versoes: { "2.0.2.0": { data: "", logs: [ { tipo: "improvement", texto: "Our entire structure has been enhanced with performance improvements, optimization, design, and refined models." } ] }  },
             demoUrl: "/en",
             title: "Lightbox - Diverse Contents",
             subtitle: "Technical Documentation",
