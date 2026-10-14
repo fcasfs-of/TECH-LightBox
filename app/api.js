@@ -643,7 +643,7 @@ const activedElement = document.querySelector('.modal_fs_lightbox .menulight_scr
 if (activedElement) {    activedElement.scrollIntoView({    behavior: 'smooth',   block: 'nearest',  inline: 'center'  });   }
 }   }
 
-if (document.querySelector("#fs_modal_"+optiy.id+"_content")){  document.querySelector("#fs_modal_"+optiy.id+"_content").scrollTop=0;   }
+if (document.querySelector("#fs_modal_"+optiy.id+"_content")){  document.querySelector("#fs_modal_"+optiy.id+"_content").scrollIntoView({    behavior: 'smooth',   block: 'nearest',  inline: 'center'  });   }
 
 scrcontedfddd.setAttribute("src_sz", ""+fcafs_lightboc_contarSZH_HTML("fs_modal_" + optiy.id));
 
