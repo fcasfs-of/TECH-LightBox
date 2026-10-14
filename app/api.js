@@ -569,7 +569,6 @@ var optincludeplayider_url = fcasfs_lightbox_criarLinkDoObjeto({ pagina: "app", 
                     thumsds_efestr = `<div class="menulight_scrollmenu">${is_menuded.menu}</div>`;
                 }
             }
-			if (document.getElementById("fs_modal_"+optiy.id+"_content")){  document.getElementById("fs_modal_"+optiy.id+"_content").scrollIntoView({    behavior: 'smooth',   block: 'nearest',  inline: 'center'   });   }
         }
 
 var scrcontedfddd = document.createElement("div");
@@ -623,6 +622,8 @@ momocsifipsl.innerHTML = `
                 <span style="z-index: 99999;  position: absolute;"  id="fs_modal_${optiy.id}_cxav"></span>
                 <div id="${optiy.id}_menu">  ${fcas_lightbox_processarL(addultlightboxPLclayer_inffol)}  </div>
 `;
+if (document.getElementById("fs_modal_"+optiy.id+"_content")){  document.getElementById("fs_modal_"+optiy.id+"_content").scrollTop=0;   }
+
 if (optiy.btnTop && optiy.btnTop===true){   fcasfs_inicializarLightboxScroll({ id: "fs_modal_" + optiy.id, distance: 120, active: true });  }
 	
   //fcas_lightbox_create_scroll({ vertical: true, horizontal: true, id: ""+optiy.id+"_boxx", btnRight: "", btnLeft: "", btnUp: "", btnDown: "",  width: 12  });
