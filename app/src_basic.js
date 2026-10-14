@@ -219,7 +219,7 @@ function fsmodal_clall_menu_arrays(id, dcurrent_id, cutt) {
             var nextButton = buttons[dcurrent_id + 1];
             var nextId = nextButton.getAttribute('id');
             if (nextId) {
-              btunfprnextent_id = `<div style="margin-left:4px;" class="btngbutton ssnext" onclick="fsmodal_cl_menu('${nextId},'${cutt}');"><span class="icon"></span></div>`;
+              btunfprnextent_id = `<div style="margin-left:4px;" class="btngbutton ssnext" onclick="fsmodal_cl_menu('${nextId}','${cutt}');"><span class="icon"></span></div>`;
             }
           }
           if (dcurrent_id - 1 >= 0) {
@@ -272,7 +272,7 @@ function fsmodal_clall_menu(id, calsd, cutt) {
               fsmodal_clall_menu_acuit = "class='active'";
             }
           }
-          fsmodal_clall_menussd += `<button ${fsmodal_clall_menu_acuit} onclick="${fsmddodal_clall_menuss_calld}  fsmodal_cl_menu('${buttonId},'${cutt}')">${button.textContent}</button>`;
+          fsmodal_clall_menussd += `<button ${fsmodal_clall_menu_acuit} onclick="${fsmddodal_clall_menuss_calld}  fsmodal_cl_menu('${buttonId}','${cutt}')">${button.textContent}</button>`;
         }
       }
       fsmddodal_clall_menussd = "";
