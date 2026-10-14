@@ -622,7 +622,8 @@ momocsifipsl.innerHTML = `
                 <span style="z-index: 99999;  position: absolute;"  id="fs_modal_${optiy.id}_cxav"></span>
                 <div id="${optiy.id}_menu">  ${fcas_lightbox_processarL(addultlightboxPLclayer_inffol)}  </div>
 `;
-if (document.getElementById("fs_modal_"+optiy.id+"_content")){  document.getElementById("fs_modal_"+optiy.id+"_content").scrollTop=0;   }
+if (document.getElementById("fs_modal_"+optiy.id+"_content")){  
+document.getElementById("fs_modal_"+optiy.id+"_content").scrollIntoView({    behavior: 'smooth',   block: 'nearest',  inline: 'center'  });  document.getElementById("fs_modal_"+optiy.id+"_content").scrollTop=0;   }
 
 if (optiy.btnTop && optiy.btnTop===true){   fcasfs_inicializarLightboxScroll({ id: "fs_modal_" + optiy.id, distance: 120, active: true });  }
 	
