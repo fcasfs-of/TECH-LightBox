@@ -115,15 +115,6 @@ function fcas_lightbox_checkValueEX(listad, name1, name2, retronon) {
 }
 
 
-function fsmodal_cl_menu(id) {
-    if (id && id !== "") {
-        var element = document.getElementById(id);       if (element) {            element.click();      
-const activedElement = document.querySelector('.modal_fs_lightbox .menulight_scrollmenu button.active');
-if (activedElement) {    activedElement.scrollIntoView({    behavior: 'smooth',   block: 'nearest',  inline: 'center'  });   }
-}
-    }
-}
-
 
 function fsmodal_close_aloder() {  var modalEdlement = document.getElementById("fs_lightbox_lader");    if (modalEdlement) {  modalEdlement.remove();  }    }
 
@@ -564,7 +555,7 @@ var optincludeplayider_url = fcasfs_lightbox_criarLinkDoObjeto({ pagina: "app", 
                 var is_menuded = fsmodal_clall_menu(optiy.itens, `fsmodal_close('${optiy.id}', '${optiy.scroll_hide}'); `);
                 if (is_menuded && is_menuded.menu && is_menuded.menu != "") {
                     if (optiy.menu_btns && optiy.menu_btns === true) {
-                       if(is_menuded.id){   btnys_fsmofla_efestr = fsmodal_clall_menu_arrays(optiy.itens, is_menuded.id);   }
+                       if(is_menuded.id){   btnys_fsmofla_efestr = fsmodal_clall_menu_arrays(optiy.itens, is_menuded.id, "fs_modal_"+optiy.id+"_content");   }
                     }
                     thumsds_efestr = `<div class="menulight_scrollmenu">${is_menuded.menu}</div>`;
                 }
@@ -652,9 +643,7 @@ const activedElement = document.querySelector('.modal_fs_lightbox .menulight_scr
 if (activedElement) {    activedElement.scrollIntoView({    behavior: 'smooth',   block: 'nearest',  inline: 'center'  });   }
 }   }
 
-if (document.getElementById("fs_modal_"+optiy.id+"_content")){  
-document.getElementById("fs_modal_"+optiy.id+"_content").scrollIntoView({    behavior: 'smooth',   block: 'nearest',  inline: 'center'  });  
-document.getElementById("fs_modal_"+optiy.id+"_content").scrollTop=0;   }
+if (document.querySelector("#fs_modal_"+optiy.id+"_content")){  document.querySelector("#fs_modal_"+optiy.id+"_content").scrollTop=0;   }
 
 scrcontedfddd.setAttribute("src_sz", ""+fcafs_lightboc_contarSZH_HTML("fs_modal_" + optiy.id));
 
