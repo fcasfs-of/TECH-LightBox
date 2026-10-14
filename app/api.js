@@ -119,6 +119,17 @@ function fcas_lightbox_checkValueEX(listad, name1, name2, retronon) {
 function fsmodal_close_aloder() {  var modalEdlement = document.getElementById("fs_lightbox_lader");    if (modalEdlement) {  modalEdlement.remove();  }    }
 
 
+function fsmodal_cl_menu(id, cuur) {
+    if (id && id !== "") {
+        var element = document.getElementById(id);       if (element) {            element.click();      
+const activedElement = document.querySelector('.modal_fs_lightbox .menulight_scrollmenu button.active');
+if (activedElement) {    activedElement.scrollIntoView({    behavior: 'smooth',   block: 'nearest',  inline: 'center'  });   }
+if(cuur && cuur!=""){   if (document.querySelector("#"+cuur)){  document.querySelector("#"+cuur).scrollIntoView({    behavior: 'smooth',   block: 'nearest',  inline: 'center'  });   }     }
+}
+    }
+}
+
+
 function fcasfs_lightbox_def_icriarLONBD(fcasfs_lightbox_baseUrl, ddd, optiy, app, klf, opdd,basedTk, visualaudd){    var fsmodadfdl_createdd = '';        fsmodal_createdd = '';     var fsmodafdl_createdd = '';  
 if(ddd && ddd=="yes"){   fsmodal_createdd = '<div class="loader-container">  <div class="classic-spinner"></div>   </div>';    fsmodafdl_createdd='<div id="fs_lightbox_lader" class="loader-container">  <div class="classic-spinner"></div>   </div>';   }
 var fsmodal_createWi_infiio = "";   var fsmodal_creddateWi_infiio = "";    fsmodal_create_desci = "";    var fsmodal_createWi= " margin:0 auto;  width:95%; ";     fsmodal_clall_menussd = "";     dcurrent_id = 0;    is_player0j = "no";     start_fs_mpl = {};       start_fs_postermpl = "";
@@ -562,6 +573,7 @@ var optincludeplayider_url = fcasfs_lightbox_criarLinkDoObjeto({ pagina: "app", 
             }
         }
 
+		
 var scrcontedfddd = document.createElement("div");
 scrcontedfddd.innerHTML = "";   scrcontedfddd.id=optiy.id;    
 scrcontedfddd.setAttribute("src_id", ""+num_fsmodal_open);   scrcontedfddd.setAttribute("src_type", ""+optiy.content.type || "none");
