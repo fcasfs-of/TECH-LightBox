@@ -134,13 +134,12 @@ nav button:hover {
 
 
 
+.lbxle {  margin-top: 1em;  font-size: 0.9em;  padding: 0.3em 1em;   }
+
 .lbxx #meuBotaoConfig, .lbxx #theme-toggle {
-  margin-top: 1em;
   background: none;
   border: 2px solid;
   border-radius: 20px;
-  padding: 0.3em 1em;
-  font-size: 0.9em;
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
