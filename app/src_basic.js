@@ -195,8 +195,17 @@ function registerPlayerOSDEvents(plobf, eventsList, lang = "pt", openf_osdcd_tim
 }
 
 
+function fsmodal_cl_menu(id,cuur) {
+    if (id && id !== "") {
+        var element = document.getElementById(id);       if (element) {            element.click();      
+const activedElement = document.querySelector('.modal_fs_lightbox .menulight_scrollmenu button.active');
+if (activedElement) {    activedElement.scrollIntoView({    behavior: 'smooth',   block: 'nearest',  inline: 'center'  });   }
+if(cuur && cuur!=""){   if (document.querySelector("#"+cuur)){  document.querySelector("#"+cuur).scrollTop=0;   }     }
+}
+    }
+}
 
-function fsmodal_clall_menu_arrays(id, dcurrent_id) {
+function fsmodal_clall_menu_arrays(id, dcurrent_id, cutt) {
   var fsmodal_clall_menussd = "";    var btunfprecurrent_id = "";   var btunfprnextent_id = "";
   if (id && id.target && typeof dcurrent_id === 'number') {
     var target = id.target;
@@ -213,7 +222,7 @@ function fsmodal_clall_menu_arrays(id, dcurrent_id) {
             var nextButton = buttons[dcurrent_id + 1];
             var nextId = nextButton.getAttribute('id');
             if (nextId) {
-              btunfprnextent_id = `<div style="margin-left:4px;" class="btngbutton ssnext" onclick="fsmodal_cl_menu('${nextId}');"><span class="icon"></span></div>`;
+              btunfprnextent_id = `<div style="margin-left:4px;" class="btngbutton ssnext" onclick="fsmodal_cl_menu('${nextId}','${cutt}');"><span class="icon"></span></div>`;
             }
           }
 		  if (dcurrent_id + 1 < buttons.length) {
