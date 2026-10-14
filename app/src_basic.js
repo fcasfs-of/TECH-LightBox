@@ -226,7 +226,7 @@ function fsmodal_clall_menu_arrays(id, dcurrent_id, cutt) {
             var prevButton = buttons[dcurrent_id - 1];
             var prevId = prevButton.getAttribute('id');
             if (prevId) {
-              btunfprecurrent_id = `<div style="margin-left:4px;" class="btngbutton ssprev" onclick="fsmodal_cl_menu('${prevId}','${cutt});"><span class="icon"></span></div>`;
+              btunfprecurrent_id = `<div style="margin-left:4px;" class="btngbutton ssprev" onclick="fsmodal_cl_menu('${prevId}','${cutt}');"><span class="icon"></span></div>`;
             }
           }
           if (dcurrent_id <= 0) {            btunfprecurrent_id = "";          }
