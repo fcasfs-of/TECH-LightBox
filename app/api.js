@@ -569,6 +569,7 @@ var optincludeplayider_url = fcasfs_lightbox_criarLinkDoObjeto({ pagina: "app", 
                     thumsds_efestr = `<div class="menulight_scrollmenu">${is_menuded.menu}</div>`;
                 }
             }
+			if (document.getElementById("fs_modal_"+optiy.id+"_content")){  document.getElementById("fs_modal_"+optiy.id+"_content").scrollIntoView({    behavior: 'smooth',   block: 'nearest',  inline: 'center'   });   }
         }
 
 var scrcontedfddd = document.createElement("div");
