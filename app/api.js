@@ -553,10 +553,10 @@ var optincludeplayider_url = fcasfs_lightbox_criarLinkDoObjeto({ pagina: "app", 
         if (optiy.remove_efect && optiy.remove_efect === true) {            close_fsmofla_efestr = " reff";        }
         if (optiy.itens && optiy.menu === true) {
             if (fsmodal_call_menu(optiy.itens) === true) {
-                var is_menuded = fsmodal_clall_menu(optiy.itens, `fsmodal_close('${optiy.id}', '${optiy.scroll_hide}'); `, "fs_modal_"+optiy.id+"_content");
+                var is_menuded = fsmodal_clall_menu(optiy.itens, `fsmodal_close('${optiy.id}', '${optiy.scroll_hide}'); `, "fs_modal_"+optiy.id+"_vcontent");
                 if (is_menuded && is_menuded.menu && is_menuded.menu != "") {
                     if (optiy.menu_btns && optiy.menu_btns === true) {
-                       if(is_menuded.id){   btnys_fsmofla_efestr = fsmodal_clall_menu_arrays(optiy.itens, is_menuded.id, "fs_modal_"+optiy.id+"_content");   }
+                       if(is_menuded.id){   btnys_fsmofla_efestr = fsmodal_clall_menu_arrays(optiy.itens, is_menuded.id, "fs_modal_"+optiy.id+"_vcontent");   }
                     }
                     thumsds_efestr = `<div class="menulight_scrollmenu">${is_menuded.menu}</div>`;
                 }
@@ -645,10 +645,9 @@ const activedElement = document.querySelector('.modal_fs_lightbox .menulight_scr
 if (activedElement) {    activedElement.scrollIntoView({    behavior: 'smooth',   block: 'nearest',  inline: 'center'  });   }
 }   }
 
-if (document.querySelector("#fs_modal_"+optiy.id+"_content")){  document.querySelector("#fs_modal_"+optiy.id+"_content").scrollIntoView({    behavior: 'smooth',   block: 'nearest',  inline: 'center'  });   }
+//if (document.querySelector("#fs_modal_"+optiy.id+"_content")){  document.querySelector("#fs_modal_"+optiy.id+"_content").scrollIntoView({    behavior: 'smooth',   block: 'nearest',  inline: 'center'  });   }
 
 scrcontedfddd.setAttribute("src_sz", ""+fcafs_lightboc_contarSZH_HTML("fs_modal_" + optiy.id));
-
 
 	var mffomocsifipsl = document.getElementById("fs_modal_" + optiy.id);
 		if (mffomocsifipsl){    mffomocsifipsl.classList.add("customstyle_"+optiy.id);		}
