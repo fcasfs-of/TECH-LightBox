@@ -119,16 +119,6 @@ function fcas_lightbox_checkValueEX(listad, name1, name2, retronon) {
 function fsmodal_close_aloder() {  var modalEdlement = document.getElementById("fs_lightbox_lader");    if (modalEdlement) {  modalEdlement.remove();  }    }
 
 
-function fsmodal_cl_menu(id, cuur) {
-    if (id && id !== "") {
-        var element = document.getElementById(id);       if (element) {            element.click();      
-const activedElement = document.querySelector('.modal_fs_lightbox .menulight_scrollmenu button.active');
-if (activedElement) {    activedElement.scrollIntoView({    behavior: 'smooth',   block: 'nearest',  inline: 'center'  });   }
-if(cuur && cuur!=""){   if (document.querySelector("#"+cuur)){  document.querySelector("#"+cuur).scrollIntoView({    behavior: 'smooth',   block: 'nearest',  inline: 'center'  });   }     }
-}
-    }
-}
-
 
 function fcasfs_lightbox_def_icriarLONBD(fcasfs_lightbox_baseUrl, ddd, optiy, app, klf, opdd,basedTk, visualaudd){    var fsmodadfdl_createdd = '';        fsmodal_createdd = '';     var fsmodafdl_createdd = '';  
 if(ddd && ddd=="yes"){   fsmodal_createdd = '<div class="loader-container">  <div class="classic-spinner"></div>   </div>';    fsmodafdl_createdd='<div id="fs_lightbox_lader" class="loader-container">  <div class="classic-spinner"></div>   </div>';   }
