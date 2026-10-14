@@ -532,7 +532,7 @@ function mfplayeridd(){  }
 
 var fcas_lightbox_fsmodal_opclode_x= "x";
 if(fcasfs_lightbox_basescicsn){
-if(fcasfs_lightbox_basescicsn["x"] && fcasfs_lightbox_basescicsn["x"]~=""){
+if(fcasfs_lightbox_basescicsn["x"] && fcasfs_lightbox_basescicsn["x"]!=""){
 fcas_lightbox_fsmodal_opclode_x= '<svg class="icon" viewBox="0 0 100 100">  <path style="fill:#fff; stroke:#ff0000; stroke-width:8;" d="'+fcasfs_lightbox_basescicsn["x"]+'"></path></svg>';	
 }	}
 										   
