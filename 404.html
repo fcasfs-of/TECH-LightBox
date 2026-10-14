@@ -14,6 +14,22 @@
 svg { pointer-events:none; }  
 .dark p {  color: #8e8e93;}
 
+ .lang-columns {            display: flex;            gap: 30px;            text-align: left;        }
+
+.column {            flex: 1;            padding: 30px;            background: #fff;       color: #000;      border: 1px solid #2d2d2d;             border-radius: 12px;            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);            display: flex;            flex-direction: column;            justify-content: space-between;        }
+ .dark .column {         background: #1e1e1e;             border: 1px solid #fff;      color: #fff;           }
+
+  
+@media (max-width: 768px) {
+            .lang-columns {
+                flex-direction: column;
+                gap: 20px;
+            }
+            
+            .button-group {
+                flex-direction: column;
+            }
+        }
 </style>
 
 
@@ -26,10 +42,22 @@ svg { pointer-events:none; }
           <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg>
         </div>
         <h1>404</h1>
-        <h2>Page not found</h2>
+        <div class="lang-columns">
+            <div class="column">
+                <div>        <h2>Oops!  Page not found</h2>
         <p>The content you are looking for on TECH LightBox does not exist or has been moved to another address.</p>
         <div class="divider"></div>
+        <a href="/en" class="btn">   <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>  </a>
+               </div>
+            </div>
+            <div class="column">
+                <div>        <h2>Ops!  Página não encontrada</h2>
+        <p>O conteúdo que você procura no TECH LightBox não existe ou foi movido para outro endereço.</p>
+        <div class="divider"></div>
         <a href="/" class="btn">   <svg viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>  </a>
+               </div>
+            </div>
+        </div>
   <br/><br/><br/>  </div>
   <br/><br/><br/>
  
