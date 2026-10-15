@@ -126,7 +126,7 @@ var modaisDisponiveis = {
     return {
       title: "newsletter",
       type: "newsletter",
-      context:{ titulo: "", mensagem: "", placeholder: "e-mail", botaoTexto: "", action: "/", nomeCampo: "user_email"},
+      context:{ titulo: "", mensagem: "lightbox", placeholder: "e-mail", botaoTexto: "", action: "/", nomeCampo: "user_email"},
       size: "360",
       includePlayer: "no",
       description: ""
@@ -136,7 +136,7 @@ var modaisDisponiveis = {
     return {
       title: "storageStatus",
       type: "storageStatus",
-      context:{ usado:53687091200, total: 107374182400 },
+      context:{ titulo: "My", usado:53687091200, total: 107374182400 },
       size: "360",
       includePlayer: "no",
       description: ""
