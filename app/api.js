@@ -639,7 +639,7 @@ momocsifipsl.innerHTML = `
                 ${fcasfs_gerarEstiloLightbox(optiy)}
                 <div class="modal_fs_lightbox${close_fsmofla_efestr}" id="fs_modal_${optiy.id}" style="display:block; color:#000;">
                     <span class="bngl">${btnys_fsmofla_efestr}</span>
-                    <span class="bngd">${close_fsmofla_str}</span>
+                    <span class="bngd">${close_fsmofla_str}</span> <br/> 
                     <div style="overflow:auto;" class="modal_fs_lightbox-content" id="fs_modal_${optiy.id}_content">
 					 ${fcaslightconetxndif_isntempfort}
                      ${fiod || ""}  <br/>
