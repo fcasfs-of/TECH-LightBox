@@ -122,6 +122,56 @@ function fcasfs_obter_obterValorPorBooleano(valor, mapeamento) { return !mapeame
 
 
 var modaisDisponiveis = {
+  'btnNewsletter': function() {
+    return {
+      title: "newsletter",
+      type: "newsletter",
+      context:{ titulo: "", mensagem: "", placeholder: "e-mail", botaoTexto: "", action: "/", nomeCampo: "user_email"},
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+  'btnStorageStatus': function() {
+    return {
+      title: "storageStatus",
+      type: "storageStatus",
+      context:{ usado:53687091200, total: 107374182400 },
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+  'btnAlert': function() {
+    return {
+      title: "showAlerta",
+      type: "showAlerta",
+      context:{  titulo: "teste",  mensagem: "LightBox.",  tipo: "info"},
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+  'btnPaymentMethods': function() {
+    return {
+      title: "PaymentMethods",
+      type: "PaymentMethods",
+      context:{ nomeFuncaoCallback:"", selecionado:"pix" },
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+  'btnCart': function() {
+    return {
+      title: "storeCart",
+      type: "storeCart",
+      context:{ moeda: "BRL", corPrincipal: "#000", corFundo: "#fff", itens: [ { nome: "lightbox", preco: 0.00, quantidade: 1 }],
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
   'btnJournal': function() {
     return {
       title: "journal",
@@ -755,13 +805,13 @@ fcas_lightbox_gerarMenu({ lang: "en",
     { nome: "Text & Links", botoes: [{ id: "btnNotepad", texto: "View Notepad" }, { id: "btnText", texto: "View Text" }, { id: "btnLink", texto: "View Link" }] },
     { nome: "Data", botoes: [{ id: "btnTable", texto: "View Table" }, { id: "btnList", texto: "View List" }, { id: "btnFichas", texto: "View Records" }, { id: "btnTasks", texto: "View Tasks" }, { id: "btnHistory", texto: "View History" }] },
     { nome: "Multimedia", botoes: [{ id: "btnPlaylist", texto: "View Playlist" }, { id: "btnAudio", texto: "View Audio" }, { id: "btnVideo", texto: "View Video" }] },
-    { nome: "Interaction", botoes: [{ id: "btnTestimonials", texto: "View Testimonials" }, { id: "btnChat", texto: "View Chat" }, { id: "btnReview", texto: "View Reviews" }, { id: "btnForm", texto: "View Form" }, { id: "btnFeedback", texto: "View Feedback" }] },
+    { nome: "Interaction", botoes: [{ id: "btnNewsletter", texto: "View Newsletter" }, { id: "btnAlert", texto: "View Notice" }, { id: "btnTestimonials", texto: "View Testimonials" }, { id: "btnChat", texto: "View Chat" }, { id: "btnReview", texto: "View Reviews" }, { id: "btnForm", texto: "View Form" }, { id: "btnFeedback", texto: "View Feedback" }] },
     { nome: "Analytics", botoes: [{ id: "btnGrafic", texto: "View Chart" }, { id: "btnDashboard", texto: "View Dashboard" }] },
     { nome: "Documents", botoes: [{ id: "btnPDF", texto: "View PDF" }] },
     { nome: "Location", botoes: [{ id: "btnMap", texto: "View Map" }] },
     { "nome": "Navigation & Structure", "botoes": [{ id: "btnSearchBar", texto: "View Search Bar" }, { "id": "btnTree", "texto": "View File Tree" }, { "id": "btnMindmap", "texto": "View Mind Map" } ] },
-    { "nome": "Utility-focused & Dynamic", "botoes": [{ id: "btnAgenda", texto: "View Agenda" }, { id: "btnLeaderboard", texto: "View Ranking" }, { "id": "btnProfile", "texto": "View Profile" }, { "id": "btnRaffle", "texto": "View Draw" }, { "id": "btnParticipants", "texto": "View Participants" }, { "id": "btnCalendar", "texto": "View Calendar" }, { "id": "btnAd", "texto": "View Ad" }, { "id": "btn3DText", "texto": "View 3D Text" }] },
-    { nome: "Business", botoes: [{ id: "btnCoupon", texto: "View Coupon" }, { id: "btnContact", texto: "View Contact" }, { id: "btnProduct", texto: "View Product" }, { id: "btnPricePlan", texto: "View Pricing Plan" },  { "id": "btnVirtualCard", "texto": "View Virtual Card" }, { "id": "btnVCC", "texto": "View Credit Card" }] }
+    { "nome": "Utility-focused & Dynamic", "botoes": [{ id: "btnStorageStatus", texto: "View Storage Status" }, { id: "btnAgenda", texto: "View Agenda" }, { id: "btnLeaderboard", texto: "View Ranking" }, { "id": "btnProfile", "texto": "View Profile" }, { "id": "btnRaffle", "texto": "View Draw" }, { "id": "btnParticipants", "texto": "View Participants" }, { "id": "btnCalendar", "texto": "View Calendar" }, { "id": "btnAd", "texto": "View Ad" }, { "id": "btn3DText", "texto": "View 3D Text" }] },
+    { nome: "Business", botoes: [{ id: "btnPaymentMethods", texto: "View Payment Methods" }, { id: "btnCart", texto: "View Cart" }, { id: "btnCoupon", texto: "View Coupon" }, { id: "btnContact", texto: "View Contact" }, { id: "btnProduct", texto: "View Product" }, { id: "btnPricePlan", texto: "View Pricing Plan" },  { "id": "btnVirtualCard", "texto": "View Virtual Card" }, { "id": "btnVCC", "texto": "View Credit Card" }] }
   ]
 });
 
