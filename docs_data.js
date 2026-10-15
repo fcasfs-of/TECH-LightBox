@@ -274,8 +274,7 @@ window.getDocData = function(fdd) {
                 ['Exclusive Feature for Token Holders - Configuration for type: "storeCart"', '{ idioma (String) [Ex: "en"], moeda (String) [Ex: "USD"], titulo (String) [Ex: "My Cart"], corPrincipal (String) [Ex: "#fff"], corFundo (String) [Ex: "#111"], itens (Array) [Ex: [{nome:"Item 1", preco:10.00, quantidade:2}]]   }'],
                 ['Exclusive Feature for Token Holders - Configuration for type: "PaymentMethods"', '{ titulo (String) [Ex: "Accepted Payment Methods"], nomeFuncaoCallback (String) [Ex: "processarPagamento"], selecionado (String ou Number) [Ex: "Pix"] }'],
                 ['Exclusive Feature for Token Holders - Configuration for type: "showAlerta"', '{ titulo (String) [Ex: "Success"], mensagem (String) [Ex: "Action completed."], tipo (String) [Ex: "sucesso", "erro", "aviso", "info", "ajuda", "seguranca", "carregando", "config"], iconeCustomizado (String) [Ex: "..."] }'],
-                ['Exclusive Feature for Token Holders - Configuration for type: "storageStatus"', '{ titulo (String) [Ex: "My Disk"], usado (Number) [Ex: 53687091200], total (Number) [Ex: 107374182400] }'],
-                ['Exclusive Feature for Token Holders - Configuration for type: "newsletter"', '{ titulo (String) [Ex: "Stay updated"], mensagem (String) [Ex: "Get our updates."], placeholder (String) [Ex: "Enter your email"], botaoTexto (String) [Ex: "Subscribe"], action (String) [Ex: "/api/newsletter"], nomeCampo (String) [Ex: "email"] }']
+                ['Configuration for type: "storageStatus"', '{ titulo (String) [Ex: "My Disk"], usado (Number) [Ex: 53687091200], total (Number) [Ex: 107374182400] }', 'Exclusive Feature for Token Holders'],
             ],
             other: [
                 ['title', 'String value rendering the headline text at the top of the header.'],
