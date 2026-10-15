@@ -9,7 +9,7 @@ if(currentTheme=="dark"){
 
 
 
-window.createDL = function(arr) { const dl = document.createElement('dl'); arr.forEach(function(i) { const dt = document.createElement('dt'); dt.textContent = i[0] + ""; const dd = document.createElement('dd'); dd.textContent = " " + i[1]; dl.appendChild(dt); dl.appendChild(dd); }); return dl; };
+window.createDL = function(arr, hasLegend) { const dl = document.createElement('dl'); arr.forEach(function(i) { const dt = document.createElement('dt'); dt.textContent = i[0] + ""; const dd = document.createElement('dd'); dd.textContent = " " + i[1]; dl.appendChild(dt); dl.appendChild(dd); if (hasLegend && i[2]) { const leg = document.createElement('small'); leg.style.display = 'block'; leg.style.color = '#64748b'; leg.textContent = i[2] + ""; dl.appendChild(leg); } }); return dl; };
 
 
 function criarInstrucaoInstalacao_tt(dd){  var criarInstrucaoInstalacao_ttdd="";   if(dd && dd!=""){   if(dd=="en"){  criarInstrucaoInstalacao_ttdd="-"+dd;   } }   return criarInstrucaoInstalacao_ttdd;   }
