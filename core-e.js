@@ -166,7 +166,7 @@ var modaisDisponiveis = {
     return {
       title: "storeCart",
       type: "storeCart",
-      context:{ moeda: "BRL", corPrincipal: "#000", corFundo: "#fff", itens: [ { nome: "lightbox", preco: 0.00, quantidade: 1 }],
+      context:{ moeda: "BRL", corPrincipal: "#000", corFundo: "#fff", itens: [ { nome: "lightbox", preco: 0.00, quantidade: 1 }] },
       size: "360",
       includePlayer: "no",
       description: ""
