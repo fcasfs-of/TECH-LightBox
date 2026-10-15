@@ -128,7 +128,7 @@ var modaisDisponiveis = {
     return {
       title: "newsletter",
       type: "newsletter",
-      context:{ titulo: "", mensagem: "", placeholder: "e-mail", botaoTexto: "", action: "/", nomeCampo: "user_email"},
+      context:{ titulo: "Fique por dentro", mensagem: "Receba nossas novidades", placeholder: "e-mail", botaoTexto: "", action: "/", nomeCampo: "user_email"},
       size: "360",
       includePlayer: "no",
       description: ""
