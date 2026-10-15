@@ -276,7 +276,7 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_newsletter_show(optiy.context || {})}  </div>`;
             } else if (optiy.type && optiy.type == "storageStatus" && typeof fcas_storage_status_show === "function" && basedTk && basedTk===true) {
                 is_player0j = "no";
-                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_storage_status_show(optiy.context || {})}  </div>`;
+                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_storage_status_show(optiy.context || {}, fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en')}  </div>`;
             } else if (optiy.type && optiy.type == "storeCart" && typeof fcasfs_lightbox_carrinho === "function" && basedTk && basedTk===true) {
                 is_player0j = "no";
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_carrinho(optiy.context || {})}  </div>`;
