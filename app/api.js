@@ -273,7 +273,7 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_lightbox_journal(optiy.context || [], fcas_lightbox_checkValueEX(optiy,"config","page",1) || 1)}  </div>`;
             } else if (optiy.type && (optiy.type == "newsletter" || optiy.type == "storageStatus" || optiy.type == "storeCart" || optiy.type == "showAlerta" ||  optiy.type == "PaymentMethods") && basedTk && basedTk===false) {
                 is_player0j = "no";
-                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_defobterMensagemDestaque(fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en'), optiy.type);}  </div>`;
+                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_defobterMensagemDestaque(fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en', optiy.type)}  </div>`;
             } else if (optiy.type && optiy.type == "newsletter" && typeof fcas_newsletter_show === "function" && basedTk && basedTk===true) {
                 is_player0j = "no";
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_newsletter_show(optiy.context || {})}  </div>`;
