@@ -124,6 +124,56 @@ function fcasfs_obter_obterValorPorBooleano(valor, mapeamento) { return !mapeame
 
 
 var modaisDisponiveis = {
+  'btnNewsletter': function() {
+    return {
+      title: "newsletter",
+      type: "newsletter",
+      context:{ titulo: "", mensagem: "", placeholder: "e-mail", botaoTexto: "", action: "/", nomeCampo: "user_email"},
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+  'btnStorageStatus': function() {
+    return {
+      title: "storageStatus",
+      type: "storageStatus",
+      context:{ usado:53687091200, total: 107374182400 },
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+  'btnAlert': function() {
+    return {
+      title: "showAlerta",
+      type: "showAlerta",
+      context:{  titulo: "teste",  mensagem: "LightBox.",  tipo: "info"},
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+  'btnPaymentMethods': function() {
+    return {
+      title: "PaymentMethods",
+      type: "PaymentMethods",
+      context:{ nomeFuncaoCallback:"", selecionado:"pix" },
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
+  'btnCart': function() {
+    return {
+      title: "storeCart",
+      type: "storeCart",
+      context:{ moeda: "BRL", corPrincipal: "#000", corFundo: "#fff", itens: [ { nome: "lightbox", preco: 0.00, quantidade: 1 }] },
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
   'btnJournal': function() {
     return {
       title: "journal",
@@ -754,13 +804,13 @@ fcas_lightbox_gerarMenu({ lang: "pt",
     { nome: "Texto & Links", botoes: [{ id: "btnNotepad", texto: "Visualizar Bloco de Notas" }, { id: "btnText", texto: "Visualizar Texto" }, { id: "btnLink", texto: "Visualizar Link" }] },
     { nome: "Dados", botoes: [{ id: "btnTable", texto: "Visualizar Tabela" }, { id: "btnList", texto: "Visualizar Lista" }, { id: "btnFichas", texto: "Visualizar Fichas" }, { id: "btnTasks", texto: "Visualizar Tarefas" }, { id: "btnHistory", texto: "Visualizar Histórico" }] },
     { nome: "Multimídia", botoes: [{ id: "btnPlaylist", texto: "Visualizar Playlist" }, { id: "btnAudio", texto: "Visualizar Áudio" }, { id: "btnVideo", texto: "Visualizar Vídeo" }] },
-    { nome: "Interação", botoes: [{ id: "btnTestimonials", texto: "Visualizar Depoimentos" }, { id: "btnChat", texto: "Visualizar Chat" }, { id: "btnReview", texto: "Visualizar Avaliação" }, { id: "btnForm", texto: "Visualizar Formulário" }, { id: "btnFeedback", texto: "Visualizar Feedback" }] },
+    { nome: "Interação", botoes: [{ id: "btnNewsletter", texto: "Visualizar Newsletter" }, { id: "btnAlert", texto: "Visualizar Aviso" }, { id: "btnTestimonials", texto: "Visualizar Depoimentos" }, { id: "btnChat", texto: "Visualizar Chat" }, { id: "btnReview", texto: "Visualizar Avaliação" }, { id: "btnForm", texto: "Visualizar Formulário" }, { id: "btnFeedback", texto: "Visualizar Feedback" }] },
     { nome: "Análise", botoes: [{ id: "btnGrafic", texto: "Visualizar Gráfico" }, { id: "btnDashboard", texto: "Visualizar Dashboard" }] },
     { nome: "Documentos", botoes: [{ id: "btnPDF", texto: "Visualizar PDF" }] },
     { nome: "Localização", botoes: [{ id: "btnMap", texto: "Visualizar Mapa" }] },
     { "nome": "Navegação & Estrutura", "botoes": [{ id: "btnSearchBar", texto: "Visualizar Barra de Pesquisa" }, { "id": "btnTree", "texto": "Visualizar Árvore de Arquivos" }, { "id": "btnMindmap", "texto": "Visualizar Mapa Mental" } ] },
-    { "nome": "Utilitários & Dinâmicos", "botoes": [{ id: "btnAgenda", texto: "Visualizar Agenda" }, { id: "btnLeaderboard", texto: "Visualizar Classificação" }, { "id": "btnProfile", "texto": "Visualizar Perfil" }, { "id": "btnRaffle", "texto": "Visualizar Sorteio" }, { "id": "btnParticipants", "texto": "Visualizar Participantes" }, { "id": "btnCalendar", "texto": "Visualizar Calendário" }, { "id": "btnAd", "texto": "Visualizar Anúncio" }, { "id": "btn3DText", "texto": "Visualizar Texto 3D" }] },
-    { nome: "Negócios", botoes: [{ id: "btnCoupon", texto: "Visualizar Cupom" }, { id: "btnContact", texto: "Visualizar Contato" }, { id: "btnProduct", texto: "Visualizar Produto" }, { id: "btnPricePlan", texto: "Visualizar Plano de Preços" }, { "id": "btnVirtualCard", "texto": "Visualizar Cartão Virtual" }, { "id": "btnVCC", "texto": "Visualizar Cartão de Crédito" }] }
+    { "nome": "Utilitários & Dinâmicos", "botoes": [{ id: "btnStorageStatus", texto: "Visualizar Status de Armazenamento" }, { id: "btnAgenda", texto: "Visualizar Agenda" }, { id: "btnLeaderboard", texto: "Visualizar Classificação" }, { "id": "btnProfile", "texto": "Visualizar Perfil" }, { "id": "btnRaffle", "texto": "Visualizar Sorteio" }, { "id": "btnParticipants", "texto": "Visualizar Participantes" }, { "id": "btnCalendar", "texto": "Visualizar Calendário" }, { "id": "btnAd", "texto": "Visualizar Anúncio" }, { "id": "btn3DText", "texto": "Visualizar Texto 3D" }] },
+    { nome: "Negócios", botoes: [{ id: "btnPaymentMethods", texto: "Visualizar Formas de Pagamento" }, { id: "btnCart", texto: "Visualizar Carrinho" }, { id: "btnCoupon", texto: "Visualizar Cupom" }, { id: "btnContact", texto: "Visualizar Contato" }, { id: "btnProduct", texto: "Visualizar Produto" }, { id: "btnPricePlan", texto: "Visualizar Plano de Preços" }, { "id": "btnVirtualCard", "texto": "Visualizar Cartão Virtual" }, { "id": "btnVCC", "texto": "Visualizar Cartão de Crédito" }] }
   ]
 });
 
