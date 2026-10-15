@@ -189,30 +189,6 @@ header .dname *, header nav, header nav *, .lbxx * { transition: all 0.1s; }
 }
 
 
-.proTk {
-  position: absolute;
-  top: 20px;
-  left: -8px;
-  padding: 3.5px 16px;
-  border-radius: 0 4px 4px 0;
-  background: linear-gradient(#F79E05 0%, #8F5408 100%);
-  color: #FFFFFF;
-  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-  font-size: 13px;
-  font-weight: 600;
-  letter-spacing: 1px;
-}
-
-.proTk::after {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  border-top: 8px solid #8F5408;
-  filter: brightness(70%);
-  border-left: 8px solid transparent;
-}
-
 .dproTk::after {
      content: "";
     display: block;
@@ -222,17 +198,6 @@ header .dname *, header nav, header nav *, .lbxx * { transition: all 0.1s; }
     background-repeat: no-repeat;
     background-position: center;
 }
-
-.proTk::after {
-  content: "";
-  position: absolute;
-  bottom: -8px;
-  left: 0;
-  border-top: 8px solid #8F5408;
-  filter: brightness(70%);
-  border-left: 8px solid transparent;
-}
-
 
 
 .lbxx nav {
@@ -661,6 +626,8 @@ header n::before {     pointer-events: none;   user-select: none;  }
     .lbxx #meuBotaoConfig { background-color: var(--btn-cfg-bg); color: var(--btn-cfg-text);  border-color: var(--btn-cfg-border); }
     .lbxx #meuBotaoConfig:hover { background-color: var(--btn-cfg-bg-hover);  color: var(--btn-cfg-text-hover); border-color: var(--btn-cfg-border-hover);  }
 
+    .lbxx nav .cat-group button.proTk {  background-color: #8F5408; color: #fff !important;  border-color: #F79E05;   }
+    .lbxx nav .cat-group button.proTk:hover { background-color: #F79E05;  border-color: #8F5408;  }
 
     .lbxx nav .cat-group button {  background-color: #333; color: #fff !important;  border-color: #111;   }
     .lbxx nav .cat-group button:hover { background-color: #111;  }
