@@ -115,9 +115,9 @@ function fcas_lightbox_checkValueEX(listad, name1, name2, retronon) {
 }
 
 
-
 function fsmodal_close_aloder() {  var modalEdlement = document.getElementById("fs_lightbox_lader");    if (modalEdlement) {  modalEdlement.remove();  }    }
 
+function fcasfs_lightbox_defobterMensagemDestaque(i='pt',r=''){const t={pt:{t:"Recurso Premium",m:"Este recurso não está disponível no plano gratuito."},en:{t:"Premium Feature",m:"This feature is not available in the free plan."}}[i]||{t:"Recurso Premium",m:"Este recurso não está disponível no plano gratuito."};const tit=r?`${t.t} (${r})`:t.t;return `<div style="overflow:auto;display:flex;justify-content:center;align-items:center;width:100%;padding:10px;box-sizing:border-box;"><div class="destaque-premium" style="display:flex;align-items:center;padding:16px;background-color:#1e1b4b;overflow:auto;border:1px solid #3730a3;border-radius:8px;font-family:sans-serif;color:#ffffff;width:100%;max-width:450px;box-sizing:border-box;"><svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:#eab308;margin-right:12px;flex-shrink:0;"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg><div style="flex-grow:1;"><h4 style="margin:0 0 4px 0;font-size:14px;font-weight:600;color:#f8fafc;">${tit}</h4><p style="margin:0;font-size:12px;color:#cbd5e1;line-height:1.4;">${t.m}</p></div></div></div>`;}
 
 
 function fcasfs_lightbox_def_icriarLONBD(fcasfs_lightbox_baseUrl, ddd, optiy, app, klf, opdd,basedTk, visualaudd){    var fsmodadfdl_createdd = '';        fsmodal_createdd = '';     var fsmodafdl_createdd = '';  
@@ -271,6 +271,9 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
             } else if (optiy.type && optiy.type == "journal" && typeof fcas_lightbox_journal === "function") {
                 is_player0j = "no";
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_lightbox_journal(optiy.context || [], fcas_lightbox_checkValueEX(optiy,"config","page",1) || 1)}  </div>`;
+            } else if (optiy.type && (optiy.type == "newsletter" || optiy.type == "storageStatus" || optiy.type == "storeCart" || optiy.type == "showAlerta" ||  optiy.type == "PaymentMethods") && basedTk && basedTk===false) {
+                is_player0j = "no";
+                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_defobterMensagemDestaque(fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en'), optiy.type);}  </div>`;
             } else if (optiy.type && optiy.type == "newsletter" && typeof fcas_newsletter_show === "function" && basedTk && basedTk===true) {
                 is_player0j = "no";
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_newsletter_show(optiy.context || {})}  </div>`;
