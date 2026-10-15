@@ -12,7 +12,6 @@
     }
 
 
-    /* Variáveis de Tema */
 :root {
   --bg-color: #f4f4f4;
   --text-color: #333;
@@ -72,7 +71,6 @@ body.dark {
 
 
 
-    /* Cabeçalho */
     header {
       margin: 6px auto;
       width: 95%;
@@ -107,7 +105,6 @@ body.dark {
 }
 
 
- /* Navegação */
 nav {
   display: flex;
   flex-wrap: wrap;
@@ -149,7 +146,6 @@ nav button:hover {
 }
 
 
-/* Container para o conteúdo do modal */
 #previ_box {
   margin-top: 2em;
 }
