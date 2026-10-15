@@ -132,7 +132,7 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
         if (optiy.description && optiy.description != "") {            fsmodal_create_desci = "<br/><br/><span style=' white-space: normal;   word-break: break-word; '>" + optiy.description + "</span>";        }
         if (optiy.title && optiy.title != "") {            fsmodal_createdd += `<h1 class="fcas_lightbox_linhaunica" style="text-align:center;pointer-events:none;color:#fff;font-weight:bold;">${optiy.title}</h1>`;        }
         if (optiy.context) {
-            var fsmodal_create_ifir = "";
+            var fsmodal_create_ifir = "";  var fsmodal_createff_ifirdss="";
             if(optiy.context!=""){  fsmodal_create_ifir = optiy.context;  }
             if (Array.isArray(optiy.context)) {   fsmodal_create_ifir="";  }
 			
@@ -271,24 +271,41 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
             } else if (optiy.type && optiy.type == "journal" && typeof fcas_lightbox_journal === "function") {
                 is_player0j = "no";
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_lightbox_journal(optiy.context || [], fcas_lightbox_checkValueEX(optiy,"config","page",1) || 1)}  </div>`;
-            } else if (optiy.type && (optiy.type == "newsletter" || optiy.type == "storageStatus" || optiy.type == "storeCart" || optiy.type == "showAlerta" ||  optiy.type == "PaymentMethods") && fsmodal_creddateWi_infiio && fsmodal_creddateWi_infiio!="yes") {
+            } else if (optiy.type && optiy.type == "newsletter" && typeof fcas_newsletter_show === "function") {
                 is_player0j = "no";
-                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_defobterMensagemDestaque(fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en', optiy.type)}  </div>`;
-            } else if (optiy.type && optiy.type == "newsletter" && typeof fcas_newsletter_show === "function" && basedTk && basedTk===true) {
+				fsmodal_createff_ifirdss=fcasfs_lightbox_defobterMensagemDestaque(fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en', optiy.type);
+				if(fsmodal_creddateWi_infiio=="yes"){
+				fsmodal_createff_ifirdss=fcas_newsletter_show(optiy.context || {});
+				}
+                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fsmodal_createff_ifirdss}  </div>`;
+            } else if (optiy.type && optiy.type == "storageStatus" && typeof fcas_storage_status_show === "function") {
                 is_player0j = "no";
-                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_newsletter_show(optiy.context || {})}  </div>`;
-            } else if (optiy.type && optiy.type == "storageStatus" && typeof fcas_storage_status_show === "function" && basedTk && basedTk===true) {
+				fsmodal_createff_ifirdss=fcasfs_lightbox_defobterMensagemDestaque(fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en', optiy.type);
+				if(fsmodal_creddateWi_infiio=="yes"){
+				fsmodal_createff_ifirdss=fcas_storage_status_show(optiy.context || {}, fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en');
+				}
+                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fsmodal_createff_ifirdss}  </div>`;
+            } else if (optiy.type && optiy.type == "storeCart" && typeof fcasfs_lightbox_carrinho === "function") {
                 is_player0j = "no";
-                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_storage_status_show(optiy.context || {}, fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en')}  </div>`;
-            } else if (optiy.type && optiy.type == "storeCart" && typeof fcasfs_lightbox_carrinho === "function" && basedTk && basedTk===true) {
+				fsmodal_createff_ifirdss=fcasfs_lightbox_defobterMensagemDestaque(fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en', optiy.type);
+				if(fsmodal_creddateWi_infiio=="yes"){
+				fsmodal_createff_ifirdss=fcasfs_lightbox_carrinho(optiy.context || {});
+				}
+                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fsmodal_createff_ifirdss}  </div>`;
+            } else if (optiy.type && optiy.type == "showAlerta" && typeof fcas_lightbox_show === "function") {
                 is_player0j = "no";
-                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_carrinho(optiy.context || {})}  </div>`;
-            } else if (optiy.type && optiy.type == "showAlerta" && typeof fcas_lightbox_show === "function" && basedTk && basedTk===true) {
+				fsmodal_createff_ifirdss=fcasfs_lightbox_defobterMensagemDestaque(fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en', optiy.type);
+				if(fsmodal_creddateWi_infiio=="yes"){
+				fsmodal_createff_ifirdss=fcas_lightbox_show(optiy.context || {});
+				}
+                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fsmodal_createff_ifirdss}  </div>`;
+            } else if (optiy.type && optiy.type == "PaymentMethods" && typeof fcas_payment_methods_show === "function") {
                 is_player0j = "no";
-                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_lightbox_show(optiy.context || {})}  </div>`;
-            } else if (optiy.type && optiy.type == "PaymentMethods" && typeof fcas_payment_methods_show === "function" && basedTk && basedTk===true) {
-                is_player0j = "no";
-                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_payment_methods_show(optiy.context || {}, fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en')}  </div>`;
+				fsmodal_createff_ifirdss=fcasfs_lightbox_defobterMensagemDestaque(fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en', optiy.type);
+				if(fsmodal_creddateWi_infiio=="yes"){
+				fsmodal_createff_ifirdss=fcas_payment_methods_show(optiy.context || {}, fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en');
+				}
+                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fsmodal_createff_ifirdss}  </div>`;
             } else if (optiy.type && optiy.type == "pdf") {
                 is_player0j = "pdf";
                 start_fs_mpl = { id: "fs_modal_"+klf+"_mpdf", lang: fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en', file:optiy.context || '', pg: fcas_lightbox_checkValueEX(optiy,"config","page",1) || 1 }
