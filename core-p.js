@@ -95,7 +95,7 @@ function fcasfs_obter_obterValorPorBooleano(valor, mapeamento) { return !mapeame
       id: "previ_box",
       tiptext: "",
       scroll_hide: "yes",
-      noclose: false,
+      noclose: false, noprint:true,nodownload:true,nocontextmenu:true, 
       remove_efect: fcasfs_obter_booleano("remove_efect", false),
       btnTop: fcasfs_obter_booleano("btn_top", false),
       zoom: fcasfs_obter_booleano("zoom", false),
