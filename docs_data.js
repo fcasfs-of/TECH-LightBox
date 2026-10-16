@@ -4,6 +4,7 @@ function fcas_lightbox_generarListaSuportados(opcoes) { if (!opcoes) { return ""
 function fcas_lightbox_verificarTexto(texto) { return (texto && texto.trim() !== "") ? texto : ""; }
 
 function fcas_lightbox_verificaranalisar(lista, idioma) { var c = 0; for (var i = 0; i < lista.length; i++) { if (lista[i] !== '' && lista[i] !== null && lista[i] !== undefined) { c++; } } if (c === 0) { return ''; } if (idioma === 'pt') { return 'Quantidade de tipos suportados: ' + c + '.'; } else { return 'Quantity of supported types: ' + c + '.'; } }
+function fcas_lightbox_verificarAcessoToken(obj) { return (obj && typeof obj === 'object') ? (obj.temToken ? (obj.idioma === 'pt' ? 'Recurso Exclusivo para Portadores de Token' : (obj.idioma === 'en' ? 'Exclusive Feature for Token Holders' : '')) : (obj.textoPersonalizado && typeof obj.textoPersonalizado === 'string' && obj.textoPersonalizado.trim() !== '' ? obj.textoPersonalizado : '')) : ''; }
 
 
 window.getDocData = function(fdd) {
@@ -44,8 +45,8 @@ window.getDocData = function(fdd) {
                 ['size', 'String contendo apenas números (ex: "800") que define a largura máxima em pixels.'],
                 ['loader', 'Se for true, mostra um spinner de carregamento enquanto o conteúdo é inserido.'],
                 ['noprint', 'Se for true, ativa a proteção que esconde o conteúdo do LightBox ao tentar imprimir ou salvar a página.'],
-                ['nodownload','Se for true, bloquear o download.', 'Recurso Exclusivo para Portadores de Token'],
-                ['nocontextmenu','Bloquear o menu de contexto do clique direito no LightBox.', 'Recurso Exclusivo para Portadores de Token'],
+                ['nodownload','Se for true, bloquear o download.', fcas_lightbox_verificarAcessoToken({ idioma: 'pt', temToken: true })],
+                ['nocontextmenu','Bloquear o menu de contexto do clique direito no LightBox.', fcas_lightbox_verificarAcessoToken({ idioma: 'pt', temToken: true })],
                 ['tiptext', 'Opcional. String contendo um texto explicativo ou dica rápida associada à chamada do componente.'],
                 ['include', 'Objeto contendo configurações adicionais, como { player: "yes" } para embutir o reprodutor de mídia. Se a configuração "plugin: { AudioVisualizer: true }" for informada junto com player "yes" para um arquivo de áudio, o reprodutor exibirá barras de visualização de áudio (Audio Visualizer bars).'],
                 ['content', 'Objeto principal contendo as propriedades tratadas pela biblioteca.']
@@ -135,11 +136,11 @@ window.getDocData = function(fdd) {
                 ['dashboard','Recebe um único objeto de configuração estruturado com a string titulo, o objeto tema para customização de cores (fundoContainer, textoContainer, fundoHeader, borda, fundoConteudo, fundoCard, textoCard, valorCard, iconeCard, indicadorCard) e o array de objetos blocos para renderizar os cartões (nome, valor, indicador, svg).'],
                 ['form', 'Configuração de campos suportando as chaves e tipos: [ {"label":"","name":"","required":"boolean","type":["text", "email", "password", "number", "tel", "url", "date", "textarea", "select", "range", "slider"],"placeholder":"","min":"number","max":"number","step":"number","options"::[{ value:"", label:"" }],"rows":"number"} ]'],
                 ['PList', 'Recebe um array de objetos contendo o arquivo de áudio/vídeo, título e poster de capa correspondente: [ {"file":"","title":"","poster":""} ]'],
-                ['Configuração do tipo: "storeCart"', '{ idioma (String) [Ex: "pt"], moeda (String) [Ex: "BRL"], titulo (String) [Ex: "Meu Carrinho"], corPrincipal (String) [Ex: "#fff"], corFundo (String) [Ex: "#111"], itens (Array) [Ex: [{nome:"Item 1", preco:10.00, quantidade:2}]] }', 'Recurso Exclusivo para Portadores de Token'],
-                ['Configuração do tipo: "PaymentMethods"', '{ titulo (String) [Ex: "Formas de Pagamento Aceitas"], nomeFuncaoCallback (String) [Ex: "processarPagamento"], selecionado (String ou Number) [Ex: "Pix"] }', 'Recurso Exclusivo para Portadores de Token'],
-                ['Configuração do tipo: "showAlerta"', '{ titulo (String) [Ex: "Sucesso"], mensagem (String) [Ex: "Ação concluída."], tipo (String) [Ex: "sucesso", "erro", "aviso", "info", "ajuda", "seguranca", "carregando", "config"], iconeCustomizado (String) [Ex: "..."] }', 'Recurso Exclusivo para Portadores de Token'],
-                ['Configuração do tipo: "storageStatus"', '{ titulo (String) [Ex: "Meu Disco"], usado (Number) [Ex: 53687091200], total (Number) [Ex: 107374182400] }', 'Recurso Exclusivo para Portadores de Token'],
-                ['Configuração do tipo: "newsletter"', '{ titulo (String) [Ex: "Fique por dentro"], mensagem (String) [Ex: "Receba nossas novidades."], placeholder (String) [Ex: "Seu melhor e-mail"], botaoTexto (String) [Ex: "Assinar"], action (String) [Ex: "/api/newsletter"], nomeCampo (String) [Ex: "email"] }', 'Recurso Exclusivo para Portadores de Token']                
+                ['Configuração do tipo: "storeCart"', '{ idioma (String) [Ex: "pt"], moeda (String) [Ex: "BRL"], titulo (String) [Ex: "Meu Carrinho"], corPrincipal (String) [Ex: "#fff"], corFundo (String) [Ex: "#111"], itens (Array) [Ex: [{nome:"Item 1", preco:10.00, quantidade:2}]] }', fcas_lightbox_verificarAcessoToken({ idioma: 'pt', temToken: true })],
+                ['Configuração do tipo: "PaymentMethods"', '{ titulo (String) [Ex: "Formas de Pagamento Aceitas"], nomeFuncaoCallback (String) [Ex: "processarPagamento"], selecionado (String ou Number) [Ex: "Pix"] }', fcas_lightbox_verificarAcessoToken({ idioma: 'pt', temToken: true })],
+                ['Configuração do tipo: "showAlerta"', '{ titulo (String) [Ex: "Sucesso"], mensagem (String) [Ex: "Ação concluída."], tipo (String) [Ex: "sucesso", "erro", "aviso", "info", "ajuda", "seguranca", "carregando", "config"], iconeCustomizado (String) [Ex: "..."] }', fcas_lightbox_verificarAcessoToken({ idioma: 'pt', temToken: true })],
+                ['Configuração do tipo: "storageStatus"', '{ titulo (String) [Ex: "Meu Disco"], usado (Number) [Ex: 53687091200], total (Number) [Ex: 107374182400] }', fcas_lightbox_verificarAcessoToken({ idioma: 'pt', temToken: true })],
+                ['Configuração do tipo: "newsletter"', '{ titulo (String) [Ex: "Fique por dentro"], mensagem (String) [Ex: "Receba nossas novidades."], placeholder (String) [Ex: "Seu melhor e-mail"], botaoTexto (String) [Ex: "Assinar"], action (String) [Ex: "/api/newsletter"], nomeCampo (String) [Ex: "email"] }', fcas_lightbox_verificarAcessoToken({ idioma: 'pt', temToken: true })]                
             ],
             other: [
                 ['title', 'String com o título que será exibido no topo do LightBox.'],
@@ -184,8 +185,8 @@ window.getDocData = function(fdd) {
                 ['size', 'String containing numbers only (e.g., "800") which sets the maximum container width in pixels.'],
                 ['loader', 'If true, displays a loading spinner while the content is being loaded.'],
                 ['noprint', 'If true, activates the protection that hides the LightBox content when attempting to print or save the page.'],
-                ['nodownload','If true, block the download.', 'Exclusive Feature for Token Holders'],
-                ['nocontextmenu','Block the right-click context menu in LightBox.', 'Exclusive Feature for Token Holders'],
+                ['nodownload','If true, block the download.', fcas_lightbox_verificarAcessoToken({ idioma: 'en', temToken: true })],
+                ['nocontextmenu','Block the right-click context menu in LightBox.', fcas_lightbox_verificarAcessoToken({ idioma: 'en', temToken: true })],
                 ['tiptext', 'Optional. String containing a tooltip phrase or helpful contextual instructions bound to the layout trigger.'],
                 ['include', 'Object containing additional configurations, such as { player: "yes" } to embed the media player. If the setting "plugin: { AudioVisualizer: true }" is provided along with player "yes" for an audio file, the player will display audio visualizer bars.'],
                 ['content', 'Standard metadata wrapper object targeting libraries rendering pipeline.']
@@ -275,11 +276,11 @@ window.getDocData = function(fdd) {
                 ['dashboard','Receives a single configuration object structured with the string titulo, the tema object for color customization (fundoContainer, textoContainer, fundoHeader, borda, fundoConteudo, fundoCard, textoCard, valorCard, iconeCard, indicadorCard), and the array of objects blocos to render the cards (nome, valor, indicador, svg).'],
                 ['form', 'Fields configuration supporting the keys and types: [ {"label":"","name":"","required":"boolean","type":["text", "email", "password", "number", "tel", "url", "date", "textarea", "select", "range", "slider"],"placeholder":"","min":"number","max":"number","step":"number","options":[{ value:"", label:"" }],"rows":"number"} ]'],
                 ['PList', 'Accepts a tracking playlist array carrying structural media source locations, title texts, and posters: [ {"file":"","title":"","poster":""} ]'],
-                ['Configuration for type: "storeCart"', '{ idioma (String) [Ex: "en"], moeda (String) [Ex: "USD"], titulo (String) [Ex: "My Cart"], corPrincipal (String) [Ex: "#fff"], corFundo (String) [Ex: "#111"], itens (Array) [Ex: [{nome:"Item 1", preco:10.00, quantidade:2}]]   }', 'Exclusive Feature for Token Holders'],
-                ['Configuration for type: "PaymentMethods"', '{ titulo (String) [Ex: "Accepted Payment Methods"], nomeFuncaoCallback (String) [Ex: "processarPagamento"], selecionado (String ou Number) [Ex: "Pix"] }', 'Exclusive Feature for Token Holders'],
-                ['Configuration for type: "showAlerta"', '{ titulo (String) [Ex: "Success"], mensagem (String) [Ex: "Action completed."], tipo (String) [Ex: "sucesso", "erro", "aviso", "info", "ajuda", "seguranca", "carregando", "config"], iconeCustomizado (String) [Ex: "..."] }', 'Exclusive Feature for Token Holders'],
-                ['Configuration for type: "storageStatus"', '{ titulo (String) [Ex: "My Disk"], usado (Number) [Ex: 53687091200], total (Number) [Ex: 107374182400] }', 'Exclusive Feature for Token Holders'],
-                ['Configuration for type: "newsletter"', '{ titulo (String) [Ex: "Stay up to date"], mensagem (String) [Ex: "Get our latest updates."], placeholder (String) [Ex: "Your best email address"], botaoTexto (String) [Ex: "To sign"], action (String) [Ex: "/api/newsletter"], nomeCampo (String) [Ex: "email"] }', 'Exclusive Feature for Token Holders']                
+                ['Configuration for type: "storeCart"', '{ idioma (String) [Ex: "en"], moeda (String) [Ex: "USD"], titulo (String) [Ex: "My Cart"], corPrincipal (String) [Ex: "#fff"], corFundo (String) [Ex: "#111"], itens (Array) [Ex: [{nome:"Item 1", preco:10.00, quantidade:2}]]   }', fcas_lightbox_verificarAcessoToken({ idioma: 'en', temToken: true })],
+                ['Configuration for type: "PaymentMethods"', '{ titulo (String) [Ex: "Accepted Payment Methods"], nomeFuncaoCallback (String) [Ex: "processarPagamento"], selecionado (String ou Number) [Ex: "Pix"] }', fcas_lightbox_verificarAcessoToken({ idioma: 'en', temToken: true })],
+                ['Configuration for type: "showAlerta"', '{ titulo (String) [Ex: "Success"], mensagem (String) [Ex: "Action completed."], tipo (String) [Ex: "sucesso", "erro", "aviso", "info", "ajuda", "seguranca", "carregando", "config"], iconeCustomizado (String) [Ex: "..."] }', fcas_lightbox_verificarAcessoToken({ idioma: 'en', temToken: true })],
+                ['Configuration for type: "storageStatus"', '{ titulo (String) [Ex: "My Disk"], usado (Number) [Ex: 53687091200], total (Number) [Ex: 107374182400] }', fcas_lightbox_verificarAcessoToken({ idioma: 'en', temToken: true })],
+                ['Configuration for type: "newsletter"', '{ titulo (String) [Ex: "Stay up to date"], mensagem (String) [Ex: "Get our latest updates."], placeholder (String) [Ex: "Your best email address"], botaoTexto (String) [Ex: "To sign"], action (String) [Ex: "/api/newsletter"], nomeCampo (String) [Ex: "email"] }', fcas_lightbox_verificarAcessoToken({ idioma: 'en', temToken: true })]                
             ],
             other: [
                 ['title', 'String value rendering the headline text at the top of the header.'],
