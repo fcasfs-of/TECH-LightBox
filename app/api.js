@@ -79,6 +79,9 @@ function fcas_lightbox_elimitarValor(obj) { var v=Number(obj.value), mi=Number(o
 
 function fcas_lightbox_bloquearPrint(id, b) { return (id && id!="" && b === true) ? `@media print { #${id} { display: none !important; } }` : ""; }
 function fcas_lightbox_escutarPrint(acoes) { if (acoes && typeof acoes.quandoAparece === 'function' && typeof acoes.quandoSumiu === 'function') { var mq = window.matchMedia('print'); mq.addEventListener('change', function(e) { if (e.matches) { acoes.quandoAparece(); } else { acoes.quandoSumiu(); } }); } }
+function fcas_lightbox_bloquear_download(idDica, check) { return (check === true && typeof idDica === "string" && idDica.trim() !== "") ? `#${idDica} a[download] { pointer-events: none !important; opacity: 0.5 !important; cursor: not-allowed !important; }` : ""; }
+function fcas_lightbox_monitorar_printscreen(idDiv, check, callbackExibir, callbackOcultar) { if (check === true && typeof idDiv === "string" && idDiv.trim() !== "") { window.addEventListener('keydown', function(e) { if (e.key === 'PrintScreen' || (e.ctrlKey && e.key === 'p') || (e.metaKey && e.shiftKey && e.key === 's')) { var d = document.getElementById(idDiv); if (d) { d.style.display = 'none'; if (typeof callbackOcultar === 'function') callbackOcultar(); } } }); window.addEventListener('focus', function() { var d = document.getElementById(idDiv); if (d) { d.style.display = 'block'; if (typeof callbackExibir === 'function') callbackExibir(); } }); } }
+function fcas_lightbox_bloquear_contextmenu(idElemento, check) { if (check === true && typeof idElemento === "string" && idElemento.trim() !== "") { var el = document.getElementById(idElemento); if (el) el.addEventListener('contextmenu', function(e) { e.preventDefault(); }); } }
 
 var lightboxPLclos=function(){};    var lightboxPLcloapis=function(){};   var lightboxPLclos_mowaud=function(){};   var lightboxPLclos_mod=function(){};   var lightboxPLclop_mod=function(){};    var lightboxPLclayer_mod=function(){};     var lightboxPLclayer_adfffultmodiuu=function(){};    var lightboxPLclayerff_zoffmodiuu=function(){};   var lightboxPLclayer_zoommodiuu=function(){};     var lightboxPLclayer_adultmodiuu=function(){};    var lightboxPLclayer_modiuu=function(){};
 
@@ -483,10 +486,11 @@ return dffcas_lightbox_objs_htmm;     }
 function playerfs_osf_evensdef(eventsList, lang = "pt", plobf,timf,kk){    if(plobf){    registerPlayerOSDEvents(plobf, eventsList, lang || "pt", timf,"absolute",kk || "top-center");    }    }
 
 
-function fcasfs_gerarEstiloLightbox(optiy) {
+function fcasfs_gerarEstiloLightbox(optiy, check) {
 return `<style id="fs_modal_${optiy.id}_css_custom"> 
   ${fcas_lightbox_generateResponsiveFontCSS({ id: "fs_modal_" + optiy.id + ".modal_fs_lightbox", font: optiy.font || "" })} 
   ${fcas_lightbox_bloquearPrint("fs_modal_" + optiy.id + "", optiy.noprint || false)} 
+  ${(check && check === "yes" ? fcas_lightbox_bloquear_download("fs_modal_" + optiy.id + "", optiy.nodownload || false) : "")} 
   #fs_modal_${optiy.id}.modal_fs_lightbox.teff, #fs_modal_${optiy.id}.modal_fs_lightbox.teff * {    transition: all ${optiy.duration_efect || "0.2"}s linear !important;   }
    #fs_modal_${optiy.id}.modal_fs_lightbox svg, #fs_modal_${optiy.id}.modal_fs_lightbox img {  pointer-events:none;  }    
    #fs_modal_${optiy.id}.modal_fs_lightbox .v-graph-svg, #fs_modal_${optiy.id}.modal_fs_lightbox .fcas-map-card svg {  pointer-events:auto;  }
@@ -636,7 +640,7 @@ if(optincludeplayer === "yes"){
 //var scrcontedd = document.createElement("div");
 function addultlightboxPLclayer_modiuu_call(fiod, fddd){ 
 momocsifipsl.innerHTML = `
-                ${fcasfs_gerarEstiloLightbox(optiy)}
+                ${fcasfs_gerarEstiloLightbox(optiy, (fcasfs_lightbox_baseTks && fcasfs_lightbox_baseTks.check === true) ? "yes" : "no")}
                 <div class="modal_fs_lightbox${close_fsmofla_efestr}" id="fs_modal_${optiy.id}" style="display:block; color:#000;">
                     <span class="bngl">${btnys_fsmofla_efestr}</span>
                     <span class="bngd">${close_fsmofla_str}</span> <br/> 
