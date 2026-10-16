@@ -656,7 +656,10 @@ momocsifipsl.innerHTML = `
 `;
 
 if (optiy.btnTop && optiy.btnTop===true){   fcasfs_inicializarLightboxScroll({ id: "fs_modal_" + optiy.id, distance: 120, active: true });  }
-	
+
+if(fcasfs_lightbox_baseTks && fcasfs_lightbox_baseTks.check === true){  fcas_lightbox_bloquear_contextmenu("fs_modal_" + optiy.id + "", optiy.nocontextmenu || false);   }
+
+
   //fcas_lightbox_create_scroll({ vertical: true, horizontal: true, id: ""+optiy.id+"_boxx", btnRight: "", btnLeft: "", btnUp: "", btnDown: "",  width: 12  });
   //fcas_lightbox_create_scroll({ vertical: true, horizontal: true, id: "fs_modal_"+optiy.id+"", btnRight: fcasfs_lightbox_basescicsn["scroll4"] || "", btnLeft: fcasfs_lightbox_basescicsn["scroll3"] || "", btnUp: fcasfs_lightbox_basescicsn["scroll1"] || "", btnDown: fcasfs_lightbox_basescicsn["scroll2"] || "",  width: 14  });
 
