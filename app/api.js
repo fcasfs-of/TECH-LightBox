@@ -83,7 +83,7 @@ function fcas_lightbox_bloquear_download(idDica, check) { return (check === true
 function fcas_lightbox_monitorar_printscreen(idDiv, check, callbackExibir, callbackOcultar) { if (check === true && typeof idDiv === "string" && idDiv.trim() !== "") { window.addEventListener('keydown', function(e) { if (e.key === 'PrintScreen' || (e.ctrlKey && e.key === 'p') || (e.metaKey && e.shiftKey && e.key === 's')) { var d = document.getElementById(idDiv); if (d) { d.style.display = 'none'; if (typeof callbackOcultar === 'function') callbackOcultar(); } } }); window.addEventListener('focus', function() { var d = document.getElementById(idDiv); if (d) { d.style.display = 'block'; if (typeof callbackExibir === 'function') callbackExibir(); } }); } }
 function fcas_lightbox_bloquear_contextmenu(idElemento, check) { if (check === true && typeof idElemento === "string" && idElemento.trim() !== "") { var el = document.getElementById(idElemento); if (el) el.addEventListener('contextmenu', function(e) { e.preventDefault(); }); } }
 
-var lightboxPLclos=function(){};    var lightboxPLcloapis=function(){};   var lightboxPLclos_mowaud=function(){};   var lightboxPLclos_mod=function(){};   var lightboxPLclop_mod=function(){};    var lightboxPLclayer_mod=function(){};     var lightboxPLclayer_adfffultmodiuu=function(){};    var lightboxPLclayerff_zoffmodiuu=function(){};   var lightboxPLclayer_zoommodiuu=function(){};     var lightboxPLclayer_adultmodiuu=function(){};    var lightboxPLclayer_modiuu=function(){};
+var lightboxPLclos=function(){};    var lightboxPLcloapis=function(){};   var lightboxPLclos_mowaud=function(){};   var lightboxPLclos_mod=function(){};   var lightboxPLclop_mod=function(){};    var lightboxPLclayer_mod=function(){};  var lightboxFCAS_Gallery_imgs=function(){};     var lightboxPLclayer_adfffultmodiuu=function(){};    var lightboxPLclayerff_zoffmodiuu=function(){};   var lightboxPLclayer_zoommodiuu=function(){};     var lightboxPLclayer_adultmodiuu=function(){};    var lightboxPLclayer_modiuu=function(){};
 
 function fcas_lightbox_generateResponsiveFontCSS(config) {  if (!config || !config.font) return ""; const isUrl = config.font.startsWith('http') || config.font.startsWith('//'); const match = isUrl ? config.font.match(/family=([^&:]+)/) : null; const name = match ? decodeURIComponent(match[1]).replace(/\+/g, ' ') : config.font; let cssd = "";  let css = ""; if (isUrl) { cssd += `@import url('${config.font}'); `; } css += ` ${cssd}   #${config.id}, #${config.id} * {  font-family: '${name}', sans-serif !important; `; if (config.weight) { css += `font-weight: ${config.weight} !important; `; } if (config.lineGap) { css += `line-height: ${config.lineGap} !important; `; } if (config.fontSize) { css += `font-size: clamp(14px, 14px + (24 - 14) * ((100vw - 320px) / (1200 - 320)), 24px) !important;`; } css += `} `; return css; }
 
@@ -235,7 +235,7 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_testimonials(optiy.context, fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en")}  </div>`;
             } else if (optiy.type && optiy.type == "gallery" && typeof fcasfs_lightbox_gallery === "function") {
                 is_player0j = "no";
-                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_gallery(optiy.context, fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en")}  </div>`;
+                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_gallery(optiy.context, fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en", "lightboxFCAS_Gallery_imgs")}  </div>`;
             } else if (optiy.type && optiy.type == "coupon" && typeof fcasfs_lightbox_coupon === "function") {
                 is_player0j = "no";
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_coupon(optiy.context, fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en","fs_modal_"+klf+"_cxav")}  </div>`;
@@ -449,7 +449,7 @@ return fsmodadfdl_createdd;   }
 var adultlightboxPLclayer_modiuu=function(){};
 
 function fsmodal_close(id, hide) {  
-    if (id && id !== "") {  lightboxPLclayerff_zoffmodiuu=function(){};    lightboxPLclos_mowaud=function(){};   lightboxPLclayer_zoommodiuu=function(){};    lightboxPLclayer_adultmodiuu=function(){};   lightboxPLclayer_adfffultmodiuu=function(){};    adultlightboxPLclayer_modiuu=function(){};
+    if (id && id !== "") {  lightboxPLclayerff_zoffmodiuu=function(){};  lightboxFCAS_Gallery_imgs=function(){};   lightboxPLclos_mowaud=function(){};   lightboxPLclayer_zoommodiuu=function(){};    lightboxPLclayer_adultmodiuu=function(){};   lightboxPLclayer_adfffultmodiuu=function(){};    adultlightboxPLclayer_modiuu=function(){};
 if(lightboxPLcloapis){  lightboxPLcloapis();  }	
 
 var botaotopscrr = document.querySelector('.fcas_lightbox_scroll-top-btn');    if (botaotopscrr) {   botaotopscrr.remove();    }
@@ -559,6 +559,11 @@ fcasfs_lightbox_def_injetarScriptdf({ app: "TECH-LightBox", folder: "app", base:
 
 function fcas_lightbox_fsmodal_open(optiy){     var fcas_lightbox_fsmoddcrue=optiy.id;   const num_fsmodal_open=Math.floor(1000+Math.random()*90000);
 if (typeof fcas_lightbox_setAcesso === "function"){  fcas_lightbox_setAcesso(fcasfs_lightbox_baseTks);   }
+
+var fcas_lightbos_custu= optiy;
+fcas_lightbos_custu.noclose=false;   fcas_lightbos_custu.isTemporary=false;
+fcas_lightbos_custu.wait="";
+lightboxFCAS_Gallery_imgs=function(url, alt, lge){   fcas_lightbos_custu.content.description=alt || "";   fcas_lightbos_custu.content.context=url || "";    fcas_lightbos_custu.content.title=lge || "";  fcas_lightbox_fsmodal_open(fcas_lightbos_custu);   }; 
 
 lightboxPLclos=function(){   };     feedsfsmodal_create=function(){   fsmodal_close(optiy.id, optiy.scroll_hide);    };  
 feedsfsmodffal_create=function(){    fcas_lightbox_gbaixarJSON(optiy);    };  
