@@ -685,7 +685,9 @@ addultlightboxPLclayer_modiuu_call(fcaslightconetxndif_isnort,fcaslighdddtconetx
 //momocsifipsl.appendChild(scrcontedd);  
 //scrcontedfddd.setAttribute("src_base", ""+fcaslightconetxndiflink || "");
 
-lightboxPLclayerff_zoffmodiuu({ size: (optiy && optiy.content && optiy.content.size) ? optiy.content.size : "", link: (optincludeplayider_url) ? `${fcasfs_lightbox_def_injetarSlinkd({ separadofinal :true, app: "TECH-LightBox", folder: "", base: fcasfs_lightbox_baseUrl })}${optincludeplayider_url}` : "", id: (num_fsmodal_open) ? num_fsmodal_open : "", tipo: (optiy && optiy.content && optiy.content.type) ? optiy.content.type : "", title: (optiy && optiy.content && optiy.content.title) ? optiy.content.title : "", desc: (optiy && optiy.content && optiy.content.description) ? optiy.content.description : "" });
+if(fcasfs_lightbox_baseTks && fcasfs_lightbox_baseTks.check === true){ 
+	lightboxPLclayerff_zoffmodiuu({ size: (optiy && optiy.content && optiy.content.size) ? optiy.content.size : "", link: (optincludeplayider_url) ? `${fcasfs_lightbox_def_injetarSlinkd({ separadofinal :true, app: "TECH-LightBox", folder: "", base: fcasfs_lightbox_baseUrl })}${optincludeplayider_url}` : "", id: (num_fsmodal_open) ? num_fsmodal_open : "", tipo: (optiy && optiy.content && optiy.content.type) ? optiy.content.type : "", title: (optiy && optiy.content && optiy.content.title) ? optiy.content.title : "", desc: (optiy && optiy.content && optiy.content.description) ? optiy.content.description : "" });
+}
 
 lightboxPLclop_mod({ title:""+optiy.content.title || "", tipo:""+optiy.content.type || "none" }); 
 
