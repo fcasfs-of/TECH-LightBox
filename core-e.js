@@ -761,6 +761,14 @@ var modaisDisponiveis = {
 
 
 
+var cokk_plu_idf="pt";
+
+ var cokk_plu_enfd="/en";    var cokk_plsu_enfdd="-en"; 
+ if (location.href.toUpperCase().indexOf(cokk_plu_enfd.toUpperCase()) > -1) {    cokk_plu_idf="en";    }
+ if (location.href.toUpperCase().indexOf(cokk_plsu_enfdd.toUpperCase()) > -1) {    cokk_plu_idf="en";    }
+
+
+
 const fcasfs_ligh_cate_icons = {
   "All": "<svg width=\"24px\" height=\"24px\" viewBox=\"0 0 52 52\" enable-background=\"new 0 0 52 52\" xml:space=\"preserve\"><path d=\"M31.6,21.6c-1.2,0-2.2-1-2.2-2.2V5.5c0-1.2,1-2.2,2.2-2.2h14.2c1.2,0,2.2,1,2.2,2.2v13.9c0,1.2-1,2.2-2.2,2.2H31.6z\" /><path d=\"M37.7,29.8l-8.2,8.9c-0.5,0.5-0.5,1.3,0,1.9l8.2,8.9c0.5,0.6,1.5,0.6,2,0l8.2-8.9c0.5-0.5,0.5-1.3,0-1.9\tl-8.2-8.9C39.2,29.2,38.3,29.2,37.7,29.8z\" /><circle cx=\"13\" cy=\"39.4\" r=\"9.3\" /><path d=\"M4.8,6.5l7.2-4.1c0.7-0.4,1.5-0.4,2.1,0l7.1,4.1c0.7,0.4,1.1,1.1,1.1,1.9v8.2c0,0.8-0.4,1.5-1.1,1.9\tl-7.1,4.1c-0.7,0.4-1.5,0.4-2.1,0l-7.2-4.1c-0.7-0.4-1.1-1.1-1.1-1.9V8.4C3.7,7.6,4.1,6.9,4.8,6.5z\" /></svg>",
   "Visual Media": "<svg width=\"24px\" height=\"24px\" viewBox=\"0 0 52 52\"><path d=\"M4,10v32h44V10H4z M44,38H8V14h36V38z\"/><circle cx=\"16\" cy=\"22\" r=\"4\"/><polygon points=\"12,34 22,24 30,30 40,18 42,20 42,34\"/></svg>",
@@ -813,11 +821,8 @@ Object.keys(modaisDisponiveis).forEach(function(idBotao) {
 
 
 
-
-var cokk_plu_idf="pt";
-
 function exe_check_load_fl(){   
- var cokk_plu_enfd="/en";    var cokk_plsu_enfdd="-en"; 
+  cokk_plu_enfd="/en";     cokk_plsu_enfdd="-en"; 
  if (location.href.toUpperCase().indexOf(cokk_plu_enfd.toUpperCase()) > -1) {    cokk_plu_idf="en";    }
  if (location.href.toUpperCase().indexOf(cokk_plsu_enfdd.toUpperCase()) > -1) {    cokk_plu_idf="en";    }
 
