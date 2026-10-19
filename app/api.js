@@ -237,7 +237,7 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_testimonials(optiy.context, fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en")}  </div>`;
             } else if (optiy.type && optiy.type == "gallery" && typeof fcasfs_lightbox_gallery === "function") {
                 is_player0j = "no";
-                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_gallery(optiy.context, fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en", "lightboxFCAS_Gallery_imgs")}  </div>`;
+                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_gallery(optiy.context, fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en", "")}  </div>`;
             } else if (optiy.type && optiy.type == "coupon" && typeof fcasfs_lightbox_coupon === "function") {
                 is_player0j = "no";
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_coupon(optiy.context, fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en","fs_modal_"+klf+"_cxav")}  </div>`;
