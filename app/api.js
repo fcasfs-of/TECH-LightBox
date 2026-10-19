@@ -560,10 +560,7 @@ fcasfs_lightbox_def_injetarScriptdf({ app: "TECH-LightBox", folder: "app", base:
 function fcas_lightbox_fsmodal_open(optiy){     var fcas_lightbox_fsmoddcrue=optiy.id;   const num_fsmodal_open=Math.floor(1000+Math.random()*90000);
 if (typeof fcas_lightbox_setAcesso === "function"){  fcas_lightbox_setAcesso(fcasfs_lightbox_baseTks);   }
 
-var fcas_lightbos_custu= optiy;
-fcas_lightbos_custu.noclose=false;   fcas_lightbos_custu.isTemporary=false;
-fcas_lightbos_custu.wait="";
-lightboxFCAS_Gallery_imgs=function(url, alt, lge){   fcas_lightbos_custu.content.description=alt || "";   fcas_lightbos_custu.content.context=url || "";    fcas_lightbos_custu.content.title=lge || "";  fcas_lightbox_fsmodal_open(fcas_lightbos_custu);   }; 
+lightboxFCAS_Gallery_imgs=function(url, alt, lge){   fcas_lightbox_fsmodal_open({ content:{ description=alt || "", context=url || "", title=lge || "", type: "image" }  });   }; 
 
 lightboxPLclos=function(){   };     feedsfsmodal_create=function(){   fsmodal_close(optiy.id, optiy.scroll_hide);    };  
 feedsfsmodffal_create=function(){    fcas_lightbox_gbaixarJSON(optiy);    };  
