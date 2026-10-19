@@ -190,6 +190,10 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
             } else if (optiy.type && optiy.type == "agenda" && typeof fcas_lightbox_criarAgenda === "function") {
                 is_player0j = "no";
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_lightbox_criarAgenda(optiy.context, fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en")}  </div>`;
+            } else if (optiy.type && optiy.type == "button" && typeof fcas_lightbox_gerarButtonHTML === "function") {
+                is_player0j = "no";
+				if(optiy.context){  if(optiy.context.onClick && optiy.context.onClick=="this$[close]"){  optiy.context.onClick="feedsfsmodal_create";   }  }
+                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_lightbox_gerarButtonHTML(optiy.context}  </div>`;
             } else if (optiy.type && optiy.type == "tarefas" && typeof fcas_lightbox_criarTarefas === "function") {
                 is_player0j = "no";
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_lightbox_criarTarefas(optiy.context, fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en")}  </div>`;
