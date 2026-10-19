@@ -207,7 +207,7 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_lightbox_criarHistorico(optiy.context, fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en")}  </div>`;
             } else if (optiy.type && optiy.type == "fichas" && typeof fcas_lightbox_criarFichas === "function") {
                 is_player0j = "no";
-				fsmodal_createff_ifirdss=fcasfs_lightbox_defobterMensagemDestaque(fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en', optiy.type);
+				fsmodal_create_ifir=fcasfs_lightbox_defobterMensagemDestaque(fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en', optiy.type);
 				if(fsmodal_creddateWi_infiio=="yes"){
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_lightbox_criarFichas(optiy.context, fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en")}  </div>`;
 				}
@@ -249,7 +249,7 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_leaderboard(optiy.context, fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en")}  </div>`;
             } else if (optiy.type && optiy.type == "searchbar" && typeof fcasfs_lightbox_searchbar === "function") {
                 is_player0j = "no";
-				fsmodal_createff_ifirdss=fcasfs_lightbox_defobterMensagemDestaque(fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en', optiy.type);
+				fsmodal_create_ifir=fcasfs_lightbox_defobterMensagemDestaque(fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en', optiy.type);
 				if(fsmodal_creddateWi_infiio=="yes"){
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_searchbar(optiy.context, fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en")}  </div>`;
 				}
