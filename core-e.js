@@ -917,7 +917,7 @@ fcasfs_lightbox_config_vincular({
 });
 window.addEventListener('load', function(){ 
     dispararCliquesAutomaticos([{ parametro: 'config', obterSeletor: function(valor) { if (valor && valor.trim() === 'true') { return '.lbxx-footer-container #meuBotaoConfig'; } return ''; } }]); 
-    dispararCliquesAutomaticos([{ parametro: 'pg', obterSeletor: function(valor) { if (!valor || valor.trim() === '') return ''; var sufixo = (!isNaN(valor) && valor.trim() !== '') return "";  return '.fcas-pagination-container .fcas-page-btn[data-page="' + sufixo + '"]'; } }]); 
+    dispararCliquesAutomaticos([{ parametro: 'pg', obterSeletor: function(valor) { if (!valor || valor.trim() === '') return '';  var sufixo = (!isNaN(valor) && valor.trim() !== '') ? '1' : valor;  return '.fcas-pagination-container .fcas-page-btn[data-page="' + sufixo + '"]'; } }]); 
 
 });
 
