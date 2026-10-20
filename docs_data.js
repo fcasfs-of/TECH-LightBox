@@ -152,7 +152,8 @@ window.getDocData = function(fdd) {
                 ['title', 'String com o título que será exibido no topo do LightBox.'],
                 ['type', 'Tipo do formato tratado ('+fcas_lightbox_verificarTexto(fdd || '')+').  '+fcas_lightbox_verificaranalisar(listaComponentes_formsts, "pt")+''],
                 ['poster', 'URL da imagem de capa utilizada caso o tipo do conteúdo seja vídeo.'],
-                ['description', 'Texto descritivo opcional posicionado junto ao bloco de conteúdo.']
+                ['description', 'Texto descritivo opcional posicionado junto ao bloco de conteúdo.'],
+                ['barCount', 'Se plugin.AudioVisualizer for true, você pode passar opcionalmente o barCount (quantidade de barras do efeito). O limite permitido é de 20 a 70, e o padrão é 36 se passar dos limites.', fcas_lightbox_verificarAcessoToken({ idioma: 'pt', temToken: true })]                
             ]
         },
         en: {
@@ -299,7 +300,8 @@ window.getDocData = function(fdd) {
                 ['title', 'String value rendering the headline text at the top of the header.'],
                 ['type', 'Evaluated payload type ('+fcas_lightbox_verificarTexto(fdd || '')+').  '+fcas_lightbox_verificaranalisar(listaComponentes_formsts, "en")+''],
                 ['poster', 'URL string targeting thumbnail posters required when mapping videos.'],
-                ['description', 'Complementary description text aligned beneath or near the asset render block.']
+                ['description', 'Complementary description text aligned beneath or near the asset render block.'],
+                ['barCount', 'If plugin.AudioVisualizer is true, you can optionally pass the barCount (number of effect bars). The allowed range is from 20 to 70, and the default is 36 if it goes out of bounds.', fcas_lightbox_verificarAcessoToken({ idioma: 'en', temToken: true })]                
             ]
         }
     };
