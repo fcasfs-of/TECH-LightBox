@@ -142,7 +142,7 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
             if (Array.isArray(optiy.context)) {   fsmodal_create_ifir="";  }
 			
             if (app && app == "yes" && optiy.type && optiy.type == "id") {
-                is_player0j = "no";
+                is_player0j = "yes";
                 var start_fs_mpl_affrgs = "";   var start_fs_mplddd_argsdfd = "true";     var start_fs_mpl_argsdfd = "";        var stdart_fs_mpl_argsfdff = "";  var stdart_fs_mpl_argsfd = "";
                 if (optiy.view && optiy.view == "info") {  start_fs_mplddd_argsdfd="false";   start_fs_mpl_affrgs = "on";
                 } else if (optiy.view && optiy.view == "list") {  start_fs_mplddd_argsdfd="false";  start_fs_mpl_argsdfd = "on";        }
