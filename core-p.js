@@ -109,7 +109,7 @@ var modaisDisponiveis = {
     return {
       title: "3D",
       type: "Object_3d",
-      context:{ theme:"light", color: "rgba(255, 255, 255, 0.8)", size: "150", model: "sphere" },
+      context:{ theme:"light", color: "rgba(255, 255, 255, 0.8)", size: "230", model: "sphere" },
       size: "360",
       includePlayer: "no",
       description: ""
