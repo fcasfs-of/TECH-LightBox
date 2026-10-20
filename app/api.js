@@ -205,6 +205,12 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
             } else if (optiy.type && optiy.type == "historico" && typeof fcas_lightbox_criarHistorico === "function") {
                 is_player0j = "no";
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_lightbox_criarHistorico(optiy.context, fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en")}  </div>`;
+            } else if (optiy.type && optiy.type == "Object_3d" && typeof fcas_lightbox_3d === "function") {
+                is_player0j = "no";
+				fsmodal_create_ifir=fcasfs_lightbox_defobterMensagemDestaque(fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en', optiy.type);
+				if(fsmodal_creddateWi_infiio=="yes"){
+                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_lightbox_3d(optiy.context || {})}  </div>`;
+				}
             } else if (optiy.type && optiy.type == "fichas" && typeof fcas_lightbox_criarFichas === "function") {
                 is_player0j = "no";
 				fsmodal_create_ifir=fcasfs_lightbox_defobterMensagemDestaque(fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en', optiy.type);
