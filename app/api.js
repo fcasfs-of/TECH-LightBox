@@ -370,9 +370,11 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
             }  else if (optiy.type && optiy.type == "audio") {
                 is_player0j = "yes";
 				var fcas_lightbox_bindVisualizerToAuds=function(){};
+				let barCount=36;
 				if (visualaudd && visualaudd===true){
+					if(fsmodal_creddateWi_infiio=="yes"){   const minBars=20;const maxBars=70;barCount=optiy.barCount!==undefined?optiy.barCount:36;if(barCount<minBars||barCount>maxBars){barCount=36;}    }
 					fcas_lightbox_bindVisualizerToAuds=function(meuPlayerCustomizado, id){
-                       if(typeof fcas_lightbox_audioVisualizer === "function"){  fcas_lightbox_bindVisualizerToAudio(meuPlayerCustomizado, fcas_lightbox_audioVisualizer("oframe"+id, { color: 'linear-gradient(to top, #fff, #ccc)', barCount: 36, speed: 98 }));    }
+                       if(typeof fcas_lightbox_audioVisualizer === "function"){  fcas_lightbox_bindVisualizerToAudio(meuPlayerCustomizado, fcas_lightbox_audioVisualizer("oframe"+id, { color: 'linear-gradient(to top, #fff, #ccc)', barCount: barCount, speed: 98 }));    }
 					};
 				}
                 var tlafn_odslight=fcas_lightbox_checkValueEX(optiy,"config","Lang","en");    if(fcas_lightbox_checkValueEX(optiy,"config","OSD_Lang","")!=""){tlafn_odslight=fcas_lightbox_checkValueEX(optiy,"config","OSD_Lang","en");}
