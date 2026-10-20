@@ -104,6 +104,16 @@ function fcasfs_obter_obterValorPorBooleano(valor, mapeamento) { return !mapeame
 
 
 var modaisDisponiveis = {
+  'btnObject3d': function() {
+    return {
+      title: "3D",
+      type: "Object_3d",
+      context:{ theme:"light", color: "rgba(255, 255, 255, 1)", size: "150", model: "sphere", color: "rgba(0, 0, 0, 0.1)" },
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
   'btnMarquee': function() {
     return {
       title: "marquee",
@@ -810,7 +820,7 @@ const fcasfs_ligh_cate_icons = {
 
 fcas_lightbox_gerarMenu({ lang: "en", 
   categorias: [
-    { nome: "Visual Media", botoes: [{ id: "btnImage", texto: "View Image" }, { id: "btnSVG", texto: "View SVG" }] },
+    { nome: "Visual Media", botoes: [{ id: "btnImage", texto: "View Image" }, { id: "btnSVG", texto: "View SVG" }, { id: "btnObject3d", texto: "View Object 3D", pro:true }] },
     {"nome": "Publication", "botoes": [{ id: "btnJournal", texto: "View Journal" }, { id: "btnFAQ", texto: "View FAQ" }, { id: "btnBanner", texto: "View Banner" }, { "id": "btnBlogPost", "texto": "View Blog Post" }, { id: "btnChangelog", texto: "View Changelog" }] },
     { nome: "Gallery", botoes: [{ id: "btnGallery", texto: "View Gallery" }, { id: "btnSlideshow", texto: "View Slideshow" }, { id: "btnCarrossel", texto: "View Carousel" }, { "id": "btnTimeline", "texto": "View Timeline" }] },
     { nome: "Text & Links", botoes: [{ id: "btnMarquee", texto: "View Marquee", pro:true }, { id: "btnButtonRes", texto: "View Responsive Button" }, { id: "btnNotepad", texto: "View Notepad" }, { id: "btnText", texto: "View Text" }, { id: "btnLink", texto: "View Link" }] },
