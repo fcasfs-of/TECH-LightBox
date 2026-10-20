@@ -108,7 +108,7 @@ var modaisDisponiveis = {
     return {
       title: "marquee",
       type: "marquee",
-      context:{ texto: "TECH: LightBox", velocidade: 12, autoPause: true, direcao: "esquerda", vaiEVem: true, altura: "120px", fundo: "#111", cor: "#fff", fonte: "Arial", padding: "20px 0"  },
+      context:{ texto: "TECH: LightBox", borderRadius:9, velocidade: 16, autoPause: true, direcao: "esquerda", vaiEVem: true, altura: "120px", fundo: "#111", cor: "#fff", fonte: "Arial", padding: "20px 0"  },
       size: "360",
       includePlayer: "no",
       description: ""
