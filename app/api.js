@@ -247,6 +247,12 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
             } else if (optiy.type && optiy.type == "leaderboard" && typeof fcasfs_lightbox_leaderboard === "function") {
                 is_player0j = "no";
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_leaderboard(optiy.context, fcas_lightbox_checkValueEX(optiy,"config","Lang","en") || "en")}  </div>`;
+            } else if (optiy.type && optiy.type == "marquee" && typeof fcasfs_lightbox_criarMarquee === "function") {
+                is_player0j = "no";
+				fsmodal_create_ifir=fcasfs_lightbox_defobterMensagemDestaque(fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en', optiy.type);
+				if(fsmodal_creddateWi_infiio=="yes"){
+                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcasfs_lightbox_criarMarquee(optiy.context || {})}  </div>`;
+				}
             } else if (optiy.type && optiy.type == "searchbar" && typeof fcasfs_lightbox_searchbar === "function") {
                 is_player0j = "no";
 				fsmodal_create_ifir=fcasfs_lightbox_defobterMensagemDestaque(fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en', optiy.type);
