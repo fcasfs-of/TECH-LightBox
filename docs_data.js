@@ -12,7 +12,7 @@ window.getDocData = function(fdd) {
         pt: {
             versoes: { "2.0.2.0": { data: "", logs: [ { tipo: "melhoria", texto: "Toda a nossa estrutura foi aprimorada com melhorias de desempenho, otimização, design e modelos refinados." } ] }  },
             demoUrl: "/",
-            title: "Lightbox - Conteúdos Diversos",
+            title: "TECH - Lightbox - Conteúdos Diversos",
             subtitle: "Documentação Técnica",
             versionLabel: "Versão: ",
             playerLabel: "Player Embutido: ",
@@ -153,7 +153,7 @@ window.getDocData = function(fdd) {
         en: {
             versoes: { "2.0.2.0": { data: "", logs: [ { tipo: "improvement", texto: "Our entire structure has been enhanced with performance improvements, optimization, design, and refined models." } ] }  },
             demoUrl: "/en",
-            title: "Lightbox - Diverse Contents",
+            title: "TECH - Lightbox - Diverse Contents",
             subtitle: "Technical Documentation",
             versionLabel: "Version: ",
             playerLabel: "Embedded Player: ",
