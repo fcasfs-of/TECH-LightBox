@@ -49,7 +49,9 @@ window.getDocData = function(fdd) {
                 ['nocontextmenu','Bloquear o menu de contexto do clique direito no LightBox.', fcas_lightbox_verificarAcessoToken({ idioma: 'pt', temToken: true })],
                 ['tiptext', 'Opcional. String contendo um texto explicativo ou dica rápida associada à chamada do componente.'],
                 ['include', 'Objeto contendo configurações adicionais, como { player: "yes" } para embutir o reprodutor de mídia. Se a configuração "plugin: { AudioVisualizer: true }" for informada junto com player "yes" para um arquivo de áudio, o reprodutor exibirá barras de visualização de áudio (Audio Visualizer bars).'],
-                ['content', 'Objeto principal contendo as propriedades tratadas pela biblioteca.']
+                ['content', 'Objeto principal contendo as propriedades tratadas pela biblioteca.'],
+                ['mask', 'Opcional. String contendo o formato da máscara CSS ("inset", "circle", "ellipse", "polygon", "path", "rect", "xywh", "shape", "margin-box", "border-box", "padding-box", "content-box", "stroke-box", "view-box", "fill-box", "none", "inherit", "initial", "revert", "revert-layer", "unset").', fcas_lightbox_verificarAcessoToken({ idioma: 'pt', temToken: true })],
+                ['mask_valor', 'Opcional. String com os valores da forma escolhida em "mask". Se omitido, assume valores padrões funcionais. Exemplos aceitos: "50%" ou "10px" para circle/inset; "50% 50% at 50% 50%" para ellipse; "0% 0%, 100% 0%, 100% 100%" para polygon; "0 100% 100% 0" para rect; "0 0 100% 100%" para xywh.', fcas_lightbox_verificarAcessoToken({ idioma: 'pt', temToken: true })]
             ],
             global: [
                 ['BG_Blur', 'String contendo apenas números que define a intensidade do efeito de desfoque de fundo (ex: "8").'],
@@ -192,7 +194,10 @@ window.getDocData = function(fdd) {
                 ['nocontextmenu','Block the right-click context menu in LightBox.', fcas_lightbox_verificarAcessoToken({ idioma: 'en', temToken: true })],
                 ['tiptext', 'Optional. String containing a tooltip phrase or helpful contextual instructions bound to the layout trigger.'],
                 ['include', 'Object containing additional configurations, such as { player: "yes" } to embed the media player. If the setting "plugin: { AudioVisualizer: true }" is provided along with player "yes" for an audio file, the player will display audio visualizer bars.'],
-                ['content', 'Standard metadata wrapper object targeting libraries rendering pipeline.']
+                ['content', 'Standard metadata wrapper object targeting libraries rendering pipeline.'],
+                ['mask', 'Optional. String containing the CSS mask shape ("inset", "circle", "ellipse", "polygon", "path", "rect", "xywh", "shape", "margin-box", "border-box", "padding-box", "content-box", "stroke-box", "view-box", "fill-box", "none", "inherit", "initial", "revert", "revert-layer", "unset").', fcas_lightbox_verificarAcessoToken({ idioma: 'en', temToken: true })],
+                ['mask_valor', 'Optional. String containing the values for the shape selected in "mask". If omitted, functional default values are used. Accepted examples: "50%" or "10px" for circle/inset; "50% 50% at 50% 50%" for ellipse; "0% 0%, 100% 0%, 100% 100%" for polygon; "0 100% 100% 0" for rect; "0 0 100% 100%" for xywh.', fcas_lightbox_verificarAcessoToken({ idioma: 'en', temToken: true })]
+
             ],
             global: [
                 ['BG_Blur', 'String containing numbers only that defines the backdrop filter blur rendering strength (e.g., "8").'],
