@@ -105,6 +105,16 @@ function fcasfs_obter_obterValorPorBooleano(valor, mapeamento) { return !mapeame
 
 
 var modaisDisponiveis = {
+  'btnMarquee': function() {
+    return {
+      title: "marquee",
+      type: "marquee",
+      context:{ texto: "TECH: LightBox", velocidade: 12, autoPause: true, direcao: "esquerda", vaiEVem: true, altura: "120px", fundo: "#111", cor: "#fff", fonte: "Arial", padding: "20px 0"  },
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
   'btnButtonRes': function() {
     return {
       title: "button",
@@ -802,7 +812,7 @@ fcas_lightbox_gerarMenu({ lang: "pt",
     { nome: "Mídia Visual", botoes: [{ id: "btnImage", texto: "Visualizar Imagem" }, { id: "btnSVG", texto: "Visualizar SVG" }] },
     {"nome": "Publicação", "botoes": [{ id: "btnJournal", texto: "Visualizar Diário" }, { id: "btnFAQ", texto: "Visualizar FAQ" }, { id: "btnBanner", texto: "Visualizar Banner" }, { "id": "btnBlogPost", "texto": "Visualizar Post de Blog" }, { id: "btnChangelog", texto: "Visualizar Notas de Atualização" }] },
     { nome: "Galeria", botoes: [{ id: "btnGallery", texto: "Visualizar Galeria" }, { id: "btnSlideshow", texto: "Visualizar Slideshow" }, { id: "btnCarrossel", texto: "Visualizar Carrossel" }, { "id": "btnTimeline", "texto": "Visualizar Linha do tempo" }] },
-    { nome: "Texto & Links", botoes: [{ id: "btnButtonRes", texto: "Visualizar Botão Responsivo" }, { id: "btnNotepad", texto: "Visualizar Bloco de Notas" }, { id: "btnText", texto: "Visualizar Texto" }, { id: "btnLink", texto: "Visualizar Link" }] },
+    { nome: "Texto & Links", botoes: [{ id: "btnMarquee", texto: "Visualizar Marquee", pro:true }, { id: "btnButtonRes", texto: "Visualizar Botão Responsivo" }, { id: "btnNotepad", texto: "Visualizar Bloco de Notas" }, { id: "btnText", texto: "Visualizar Texto" }, { id: "btnLink", texto: "Visualizar Link" }] },
     { nome: "Dados", botoes: [{ id: "btnTable", texto: "Visualizar Tabela" }, { id: "btnList", texto: "Visualizar Lista" }, { id: "btnFichas", texto: "Visualizar Fichas", pro:true }, { id: "btnTasks", texto: "Visualizar Tarefas" }, { id: "btnHistory", texto: "Visualizar Histórico" }] },
     { nome: "Multimídia", botoes: [{ id: "btnPlaylist", texto: "Visualizar Playlist" }, { id: "btnAudio", texto: "Visualizar Áudio" }, { id: "btnVideo", texto: "Visualizar Vídeo" }] },
     { nome: "Interação", botoes: [{ id: "btnNewsletter", texto: "Visualizar Newsletter", pro:true }, { id: "btnAlert", texto: "Visualizar Aviso", pro:true }, { id: "btnTestimonials", texto: "Visualizar Depoimentos" }, { id: "btnChat", texto: "Visualizar Chat" }, { id: "btnReview", texto: "Visualizar Avaliação" }, { id: "btnForm", texto: "Visualizar Formulário" }, { id: "btnFeedback", texto: "Visualizar Feedback" }] },
