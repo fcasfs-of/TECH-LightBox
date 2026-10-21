@@ -300,6 +300,12 @@ if (basedTk && basedTk===true){   fsmodal_createWi_infiio = "";    fsmodal_credd
             } else if (optiy.type && optiy.type == "notepad" && typeof fcas_lightbox_notepad === "function") {
                 is_player0j = "no";
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_lightbox_notepad(optiy.context || "", { textAlign: fcas_lightbox_checkValueEX(optiy,"config","textAlign","center") || "center", fontSize: fcas_lightbox_checkValueEX(optiy,"config","fontSize",16) || 16, lowercase: fcas_lightbox_checkValueEX(optiy,"config","lower",false) || false, italic: fcas_lightbox_checkValueEX(optiy,"config","italic",false) || false, uppercase: fcas_lightbox_checkValueEX(optiy,"config","upper",false) || false, bold: fcas_lightbox_checkValueEX(optiy,"config","negrito",false) || false })}  </div>`;
+            } else if (optiy.type && optiy.type == "book" && typeof fcas_lightbox_book === "function") {
+                is_player0j = "no";
+                fsmodal_create_ifir=fcasfs_lightbox_defobterMensagemDestaque(fcas_lightbox_checkValueEX(optiy,"config","Lang","en") ||'en', optiy.type);
+				if(fsmodal_creddateWi_infiio=="yes"){
+                fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_lightbox_book(optiy.context || [], fcas_lightbox_checkValueEX(optiy,"config","page",1) || 1)}  </div>`;
+                }
             } else if (optiy.type && optiy.type == "journal" && typeof fcas_lightbox_journal === "function") {
                 is_player0j = "no";
                 fsmodal_create_ifir = `<div style="${fsmodal_createWi} height:${Number(optiy.size)}px !important;">  ${fcas_lightbox_journal(optiy.context || [], fcas_lightbox_checkValueEX(optiy,"config","page",1) || 1)}  </div>`;
