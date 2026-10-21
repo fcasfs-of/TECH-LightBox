@@ -109,7 +109,7 @@ var modaisDisponiveis = {
     return {
       title: "book",
       type: "book",
-      context:[`${typeof document !== "undefined" ? document.title : ""} <br/> ${typeof app_2ver !== "undefined" ? app_2ver : ""}`, typeof location !== "undefined" ? location.href : ""],
+      context:[`${typeof document !== "undefined" ? document.title : ""} <br/> ${typeof app_2ver !== "undefined" ? app_2ver : ""} <br/><br/> ${typeof location !== "undefined" ? location.href : ""}`],
       size: "360",
       includePlayer: "no",
       description: ""
