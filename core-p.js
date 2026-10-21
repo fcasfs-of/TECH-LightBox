@@ -105,6 +105,16 @@ function fcasfs_obter_obterValorPorBooleano(valor, mapeamento) { return !mapeame
 
 
 var modaisDisponiveis = {
+  'btnBook': function() {
+    return {
+      title: "book",
+      type: "book",
+      context:[`${typeof document !== "undefined" ? document.title : ""} <br/> ${typeof app_2ver !== "undefined" ? app_2ver : ""}`, typeof location !== "undefined" ? location.href : ""],
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
   'btnObject3d': function() {
     return {
       title: "3D",
@@ -820,7 +830,7 @@ const fcasfs_ligh_cate_icons = {
 fcas_lightbox_gerarMenu({ lang: "pt", 
   categorias: [
     { nome: "Mídia Visual", botoes: [{ id: "btnImage", texto: "Visualizar Imagem" }, { id: "btnSVG", texto: "Visualizar SVG" }, { id: "btnObject3d", texto: "Visualizar Objeto 3D", pro:true }] },
-    {"nome": "Publicação", "botoes": [{ id: "btnJournal", texto: "Visualizar Diário" }, { id: "btnFAQ", texto: "Visualizar FAQ" }, { id: "btnBanner", texto: "Visualizar Banner" }, { "id": "btnBlogPost", "texto": "Visualizar Post de Blog" }, { id: "btnChangelog", texto: "Visualizar Notas de Atualização" }] },
+    {"nome": "Publicação", "botoes": [{ id: "btnBook", texto: "Visualizar Livro", pro:true }, { id: "btnJournal", texto: "Visualizar Diário" }, { id: "btnFAQ", texto: "Visualizar FAQ" }, { id: "btnBanner", texto: "Visualizar Banner" }, { "id": "btnBlogPost", "texto": "Visualizar Post de Blog" }, { id: "btnChangelog", texto: "Visualizar Notas de Atualização" }] },
     { nome: "Galeria", botoes: [{ id: "btnGallery", texto: "Visualizar Galeria" }, { id: "btnSlideshow", texto: "Visualizar Slideshow" }, { id: "btnCarrossel", texto: "Visualizar Carrossel" }, { "id": "btnTimeline", "texto": "Visualizar Linha do tempo" }] },
     { nome: "Texto & Links", botoes: [{ id: "btnMarquee", texto: "Visualizar Marquee", pro:true }, { id: "btnButtonRes", texto: "Visualizar Botão Responsivo" }, { id: "btnNotepad", texto: "Visualizar Bloco de Notas" }, { id: "btnText", texto: "Visualizar Texto" }, { id: "btnLink", texto: "Visualizar Link" }] },
     { nome: "Dados", botoes: [{ id: "btnTable", texto: "Visualizar Tabela" }, { id: "btnList", texto: "Visualizar Lista" }, { id: "btnFichas", texto: "Visualizar Fichas", pro:true }, { id: "btnTasks", texto: "Visualizar Tarefas" }, { id: "btnHistory", texto: "Visualizar Histórico" }] },
