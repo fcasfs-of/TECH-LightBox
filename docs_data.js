@@ -1,4 +1,4 @@
-const listaComponentes_formsts = ["list", "table", "playlist", "carrossel", "form", "map", "slideshow", "grafico", "pdf", "link", "texto", "image", "svg", "contact", "product", "dashboard", "audio", "video", "PList", "timeline", "BlogCard", "plans", "3DText", "Ad", "VirtualCard", "VirtualCreditCard", "Profile", "Sorteio", "Participants", "Calendar", "treeview", "mindmap", "feedback", "searchbar", "review", "coupon", "banner", "faq", "testimonials", "gallery", "chat", "leaderboard", "agenda", "fichas", "tarefas", "historico", "changelog", "notepad", "journal", "newsletter", "storageStatus", "showAlerta", "PaymentMethods", "storeCart", "button", "marquee", "Object_3d"];
+const listaComponentes_formsts = ["list", "table", "playlist", "carrossel", "form", "map", "slideshow", "grafico", "pdf", "link", "texto", "image", "svg", "contact", "product", "dashboard", "audio", "video", "PList", "timeline", "BlogCard", "plans", "3DText", "Ad", "VirtualCard", "VirtualCreditCard", "Profile", "Sorteio", "Participants", "Calendar", "treeview", "mindmap", "feedback", "searchbar", "review", "coupon", "banner", "faq", "testimonials", "gallery", "chat", "leaderboard", "agenda", "fichas", "tarefas", "historico", "changelog", "notepad", "journal", "newsletter", "storageStatus", "showAlerta", "PaymentMethods", "storeCart", "button", "marquee", "book", "Object_3d"];
 
 function fcas_lightbox_generarListaSuportados(opcoes) { if (!opcoes) { return ""; } var lista = opcoes.lista; var separador = opcoes.separador; var ordemAlfabetica = opcoes.ordemAlfabetica; if (!lista || !Array.isArray(lista) || lista.length === 0) { return ""; } if (separador === undefined || separador === null || separador === "") { separador = ", "; } else if (String(separador).slice(-1) !== " ") { separador = separador + " "; } var listaFinal = lista.slice(); if (ordemAlfabetica) { listaFinal.sort(function(a, b) { return String(a).localeCompare(String(b)); }); } return listaFinal.join(separador); }
 function fcas_lightbox_verificarTexto(texto) { return (texto && texto.trim() !== "") ? texto : ""; }
@@ -87,6 +87,7 @@ window.getDocData = function(fdd) {
                 ['Configuração para tipos: "audio", "video" e "PList"', 'Suporta a parametrização completa de players de mídia: colorText, colorIcon, OSD_Pos, pos_time (strings), OSD_Lang ("pt"/"en"), OSD_Theme ("light"/"dark"), volume (número decimal), OSD_Time (número em ms), OSD, autoplay, mute, contextmenu, nocontrols (booleanos). Se OSD for true, suporta a propriedade OSD_Events (opcional) que aceita uma lista/array contendo eventos como: "subtitle", "quality", "audiotrack", "exitfullscreen", "fullscreen", "end", "finish", "volume", "seek", "userseek", "unmute", "mute", "pause", "stop", "play", "speed", "previous", "next".'],
                 ['Configuração Exclusiva para tipo: "PList"', 'Suporta adicionalmente a propriedade: select (string contendo apenas o número do item ativo da lista de reprodução).'],
                 ['Configuração Exclusiva para tipo: "video"', 'Suporta adicionalmente a propriedade: stretch (boolean).'],
+                ['Configuração do tipo: "book"', 'Suporta o controle de foco do book: page (número).', fcas_lightbox_verificarAcessoToken({ idioma: 'pt', temToken: true })],
                 ['Configuração Exclusiva para tipo: "marquee"', 'Suporta adicionalmente o objeto contendo as propriedades: texto (string), borderRadius, velocidade (number), direcao (string: "esquerda", "direita", "cima", "baixo"), autoPause, vaiEVem (boolean), fundo (string), cor (string), fonte (string), padding (string), altura (string).', fcas_lightbox_verificarAcessoToken({ idioma: 'pt', temToken: true })],
                 ['Configuração para tipo: "form"', 'Suporta o controle de validação e envio: method: (GET, POST, PUT, DELETE, PATCH), action (string), submitText, resetText (string), showReset (boolean), onsubmit (string, Nome da função de callback).']
             ],
@@ -97,6 +98,7 @@ window.getDocData = function(fdd) {
                 ['texto', 'Recebe uma string simples contendo o texto normal.'],
                 ["notepad", "Recebe uma string simples contendo o texto normal."],
                 ["journal", "Recebe um array de textos (cada item vira uma página)."],
+                ['book', 'Recebe uma lista de strings para a exibição de um livro com páginas.', fcas_lightbox_verificarAcessoToken({ idioma: 'pt', temToken: true })],
                 ['Tabela', 'Recebe um array contendo coleções de objetos estruturados com suas respectivas chaves e valores dinâmicos: [] dentro um objeto com keys e valores.'],
                 ['Lista', 'Recebe um array de strings tradicionais contendo os itens sequenciais: [].'],
                 ['audio', 'Recebe uma string contendo o link ou caminho URL direto do arquivo de áudio.'],
@@ -236,6 +238,7 @@ window.getDocData = function(fdd) {
                 ['Configuration for types: "audio", "video" and "PList"', 'Properties: colorText, colorIcon, OSD_Pos, pos_time (strings), OSD_Lang ("pt"/"en"), OSD_Theme ("light"/"dark"), volume (float), OSD_Time (number in ms), OSD, autoplay, mute, contextmenu, nocontrols (booleans). If OSD is true, it supports the OSD_Events (optional) property which maps an array collection tracking media events like: "subtitle", "quality", "audiotrack", "exitfullscreen", "fullscreen", "end", "finish", "volume", "seek", "userseek", "unmute", "mute", "pause", "stop", "play", "speed", "previous", "next".'],
                 ['Exclusive Configuration for type: "PList"', 'Properties: select (string tracking sequential track execution option array index number).'],
                 ['Exclusive Configuration for type: "video"', 'Properties: stretch (boolean).'],
+                ['Exclusive Configuration for type: "book"', 'Supports book focus control: page (number).', fcas_lightbox_verificarAcessoToken({ idioma: 'en', temToken: true })],
                 ['Exclusive Configuration for type: "marquee"', 'Additionally supports an object containing the properties: texto (string), borderRadius, velocidade (number), direcao (string: "esquerda", "direita", "cima", "baixo"), autoPause, vaiEVem (boolean), fundo (string), cor (string), fonte (string), padding (string), altura (string).', fcas_lightbox_verificarAcessoToken({ idioma: 'en', temToken: true })],
                 ['Configuration for type: "form"', 'Supports validation and submission control: method: (GET, POST, PUT, DELETE, PATCH), action (string), submitText, resetText (string), showReset (boolean), onsubmit (string, Name of the callback function).']
             ],
@@ -246,6 +249,7 @@ window.getDocData = function(fdd) {
                 ['texto', 'Accepts a clean and standard flat string payload: normal text string.'],
                 ["notepad", "Accepts a clean and standard flat string payload: normal text string."],
                 ["journal", "Receives an array of texts (each item becomes a page)."],
+                ['book', 'Receives a list of strings for displaying a book with pages.', fcas_lightbox_verificarAcessoToken({ idioma: 'en', temToken: true })],
                 ['Table', 'Accepts an array structure mapping collection sets of dynamic objects: [] containing an object with keys and values.'],
                 ['List', 'Accepts a sequential collection array listing text strings: [].'],
                 ['audio', 'Accepts a destination path string referencing an audio asset source file location: link.'],
