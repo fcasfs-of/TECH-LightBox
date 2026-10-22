@@ -125,69 +125,89 @@ function registerPlayerOSDEvents(plobf, eventsList, lang = "pt", openf_osdcd_tim
     const allEvents = {
         "quality": function() {
             fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: (osdTranslations.quality[lang] || osdTranslations.quality["pt"]), pos: osdposito, showAction: false, actionText: "", width: 'auto' });
+			if(typeof lightboxPLclayer_mod === 'function'){    lightboxPLclayer_mod({ text:"quality", info:plobf.api("quality") });   }
         },
         "audiotrack": function() {
             fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: (osdTranslations.audiotrack[lang] || osdTranslations.audiotrack["pt"]), pos: osdposito, showAction: false, actionText: "", width: 'auto' });
+			 if(typeof lightboxPLclayer_mod === 'function'){   lightboxPLclayer_mod({ text:"audiotrack", info:plobf.api("audiotrack") });   }
         },
         "subtitle": function() {
             fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: (osdTranslations.subtitle[lang] || osdTranslations.subtitle["pt"]), pos: osdposito, showAction: false, actionText: "", width: 'auto' });
+			if(typeof lightboxPLclayer_mod === 'function'){     lightboxPLclayer_mod({ text:"subtitle", info:plobf.api("subtitle")});   }
         },
         "start": function() {
             fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: (osdTranslations.start[lang] || osdTranslations.start["pt"]), pos: osdposito, showAction: false, actionText: "", width: 'auto' });
+			 if(typeof lightboxPLclayer_mod === 'function'){    lightboxPLclayer_mod({ text:"start", info:"true" });   }
         },
         "new": function() {
             fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: (osdTranslations.new[lang] || osdTranslations.new["pt"]), pos: osdposito, showAction: false, actionText: "", width: 'auto' });
+			 if(typeof lightboxPLclayer_mod === 'function'){    lightboxPLclayer_mod({ text:"new", info:"true" });    }
         },
         "exitfullscreen": function() {
             fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: (osdTranslations.exitfullscreen[lang] || osdTranslations.exitfullscreen["pt"]), pos: osdposito, showAction: false, actionText: "", width: '180px' });
+			 if(typeof lightboxPLclayer_mod === 'function'){    lightboxPLclayer_mod({ text:"exitfullscreen", info:"true" });    }
         },
         "fullscreen": function() {
             fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: (osdTranslations.fullscreen[lang] || osdTranslations.fullscreen["pt"]), pos: osdposito, showAction: false, actionText: "", width: '180px' });
+			if(typeof lightboxPLclayer_mod === 'function'){   lightboxPLclayer_mod({ text:"fullscreen", info:"true" });    }
         },
         "end": function() {
             fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: (osdTranslations.end[lang] || osdTranslations.end["pt"]), pos: osdposito, showAction: false, actionText: "", width: '180px' });
+			 if(typeof lightboxPLclayer_mod === 'function'){  lightboxPLclayer_mod({ text:"end", info:"true" });    }
         },
         "finish": function() {
             fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: (osdTranslations.finish[lang] || osdTranslations.finish["pt"]), pos: osdposito, showAction: false, actionText: "", width: '180px' });
+			if(typeof lightboxPLclayer_mod === 'function'){   lightboxPLclayer_mod({ text:"finish", info:"true" });     }
         },
         "volume": function() {
             let label = osdTranslations.volume[lang] || osdTranslations.volume["pt"];
             fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: label + Math.floor(plobf.api("volume") * 100) + "%", pos: osdposito, showAction: false, actionText: "", width: 'auto' });
-        },
+ 			if(typeof lightboxPLclayer_mod === 'function'){   lightboxPLclayer_mod({ text:"volume", info:Math.floor(plobf.api("volume") * 100) + "%" });      }
+       },
         "seek": function() {
             fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: '' + convertSecondsDurationto(plobf.api("time")), pos: osdposito, showAction: false, actionText: "", width: '180px' });
+			if(typeof lightboxPLclayer_mod === 'function'){   lightboxPLclayer_mod({ text:"seek", info:convertSecondsDurationto(plobf.api("time")) });     }
         },
         "userseek": function() {
             fs_OSD({ duration: openf_osdcd_time, position: osdpositdo, text: '' + convertSecondsDurationto(plobf.api("time")), pos: osdposito, showAction: false, actionText: "", width: '180px' });
+			if(typeof lightboxPLclayer_mod === 'function'){   lightboxPLclayer_mod({ text:"userseek", info:convertSecondsDurationto(plobf.api("time")) });     }
         },
         "unmute": function() {
             fs_OSD({ duration: openf_osdcd_time, text: (osdTranslations.unmute[lang] || osdTranslations.unmute["pt"]), position: osdpositdo, pos: osdposito, showAction: false, actionText: "", width: '180px' });
+			if(typeof lightboxPLclayer_mod === 'function'){   lightboxPLclayer_mod({ text:"unmute", info:"true" });    }
         },
         "mute": function() {
             fs_OSD({ duration: openf_osdcd_time, text: (osdTranslations.mute[lang] || osdTranslations.mute["pt"]), position: osdpositdo, pos: osdposito, showAction: false, actionText: "", width: '120px' });
+			if(typeof lightboxPLclayer_mod === 'function'){   lightboxPLclayer_mod({ text:"mute", info:"true" });    }
         },
         "pause": function() {
             fs_OSD({ duration: openf_osdcd_time, text: (osdTranslations.pause[lang] || osdTranslations.pause["pt"]), position: osdpositdo, pos: osdposito, showAction: false, actionText: "", width: '120px' });
+			if(typeof lightboxPLclayer_mod === 'function'){   lightboxPLclayer_mod({ text:"pause", info:"true" });     }
         },
         "stop": function() {
             fs_OSD({ duration: openf_osdcd_time, text: (osdTranslations.stop[lang] || osdTranslations.stop["pt"]), position: osdpositdo, pos: osdposito, showAction: false, actionText: "", width: '120px' });
+			if(typeof lightboxPLclayer_mod === 'function'){   lightboxPLclayer_mod({ text:"stop", info:"true" });    }
         },
         "play": function() {
             fs_OSD({ duration: openf_osdcd_time, text: (osdTranslations.play[lang] || osdTranslations.play["pt"]), position: osdpositdo, pos: osdposito, showAction: false, actionText: "", width: '150px' });
+			if(typeof lightboxPLclayer_mod === 'function'){   lightboxPLclayer_mod({ text:"play", info:"true" });    }
         },
         "next": function() {
             fs_OSD({ duration: openf_osdcd_time, text: '' + plobf.api("playlist_title"), position: osdpositdo, pos: osdposito, showAction: false, actionText: "", width: 'auto' });
+			if(typeof lightboxPLclayer_modiuu === 'function'){    lightboxPLclayer_modiuu({ tp:"playlist", text:"next", info:plobf.api("playlist_title") });     }
         },
         "previous": function() {
             fs_OSD({ duration: openf_osdcd_time, text: '' + plobf.api("playlist_title"), position: osdpositdo, pos: osdposito, showAction: false, actionText: "", width: 'auto' });
+			if(typeof lightboxPLclayer_modiuu === 'function'){  lightboxPLclayer_modiuu({ tp:"playlist", text:"previous", info:plobf.api("playlist_title") });      }
         },
         "speed": function() {
             let label = osdTranslations.speed[lang] || osdTranslations.speed["pt"];
             fs_OSD({ duration: openf_osdcd_time, text: label + plobf.api("speed"), position: osdpositdo, pos: osdposito, showAction: false, actionText: "", width: 'auto' });
+			 if(typeof lightboxPLclayer_mod === 'function'){  lightboxPLclayer_mod({ text:"speed", info:plobf.api("speed") });     }
         }
 	};
 
-    if (!Array.isArray(eventsList) || eventsList.length === 0) {
+    if (!Array.isArray(eventsList) || eventsList.length === 0 && plobf) {
         for (let eventName in allEvents) {   plobf.OnEvents(eventName, allEvents[eventName]);   } 
     } else {
         for (let i = 0; i < eventsList.length; i++) {
