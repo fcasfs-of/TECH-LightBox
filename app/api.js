@@ -597,11 +597,11 @@ var fcas_lightbox_fsmodal_dliysn =document.querySelector('#'+id+'.modal_fs_light
 if(fcas_lightbox_fsmodal_dliysn){   if(fcas_lightbox_fsmodal_dliysn.classList.contains('show')){
 if(fcas_lightbox_fsmodal_liysn && fcas_lightbox_fsmodal_btdf){  
 fcas_lightbox_fsmodal_dliysn.classList.remove("show");
-fcas_lightbox_fsmodal_btdf.innerHTML=" > ";   fcas_lightbox_fsmodal_btdf.classList.remove("active");
+fcas_lightbox_fsmodal_btdf.innerHTML='<svg fill="currentColor" width="20px" height="20px" viewBox="0 -16 544 544" xmlns="http://www.w3.org/2000/svg" ><path d="M272 400Q205 400 151 361 96 322 64 256 96 190 151 151 205 112 272 112 336 112 392 153 448 193 480 256 448 319 392 360 336 400 272 400ZM272 352Q312 352 340 324 368 296 368 256 368 216 340 188 312 160 272 160 232 160 204 188 176 216 176 256 176 296 204 324 232 352 272 352ZM272 312Q249 312 233 296 216 279 216 256 216 233 233 217 249 200 272 200 295 200 312 217 328 233 328 256 328 279 312 296 295 312 272 312Z" /></svg>';   fcas_lightbox_fsmodal_btdf.classList.remove("active");
 fcas_lightbox_fsmodal_liysn.style.display="none";   }
 }  else {
 if(fcas_lightbox_fsmodal_liysn && fcas_lightbox_fsmodal_btdf){  
-fcas_lightbox_fsmodal_btdf.innerHTML=" < ";    fcas_lightbox_fsmodal_btdf.classList.add("active");  fcas_lightbox_fsmodal_dliysn.classList.add("show");
+fcas_lightbox_fsmodal_btdf.innerHTML='<svg fill="currentColor" width="20px" height="20px" viewBox="0 -16 544 544" xmlns="http://www.w3.org/2000/svg" ><path d="M108 60L468 420 436 452 362 378Q321 400 272 400 208 400 154 361 99 322 64 256 79 229 102 202 124 174 144 160L76 92 108 60ZM368 256Q368 216 340 188 312 160 272 160L229 117Q254 112 272 112 337 112 392 152 446 192 480 256 474 269 461 288 448 307 434 322L368 256ZM272 352Q299 352 322 338L293 309Q283 312 272 312 249 312 233 296 216 279 216 256 216 247 220 236L190 206Q176 229 176 256 176 296 204 324 232 352 272 352Z" /></svg>';    fcas_lightbox_fsmodal_btdf.classList.add("active");  fcas_lightbox_fsmodal_dliysn.classList.add("show");
 fcas_lightbox_fsmodal_liysn.style.display="inline-block";   }
 }  }
 }    }   
@@ -669,7 +669,7 @@ var optincludeplayider_url = fcasfs_lightbox_criarLinkDoObjeto({ pagina: "app", 
                     if (optiy.menu_btns && optiy.menu_btns === true) {
                        if(is_menuded.id){   btnys_fsmofla_efestr = fsmodal_clall_menu_arrays(optiy.itens, is_menuded.id, "fs_modal_"+optiy.id+"_vcontent");   }
                     }
-                    thumsds_efestr = `<div class="menulight_scrollmenu"><button class="almenit" onclick='fcas_lightbox_fsmodal_omendu("fs_modal_${optiy.id}");'> > </button><span>${is_menuded.menu}</span></div>`;
+                    thumsds_efestr = `<div class="menulight_scrollmenu"><button class="almenit" onclick='fcas_lightbox_fsmodal_omendu("fs_modal_${optiy.id}");'> <svg fill="currentColor" width="20px" height="20px" viewBox="0 -16 544 544" xmlns="http://www.w3.org/2000/svg" ><path d="M272 400Q205 400 151 361 96 322 64 256 96 190 151 151 205 112 272 112 336 112 392 153 448 193 480 256 448 319 392 360 336 400 272 400ZM272 352Q312 352 340 324 368 296 368 256 368 216 340 188 312 160 272 160 232 160 204 188 176 216 176 256 176 296 204 324 232 352 272 352ZM272 312Q249 312 233 296 216 279 216 256 216 233 233 217 249 200 272 200 295 200 312 217 328 233 328 256 328 279 312 296 295 312 272 312Z" /></svg> </button><span>${is_menuded.menu}</span></div>`;
                 }
             }
         }
