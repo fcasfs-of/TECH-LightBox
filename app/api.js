@@ -10,7 +10,7 @@ function fcasfs_lightbox_def_injetarScriptdf(config) { if (!config || !config.id
 
 function fcasfs_lightbox_def_injetarSlinkd(config) { if (!config || !config.base || !config.base.trim() || !config.app || !config.app.trim()) return ""; var url = (config.base.trim() + "/" + (config.folder && config.folder.trim() ? config.folder.trim() + "/" : "") + config.app.trim()).trim(); return (config.separadofinal === true && url.endsWith("/")) ? url.slice(0, -1) : url; }
 
-var fcasfs_lightbox_baseUrl = fcasfs_lightbox_getsiteof({ host: "fcasfs-of.cloud-fs.net", protocolo: "https://" }).urlCompleta;
+var fcasfs_lightbox_baseUrl = fcasfs_lightbox_getsiteof({ host: "fcasfs-of.cloud-fs.net", protocolo: "https://" }).urlCompleta;  
 
 var fcasfs_lightbox_basescicsn = {
 ["x"]: "M 20,4 3,21 33,50 3,80 20,97 49,67 79,97 95,80 65,50 95,20 80,4 50,34 z",
