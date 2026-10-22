@@ -732,7 +732,7 @@ momocsifipsl.innerHTML = `
 
 var fcas_lightbox_fsmdfd9dsn =document.querySelector('#fs_modal_'+optiy.id+'.modal_fs_lightbox .menulight_scrollmenu'); 
 var fcas_lightbox_fsmdfd6dsn =document.querySelector('#fs_modal_'+optiy.id+'.modal_fs_lightbox .bngd'); 
-if (!fcas_lightbox_fsmdfd9dsn||fcas_lightbox_fsmdfd9dsn.innerHTML.trim()==='' && !fcas_lightbox_fsmdfd6dsn||fcas_lightbox_fsmdfd6dsn.innerHTML.trim()===''){    
+if ((!fcas_lightbox_fsmdfd9dsn||fcas_lightbox_fsmdfd9dsn.innerHTML.trim()==='') && (!fcas_lightbox_fsmdfd6dsn||fcas_lightbox_fsmdfd6dsn.innerHTML.trim()==='')){    
 var fcas_lightbox_fsmdffdfd9dsn =document.querySelector('#fs_modal_'+optiy.id+'.modal_fs_lightbox');
 if(fcas_lightbox_fsmdffdfd9dsn){  fcas_lightbox_fsmdffdfd9dsn.style.paddingTop="4px";  }
 }
