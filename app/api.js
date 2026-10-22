@@ -597,11 +597,11 @@ var fcas_lightbox_fsmodal_dliysn =document.querySelector('#'+id+'.modal_fs_light
 if(fcas_lightbox_fsmodal_dliysn){   if(fcas_lightbox_fsmodal_dliysn.classList.contains('show')){
 if(fcas_lightbox_fsmodal_liysn && fcas_lightbox_fsmodal_btdf){  
 fcas_lightbox_fsmodal_dliysn.classList.remove("show");
-fcas_lightbox_fsmodal_btdf.innerHTML=" > ";
+fcas_lightbox_fsmodal_btdf.innerHTML=" > ";   fcas_lightbox_fsmodal_btdf.classList.add("active");
 fcas_lightbox_fsmodal_liysn.style.display="none";   }
 }  else {
 if(fcas_lightbox_fsmodal_liysn && fcas_lightbox_fsmodal_btdf){  
-fcas_lightbox_fsmodal_btdf.innerHTML=" < ";   fcas_lightbox_fsmodal_dliysn.classList.add("show");
+fcas_lightbox_fsmodal_btdf.innerHTML=" < ";    fcas_lightbox_fsmodal_btdf.classList.remove("active");  fcas_lightbox_fsmodal_dliysn.classList.add("show");
 fcas_lightbox_fsmodal_liysn.style.display="inline-block";   }
 }  }
 }    }   
@@ -669,7 +669,7 @@ var optincludeplayider_url = fcasfs_lightbox_criarLinkDoObjeto({ pagina: "app", 
                     if (optiy.menu_btns && optiy.menu_btns === true) {
                        if(is_menuded.id){   btnys_fsmofla_efestr = fsmodal_clall_menu_arrays(optiy.itens, is_menuded.id, "fs_modal_"+optiy.id+"_vcontent");   }
                     }
-                    thumsds_efestr = `<div class="menulight_scrollmenu"><button class="almenit" onclick='fcas_lightbox_fsmodal_omendu("${optiy.id}_content");'> > </button><span>${is_menuded.menu}</span></div>`;
+                    thumsds_efestr = `<div class="menulight_scrollmenu"><button class="almenit" onclick='fcas_lightbox_fsmodal_omendu("fs_modal_${optiy.id}_content");'> > </button><span>${is_menuded.menu}</span></div>`;
                 }
             }
         }
