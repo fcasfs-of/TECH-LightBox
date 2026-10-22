@@ -732,9 +732,9 @@ momocsifipsl.innerHTML = `
 
 var fcas_lightbox_fsmdfd9dsn =document.querySelector('#fs_modal_'+optiy.id+'.modal_fs_lightbox .menulight_scrollmenu'); 
 var fcas_lightbox_fsmdfd6dsn =document.querySelector('#fs_modal_'+optiy.id+'.modal_fs_lightbox .bngd'); 
+var fcas_lightbox_fsmdffdfd9dsn = document.querySelector('#fs_modal_'+optiy.id+'.modal_fs_lightbox');
 if ((!fcas_lightbox_fsmdfd9dsn||fcas_lightbox_fsmdfd9dsn.innerHTML.trim()==='') && (!fcas_lightbox_fsmdfd6dsn||fcas_lightbox_fsmdfd6dsn.innerHTML.trim()==='')){    
-var fcas_lightbox_fsmdffdfd9dsn =document.querySelector('#fs_modal_'+optiy.id+'.modal_fs_lightbox');
-if(fcas_lightbox_fsmdffdfd9dsn){  fcas_lightbox_fsmdffdfd9dsn.style.paddingTop="4px";  }
+if(fcas_lightbox_fsmdffdfd9dsn){  fcas_lightbox_fsmdffdfd9dsn.style.paddingTop="6px";  }
 }
 
 if (optiy.btnTop && optiy.btnTop===true){   fcasfs_inicializarLightboxScroll({ id: "fs_modal_" + optiy.id, distance: 120, active: true });  }
