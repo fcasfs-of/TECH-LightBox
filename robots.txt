@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fcasfs-of.github.io/TECH-LightBox/sitemap.xml
