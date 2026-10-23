@@ -27,7 +27,7 @@ window.getDocData = function(fdd) {
             legendContext: "Estruturas de Dados Aceitas em content.context",
             legendOther: "content (Outros Parâmetros de Entrada)",
             base: [
-                ['id', 'String com o ID do elemento contêiner onde o LightBox será inserido.'],
+                ['id', 'String que define o identificador único (ID) do LightBox.'],
                 ['font', 'String com o nome ou link da fonte.'],
                 ['closeBTN_Theme', 'Escolha a cor do botão de fechar inserindo uma das seguintes opções: red (padrão se vazio), green, orange, yellow, blue, navy, purple, pink, teal, brown, black, gray, darkgray, lightgray, maroon, lime, gold, cyan, magenta, indigo, violet, olive, salmon, coral, tomato, crimson, khaki, plum, orchid, thistle, fuchsia, purpledeep, chartreuse, greenyellow, forestgreen, seagreen, aquamarine, turquoise, steelblue, skyblue, midnightblue, chocolate, peru, sienna, silver, gainsboro, whitesmoke, lavender, darkred, firebrick, indianred, lightcoral, darkorange, goldendark, yellowgreen, darkgreen, mediumblue, royalblue, deepskyblue, darkcyan, darkmagenta, darkviolet, purplemedium, saddlebrown, rosybrown, hotpink, deeppink, beige, ivory, pastelblue, pastelgreen, pastelpink, pastelyellow, pastelpurple, mint, iceblue, charcoal, gunmetal, deepocean, mango, papaya, banana, avocado, melon, peach, pumpkin, ginger, mustard, chestnut, sand, clay, terracotta, bronze, copper, brass, sepia, mahogany, taupe, mud, emerald, sapphire, ruby, amethyst, jade, pearl, amberdeep, ultramarine, caribbean ou space.'],
                 ['zoom', 'Se for true, o controle de zoom será exibido no rodapé do lightbox para ampliar ou diminuir o conteúdo.'],
@@ -177,7 +177,7 @@ window.getDocData = function(fdd) {
             legendContext: "Accepted Data Layout Structures in content.context",
             legendOther: "content (Other Input Parameters)",
             base: [
-                ['id', 'String representing the ID of the container element where the LightBox attaches.'],
+                ['id', 'String that defines the unique identifier (ID) of the LightBox.'],
                 ['font', 'String the font name or URL.'],
                 ['closeBTN_Theme', 'Choose the close button color by entering one of the following options: red (default if empty), green, orange, yellow, blue, navy, purple, pink, teal, brown, black, gray, darkgray, lightgray, maroon, lime, gold, cyan, magenta, indigo, violet, olive, salmon, coral, tomato, crimson, khaki, plum, orchid, thistle, fuchsia, purpledeep, chartreuse, greenyellow, forestgreen, seagreen, aquamarine, turquoise, steelblue, skyblue, midnightblue, chocolate, peru, sienna, silver, gainsboro, whitesmoke, lavender, darkred, firebrick, indianred, lightcoral, darkorange, goldendark, yellowgreen, darkgreen, mediumblue, royalblue, deepskyblue, darkcyan, darkmagenta, darkviolet, purplemedium, saddlebrown, rosybrown, hotpink, deeppink, beige, ivory, pastelblue, pastelgreen, pastelpink, pastelyellow, pastelpurple, mint, iceblue, charcoal, gunmetal, deepocean, mango, papaya, banana, avocado, melon, peach, pumpkin, ginger, mustard, chestnut, sand, clay, terracotta, bronze, copper, brass, sepia, mahogany, taupe, mud, emerald, sapphire, ruby, amethyst, jade, pearl, amberdeep, ultramarine, caribbean, or space.'],
                 ['zoom', 'If true, the zoom control will be displayed in the lightbox footer to zoom in or out of the content.'],
