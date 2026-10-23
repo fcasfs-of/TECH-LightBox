@@ -10,7 +10,7 @@ function fcas_lightbox_verificarAcessoToken(obj) { return (obj && typeof obj ===
 window.getDocData = function(fdd) {
     return {
         pt: {
-            versoes: { "2.0.2.0": { data: "", logs: [ { tipo: "melhoria", texto: "Toda a nossa estrutura foi aprimorada com melhorias de desempenho, otimização, design e modelos refinados." } ] }  },
+            versoes: { "TECH - Lightbox: 2.0.2.0": { data: "", logs: [ { tipo: "melhoria", texto: "Toda a nossa estrutura foi aprimorada com melhorias de desempenho, otimização, design e modelos refinados." } ] }, "TECH - Player: 3.0.4.1": { data: "", logs: [ { tipo: "melhoria", texto: "Foi feito o upgrade e aprimoramento em toda a estrutura do player." } ] } },
             demoUrl: "/",
             title: "TECH - Lightbox - Conteúdos Diversos",
             subtitle: "Documentação Técnica",
@@ -160,7 +160,7 @@ window.getDocData = function(fdd) {
             ]
         },
         en: {
-            versoes: { "2.0.2.0": { data: "", logs: [ { tipo: "improvement", texto: "Our entire structure has been enhanced with performance improvements, optimization, design, and refined models." } ] }  },
+            versoes: { "TECH - Lightbox: 2.0.2.0": { data: "", logs: [ { tipo: "improvement", texto: "Our entire structure has been enhanced with performance improvements, optimization, design, and refined models." } ] }, "TECH - Player: 3.0.4.1": { data: "", logs: [ { tipo: "improvement", texto: "The upgrade and enhancement were made across the entire player structure." } ] } },
             demoUrl: "/en",
             title: "TECH - Lightbox - Diverse Contents",
             subtitle: "Technical Documentation",
