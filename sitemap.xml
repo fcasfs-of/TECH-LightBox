@@ -22,6 +22,10 @@
     <loc>https://fcasfs-of.github.io/TECH-LightBox/log</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://fcasfs-of.github.io/TECH-LightBox/info</loc>
+    <priority>0.8</priority>
+  </url>
 
   <!-- ================= ENGLISH ================= -->
   <url>
@@ -42,6 +46,10 @@
   </url>
   <url>
     <loc>https://fcasfs-of.github.io/TECH-LightBox/log-en</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fcasfs-of.github.io/TECH-LightBox/info-en</loc>
     <priority>0.8</priority>
   </url>
 
