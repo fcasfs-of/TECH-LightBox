@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  
+<script src="https://lightbox.fcasfs-of.cloud-fs.net/app/core.js"></script>
+ <link href='favicon.png' rel='icon' type='image/png'/>
+
+  <title>TECH - Lightbox - Conteúdos Diversos - Log</title>
+
+  <link media="all" rel="stylesheet" href="style/theme.css" />
+
+  <style>
+.lbxx-footer-container .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background-color:#1e3a8a;color:#ffffff;text-decoration:none;padding:12px 24px;border-radius:8px;font-weight:500;font-size:1rem;transition:background-color .1s linear,transform .1s linear;text-align:center;box-sizing:border-box;margin:8px}
+.lbxx-footer-container .btn:hover{background-color:#1d4ed8}
+.lbxx-footer-container .btn svg{width:1.25rem;height:1.25rem;stroke:currentColor;fill:currentColor;flex-shrink:0}
+@media(max-width:480px){.lbxx-footer-container .btn{display:flex;width:calc(100% - 16px);padding:14px;margin:8px auto}}
+ .nav-menu, .nav-menu *, #modaltech-1002, #modal-1002, #modaltech-1002 *, #modal-1002 * {   transition: all 0.1s linear !important;     }
+  </style>
+  
+</head>
+<body>
+<br/><br/>
+  
+<header class="lbxx">
+  <div class="dname">
+    <h1><span class="icon"></span>TECH - Lightbox - Conteúdos Diversos <br/> <div id="app_versiondisplay" style="text-align: left;margin-left: 3px;margin-right: 4px;  font-size: clamp(0.85rem,1.8vw,0.95rem);  color: #0254a3; font-weight: 600;"></div></h1>
+  </div>
+  
+<div id="chlogsvers" class="nav-menu"></div>
+
+  <div class="lbxx-footer-container">
+     <a href="/" class="btn"><svg width="32px" height="32px" viewBox="0 0 32 32">  <rect id="Rectangle_56" data-name="Rectangle 56" width="4" height="8" transform="translate(8 4)"/>  <rect id="Rectangle_57" data-name="Rectangle 57" width="24" height="4" transform="translate(4 8)"/>  <path id="Path_112" data-name="Path 112" d="M30,0H2A2,2,0,0,0,0,2V30a2,2,0,0,0,2,2H30a2,2,0,0,0,2-2V2A2,2,0,0,0,30,0ZM28,27a1,1,0,0,1-1,1H5a1,1,0,0,1-1-1V5A1,1,0,0,1,5,4H28V27Z"/></svg>   Ir para a página inicial</a>
+  </div>
+</header>
+<br/><br/>
+
+<script src="docs_data.js"></script>
+<script>
+function fcas_lcriarChangelog(c,l='pt'){if(!c||Object.keys(c).length===0)return"";const t=(l==='en')?{h:'Changelog',n:'New',f:'Fix',u:'Update',r:'Removed',s:'Security',d:'Deprecated',m:'No logs available.'}:{h:'Notas de Atualização',n:'Novo',f:'Correção',u:'Melhoria',r:'Removido',s:'Segurança',d:'Descontinuado',m:'Nenhum registro disponível.'},i=Math.random().toString(36).substring(2,9),p=c.corPrimaria||'#0f172a',cores={novo:'#10b981',new:'#10b981',correcao:'#ef4444',fix:'#ef4444',melhoria:'#3b82f6',update:'#3b82f6',removido:'#78716c',removed:'#78716c',seguranca:'#f59e0b',security:'#f59e0b',depreciado:'#f97316',deprecated:'#f97316'},mapaTipos={novo:'n',new:'n',correcao:'f',fix:'f',melhoria:'u',update:'u',removido:'r',removed:'r',seguranca:'s',security:'s',depreciado:'d',deprecated:'d'};let str=`<style>.fcas-change-${i}{font-family:system-ui,sans-serif;width:100%;max-width:100%;margin:0 auto;background:#ffffff;border-radius:16px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:0 10px 15px -3px rgba(0,0,0,0.05);box-sizing:border-box;}.fcas-change-${i} *{box-sizing:border-box;}.fcas-head-${i}{background:${p};padding:16px;text-align:center;}.fcas-tit-${i}{margin:0;font-size:1.15rem;font-weight:700;color:#ffffff;}.fcas-box-${i}{padding:20px;max-height:240px;overflow-y:auto;display:flex;flex-direction:column;gap:16px;}.fcas-ver-${i}{font-size:0.95rem;font-weight:700;color:#1e293b;margin:0 0 6px 0;display:flex;align-items:center;gap:8px;}.fcas-date-${i}{font-size:0.75rem;font-weight:500;color:#94a3b8;}.fcas-list-${i}{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px;}.fcas-item-${i}{font-size:0.85rem;color:#334155;line-height:1.4;display:flex;align-items:flex-start;gap:8px;word-break:break-word;}.fcas-badge-${i}{font-size:0.7rem;font-weight:700;color:#ffffff;padding:2px 6px;border-radius:4px;text-transform:uppercase;flex-shrink:0;margin-top:2px;}.fcas-div-${i}{border:none;border-top:1px solid #e2e8f0;margin:16px 0 0 0;}@media(min-width:480px){.fcas-change-${i}{max-width:80%;}}</style><div class="fcas-change-${i}"><header class="fcas-head-${i}"><h2 class="fcas-tit-${i}">${c.tituloComponente||t.h}</h2></header><div class="fcas-box-${i}">`;if(c.versoes&&Object.keys(c.versoes).length>0){const keys=Object.keys(c.versoes);keys.forEach((v,idx)=>{const itemVer=c.versoes[v],data=itemVer.data?`<span class="fcas-date-${i}">${itemVer.data}</span>`:'';str+=`<div><h3 class="fcas-ver-${i}">v${v} ${data}</h3><ul class="fcas-list-${i}">`;if(itemVer.logs){itemVer.logs.forEach(log=>{const tipo=(log.tipo||'melhoria').toLowerCase(),cor=cores[tipo]||'#64748b',label=t[mapaTipos[tipo]]||log.tipo;str+=`<li class="fcas-item-${i}"><span class="fcas-badge-${i}" style="background:${cor}">${label}</span><span>${log.texto}</span></li>`;});}str+=`</ul></div>`;if(c.divisor&&idx<keys.length-1)str+=`<hr class="fcas-div-${i}"/>`;});}else{str+=`<div style="text-align:center;font-size:0.85rem;color:#94a3b8;padding:20px 0;">${t.m}</div>`;}return str+`</div></div>`;}
+function fs_inserirSectionAntesDoId(idAlvo, textoHtml) { if (!idAlvo?.trim() || !textoHtml?.trim() || !document.getElementById(idAlvo)) return; var elementoAlvo = document.getElementById(idAlvo); elementoAlvo.innerHTML = textoHtml;  }
+
+let currentTheme = localStorage.getItem("LightBox_theme") || "light"; document.body.classList.remove('dark'); const isDark = document.body.classList.contains('dark'); if(currentTheme=="dark"){ document.body.classList.add('dark'); const isDark = document.body.classList.contains('dark'); } 
+  
+ window.addEventListener('load', function(){   const target_verappsdd=document.getElementById('app_versiondisplay');if(target_verappsdd){target_verappsdd.innerHTML=`${typeof fcas_lightbox_version_ac === 'function' ? `<br/> ${fcas_lightbox_version_ac()}` : ''}`;}  });
+
+  if(window.getDocData){
+        const dlcoal=window.getDocData(""); 
+    if(dlcoal){
+         fs_inserirSectionAntesDoId("chlogsvers", fcas_lcriarChangelog({ tituloComponente: "", corPrimaria: "#0f172a", divisor: false, versoes:dlcoal["en"].versoes }, "pt"));    
+    }    }
+</script>
+
+</body>
+</html>
