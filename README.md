@@ -3,12 +3,12 @@
 <br/>
 
 # ![](https://fcasfs-of.cloud-fs.net/Icon/en.png) TECH Lightbox - Miscellaneous Content: English 
-> [Home Page](https://lightbox.fcasfs-of.cloud-fs.net/en) , [Documentation](https://lightbox.fcasfs-of.cloud-fs.net/doc-en) , [Support](https://lightbox.fcasfs-of.cloud-fs.net/support/en) , [Buy Token](https://lightbox.fcasfs-of.cloud-fs.net/store-en) , <br/>  [Log](https://lightbox.fcasfs-of.cloud-fs.net/log-en) 
+> [Home Page](https://lightbox.fcasfs-of.cloud-fs.net/en) , [Documentation](https://lightbox.fcasfs-of.cloud-fs.net/doc-en) , [Support](https://lightbox.fcasfs-of.cloud-fs.net/support/en) , [Buy Token](https://lightbox.fcasfs-of.cloud-fs.net/store-en) , <br/>  [Log](https://lightbox.fcasfs-of.cloud-fs.net/log-en) , [Terms of Use and License](https://lightbox.fcasfs-of.cloud-fs.net/info-en) 
 
 <hr/>
 
 # ![](https://fcasfs-of.cloud-fs.net/Icon/br.png) TECH Lightbox - Conteúdos Diversos: Português 
-> [Página Inicial](https://lightbox.fcasfs-of.cloud-fs.net) , [Documentação](https://lightbox.fcasfs-of.cloud-fs.net/doc) , [Suporte](https://lightbox.fcasfs-of.cloud-fs.net/support/) , [Comprar Token](https://lightbox.fcasfs-of.cloud-fs.net/store) ,  <br/>  [Log](https://lightbox.fcasfs-of.cloud-fs.net/log) 
+> [Página Inicial](https://lightbox.fcasfs-of.cloud-fs.net) , [Documentação](https://lightbox.fcasfs-of.cloud-fs.net/doc) , [Suporte](https://lightbox.fcasfs-of.cloud-fs.net/support/) , [Comprar Token](https://lightbox.fcasfs-of.cloud-fs.net/store) ,  <br/>  [Log](https://lightbox.fcasfs-of.cloud-fs.net/log) , [Termos de Uso e Licença](https://lightbox.fcasfs-of.cloud-fs.net/info) 
 
 <br/>
 
