@@ -2,52 +2,46 @@
 <urlset xmlns="http://sitemaps.org">
 
   <!-- ================= PORTUGUÊS ================= -->
-  <!-- Página Inicial (PT) -->
   <url>
     <loc>https://fcasfs-of.github.io/TECH-LightBox/</loc>
     <priority>1.0</priority>
   </url>
-
-  <!-- Documentação (PT) -->
   <url>
     <loc>https://fcasfs-of.github.io/TECH-LightBox/doc</loc>
     <priority>0.8</priority>
   </url>
-
-  <!-- Suporte (PT) -->
   <url>
     <loc>https://fcasfs-of.github.io/TECH-LightBox/support/</loc>
     <priority>0.8</priority>
   </url>
-
-  <!-- Loja / Comprar Token (PT) -->
   <url>
     <loc>https://fcasfs-of.github.io/TECH-LightBox/store</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://fcasfs-of.github.io/TECH-LightBox/log</loc>
+    <priority>0.8</priority>
+  </url>
 
   <!-- ================= ENGLISH ================= -->
-  <!-- Home Page (EN) -->
   <url>
     <loc>https://fcasfs-of.github.io/TECH-LightBox/en</loc>
     <priority>1.0</priority>
   </url>
-
-  <!-- Documentation (EN) -->
   <url>
     <loc>https://fcasfs-of.github.io/TECH-LightBox/doc-en</loc>
     <priority>0.8</priority>
   </url>
-
-  <!-- Support (EN) -->
   <url>
     <loc>https://fcasfs-of.github.io/TECH-LightBox/support/en</loc>
     <priority>0.8</priority>
   </url>
-
-  <!-- Store / Buy Token (EN) -->
   <url>
     <loc>https://fcasfs-of.github.io/TECH-LightBox/store-en</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://fcasfs-of.github.io/TECH-LightBox/log-en</loc>
     <priority>0.8</priority>
   </url>
 
