@@ -104,6 +104,16 @@ function fcasfs_obter_obterValorPorBooleano(valor, mapeamento) { return !mapeame
 
 
 var modaisDisponiveis = {
+  'btnIframeHTML': function() {
+    return {
+      title: "html",
+      type: "html",
+      context:'<html lang="pt-BR"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>Text Modern</title><style>*{margin:0;padding:0;box-sizing:border-box;font-family:\'Segoe UI\',Roboto,Helvetica,Arial,sans-serif;}body{background-color:#0b0f19;min-height:100vh;display:flex;justify-content:center;align-items:center;padding:24px;}.texto-moderno{font-size:clamp(1.8rem,7vw,4rem);font-weight:800;text-align:center;text-transform:uppercase;letter-spacing:-1px;width:100%;max-width:900px;word-wrap:break-word;overflow-wrap:break-word;word-break:keep-all;background:linear-gradient(90deg,#38bdf8,#0ea5e9,#2563eb);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;filter:drop-shadow(0px 0px 15px rgba(56, 189, 248, 0.4));transition:transform 0.3s ease,filter 0.3s ease;cursor:default;user-select:none;}@media (hover:hover){.texto-moderno:hover{transform:scale(1.02);filter:drop-shadow(0px 0px 25px rgba(14, 165, 233, 0.7));}}</style></head><body><h1 class="texto-moderno">testing the lightbox</h1></body></html>',
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
   'btnBook': function() {
     return {
       title: "book",
@@ -833,7 +843,7 @@ fcas_lightbox_gerarMenu({ lang: "en",
     { nome: "Visual Media", botoes: [{ id: "btnImage", texto: "View Image" }, { id: "btnSVG", texto: "View SVG" }, { id: "btnObject3d", texto: "View Object 3D", pro:true }] },
     {"nome": "Publication", "botoes": [{ id: "btnBook", texto: "View Book", pro:true }, { id: "btnJournal", texto: "View Journal" }, { id: "btnFAQ", texto: "View FAQ" }, { id: "btnBanner", texto: "View Banner" }, { "id": "btnBlogPost", "texto": "View Blog Post" }, { id: "btnChangelog", texto: "View Changelog" }] },
     { nome: "Gallery", botoes: [{ id: "btnGallery", texto: "View Gallery" }, { id: "btnSlideshow", texto: "View Slideshow" }, { id: "btnCarrossel", texto: "View Carousel" }, { "id": "btnTimeline", "texto": "View Timeline" }] },
-    { nome: "Text & Links", botoes: [{ id: "btnMarquee", texto: "View Marquee", pro:true }, { id: "btnButtonRes", texto: "View Responsive Button" }, { id: "btnNotepad", texto: "View Notepad" }, { id: "btnText", texto: "View Text" }, { id: "btnLink", texto: "View Link" }] },
+    { nome: "Text & Links", botoes: [{ id: "btnIframeHTML", texto: "View HTML" }, { id: "btnMarquee", texto: "View Marquee", pro:true }, { id: "btnButtonRes", texto: "View Responsive Button" }, { id: "btnNotepad", texto: "View Notepad" }, { id: "btnText", texto: "View Text" }, { id: "btnLink", texto: "View Link" }] },
     { nome: "Data", botoes: [{ id: "btnTable", texto: "View Table" }, { id: "btnList", texto: "View List" }, { id: "btnFichas", texto: "View Records", pro:true }, { id: "btnTasks", texto: "View Tasks" }, { id: "btnHistory", texto: "View History" }] },
     { nome: "Multimedia", botoes: [{ id: "btnPlaylist", texto: "View Playlist" }, { id: "btnAudio", texto: "View Audio" }, { id: "btnVideo", texto: "View Video" }] },
     { nome: "Interaction", botoes: [{ id: "btnNewsletter", texto: "View Newsletter", pro:true }, { id: "btnAlert", texto: "View Notice", pro:true }, { id: "btnTestimonials", texto: "View Testimonials" }, { id: "btnChat", texto: "View Chat" }, { id: "btnReview", texto: "View Reviews" }, { id: "btnForm", texto: "View Form" }, { id: "btnFeedback", texto: "View Feedback" }] },
