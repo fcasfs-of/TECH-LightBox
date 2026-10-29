@@ -10,7 +10,8 @@ function fcas_lightbox_verificarAcessoToken(obj) { return (obj && typeof obj ===
 window.getDocData = function(fdd) {
     return {
         pt: {
-            versoes: { "TECH - Lightbox: 2.0.2.0": { data: "", logs: [ { tipo: "melhoria", texto: "Toda a nossa estrutura foi aprimorada com melhorias de desempenho, otimização, design e modelos refinados." } ] }, "TECH - Player: 3.0.4.1": { data: "", logs: [ { tipo: "melhoria", texto: "Foi feito o upgrade e aprimoramento em toda a estrutura do player." } ] } },
+            versoes: { "TECH - Lightbox: 2.0.2.5": { data: "", logs: [ { tipo: "Melhorias", texto: "Toda a nossa estrutura foi aprimorada! Realizamos uma grande mudança na infraestrutura e um upgrade técnico completo. Essa atualização traz melhorias significativas de desempenho, otimização de processos, um novo design e modelos totalmente refinados, com ajustes finos em cada detalhe do ambiente." } ] }, 
+                      "TECH - Player: 3.0.4.4": { data: "", logs: [ { tipo: "Melhorias", texto: "Realizamos um upgrade completo e aprimoramos toda a estrutura do nosso player. Essa atualização traz mudanças estruturais importantes e ajustes finos no design para garantir uma experiência ainda mais fluida e moderna para você." } ] } },
             demoUrl: "/",
             title: "TECH - Lightbox - Conteúdos Diversos",
             subtitle: "Documentação Técnica",
@@ -163,7 +164,8 @@ window.getDocData = function(fdd) {
             ]
         },
         en: {
-            versoes: { "TECH - Lightbox: 2.0.2.0": { data: "", logs: [ { tipo: "improvement", texto: "Our entire structure has been enhanced with performance improvements, optimization, design, and refined models." } ] }, "TECH - Player: 3.0.4.1": { data: "", logs: [ { tipo: "improvement", texto: "The upgrade and enhancement were made across the entire player structure." } ] } },
+            versoes: { "TECH - Lightbox: 2.0.2.5": { data: "", logs: [ { tipo: "Improvements", texto: "Our entire structure has been enhanced! We have implemented major infrastructure changes and a complete technical upgrade. This update brings significant performance improvements, process optimization, a fresh design, and fully refined models, with fine-tuning across every single detail." } ] }, 
+                      "TECH - Player: 3.0.4.4": { data: "", logs: [ { tipo: "Improvements", texto: "The entire player structure has been upgraded and enhanced! This update brings important structural changes and fine design adjustments to ensure an even smoother and more modern experience for you." } ] } },
             demoUrl: "/en",
             title: "TECH - Lightbox - Diverse Contents",
             subtitle: "Technical Documentation",
