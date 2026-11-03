@@ -51,8 +51,7 @@ window.getDocData = function(fdd) {
                 ['nodownload','Se for true, bloquear o download.', fcas_lightbox_verificarAcessoToken({ idioma: 'pt', temToken: true })],
                 ['nocontextmenu','Bloquear o menu de contexto do clique direito no LightBox.', fcas_lightbox_verificarAcessoToken({ idioma: 'pt', temToken: true })],
                 ['tiptext', 'Opcional. String contendo um texto explicativo ou dica rápida associada à chamada do componente.'],
-                ['include', 'Objeto contendo configurações adicionais, como { player: "yes" } para embutir o reprodutor de mídia. Se a configuração "plugin: { AudioVisualizer: true }" for informada junto com player "yes" para um arquivo de áudio, o reprodutor exibirá barras de visualização de áudio (Audio Visualizer bars).'],
-                ['content', 'Objeto principal contendo as propriedades tratadas pela biblioteca.'],
+                ['barCount', 'Se plugin.AudioVisualizer for true, você pode passar opcionalmente o barCount (quantidade de barras do efeito). O limite permitido é de 20 a 70, e o padrão é 36 se passar dos limites.', fcas_lightbox_verificarAcessoToken({ idioma: 'pt', temToken: true })],                
                 ['mask', 'Opcional. String contendo o formato da máscara CSS ("inset", "circle", "ellipse", "polygon", "path", "rect", "xywh", "shape", "margin-box", "border-box", "padding-box", "content-box", "stroke-box", "view-box", "fill-box", "none", "inherit", "initial", "revert", "revert-layer", "unset").', fcas_lightbox_verificarAcessoToken({ idioma: 'pt', temToken: true })],
                 ['mask_valor', 'Opcional. String com os valores da forma escolhida em "mask". Se omitido, assume valores padrões funcionais. Exemplos aceitos: "50%" ou "10px" para circle/inset; "50% 50% at 50% 50%" para ellipse; "0% 0%, 100% 0%, 100% 100%" para polygon; "0 100% 100% 0" para rect; "0 0 100% 100%" para xywh.', fcas_lightbox_verificarAcessoToken({ idioma: 'pt', temToken: true })]
             ],
@@ -158,11 +157,12 @@ window.getDocData = function(fdd) {
                 ['Configuração do tipo: "newsletter"', '{ titulo (String) [Ex: "Fique por dentro"], mensagem (String) [Ex: "Receba nossas novidades."], placeholder (String) [Ex: "Seu melhor e-mail"], botaoTexto (String) [Ex: "Assinar"], action (String) [Ex: "/api/newsletter"], nomeCampo (String) [Ex: "email"] }', fcas_lightbox_verificarAcessoToken({ idioma: 'pt', temToken: true })]                
             ],
             other: [
+                ['include', 'Objeto contendo configurações adicionais, como { player: "yes" } para embutir o reprodutor de mídia. Se a configuração "plugin: { AudioVisualizer: true }" for informada junto com player "yes" para um arquivo de áudio, o reprodutor exibirá barras de visualização de áudio (Audio Visualizer bars).'],
+                ['content', 'Objeto principal contendo as propriedades tratadas pela biblioteca.'],
                 ['title', 'String com o título que será exibido no topo do LightBox.'],
                 ['type', 'Tipo do formato tratado ('+fcas_lightbox_verificarTexto(fdd || '')+').  '+fcas_lightbox_verificaranalisar(listaComponentes_formsts, "pt")+''],
                 ['poster', 'URL da imagem de capa utilizada caso o tipo do conteúdo seja vídeo.'],
-                ['description', 'Texto descritivo opcional posicionado junto ao bloco de conteúdo.'],
-                ['barCount', 'Se plugin.AudioVisualizer for true, você pode passar opcionalmente o barCount (quantidade de barras do efeito). O limite permitido é de 20 a 70, e o padrão é 36 se passar dos limites.', fcas_lightbox_verificarAcessoToken({ idioma: 'pt', temToken: true })]                
+                ['description', 'Texto descritivo opcional posicionado junto ao bloco de conteúdo.']
             ]
         },
         en: {
@@ -207,8 +207,7 @@ window.getDocData = function(fdd) {
                 ['nodownload','If true, block the download.', fcas_lightbox_verificarAcessoToken({ idioma: 'en', temToken: true })],
                 ['nocontextmenu','Block the right-click context menu in LightBox.', fcas_lightbox_verificarAcessoToken({ idioma: 'en', temToken: true })],
                 ['tiptext', 'Optional. String containing a tooltip phrase or helpful contextual instructions bound to the layout trigger.'],
-                ['include', 'Object containing additional configurations, such as { player: "yes" } to embed the media player. If the setting "plugin: { AudioVisualizer: true }" is provided along with player "yes" for an audio file, the player will display audio visualizer bars.'],
-                ['content', 'Standard metadata wrapper object targeting libraries rendering pipeline.'],
+                ['barCount', 'If plugin.AudioVisualizer is true, you can optionally pass the barCount (number of effect bars). The allowed range is from 20 to 70, and the default is 36 if it goes out of bounds.', fcas_lightbox_verificarAcessoToken({ idioma: 'en', temToken: true })],                
                 ['mask', 'Optional. String containing the CSS mask shape ("inset", "circle", "ellipse", "polygon", "path", "rect", "xywh", "shape", "margin-box", "border-box", "padding-box", "content-box", "stroke-box", "view-box", "fill-box", "none", "inherit", "initial", "revert", "revert-layer", "unset").', fcas_lightbox_verificarAcessoToken({ idioma: 'en', temToken: true })],
                 ['mask_valor', 'Optional. String containing the values for the shape selected in "mask". If omitted, functional default values are used. Accepted examples: "50%" or "10px" for circle/inset; "50% 50% at 50% 50%" for ellipse; "0% 0%, 100% 0%, 100% 100%" for polygon; "0 100% 100% 0" for rect; "0 0 100% 100%" for xywh.', fcas_lightbox_verificarAcessoToken({ idioma: 'en', temToken: true })]
 
@@ -315,11 +314,12 @@ window.getDocData = function(fdd) {
                 ['Configuration for type: "newsletter"', '{ titulo (String) [Ex: "Stay up to date"], mensagem (String) [Ex: "Get our latest updates."], placeholder (String) [Ex: "Your best email address"], botaoTexto (String) [Ex: "To sign"], action (String) [Ex: "/api/newsletter"], nomeCampo (String) [Ex: "email"] }', fcas_lightbox_verificarAcessoToken({ idioma: 'en', temToken: true })]                
             ],
             other: [
+                ['include', 'Object containing additional configurations, such as { player: "yes" } to embed the media player. If the setting "plugin: { AudioVisualizer: true }" is provided along with player "yes" for an audio file, the player will display audio visualizer bars.'],
+                ['content', 'Standard metadata wrapper object targeting libraries rendering pipeline.'],
                 ['title', 'String value rendering the headline text at the top of the header.'],
                 ['type', 'Evaluated payload type ('+fcas_lightbox_verificarTexto(fdd || '')+').  '+fcas_lightbox_verificaranalisar(listaComponentes_formsts, "en")+''],
                 ['poster', 'URL string targeting thumbnail posters required when mapping videos.'],
-                ['description', 'Complementary description text aligned beneath or near the asset render block.'],
-                ['barCount', 'If plugin.AudioVisualizer is true, you can optionally pass the barCount (number of effect bars). The allowed range is from 20 to 70, and the default is 36 if it goes out of bounds.', fcas_lightbox_verificarAcessoToken({ idioma: 'en', temToken: true })]                
+                ['description', 'Complementary description text aligned beneath or near the asset render block.']
             ]
         }
     };
