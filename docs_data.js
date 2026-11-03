@@ -1,4 +1,4 @@
-const listaComponentes_formsts = ["list", "table", "playlist", "carrossel", "form", "map", "slideshow", "grafico", "pdf", "link", "texto", "image", "svg", "contact", "product", "dashboard", "audio", "video", "PList", "timeline", "BlogCard", "plans", "3DText", "Ad", "VirtualCard", "VirtualCreditCard", "Profile", "Sorteio", "Participants", "Calendar", "treeview", "mindmap", "feedback", "searchbar", "review", "coupon", "banner", "faq", "testimonials", "gallery", "chat", "leaderboard", "agenda", "fichas", "tarefas", "historico", "changelog", "notepad", "journal", "newsletter", "storageStatus", "showAlerta", "PaymentMethods", "storeCart", "button", "marquee", "book", "Object_3d", "html"];
+const listaComponentes_formsts = ["list", "table", "playlist", "carrossel", "form", "map", "slideshow", "grafico", "pdf", "link", "texto", "image", "svg", "contact", "product", "dashboard", "audio", "video", "PList", "timeline", "BlogCard", "plans", "3DText", "Ad", "VirtualCard", "VirtualCreditCard", "Profile", "Sorteio", "Participants", "Calendar", "treeview", "mindmap", "feedback", "searchbar", "review", "coupon", "banner", "faq", "testimonials", "gallery", "chat", "leaderboard", "agenda", "fichas", "tarefas", "historico", "changelog", "notepad", "journal", "newsletter", "storageStatus", "showAlerta", "PaymentMethods", "storeCart", "button", "marquee", "book", "Object_3d", "html", "notify"];
 
 function fcas_lightbox_generarListaSuportados(opcoes) { if (!opcoes) { return ""; } var lista = opcoes.lista; var separador = opcoes.separador; var ordemAlfabetica = opcoes.ordemAlfabetica; if (!lista || !Array.isArray(lista) || lista.length === 0) { return ""; } if (separador === undefined || separador === null || separador === "") { separador = ", "; } else if (String(separador).slice(-1) !== " ") { separador = separador + " "; } var listaFinal = lista.slice(); if (ordemAlfabetica) { listaFinal.sort(function(a, b) { return String(a).localeCompare(String(b)); }); } return listaFinal.join(separador); }
 function fcas_lightbox_verificarTexto(texto) { return (texto && texto.trim() !== "") ? texto : ""; }
@@ -69,7 +69,8 @@ window.getDocData = function(fdd) {
                 ['onPlayer', 'Função de callback acionada quando o player de mídia interno realiza ações estruturais.'],
                 ['onPlayer_Playlist', 'Função de callback acionada quando o player de mídia interno realiza ações estruturais relacionadas à lista de reprodução.'],
                 ["onAdult", "Função de callback executada especificamente se isAdult for true, retornando 'yes' ou 'no'."],
-                ["onZoom", "Função de callback executada, retornando a porcentagem do zoom."]
+                ["onZoom", "Função de callback executada, retornando a porcentagem do zoom."],
+                ["onNotify", "Função de callback executada, retornando se abriu. Exclusiva para tipo: \"notify\".", fcas_lightbox_verificarAcessoToken({ idioma: 'pt', temToken: true })]
             ],
             types: [
                 ['Configuração para tipo: "texto"', 'Suporta as chaves de estilização direta: italic, negrito, upper, lower (booleanos), fontSize (número), color (string), textAlign (center,right,left,justify).'],
@@ -115,6 +116,7 @@ window.getDocData = function(fdd) {
                 ['contact', 'Suporta chaves de dados de contato.'],
                 ['product', 'Suporta chaves de dados do produto.'],
                 ['map', 'Suporta chaves de dados do mapa.'],
+                ['notify', "Recebe um array contendo objetos estruturados com bg (String, fundo), txt (String, texto/ícones), maxHeight (String, altura/scroll) e list (Array de objetos com text obrigatório e icon SVG opcional que ignora se texto for vazio).", fcas_lightbox_verificarAcessoToken({ idioma: 'pt', temToken: true })],
                 ['marquee', 'Suporta chaves de dados do marquee.', fcas_lightbox_verificarAcessoToken({ idioma: 'pt', temToken: true })],
                 ['Object_3d', 'Recebe um Objeto: model (cube, cuboid, wall, cylinder, cone, sphere, torus, pyramid, inverted_pyramid, prism, tetrahedron, octahedron, icosahedron, dodecahedron, star, cross, cuboctahedron, hexagonal_prism, pentagonal_pyramid, square_antiprism, salomon_seal, truncated_octahedron, soccer_ball), color (String), size (number), theme (dark ou light).', fcas_lightbox_verificarAcessoToken({ idioma: 'pt', temToken: true })],
                 ['button', 'Suporta chaves estilo: Object, alinhamento: String ("center", "flex-start", "flex-end"), padding: String, fontSize: String, corTexto: String, corFundo: String, corHover: String, borderRadius: String, texto: String, link: String (URL), e onClick: String (se passar "this$[close]" fecha o lightbox, se passar "this$[destroy]" destrói sem voltar, ou você pode passar o nome de outra função).'],
@@ -224,7 +226,8 @@ window.getDocData = function(fdd) {
                 ['onPlayer', 'Callback function triggered when the underlying internal media engine issues state changes or structural updates.'],
                 ['onPlayer_Playlist', 'Callback function triggered when the internal media player performs structural actions related to the playlist.'],
                 ["onAdult", "Callback function executed specifically if isAdult is true, returning 'yes' or 'no'."],
-                ["onZoom", "Callback function executed, returning the zoom percentage."]
+                ["onZoom", "Callback function executed, returning the zoom percentage."],
+                ["onNotify", "Callback function executed, returning if it opened. Exclusive for type: \"notify\".", fcas_lightbox_verificarAcessoToken({ idioma: 'en', temToken: true })]
             ],
             types: [
                 ['Configuration for type: "texto"', 'Properties: italic, negrito, upper, lower (booleans), fontSize (number), color (string), textAlign (center,right,left,justify).'],
@@ -270,6 +273,7 @@ window.getDocData = function(fdd) {
                 ['contact', 'Supports contact data keys.'],
                 ['product', 'Supports product data keys.'],
                 ['map', 'Supports mapa data keys.'],
+                ['notify', "Receives an array containing objects structured with bg (String, background), txt (String, text/icons), maxHeight (String, height/scroll), and list (Array of objects with required text and optional SVG icon which is skipped if text is empty).", fcas_lightbox_verificarAcessoToken({ idioma: 'en', temToken: true })],
                 ['marquee', 'Supports marquee data keys.', fcas_lightbox_verificarAcessoToken({ idioma: 'en', temToken: true })],
                 ['Object_3d', 'Receives an Object: model (cube, cuboid, wall, cylinder, cone, sphere, torus, pyramid, inverted_pyramid, prism, tetrahedron, octahedron, icosahedron, dodecahedron, star, cross, cuboctahedron, hexagonal_prism, pentagonal_pyramid, square_antiprism, salomon_seal, truncated_octahedron, soccer_ball), color (String), size (number), theme (dark or light).', fcas_lightbox_verificarAcessoToken({ idioma: 'en', temToken: true })],
                 ['button', 'Supports keys style: Object, alignment: String ("center", "flex-start", "flex-end"), padding: String, fontSize: String, textColor: String, backgroundColor: String, hoverColor: String, borderRadius: String, text: String, link: String (URL), and onClick: String (passing "this$[close]" closes the lightbox, passing "this$[destroy]" destroys it without reopening, or you can pass the name of another function).'],
