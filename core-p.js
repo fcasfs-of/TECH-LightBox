@@ -106,6 +106,16 @@ function fcasfs_obter_obterValorPorBooleano(valor, mapeamento) { return !mapeame
 
 
 var modaisDisponiveis = {
+  'btnClipboard': function() {
+    return {
+      title: "clipboard",
+      type: "clipboard",
+      context: {},
+      size: "360",
+      includePlayer: "no",
+      description: ""
+    };
+  },
   'btnEmail': function() {
     return {
       title: "email",
@@ -871,7 +881,7 @@ fcas_lightbox_gerarMenu({ lang: "pt",
     { nome: "Documentos", botoes: [{ id: "btnPDF", texto: "Visualizar PDF" }] },
     { nome: "Localização", botoes: [{ id: "btnMap", texto: "Visualizar Mapa" }] },
     { "nome": "Navegação & Estrutura", "botoes": [{ id: "btnSearchBar", texto: "Visualizar Barra de Pesquisa", pro:true }, { "id": "btnTree", "texto": "Visualizar Árvore de Arquivos" }, { "id": "btnMindmap", "texto": "Visualizar Mapa Mental" } ] },
-    { "nome": "Utilitários & Dinâmicos", "botoes": [{ id: "btnStorageStatus", texto: "Visualizar Status de Armazenamento", pro:true }, { id: "btnAgenda", texto: "Visualizar Agenda" }, { id: "btnLeaderboard", texto: "Visualizar Classificação" }, { "id": "btnProfile", "texto": "Visualizar Perfil" }, { "id": "btnRaffle", "texto": "Visualizar Sorteio" }, { "id": "btnParticipants", "texto": "Visualizar Participantes" }, { "id": "btnCalendar", "texto": "Visualizar Calendário" }, { "id": "btnAd", "texto": "Visualizar Anúncio" }, { "id": "btn3DText", "texto": "Visualizar Texto 3D" }] },
+    { "nome": "Utilitários & Dinâmicos", "botoes": [{ id: "btnClipboard", texto: "Visualizar Área de Transferência", pro:true }, { id: "btnStorageStatus", texto: "Visualizar Status de Armazenamento", pro:true }, { id: "btnAgenda", texto: "Visualizar Agenda" }, { id: "btnLeaderboard", texto: "Visualizar Classificação" }, { "id": "btnProfile", "texto": "Visualizar Perfil" }, { "id": "btnRaffle", "texto": "Visualizar Sorteio" }, { "id": "btnParticipants", "texto": "Visualizar Participantes" }, { "id": "btnCalendar", "texto": "Visualizar Calendário" }, { "id": "btnAd", "texto": "Visualizar Anúncio" }, { "id": "btn3DText", "texto": "Visualizar Texto 3D" }] },
     { nome: "Negócios", botoes: [{ id: "btnPaymentMethods", texto: "Visualizar Formas de Pagamento", pro:true }, { id: "btnCart", texto: "Visualizar Carrinho", pro:true }, { id: "btnCoupon", texto: "Visualizar Cupom" }, { id: "btnContact", texto: "Visualizar Contato" }, { id: "btnProduct", texto: "Visualizar Produto" }, { id: "btnPricePlan", texto: "Visualizar Plano de Preços" }, { "id": "btnVirtualCard", "texto": "Visualizar Cartão Virtual" }, { "id": "btnVCC", "texto": "Visualizar Cartão de Crédito" }] }
   ]
 });
