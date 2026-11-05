@@ -164,7 +164,8 @@ window.getDocData = function(fdd) {
                 ['title', 'String com o título que será exibido no topo do LightBox.'],
                 ['type', 'Tipo do formato tratado ('+fcas_lightbox_verificarTexto(fdd || '')+').  '+fcas_lightbox_verificaranalisar(listaComponentes_formsts, "pt")+''],
                 ['poster', 'URL da imagem de capa utilizada caso o tipo do conteúdo seja vídeo.'],
-                ['description', 'Texto descritivo opcional posicionado junto ao bloco de conteúdo.']
+                ['description', 'Texto descritivo opcional posicionado junto ao bloco de conteúdo.'],
+                ['frame', 'Escolha uma das seguintes opções (o padrão é nenhuma), classica, premium, artistica, profunda, saltada, moderna, neon, polaroid, hq, vidro, minimalista, fina_preta, grossa_branca, tracejada, pontilhada, degradê, sombra_interna, dupla_fina, madeira_escura, ouro_envelhecido, metalica, passepartout, industrial, infantil, cyber, vintage, shadow_pop, moldura_tv, bauhaus, brutalista, glitch, neon_roxo, retorcido, ouro_rosa, papel_rasgado, bilhete, placa_circuito, cristal, pergaminho, carbono, abstrata, outono, galaxia, costura, espelho, camuflagem, luxo, fogo, xadrez, gelo. Aviso: Pode não funcionar em alguns tipos.']
             ]
         },
         en: {
@@ -323,7 +324,8 @@ window.getDocData = function(fdd) {
                 ['title', 'String value rendering the headline text at the top of the header.'],
                 ['type', 'Evaluated payload type ('+fcas_lightbox_verificarTexto(fdd || '')+').  '+fcas_lightbox_verificaranalisar(listaComponentes_formsts, "en")+''],
                 ['poster', 'URL string targeting thumbnail posters required when mapping videos.'],
-                ['description', 'Complementary description text aligned beneath or near the asset render block.']
+                ['description', 'Complementary description text aligned beneath or near the asset render block.'],
+                ['frame', 'Choose one of the following options (the default is none), classica, premium, artistica, profunda, saltada, moderna, neon, polaroid, hq, vidro, minimalista, fina_preta, grossa_branca, tracejada, pontilhada, degradê, sombra_interna, dupla_fina, madeira_escura, ouro_envelhecido, metalica, passepartout, industrial, infantil, cyber, vintage, shadow_pop, moldura_tv, bauhaus, brutalista, glitch, neon_roxo, retorcido, ouro_rosa, papel_rasgado, bilhete, placa_circuito, cristal, pergaminho, carbono, abstrata, outono, galaxia, costura, espelho, camuflagem, luxo, fogo, xadrez, gelo. Notice: It may not work on some types.']
             ]
         }
     };
