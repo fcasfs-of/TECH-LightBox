@@ -646,7 +646,7 @@ header n::before {     pointer-events: none;   user-select: none;  }
 
 
 
-.dark .lbxx .dname #app_versiondisplay { color: #ccc !important;  } 
+.dark .lbxx .dname #app_versiondisplay, .dark .lang-column h1 #app_versiondisplay { color: #ccc !important;  } 
 
 
     .lbxx #theme-toggle { background-color: var(--btn-toggle-bg);  color: var(--btn-toggle-text); }
