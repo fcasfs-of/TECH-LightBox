@@ -646,6 +646,8 @@ header n::before {     pointer-events: none;   user-select: none;  }
 
 
 
+.dark .lbxx .dname #app_versiondisplay { color: #ccc !important;  } 
+
 
     .lbxx #theme-toggle { background-color: var(--btn-toggle-bg);  color: var(--btn-toggle-text); }
     .lbxx #theme-toggle:hover { background-color: var(--btn-toggle-bg-hover);  }
