@@ -703,7 +703,7 @@ var modaisDisponiveis = {
       title: "Form",
       type: "form",
       context:[
-  { required: true, label: "url", name: "url", type: "text", placeholder: "fcasfs-of.cloud-fs.net/TECH-Free", value: "fcasfs-of.cloud-fs.net/TECH-Free" },
+  { required: true, label: "url", name: "url", type: "text", placeholder: "fcasfs-of.cloud-fs.net/TECH-Free", value: "fcasfs-of.cloud-fs.net/TECH-Free", disabled: true },
   { required: true, label: "File ID", name: "fileID", type: "text", placeholder: "File ID...", value: "" },
   { required: true, label: "View File", name: "fileView", type: "checkbox", placeholder: "View File...", value: "true" },
   { required: true, label: "Select File", name: "fileSelect", type: "number", placeholder: "Select File...", value: "1" },
