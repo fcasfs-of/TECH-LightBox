@@ -91,7 +91,7 @@ function fcasfs_obter_obterValorPorBooleano(valor, mapeamento) { return !mapeame
       content: {
         config: {
           BG_Blur:fcasfs_obter_obterValorPorBooleano(fcasfs_obter_booleano("bg_blur", true), { seTrue: "8", seFalse: "0" }),  BG_Opacity:fcasfs_obter_obterValorPorBooleano(fcasfs_obter_booleano("bg_opacity", true), { seTrue: "0.9", seFalse: "1" }),
-          Lang:"en", action: "https://fcasfs-of.cloud-fs.net/projects-en", showReset:true
+          Lang:"en", action: "/app/view.html?url=fcasfs-of.cloud-fs.net/TECH-Free&", showReset:true
         },
         title: contentOptions.title,
         type: contentOptions.type,
@@ -702,7 +702,12 @@ var modaisDisponiveis = {
     return {
       title: "Form",
       type: "form",
-      context:[ { required:true, label: "Project", name: "project", type: "text", placeholder: "Project..." } ],
+      context:[
+  { required: true, label: "File ID", name: "fileID", type: "text", placeholder: "File ID...", value: "" },
+  { required: true, label: "View File", name: "fileView", type: "checkbox", placeholder: "View File...", value: true },
+  { required: true, label: "Select File", name: "fileSelect", type: "number", placeholder: "Select File...", value: 1 },
+  { required: true, label: "Position", name: "pos", type: "number", placeholder: "0", value: 0 }
+],
       size: "340",
       includePlayer: "no",
       description: ""
