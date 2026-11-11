@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View</title>
+    <style>*{margin:0;padding:0;box-sizing:border-box;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}html,body{width:100%;height:100%;background-color:#000;font-family:sans-serif;color:#fff;overflow:hidden}#preview_fle{position:absolute;top:0;left:0;width:100%;height:100%;margin:0;padding:0}iframe{width:100%;height:100%;border:none;}</style>
+</head>
+<body oncontextmenu="return false;">
+    <div id="preview_fle"></div>
+<script>
+    function carregarUrl(config){const u=new URLSearchParams(window.location.search);let p=u.get(config.chave),t=u.get(config.chaveTitulo),f=u.get(config.chaveFavicon);if(p){if(!p.startsWith('http://')&&!p.startsWith('https://')){p='https://'+p;}const c=document.getElementById(config.targetId);if(config.contextmenu){c.setAttribute('oncontextmenu',config.contextmenu);}if(t){document.title=decodeURIComponent(t);}if(f){let i=decodeURIComponent(f);if(!i.startsWith('http://')&&!i.startsWith('https://')){const d=new URL(p).origin;i=i.startsWith('/')?d+i:d+'/'+i;}let l=document.querySelector("link[rel~='icon']");if(!l){l=document.createElement('link');l.rel='icon';document.head.appendChild(l);}l.href=i;}const i=document.createElement('iframe');i.src=decodeURIComponent(p);i.setAttribute('scrolling',config.scroll?'yes':'no');if(config.fullscreen){i.allowFullscreen=true;}if(config.contextmenu){i.setAttribute('oncontextmenu',config.contextmenu);i.onload=function(){try{i.contentWindow.document.body.setAttribute('oncontextmenu',config.contextmenu);}catch(e){}};}c.appendChild(i);}}carregarUrl({chave:'url',chaveTitulo:'titulo',chaveFavicon:'favicon',targetId:'preview_fle',scroll:true,fullscreen:true,contextmenu:'return false;'});
+</script>
+</body>
+</html>
