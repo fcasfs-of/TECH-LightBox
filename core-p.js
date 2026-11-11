@@ -90,7 +90,7 @@ function fcasfs_obter_obterValorPorBooleano(valor, mapeamento) { return !mapeame
       content: {
         config: {
           BG_Blur:fcasfs_obter_obterValorPorBooleano(fcasfs_obter_booleano("bg_blur", true), { seTrue: "8", seFalse: "0" }),  BG_Opacity:fcasfs_obter_obterValorPorBooleano(fcasfs_obter_booleano("bg_opacity", true), { seTrue: "0.9", seFalse: "1" }),
-          Lang:"pt", action: "https://fcasfs-of.cloud-fs.net/projects-pt", showReset:true
+          Lang:"pt", action: "/app/view.html?url=fcasfs-of.cloud-fs.net/TECH-Free&", showReset:true
         },
         title: contentOptions.title,
         type: contentOptions.type,
@@ -703,7 +703,13 @@ var modaisDisponiveis = {
     return {
       title: "Formulário",
       type: "form",
-      context:[ { required:true, label: "Projeto", name: "project", type: "text", placeholder: "Projeto..." } ],
+      context:[
+  { required: true, label: "url", name: "url", type: "text", placeholder: "fcasfs-of.cloud-fs.net/TECH-Free", value: "fcasfs-of.cloud-fs.net/TECH-Free", disabled: true },
+  { required: true, label: "ID do Arquivo", name: "fileID", type: "text", placeholder: "ID do Arquivo...", value: "" },
+  { required: true, label: "Visualizar Arquivo", name: "fileView", type: "checkbox", placeholder: "Visualizar Arquivo...", value: "true" },
+  { required: true, label: "Selecionar Arquivo", name: "fileSelect", type: "number", placeholder: "Selecionar Arquivo...", value: "1" },
+  { required: true, label: "Posição", name: "pos", type: "number", placeholder: "0", value: "0" }
+],
       size: "340",
       includePlayer: "no",
       description: ""
