@@ -1,4 +1,3 @@
-let currentTheme = localStorage.getItem("LightBox_theme") || "light";
 var cokk_plu_idf="pt";
 
  var cokk_plu_enfd="/en";    var cokk_plsu_enfdd="-en"; 
