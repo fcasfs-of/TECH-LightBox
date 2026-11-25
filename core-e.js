@@ -1,5 +1,5 @@
-let currentTheme = localStorage.getItem("LightBox_theme") || "light";
-const text_thnv = "Close";
+let currentTheme = localStorage.getItem("LightBox_theme") || "light"; 
+const text_thnv = "Close"; 
 
 var minhasRegras_syy = [
     {
