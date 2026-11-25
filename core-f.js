@@ -1,4 +1,4 @@
-var cokk_plu_idf="pt";
+var cokk_plu_idf="pt"; 
 
  var cokk_plu_enfd="/en";    var cokk_plsu_enfdd="-en"; 
  if (location.href.toUpperCase().indexOf(cokk_plu_enfd.toUpperCase()) > -1) {    cokk_plu_idf="en";    }
