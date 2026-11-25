@@ -22,7 +22,6 @@ window.addEventListener('load', function(){ dispararCliquesAutomaticos(minhasReg
     localStorage.setItem("LightBox_theme", currentTheme);
   });
 
-
   document.body.classList.remove('dark');
     const isDark = document.body.classList.contains('dark');
     toggleThemeBtn.textContent = isDark ? 'Light Mode' : 'Dark Mode';
