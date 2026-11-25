@@ -1,3 +1,5 @@
+let currentTheme = localStorage.getItem("LightBox_theme") || "light";
+
 var minhasRegras_syy = [
     {
         parametro: 'button',
@@ -951,7 +953,7 @@ function dinjetarScriptHomeAA(isHead, exefl) {
 
 
 dinjetarScriptHomeAA(true, function(){load_init_call()});
-load_init_call()
+
 
 window.addEventListener('load', function(){   const target_verappsdd=document.getElementById('app_versiondisplay');if(target_verappsdd){target_verappsdd.innerHTML=`${typeof fcas_lightbox_version_ac === 'function' ? `<br/> ${fcas_lightbox_version_ac()}` : ''}`;}  });
 
