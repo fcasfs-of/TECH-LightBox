@@ -1,4 +1,6 @@
 let currentTheme = localStorage.getItem("LightBox_theme") || "light";
+const text_thnv = "Close";
+
 
 var minhasRegras_syy = [
     {
@@ -11,60 +13,6 @@ var minhasRegras_syy = [
     }
 ];
 
-
-function load_init_call(){
-window.addEventListener('load', function(){ dispararCliquesAutomaticos(minhasRegras_syy); });
-
-  const toggleThemeBtn = document.getElementById('theme-toggle');
-  toggleThemeBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark');
-    const isDark = document.body.classList.contains('dark');
-    toggleThemeBtn.textContent = isDark ? 'Light Mode' : 'Dark Mode';
-    currentTheme = isDark ? "dark" : "light";
-    localStorage.setItem("LightBox_theme", currentTheme);
-  });
-
-  document.body.classList.remove('dark');
-    const isDark = document.body.classList.contains('dark');
-    toggleThemeBtn.textContent = isDark ? 'Light Mode' : 'Dark Mode';
-if(currentTheme=="dark"){
-    document.body.classList.add('dark');
-    const isDark = document.body.classList.contains('dark');
-    toggleThemeBtn.textContent = isDark ? 'Light Mode' : 'Dark Mode';
-}
-
-
-  const text_thnv = "Close";
-
-
-  function openModal(contentOptions,obj) {  
-    fsmodal_open({
-      id: "previ_box",
-      tiptext: "",
-      scroll_hide: "yes",
-      noclose: false, noprint:true,nodownload:true,nocontextmenu:true, 
-      zoom: fcasfs_obter_booleano("zoom", false),
-      btnTop: fcasfs_obter_booleano("btn_top", false),
-      remove_efect: fcasfs_obter_booleano("remove_efect", false),
-      menu: fcasfs_obter_booleano("menu", true),
-      loader: fcasfs_obter_booleano("loader", true),
-      click_close: fcasfs_obter_booleano("click_close", false),
-      itens: obj,      
-      include: { player: contentOptions.includePlayer },
-      content: {
-        config: {
-          BG_Blur:fcasfs_obter_obterValorPorBooleano(fcasfs_obter_booleano("bg_blur", true), { seTrue: "8", seFalse: "0" }),  BG_Opacity:fcasfs_obter_obterValorPorBooleano(fcasfs_obter_booleano("bg_opacity", true), { seTrue: "0.9", seFalse: "1" }),
-          Lang:"en", action: "/app/view.html?url=fcasfs-of.cloud-fs.net/TECH-Free&", showReset:true
-        },
-        title: contentOptions.title,
-        type: contentOptions.type,
-        context: contentOptions.context,
-        poster: contentOptions.poster,
-        size: contentOptions.size,
-        description: contentOptions.description,
-      }
-    });
-  }
 
 
 var modaisDisponiveis = {
@@ -837,6 +785,59 @@ const fcasfs_ligh_cate_icons = {
   "Utility-focused & Dynamic": "<svg width=\"24px\" height=\"24px\" viewBox=\"0 0 24 24\"><path d=\"M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5.1-2.4-7.5-1.3L8 5.3 5.3 8 1.7 4.4C.6 6.8 1 9.9 3 11.9c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.4-.4.4-1.1 0-1.5z\"/></svg>",
   "Business": "<svg width=\"24px\" height=\"24px\" viewBox=\"0 0 52 52\"><path d=\"M42,14h-6v-4c0-2.2-1.8-4-4-4H20c-2.2,0-4,1.8-4,4v4h-6c-2.2,0-4,1.8-4,4v24c0,2.2,1.8,4,4,4h32c2.2,0,4-1.8,4-4V18C46,15.8,44.2,14,42,14z M20,10h12v4H20V10z M42,42H10V22h32V42z\"/></svg>"
 };
+
+
+
+function load_init_call(){
+window.addEventListener('load', function(){ dispararCliquesAutomaticos(minhasRegras_syy); });
+
+  const toggleThemeBtn = document.getElementById('theme-toggle');
+  toggleThemeBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark');
+    const isDark = document.body.classList.contains('dark');
+    toggleThemeBtn.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+    currentTheme = isDark ? "dark" : "light";
+    localStorage.setItem("LightBox_theme", currentTheme);
+  });
+
+  document.body.classList.remove('dark');
+    const isDark = document.body.classList.contains('dark');
+    toggleThemeBtn.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+if(currentTheme=="dark"){
+    document.body.classList.add('dark');
+    const isDark = document.body.classList.contains('dark');
+    toggleThemeBtn.textContent = isDark ? 'Light Mode' : 'Dark Mode';
+}
+
+
+  function openModal(contentOptions,obj) {  
+    fsmodal_open({
+      id: "previ_box",
+      tiptext: "",
+      scroll_hide: "yes",
+      noclose: false, noprint:true,nodownload:true,nocontextmenu:true, 
+      zoom: fcasfs_obter_booleano("zoom", false),
+      btnTop: fcasfs_obter_booleano("btn_top", false),
+      remove_efect: fcasfs_obter_booleano("remove_efect", false),
+      menu: fcasfs_obter_booleano("menu", true),
+      loader: fcasfs_obter_booleano("loader", true),
+      click_close: fcasfs_obter_booleano("click_close", false),
+      itens: obj,      
+      include: { player: contentOptions.includePlayer },
+      content: {
+        config: {
+          BG_Blur:fcasfs_obter_obterValorPorBooleano(fcasfs_obter_booleano("bg_blur", true), { seTrue: "8", seFalse: "0" }),  BG_Opacity:fcasfs_obter_obterValorPorBooleano(fcasfs_obter_booleano("bg_opacity", true), { seTrue: "0.9", seFalse: "1" }),
+          Lang:"en", action: "/app/view.html?url=fcasfs-of.cloud-fs.net/TECH-Free&", showReset:true
+        },
+        title: contentOptions.title,
+        type: contentOptions.type,
+        context: contentOptions.context,
+        poster: contentOptions.poster,
+        size: contentOptions.size,
+        description: contentOptions.description,
+      }
+    });
+  }
 
 
 fcas_lightbox_gerarMenu({ lang: "en", 
