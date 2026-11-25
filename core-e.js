@@ -11,7 +11,6 @@ var minhasRegras_syy = [
 
 
 function load_init_call(){
-
 window.addEventListener('load', function(){ dispararCliquesAutomaticos(minhasRegras_syy); });
 
   const toggleThemeBtn = document.getElementById('theme-toggle');
