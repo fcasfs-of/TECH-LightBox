@@ -2,14 +2,10 @@ let currentTheme = localStorage.getItem("LightBox_theme") || "light";
 const text_thnv = "Close"; 
 
 var minhasRegras_syy = [
-    {
-        parametro: 'button',
-        obterSeletor: function(valor) { if (!valor || valor.trim() === '') return ''; return '.nav-menu .cat-group button#btn' + valor; }
-    },
-    {
-        parametro: 'cat',
-        obterSeletor: function(valor) { if (!valor || valor.trim() === '') return ''; var sufixo = (!isNaN(valor) && valor.trim() !== '') ? 'fcas-grupo-' + valor : valor; return '.fcas-sidebar .fcas-sidebar-item[data-target="' + sufixo + '"]'; }
-    }
+    {  parametro: 'button', obterSeletor: function(valor) { if (!valor || valor.trim() === '') return ''; return '.nav-menu .cat-group button#btn' + valor; }    },
+    {  parametro: 'cat', obterSeletor: function(valor) { if (!valor || valor.trim() === '') return ''; var sufixo = (!isNaN(valor) && valor.trim() !== '') ? 'fcas-grupo-' + valor : valor; return '.fcas-sidebar .fcas-sidebar-item[data-target="' + sufixo + '"]'; }  },
+    {  parametro: 'pg', obterSeletor: function(valor) { if (!valor || valor.trim() === '') return '';  var sufixo = (!isNaN(valor) && valor.trim() !== '') ? valor : '1';  return '.fcas-pagination-container .fcas-page-btn[data-page="' + sufixo + '"]'; }   }
+
 ];
 
 var modaisDisponiveis = {
@@ -974,7 +970,6 @@ fcasfs_lightbox_config_vincular({
 });
 window.addEventListener('load', function(){ 
     dispararCliquesAutomaticos([{ parametro: 'config', obterSeletor: function(valor) { if (valor && valor.trim() === 'true') { return '.lbxx-footer-container #meuBotaoConfig'; } return ''; } }]); 
-    dispararCliquesAutomaticos([{ parametro: 'pg', obterSeletor: function(valor) { if (!valor || valor.trim() === '') return '';  var sufixo = (!isNaN(valor) && valor.trim() !== '') ? valor : '1';  return '.fcas-pagination-container .fcas-page-btn[data-page="' + sufixo + '"]'; } }]); 
 
 });
 
