@@ -80,9 +80,9 @@ nav button:hover {  background-color: var(--primary-hover);  transform: translat
 
 header .dname *, header nav, header nav *, .lbxx * { transition: all 0.1s; }
 
-.lbxx nav button, #theme-toggle {  display: inline-flex;  align-items: center;  justify-content: center;        gap: 8px; }
+.lbxx .cols button, .lbxx nav button, #theme-toggle {  display: inline-flex;  align-items: center;  justify-content: center;        gap: 8px; }
 .lbxx nav .lbutton {  background-color: #1e1e24;   color: #ffffff;              border: 1px solid #3f3f46;}
-.lbxx nav button::before, #theme-toggle::before {  content: "";  display: inline-block;  width: 18px;  height: 18px;  background-size: contain;  background-repeat: no-repeat;  background-position: center;  flex-shrink: 0; }
+.lbxx .cols button::before, .lbxx nav button::before, #theme-toggle::before {  content: "";  display: inline-block;  width: 18px;  height: 18px;  background-size: contain;  background-repeat: no-repeat;  background-position: center;  flex-shrink: 0; }
 
 .dproTkj::after {     content: "";    display: block;    width: 16px;     height: 16px;    background-size: contain;    background-repeat: no-repeat;    background-position: center;}
 
