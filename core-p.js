@@ -1,4 +1,4 @@
-let currentTheme = localStorage.getItem("LightBox_theme") || "light"; 
+let currentTheme = localStorage.getItem("LightBox_theme") || "light";  
 const text_thnv = "Fechar";  
 
 var minhasRegras_syy = [
