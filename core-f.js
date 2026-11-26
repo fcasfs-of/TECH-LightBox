@@ -13,7 +13,7 @@ function fcas_obterPaginaAtiva() { const el = document.querySelector('.fcas-pagi
 function fcas_obterBusca() { const el = document.querySelector('.fcas-search-wrapper .fcas-search-container .fcas-search-input'); return el ? el.value : ''; }
 
 function fcas_atualizarParametrosURL() { fcas_adicionarParametroURL('s', fcas_obterBusca()); fcas_adicionarParametroURL('pg', fcas_obterPaginaAtiva()); fcas_adicionarParametroURL('cat', fcas_obterGrupoAtivo()); }
-function fcas_compartilhardd(params) { if (!navigator.share) return; const url = new URL(window.location.href); Object.entries(params || {}).forEach(function(p) { url.searchParams.set(p[0], p[1]); }); navigator.share({ title: document.title, url: url.toString() }); }
+function fcas_compartilhardd(params) { if (!navigator.share) return; const btn = document.querySelector('.lbxx .shared'); if (btn && btn.disabled) return; const url = new URL(window.location.href); Object.entries(params || {}).forEach(function(p) { url.searchParams.set(p[0], p[1]); }); if (btn) btn.disabled = true; navigator.share({ title: document.title, url: url.toString() }).then(function() { if (btn) btn.disabled = false; }).catch(function() { if (btn) btn.disabled = false; }); }
 function fcas_compartilhard() {  fcas_compartilhardd({ s: fcas_obterBusca(), cat: fcas_obterGrupoAtivo(), pg: fcas_obterPaginaAtiva() });   }
 
 function fcas_scrollTopo(){const navMfenu=document.querySelector('.nav-menu'); if(navMfenu){  navMfenu.scrollIntoView({behavior:'smooth',block:'start'})}  }
