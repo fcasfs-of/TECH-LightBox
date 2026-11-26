@@ -72,7 +72,7 @@ nav button:hover {  background-color: var(--primary-hover);  transform: translat
 
 .lbxle {  margin-top: 1em;  font-size: 0.9em;  padding: 0.3em 1em;   }
 .lbxx #meuBotaoConfig, .lbxx #theme-toggle {  background: none;  border: 2px solid;  border-radius: 20px;  cursor: pointer;  transition: background-color 0.3s, color 0.3s;}
-.lbxx #meuBotaoConfig:hover, .lbxx #theme-toggle:hover {}
+.lbxx #meuBotaoConfig:hover, .lbxx #theme-toggle:hover {  }
 
 #previ_box {  margin-top: 2em;}
 
