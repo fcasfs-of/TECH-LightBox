@@ -1,5 +1,5 @@
 let currentTheme = localStorage.getItem("LightBox_theme") || "light"; 
-const text_thnv = "Fechar"; 
+const text_thnv = "Fechar";  
 
 var minhasRegras_syy = [
     {  parametro: 'button', obterSeletor: function(valor) { if (!valor || valor.trim() === '') return ''; return '.nav-menu .cat-group button#btn' + valor; }    },
